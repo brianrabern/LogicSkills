@@ -1,0 +1,295 @@
+[
+  {
+    "argument_id": "custom_pattern",
+    "premise_ids": "0,1,2",
+    "conclusion_id": 3,
+    "complete_matches": 0,
+    "unique_forms": 72,
+    "individual_matches": {
+      "0": [
+        {
+          "id": 640,
+          "form": "\\u2200x(Mx\\u2192\\u2203y(My\\u2227(Pxy\\u2227Pyx)))",
+          "type": "quantified"
+        },
+        {
+          "id": 685,
+          "form": "\\u2200x(Mx\\u2192\\u2203y(My\\u2227(Qxy\\u2227Qyx)))",
+          "type": "quantified"
+        },
+        {
+          "id": 730,
+          "form": "\\u2200x(Mx\\u2192\\u2203y(My\\u2227(Rxy\\u2227Ryx)))",
+          "type": "quantified"
+        },
+        {
+          "id": 660,
+          "form": "\\u2200x(Nx\\u2192\\u2203y(Ny\\u2227(Pxy\\u2227Pyx)))",
+          "type": "quantified"
+        },
+        {
+          "id": 705,
+          "form": "\\u2200x(Nx\\u2192\\u2203y(Ny\\u2227(Qxy\\u2227Qyx)))",
+          "type": "quantified"
+        },
+        {
+          "id": 750,
+          "form": "\\u2200x(Nx\\u2192\\u2203y(Ny\\u2227(Rxy\\u2227Ryx)))",
+          "type": "quantified"
+        },
+        {
+          "id": 680,
+          "form": "\\u2200x(Ox\\u2192\\u2203y(Oy\\u2227(Pxy\\u2227Pyx)))",
+          "type": "quantified"
+        },
+        {
+          "id": 725,
+          "form": "\\u2200x(Ox\\u2192\\u2203y(Oy\\u2227(Qxy\\u2227Qyx)))",
+          "type": "quantified"
+        },
+        {
+          "id": 770,
+          "form": "\\u2200x(Ox\\u2192\\u2203y(Oy\\u2227(Rxy\\u2227Ryx)))",
+          "type": "quantified"
+        }
+      ],
+      "1": [
+        {
+          "id": 24732,
+          "form": "(Mc\\u2227Mb)",
+          "type": "conjunction"
+        }
+      ],
+      "2": [
+        {
+          "id": 151,
+          "form": "Pba",
+          "type": "atomic"
+        },
+        {
+          "id": 157,
+          "form": "Pca",
+          "type": "atomic"
+        },
+        {
+          "id": 147,
+          "form": "Pab",
+          "type": "atomic"
+        },
+        {
+          "id": 159,
+          "form": "Pcb",
+          "type": "atomic"
+        },
+        {
+          "id": 149,
+          "form": "Pac",
+          "type": "atomic"
+        },
+        {
+          "id": 155,
+          "form": "Pbc",
+          "type": "atomic"
+        },
+        {
+          "id": 169,
+          "form": "Qba",
+          "type": "atomic"
+        },
+        {
+          "id": 175,
+          "form": "Qca",
+          "type": "atomic"
+        },
+        {
+          "id": 165,
+          "form": "Qab",
+          "type": "atomic"
+        },
+        {
+          "id": 177,
+          "form": "Qcb",
+          "type": "atomic"
+        },
+        {
+          "id": 167,
+          "form": "Qac",
+          "type": "atomic"
+        },
+        {
+          "id": 173,
+          "form": "Qbc",
+          "type": "atomic"
+        },
+        {
+          "id": 187,
+          "form": "Rba",
+          "type": "atomic"
+        },
+        {
+          "id": 193,
+          "form": "Rca",
+          "type": "atomic"
+        },
+        {
+          "id": 183,
+          "form": "Rab",
+          "type": "atomic"
+        },
+        {
+          "id": 195,
+          "form": "Rcb",
+          "type": "atomic"
+        },
+        {
+          "id": 185,
+          "form": "Rac",
+          "type": "atomic"
+        },
+        {
+          "id": 191,
+          "form": "Rbc",
+          "type": "atomic"
+        }
+      ],
+      "3": [
+        {
+          "id": 305,
+          "form": "\\u2203x(Mx\\u2227Pxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 309,
+          "form": "\\u2203x(Mx\\u2227Pxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 313,
+          "form": "\\u2203x(Mx\\u2227Pxc)",
+          "type": "quantified"
+        },
+        {
+          "id": 341,
+          "form": "\\u2203x(Mx\\u2227Qxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 345,
+          "form": "\\u2203x(Mx\\u2227Qxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 349,
+          "form": "\\u2203x(Mx\\u2227Qxc)",
+          "type": "quantified"
+        },
+        {
+          "id": 377,
+          "form": "\\u2203x(Mx\\u2227Rxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 381,
+          "form": "\\u2203x(Mx\\u2227Rxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 385,
+          "form": "\\u2203x(Mx\\u2227Rxc)",
+          "type": "quantified"
+        },
+        {
+          "id": 317,
+          "form": "\\u2203x(Nx\\u2227Pxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 321,
+          "form": "\\u2203x(Nx\\u2227Pxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 325,
+          "form": "\\u2203x(Nx\\u2227Pxc)",
+          "type": "quantified"
+        },
+        {
+          "id": 353,
+          "form": "\\u2203x(Nx\\u2227Qxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 357,
+          "form": "\\u2203x(Nx\\u2227Qxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 361,
+          "form": "\\u2203x(Nx\\u2227Qxc)",
+          "type": "quantified"
+        },
+        {
+          "id": 389,
+          "form": "\\u2203x(Nx\\u2227Rxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 393,
+          "form": "\\u2203x(Nx\\u2227Rxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 397,
+          "form": "\\u2203x(Nx\\u2227Rxc)",
+          "type": "quantified"
+        },
+        {
+          "id": 329,
+          "form": "\\u2203x(Ox\\u2227Pxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 333,
+          "form": "\\u2203x(Ox\\u2227Pxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 337,
+          "form": "\\u2203x(Ox\\u2227Pxc)",
+          "type": "quantified"
+        },
+        {
+          "id": 365,
+          "form": "\\u2203x(Ox\\u2227Qxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 369,
+          "form": "\\u2203x(Ox\\u2227Qxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 373,
+          "form": "\\u2203x(Ox\\u2227Qxc)",
+          "type": "quantified"
+        },
+        {
+          "id": 401,
+          "form": "\\u2203x(Ox\\u2227Rxa)",
+          "type": "quantified"
+        },
+        {
+          "id": 405,
+          "form": "\\u2203x(Ox\\u2227Rxb)",
+          "type": "quantified"
+        },
+        {
+          "id": 409,
+          "form": "\\u2203x(Ox\\u2227Rxc)",
+          "type": "quantified"
+        }
+      ]
+    },
+    "complete_matches_list": []
+  }
+]

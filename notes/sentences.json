@@ -1,0 +1,5732 @@
+{
+  "1": {
+    "sentence": "Sam studies.",
+    "soa": {
+      "c": "Sam",
+      "F1": "[1] studies"
+    },
+    "form": [
+      "F1c"
+    ],
+    "ast": [
+      "pred1",
+      "F1",
+      "c"
+    ]
+  },
+  "2": {
+    "sentence": "Ava didn't sing.",
+    "soa": {
+      "a": "Ava",
+      "F12": "[1] sang"
+    },
+    "form": [
+      "¬F12a"
+    ],
+    "ast": [
+      "not",
+      [
+        "pred1",
+        "F12",
+        "a"
+      ]
+    ]
+  },
+  "3": {
+    "sentence": "Ava failed to not eat.",
+    "soa": {
+      "a": "Ava",
+      "F11": "[1] ate"
+    },
+    "form": [
+      "¬¬F11a"
+    ],
+    "ast": [
+      "not",
+      [
+        "not",
+        [
+          "pred1",
+          "F11",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "4": {
+    "sentence": "Alfred is a knight.",
+    "soa": {
+      "b": "Alfred",
+      "F25": "[1] is a knight"
+    },
+    "form": [
+      "F25b"
+    ],
+    "ast": [
+      "pred1",
+      "F25",
+      "b"
+    ]
+  },
+  "5": {
+    "sentence": "Ava will stand only if Emily sits.",
+    "soa": {
+      "a": "Ava",
+      "F8": "[1] will stand",
+      "d": "Emily",
+      "F3": "[1] sits"
+    },
+    "form": [
+      "(F8a→F3d)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F8",
+        "a"
+      ],
+      [
+        "pred1",
+        "F3",
+        "d"
+      ]
+    ]
+  },
+  "6": {
+    "sentence": "Provided that Ava studies, she will pass.",
+    "soa": {
+      "a": "Ava",
+      "F1": "[1] studies",
+      "F5": "[1] will pass"
+    },
+    "form": [
+      "(F1a→F5a)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F1",
+        "a"
+      ],
+      [
+        "pred1",
+        "F5",
+        "a"
+      ]
+    ]
+  },
+  "7": {
+    "sentence": "If Sam is a knight, then he is honest.",
+    "soa": {
+      "c": "Sam",
+      "F25": "[1] is a knight",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "(F25c→F17c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F25",
+        "c"
+      ],
+      [
+        "pred1",
+        "F17",
+        "c"
+      ]
+    ]
+  },
+  "8": {
+    "sentence": "If Sam is not a knight, then he is not honest.",
+    "soa": {
+      "c": "Sam",
+      "F25": "[1] is a knight",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "(¬F25c→¬F17c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "pred1",
+          "F25",
+          "c"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F17",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "9": {
+    "sentence": "If Sam is a knave, then he is not honest.",
+    "soa": {
+      "c": "Sam",
+      "F26": "[1] is a knave",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "(F26c→¬F17c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F26",
+        "c"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F17",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "10": {
+    "sentence": "If Sam is not a knave, then he is a knight.",
+    "soa": {
+      "c": "Sam",
+      "F26": "[1] is a knave",
+      "F25": "[1] is a knight"
+    },
+    "form": [
+      "(¬F26c→F25c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "pred1",
+          "F26",
+          "c"
+        ]
+      ],
+      [
+        "pred1",
+        "F25",
+        "c"
+      ]
+    ]
+  },
+  "11": {
+    "sentence": "If Ava will pass if she concentrates, then she is happy.",
+    "soa": {
+      "a": "Ava",
+      "F5": "[1] will pass",
+      "F2": "[1] concentrates",
+      "F15": "[1] is happy"
+    },
+    "form": [
+      "((F2a→F5a)→F15a)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "imp",
+        [
+          "pred1",
+          "F2",
+          "a"
+        ],
+        [
+          "pred1",
+          "F5",
+          "a"
+        ]
+      ],
+      [
+        "pred1",
+        "F15",
+        "a"
+      ]
+    ]
+  },
+  "12": {
+    "sentence": "Ava won't pass if she drank.",
+    "soa": {
+      "a": "Ava",
+      "F5": "[1] will pass",
+      "F10": "[1] drank"
+    },
+    "form": [
+      "(F10a→¬F5a)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F10",
+        "a"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F5",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "13": {
+    "sentence": "Ava will pass if she didn't drink.",
+    "soa": {
+      "a": "Ava",
+      "F5": "[1] will pass",
+      "F10": "[1] drank"
+    },
+    "form": [
+      "(¬F10a→F5a)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "pred1",
+          "F10",
+          "a"
+        ]
+      ],
+      [
+        "pred1",
+        "F5",
+        "a"
+      ]
+    ]
+  },
+  "14": {
+    "sentence": "If Ava is happy only if Sam didn't sing, then Sam won't stand if Ava sits.",
+    "soa": {
+      "a": "Ava",
+      "F15": "[1] is happy",
+      "c": "Sam",
+      "F12": "[1] sang",
+      "F8": "[1] will stand",
+      "F3": "[1] sits"
+    },
+    "form": [
+      "((F15a→¬F12c)→(F3a→¬F8c))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "imp",
+        [
+          "pred1",
+          "F15",
+          "a"
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F12",
+            "c"
+          ]
+        ]
+      ],
+      [
+        "imp",
+        [
+          "pred1",
+          "F3",
+          "a"
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F8",
+            "c"
+          ]
+        ]
+      ]
+    ]
+  },
+  "15": {
+    "sentence": "It is not the case that Ruth is happy.",
+    "soa": {
+      "f": "Ruth",
+      "F15": "[1] is happy"
+    },
+    "form": [
+      "¬F15f"
+    ],
+    "ast": [
+      "not",
+      [
+        "pred1",
+        "F15",
+        "f"
+      ]
+    ]
+  },
+  "16": {
+    "sentence": "Ansel will bite only if he is sad.",
+    "soa": {
+      "e": "Ansel",
+      "F11": "[1] ate",
+      "F18": "[1] is sad"
+    },
+    "form": [
+      "(F11e→F18e)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F11",
+        "e"
+      ],
+      [
+        "pred1",
+        "F18",
+        "e"
+      ]
+    ]
+  },
+  "17": {
+    "sentence": "It is not the case that Ansel won't bite.",
+    "soa": {
+      "e": "Ansel",
+      "F11": "[1] ate"
+    },
+    "form": [
+      "¬¬F11e"
+    ],
+    "ast": [
+      "not",
+      [
+        "not",
+        [
+          "pred1",
+          "F11",
+          "e"
+        ]
+      ]
+    ]
+  },
+  "18": {
+    "sentence": "If Sam sits, then it is not the case that he doesn't sit.",
+    "soa": {
+      "c": "Sam",
+      "F3": "[1] sits"
+    },
+    "form": [
+      "(F3c→¬¬F3c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F3",
+        "c"
+      ],
+      [
+        "not",
+        [
+          "not",
+          [
+            "pred1",
+            "F3",
+            "c"
+          ]
+        ]
+      ]
+    ]
+  },
+  "19": {
+    "sentence": "It is not the case that it is not the case that Sam is honest.",
+    "soa": {
+      "c": "Sam",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "¬¬F17c"
+    ],
+    "ast": [
+      "not",
+      [
+        "not",
+        [
+          "pred1",
+          "F17",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "20": {
+    "sentence": "If Sam is a human, then he is mortal.",
+    "soa": {
+      "c": "Sam",
+      "F24": "[1] is a human",
+      "F16": "[1] is mortal"
+    },
+    "form": [
+      "(F24c→F16c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F24",
+        "c"
+      ],
+      [
+        "pred1",
+        "F16",
+        "c"
+      ]
+    ]
+  },
+  "21": {
+    "sentence": "If Alfred isn't wet, then he didn't swim.",
+    "soa": {
+      "b": "Alfred",
+      "F19": "[1] is wet",
+      "F13": "[1] swam"
+    },
+    "form": [
+      "(¬F19b→¬F13b)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "pred1",
+          "F19",
+          "b"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F13",
+          "b"
+        ]
+      ]
+    ]
+  },
+  "22": {
+    "sentence": "Ruth sang only if she didn't swim.",
+    "soa": {
+      "f": "Ruth",
+      "F12": "[1] sang",
+      "F13": "[1] swam"
+    },
+    "form": [
+      "(F12f→¬F13f)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F12",
+        "f"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F13",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "23": {
+    "sentence": "Ava waved to Sam only if Sam waved to Ava.",
+    "soa": {
+      "a": "Ava",
+      "R6": "[1] waved to [2]",
+      "c": "Sam"
+    },
+    "form": [
+      "(R6a→R6c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "R6",
+        "a"
+      ],
+      [
+        "pred1",
+        "R6",
+        "c"
+      ]
+    ]
+  },
+  "24": {
+    "sentence": "If Alfred didn't wave to Emily, then she is sad.",
+    "soa": {
+      "b": "Alfred",
+      "R6": "[1] waved to [2]",
+      "d": "Emily",
+      "F18": "[1] is sad"
+    },
+    "form": [
+      "(¬R6b→F18d)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "pred1",
+          "R6",
+          "b"
+        ]
+      ],
+      [
+        "pred1",
+        "F18",
+        "d"
+      ]
+    ]
+  },
+  "25": {
+    "sentence": "Sam is a knight only if he is honest.",
+    "soa": {
+      "c": "Sam",
+      "F25": "[1] is a knight",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "(F25c→F17c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F25",
+        "c"
+      ],
+      [
+        "pred1",
+        "F17",
+        "c"
+      ]
+    ]
+  },
+  "26": {
+    "sentence": "Alfred will walk if Ruth will.",
+    "soa": {
+      "b": "Alfred",
+      "F7": "[1] will walk",
+      "f": "Ruth"
+    },
+    "form": [
+      "(F7f→F7b)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F7",
+        "f"
+      ],
+      [
+        "pred1",
+        "F7",
+        "b"
+      ]
+    ]
+  },
+  "27": {
+    "sentence": "Ava won't run if Sam won't.",
+    "soa": {
+      "a": "Ava",
+      "F6": "[1] will run",
+      "c": "Sam"
+    },
+    "form": [
+      "(¬F6c→¬F6a)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "pred1",
+          "F6",
+          "c"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F6",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "28": {
+    "sentence": "If Alfred doesn't study, he will pass only if he concentrates.",
+    "soa": {
+      "b": "Alfred",
+      "F1": "[1] studies",
+      "F5": "[1] will pass",
+      "F2": "[1] concentrates"
+    },
+    "form": [
+      "(¬F1b→(F5b→F2b))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "pred1",
+          "F1",
+          "b"
+        ]
+      ],
+      [
+        "imp",
+        [
+          "pred1",
+          "F5",
+          "b"
+        ],
+        [
+          "pred1",
+          "F2",
+          "b"
+        ]
+      ]
+    ]
+  },
+  "29": {
+    "sentence": "If Sam sits, then if Ava doesn't sit, Ruth will stand.",
+    "soa": {
+      "c": "Sam",
+      "F3": "[1] sits",
+      "a": "Ava",
+      "f": "Ruth",
+      "F8": "[1] will stand"
+    },
+    "form": [
+      "(F3c→(¬F3a→F8f))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F3",
+        "c"
+      ],
+      [
+        "imp",
+        [
+          "not",
+          [
+            "pred1",
+            "F3",
+            "a"
+          ]
+        ],
+        [
+          "pred1",
+          "F8",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "30": {
+    "sentence": "If Alfred won't stand if Ruth won't, then Sam won't.",
+    "soa": {
+      "b": "Alfred",
+      "F8": "[1] will stand",
+      "f": "Ruth",
+      "c": "Sam"
+    },
+    "form": [
+      "((¬F8f→¬F8b)→¬F8c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "imp",
+        [
+          "not",
+          [
+            "pred1",
+            "F8",
+            "f"
+          ]
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F8",
+            "b"
+          ]
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F8",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "31": {
+    "sentence": "Ava is happy and Sam is happy",
+    "soa": {
+      "a": "Ava",
+      "F15": "[1] is happy",
+      "c": "Sam"
+    },
+    "form": [
+      "(F15a∧F15c)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F15",
+        "a"
+      ],
+      [
+        "pred1",
+        "F15",
+        "c"
+      ]
+    ]
+  },
+  "32": {
+    "sentence": "Either Ruth studies or she won't pass.",
+    "soa": {
+      "f": "Ruth",
+      "F1": "[1] studies",
+      "F5": "[1] will pass"
+    },
+    "form": [
+      "(F1f∨¬F5f)"
+    ],
+    "ast": [
+      "or",
+      [
+        "pred1",
+        "F1",
+        "f"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F5",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "33": {
+    "sentence": "Sam is happy, but he won't pass.",
+    "soa": {
+      "c": "Sam",
+      "F15": "[1] is happy",
+      "F5": "[1] will pass"
+    },
+    "form": [
+      "(F15c∧¬F5c)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F15",
+        "c"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F5",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "34": {
+    "sentence": "Sam is not honest if he is a knave.",
+    "soa": {
+      "c": "Sam",
+      "F26": "[1] is a knave",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "(F26c→¬F17c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F26",
+        "c"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F17",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "35": {
+    "sentence": "Ava will pass just in case she studies.",
+    "soa": {
+      "a": "Ava",
+      "F5": "[1] will pass",
+      "F1": "[1] studies"
+    },
+    "form": [
+      "(F5a↔F1a)"
+    ],
+    "ast": [
+      "iff",
+      [
+        "pred1",
+        "F5",
+        "a"
+      ],
+      [
+        "pred1",
+        "F1",
+        "a"
+      ]
+    ]
+  },
+  "36": {
+    "sentence": "Sam and Ansel are elves.",
+    "soa": {
+      "c": "Sam",
+      "F23": "[1] is an elf",
+      "e": "Ansel"
+    },
+    "form": [
+      "(F23c∧F23e)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F23",
+        "c"
+      ],
+      [
+        "pred1",
+        "F23",
+        "e"
+      ]
+    ]
+  },
+  "37": {
+    "sentence": "Emily didn't drink or sing.",
+    "soa": {
+      "d": "Emily",
+      "F10": "[1] drank",
+      "F12": "[1] sang"
+    },
+    "form": [
+      "¬(F10d∨F12d)"
+    ],
+    "ast": [
+      "not",
+      [
+        "or",
+        [
+          "pred1",
+          "F10",
+          "d"
+        ],
+        [
+          "pred1",
+          "F12",
+          "d"
+        ]
+      ]
+    ]
+  },
+  "38": {
+    "sentence": "Both Alfred and Sam swam.",
+    "soa": {
+      "b": "Alfred",
+      "F13": "[1] swam",
+      "c": "Sam"
+    },
+    "form": [
+      "(F13b∧F13c)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F13",
+        "b"
+      ],
+      [
+        "pred1",
+        "F13",
+        "c"
+      ]
+    ]
+  },
+  "39": {
+    "sentence": "Ansel is a mean elf and he will bite.",
+    "soa": {
+      "e": "Ansel",
+      "F14": "[1] is mean",
+      "F23": "[1] is an elf",
+      "F9": "[1] will bite"
+    },
+    "form": [
+      "((F14e∧F23e)∧F9e)"
+    ],
+    "ast": [
+      "and",
+      [
+        "and",
+        [
+          "pred1",
+          "F14",
+          "e"
+        ],
+        [
+          "pred1",
+          "F23",
+          "e"
+        ]
+      ],
+      [
+        "pred1",
+        "F9",
+        "e"
+      ]
+    ]
+  },
+  "40": {
+    "sentence": "Ruth talked to Alfred and he isn't guilty, if she swam.",
+    "soa": {
+      "f": "Ruth",
+      "F13": "[1] swam",
+      "R5": "[1] talked to [2]",
+      "b": "Alfred",
+      "F20": "[1] is guilty"
+    },
+    "form": [
+      "(F13f→(R5fb∧¬F20b))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F13",
+        "f"
+      ],
+      [
+        "and",
+        [
+          "pred2",
+          "R5",
+          "f",
+          "b"
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F20",
+            "b"
+          ]
+        ]
+      ]
+    ]
+  },
+  "41": {
+    "sentence": "Sam is happy only if he ate and drank.",
+    "soa": {
+      "c": "Sam",
+      "F15": "[1] is happy",
+      "F11": "[1] ate",
+      "F10": "[1] drank"
+    },
+    "form": [
+      "(F15c→(F11c∧F10c))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F15",
+        "c"
+      ],
+      [
+        "and",
+        [
+          "pred1",
+          "F11",
+          "c"
+        ],
+        [
+          "pred1",
+          "F10",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "42": {
+    "sentence": "Ruth admires Ava or Emily, but she doesn't admire herself.",
+    "soa": {
+      "f": "Ruth",
+      "a": "Ava",
+      "d": "Emily",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "((R2fa∨R2fd)∧¬Cff)"
+    ],
+    "ast": [
+      "and",
+      [
+        "or",
+        [
+          "pred2",
+          "R2",
+          "f",
+          "a"
+        ],
+        [
+          "pred2",
+          "R2",
+          "f",
+          "d"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred2",
+          "C",
+          "f",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "43": {
+    "sentence": "Sam will stand if he is an honest person.",
+    "soa": {
+      "c": "Sam",
+      "F17": "[1] is honest",
+      "F29": "[1] is a person",
+      "F8": "[1] will stand"
+    },
+    "form": [
+      "((F17c∧F29c)→F8c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "and",
+        [
+          "pred1",
+          "F17",
+          "c"
+        ],
+        [
+          "pred1",
+          "F29",
+          "c"
+        ]
+      ],
+      [
+        "pred1",
+        "F8",
+        "c"
+      ]
+    ]
+  },
+  "44": {
+    "sentence": "Neither Ava nor Ruth kissed Sam.",
+    "soa": {
+      "a": "Ava",
+      "R4": "[1] kissed [2]",
+      "f": "Ruth",
+      "c": "Sam"
+    },
+    "form": [
+      "(¬R4ac∧¬R4fc)"
+    ],
+    "ast": [
+      "and",
+      [
+        "not",
+        [
+          "pred2",
+          "R4",
+          "a",
+          "c"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred2",
+          "R4",
+          "f",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "45": {
+    "sentence": "Alfred, but not Sam, talked to Ruth.",
+    "soa": {
+      "b": "Alfred",
+      "R5": "[1] talked to [2]",
+      "c": "Sam",
+      "f": "Ruth"
+    },
+    "form": [
+      "(R5bf∧¬R5cf)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred2",
+        "R5",
+        "b",
+        "f"
+      ],
+      [
+        "not",
+        [
+          "pred2",
+          "R5",
+          "c",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "46": {
+    "sentence": "Ava will pass just in case neither Sam nor Emily studies.",
+    "soa": {
+      "a": "Ava",
+      "F5": "[1] will pass",
+      "c": "Sam",
+      "F1": "[1] studies",
+      "d": "Emily"
+    },
+    "form": [
+      "(F5a↔¬(F1c∨F1d))"
+    ],
+    "ast": [
+      "iff",
+      [
+        "pred1",
+        "F5",
+        "a"
+      ],
+      [
+        "not",
+        [
+          "or",
+          [
+            "pred1",
+            "F1",
+            "c"
+          ],
+          [
+            "pred1",
+            "F1",
+            "d"
+          ]
+        ]
+      ]
+    ]
+  },
+  "47": {
+    "sentence": "Both Sam and Emily will pass if Ava will. ",
+    "soa": {
+      "a": "Ava",
+      "F5": "[1] will pass",
+      "c": "Sam",
+      "d": "Emily"
+    },
+    "form": [
+      "(F5a→(F5c∧F5d))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "pred1",
+        "F5",
+        "a"
+      ],
+      [
+        "and",
+        [
+          "pred1",
+          "F5",
+          "c"
+        ],
+        [
+          "pred1",
+          "F5",
+          "d"
+        ]
+      ]
+    ]
+  },
+  "48": {
+    "sentence": "Sam will run or walk but he won't stand.",
+    "soa": {
+      "c": "Sam",
+      "F6": "[1] will run",
+      "F7": "[1] will walk",
+      "F8": "[1] will stand"
+    },
+    "form": [
+      "((F6c∨F7c)∧¬F8c)"
+    ],
+    "ast": [
+      "and",
+      [
+        "or",
+        [
+          "pred1",
+          "F6",
+          "c"
+        ],
+        [
+          "pred1",
+          "F7",
+          "c"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F8",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "49": {
+    "sentence": "Sam is an honest person but he isn't happy.  ",
+    "soa": {
+      "c": "Sam",
+      "F17": "[1] is honest",
+      "F29": "[1] is a person",
+      "F15": "[1] is happy"
+    },
+    "form": [
+      "((F17c∧F29c)∧¬F15c)"
+    ],
+    "ast": [
+      "and",
+      [
+        "and",
+        [
+          "pred1",
+          "F17",
+          "c"
+        ],
+        [
+          "pred1",
+          "F29",
+          "c"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F15",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "50": {
+    "sentence": "Not both Sam and Ava drank.",
+    "soa": {
+      "c": "Sam",
+      "F10": "[1] drank",
+      "a": "Ava"
+    },
+    "form": [
+      "¬(F10c∧F10a)"
+    ],
+    "ast": [
+      "not",
+      [
+        "and",
+        [
+          "pred1",
+          "F10",
+          "c"
+        ],
+        [
+          "pred1",
+          "F10",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "51": {
+    "sentence": "Alfred, who didn't swim, is wet.",
+    "soa": {
+      "b": "Alfred",
+      "F19": "[1] is wet",
+      "F13": "[1] swam"
+    },
+    "form": [
+      "(F19b∧¬F13b)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F19",
+        "b"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F13",
+          "b"
+        ]
+      ]
+    ]
+  },
+  "52": {
+    "sentence": "Either Emily or Ruth talked to Sam.",
+    "soa": {
+      "d": "Emily",
+      "R5": "[1] talked to [2]",
+      "f": "Ruth",
+      "c": "Sam"
+    },
+    "form": [
+      "(R5dc∨R5fc)"
+    ],
+    "ast": [
+      "or",
+      [
+        "pred2",
+        "R5",
+        "d",
+        "c"
+      ],
+      [
+        "pred2",
+        "R5",
+        "f",
+        "c"
+      ]
+    ]
+  },
+  "53": {
+    "sentence": "Neither Emily nor Ruth talked to Sam.",
+    "soa": {
+      "d": "Emily",
+      "R5": "[1] talked to [2]",
+      "f": "Ruth",
+      "c": "Sam"
+    },
+    "form": [
+      "¬(R5dc∨R5fc)"
+    ],
+    "ast": [
+      "not",
+      [
+        "or",
+        [
+          "pred2",
+          "R5",
+          "d",
+          "c"
+        ],
+        [
+          "pred2",
+          "R5",
+          "f",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "54": {
+    "sentence": "Alfred kissed Ruth and sang, or he drank.",
+    "soa": {
+      "b": "Alfred",
+      "f": "Ruth",
+      "R4": "[1] kissed [2]",
+      "F12": "[1] sang",
+      "F10": "[1] drank"
+    },
+    "form": [
+      "((R4bf∧F12b)∨F10b)"
+    ],
+    "ast": [
+      "or",
+      [
+        "and",
+        [
+          "pred2",
+          "R4",
+          "b",
+          "f"
+        ],
+        [
+          "pred1",
+          "F12",
+          "b"
+        ]
+      ],
+      [
+        "pred1",
+        "F10",
+        "b"
+      ]
+    ]
+  },
+  "55": {
+    "sentence": "Ava drank but didn't sing.",
+    "soa": {
+      "a": "Ava",
+      "F10": "[1] drank",
+      "F12": "[1] sang"
+    },
+    "form": [
+      "(F10a∧¬F12a)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F10",
+        "a"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F12",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "56": {
+    "sentence": "Ruth will run just in case Ava does.",
+    "soa": {
+      "f": "Ruth",
+      "F6": "[1] will run",
+      "a": "Ava"
+    },
+    "form": [
+      "(F6f↔F6a)"
+    ],
+    "ast": [
+      "iff",
+      [
+        "pred1",
+        "F6",
+        "f"
+      ],
+      [
+        "pred1",
+        "F6",
+        "a"
+      ]
+    ]
+  },
+  "57": {
+    "sentence": "Sam is a monkey who will bite but he isn't mean.",
+    "soa": {
+      "c": "Sam",
+      "F27": "[1] is a monkey",
+      "F9": "[1] will bite",
+      "F14": "[1] is mean"
+    },
+    "form": [
+      "((F27c∧F9c)∧¬F14c)"
+    ],
+    "ast": [
+      "and",
+      [
+        "and",
+        [
+          "pred1",
+          "F27",
+          "c"
+        ],
+        [
+          "pred1",
+          "F9",
+          "c"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F14",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "58": {
+    "sentence": "Alfred isn't honest, but Ruth loves him anyway.",
+    "soa": {
+      "b": "Alfred",
+      "F17": "[1] is honest",
+      "f": "Ruth",
+      "R1": "[1] loves [2]"
+    },
+    "form": [
+      "(¬F17b∧R1fb)"
+    ],
+    "ast": [
+      "and",
+      [
+        "not",
+        [
+          "pred1",
+          "F17",
+          "b"
+        ]
+      ],
+      [
+        "pred2",
+        "R1",
+        "f",
+        "b"
+      ]
+    ]
+  },
+  "59": {
+    "sentence": "Ava is sad and wet or she isn't guilty.",
+    "soa": {
+      "a": "Ava",
+      "F18": "[1] is sad",
+      "F19": "[1] is wet",
+      "F20": "[1] is guilty"
+    },
+    "form": [
+      "((F18a∧F19a)∨¬F20a)"
+    ],
+    "ast": [
+      "or",
+      [
+        "and",
+        [
+          "pred1",
+          "F18",
+          "a"
+        ],
+        [
+          "pred1",
+          "F19",
+          "a"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F20",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "60": {
+    "sentence": "Ava climbs or she sits and concentrates.",
+    "soa": {
+      "a": "Ava",
+      "F4": "[1] climbs",
+      "F3": "[1] sits",
+      "F2": "[1] concentrates"
+    },
+    "form": [
+      "(F4a∨(F3a∧F2a))"
+    ],
+    "ast": [
+      "or",
+      [
+        "pred1",
+        "F4",
+        "a"
+      ],
+      [
+        "and",
+        [
+          "pred1",
+          "F3",
+          "a"
+        ],
+        [
+          "pred1",
+          "F2",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "61": {
+    "sentence": "If neither Ava nor Sam will run, either Emily or Ruth will walk.",
+    "soa": {
+      "a": "Ava",
+      "F6": "[1] will run",
+      "c": "Sam",
+      "d": "Emily",
+      "F7": "[1] will walk",
+      "f": "Ruth"
+    },
+    "form": [
+      "(¬(F6a∨F6c)→(F7d∨F7f))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "or",
+          [
+            "pred1",
+            "F6",
+            "a"
+          ],
+          [
+            "pred1",
+            "F6",
+            "c"
+          ]
+        ]
+      ],
+      [
+        "or",
+        [
+          "pred1",
+          "F7",
+          "d"
+        ],
+        [
+          "pred1",
+          "F7",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "62": {
+    "sentence": "Alfred didn't talk to Ruth and he didn't sing, but he will pass.",
+    "soa": {
+      "b": "Alfred",
+      "f": "Ruth",
+      "R5": "[1] talked to [2]",
+      "F12": "[1] sang",
+      "F5": "[1] will pass"
+    },
+    "form": [
+      "((¬R5bf∧¬F12b)∧F5b)"
+    ],
+    "ast": [
+      "and",
+      [
+        "and",
+        [
+          "not",
+          [
+            "pred2",
+            "R5",
+            "b",
+            "f"
+          ]
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F12",
+            "b"
+          ]
+        ]
+      ],
+      [
+        "pred1",
+        "F5",
+        "b"
+      ]
+    ]
+  },
+  "63": {
+    "sentence": "Either Ava or Ruth will stand, but not both.",
+    "soa": {
+      "a": "Ava",
+      "F8": "[1] will stand",
+      "f": "Ruth"
+    },
+    "form": [
+      "((F8a∨F8f)∧¬(F8a∧F8f))"
+    ],
+    "ast": [
+      "and",
+      [
+        "or",
+        [
+          "pred1",
+          "F8",
+          "a"
+        ],
+        [
+          "pred1",
+          "F8",
+          "f"
+        ]
+      ],
+      [
+        "not",
+        [
+          "and",
+          [
+            "pred1",
+            "F8",
+            "a"
+          ],
+          [
+            "pred1",
+            "F8",
+            "f"
+          ]
+        ]
+      ]
+    ]
+  },
+  "64": {
+    "sentence": "Neither Alfred nor Sam will run, but if either Ava or Emily will, Ruth won't.",
+    "soa": {
+      "b": "Alfred",
+      "F6": "[1] will run",
+      "c": "Sam",
+      "a": "Ava",
+      "d": "Emily",
+      "f": "Ruth"
+    },
+    "form": [
+      "((¬F6b∧¬F6c)∧((F6a∨F6d)→¬F6f))"
+    ],
+    "ast": [
+      "and",
+      [
+        "and",
+        [
+          "not",
+          [
+            "pred1",
+            "F6",
+            "b"
+          ]
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F6",
+            "c"
+          ]
+        ]
+      ],
+      [
+        "imp",
+        [
+          "or",
+          [
+            "pred1",
+            "F6",
+            "a"
+          ],
+          [
+            "pred1",
+            "F6",
+            "d"
+          ]
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F6",
+            "f"
+          ]
+        ]
+      ]
+    ]
+  },
+  "65": {
+    "sentence": "Both Ava and Ruth are honest.",
+    "soa": {
+      "a": "Ava",
+      "F17": "[1] is honest",
+      "f": "Ruth"
+    },
+    "form": [
+      "(F17a∧F17f)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F17",
+        "a"
+      ],
+      [
+        "pred1",
+        "F17",
+        "f"
+      ]
+    ]
+  },
+  "66": {
+    "sentence": "Either Ava ate and Sam didn't, or Ruth ate and Alfred didn't.",
+    "soa": {
+      "a": "Ava",
+      "F11": "[1] ate",
+      "c": "Sam",
+      "f": "Ruth",
+      "b": "Alfred"
+    },
+    "form": [
+      "((F11a∧¬F11c)∨(F11f∧¬F11b))"
+    ],
+    "ast": [
+      "or",
+      [
+        "and",
+        [
+          "pred1",
+          "F11",
+          "a"
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F11",
+            "c"
+          ]
+        ]
+      ],
+      [
+        "and",
+        [
+          "pred1",
+          "F11",
+          "f"
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F11",
+            "b"
+          ]
+        ]
+      ]
+    ]
+  },
+  "67": {
+    "sentence": "Alfred will run unless he ate.",
+    "soa": {
+      "b": "Alfred",
+      "F6": "[1] will run",
+      "F11": "[1] ate"
+    },
+    "form": [
+      "(F6b∨F11b)"
+    ],
+    "ast": [
+      "or",
+      [
+        "pred1",
+        "F6",
+        "b"
+      ],
+      [
+        "pred1",
+        "F11",
+        "b"
+      ]
+    ]
+  },
+  "68": {
+    "sentence": "Alfred is a teacher but he is not mean.",
+    "soa": {
+      "b": "Alfred",
+      "F30": "[1] is a teacher",
+      "F14": "[1] is mean"
+    },
+    "form": [
+      "(F30b∧¬F14b)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F30",
+        "b"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F14",
+          "b"
+        ]
+      ]
+    ]
+  },
+  "69": {
+    "sentence": "If neither Sam nor Alfred sits, Emily won't either.",
+    "soa": {
+      "c": "Sam",
+      "F3": "[1] sits",
+      "b": "Alfred",
+      "d": "Emily"
+    },
+    "form": [
+      "(¬(F3c∨F3b)→¬F3d)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "or",
+          [
+            "pred1",
+            "F3",
+            "c"
+          ],
+          [
+            "pred1",
+            "F3",
+            "b"
+          ]
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F3",
+          "d"
+        ]
+      ]
+    ]
+  },
+  "70": {
+    "sentence": "Neither Sam nor Alfred nor Emily will run. ",
+    "soa": {
+      "c": "Sam",
+      "F6": "[1] will run",
+      "b": "Alfred",
+      "d": "Emily"
+    },
+    "form": [
+      "((¬F6c∧¬F6b)∧¬F6d)"
+    ],
+    "ast": [
+      "and",
+      [
+        "and",
+        [
+          "not",
+          [
+            "pred1",
+            "F6",
+            "c"
+          ]
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F6",
+            "b"
+          ]
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F6",
+          "d"
+        ]
+      ]
+    ]
+  },
+  "71": {
+    "sentence": "Ava didn't talk to Ruth unless both swam.",
+    "soa": {
+      "a": "Ava",
+      "R5": "[1] talked to [2]",
+      "f": "Ruth",
+      "F13": "[1] swam"
+    },
+    "form": [
+      "(¬R5af∨(F13f∧F13a))"
+    ],
+    "ast": [
+      "or",
+      [
+        "not",
+        [
+          "pred2",
+          "R5",
+          "a",
+          "f"
+        ]
+      ],
+      [
+        "and",
+        [
+          "pred1",
+          "F13",
+          "f"
+        ],
+        [
+          "pred1",
+          "F13",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "72": {
+    "sentence": "Sam is mortal.",
+    "soa": {
+      "F16": "[1] is mortal",
+      "c": "Sam"
+    },
+    "form": [
+      "F16c"
+    ],
+    "ast": [
+      "pred1",
+      "F16",
+      "c"
+    ]
+  },
+  "73": {
+    "sentence": "Ava is happy, and so is Sam. ",
+    "soa": {
+      "F15": "[1] is happy",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": [
+      "(F15a∧F15c)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F15",
+        "a"
+      ],
+      [
+        "pred1",
+        "F15",
+        "c"
+      ]
+    ]
+  },
+  "74": {
+    "sentence": "Ansel or Ruth will walk.",
+    "soa": {
+      "F7": "[1] will walk",
+      "e": "Ansel",
+      "f": "Ruth"
+    },
+    "form": [
+      "(F7e∨F7f)"
+    ],
+    "ast": [
+      "or",
+      [
+        "pred1",
+        "F7",
+        "e"
+      ],
+      [
+        "pred1",
+        "F7",
+        "f"
+      ]
+    ]
+  },
+  "75": {
+    "sentence": "If Sam is not a knight, then he is not honest.",
+    "soa": {
+      "F25": "[1] is a knight",
+      "F17": "[1] is honest",
+      "c": "Sam"
+    },
+    "form": [
+      "(¬F25c→¬F17c)"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "pred1",
+          "F25",
+          "c"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F17",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "76": {
+    "sentence": "Ava is an elf but Ruth isn't.",
+    "soa": {
+      "F23": "[1] is an elf",
+      "a": "Ava",
+      "f": "Ruth"
+    },
+    "form": [
+      "(F23a∧¬F23f)"
+    ],
+    "ast": [
+      "and",
+      [
+        "pred1",
+        "F23",
+        "a"
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F23",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "77": {
+    "sentence": "Neither Sam nor Ruth sang, yet they are both happy.",
+    "soa": {
+      "F12": "[1] sang",
+      "F15": "[1] is happy",
+      "c": "Sam",
+      "f": "Ruth"
+    },
+    "form": [
+      "((¬F12c∧¬F12f)∧(F15c∧F15f))"
+    ],
+    "ast": [
+      "and",
+      [
+        "and",
+        [
+          "not",
+          [
+            "pred1",
+            "F12",
+            "c"
+          ]
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F12",
+            "f"
+          ]
+        ]
+      ],
+      [
+        "and",
+        [
+          "pred1",
+          "F15",
+          "c"
+        ],
+        [
+          "pred1",
+          "F15",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "78": {
+    "sentence": "All humans are mortal.",
+    "soa": {
+      "F24": "[1] is a human",
+      "F16": "[1] is mortal"
+    },
+    "form": [
+      "∀x(F24x→F16x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F24",
+          "x"
+        ],
+        [
+          "pred1",
+          "F16",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "79": {
+    "sentence": "Everything is wet.",
+    "soa": {
+      "F19": "[1] is wet"
+    },
+    "form": [
+      "∀xF19x"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "pred1",
+        "F19",
+        "x"
+      ]
+    ]
+  },
+  "80": {
+    "sentence": "Something is not wet.",
+    "soa": {
+      "F19": "[1] is wet"
+    },
+    "form": [
+      "∃x¬F19x"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "not",
+        [
+          "pred1",
+          "F19",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "81": {
+    "sentence": "Some knights are sad.",
+    "soa": {
+      "F25": "[1] is a knight",
+      "F18": "[1] is sad"
+    },
+    "form": [
+      "∃x(F25x∧F18x)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F25",
+          "x"
+        ],
+        [
+          "pred1",
+          "F18",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "82": {
+    "sentence": "No knaves are honest.",
+    "soa": {
+      "F26": "[1] is a knave",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "¬∃x(F26x∧F17x)"
+    ],
+    "ast": [
+      "not",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F26",
+            "x"
+          ],
+          [
+            "pred1",
+            "F17",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "83": {
+    "sentence": "Not all teachers are honest.",
+    "soa": {
+      "F30": "[1] is a teacher",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "∃x(F30x∧¬F17x)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F30",
+          "x"
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F17",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "84": {
+    "sentence": "It's not the case that every monkey is wet.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F19": "[1] is wet"
+    },
+    "form": [
+      "¬∀x(F27x→F19x)"
+    ],
+    "ast": [
+      "not",
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "pred1",
+            "F27",
+            "x"
+          ],
+          [
+            "pred1",
+            "F19",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "85": {
+    "sentence": "Some knights are not happy.",
+    "soa": {
+      "F25": "[1] is a knight",
+      "F15": "[1] is happy"
+    },
+    "form": [
+      "∃x(F25x∧¬F15x)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F25",
+          "x"
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F15",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "86": {
+    "sentence": "Only humans are guilty.",
+    "soa": {
+      "F24": "[1] is a human",
+      "F20": "[1] is guilty"
+    },
+    "form": [
+      "∀x(F20x→F24x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F20",
+          "x"
+        ],
+        [
+          "pred1",
+          "F24",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "87": {
+    "sentence": "A monkey sang.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F12": "[1] sang"
+    },
+    "form": [
+      "∃x(F27x∧F12x)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F27",
+          "x"
+        ],
+        [
+          "pred1",
+          "F12",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "88": {
+    "sentence": "Some people ate but Ava didn't.",
+    "soa": {
+      "F29": "[1] is a person",
+      "F11": "[1] ate",
+      "a": "Ava"
+    },
+    "form": [
+      "(∃x(F29x∧F11x)∧¬F11a)"
+    ],
+    "ast": [
+      "and",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F29",
+            "x"
+          ],
+          [
+            "pred1",
+            "F11",
+            "x"
+          ]
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F11",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "89": {
+    "sentence": "Every wet elf is guilty.",
+    "soa": {
+      "F19": "[1] is wet",
+      "F23": "[1] is an elf",
+      "F20": "[1] is guilty"
+    },
+    "form": [
+      "∀x((F19x∧F23x)→F20x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "and",
+          [
+            "pred1",
+            "F19",
+            "x"
+          ],
+          [
+            "pred1",
+            "F23",
+            "x"
+          ]
+        ],
+        [
+          "pred1",
+          "F20",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "90": {
+    "sentence": "Something is round and something is square, but nothing is both round and square.",
+    "soa": {
+      "F21": "[1] is round",
+      "F22": "[1] is square"
+    },
+    "form": [
+      "((∃xF21x∧∃xF22x)∧¬∃x(F21x∧F22x))"
+    ],
+    "ast": [
+      "and",
+      [
+        "and",
+        [
+          "exists",
+          "x",
+          [
+            "pred1",
+            "F21",
+            "x"
+          ]
+        ],
+        [
+          "exists",
+          "x",
+          [
+            "pred1",
+            "F22",
+            "x"
+          ]
+        ]
+      ],
+      [
+        "not",
+        [
+          "exists",
+          "x",
+          [
+            "and",
+            [
+              "pred1",
+              "F21",
+              "x"
+            ],
+            [
+              "pred1",
+              "F22",
+              "x"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "91": {
+    "sentence": "Every monkey is either happy or wet.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F15": "[1] is happy",
+      "F19": "[1] is wet"
+    },
+    "form": [
+      "∀x(F27x→(F15x∨F19x))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F27",
+          "x"
+        ],
+        [
+          "or",
+          [
+            "pred1",
+            "F15",
+            "x"
+          ],
+          [
+            "pred1",
+            "F19",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "92": {
+    "sentence": "Some monkeys climb but not all who climb are monkeys.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F4": "[1] climbs"
+    },
+    "form": [
+      "(∃x(F27x∧F4x)∧¬∀x(F4x→F27x))"
+    ],
+    "ast": [
+      "and",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F27",
+            "x"
+          ],
+          [
+            "pred1",
+            "F4",
+            "x"
+          ]
+        ]
+      ],
+      [
+        "not",
+        [
+          "forall",
+          "x",
+          [
+            "imp",
+            [
+              "pred1",
+              "F4",
+              "x"
+            ],
+            [
+              "pred1",
+              "F27",
+              "x"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "93": {
+    "sentence": "Some students study but some don't. ",
+    "soa": {
+      "F28": "[1] is a student",
+      "F1": "[1] studies"
+    },
+    "form": [
+      "(∃x(F28x∧F1x)∧∃x(F28x∧¬F1x))"
+    ],
+    "ast": [
+      "and",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F28",
+            "x"
+          ],
+          [
+            "pred1",
+            "F1",
+            "x"
+          ]
+        ]
+      ],
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F28",
+            "x"
+          ],
+          [
+            "not",
+            [
+              "pred1",
+              "F1",
+              "x"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "94": {
+    "sentence": "Everything is a round square.",
+    "soa": {
+      "F21": "[1] is round",
+      "F22": "[1] is square"
+    },
+    "form": [
+      "∀x(F21x∧F22x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F21",
+          "x"
+        ],
+        [
+          "pred1",
+          "F22",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "95": {
+    "sentence": "If every wet monkey ate, then some monkey sang.",
+    "soa": {
+      "F19": "[1] is wet",
+      "F27": "[1] is a monkey",
+      "F11": "[1] ate",
+      "F12": "[1] sang"
+    },
+    "form": [
+      "(∀x((F19x∧F27x)→F11x)→∃x(F27x∧F12x))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "and",
+            [
+              "pred1",
+              "F19",
+              "x"
+            ],
+            [
+              "pred1",
+              "F27",
+              "x"
+            ]
+          ],
+          [
+            "pred1",
+            "F11",
+            "x"
+          ]
+        ]
+      ],
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F27",
+            "x"
+          ],
+          [
+            "pred1",
+            "F12",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "96": {
+    "sentence": "There is something such that, if it is wet, then everything is wet.",
+    "soa": {
+      "F19": "[1] is wet"
+    },
+    "form": [
+      "∃x(F19x→∀yF19y)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F19",
+          "x"
+        ],
+        [
+          "forall",
+          "y",
+          [
+            "pred1",
+            "F19",
+            "y"
+          ]
+        ]
+      ]
+    ]
+  },
+  "97": {
+    "sentence": "Either all happy elves are guilty, or all guilty elves are happy.",
+    "soa": {
+      "F15": "[1] is happy",
+      "F23": "[1] is an elf",
+      "F20": "[1] is guilty"
+    },
+    "form": [
+      "(∀x((F15x∧F23x)→F20x)∨∀x((F20x∧F23x)→F15x))"
+    ],
+    "ast": [
+      "or",
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "and",
+            [
+              "pred1",
+              "F15",
+              "x"
+            ],
+            [
+              "pred1",
+              "F23",
+              "x"
+            ]
+          ],
+          [
+            "pred1",
+            "F20",
+            "x"
+          ]
+        ]
+      ],
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "and",
+            [
+              "pred1",
+              "F20",
+              "x"
+            ],
+            [
+              "pred1",
+              "F23",
+              "x"
+            ]
+          ],
+          [
+            "pred1",
+            "F15",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "98": {
+    "sentence": "Some monkeys ate and drank, but only wet monkeys swam.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F11": "[1] ate",
+      "F10": "[1] drank",
+      "F19": "[1] is wet",
+      "F13": "[1] swam"
+    },
+    "form": [
+      "(∃x(F27x∧(F11x∧F10x))∧∀x(F13x→(F27x∧F19x)))"
+    ],
+    "ast": [
+      "and",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F27",
+            "x"
+          ],
+          [
+            "and",
+            [
+              "pred1",
+              "F11",
+              "x"
+            ],
+            [
+              "pred1",
+              "F10",
+              "x"
+            ]
+          ]
+        ]
+      ],
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "pred1",
+            "F13",
+            "x"
+          ],
+          [
+            "and",
+            [
+              "pred1",
+              "F27",
+              "x"
+            ],
+            [
+              "pred1",
+              "F19",
+              "x"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "99": {
+    "sentence": "All elves who are mean will bite.",
+    "soa": {
+      "F23": "[1] is an elf",
+      "F14": "[1] is mean",
+      "F9": "[1] will bite"
+    },
+    "form": [
+      "∀x((F23x∧F14x)→F9x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "and",
+          [
+            "pred1",
+            "F23",
+            "x"
+          ],
+          [
+            "pred1",
+            "F14",
+            "x"
+          ]
+        ],
+        [
+          "pred1",
+          "F9",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "100": {
+    "sentence": "No wet monkey is happy.",
+    "soa": {
+      "F19": "[1] is wet",
+      "F27": "[1] is a monkey",
+      "F15": "[1] is happy"
+    },
+    "form": [
+      "¬∃x((F19x∧F27x)∧F15x)"
+    ],
+    "ast": [
+      "not",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "and",
+            [
+              "pred1",
+              "F19",
+              "x"
+            ],
+            [
+              "pred1",
+              "F27",
+              "x"
+            ]
+          ],
+          [
+            "pred1",
+            "F15",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "101": {
+    "sentence": "Every guilty elf is sad and mean. ",
+    "soa": {
+      "F20": "[1] is guilty",
+      "F23": "[1] is an elf",
+      "F18": "[1] is sad",
+      "F14": "[1] is mean"
+    },
+    "form": [
+      "∀x((F20x∧F23x)→(F18x∧F14x))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "and",
+          [
+            "pred1",
+            "F20",
+            "x"
+          ],
+          [
+            "pred1",
+            "F23",
+            "x"
+          ]
+        ],
+        [
+          "and",
+          [
+            "pred1",
+            "F18",
+            "x"
+          ],
+          [
+            "pred1",
+            "F14",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "102": {
+    "sentence": "Only knights are honest.",
+    "soa": {
+      "F25": "[1] is a knight",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "∀x(F17x→F25x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F17",
+          "x"
+        ],
+        [
+          "pred1",
+          "F25",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "103": {
+    "sentence": "Some elf is not both mortal and happy. ",
+    "soa": {
+      "F23": "[1] is an elf",
+      "F16": "[1] is mortal",
+      "F15": "[1] is happy"
+    },
+    "form": [
+      "∃x(F23x∧¬(F16x∧F15x))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F23",
+          "x"
+        ],
+        [
+          "not",
+          [
+            "and",
+            [
+              "pred1",
+              "F16",
+              "x"
+            ],
+            [
+              "pred1",
+              "F15",
+              "x"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "104": {
+    "sentence": "No student is happy unless every student will pass.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F15": "[1] is happy",
+      "F5": "[1] will pass"
+    },
+    "form": [
+      "(¬∃x(F28x∧F15x)∨∀x(F28x→F5x))"
+    ],
+    "ast": [
+      "or",
+      [
+        "not",
+        [
+          "exists",
+          "x",
+          [
+            "and",
+            [
+              "pred1",
+              "F28",
+              "x"
+            ],
+            [
+              "pred1",
+              "F15",
+              "x"
+            ]
+          ]
+        ]
+      ],
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "pred1",
+            "F28",
+            "x"
+          ],
+          [
+            "pred1",
+            "F5",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "105": {
+    "sentence": "Each student is happy unless they won't pass. ",
+    "soa": {
+      "F28": "[1] is a student",
+      "F15": "[1] is happy",
+      "F5": "[1] will pass"
+    },
+    "form": [
+      "∀x((F28x→F15x)∨¬F5x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "or",
+        [
+          "imp",
+          [
+            "pred1",
+            "F28",
+            "x"
+          ],
+          [
+            "pred1",
+            "F15",
+            "x"
+          ]
+        ],
+        [
+          "not",
+          [
+            "pred1",
+            "F5",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "106": {
+    "sentence": "All and only knights are honest.",
+    "soa": {
+      "F25": "[1] is a knight",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "∀x(F17x↔F25x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "iff",
+        [
+          "pred1",
+          "F17",
+          "x"
+        ],
+        [
+          "pred1",
+          "F25",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "107": {
+    "sentence": "If a person is honest, they are happy.",
+    "soa": {
+      "F29": "[1] is a person",
+      "F17": "[1] is honest",
+      "F15": "[1] is happy"
+    },
+    "form": [
+      "∀x((F29x∧F17x)→F15x)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "and",
+          [
+            "pred1",
+            "F29",
+            "x"
+          ],
+          [
+            "pred1",
+            "F17",
+            "x"
+          ]
+        ],
+        [
+          "pred1",
+          "F15",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "108": {
+    "sentence": "Sam loves Ava.",
+    "soa": {
+      "R1": "[1] loves [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": [
+      "R1ca"
+    ],
+    "ast": [
+      "pred2",
+      "R1",
+      "c",
+      "a"
+    ]
+  },
+  "109": {
+    "sentence": "Ava doesn't love Sam.",
+    "soa": {
+      "R1": "[1] loves [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": [
+      "¬R1ac"
+    ],
+    "ast": [
+      "not",
+      [
+        "pred2",
+        "R1",
+        "a",
+        "c"
+      ]
+    ]
+  },
+  "110": {
+    "sentence": "Ruth admires Alfred or Sam, but she doesn't admire herself.",
+    "soa": {
+      "R2": "[1] admires [2]",
+      "f": "Ruth",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": [
+      "((R2fb∨R2fc)∧¬R2ff)"
+    ],
+    "ast": [
+      "and",
+      [
+        "or",
+        [
+          "pred2",
+          "R2",
+          "f",
+          "b"
+        ],
+        [
+          "pred2",
+          "R2",
+          "f",
+          "c"
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred2",
+          "R2",
+          "f",
+          "f"
+        ]
+      ]
+    ]
+  },
+  "111": {
+    "sentence": "Something sees Ava.",
+    "soa": {
+      "R3": "[1] sees [2]",
+      "a": "Ava"
+    },
+    "form": [
+      "∃xR3xa"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "pred2",
+        "R3",
+        "x",
+        "a"
+      ]
+    ]
+  },
+  "112": {
+    "sentence": "Every student loves Sam.",
+    "soa": {
+      "R1": "[1] loves [2]",
+      "F28": "[1] is a student",
+      "c": "Sam"
+    },
+    "form": [
+      "∀x(F28x→R1xc)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F28",
+          "x"
+        ],
+        [
+          "pred2",
+          "R1",
+          "x",
+          "c"
+        ]
+      ]
+    ]
+  },
+  "113": {
+    "sentence": "An elf loves Ava.",
+    "soa": {
+      "F23": "[1] is an elf",
+      "R1": "[1] loves [2]",
+      "a": "Ava"
+    },
+    "form": [
+      "∃x(F23x∧R1xa)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F23",
+          "x"
+        ],
+        [
+          "pred2",
+          "R1",
+          "x",
+          "a"
+        ]
+      ]
+    ]
+  },
+  "114": {
+    "sentence": "No teacher talked to Ruth",
+    "soa": {
+      "F30": "[1] is a teacher",
+      "R5": "[1] talked to [2]",
+      "f": "Ruth"
+    },
+    "form": [
+      "¬∃x(F30x∧R5xf)"
+    ],
+    "ast": [
+      "not",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F30",
+            "x"
+          ],
+          [
+            "pred2",
+            "R5",
+            "x",
+            "f"
+          ]
+        ]
+      ]
+    ]
+  },
+  "115": {
+    "sentence": "A student loves a student.",
+    "soa": {
+      "F28": "[1] is a student",
+      "R1": "[1] loves [2]"
+    },
+    "form": [
+      "∃x∃y((F28x∧F28y)∧R1xy)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "exists",
+        "y",
+        [
+          "and",
+          [
+            "and",
+            [
+              "pred1",
+              "F28",
+              "x"
+            ],
+            [
+              "pred1",
+              "F28",
+              "y"
+            ]
+          ],
+          [
+            "pred2",
+            "R1",
+            "x",
+            "y"
+          ]
+        ]
+      ]
+    ]
+  },
+  "116": {
+    "sentence": "Every elf sees every monkey.",
+    "soa": {
+      "F23": "[1] is an elf",
+      "F27": "[1] is a monkey",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "∀x∀y((F23x∧F27y)→R3xy)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "forall",
+        "y",
+        [
+          "imp",
+          [
+            "and",
+            [
+              "pred1",
+              "F23",
+              "x"
+            ],
+            [
+              "pred1",
+              "F27",
+              "y"
+            ]
+          ],
+          [
+            "pred2",
+            "R3",
+            "x",
+            "y"
+          ]
+        ]
+      ]
+    ]
+  },
+  "117": {
+    "sentence": "No student waved to any teacher.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R6": "[1] waved to [2]"
+    },
+    "form": [
+      "¬∃x∃y((F28x∧F30y)∧R6xy)"
+    ],
+    "ast": [
+      "not",
+      [
+        "exists",
+        "x",
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "and",
+              [
+                "pred1",
+                "F28",
+                "x"
+              ],
+              [
+                "pred1",
+                "F30",
+                "y"
+              ]
+            ],
+            [
+              "pred2",
+              "R6",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "118": {
+    "sentence": "There is a student who every monkey sees.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F28": "[1] is a student",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "∃y(F28y∧∀x(F27x→R3xy))"
+    ],
+    "ast": [
+      "exists",
+      "y",
+      [
+        "and",
+        [
+          "pred1",
+          "F28",
+          "y"
+        ],
+        [
+          "forall",
+          "x",
+          [
+            "imp",
+            [
+              "pred1",
+              "F27",
+              "x"
+            ],
+            [
+              "pred2",
+              "R3",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "119": {
+    "sentence": "Some monkey sees itself.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "∃x(F27x∧R3xx)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F27",
+          "x"
+        ],
+        [
+          "pred2",
+          "R3",
+          "x",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "120": {
+    "sentence": "No student sees every monkey.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F27": "[1] is a monkey",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "¬∃x(F28x∧∀y(F27y→R3xy))"
+    ],
+    "ast": [
+      "not",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F28",
+            "x"
+          ],
+          [
+            "forall",
+            "y",
+            [
+              "imp",
+              [
+                "pred1",
+                "F27",
+                "y"
+              ],
+              [
+                "pred2",
+                "R3",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "121": {
+    "sentence": "Some knight and some knave admire each other.",
+    "soa": {
+      "F25": "[1] is a knight",
+      "F26": "[1] is a knave",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "∃x∃y((F25x∧F26y)∧(R2xy∧R2yx))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "exists",
+        "y",
+        [
+          "and",
+          [
+            "and",
+            [
+              "pred1",
+              "F25",
+              "x"
+            ],
+            [
+              "pred1",
+              "F26",
+              "y"
+            ]
+          ],
+          [
+            "and",
+            [
+              "pred2",
+              "R2",
+              "x",
+              "y"
+            ],
+            [
+              "pred2",
+              "R2",
+              "y",
+              "x"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "122": {
+    "sentence": "Alfred didn't talk to a happy elf and he didn't swim.",
+    "soa": {
+      "R5": "[1] talked to [2]",
+      "F15": "[1] is happy",
+      "F23": "[1] is an elf",
+      "F13": "[1] swam",
+      "b": "Alfred"
+    },
+    "form": [
+      "(¬∃x((F15x∧F23x)∧R5bx)∧¬F13b)"
+    ],
+    "ast": [
+      "and",
+      [
+        "not",
+        [
+          "exists",
+          "x",
+          [
+            "and",
+            [
+              "and",
+              [
+                "pred1",
+                "F15",
+                "x"
+              ],
+              [
+                "pred1",
+                "F23",
+                "x"
+              ]
+            ],
+            [
+              "pred2",
+              "R5",
+              "b",
+              "x"
+            ]
+          ]
+        ]
+      ],
+      [
+        "not",
+        [
+          "pred1",
+          "F13",
+          "b"
+        ]
+      ]
+    ]
+  },
+  "123": {
+    "sentence": "Some student admires every teacher.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "∃x(F28x∧∀y(F30y→R2xy))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F28",
+          "x"
+        ],
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "pred1",
+              "F30",
+              "y"
+            ],
+            [
+              "pred2",
+              "R2",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "124": {
+    "sentence": "Ruth is an admirer of people who have no admirers.",
+    "soa": {
+      "R2": "[1] admires [2]",
+      "F29": "[1] is a person",
+      "f": "Ruth"
+    },
+    "form": [
+      "∀x(F29x→(¬∃yR2yx→R2fx))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F29",
+          "x"
+        ],
+        [
+          "imp",
+          [
+            "not",
+            [
+              "exists",
+              "y",
+              [
+                "pred2",
+                "R2",
+                "y",
+                "x"
+              ]
+            ]
+          ],
+          [
+            "pred2",
+            "R2",
+            "f",
+            "x"
+          ]
+        ]
+      ]
+    ]
+  },
+  "125": {
+    "sentence": "Every monkey sees every human, and there is a monkey that every human sees.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F24": "[1] is a human",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "(∀x∀y((F27x∧F24y)→R3xy)∧∃y(F27y∧∀x(F24x→R3xy)))"
+    ],
+    "ast": [
+      "and",
+      [
+        "forall",
+        "x",
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "and",
+              [
+                "pred1",
+                "F27",
+                "x"
+              ],
+              [
+                "pred1",
+                "F24",
+                "y"
+              ]
+            ],
+            [
+              "pred2",
+              "R3",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ],
+      [
+        "exists",
+        "y",
+        [
+          "and",
+          [
+            "pred1",
+            "F27",
+            "y"
+          ],
+          [
+            "forall",
+            "x",
+            [
+              "imp",
+              [
+                "pred1",
+                "F24",
+                "x"
+              ],
+              [
+                "pred2",
+                "R3",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "126": {
+    "sentence": "Every human waved to every elf but not every elf waved to every human.",
+    "soa": {
+      "F24": "[1] is a human",
+      "F23": "[1] is an elf",
+      "R6": "[1] waved to [2]"
+    },
+    "form": [
+      "(∀x∀y((F24x∧F23y)→R6xy)∧∃x∃y((F23x∧F24y)∧¬R6xy))"
+    ],
+    "ast": [
+      "and",
+      [
+        "forall",
+        "x",
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "and",
+              [
+                "pred1",
+                "F24",
+                "x"
+              ],
+              [
+                "pred1",
+                "F23",
+                "y"
+              ]
+            ],
+            [
+              "pred2",
+              "R6",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ],
+      [
+        "exists",
+        "x",
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "and",
+              [
+                "pred1",
+                "F23",
+                "x"
+              ],
+              [
+                "pred1",
+                "F24",
+                "y"
+              ]
+            ],
+            [
+              "not",
+              [
+                "pred2",
+                "R6",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "127": {
+    "sentence": "No elf waved to any other elf.",
+    "soa": {
+      "F23": "[1] is an elf",
+      "R6": "[1] waved to [2]"
+    },
+    "form": [
+      "∀x∀y((F23x∧F23y)→¬R6xy)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "forall",
+        "y",
+        [
+          "imp",
+          [
+            "and",
+            [
+              "pred1",
+              "F23",
+              "x"
+            ],
+            [
+              "pred1",
+              "F23",
+              "y"
+            ]
+          ],
+          [
+            "not",
+            [
+              "pred2",
+              "R6",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "128": {
+    "sentence": "Ruth is an admirer of those who have no admirers.",
+    "soa": {
+      "R2": "[1] admires [2]",
+      "F29": "[1] is a person",
+      "f": "Ruth"
+    },
+    "form": [
+      "∀x(¬∃yR2yx→R2fx)"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "not",
+          [
+            "exists",
+            "y",
+            [
+              "pred2",
+              "R2",
+              "y",
+              "x"
+            ]
+          ]
+        ],
+        [
+          "pred2",
+          "R2",
+          "f",
+          "x"
+        ]
+      ]
+    ]
+  },
+  "129": {
+    "sentence": "Every monkey sees every human and every human sees a monkey.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F24": "[1] is a human",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "(∀x∀y((F27x∧F24y)→R3xy)∧∀x(F24x→∃y(F27y∧R3xy)))"
+    ],
+    "ast": [
+      "and",
+      [
+        "forall",
+        "x",
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "and",
+              [
+                "pred1",
+                "F27",
+                "x"
+              ],
+              [
+                "pred1",
+                "F24",
+                "y"
+              ]
+            ],
+            [
+              "pred2",
+              "R3",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ],
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "pred1",
+            "F24",
+            "x"
+          ],
+          [
+            "exists",
+            "y",
+            [
+              "and",
+              [
+                "pred1",
+                "F27",
+                "y"
+              ],
+              [
+                "pred2",
+                "R3",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "130": {
+    "sentence": "Every human waved to every elf but not every elf waved to every human.",
+    "soa": {
+      "F24": "[1] is a human",
+      "F23": "[1] is an elf",
+      "R6": "[1] waved to [2]"
+    },
+    "form": [
+      "(∀x∀y((F24x∧F23y)→R6xy)∧∃x∃y((F23x∧F24y)∧¬R6xy))"
+    ],
+    "ast": [
+      "and",
+      [
+        "forall",
+        "x",
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "and",
+              [
+                "pred1",
+                "F24",
+                "x"
+              ],
+              [
+                "pred1",
+                "F23",
+                "y"
+              ]
+            ],
+            [
+              "pred2",
+              "R6",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ],
+      [
+        "exists",
+        "x",
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "and",
+              [
+                "pred1",
+                "F23",
+                "x"
+              ],
+              [
+                "pred1",
+                "F24",
+                "y"
+              ]
+            ],
+            [
+              "not",
+              [
+                "pred2",
+                "R6",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "131": {
+    "sentence": "There is a number that is less than every number.",
+    "soa": {
+      "F31": "[1] is a number",
+      "R7": "[1] is less than [2]"
+    },
+    "form": [
+      "∃x(F31x∧∀y(F31y→R7xy))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F31",
+          "x"
+        ],
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "pred1",
+              "F31",
+              "y"
+            ],
+            [
+              "pred2",
+              "R7",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "132": {
+    "sentence": "Each number is less than some number.",
+    "soa": {
+      "F31": "[1] is a number",
+      "R7": "[1] is less than [2]"
+    },
+    "form": [
+      "∀x(F31x→∃y(F31y∧R7xy))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F31",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F31",
+              "y"
+            ],
+            [
+              "pred2",
+              "R7",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "133": {
+    "sentence": "Some number doesn't have a number as its successor.",
+    "soa": {
+      "F31": "[1] is a number",
+      "R9": "[1] is a successor of [2]"
+    },
+    "form": [
+      "∃x(F31x∧¬∃y(F31y∧R9yx))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F31",
+          "x"
+        ],
+        [
+          "not",
+          [
+            "exists",
+            "y",
+            [
+              "and",
+              [
+                "pred1",
+                "F31",
+                "y"
+              ],
+              [
+                "pred2",
+                "R9",
+                "y",
+                "x"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "134": {
+    "sentence": "Every number has a number as a successor.",
+    "soa": {
+      "F31": "[1] is a number",
+      "R9": "[1] is a successor of [2]"
+    },
+    "form": [
+      "∀x(F31x→∃y(F31y∧R9yx))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F31",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F31",
+              "y"
+            ],
+            [
+              "pred2",
+              "R9",
+              "y",
+              "x"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "135": {
+    "sentence": "Either some number is greater than every number or every number has a number as a successor.",
+    "soa": {
+      "F31": "[1] is a number",
+      "R9": "[1] is a successor of [2]",
+      "R8": "[1] is greater than [2]"
+    },
+    "form": [
+      "(∃x(F31x∧∀y(F31y→R8xy))∨∀x(F31x→∃y(F31y∧R9yx)))"
+    ],
+    "ast": [
+      "or",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F31",
+            "x"
+          ],
+          [
+            "forall",
+            "y",
+            [
+              "imp",
+              [
+                "pred1",
+                "F31",
+                "y"
+              ],
+              [
+                "pred2",
+                "R8",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "pred1",
+            "F31",
+            "x"
+          ],
+          [
+            "exists",
+            "y",
+            [
+              "and",
+              [
+                "pred1",
+                "F31",
+                "y"
+              ],
+              [
+                "pred2",
+                "R9",
+                "y",
+                "x"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "136": {
+    "sentence": "Some knight loves every knave that loves it",
+    "soa": {
+      "F25": "[1] is a knight",
+      "F26": "[1] is a knave",
+      "R1": "[1] loves [2]"
+    },
+    "form": [
+      "∃x(F25x∧∀y((F26y∧R1yx)→R1xy))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F25",
+          "x"
+        ],
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "and",
+              [
+                "pred1",
+                "F26",
+                "y"
+              ],
+              [
+                "pred2",
+                "R1",
+                "y",
+                "x"
+              ]
+            ],
+            [
+              "pred2",
+              "R1",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "137": {
+    "sentence": "No person who is either student or a teacher talked to Alfred.",
+    "soa": {
+      "F29": "[1] is a person",
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R5": "[1] talked to [2]",
+      "b": "Alfred"
+    },
+    "form": [
+      "¬∃x((F29x∧(F28x∨F30x))∧R5xb)"
+    ],
+    "ast": [
+      "not",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "and",
+            [
+              "pred1",
+              "F29",
+              "x"
+            ],
+            [
+              "or",
+              [
+                "pred1",
+                "F28",
+                "x"
+              ],
+              [
+                "pred1",
+                "F30",
+                "x"
+              ]
+            ]
+          ],
+          [
+            "pred2",
+            "R5",
+            "x",
+            "b"
+          ]
+        ]
+      ]
+    ]
+  },
+  "138": {
+    "sentence": "Alfred admires all and only people who do not admire themselves.",
+    "soa": {
+      "R2": "[1] admires [2]",
+      "F29": "[1] is a person",
+      "b": "Alfred"
+    },
+    "form": [
+      "∀x(F29x→∀x(R2bx↔¬R2xb))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F29",
+          "x"
+        ],
+        [
+          "forall",
+          "x",
+          [
+            "iff",
+            [
+              "pred2",
+              "R2",
+              "b",
+              "x"
+            ],
+            [
+              "not",
+              [
+                "pred2",
+                "R2",
+                "x",
+                "b"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "139": {
+    "sentence": "Every monkey sees every human, and every human sees some monkey.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F24": "[1] is a human",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "(∀x∀y((F27x∧F24y)→R3xy)∧∀x(F24x→∃y(F27y∧R3xy)))"
+    ],
+    "ast": [
+      "and",
+      [
+        "forall",
+        "x",
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "and",
+              [
+                "pred1",
+                "F27",
+                "x"
+              ],
+              [
+                "pred1",
+                "F24",
+                "y"
+              ]
+            ],
+            [
+              "pred2",
+              "R3",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ],
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "pred1",
+            "F24",
+            "x"
+          ],
+          [
+            "exists",
+            "y",
+            [
+              "and",
+              [
+                "pred1",
+                "F27",
+                "y"
+              ],
+              [
+                "pred2",
+                "R3",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "140": {
+    "sentence": "There is a student and a teacher such that the student didn't wave to the teacher.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R6": "[1] waved to [2]"
+    },
+    "form": [
+      "∃x∃y((F28x∧F30y)∧¬R6xy)"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "exists",
+        "y",
+        [
+          "and",
+          [
+            "and",
+            [
+              "pred1",
+              "F28",
+              "x"
+            ],
+            [
+              "pred1",
+              "F30",
+              "y"
+            ]
+          ],
+          [
+            "not",
+            [
+              "pred2",
+              "R6",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "141": {
+    "sentence": "Each monkey sees some student.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F28": "[1] is a student",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "∀x(F27x→∃y(F28y∧R3xy))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F27",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F28",
+              "y"
+            ],
+            [
+              "pred2",
+              "R3",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "142": {
+    "sentence": "Not every teacher waved to Ruth.",
+    "soa": {
+      "F30": "[1] is a teacher",
+      "R6": "[1] waved to [2]",
+      "f": "Ruth"
+    },
+    "form": [
+      "¬∀x(F30x→R6xf)"
+    ],
+    "ast": [
+      "not",
+      [
+        "forall",
+        "x",
+        [
+          "imp",
+          [
+            "pred1",
+            "F30",
+            "x"
+          ],
+          [
+            "pred2",
+            "R6",
+            "x",
+            "f"
+          ]
+        ]
+      ]
+    ]
+  },
+  "143": {
+    "sentence": "Ruth waved to every teacher.",
+    "soa": {
+      "F30": "[1] is a teacher",
+      "R6": "[1] waved to [2]",
+      "f": "Ruth"
+    },
+    "form": [
+      "∀y(F30y→R6fy)"
+    ],
+    "ast": [
+      "forall",
+      "y",
+      [
+        "imp",
+        [
+          "pred1",
+          "F30",
+          "y"
+        ],
+        [
+          "pred2",
+          "R6",
+          "f",
+          "y"
+        ]
+      ]
+    ]
+  },
+  "144": {
+    "sentence": "Every student loves and admires some teacher.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R1": "[1] loves [2]",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "∀x(F28x→∃y(F30y∧(R1xy∧R2xy)))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F28",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F30",
+              "y"
+            ],
+            [
+              "and",
+              [
+                "pred2",
+                "R1",
+                "x",
+                "y"
+              ],
+              [
+                "pred2",
+                "R2",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "145": {
+    "sentence": "Every monkey who is happy sees a student.",
+    "soa": {
+      "F27": "[1] is a monkey",
+      "F15": "[1] is happy",
+      "F28": "[1] is a student",
+      "R3": "[1] sees [2]"
+    },
+    "form": [
+      "∀x((F27x∧F15x)→∃y(F28y∧R3xy))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "and",
+          [
+            "pred1",
+            "F27",
+            "x"
+          ],
+          [
+            "pred1",
+            "F15",
+            "x"
+          ]
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F28",
+              "y"
+            ],
+            [
+              "pred2",
+              "R3",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "146": {
+    "sentence": "Every student admires a teacher who admires a student.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "∀x(F28x→∃y(F30y∧(∃z(F28z∧R2yz)∧R2xy)))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F28",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F30",
+              "y"
+            ],
+            [
+              "and",
+              [
+                "exists",
+                "z",
+                [
+                  "and",
+                  [
+                    "pred1",
+                    "F28",
+                    "z"
+                  ],
+                  [
+                    "pred2",
+                    "R2",
+                    "y",
+                    "z"
+                  ]
+                ]
+              ],
+              [
+                "pred2",
+                "R2",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "148": {
+    "sentence": "Every teacher admires a student who admires a teacher.",
+    "soa": {
+      "F30": "[1] is a teacher",
+      "F28": "[1] is a student",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "∀x(F30x→∃y(F28y∧(∃z(F30z∧R2yz)∧R2xy)))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F30",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F28",
+              "y"
+            ],
+            [
+              "and",
+              [
+                "exists",
+                "z",
+                [
+                  "and",
+                  [
+                    "pred1",
+                    "F30",
+                    "z"
+                  ],
+                  [
+                    "pred2",
+                    "R2",
+                    "y",
+                    "z"
+                  ]
+                ]
+              ],
+              [
+                "pred2",
+                "R2",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "149": {
+    "sentence": "There is a student who waved to a student and to a teacher.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R6": "[1] waved to [2]"
+    },
+    "form": [
+      "∃x(F28x∧∃y∃z((F28y∧F30z)∧(R6xy∧R6xz)))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F28",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "exists",
+            "z",
+            [
+              "and",
+              [
+                "and",
+                [
+                  "pred1",
+                  "F28",
+                  "y"
+                ],
+                [
+                  "pred1",
+                  "F30",
+                  "z"
+                ]
+              ],
+              [
+                "and",
+                [
+                  "pred2",
+                  "R6",
+                  "x",
+                  "y"
+                ],
+                [
+                  "pred2",
+                  "R6",
+                  "x",
+                  "z"
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "150": {
+    "sentence": "Every student waved to a teacher or a monkey.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "F27": "[1] is a monkey",
+      "R6": "[1] waved to [2]"
+    },
+    "form": [
+      "∀x(F28x→∃y((F30y∨F27y)∧R6xy))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F28",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "or",
+              [
+                "pred1",
+                "F30",
+                "y"
+              ],
+              [
+                "pred1",
+                "F27",
+                "y"
+              ]
+            ],
+            [
+              "pred2",
+              "R6",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "151": {
+    "sentence": "There is a student who every monkey waved to.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F27": "[1] is a monkey",
+      "R6": "[1] waved to [2]"
+    },
+    "form": [
+      "∃x(F28x∧∀y(F27y→R6yx))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F28",
+          "x"
+        ],
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "pred1",
+              "F27",
+              "y"
+            ],
+            [
+              "pred2",
+              "R6",
+              "y",
+              "x"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "152": {
+    "sentence": "Every student admires some teacher.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "∀x(F28x→∃y(F30y∧R2xy))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F28",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F30",
+              "y"
+            ],
+            [
+              "pred2",
+              "R2",
+              "x",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "153": {
+    "sentence": "Every teacher admires a student who admires them.",
+    "soa": {
+      "F30": "[1] is a teacher",
+      "F28": "[1] is a student",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "∀x(F30x→∃y(F28y∧(R2yx∧R2xy)))"
+    ],
+    "ast": [
+      "forall",
+      "x",
+      [
+        "imp",
+        [
+          "pred1",
+          "F30",
+          "x"
+        ],
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F28",
+              "y"
+            ],
+            [
+              "and",
+              [
+                "pred2",
+                "R2",
+                "y",
+                "x"
+              ],
+              [
+                "pred2",
+                "R2",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "154": {
+    "sentence": "No student admires every teacher.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "¬∃x(F28x∧∀y(F30y→R2xy))"
+    ],
+    "ast": [
+      "not",
+      [
+        "exists",
+        "x",
+        [
+          "and",
+          [
+            "pred1",
+            "F28",
+            "x"
+          ],
+          [
+            "forall",
+            "y",
+            [
+              "imp",
+              [
+                "pred1",
+                "F30",
+                "y"
+              ],
+              [
+                "pred2",
+                "R2",
+                "x",
+                "y"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "155": {
+    "sentence": "Some teacher admires only students.",
+    "soa": {
+      "F30": "[1] is a teacher",
+      "F28": "[1] is a student",
+      "R2": "[1] admires [2]"
+    },
+    "form": [
+      "∃x(F30x∧∀y(R2xy→F28y))"
+    ],
+    "ast": [
+      "exists",
+      "x",
+      [
+        "and",
+        [
+          "pred1",
+          "F30",
+          "x"
+        ],
+        [
+          "forall",
+          "y",
+          [
+            "imp",
+            [
+              "pred2",
+              "R2",
+              "x",
+              "y"
+            ],
+            [
+              "pred1",
+              "F28",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "156": {
+    "sentence": "If no student or teacher waved to Ruth, then no teacher is happy.",
+    "soa": {
+      "F28": "[1] is a student",
+      "F30": "[1] is a teacher",
+      "R6": "[1] waved to [2]",
+      "F15": "[1] is happy",
+      "f": "Ruth"
+    },
+    "form": [
+      "(¬∃x((F28x∨F30x)∧R6xf)→¬∃y(F30y∧F15y))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "exists",
+          "x",
+          [
+            "and",
+            [
+              "or",
+              [
+                "pred1",
+                "F28",
+                "x"
+              ],
+              [
+                "pred1",
+                "F30",
+                "x"
+              ]
+            ],
+            [
+              "pred2",
+              "R6",
+              "x",
+              "f"
+            ]
+          ]
+        ]
+      ],
+      [
+        "not",
+        [
+          "exists",
+          "y",
+          [
+            "and",
+            [
+              "pred1",
+              "F30",
+              "y"
+            ],
+            [
+              "pred1",
+              "F15",
+              "y"
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "157": {
+    "sentence": "If no student waved to Ruth, then every teacher is happy.",
+    "soa": {
+      "F28": "[1] is a student",
+      "R6": "[1] waved to [2]",
+      "F30": "[1] is a teacher",
+      "F15": "[1] is happy",
+      "f": "Ruth"
+    },
+    "form": [
+      "(¬∃x(F28x∧R6xf)→∀y(F30y→F15y))"
+    ],
+    "ast": [
+      "imp",
+      [
+        "not",
+        [
+          "exists",
+          "x",
+          [
+            "and",
+            [
+              "pred1",
+              "F28",
+              "x"
+            ],
+            [
+              "pred2",
+              "R6",
+              "x",
+              "f"
+            ]
+          ]
+        ]
+      ],
+      [
+        "forall",
+        "y",
+        [
+          "imp",
+          [
+            "pred1",
+            "F30",
+            "y"
+          ],
+          [
+            "pred1",
+            "F15",
+            "y"
+          ]
+        ]
+      ]
+    ]
+  },
+  "158": {
+    "sentence": "Sam is a knight",
+    "soa": {
+      "c": "Sam",
+      "F25": "[1] is a knight"
+    },
+    "form": [
+      "F25c"
+    ],
+    "ast": [
+      "pred1",
+      "F25",
+      "c"
+    ]
+  },
+  "159": {
+    "sentence": "Sam is honest.",
+    "soa": {
+      "c": "Sam",
+      "F17": "[1] is honest"
+    },
+    "form": [
+      "F17c"
+    ],
+    "ast": [
+      "pred1",
+      "F17",
+      "c"
+    ]
+  }
+}

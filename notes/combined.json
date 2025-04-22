@@ -1,0 +1,4906 @@
+[
+  {
+    "sentence": "Ava sits.",
+    "soa": {
+      "A": "[1] sits",
+      "a": "Ava"
+    },
+    "form": "Aa"
+  },
+  {
+    "sentence": "Alfred sits.",
+    "soa": {
+      "A": "[1] sits",
+      "b": "Alfred"
+    },
+    "form": "Ab"
+  },
+  {
+    "sentence": "Sam sits.",
+    "soa": {
+      "A": "[1] sits",
+      "c": "Sam"
+    },
+    "form": "Ac"
+  },
+  {
+    "sentence": "Lewis sits.",
+    "soa": {
+      "A": "[1] sits",
+      "d": "Lewis"
+    },
+    "form": "Ad"
+  },
+  {
+    "sentence": "Hazel sits.",
+    "soa": {
+      "A": "[1] sits",
+      "e": "Hazel"
+    },
+    "form": "Ae"
+  },
+  {
+    "sentence": "Ava climbs.",
+    "soa": {
+      "B": "[1] climbs",
+      "a": "Ava"
+    },
+    "form": "Ba"
+  },
+  {
+    "sentence": "Alfred climbs.",
+    "soa": {
+      "B": "[1] climbs",
+      "b": "Alfred"
+    },
+    "form": "Bb"
+  },
+  {
+    "sentence": "Sam climbs.",
+    "soa": {
+      "B": "[1] climbs",
+      "c": "Sam"
+    },
+    "form": "Bc"
+  },
+  {
+    "sentence": "Lewis climbs.",
+    "soa": {
+      "B": "[1] climbs",
+      "d": "Lewis"
+    },
+    "form": "Bd"
+  },
+  {
+    "sentence": "Hazel climbs.",
+    "soa": {
+      "B": "[1] climbs",
+      "e": "Hazel"
+    },
+    "form": "Be"
+  },
+  {
+    "sentence": "Ava will run.",
+    "soa": {
+      "C": "[1] will run",
+      "a": "Ava"
+    },
+    "form": "Ca"
+  },
+  {
+    "sentence": "Alfred will run.",
+    "soa": {
+      "C": "[1] will run",
+      "b": "Alfred"
+    },
+    "form": "Cb"
+  },
+  {
+    "sentence": "Sam will run.",
+    "soa": {
+      "C": "[1] will run",
+      "c": "Sam"
+    },
+    "form": "Cc"
+  },
+  {
+    "sentence": "Lewis will run.",
+    "soa": {
+      "C": "[1] will run",
+      "d": "Lewis"
+    },
+    "form": "Cd"
+  },
+  {
+    "sentence": "Hazel will run.",
+    "soa": {
+      "C": "[1] will run",
+      "e": "Hazel"
+    },
+    "form": "Ce"
+  },
+  {
+    "sentence": "Ava will walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "a": "Ava"
+    },
+    "form": "Da"
+  },
+  {
+    "sentence": "Alfred will walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "b": "Alfred"
+    },
+    "form": "Db"
+  },
+  {
+    "sentence": "Sam will walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "c": "Sam"
+    },
+    "form": "Dc"
+  },
+  {
+    "sentence": "Lewis will walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "d": "Lewis"
+    },
+    "form": "Dd"
+  },
+  {
+    "sentence": "Hazel will walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "e": "Hazel"
+    },
+    "form": "De"
+  },
+  {
+    "sentence": "Ava will attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "a": "Ava"
+    },
+    "form": "Ea"
+  },
+  {
+    "sentence": "Alfred will attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "b": "Alfred"
+    },
+    "form": "Eb"
+  },
+  {
+    "sentence": "Sam will attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "c": "Sam"
+    },
+    "form": "Ec"
+  },
+  {
+    "sentence": "Lewis will attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "d": "Lewis"
+    },
+    "form": "Ed"
+  },
+  {
+    "sentence": "Hazel will attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "e": "Hazel"
+    },
+    "form": "Ee"
+  },
+  {
+    "sentence": "Ava drank.",
+    "soa": {
+      "F": "[1] drank",
+      "a": "Ava"
+    },
+    "form": "Fa"
+  },
+  {
+    "sentence": "Alfred drank.",
+    "soa": {
+      "F": "[1] drank",
+      "b": "Alfred"
+    },
+    "form": "Fb"
+  },
+  {
+    "sentence": "Sam drank.",
+    "soa": {
+      "F": "[1] drank",
+      "c": "Sam"
+    },
+    "form": "Fc"
+  },
+  {
+    "sentence": "Lewis drank.",
+    "soa": {
+      "F": "[1] drank",
+      "d": "Lewis"
+    },
+    "form": "Fd"
+  },
+  {
+    "sentence": "Hazel drank.",
+    "soa": {
+      "F": "[1] drank",
+      "e": "Hazel"
+    },
+    "form": "Fe"
+  },
+  {
+    "sentence": "Ava ate.",
+    "soa": {
+      "G": "[1] ate",
+      "a": "Ava"
+    },
+    "form": "Ga"
+  },
+  {
+    "sentence": "Alfred ate.",
+    "soa": {
+      "G": "[1] ate",
+      "b": "Alfred"
+    },
+    "form": "Gb"
+  },
+  {
+    "sentence": "Sam ate.",
+    "soa": {
+      "G": "[1] ate",
+      "c": "Sam"
+    },
+    "form": "Gc"
+  },
+  {
+    "sentence": "Lewis ate.",
+    "soa": {
+      "G": "[1] ate",
+      "d": "Lewis"
+    },
+    "form": "Gd"
+  },
+  {
+    "sentence": "Hazel ate.",
+    "soa": {
+      "G": "[1] ate",
+      "e": "Hazel"
+    },
+    "form": "Ge"
+  },
+  {
+    "sentence": "Ava sang.",
+    "soa": {
+      "H": "[1] sang",
+      "a": "Ava"
+    },
+    "form": "Ha"
+  },
+  {
+    "sentence": "Alfred sang.",
+    "soa": {
+      "H": "[1] sang",
+      "b": "Alfred"
+    },
+    "form": "Hb"
+  },
+  {
+    "sentence": "Sam sang.",
+    "soa": {
+      "H": "[1] sang",
+      "c": "Sam"
+    },
+    "form": "Hc"
+  },
+  {
+    "sentence": "Lewis sang.",
+    "soa": {
+      "H": "[1] sang",
+      "d": "Lewis"
+    },
+    "form": "Hd"
+  },
+  {
+    "sentence": "Hazel sang.",
+    "soa": {
+      "H": "[1] sang",
+      "e": "Hazel"
+    },
+    "form": "He"
+  },
+  {
+    "sentence": "Ava swam.",
+    "soa": {
+      "I": "[1] swam",
+      "a": "Ava"
+    },
+    "form": "Ia"
+  },
+  {
+    "sentence": "Alfred swam.",
+    "soa": {
+      "I": "[1] swam",
+      "b": "Alfred"
+    },
+    "form": "Ib"
+  },
+  {
+    "sentence": "Sam swam.",
+    "soa": {
+      "I": "[1] swam",
+      "c": "Sam"
+    },
+    "form": "Ic"
+  },
+  {
+    "sentence": "Lewis swam.",
+    "soa": {
+      "I": "[1] swam",
+      "d": "Lewis"
+    },
+    "form": "Id"
+  },
+  {
+    "sentence": "Hazel swam.",
+    "soa": {
+      "I": "[1] swam",
+      "e": "Hazel"
+    },
+    "form": "Ie"
+  },
+  {
+    "sentence": "Ava is asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "a": "Ava"
+    },
+    "form": "Ja"
+  },
+  {
+    "sentence": "Alfred is asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "b": "Alfred"
+    },
+    "form": "Jb"
+  },
+  {
+    "sentence": "Sam is asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "c": "Sam"
+    },
+    "form": "Jc"
+  },
+  {
+    "sentence": "Lewis is asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "d": "Lewis"
+    },
+    "form": "Jd"
+  },
+  {
+    "sentence": "Hazel is asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "e": "Hazel"
+    },
+    "form": "Je"
+  },
+  {
+    "sentence": "Ava is happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "a": "Ava"
+    },
+    "form": "Ka"
+  },
+  {
+    "sentence": "Alfred is happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "b": "Alfred"
+    },
+    "form": "Kb"
+  },
+  {
+    "sentence": "Sam is happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "c": "Sam"
+    },
+    "form": "Kc"
+  },
+  {
+    "sentence": "Lewis is happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "d": "Lewis"
+    },
+    "form": "Kd"
+  },
+  {
+    "sentence": "Hazel is happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "e": "Hazel"
+    },
+    "form": "Ke"
+  },
+  {
+    "sentence": "Ava is honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "a": "Ava"
+    },
+    "form": "La"
+  },
+  {
+    "sentence": "Alfred is honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "b": "Alfred"
+    },
+    "form": "Lb"
+  },
+  {
+    "sentence": "Sam is honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "c": "Sam"
+    },
+    "form": "Lc"
+  },
+  {
+    "sentence": "Lewis is honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "d": "Lewis"
+    },
+    "form": "Ld"
+  },
+  {
+    "sentence": "Hazel is honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "e": "Hazel"
+    },
+    "form": "Le"
+  },
+  {
+    "sentence": "Ava is hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "a": "Ava"
+    },
+    "form": "Ma"
+  },
+  {
+    "sentence": "Alfred is hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "b": "Alfred"
+    },
+    "form": "Mb"
+  },
+  {
+    "sentence": "Sam is hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "c": "Sam"
+    },
+    "form": "Mc"
+  },
+  {
+    "sentence": "Lewis is hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "d": "Lewis"
+    },
+    "form": "Md"
+  },
+  {
+    "sentence": "Hazel is hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "e": "Hazel"
+    },
+    "form": "Me"
+  },
+  {
+    "sentence": "Ava is sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "a": "Ava"
+    },
+    "form": "Na"
+  },
+  {
+    "sentence": "Alfred is sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "b": "Alfred"
+    },
+    "form": "Nb"
+  },
+  {
+    "sentence": "Sam is sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "c": "Sam"
+    },
+    "form": "Nc"
+  },
+  {
+    "sentence": "Lewis is sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "d": "Lewis"
+    },
+    "form": "Nd"
+  },
+  {
+    "sentence": "Hazel is sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "e": "Hazel"
+    },
+    "form": "Ne"
+  },
+  {
+    "sentence": "Ava is an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "a": "Ava"
+    },
+    "form": "Oa"
+  },
+  {
+    "sentence": "Alfred is an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "b": "Alfred"
+    },
+    "form": "Ob"
+  },
+  {
+    "sentence": "Sam is an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "c": "Sam"
+    },
+    "form": "Oc"
+  },
+  {
+    "sentence": "Lewis is an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "d": "Lewis"
+    },
+    "form": "Od"
+  },
+  {
+    "sentence": "Hazel is an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "e": "Hazel"
+    },
+    "form": "Oe"
+  },
+  {
+    "sentence": "Ava is a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "a": "Ava"
+    },
+    "form": "Pa"
+  },
+  {
+    "sentence": "Alfred is a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "b": "Alfred"
+    },
+    "form": "Pb"
+  },
+  {
+    "sentence": "Sam is a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "c": "Sam"
+    },
+    "form": "Pc"
+  },
+  {
+    "sentence": "Lewis is a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "d": "Lewis"
+    },
+    "form": "Pd"
+  },
+  {
+    "sentence": "Hazel is a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "e": "Hazel"
+    },
+    "form": "Pe"
+  },
+  {
+    "sentence": "Ava is a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "a": "Ava"
+    },
+    "form": "Qa"
+  },
+  {
+    "sentence": "Alfred is a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "b": "Alfred"
+    },
+    "form": "Qb"
+  },
+  {
+    "sentence": "Sam is a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "c": "Sam"
+    },
+    "form": "Qc"
+  },
+  {
+    "sentence": "Lewis is a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "d": "Lewis"
+    },
+    "form": "Qd"
+  },
+  {
+    "sentence": "Hazel is a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "e": "Hazel"
+    },
+    "form": "Qe"
+  },
+  {
+    "sentence": "Ava is a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "a": "Ava"
+    },
+    "form": "Ra"
+  },
+  {
+    "sentence": "Alfred is a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "b": "Alfred"
+    },
+    "form": "Rb"
+  },
+  {
+    "sentence": "Sam is a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "c": "Sam"
+    },
+    "form": "Rc"
+  },
+  {
+    "sentence": "Lewis is a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "d": "Lewis"
+    },
+    "form": "Rd"
+  },
+  {
+    "sentence": "Hazel is a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "e": "Hazel"
+    },
+    "form": "Re"
+  },
+  {
+    "sentence": "Ava admires Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava"
+    },
+    "form": "Saa"
+  },
+  {
+    "sentence": "Ava admires Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "Sab"
+  },
+  {
+    "sentence": "Ava admires Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "Sac"
+  },
+  {
+    "sentence": "Ava admires Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "Sad"
+  },
+  {
+    "sentence": "Ava admires Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "Sae"
+  },
+  {
+    "sentence": "Alfred admires Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "Sba"
+  },
+  {
+    "sentence": "Alfred admires Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred"
+    },
+    "form": "Sbb"
+  },
+  {
+    "sentence": "Alfred admires Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "Sbc"
+  },
+  {
+    "sentence": "Alfred admires Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "Sbd"
+  },
+  {
+    "sentence": "Alfred admires Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "Sbe"
+  },
+  {
+    "sentence": "Sam admires Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "Sca"
+  },
+  {
+    "sentence": "Sam admires Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "Scb"
+  },
+  {
+    "sentence": "Sam admires Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam"
+    },
+    "form": "Scc"
+  },
+  {
+    "sentence": "Sam admires Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "Scd"
+  },
+  {
+    "sentence": "Sam admires Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "Sce"
+  },
+  {
+    "sentence": "Lewis admires Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "Sda"
+  },
+  {
+    "sentence": "Lewis admires Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "Sdb"
+  },
+  {
+    "sentence": "Lewis admires Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "Sdc"
+  },
+  {
+    "sentence": "Lewis admires Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis"
+    },
+    "form": "Sdd"
+  },
+  {
+    "sentence": "Lewis admires Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "Sde"
+  },
+  {
+    "sentence": "Hazel admires Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "Sea"
+  },
+  {
+    "sentence": "Hazel admires Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "Seb"
+  },
+  {
+    "sentence": "Hazel admires Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "Sec"
+  },
+  {
+    "sentence": "Hazel admires Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "Sed"
+  },
+  {
+    "sentence": "Hazel admires Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel"
+    },
+    "form": "See"
+  },
+  {
+    "sentence": "Ava sees Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava"
+    },
+    "form": "Taa"
+  },
+  {
+    "sentence": "Ava sees Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "Tab"
+  },
+  {
+    "sentence": "Ava sees Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "Tac"
+  },
+  {
+    "sentence": "Ava sees Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "Tad"
+  },
+  {
+    "sentence": "Ava sees Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "Tae"
+  },
+  {
+    "sentence": "Alfred sees Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "Tba"
+  },
+  {
+    "sentence": "Alfred sees Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred"
+    },
+    "form": "Tbb"
+  },
+  {
+    "sentence": "Alfred sees Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "Tbc"
+  },
+  {
+    "sentence": "Alfred sees Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "Tbd"
+  },
+  {
+    "sentence": "Alfred sees Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "Tbe"
+  },
+  {
+    "sentence": "Sam sees Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "Tca"
+  },
+  {
+    "sentence": "Sam sees Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "Tcb"
+  },
+  {
+    "sentence": "Sam sees Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam"
+    },
+    "form": "Tcc"
+  },
+  {
+    "sentence": "Sam sees Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "Tcd"
+  },
+  {
+    "sentence": "Sam sees Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "Tce"
+  },
+  {
+    "sentence": "Lewis sees Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "Tda"
+  },
+  {
+    "sentence": "Lewis sees Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "Tdb"
+  },
+  {
+    "sentence": "Lewis sees Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "Tdc"
+  },
+  {
+    "sentence": "Lewis sees Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis"
+    },
+    "form": "Tdd"
+  },
+  {
+    "sentence": "Lewis sees Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "Tde"
+  },
+  {
+    "sentence": "Hazel sees Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "Tea"
+  },
+  {
+    "sentence": "Hazel sees Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "Teb"
+  },
+  {
+    "sentence": "Hazel sees Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "Tec"
+  },
+  {
+    "sentence": "Hazel sees Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "Ted"
+  },
+  {
+    "sentence": "Hazel sees Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel"
+    },
+    "form": "Tee"
+  },
+  {
+    "sentence": "Ava fought Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava"
+    },
+    "form": "Uaa"
+  },
+  {
+    "sentence": "Ava fought Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "Uab"
+  },
+  {
+    "sentence": "Ava fought Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "Uac"
+  },
+  {
+    "sentence": "Ava fought Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "Uad"
+  },
+  {
+    "sentence": "Ava fought Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "Uae"
+  },
+  {
+    "sentence": "Alfred fought Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "Uba"
+  },
+  {
+    "sentence": "Alfred fought Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred"
+    },
+    "form": "Ubb"
+  },
+  {
+    "sentence": "Alfred fought Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "Ubc"
+  },
+  {
+    "sentence": "Alfred fought Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "Ubd"
+  },
+  {
+    "sentence": "Alfred fought Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "Ube"
+  },
+  {
+    "sentence": "Sam fought Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "Uca"
+  },
+  {
+    "sentence": "Sam fought Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "Ucb"
+  },
+  {
+    "sentence": "Sam fought Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam"
+    },
+    "form": "Ucc"
+  },
+  {
+    "sentence": "Sam fought Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "Ucd"
+  },
+  {
+    "sentence": "Sam fought Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "Uce"
+  },
+  {
+    "sentence": "Lewis fought Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "Uda"
+  },
+  {
+    "sentence": "Lewis fought Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "Udb"
+  },
+  {
+    "sentence": "Lewis fought Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "Udc"
+  },
+  {
+    "sentence": "Lewis fought Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis"
+    },
+    "form": "Udd"
+  },
+  {
+    "sentence": "Lewis fought Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "Ude"
+  },
+  {
+    "sentence": "Hazel fought Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "Uea"
+  },
+  {
+    "sentence": "Hazel fought Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "Ueb"
+  },
+  {
+    "sentence": "Hazel fought Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "Uec"
+  },
+  {
+    "sentence": "Hazel fought Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "Ued"
+  },
+  {
+    "sentence": "Hazel fought Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel"
+    },
+    "form": "Uee"
+  },
+  {
+    "sentence": "Ava talked to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava"
+    },
+    "form": "Vaa"
+  },
+  {
+    "sentence": "Ava talked to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "Vab"
+  },
+  {
+    "sentence": "Ava talked to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "Vac"
+  },
+  {
+    "sentence": "Ava talked to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "Vad"
+  },
+  {
+    "sentence": "Ava talked to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "Vae"
+  },
+  {
+    "sentence": "Alfred talked to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "Vba"
+  },
+  {
+    "sentence": "Alfred talked to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred"
+    },
+    "form": "Vbb"
+  },
+  {
+    "sentence": "Alfred talked to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "Vbc"
+  },
+  {
+    "sentence": "Alfred talked to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "Vbd"
+  },
+  {
+    "sentence": "Alfred talked to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "Vbe"
+  },
+  {
+    "sentence": "Sam talked to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "Vca"
+  },
+  {
+    "sentence": "Sam talked to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "Vcb"
+  },
+  {
+    "sentence": "Sam talked to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam"
+    },
+    "form": "Vcc"
+  },
+  {
+    "sentence": "Sam talked to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "Vcd"
+  },
+  {
+    "sentence": "Sam talked to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "Vce"
+  },
+  {
+    "sentence": "Lewis talked to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "Vda"
+  },
+  {
+    "sentence": "Lewis talked to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "Vdb"
+  },
+  {
+    "sentence": "Lewis talked to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "Vdc"
+  },
+  {
+    "sentence": "Lewis talked to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis"
+    },
+    "form": "Vdd"
+  },
+  {
+    "sentence": "Lewis talked to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "Vde"
+  },
+  {
+    "sentence": "Hazel talked to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "Vea"
+  },
+  {
+    "sentence": "Hazel talked to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "Veb"
+  },
+  {
+    "sentence": "Hazel talked to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "Vec"
+  },
+  {
+    "sentence": "Hazel talked to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "Ved"
+  },
+  {
+    "sentence": "Hazel talked to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel"
+    },
+    "form": "Vee"
+  },
+  {
+    "sentence": "Ava waved to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava"
+    },
+    "form": "Waa"
+  },
+  {
+    "sentence": "Ava waved to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "Wab"
+  },
+  {
+    "sentence": "Ava waved to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "Wac"
+  },
+  {
+    "sentence": "Ava waved to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "Wad"
+  },
+  {
+    "sentence": "Ava waved to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "Wae"
+  },
+  {
+    "sentence": "Alfred waved to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "Wba"
+  },
+  {
+    "sentence": "Alfred waved to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred"
+    },
+    "form": "Wbb"
+  },
+  {
+    "sentence": "Alfred waved to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "Wbc"
+  },
+  {
+    "sentence": "Alfred waved to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "Wbd"
+  },
+  {
+    "sentence": "Alfred waved to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "Wbe"
+  },
+  {
+    "sentence": "Sam waved to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "Wca"
+  },
+  {
+    "sentence": "Sam waved to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "Wcb"
+  },
+  {
+    "sentence": "Sam waved to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam"
+    },
+    "form": "Wcc"
+  },
+  {
+    "sentence": "Sam waved to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "Wcd"
+  },
+  {
+    "sentence": "Sam waved to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "Wce"
+  },
+  {
+    "sentence": "Lewis waved to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "Wda"
+  },
+  {
+    "sentence": "Lewis waved to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "Wdb"
+  },
+  {
+    "sentence": "Lewis waved to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "Wdc"
+  },
+  {
+    "sentence": "Lewis waved to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis"
+    },
+    "form": "Wdd"
+  },
+  {
+    "sentence": "Lewis waved to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "Wde"
+  },
+  {
+    "sentence": "Hazel waved to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "Wea"
+  },
+  {
+    "sentence": "Hazel waved to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "Web"
+  },
+  {
+    "sentence": "Hazel waved to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "Wec"
+  },
+  {
+    "sentence": "Hazel waved to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "Wed"
+  },
+  {
+    "sentence": "Hazel waved to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel"
+    },
+    "form": "Wee"
+  },
+  {
+    "sentence": "Ava trusts Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava"
+    },
+    "form": "Xaa"
+  },
+  {
+    "sentence": "Ava trusts Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "Xab"
+  },
+  {
+    "sentence": "Ava trusts Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "Xac"
+  },
+  {
+    "sentence": "Ava trusts Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "Xad"
+  },
+  {
+    "sentence": "Ava trusts Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "Xae"
+  },
+  {
+    "sentence": "Alfred trusts Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "Xba"
+  },
+  {
+    "sentence": "Alfred trusts Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred"
+    },
+    "form": "Xbb"
+  },
+  {
+    "sentence": "Alfred trusts Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "Xbc"
+  },
+  {
+    "sentence": "Alfred trusts Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "Xbd"
+  },
+  {
+    "sentence": "Alfred trusts Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "Xbe"
+  },
+  {
+    "sentence": "Sam trusts Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "Xca"
+  },
+  {
+    "sentence": "Sam trusts Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "Xcb"
+  },
+  {
+    "sentence": "Sam trusts Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam"
+    },
+    "form": "Xcc"
+  },
+  {
+    "sentence": "Sam trusts Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "Xcd"
+  },
+  {
+    "sentence": "Sam trusts Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "Xce"
+  },
+  {
+    "sentence": "Lewis trusts Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "Xda"
+  },
+  {
+    "sentence": "Lewis trusts Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "Xdb"
+  },
+  {
+    "sentence": "Lewis trusts Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "Xdc"
+  },
+  {
+    "sentence": "Lewis trusts Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis"
+    },
+    "form": "Xdd"
+  },
+  {
+    "sentence": "Lewis trusts Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "Xde"
+  },
+  {
+    "sentence": "Hazel trusts Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "Xea"
+  },
+  {
+    "sentence": "Hazel trusts Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "Xeb"
+  },
+  {
+    "sentence": "Hazel trusts Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "Xec"
+  },
+  {
+    "sentence": "Hazel trusts Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "Xed"
+  },
+  {
+    "sentence": "Hazel trusts Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel"
+    },
+    "form": "Xee"
+  },
+  {
+    "sentence": "Ava laughed at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava"
+    },
+    "form": "Yaa"
+  },
+  {
+    "sentence": "Ava laughed at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "Yab"
+  },
+  {
+    "sentence": "Ava laughed at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "Yac"
+  },
+  {
+    "sentence": "Ava laughed at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "Yad"
+  },
+  {
+    "sentence": "Ava laughed at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "Yae"
+  },
+  {
+    "sentence": "Alfred laughed at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "Yba"
+  },
+  {
+    "sentence": "Alfred laughed at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred"
+    },
+    "form": "Ybb"
+  },
+  {
+    "sentence": "Alfred laughed at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "Ybc"
+  },
+  {
+    "sentence": "Alfred laughed at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "Ybd"
+  },
+  {
+    "sentence": "Alfred laughed at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "Ybe"
+  },
+  {
+    "sentence": "Sam laughed at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "Yca"
+  },
+  {
+    "sentence": "Sam laughed at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "Ycb"
+  },
+  {
+    "sentence": "Sam laughed at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam"
+    },
+    "form": "Ycc"
+  },
+  {
+    "sentence": "Sam laughed at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "Ycd"
+  },
+  {
+    "sentence": "Sam laughed at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "Yce"
+  },
+  {
+    "sentence": "Lewis laughed at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "Yda"
+  },
+  {
+    "sentence": "Lewis laughed at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "Ydb"
+  },
+  {
+    "sentence": "Lewis laughed at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "Ydc"
+  },
+  {
+    "sentence": "Lewis laughed at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis"
+    },
+    "form": "Ydd"
+  },
+  {
+    "sentence": "Lewis laughed at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "Yde"
+  },
+  {
+    "sentence": "Hazel laughed at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "Yea"
+  },
+  {
+    "sentence": "Hazel laughed at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "Yeb"
+  },
+  {
+    "sentence": "Hazel laughed at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "Yec"
+  },
+  {
+    "sentence": "Hazel laughed at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "Yed"
+  },
+  {
+    "sentence": "Hazel laughed at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel"
+    },
+    "form": "Yee"
+  },
+  {
+    "sentence": "Ava followed Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "Zab"
+  },
+  {
+    "sentence": "Ava followed Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "Zac"
+  },
+  {
+    "sentence": "Ava followed Lewis.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "Zad"
+  },
+  {
+    "sentence": "Ava followed Hazel.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "Zae"
+  },
+  {
+    "sentence": "Alfred followed Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "Zba"
+  },
+  {
+    "sentence": "Alfred followed Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "Zbc"
+  },
+  {
+    "sentence": "Alfred followed Lewis.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "Zbd"
+  },
+  {
+    "sentence": "Alfred followed Hazel.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "Zbe"
+  },
+  {
+    "sentence": "Sam followed Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "Zca"
+  },
+  {
+    "sentence": "Sam followed Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "Zcb"
+  },
+  {
+    "sentence": "Sam followed Lewis.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "Zcd"
+  },
+  {
+    "sentence": "Sam followed Hazel.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "Zce"
+  },
+  {
+    "sentence": "Lewis followed Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "Zda"
+  },
+  {
+    "sentence": "Lewis followed Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "Zdb"
+  },
+  {
+    "sentence": "Lewis followed Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "Zdc"
+  },
+  {
+    "sentence": "Lewis followed Hazel.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "Zde"
+  },
+  {
+    "sentence": "Hazel followed Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "Zea"
+  },
+  {
+    "sentence": "Hazel followed Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "Zeb"
+  },
+  {
+    "sentence": "Hazel followed Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "Zec"
+  },
+  {
+    "sentence": "Hazel followed Lewis.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "Zed"
+  },
+  {
+    "sentence": "Ava [1] doesn't sit.",
+    "soa": {
+      "A": "[1] sits",
+      "a": "Ava"
+    },
+    "form": "¬Aa"
+  },
+  {
+    "sentence": "Alfred [1] doesn't sit.",
+    "soa": {
+      "A": "[1] sits",
+      "b": "Alfred"
+    },
+    "form": "¬Ab"
+  },
+  {
+    "sentence": "Sam [1] doesn't sit.",
+    "soa": {
+      "A": "[1] sits",
+      "c": "Sam"
+    },
+    "form": "¬Ac"
+  },
+  {
+    "sentence": "Lewis [1] doesn't sit.",
+    "soa": {
+      "A": "[1] sits",
+      "d": "Lewis"
+    },
+    "form": "¬Ad"
+  },
+  {
+    "sentence": "Hazel [1] doesn't sit.",
+    "soa": {
+      "A": "[1] sits",
+      "e": "Hazel"
+    },
+    "form": "¬Ae"
+  },
+  {
+    "sentence": "Ava [1] doesn't climb.",
+    "soa": {
+      "B": "[1] climbs",
+      "a": "Ava"
+    },
+    "form": "¬Ba"
+  },
+  {
+    "sentence": "Alfred [1] doesn't climb.",
+    "soa": {
+      "B": "[1] climbs",
+      "b": "Alfred"
+    },
+    "form": "¬Bb"
+  },
+  {
+    "sentence": "Sam [1] doesn't climb.",
+    "soa": {
+      "B": "[1] climbs",
+      "c": "Sam"
+    },
+    "form": "¬Bc"
+  },
+  {
+    "sentence": "Lewis [1] doesn't climb.",
+    "soa": {
+      "B": "[1] climbs",
+      "d": "Lewis"
+    },
+    "form": "¬Bd"
+  },
+  {
+    "sentence": "Hazel [1] doesn't climb.",
+    "soa": {
+      "B": "[1] climbs",
+      "e": "Hazel"
+    },
+    "form": "¬Be"
+  },
+  {
+    "sentence": "Ava [1] won't run.",
+    "soa": {
+      "C": "[1] will run",
+      "a": "Ava"
+    },
+    "form": "¬Ca"
+  },
+  {
+    "sentence": "Alfred [1] won't run.",
+    "soa": {
+      "C": "[1] will run",
+      "b": "Alfred"
+    },
+    "form": "¬Cb"
+  },
+  {
+    "sentence": "Sam [1] won't run.",
+    "soa": {
+      "C": "[1] will run",
+      "c": "Sam"
+    },
+    "form": "¬Cc"
+  },
+  {
+    "sentence": "Lewis [1] won't run.",
+    "soa": {
+      "C": "[1] will run",
+      "d": "Lewis"
+    },
+    "form": "¬Cd"
+  },
+  {
+    "sentence": "Hazel [1] won't run.",
+    "soa": {
+      "C": "[1] will run",
+      "e": "Hazel"
+    },
+    "form": "¬Ce"
+  },
+  {
+    "sentence": "Ava [1] won't walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "a": "Ava"
+    },
+    "form": "¬Da"
+  },
+  {
+    "sentence": "Alfred [1] won't walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "b": "Alfred"
+    },
+    "form": "¬Db"
+  },
+  {
+    "sentence": "Sam [1] won't walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "c": "Sam"
+    },
+    "form": "¬Dc"
+  },
+  {
+    "sentence": "Lewis [1] won't walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "d": "Lewis"
+    },
+    "form": "¬Dd"
+  },
+  {
+    "sentence": "Hazel [1] won't walk.",
+    "soa": {
+      "D": "[1] will walk",
+      "e": "Hazel"
+    },
+    "form": "¬De"
+  },
+  {
+    "sentence": "Ava [1] won't attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "a": "Ava"
+    },
+    "form": "¬Ea"
+  },
+  {
+    "sentence": "Alfred [1] won't attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "b": "Alfred"
+    },
+    "form": "¬Eb"
+  },
+  {
+    "sentence": "Sam [1] won't attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "c": "Sam"
+    },
+    "form": "¬Ec"
+  },
+  {
+    "sentence": "Lewis [1] won't attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "d": "Lewis"
+    },
+    "form": "¬Ed"
+  },
+  {
+    "sentence": "Hazel [1] won't attack.",
+    "soa": {
+      "E": "[1] will attack",
+      "e": "Hazel"
+    },
+    "form": "¬Ee"
+  },
+  {
+    "sentence": "Ava [1] didn't drink.",
+    "soa": {
+      "F": "[1] drank",
+      "a": "Ava"
+    },
+    "form": "¬Fa"
+  },
+  {
+    "sentence": "Alfred [1] didn't drink.",
+    "soa": {
+      "F": "[1] drank",
+      "b": "Alfred"
+    },
+    "form": "¬Fb"
+  },
+  {
+    "sentence": "Sam [1] didn't drink.",
+    "soa": {
+      "F": "[1] drank",
+      "c": "Sam"
+    },
+    "form": "¬Fc"
+  },
+  {
+    "sentence": "Lewis [1] didn't drink.",
+    "soa": {
+      "F": "[1] drank",
+      "d": "Lewis"
+    },
+    "form": "¬Fd"
+  },
+  {
+    "sentence": "Hazel [1] didn't drink.",
+    "soa": {
+      "F": "[1] drank",
+      "e": "Hazel"
+    },
+    "form": "¬Fe"
+  },
+  {
+    "sentence": "Ava [1] didn't eat.",
+    "soa": {
+      "G": "[1] ate",
+      "a": "Ava"
+    },
+    "form": "¬Ga"
+  },
+  {
+    "sentence": "Alfred [1] didn't eat.",
+    "soa": {
+      "G": "[1] ate",
+      "b": "Alfred"
+    },
+    "form": "¬Gb"
+  },
+  {
+    "sentence": "Sam [1] didn't eat.",
+    "soa": {
+      "G": "[1] ate",
+      "c": "Sam"
+    },
+    "form": "¬Gc"
+  },
+  {
+    "sentence": "Lewis [1] didn't eat.",
+    "soa": {
+      "G": "[1] ate",
+      "d": "Lewis"
+    },
+    "form": "¬Gd"
+  },
+  {
+    "sentence": "Hazel [1] didn't eat.",
+    "soa": {
+      "G": "[1] ate",
+      "e": "Hazel"
+    },
+    "form": "¬Ge"
+  },
+  {
+    "sentence": "Ava [1] didn't sing.",
+    "soa": {
+      "H": "[1] sang",
+      "a": "Ava"
+    },
+    "form": "¬Ha"
+  },
+  {
+    "sentence": "Alfred [1] didn't sing.",
+    "soa": {
+      "H": "[1] sang",
+      "b": "Alfred"
+    },
+    "form": "¬Hb"
+  },
+  {
+    "sentence": "Sam [1] didn't sing.",
+    "soa": {
+      "H": "[1] sang",
+      "c": "Sam"
+    },
+    "form": "¬Hc"
+  },
+  {
+    "sentence": "Lewis [1] didn't sing.",
+    "soa": {
+      "H": "[1] sang",
+      "d": "Lewis"
+    },
+    "form": "¬Hd"
+  },
+  {
+    "sentence": "Hazel [1] didn't sing.",
+    "soa": {
+      "H": "[1] sang",
+      "e": "Hazel"
+    },
+    "form": "¬He"
+  },
+  {
+    "sentence": "Ava [1] didn't swim.",
+    "soa": {
+      "I": "[1] swam",
+      "a": "Ava"
+    },
+    "form": "¬Ia"
+  },
+  {
+    "sentence": "Alfred [1] didn't swim.",
+    "soa": {
+      "I": "[1] swam",
+      "b": "Alfred"
+    },
+    "form": "¬Ib"
+  },
+  {
+    "sentence": "Sam [1] didn't swim.",
+    "soa": {
+      "I": "[1] swam",
+      "c": "Sam"
+    },
+    "form": "¬Ic"
+  },
+  {
+    "sentence": "Lewis [1] didn't swim.",
+    "soa": {
+      "I": "[1] swam",
+      "d": "Lewis"
+    },
+    "form": "¬Id"
+  },
+  {
+    "sentence": "Hazel [1] didn't swim.",
+    "soa": {
+      "I": "[1] swam",
+      "e": "Hazel"
+    },
+    "form": "¬Ie"
+  },
+  {
+    "sentence": "Ava [1] isn't asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "a": "Ava"
+    },
+    "form": "¬Ja"
+  },
+  {
+    "sentence": "Alfred [1] isn't asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "b": "Alfred"
+    },
+    "form": "¬Jb"
+  },
+  {
+    "sentence": "Sam [1] isn't asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "c": "Sam"
+    },
+    "form": "¬Jc"
+  },
+  {
+    "sentence": "Lewis [1] isn't asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "d": "Lewis"
+    },
+    "form": "¬Jd"
+  },
+  {
+    "sentence": "Hazel [1] isn't asleep.",
+    "soa": {
+      "J": "[1] is asleep",
+      "e": "Hazel"
+    },
+    "form": "¬Je"
+  },
+  {
+    "sentence": "Ava [1] isn't happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "a": "Ava"
+    },
+    "form": "¬Ka"
+  },
+  {
+    "sentence": "Alfred [1] isn't happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "b": "Alfred"
+    },
+    "form": "¬Kb"
+  },
+  {
+    "sentence": "Sam [1] isn't happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "c": "Sam"
+    },
+    "form": "¬Kc"
+  },
+  {
+    "sentence": "Lewis [1] isn't happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "d": "Lewis"
+    },
+    "form": "¬Kd"
+  },
+  {
+    "sentence": "Hazel [1] isn't happy.",
+    "soa": {
+      "K": "[1] is happy",
+      "e": "Hazel"
+    },
+    "form": "¬Ke"
+  },
+  {
+    "sentence": "Ava [1] isn't honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "a": "Ava"
+    },
+    "form": "¬La"
+  },
+  {
+    "sentence": "Alfred [1] isn't honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "b": "Alfred"
+    },
+    "form": "¬Lb"
+  },
+  {
+    "sentence": "Sam [1] isn't honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "c": "Sam"
+    },
+    "form": "¬Lc"
+  },
+  {
+    "sentence": "Lewis [1] isn't honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "d": "Lewis"
+    },
+    "form": "¬Ld"
+  },
+  {
+    "sentence": "Hazel [1] isn't honest.",
+    "soa": {
+      "L": "[1] is honest",
+      "e": "Hazel"
+    },
+    "form": "¬Le"
+  },
+  {
+    "sentence": "Ava [1] isn't hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "a": "Ava"
+    },
+    "form": "¬Ma"
+  },
+  {
+    "sentence": "Alfred [1] isn't hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "b": "Alfred"
+    },
+    "form": "¬Mb"
+  },
+  {
+    "sentence": "Sam [1] isn't hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "c": "Sam"
+    },
+    "form": "¬Mc"
+  },
+  {
+    "sentence": "Lewis [1] isn't hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "d": "Lewis"
+    },
+    "form": "¬Md"
+  },
+  {
+    "sentence": "Hazel [1] isn't hungry.",
+    "soa": {
+      "M": "[1] is hungry",
+      "e": "Hazel"
+    },
+    "form": "¬Me"
+  },
+  {
+    "sentence": "Ava [1] isn't sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "a": "Ava"
+    },
+    "form": "¬Na"
+  },
+  {
+    "sentence": "Alfred [1] isn't sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "b": "Alfred"
+    },
+    "form": "¬Nb"
+  },
+  {
+    "sentence": "Sam [1] isn't sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "c": "Sam"
+    },
+    "form": "¬Nc"
+  },
+  {
+    "sentence": "Lewis [1] isn't sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "d": "Lewis"
+    },
+    "form": "¬Nd"
+  },
+  {
+    "sentence": "Hazel [1] isn't sad.",
+    "soa": {
+      "N": "[1] is sad",
+      "e": "Hazel"
+    },
+    "form": "¬Ne"
+  },
+  {
+    "sentence": "Ava [1] isn't an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "a": "Ava"
+    },
+    "form": "¬Oa"
+  },
+  {
+    "sentence": "Alfred [1] isn't an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "b": "Alfred"
+    },
+    "form": "¬Ob"
+  },
+  {
+    "sentence": "Sam [1] isn't an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "c": "Sam"
+    },
+    "form": "¬Oc"
+  },
+  {
+    "sentence": "Lewis [1] isn't an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "d": "Lewis"
+    },
+    "form": "¬Od"
+  },
+  {
+    "sentence": "Hazel [1] isn't an elf.",
+    "soa": {
+      "O": "[1] is an elf",
+      "e": "Hazel"
+    },
+    "form": "¬Oe"
+  },
+  {
+    "sentence": "Ava [1] isn't a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "a": "Ava"
+    },
+    "form": "¬Pa"
+  },
+  {
+    "sentence": "Alfred [1] isn't a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "b": "Alfred"
+    },
+    "form": "¬Pb"
+  },
+  {
+    "sentence": "Sam [1] isn't a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "c": "Sam"
+    },
+    "form": "¬Pc"
+  },
+  {
+    "sentence": "Lewis [1] isn't a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "d": "Lewis"
+    },
+    "form": "¬Pd"
+  },
+  {
+    "sentence": "Hazel [1] isn't a human.",
+    "soa": {
+      "P": "[1] is a human",
+      "e": "Hazel"
+    },
+    "form": "¬Pe"
+  },
+  {
+    "sentence": "Ava [1] isn't a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "a": "Ava"
+    },
+    "form": "¬Qa"
+  },
+  {
+    "sentence": "Alfred [1] isn't a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "b": "Alfred"
+    },
+    "form": "¬Qb"
+  },
+  {
+    "sentence": "Sam [1] isn't a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "c": "Sam"
+    },
+    "form": "¬Qc"
+  },
+  {
+    "sentence": "Lewis [1] isn't a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "d": "Lewis"
+    },
+    "form": "¬Qd"
+  },
+  {
+    "sentence": "Hazel [1] isn't a monkey.",
+    "soa": {
+      "Q": "[1] is a monkey",
+      "e": "Hazel"
+    },
+    "form": "¬Qe"
+  },
+  {
+    "sentence": "Ava [1] isn't a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "a": "Ava"
+    },
+    "form": "¬Ra"
+  },
+  {
+    "sentence": "Alfred [1] isn't a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "b": "Alfred"
+    },
+    "form": "¬Rb"
+  },
+  {
+    "sentence": "Sam [1] isn't a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "c": "Sam"
+    },
+    "form": "¬Rc"
+  },
+  {
+    "sentence": "Lewis [1] isn't a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "d": "Lewis"
+    },
+    "form": "¬Rd"
+  },
+  {
+    "sentence": "Hazel [1] isn't a warrior.",
+    "soa": {
+      "R": "[1] is a warrior",
+      "e": "Hazel"
+    },
+    "form": "¬Re"
+  },
+  {
+    "sentence": "Ava [1] doesn't admire Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava"
+    },
+    "form": "¬Saa"
+  },
+  {
+    "sentence": "Ava [1] doesn't admire Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "¬Sab"
+  },
+  {
+    "sentence": "Ava [1] doesn't admire Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "¬Sac"
+  },
+  {
+    "sentence": "Ava [1] doesn't admire Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "¬Sad"
+  },
+  {
+    "sentence": "Ava [1] doesn't admire Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "¬Sae"
+  },
+  {
+    "sentence": "Alfred [1] doesn't admire Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "¬Sba"
+  },
+  {
+    "sentence": "Alfred [1] doesn't admire Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred"
+    },
+    "form": "¬Sbb"
+  },
+  {
+    "sentence": "Alfred [1] doesn't admire Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "¬Sbc"
+  },
+  {
+    "sentence": "Alfred [1] doesn't admire Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "¬Sbd"
+  },
+  {
+    "sentence": "Alfred [1] doesn't admire Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "¬Sbe"
+  },
+  {
+    "sentence": "Sam [1] doesn't admire Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "¬Sca"
+  },
+  {
+    "sentence": "Sam [1] doesn't admire Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "¬Scb"
+  },
+  {
+    "sentence": "Sam [1] doesn't admire Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam"
+    },
+    "form": "¬Scc"
+  },
+  {
+    "sentence": "Sam [1] doesn't admire Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "¬Scd"
+  },
+  {
+    "sentence": "Sam [1] doesn't admire Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "¬Sce"
+  },
+  {
+    "sentence": "Lewis [1] doesn't admire Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "¬Sda"
+  },
+  {
+    "sentence": "Lewis [1] doesn't admire Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "¬Sdb"
+  },
+  {
+    "sentence": "Lewis [1] doesn't admire Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "¬Sdc"
+  },
+  {
+    "sentence": "Lewis [1] doesn't admire Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis"
+    },
+    "form": "¬Sdd"
+  },
+  {
+    "sentence": "Lewis [1] doesn't admire Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "¬Sde"
+  },
+  {
+    "sentence": "Hazel [1] doesn't admire Ava.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "¬Sea"
+  },
+  {
+    "sentence": "Hazel [1] doesn't admire Alfred.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "¬Seb"
+  },
+  {
+    "sentence": "Hazel [1] doesn't admire Sam.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "¬Sec"
+  },
+  {
+    "sentence": "Hazel [1] doesn't admire Lewis.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "¬Sed"
+  },
+  {
+    "sentence": "Hazel [1] doesn't admire Hazel.",
+    "soa": {
+      "S": "[1] admires [2]",
+      "e": "Hazel"
+    },
+    "form": "¬See"
+  },
+  {
+    "sentence": "Ava [1] doesn't see Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava"
+    },
+    "form": "¬Taa"
+  },
+  {
+    "sentence": "Ava [1] doesn't see Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "¬Tab"
+  },
+  {
+    "sentence": "Ava [1] doesn't see Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "¬Tac"
+  },
+  {
+    "sentence": "Ava [1] doesn't see Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "¬Tad"
+  },
+  {
+    "sentence": "Ava [1] doesn't see Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "¬Tae"
+  },
+  {
+    "sentence": "Alfred [1] doesn't see Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "¬Tba"
+  },
+  {
+    "sentence": "Alfred [1] doesn't see Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred"
+    },
+    "form": "¬Tbb"
+  },
+  {
+    "sentence": "Alfred [1] doesn't see Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "¬Tbc"
+  },
+  {
+    "sentence": "Alfred [1] doesn't see Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "¬Tbd"
+  },
+  {
+    "sentence": "Alfred [1] doesn't see Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "¬Tbe"
+  },
+  {
+    "sentence": "Sam [1] doesn't see Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "¬Tca"
+  },
+  {
+    "sentence": "Sam [1] doesn't see Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "¬Tcb"
+  },
+  {
+    "sentence": "Sam [1] doesn't see Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam"
+    },
+    "form": "¬Tcc"
+  },
+  {
+    "sentence": "Sam [1] doesn't see Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "¬Tcd"
+  },
+  {
+    "sentence": "Sam [1] doesn't see Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "¬Tce"
+  },
+  {
+    "sentence": "Lewis [1] doesn't see Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "¬Tda"
+  },
+  {
+    "sentence": "Lewis [1] doesn't see Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "¬Tdb"
+  },
+  {
+    "sentence": "Lewis [1] doesn't see Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "¬Tdc"
+  },
+  {
+    "sentence": "Lewis [1] doesn't see Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis"
+    },
+    "form": "¬Tdd"
+  },
+  {
+    "sentence": "Lewis [1] doesn't see Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "¬Tde"
+  },
+  {
+    "sentence": "Hazel [1] doesn't see Ava.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "¬Tea"
+  },
+  {
+    "sentence": "Hazel [1] doesn't see Alfred.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "¬Teb"
+  },
+  {
+    "sentence": "Hazel [1] doesn't see Sam.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "¬Tec"
+  },
+  {
+    "sentence": "Hazel [1] doesn't see Lewis.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "¬Ted"
+  },
+  {
+    "sentence": "Hazel [1] doesn't see Hazel.",
+    "soa": {
+      "T": "[1] sees [2]",
+      "e": "Hazel"
+    },
+    "form": "¬Tee"
+  },
+  {
+    "sentence": "Ava [1] didn't fight Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava"
+    },
+    "form": "¬Uaa"
+  },
+  {
+    "sentence": "Ava [1] didn't fight Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "¬Uab"
+  },
+  {
+    "sentence": "Ava [1] didn't fight Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "¬Uac"
+  },
+  {
+    "sentence": "Ava [1] didn't fight Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "¬Uad"
+  },
+  {
+    "sentence": "Ava [1] didn't fight Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "¬Uae"
+  },
+  {
+    "sentence": "Alfred [1] didn't fight Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "¬Uba"
+  },
+  {
+    "sentence": "Alfred [1] didn't fight Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred"
+    },
+    "form": "¬Ubb"
+  },
+  {
+    "sentence": "Alfred [1] didn't fight Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "¬Ubc"
+  },
+  {
+    "sentence": "Alfred [1] didn't fight Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "¬Ubd"
+  },
+  {
+    "sentence": "Alfred [1] didn't fight Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "¬Ube"
+  },
+  {
+    "sentence": "Sam [1] didn't fight Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "¬Uca"
+  },
+  {
+    "sentence": "Sam [1] didn't fight Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "¬Ucb"
+  },
+  {
+    "sentence": "Sam [1] didn't fight Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam"
+    },
+    "form": "¬Ucc"
+  },
+  {
+    "sentence": "Sam [1] didn't fight Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "¬Ucd"
+  },
+  {
+    "sentence": "Sam [1] didn't fight Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "¬Uce"
+  },
+  {
+    "sentence": "Lewis [1] didn't fight Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "¬Uda"
+  },
+  {
+    "sentence": "Lewis [1] didn't fight Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "¬Udb"
+  },
+  {
+    "sentence": "Lewis [1] didn't fight Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "¬Udc"
+  },
+  {
+    "sentence": "Lewis [1] didn't fight Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis"
+    },
+    "form": "¬Udd"
+  },
+  {
+    "sentence": "Lewis [1] didn't fight Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "¬Ude"
+  },
+  {
+    "sentence": "Hazel [1] didn't fight Ava.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "¬Uea"
+  },
+  {
+    "sentence": "Hazel [1] didn't fight Alfred.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "¬Ueb"
+  },
+  {
+    "sentence": "Hazel [1] didn't fight Sam.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "¬Uec"
+  },
+  {
+    "sentence": "Hazel [1] didn't fight Lewis.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "¬Ued"
+  },
+  {
+    "sentence": "Hazel [1] didn't fight Hazel.",
+    "soa": {
+      "U": "[1] fought [2]",
+      "e": "Hazel"
+    },
+    "form": "¬Uee"
+  },
+  {
+    "sentence": "Ava [1] didn't talk to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava"
+    },
+    "form": "¬Vaa"
+  },
+  {
+    "sentence": "Ava [1] didn't talk to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "¬Vab"
+  },
+  {
+    "sentence": "Ava [1] didn't talk to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "¬Vac"
+  },
+  {
+    "sentence": "Ava [1] didn't talk to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "¬Vad"
+  },
+  {
+    "sentence": "Ava [1] didn't talk to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "¬Vae"
+  },
+  {
+    "sentence": "Alfred [1] didn't talk to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "¬Vba"
+  },
+  {
+    "sentence": "Alfred [1] didn't talk to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred"
+    },
+    "form": "¬Vbb"
+  },
+  {
+    "sentence": "Alfred [1] didn't talk to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "¬Vbc"
+  },
+  {
+    "sentence": "Alfred [1] didn't talk to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "¬Vbd"
+  },
+  {
+    "sentence": "Alfred [1] didn't talk to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "¬Vbe"
+  },
+  {
+    "sentence": "Sam [1] didn't talk to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "¬Vca"
+  },
+  {
+    "sentence": "Sam [1] didn't talk to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "¬Vcb"
+  },
+  {
+    "sentence": "Sam [1] didn't talk to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam"
+    },
+    "form": "¬Vcc"
+  },
+  {
+    "sentence": "Sam [1] didn't talk to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "¬Vcd"
+  },
+  {
+    "sentence": "Sam [1] didn't talk to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "¬Vce"
+  },
+  {
+    "sentence": "Lewis [1] didn't talk to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "¬Vda"
+  },
+  {
+    "sentence": "Lewis [1] didn't talk to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "¬Vdb"
+  },
+  {
+    "sentence": "Lewis [1] didn't talk to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "¬Vdc"
+  },
+  {
+    "sentence": "Lewis [1] didn't talk to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis"
+    },
+    "form": "¬Vdd"
+  },
+  {
+    "sentence": "Lewis [1] didn't talk to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "¬Vde"
+  },
+  {
+    "sentence": "Hazel [1] didn't talk to Ava.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "¬Vea"
+  },
+  {
+    "sentence": "Hazel [1] didn't talk to Alfred.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "¬Veb"
+  },
+  {
+    "sentence": "Hazel [1] didn't talk to Sam.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "¬Vec"
+  },
+  {
+    "sentence": "Hazel [1] didn't talk to Lewis.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "¬Ved"
+  },
+  {
+    "sentence": "Hazel [1] didn't talk to Hazel.",
+    "soa": {
+      "V": "[1] talked to [2]",
+      "e": "Hazel"
+    },
+    "form": "¬Vee"
+  },
+  {
+    "sentence": "Ava [1] didn't wave to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava"
+    },
+    "form": "¬Waa"
+  },
+  {
+    "sentence": "Ava [1] didn't wave to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "¬Wab"
+  },
+  {
+    "sentence": "Ava [1] didn't wave to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "¬Wac"
+  },
+  {
+    "sentence": "Ava [1] didn't wave to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "¬Wad"
+  },
+  {
+    "sentence": "Ava [1] didn't wave to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "¬Wae"
+  },
+  {
+    "sentence": "Alfred [1] didn't wave to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "¬Wba"
+  },
+  {
+    "sentence": "Alfred [1] didn't wave to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred"
+    },
+    "form": "¬Wbb"
+  },
+  {
+    "sentence": "Alfred [1] didn't wave to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "¬Wbc"
+  },
+  {
+    "sentence": "Alfred [1] didn't wave to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "¬Wbd"
+  },
+  {
+    "sentence": "Alfred [1] didn't wave to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "¬Wbe"
+  },
+  {
+    "sentence": "Sam [1] didn't wave to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "¬Wca"
+  },
+  {
+    "sentence": "Sam [1] didn't wave to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "¬Wcb"
+  },
+  {
+    "sentence": "Sam [1] didn't wave to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam"
+    },
+    "form": "¬Wcc"
+  },
+  {
+    "sentence": "Sam [1] didn't wave to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "¬Wcd"
+  },
+  {
+    "sentence": "Sam [1] didn't wave to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "¬Wce"
+  },
+  {
+    "sentence": "Lewis [1] didn't wave to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "¬Wda"
+  },
+  {
+    "sentence": "Lewis [1] didn't wave to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "¬Wdb"
+  },
+  {
+    "sentence": "Lewis [1] didn't wave to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "¬Wdc"
+  },
+  {
+    "sentence": "Lewis [1] didn't wave to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis"
+    },
+    "form": "¬Wdd"
+  },
+  {
+    "sentence": "Lewis [1] didn't wave to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "¬Wde"
+  },
+  {
+    "sentence": "Hazel [1] didn't wave to Ava.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "¬Wea"
+  },
+  {
+    "sentence": "Hazel [1] didn't wave to Alfred.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "¬Web"
+  },
+  {
+    "sentence": "Hazel [1] didn't wave to Sam.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "¬Wec"
+  },
+  {
+    "sentence": "Hazel [1] didn't wave to Lewis.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "¬Wed"
+  },
+  {
+    "sentence": "Hazel [1] didn't wave to Hazel.",
+    "soa": {
+      "W": "[1] waved to [2]",
+      "e": "Hazel"
+    },
+    "form": "¬Wee"
+  },
+  {
+    "sentence": "Ava [1] doesn't trust Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava"
+    },
+    "form": "¬Xaa"
+  },
+  {
+    "sentence": "Ava [1] doesn't trust Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "¬Xab"
+  },
+  {
+    "sentence": "Ava [1] doesn't trust Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "¬Xac"
+  },
+  {
+    "sentence": "Ava [1] doesn't trust Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "¬Xad"
+  },
+  {
+    "sentence": "Ava [1] doesn't trust Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "¬Xae"
+  },
+  {
+    "sentence": "Alfred [1] doesn't trust Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "¬Xba"
+  },
+  {
+    "sentence": "Alfred [1] doesn't trust Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred"
+    },
+    "form": "¬Xbb"
+  },
+  {
+    "sentence": "Alfred [1] doesn't trust Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "¬Xbc"
+  },
+  {
+    "sentence": "Alfred [1] doesn't trust Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "¬Xbd"
+  },
+  {
+    "sentence": "Alfred [1] doesn't trust Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "¬Xbe"
+  },
+  {
+    "sentence": "Sam [1] doesn't trust Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "¬Xca"
+  },
+  {
+    "sentence": "Sam [1] doesn't trust Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "¬Xcb"
+  },
+  {
+    "sentence": "Sam [1] doesn't trust Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam"
+    },
+    "form": "¬Xcc"
+  },
+  {
+    "sentence": "Sam [1] doesn't trust Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "¬Xcd"
+  },
+  {
+    "sentence": "Sam [1] doesn't trust Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "¬Xce"
+  },
+  {
+    "sentence": "Lewis [1] doesn't trust Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "¬Xda"
+  },
+  {
+    "sentence": "Lewis [1] doesn't trust Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "¬Xdb"
+  },
+  {
+    "sentence": "Lewis [1] doesn't trust Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "¬Xdc"
+  },
+  {
+    "sentence": "Lewis [1] doesn't trust Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis"
+    },
+    "form": "¬Xdd"
+  },
+  {
+    "sentence": "Lewis [1] doesn't trust Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "¬Xde"
+  },
+  {
+    "sentence": "Hazel [1] doesn't trust Ava.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "¬Xea"
+  },
+  {
+    "sentence": "Hazel [1] doesn't trust Alfred.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "¬Xeb"
+  },
+  {
+    "sentence": "Hazel [1] doesn't trust Sam.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "¬Xec"
+  },
+  {
+    "sentence": "Hazel [1] doesn't trust Lewis.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "¬Xed"
+  },
+  {
+    "sentence": "Hazel [1] doesn't trust Hazel.",
+    "soa": {
+      "X": "[1] trusts [2]",
+      "e": "Hazel"
+    },
+    "form": "¬Xee"
+  },
+  {
+    "sentence": "Ava [1] didn't laugh at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava"
+    },
+    "form": "¬Yaa"
+  },
+  {
+    "sentence": "Ava [1] didn't laugh at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "¬Yab"
+  },
+  {
+    "sentence": "Ava [1] didn't laugh at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "¬Yac"
+  },
+  {
+    "sentence": "Ava [1] didn't laugh at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "¬Yad"
+  },
+  {
+    "sentence": "Ava [1] didn't laugh at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "¬Yae"
+  },
+  {
+    "sentence": "Alfred [1] didn't laugh at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "¬Yba"
+  },
+  {
+    "sentence": "Alfred [1] didn't laugh at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred"
+    },
+    "form": "¬Ybb"
+  },
+  {
+    "sentence": "Alfred [1] didn't laugh at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "¬Ybc"
+  },
+  {
+    "sentence": "Alfred [1] didn't laugh at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "¬Ybd"
+  },
+  {
+    "sentence": "Alfred [1] didn't laugh at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "¬Ybe"
+  },
+  {
+    "sentence": "Sam [1] didn't laugh at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "¬Yca"
+  },
+  {
+    "sentence": "Sam [1] didn't laugh at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "¬Ycb"
+  },
+  {
+    "sentence": "Sam [1] didn't laugh at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam"
+    },
+    "form": "¬Ycc"
+  },
+  {
+    "sentence": "Sam [1] didn't laugh at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "¬Ycd"
+  },
+  {
+    "sentence": "Sam [1] didn't laugh at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "¬Yce"
+  },
+  {
+    "sentence": "Lewis [1] didn't laugh at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "¬Yda"
+  },
+  {
+    "sentence": "Lewis [1] didn't laugh at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "¬Ydb"
+  },
+  {
+    "sentence": "Lewis [1] didn't laugh at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "¬Ydc"
+  },
+  {
+    "sentence": "Lewis [1] didn't laugh at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis"
+    },
+    "form": "¬Ydd"
+  },
+  {
+    "sentence": "Lewis [1] didn't laugh at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "¬Yde"
+  },
+  {
+    "sentence": "Hazel [1] didn't laugh at Ava.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "¬Yea"
+  },
+  {
+    "sentence": "Hazel [1] didn't laugh at Alfred.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "¬Yeb"
+  },
+  {
+    "sentence": "Hazel [1] didn't laugh at Sam.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "¬Yec"
+  },
+  {
+    "sentence": "Hazel [1] didn't laugh at Lewis.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "¬Yed"
+  },
+  {
+    "sentence": "Hazel [1] didn't laugh at Hazel.",
+    "soa": {
+      "Y": "[1] laughed at [2]",
+      "e": "Hazel"
+    },
+    "form": "¬Yee"
+  },
+  {
+    "sentence": "Ava didn't follow Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava"
+    },
+    "form": "¬Zaa"
+  },
+  {
+    "sentence": "Ava [1] didn't follow Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava",
+      "b": "Alfred"
+    },
+    "form": "¬Zab"
+  },
+  {
+    "sentence": "Ava [1] didn't follow Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava",
+      "c": "Sam"
+    },
+    "form": "¬Zac"
+  },
+  {
+    "sentence": "Ava [1] didn't follow Lewis.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava",
+      "d": "Lewis"
+    },
+    "form": "¬Zad"
+  },
+  {
+    "sentence": "Ava [1] didn't follow Hazel.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "a": "Ava",
+      "e": "Hazel"
+    },
+    "form": "¬Zae"
+  },
+  {
+    "sentence": "Alfred [1] didn't follow Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred",
+      "a": "Ava"
+    },
+    "form": "¬Zba"
+  },
+  {
+    "sentence": "Alfred didn't follow Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred"
+    },
+    "form": "¬Zbb"
+  },
+  {
+    "sentence": "Alfred [1] didn't follow Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred",
+      "c": "Sam"
+    },
+    "form": "¬Zbc"
+  },
+  {
+    "sentence": "Alfred [1] didn't follow Lewis.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred",
+      "d": "Lewis"
+    },
+    "form": "¬Zbd"
+  },
+  {
+    "sentence": "Alfred [1] didn't follow Hazel.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "b": "Alfred",
+      "e": "Hazel"
+    },
+    "form": "¬Zbe"
+  },
+  {
+    "sentence": "Sam [1] didn't follow Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam",
+      "a": "Ava"
+    },
+    "form": "¬Zca"
+  },
+  {
+    "sentence": "Sam [1] didn't follow Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam",
+      "b": "Alfred"
+    },
+    "form": "¬Zcb"
+  },
+  {
+    "sentence": "Sam [1] didn't follow Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam"
+    },
+    "form": "¬Zcc"
+  },
+  {
+    "sentence": "Sam [1] didn't follow Lewis.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam",
+      "d": "Lewis"
+    },
+    "form": "¬Zcd"
+  },
+  {
+    "sentence": "Sam [1] didn't follow Hazel.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "c": "Sam",
+      "e": "Hazel"
+    },
+    "form": "¬Zce"
+  },
+  {
+    "sentence": "Lewis [1] didn't follow Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "d": "Lewis",
+      "a": "Ava"
+    },
+    "form": "¬Zda"
+  },
+  {
+    "sentence": "Lewis [1] didn't follow Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "d": "Lewis",
+      "b": "Alfred"
+    },
+    "form": "¬Zdb"
+  },
+  {
+    "sentence": "Lewis [1] didn't follow Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "d": "Lewis",
+      "c": "Sam"
+    },
+    "form": "¬Zdc"
+  },
+  {
+    "sentence": "Lewis [1] didn't follow Hazel.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "d": "Lewis",
+      "e": "Hazel"
+    },
+    "form": "¬Zde"
+  },
+  {
+    "sentence": "Hazel [1] didn't follow Ava.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "e": "Hazel",
+      "a": "Ava"
+    },
+    "form": "¬Zea"
+  },
+  {
+    "sentence": "Hazel [1] didn't follow Alfred.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "e": "Hazel",
+      "b": "Alfred"
+    },
+    "form": "¬Zeb"
+  },
+  {
+    "sentence": "Hazel [1] didn't follow Sam.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "e": "Hazel",
+      "c": "Sam"
+    },
+    "form": "¬Zec"
+  },
+  {
+    "sentence": "Hazel [1] didn't follow Lewis.",
+    "soa": {
+      "Z": "[1] followed [2]",
+      "e": "Hazel",
+      "d": "Lewis"
+    },
+    "form": "¬Zed"
+  }
+]
