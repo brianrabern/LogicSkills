@@ -2,6 +2,7 @@ from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 from Database.models import Base, Name, Predicate, Sentence
 from Utils.normalize import normalize_logical_form, unescape_logical_form
+from config import mariadb_url
 
 
 class DatabaseManager:
@@ -127,5 +128,4 @@ class DatabaseManager:
         self.session.close()
 
 
-db_url = "mariadb+mariadbconnector://root:new_password@localhost:3306/lc_arg"
-db = DatabaseManager(db_url)
+db = DatabaseManager(mariadb_url)
