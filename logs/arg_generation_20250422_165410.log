@@ -1,8 +1,0 @@
-2025-04-22 16:54:10,020 - INFO - Starting argument generation. Log file: logs/arg_generation_20250422_165410.log
-2025-04-22 16:54:10,021 - INFO - Parameters: total_premises=10000, batch_size=100, restart_interval=1000
-2025-04-22 16:55:23,961 - INFO - 
-=== Final Summary ===
-2025-04-22 16:55:23,961 - INFO - Total premises processed: 0
-2025-04-22 16:55:23,961 - INFO - Total valid arguments: 0
-2025-04-22 16:55:23,961 - INFO - Total invalid arguments: 0
-2025-04-22 16:55:23,962 - INFO - Total time: 73.94 seconds
