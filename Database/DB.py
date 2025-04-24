@@ -127,5 +127,5 @@ class DatabaseManager:
         self.session.close()
 
 
-db_url = "mariadb+mariadbconnector://root:new_password@localhost:3306/arg"
+db_url = "mariadb+mariadbconnector://root:new_password@localhost:3306/lc_arg"
 db = DatabaseManager(db_url)
