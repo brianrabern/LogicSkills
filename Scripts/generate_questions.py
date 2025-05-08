@@ -71,7 +71,7 @@ def create_question(argument):
 
 """
 
-    # Combine valid and invalid options
+    # Combine valid and invalid options and shuffle them
     all_options = invalid_options + [valid_conclusion]
     random.shuffle(all_options)
 
@@ -97,9 +97,11 @@ Logical entailment:
     return question
 
 
-def generate_questions(num_questions=5):
+def generate_questions(num_questions=10, specific_argument_id=None):
     # Get valid arguments
     valid_args = session.query(Argument).filter_by(valid=1).all()
+    if specific_argument_id:
+        valid_args = [arg for arg in valid_args if arg.id == specific_argument_id]
     selected_args = random.sample(valid_args, min(num_questions, len(valid_args)))
 
     questions = []
@@ -113,7 +115,7 @@ def generate_questions(num_questions=5):
 
 if __name__ == "__main__":
     try:
-        questions = generate_questions()
+        questions = generate_questions(specific_argument_id="3ddddbad4dc1c575")
         for q in questions:
             print(q)
     except Exception as e:

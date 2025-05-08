@@ -1,13 +1,36 @@
 import re
 import json
 import os
+import sys
 from typing import List, Set, Dict, Tuple
 from Database.DB import db
-from Database.models import Sentence
-from Syntax.lexicon import Lexicon
-from datetime import datetime
-from Utils.normalize import normalize_logical_form, unescape_logical_form
-from Semantics.eval import evaluate
+from Database.models import Sentence, Argument
+from Utils.normalize import normalize_logical_form
+
+# from Semantics.eval import evaluate
+
+
+def grab_argument_data(session, argument_id: str):
+    """Grab an argument by ID."""
+    # Get the argument
+    argument = session.query(Argument).filter_by(id=argument_id).first()
+    if not argument:
+        print(f"Argument {argument_id} not found")
+        return None
+    # Get the premises
+    premise_ids = argument.premise_ids.split(",")
+    premises = session.query(Sentence).filter(Sentence.id.in_(premise_ids)).all()
+
+    # Get the conclusion
+    conclusion = session.query(Sentence).filter_by(id=argument.conclusion_id).first()
+
+    argument_data = {
+        "premise1": {"form": premises[0].form, "type": premises[0].type, "subtype": premises[0].subtype},
+        "premise2": {"form": premises[1].form, "type": premises[1].type, "subtype": premises[1].subtype},
+        "premise3": {"form": premises[2].form, "type": premises[2].type, "subtype": premises[2].subtype},
+        "conclusion": {"form": conclusion.form, "type": conclusion.type, "subtype": conclusion.subtype},
+    }
+    return argument_data
 
 
 def collect_all_predicates_and_names(forms: List[str]) -> Tuple[List[str], List[str]]:
@@ -100,56 +123,28 @@ def generate_mappings(
 
 
 def normalize_form(form: str) -> str:
-    """Normalize a logical form by removing whitespace and standardizing Unicode representation."""
-    # Remove all whitespace
-    form = "".join(form.split())
-
-    # Convert to ASCII representation of Unicode
-    form = form.encode("unicode-escape").decode("ascii")
-
-    return form
+    """Normalize a logical form using the existing helper function."""
+    return normalize_logical_form(form)
 
 
-def find_matching_sentences(form: str, sentence_type: str = None) -> List[Sentence]:
+def find_matching_sentences(form: str, sentence_type: str = None, sentence_subtype: str = None) -> List[Sentence]:
     """Find all sentences in the database that match the given logical form, optionally filtered by type."""
     try:
-        # First try exact match with database filtering
         query = db.session.query(Sentence)
 
         if sentence_type:
             query = query.filter(Sentence.type == sentence_type)
+        if sentence_subtype:
+            query = query.filter(Sentence.subtype == sentence_subtype)
 
-        # Try exact match first
+        # Look for exact matches
         matching_forms = query.filter(Sentence.form == form).all()
-
-        if matching_forms:
-            return matching_forms
-
-        # If no exact match, try normalized match but only for sentences of the right type
-        normalized_form = normalize_logical_form(form)
-        all_sentences = query.all()  # This is now filtered by type if provided
-
-        matching_forms = []
-        for sentence in all_sentences:
-            if isinstance(sentence.form, str):
-                try:
-                    form_json = json.loads(sentence.form)
-                    db_form = form_json[0] if isinstance(form_json, list) else form_json
-                except json.JSONDecodeError:
-                    db_form = sentence.form
-            else:
-                db_form = sentence.form
-
-            # Normalize both forms to escaped Unicode format
-            normalized_db_form = normalize_logical_form(db_form)
-            if normalized_db_form == normalized_form:
-                print(f"Found normalized match - ID: {sentence.id}, Form: {db_form}")
-                matching_forms.append(sentence)
-
         if not matching_forms:
-            print(f"No matches found for form: {form}")
-            print(f"Normalized form: {normalized_form}")
+            # Normalize the form and look for matches again
+            normalized_form = normalize_form(form)
+            matching_forms = query.filter(Sentence.form == normalized_form).all()
         return matching_forms
+
     except Exception as e:
         print(f"Error finding matching sentences: {e}")
         return []
@@ -159,9 +154,13 @@ def find_matching_argument(instance, argument):
     """Find a complete matching argument in the database for the given instance."""
     matching_sentences = []
 
+    print("\nLooking for matching argument:")
     for form, original_sentence in zip(instance, argument.values()):
         print(f"\nLooking for matches for form: {form}")
-        matches = find_matching_sentences(form, sentence_type=original_sentence["type"])
+        print(f"Original type: {original_sentence['type']}")
+        matches = find_matching_sentences(
+            form, sentence_type=original_sentence["type"], sentence_subtype=original_sentence["subtype"]
+        )
 
         if not matches:
             print(f"No matches found for form: {form}")
@@ -185,19 +184,12 @@ def generate_argument_instances(abstract_patterns: List[str], global_mapping: Di
         if placeholder.startswith("{#"):
             predicate_alternatives[placeholder] = get_alt_predicates(lexicon, orig_pred)
 
-    print("\nPredicate alternatives:")
-    for placeholder, alternatives in predicate_alternatives.items():
-        print(f"  {placeholder} ({global_mapping[placeholder]}): {alternatives}")
-
     # 2. Get name placeholders
     name_placeholders = set()
     for pattern in abstract_patterns:
         name_placeholders.update(re.findall(r"\{\$\d+\}", pattern))
     name_placeholders = sorted(list(name_placeholders))
     valid_names = list(lexicon.names.keys())
-
-    print(f"\nName placeholders: {name_placeholders}")
-    print(f"Valid names: {valid_names}")
 
     # 3. Generate all possible combinations
     all_placeholders = sorted(predicate_alternatives.keys()) + sorted(name_placeholders)
@@ -207,18 +199,24 @@ def generate_argument_instances(abstract_patterns: List[str], global_mapping: Di
     valid_mappings = generate_mappings(all_placeholders, all_alternatives)
 
     # Generate instances
-    for mapping in valid_mappings:
-        print(f"\nGenerating instance with mapping: {mapping}")
+    print("\nGenerating instances...")
+    for i, mapping in enumerate(valid_mappings):
         concrete_forms = []
         for pattern in abstract_patterns:
             concrete = pattern
             for placeholder, value in mapping.items():
-                print(f"Replacing {placeholder} with {value}")
                 concrete = concrete.replace(placeholder, value)
-                print(f"After replacement: {concrete}")
             concrete_forms.append(concrete)
+
+        # Print first 3 instances in detail
+        if i < 3:
+            print(f"\nInstance {i+1}:")
+            for j, form in enumerate(concrete_forms):
+                print(f"  Sentence {j+1}: {form}")
+
         instances.append(concrete_forms)
 
+    print(f"\nTotal instances generated: {len(instances)}")
     return instances
 
 
@@ -229,83 +227,98 @@ if __name__ == "__main__":
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
-        # Create timestamped output file
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_file = os.path.join(output_dir, f"matches_{timestamp}.json")
-        # ∃x(Mx∧∀y(Ny→Ryx)),∀x(Mx→∀y((Ny∧∀z(Mz→Ryz))→Rxy)), (Nc∧∀y(My→Rcy)) |= ∃x(Mx∧Rxc)
-        argument = {
-            "premise1": {"form": "∃x(Mx∧∀y(Ny→Ryx))", "type": "quantified"},
-            "premise2": {"form": "∀x(Mx→∀y((Ny∧∀z(Mz→Ryz))→Rxy))", "type": "quantified"},
-            "premise3": {"form": "(Nc∧∀x(Mx→Rcx))", "type": "conjunction"},
-            "conclusion": {"form": "∃x(Mx∧Rxc)", "type": "quantified"},
-        }
+        # Get argument ID from command line or use default
+        argument_id = sys.argv[1] if len(sys.argv) > 1 else "75537f4727941e8f"
+
+        # Create output files with argument ID
+        output_file = os.path.join(output_dir, f"matches_{argument_id}.json")
+        temp_output_file = os.path.join(output_dir, f"matches_{argument_id}_temp.json")
+
+        # Use a test case with forms we know exist
+        argument_data = grab_argument_data(db.session, argument_id)
+        print("\nOriginal argument:")
+        for key, value in argument_data.items():
+            print(f"{key}: {value['form']} (type: {value['type']}, subtype: {value['subtype']})")
 
         # Define the argument pattern to search for
-        argument_pattern = [normalize_logical_form(form["form"]) for form in argument.values()]
+        argument_pattern = [normalize_form(form["form"]) for form in argument_data.values()]
 
-        print("\nProcessing custom argument pattern")
-        print("Premises:")
-        for i, premise in enumerate(argument_pattern[:-1]):
-            print(f"  {i+1}: {premise}")
-        print(f"Conclusion: {argument_pattern[-1]}")
+        print("\nNormalized argument pattern:")
+        for i, form in enumerate(argument_pattern):
+            print(f"Sentence {i+1}: {form}")
 
         predicates, names = collect_all_predicates_and_names(argument_pattern)
         global_mapping = create_global_mapping(predicates, names)
 
         print("\nPredicates found:", predicates)
         print("Names found:", names)
-        print("\nGlobal mapping:", global_mapping)
+        print("Global mapping:", global_mapping)
 
-        print("\nAbstracted patterns:")
+        # Abstract the patterns
         abstract_patterns = []
-        for form in argument_pattern:
+        print("\nAbstracting patterns:")
+        for i, form in enumerate(argument_pattern):
+            print(f"\nOriginal form {i+1}: {form}")
             abstracted = abstract_form(form, global_mapping)
             abstract_patterns.append(abstracted)
-            print(f"Original: {form}")
-            print(f"Abstracted: {abstracted}")
-            print("---")
+            print(f"Abstracted form {i+1}: {abstracted}")
 
-        # 3. Generate and count instances
-        print("\nGenerating argument instances...")
+        # Initialize results structure
+        results = {
+            "argument_id": argument_id,
+            "argument_pattern": argument_pattern,
+            "matches": [],
+            "total_checked": 0,
+            "last_checked": None,
+        }
+
+        # Generate and check instances
+        print("\nGenerating instances...")
         instances = generate_argument_instances(abstract_patterns, global_mapping)
         print(f"\nGenerated {len(instances)} total instances")
 
-        # 4. Try to find matches
+        # Try to find matches
         print("\nSearching for matches...")
         matches_found = 0
-        matches_found_list = []
         for i, instance in enumerate(instances, 1):
-            if i % 100 == 0:
+            if i % 10 == 0:  # Print progress more frequently
                 print(f"Checked {i} instances...")
+                # Update and save progress
+                results["total_checked"] = i
+                results["last_checked"] = instance
+                with open(temp_output_file, "w") as f:
+                    json.dump(results, f, indent=2)
 
-            matching_sentences = find_matching_argument(instance, argument)
+            matching_sentences = find_matching_argument(instance, argument_data)
             if matching_sentences:
                 matches_found += 1
-                matches_found_list.append(matching_sentences)
+                match_data = {
+                    "premises": [{"id": s.id, "form": s.form} for s in matching_sentences[:-1]],
+                    "conclusion": {"id": matching_sentences[-1].id, "form": matching_sentences[-1].form},
+                }
+                results["matches"].append(match_data)
+
                 print(f"\nFound complete argument match #{matches_found}:")
                 for j, sentence in enumerate(matching_sentences, 1):
                     print(f"Sentence {j}: {sentence.form} (ID: {sentence.id})")
 
+                # Save results after each match
+                with open(temp_output_file, "w") as f:
+                    json.dump(results, f, indent=2)
+
         print(f"\nTotal matches found: {matches_found}")
         print(f"Total instances checked: {len(instances)}")
-        print("Matches found:")
-        for match in matches_found_list:
-            premises = match[:-1]
-            conclusion = match[-1]
-            print("Premises:")
-            for i, premise in enumerate(premises):
-                print(f"  {i+1}: {unescape_logical_form(premise.form)} (ID: {premise.id})")
-            print(f"Conclusion: {unescape_logical_form(conclusion.form)} (ID: {conclusion.id})")
 
-            # Validate and save the argument
-            from Generators.arg_generator import ArgGenerator
+        # Save final results
+        with open(output_file, "w") as f:
+            json.dump(results, f, indent=2)
 
-            generator = ArgGenerator(db.session, evaluate)
-            saved_argument = generator.validate_and_save_argument(premises, conclusion)
-            if saved_argument:
-                print(f"Successfully saved argument with ID: {saved_argument.id}")
-            else:
-                print("Failed to save argument")
+        # Delete temporary file
+        if os.path.exists(temp_output_file):
+            os.remove(temp_output_file)
+
+        print(f"\nResults saved to {output_file}")
+        print("Temporary results file deleted")
 
     except Exception as e:
         print(f"Error during execution: {e}")

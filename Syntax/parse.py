@@ -1,6 +1,6 @@
 from lark import Lark
 
-"""Syntax for first-order logic with quantifiers and mondadic and binary predicates"""
+"""Syntax for fragment of first-order logic with quantifiers and mondadic and binary predicates"""
 
 logic_grammar = r"""
 start: wff

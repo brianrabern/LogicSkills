@@ -2,9 +2,7 @@ from collections import defaultdict
 
 
 def ast_to_smt2(ast):
-    """
-    Converts an FOL AST into an SMT-LIB 2 string
-    """
+    """Converts an FOL AST into an SMT-LIB 2 string"""
 
     def collect_symbols(node, preds=None, names=None):
         if preds is None:

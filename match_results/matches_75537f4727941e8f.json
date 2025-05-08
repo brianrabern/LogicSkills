@@ -1,0 +1,38 @@
+{
+  "argument_id": "75537f4727941e8f",
+  "argument_pattern": [
+    "(\\u2200x(Ox\\u2192Pxa)\\u2227\\u2203x(Mx\\u2227Qxb))",
+    "(\\u00ac\\u2203x(Ox\\u2227Qxa)\\u2227\\u00acFb)",
+    "(\\u00acQbc\\u2192(Kb\\u2192\\u00acQbb))",
+    "(\\u2203x(Mx\\u2227\\u00acQxa)\\u2192(Fb\\u2192\\u2203x(Mx\\u2227\\u00acPxc)))"
+  ],
+  "matches": [
+    {
+      "premises": [
+        {
+          "id": 1417,
+          "form": "(\\u2200x(Ox\\u2192Pxa)\\u2227\\u2203x(Mx\\u2227Qxb))"
+        },
+        {
+          "id": 1902,
+          "form": "(\\u00ac\\u2203x(Ox\\u2227Qxa)\\u2227\\u00acFb)"
+        },
+        {
+          "id": 10908,
+          "form": "(\\u00acQbc\\u2192(Kb\\u2192\\u00acQbb))"
+        }
+      ],
+      "conclusion": {
+        "id": 9790,
+        "form": "(\\u2203x(Mx\\u2227\\u00acQxa)\\u2192(Fb\\u2192\\u2203x(Mx\\u2227\\u00acPxc)))"
+      }
+    }
+  ],
+  "total_checked": 2590,
+  "last_checked": [
+    "(\\u2200x(Nx\\u2192Rxb)\\u2227\\u2203x(Ox\\u2227Qxc))",
+    "(\\u00ba\\u2203x(Nx\\u2227Qxb)\\u2227\\u00baIc)",
+    "(\\u00baQca\\u2192(Lc\\u2192\\u00baQcc))",
+    "(\\u2203x(Ox\\u2227\\u00baQxb)\\u2192(Ic\\u2192\\u2203x(Ox\\u2227\\u00baRxa)))"
+  ]
+}

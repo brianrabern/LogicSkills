@@ -6,6 +6,12 @@ from Syntax.parse import parser
 from Syntax.transform import transformer
 from Semantics.eval import evaluate
 from Utils.normalize import normalize_logical_form
+from Utils.logging_config import setup_logging
+import logging
+
+# Set up logging for this module
+log_file = setup_logging("sentence_generator")
+logger = logging.getLogger(__name__)
 
 
 class SentenceGenerator:
@@ -21,7 +27,7 @@ class SentenceGenerator:
             normalized_form = normalize_logical_form(form)
             return self.db.sentence_exists(normalized_form, type, subtype)
         except Exception as e:
-            print(f"Error checking for existing sentence: {e}")
+            logger.error(f"Error checking for existing sentence: {e}")
             return False
 
     def add_entry(self, sentence, type, subtype, soa, form, base=False):
@@ -32,7 +38,7 @@ class SentenceGenerator:
 
         # Check if the sentence already exists
         if self._sentence_exists(normalized_form, type, subtype):
-            print(f"Sentence already exists: {sentence}")
+            logger.info(f"Sentence already exists: {sentence}")
             return
 
         status = self._get_status(raw_ast)
@@ -49,18 +55,18 @@ class SentenceGenerator:
                 time_created=timestamp,
             )
             self.counter += 1
-            print(self.counter, sentence)
+            logger.info(f"{self.counter}: {sentence}")
 
         except Exception as e:
-            print(f"Error adding entry: {e}")
+            logger.error(f"Error adding entry: {e}")
 
     def _parse_ast(self, form):
-        print(f"Parsing AST for: {form}")
+        logger.info(f"Parsing AST for: {form}")
         try:
             tree = parser.parse(form)
             ast = transformer.transform(tree)
         except Exception as e:
-            print(f"Parse error: {str(e)}")
+            logger.error(f"Parse error: {str(e)}")
             ast = None
         return ast
 
@@ -79,13 +85,13 @@ class SentenceGenerator:
         try:
             return self.db.get_all_sentences()
         except Exception as e:
-            print(f"Error retrieving entries: {e}")
+            logger.error(f"Error retrieving entries: {e}")
 
     def get_base_entries(self):
         try:
             return self.db.get_base_sentences()
         except Exception as e:
-            print(f"Error retrieving base entries: {e}")
+            logger.error(f"Error retrieving base entries: {e}")
 
     def generate_domain_constraint(self):
         kind_predicates = {
@@ -102,7 +108,7 @@ class SentenceGenerator:
         or_clause = or_clause.rstrip(", or ")
         sentence = f"Everything is {or_clause} (exclusively), and there's at least one of each."
         kinds = list(kind_predicates.keys())
-        print(sentence)
+        logger.info(sentence)
 
         def construct_universal_clause(kinds):
             # Start with the last kind
@@ -149,7 +155,7 @@ class SentenceGenerator:
             "soa": soa,
             "form": f"(({conjunct1} ∧ {conjunct2}) ∧ {conjunct3})",
         }
-        print(entry)
+        logger.info(entry)
 
         self.add_entry(**entry)
 
@@ -710,12 +716,12 @@ class SentenceGenerator:
             for t in sentence_types:
                 type = t["type"]
                 subtype = t["subtype"]
-                print(f"Generating conjunctions for {type} {subtype}")
+                logger.info(f"Generating conjunctions for {type} {subtype}")
                 res = self.db.get_sentence_where(type=t["type"], subtype=t["subtype"])
                 entries.extend(res)
         sample_size = min(50, max(20, int(len(entries) * 0.3)))
         sampled_entries = random.sample(entries, sample_size)
-        print(f"Sampled {len(sampled_entries)} entries")
+        logger.info(f"Sampled {len(sampled_entries)} entries")
 
         for e1, e2 in itertools.combinations(sampled_entries, 2):
             # Prioritize combinations that mix quantifier types
@@ -978,7 +984,8 @@ if __name__ == "__main__":
 
     lex = CarrollLexicon()
     generator = SentenceGenerator(lex)
-    generator.generate_conditionals()
+    generator.generate_disjunctions()
+    generator.generate_conjunctions()
 
 
 # def generate_all_sentences():

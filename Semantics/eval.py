@@ -1,15 +1,45 @@
 import requests
+import logging
 from Syntax.convert_to_smt import ast_to_smt2
 from Utils.helpers import ast_from_json
+from Utils.logging_config import setup_logging
+import traceback
+
+# set up logging for this module
+log_file = setup_logging("z3_evaluator")
+logger = logging.getLogger(__name__)
+
+# configuration
+Z3_SERVER = "http://localhost:8000"  # single z3 server
+logger.info(f"Using Z3 server at: {Z3_SERVER}")
 
 
-# Z3 evaluator
 def evaluate(sentence_ast, convert_json=False):
+    """
+    Evaluate a sentence AST using Z3.
+    Returns 'sat' if satisfiable, 'unsat' if unsatisfiable, or 'error' if evaluation failed.
+    """
+    try:
+        if convert_json:
+            sentence_ast = ast_from_json(sentence_ast)
+        logger.info(f"Evaluating sentence AST: {sentence_ast}")
 
-    if convert_json:
-        sentence_ast = ast_from_json(sentence_ast)
-    print(f"Evaluating sentence AST: {sentence_ast}")
-    smt = ast_to_smt2(sentence_ast)["smt2"]
-    res = requests.post("http://localhost:8000", data=smt)
-    print(f"Z3 response: {res.text.strip()}")
-    return res.text.strip()
+        # convert to smt format
+        smt = ast_to_smt2(sentence_ast)["smt2"]
+        logger.info(f"SMT sent to Z3: {smt}")
+
+        # send to z3 server
+        response = requests.post(Z3_SERVER, data=smt, headers={"Content-Type": "text/plain"}, timeout=10)
+        response.raise_for_status()
+
+        result = response.text.strip()
+        logger.info(f"Z3 response: {result}")
+        return result
+
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Error communicating with Z3 server: {str(e)}")
+        return "error"
+    except Exception as e:
+        error_msg = f"Unexpected error in evaluate function. AST: {sentence_ast}\nError: {str(e)}\nTraceback: {traceback.format_exc()}"
+        logger.error(error_msg)
+        return "error"
