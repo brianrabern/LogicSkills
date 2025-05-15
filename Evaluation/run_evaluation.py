@@ -32,15 +32,15 @@ def setup_logging():
 
 def run_evaluation(model_name: str, questions_file: str):
     """Run evaluation for a single model."""
-    # Setup logging
+    # setup logging
     setup_logging()
     logging.info(f"Starting evaluation for model: {model_name}")
 
-    # Create output directory
+    # create output directory
     output_dir = Path("results")
     output_dir.mkdir(exist_ok=True)
 
-    # Load questions
+    # load questions
     try:
         questions = load_questions(questions_file)
         logging.info(f"Loaded {len(questions)} questions")
@@ -48,20 +48,20 @@ def run_evaluation(model_name: str, questions_file: str):
         logging.error(f"Failed to load questions: {e}")
         return
 
-    # Initialize model and evaluator
+    # initialize model and evaluator
     model = Model(model_name, system_prompt=evaluation_subject_prompt)
     evaluator = Evaluator(model)
 
-    # Run evaluation
+    # run evaluation
     evaluator.evaluate_questions(questions)
 
-    # Save results
+    # save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     safe_model_name = model_name.replace("/", "_")
     output_path = output_dir / f"{safe_model_name}_{timestamp}.json"
     evaluator.save_results(str(output_path))
 
-    # Log summary
+    # log summary
     summary = evaluator.get_summary()
     logging.info(f"Results for {model_name}:")
     logging.info(f"  Accuracy: {summary['accuracy']:.2%}")
@@ -71,8 +71,8 @@ def run_evaluation(model_name: str, questions_file: str):
 
 
 if __name__ == "__main__":
-    # Configure these values
-    MODEL_NAME = "openai/gpt-4o-mini"
+    # configure these values
+    MODEL_NAME = "mistralai/mixtral-8x7b-instruct"
     QUESTIONS_FILE = "questions.json"
 
     run_evaluation(MODEL_NAME, QUESTIONS_FILE)

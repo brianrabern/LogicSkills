@@ -14,7 +14,7 @@ def get_sentence(sentence_id):
 
 
 def get_invalid_conclusions(premise_ids, valid_conclusion_id, num_options=5):
-    # Get invalid arguments with the same premises
+    # get invalid arguments with the same premises
     premise_str = canonical_premise_str(premise_ids)
     invalid_args = session.query(Argument).filter_by(premise_ids=premise_str, valid=0).all()
 
@@ -22,7 +22,7 @@ def get_invalid_conclusions(premise_ids, valid_conclusion_id, num_options=5):
         print(f"Warning: No invalid arguments found for premises {premise_str}")
         return []
 
-    # Get the conclusion sentences
+    # get the conclusion sentences
     invalid_conclusions = [
         session.get(Sentence, arg.conclusion_id) for arg in invalid_args if arg.conclusion_id != valid_conclusion_id
     ]
@@ -35,46 +35,46 @@ def get_invalid_conclusions(premise_ids, valid_conclusion_id, num_options=5):
 
 
 def create_question_dict(argument):
-    # Get premises and conclusion
+    # get premises and conclusion
     premise_ids = [int(pid) for pid in argument.premise_ids.split(",")]
     premises = [session.get(Sentence, pid).to_dict() for pid in premise_ids]
     valid_conclusion = session.get(Sentence, argument.conclusion_id)
 
-    # Get domain constraint
+    # get domain constraint
     domain_constraint = session.query(Sentence).filter_by(type="domain_constraint").first()
 
-    # Get invalid options
+    # get invalid options
     invalid_options = get_invalid_conclusions(premise_ids, argument.conclusion_id)
     if not invalid_options:
         print(f"Skipping argument {argument.id} - no invalid options found")
         return None
 
-    # Create question text
+    # create question text
     question_text = "Consider the following situation:\n\n"
 
-    # Add domain constraint if it exists
+    # add domain constraint if it exists
     if domain_constraint:
         question_text += f"{domain_constraint.sentence} "
 
-    # Add premises as a natural paragraph
+    # add premises as a natural paragraph
     premise_texts = [get_sentence(p["id"]) for p in premises]
     question_text += " ".join(premise_texts) + "\n\n"
 
     question_text += "Which, if any, of the following statements must be true in this situation?\n\n"
 
-    # Combine valid and invalid options and shuffle them
+    # combine valid and invalid options and shuffle them
     all_options = invalid_options + [valid_conclusion]
     random.shuffle(all_options)
 
-    # Create mapping of option numbers to sentence IDs
+    # create mapping of option numbers to sentence ids
     option_to_sentence_id = {}
 
-    # Add options
+    # add options
     for i, option in enumerate(all_options, 1):
         question_text += f"{i}. {option.sentence}\n"
         option_to_sentence_id[str(i)] = option.id
 
-    # Get the correct option number
+    # get the correct option number
     correct_option = str(all_options.index(valid_conclusion) + 1)
 
     return {
@@ -88,14 +88,14 @@ def create_question_dict(argument):
 
 
 def generate_eval_questions(num_questions=20):
-    # Get valid arguments
+    # get valid arguments
     valid_args = session.query(Argument).filter_by(valid=1).all()
     selected_args = random.sample(valid_args, min(num_questions, len(valid_args)))
 
     questions = []
     for arg in selected_args:
         question = create_question_dict(arg)
-        if question:  # Only add if we found invalid options
+        if question:  # only add if we found invalid options
             questions.append(question)
 
     return questions

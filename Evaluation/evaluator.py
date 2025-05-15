@@ -14,30 +14,18 @@ class Evaluator:
         self.results = []
 
     def evaluate_question(self, question: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Evaluate a single question.
+        """Evaluate a single question."""
 
-        Args:
-            question: Dict containing question data including:
-                - id: Question identifier
-                - text: Question text
-                - options: List of options (1-6)
-                - correct_answer: Expected answer
-                - option_to_sentence_id: Mapping of option numbers to sentence IDs
-
-        Returns:
-            Dict containing evaluation results
-        """
-        # Get model's response to the question
+        # get model's response to the question
         response = self.model.query(question["text"])
         print(f"\nQuestion {question['id']}:")
         print(f"Model response: {response}")
 
-        # Extract the answer using our extractor model
+        # extract the answer using our extractor model
         extraction = self.extractor_model.query(extractor_prompt(response), parse_json=True)
         print(f"Extracted answer: {extraction.get('answer') if extraction else 'None'}")
 
-        # Get the sentence IDs for model's answer and correct answer
+        # get the sentence ids for model's answer and correct answer
         model_answer_sentence_ids = []
         correct_answer_sentence_ids = []
 
@@ -53,11 +41,11 @@ class Evaluator:
                 if num in question.get("option_to_sentence_id", {}):
                     correct_answer_sentence_ids.append(question["option_to_sentence_id"][num])
 
-        # Log whether the answer was correct
+        # log whether the answer was correct
         is_correct = extraction.get("answer") == question["correct_answer"] if extraction else None
         print(f"Answer was {'correct' if is_correct else 'incorrect' if is_correct is False else 'indeterminate'}")
 
-        # Prepare result
+        # prepare result
         result = {
             "question_id": question["id"],
             "question": question["text"],
@@ -75,15 +63,7 @@ class Evaluator:
         return result
 
     def evaluate_questions(self, questions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """
-        Evaluate a list of questions.
-
-        Args:
-            questions: List of question dictionaries
-
-        Returns:
-            List of evaluation results
-        """
+        """Evaluate a list of questions."""
         for question in questions:
             try:
                 self.evaluate_question(question)
@@ -94,12 +74,7 @@ class Evaluator:
         return self.results
 
     def get_summary(self) -> Dict[str, Any]:
-        """
-        Get a summary of evaluation results.
-
-        Returns:
-            Dict containing summary statistics
-        """
+        """Get a summary of evaluation results."""
         if not self.results:
             return {"error": "No results to summarize"}
 
@@ -115,12 +90,7 @@ class Evaluator:
         }
 
     def save_results(self, filepath: str):
-        """
-        Save evaluation results to a JSON file.
-
-        Args:
-            filepath: Path to save results
-        """
+        """Save evaluation results to a JSON file."""
         with open(filepath, "w") as f:
             json.dump({"results": self.results, "summary": self.get_summary()}, f, indent=2)
 

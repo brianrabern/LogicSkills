@@ -11,7 +11,7 @@ class Model:
         self.system_prompt = system_prompt
 
     def query(self, prompt, parse_json=False):
-        response = prompt_model(self.model_name, prompt)
+        response = prompt_model(self.model_name, prompt, self.system_prompt)
         if not parse_json:
             return response
 
