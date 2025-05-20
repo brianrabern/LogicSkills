@@ -22,7 +22,7 @@ from Syntax.carroll_lexicon import CarrollLexicon
 class ArgGenerator:
     """Generates logical arguments from a database of sentences."""
 
-    def __init__(self, session, evaluator, lexicon, num_premises=3, subset_percentage=0.2):
+    def __init__(self, session, evaluator, lexicon, num_premises=4, subset_percentage=0.2):
         """Initialize the argument generator."""
         self.session = session
         self.evaluate = evaluator
