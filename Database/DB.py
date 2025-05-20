@@ -51,7 +51,9 @@ class DatabaseManager:
         self.session.add(pred)
         self.session.commit()
 
-    def add_sentence(self, sentence, type, subtype, soa, form, ast, base, status, time_created):
+    def add_sentence(
+        self, sentence, type, subtype, soa, form, ast, base, status, time_created, language, counterpart_id
+    ):
         normalized_form = normalize_logical_form(form)
         s = Sentence(
             sentence=sentence,
@@ -63,6 +65,8 @@ class DatabaseManager:
             base=base,
             status=status,
             time_created=time_created,
+            language=language,
+            counterpart_id=counterpart_id,
         )
         self.session.add(s)
         self.session.commit()

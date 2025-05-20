@@ -54,7 +54,7 @@ class Sentence(Base):
     base = Column(TINYINT, default=None)
     status = Column(TINYINT, default=None)  # or Integer
     time_created = Column(Integer)
-    language = Column(String(50), default="carroll")
+    language = Column(String(50), default=None)
     counterpart_id = Column(Integer, default=None)
 
     def to_dict(self):
@@ -83,4 +83,4 @@ class Argument(Base):
     difficulty = Column(Float, default=0.0)
     source = Column(String(50))
     created_at = Column(Integer, default=lambda: int(time()))
-    language = Column(String(50), default="carroll")
+    language = Column(String(50), default=None)

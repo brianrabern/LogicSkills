@@ -127,7 +127,7 @@ def run_server(port):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Z3 SMT Solver Server")
-    parser.add_argument("--port", type=int, default=8000, help="Port number to run the server on")
+    parser.add_argument("--port", type=int, default=8001, help="Port number to run the server on")
     args = parser.parse_args()
 
     run_server(args.port)

@@ -22,19 +22,20 @@ from Syntax.carroll_lexicon import CarrollLexicon
 class ArgGenerator:
     """Generates logical arguments from a database of sentences."""
 
-    def __init__(self, session, evaluator, num_premises=3, subset_percentage=0.2):
+    def __init__(self, session, evaluator, lexicon, num_premises=3, subset_percentage=0.2):
         """Initialize the argument generator."""
         self.session = session
         self.evaluate = evaluator
         self.num_premises = num_premises
         self.subset_percentage = subset_percentage
+        self.lexicon = lexicon
+        self.language = lexicon.language
 
         # Initialize caches with 1-hour TTL
         self._premise_ast_cache = TTLCache(maxsize=1000, ttl=3600)
         self._conclusion_from_subset_cache = TTLCache(maxsize=1000, ttl=3600)
 
         # Define predicate groups for coherent story generation
-        self.lexicon = CarrollLexicon()
         self.kind_predicates = {
             X for X in self.lexicon.predicates.keys() if self.lexicon.predicates[X]["semantic_type"] == "kind"
         }
@@ -53,7 +54,9 @@ class ArgGenerator:
         """Get and cache the domain constraint sentence and its AST."""
         try:
             if self._domain_constraint is None:
-                self._domain_constraint = self.session.query(Sentence).filter_by(type="domain_constraint").first()
+                self._domain_constraint = (
+                    self.session.query(Sentence).filter_by(type="domain_constraint", language=self.language).first()
+                )
                 if self._domain_constraint:
                     self._domain_constraint_ast = self._domain_constraint.ast
                     logging.info(f"Loaded domain constraint with ID: {self._domain_constraint.id}")
@@ -101,9 +104,11 @@ class ArgGenerator:
         logging.info(f"Generating {sample_size} premise sets of size {self.num_premises}")
 
         try:
-            # Count available sentences
-            total_sentences = self.session.query(Sentence.id).filter(Sentence.status == 0).count()
-            logging.info(f"Found {total_sentences} candidate sentences")
+            # Count available sentences for this language
+            total_sentences = (
+                self.session.query(Sentence.id).filter(Sentence.status == 0, Sentence.language == self.language).count()
+            )
+            logging.info(f"Found {total_sentences} candidate sentences for language {self.language}")
 
             # Generate random IDs in batches
             batch_size = 1000
@@ -118,13 +123,17 @@ class ArgGenerator:
                 logging.debug(f"Selected names: {selected_names}")
 
                 try:
-                    # Get random IDs
+                    # Get random IDs for this language
                     ids = random.sample(range(1, total_sentences + 1), current_batch * self.num_premises)
 
                     # Fetch sentences in batches
                     for j in range(0, len(ids), self.num_premises):
                         premise_ids = ids[j : j + self.num_premises]
-                        premises = self.session.query(Sentence).filter(Sentence.id.in_(premise_ids)).all()
+                        premises = (
+                            self.session.query(Sentence)
+                            .filter(Sentence.id.in_(premise_ids), Sentence.language == self.language)
+                            .all()
+                        )
 
                         # Check if premises use only the selected predicates and names
                         valid_premises = []
@@ -181,7 +190,9 @@ class ArgGenerator:
         logging.info(f"Checking consistency of premises: {[p['id'] for p in premises]}")
         try:
             # Get domain constraint
-            domain_constraint = self.session.query(Sentence).filter_by(type="domain_constraint").first()
+            domain_constraint = (
+                self.session.query(Sentence).filter_by(type="domain_constraint", language=self.language).first()
+            )
             if domain_constraint:
                 logging.debug("Including domain constraint in consistency check")
 
@@ -426,9 +437,10 @@ class ArgGenerator:
         premise_ids = [p["id"] for p in premises]
         query = self.session.query(Sentence).filter(
             Sentence.status == 0,
+            Sentence.language == self.language,
             ~Sentence.id.in_(premise_ids),
-            ~Sentence.type.in_(['conditional', 'disjunction']),  # Exclude conditionals and disjunctions
-            ~Sentence.subtype.in_(['nested'])  # Exclude nested conditionals
+            ~Sentence.type.in_(["conditional", "disjunction"]),  # Exclude conditionals and disjunctions
+            ~Sentence.subtype.in_(["nested"]),  # Exclude nested conditionals
         )
 
         total_count = query.count()
@@ -592,6 +604,7 @@ class ArgGenerator:
                 valid=valid,
                 difficulty=difficulty,
                 source=source,
+                language=self.language,
             )
 
             # Save to database
@@ -719,22 +732,22 @@ class ArgGenerator:
             return None
 
 
-def generate_arguments(target_valid_args=100, session=None):
+def generate_arguments(target_valid_args=100, session=None, lexicon=None):
     """Generate arguments using a single process."""
 
     # Setup logging
     log_file = setup_logging("arg_generator")
     logging.info(f"Starting argument generation. Log file: {log_file}")
-    logging.info(f"Parameters: target_valid_args={target_valid_args}")
+    logging.info(f"Parameters: target_valid_args={target_valid_args}, language={lexicon.language}")
 
     # Initialize generator with provided session or create new one
     if session is None:
         session = db.session
     evaluator = evaluate
-    generator = ArgGenerator(session, evaluator)
+    generator = ArgGenerator(session, evaluator, lexicon=lexicon)
 
-    # Get initial count of valid arguments
-    initial_valid_count = session.query(Argument).filter_by(valid=True).count()
+    # Get initial count of valid arguments for this language
+    initial_valid_count = session.query(Argument).filter_by(valid=True, language=lexicon.language).count()
 
     # Initialize counters
     stats = {
@@ -758,9 +771,13 @@ def generate_arguments(target_valid_args=100, session=None):
 
                         # Update stats - only count new valid arguments
                         stats["processed_premises"] += 1
-                        current_valid_count = session.query(Argument).filter_by(valid=True).count()
+                        current_valid_count = (
+                            session.query(Argument).filter_by(valid=True, language=lexicon.language).count()
+                        )
                         stats["valid_count"] = current_valid_count - initial_valid_count
-                        stats["invalid_count"] = session.query(Argument).filter_by(valid=False).count()
+                        stats["invalid_count"] = (
+                            session.query(Argument).filter_by(valid=False, language=lexicon.language).count()
+                        )
 
                         # Log progress
                         _log_progress(stats, target_valid_args)
@@ -821,20 +838,25 @@ def _log_final_summary(stats):
 
 
 if __name__ == "__main__":
-    # First check how many valid arguments we already have
-    existing_valid = db.session.query(Argument).filter_by(valid=True).count()
+    # Import and create lexicon
+    from Syntax.carroll_lexicon import CarrollLexicon
+
+    lexicon = CarrollLexicon()
+
+    # First check how many valid arguments we already have for this language
+    existing_valid = db.session.query(Argument).filter_by(valid=True, language=lexicon.language).count()
     target_total = 3000  # Total number of valid arguments we want
     remaining = max(0, target_total - existing_valid)
 
     if remaining == 0:
-        logging.info(f"Already have {existing_valid} valid arguments, no need to generate more")
+        logging.info(f"Already have {existing_valid} valid arguments for {lexicon.language}, no need to generate more")
         exit(0)
 
     # Calculate how many each thread should generate
     num_threads = 6
     per_thread = math.ceil(remaining / num_threads)
 
-    logging.info(f"Found {existing_valid} existing valid arguments")
+    logging.info(f"Found {existing_valid} existing valid arguments for {lexicon.language}")
     logging.info(f"Need to generate {remaining} more valid arguments")
     logging.info(f"Each thread will target {per_thread} valid arguments")
 
@@ -843,11 +865,12 @@ if __name__ == "__main__":
     for i in range(num_threads):
         session = db.Session()
         thread = threading.Thread(
-            target=lambda: generate_arguments(target_valid_args=per_thread, session=session), name=f"Generator-{i}"
+            target=lambda: generate_arguments(target_valid_args=per_thread, session=session, lexicon=lexicon),
+            name=f"Generator-{i}-{lexicon.language}",
         )
         threads.append(thread)
         thread.start()
-        logging.info(f"Started worker {i}")
+        logging.info(f"Started worker {i} for {lexicon.language}")
 
     # Wait for all threads to complete
     for thread in threads:
