@@ -1,4 +1,6 @@
 class EnglishLexicon:
+    language = "english"
+
     def __init__(self):
         self.names = {
             "a": {"name": "Alfred", "gender": "male"},

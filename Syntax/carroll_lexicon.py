@@ -1,4 +1,6 @@
 class CarrollLexicon:
+    language = "carroll"
+
     def __init__(self):
         self.names = {
             "a": {"name": "Zindle", "gender": "female"},

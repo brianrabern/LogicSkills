@@ -422,10 +422,13 @@ class ArgGenerator:
         preds = {s for s in symbols if s.isupper()}
         logging.debug(f"Available symbols - Names: {names}, Predicates: {preds}")
 
-        # Get a random sample of base sentences
+        # Get a random sample of sentences, excluding conditionals, nested conditionals, and disjunctions
         premise_ids = [p["id"] for p in premises]
         query = self.session.query(Sentence).filter(
-            Sentence.status == 0, Sentence.base == 1, ~Sentence.id.in_(premise_ids)
+            Sentence.status == 0,
+            ~Sentence.id.in_(premise_ids),
+            ~Sentence.type.in_(['conditional', 'disjunction']),  # Exclude conditionals and disjunctions
+            ~Sentence.subtype.in_(['nested'])  # Exclude nested conditionals
         )
 
         total_count = query.count()
@@ -767,10 +770,12 @@ def generate_arguments(target_valid_args=100, session=None):
 
                     except Exception as e:
                         logging.error(f"Error processing premises: {str(e)}")
+                        session.rollback()
                         continue
 
             except Exception as e:
                 logging.error(f"Error in batch processing: {str(e)}")
+                session.rollback()
                 continue
 
     except Exception as e:
@@ -786,7 +791,6 @@ def _log_progress(stats, target_valid_args):
     current_time = datetime.now()
     elapsed_time = (current_time - stats["start_time"]).total_seconds()
 
-    logging.info("\n=== Progress Update ===")
     logging.info(f"Processed premises: {stats['processed_premises']}")
     logging.info(f"Valid arguments found: {stats['valid_count']}/{target_valid_args}")
     logging.info(f"Invalid arguments found: {stats['invalid_count']}")
@@ -819,7 +823,7 @@ def _log_final_summary(stats):
 if __name__ == "__main__":
     # First check how many valid arguments we already have
     existing_valid = db.session.query(Argument).filter_by(valid=True).count()
-    target_total = 100  # Total number of valid arguments we want
+    target_total = 3000  # Total number of valid arguments we want
     remaining = max(0, target_total - existing_valid)
 
     if remaining == 0:
@@ -827,7 +831,7 @@ if __name__ == "__main__":
         exit(0)
 
     # Calculate how many each thread should generate
-    num_threads = 4
+    num_threads = 6
     per_thread = math.ceil(remaining / num_threads)
 
     logging.info(f"Found {existing_valid} existing valid arguments")

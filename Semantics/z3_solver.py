@@ -52,18 +52,32 @@ class Z3Handler(BaseHTTPRequestHandler):
 
             result = self.evaluate_formula(formula)
 
-            self.send_response(200)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(result.encode("utf-8"))
+            try:
+                self.send_response(200)
+                self.send_header("Content-type", "text/plain")
+                self.end_headers()
+                self.wfile.write(result.encode("utf-8"))
+            except BrokenPipeError:
+                logger.warning("Client disconnected before response could be sent")
+                return
+            except Exception as e:
+                logger.error(f"Error sending response: {str(e)}")
+                return
 
         except Exception as e:
             logger.error(f"Error processing request: {str(e)}")
             logger.error(traceback.format_exc())
-            self.send_response(500)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(f"Error: {str(e)}".encode("utf-8"))
+            try:
+                self.send_response(500)
+                self.send_header("Content-type", "text/plain")
+                self.end_headers()
+                self.wfile.write(f"Error: {str(e)}".encode("utf-8"))
+            except BrokenPipeError:
+                logger.warning("Client disconnected before error response could be sent")
+                return
+            except Exception as e:
+                logger.error(f"Error sending error response: {str(e)}")
+                return
 
     def evaluate_formula(self, formula):
         try:
