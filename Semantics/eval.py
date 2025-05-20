@@ -10,7 +10,7 @@ log_file = setup_logging("z3_evaluator")
 logger = logging.getLogger(__name__)
 
 # configuration
-Z3_SERVER = "http://localhost:8000"  # single z3 server
+Z3_SERVER = "http://localhost:8001"  # single z3 server
 logger.info(f"Using Z3 server at: {Z3_SERVER}")
 
 

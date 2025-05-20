@@ -52,7 +52,7 @@ class DatabaseManager:
         self.session.commit()
 
     def add_sentence(
-        self, sentence, type, subtype, soa, form, ast, base, status, time_created, language, counterpart_id
+        self, sentence, type, subtype, soa, form, ast, base, status, time_created, language, counterpart_id=None
     ):
         normalized_form = normalize_logical_form(form)
         s = Sentence(
@@ -71,7 +71,7 @@ class DatabaseManager:
         self.session.add(s)
         self.session.commit()
 
-    def sentence_exists(self, form, type=None, subtype=None):
+    def sentence_exists(self, form, type=None, subtype=None, language=None):
         normalized_form = normalize_logical_form(form)
         query = self.session.query(Sentence).filter_by(form=normalized_form)
 
@@ -79,6 +79,8 @@ class DatabaseManager:
             query = query.filter_by(type=type)
         if subtype is not None:
             query = query.filter_by(subtype=subtype)
+        if language is not None:
+            query = query.filter_by(language=language)
 
         return query.first() is not None
 
@@ -99,8 +101,11 @@ class DatabaseManager:
             s["form"] = unescape_logical_form(s["form"])
         return sentences
 
-    def get_base_sentences(self):
-        sentence_objs = self.session.query(Sentence).filter_by(base=True).all()
+    def get_base_entries(self, language=None):
+        query = self.session.query(Sentence).filter_by(base=True)
+        if language is not None:
+            query = query.filter_by(language=language)
+        sentence_objs = query.all()
         sentences = [s.to_dict() for s in sentence_objs]
         for s in sentences:
             s["form"] = unescape_logical_form(s["form"])
@@ -109,7 +114,7 @@ class DatabaseManager:
     def get_sentence_where(self, **kwargs):
         """
         Get sentences based on the provided keyword arguments.
-        Example: get_sentence_where(type="conditional", base=True)
+        Example: get_sentence_where(type="conditional", base=True, language="english")
         """
         sentence_objs = self.session.query(Sentence).filter_by(**kwargs).all()
         sentences = [s.to_dict() for s in sentence_objs]

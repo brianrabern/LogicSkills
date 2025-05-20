@@ -16,7 +16,6 @@ from cachetools import TTLCache
 import json
 import os
 import threading
-from Syntax.carroll_lexicon import CarrollLexicon
 
 
 class ArgGenerator:

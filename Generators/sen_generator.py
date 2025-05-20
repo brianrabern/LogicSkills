@@ -26,7 +26,7 @@ class SentenceGenerator:
         """Check if a sentence with the given form already exists in the database."""
         try:
             normalized_form = normalize_logical_form(form)
-            return self.db.sentence_exists(normalized_form, type, subtype)
+            return self.db.sentence_exists(normalized_form, type, subtype, language=self.language)
         except Exception as e:
             logger.error(f"Error checking for existing sentence: {e}")
             return False
@@ -91,7 +91,7 @@ class SentenceGenerator:
 
     def get_base_entries(self):
         try:
-            return self.db.get_base_sentences()
+            return self.db.get_base_entries(language=self.language)
         except Exception as e:
             logger.error(f"Error retrieving base entries: {e}")
 
@@ -983,11 +983,11 @@ class SentenceGenerator:
 
 if __name__ == "__main__":
     from Syntax.carroll_lexicon import CarrollLexicon
+    from Syntax.english_lexicon import EnglishLexicon
 
-    def generate_all_sentences():
+    def generate_all_sentences(lexicon):
         """Generate all sentence types without sampling."""
-        lex = CarrollLexicon()
-        generator = SentenceGenerator(lex)
+        generator = SentenceGenerator(lexicon)
         print("Generating domain constraint...")
         generator.generate_domain_constraint()
 
@@ -1128,7 +1128,9 @@ if __name__ == "__main__":
     def generate():
         """Generate all sentences."""
         # First generate all sentences
-        generate_all_sentences()
+        for lexicon in [CarrollLexicon(), EnglishLexicon()]:
+            print(f"Generating sentences for {lexicon.language}...")
+            generate_all_sentences(lexicon)
 
         # # Then create the markdown file with samples
         # print("\nCreating samples markdown file...")
