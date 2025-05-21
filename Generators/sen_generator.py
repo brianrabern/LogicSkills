@@ -982,23 +982,23 @@ class SentenceGenerator:
 
 
 if __name__ == "__main__":
-    from Syntax.carroll_lexicon import CarrollLexicon
+    # from Syntax.carroll_lexicon import CarrollLexicon
     from Syntax.english_lexicon import EnglishLexicon
 
     def generate_all_sentences(lexicon):
         """Generate all sentence types without sampling."""
         generator = SentenceGenerator(lexicon)
-        print("Generating domain constraint...")
-        generator.generate_domain_constraint()
+        # print("Generating domain constraint...")
+        # generator.generate_domain_constraint()
 
-        print("Generating atomic sentences...")
-        generator.generate_atomic_sentences()
+        # print("Generating atomic sentences...")
+        # generator.generate_atomic_sentences()
 
-        print("Generating simple quantified sentences...")
-        generator.generate_simple_quantified_sentences()
+        # print("Generating simple quantified sentences...")
+        # generator.generate_simple_quantified_sentences()
 
-        print("Generating multiply quantified sentences...")
-        generator.generate_multiply_quantified_sentences()
+        # print("Generating multiply quantified sentences...")
+        # generator.generate_multiply_quantified_sentences()
 
         # print("Generating reciprocal quantified sentences...")
         # generator.generate_reciprocal_quantified_sentences()
@@ -1011,10 +1011,10 @@ if __name__ == "__main__":
 
         print("Generating compound sentences...")
         generator.generate_conjunctions()
-        # generator.generate_disjunctions()
-        # generator.generate_conditionals()
-        # generator.generate_biconditionals()
-        # generator.generate_nested_conditionals()
+        generator.generate_disjunctions()
+        generator.generate_conditionals()
+        generator.generate_biconditionals()
+        generator.generate_nested_conditionals()
 
     # def create_samples(n=5):
     # 	"""Create a markdown file with samples of each sentence type."""
@@ -1128,7 +1128,7 @@ if __name__ == "__main__":
     def generate():
         """Generate all sentences."""
         # First generate all sentences
-        for lexicon in [CarrollLexicon(), EnglishLexicon()]:
+        for lexicon in [EnglishLexicon()]:
             print(f"Generating sentences for {lexicon.language}...")
             generate_all_sentences(lexicon)
 
