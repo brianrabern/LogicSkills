@@ -1,8 +1,9 @@
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
-from Database.models import Base, Name, Predicate, Sentence
+from Database.models import Base, Sentence, Argument
 from Utils.normalize import normalize_logical_form, unescape_logical_form
 from config import mariadb_url
+from sqlalchemy.exc import IntegrityError
 
 
 class DatabaseManager:
@@ -22,37 +23,19 @@ class DatabaseManager:
         self.drop_tables()
         self.create_tables()
 
-    def add_name(self, symbol, name, gender, time_created):
-        name_obj = Name(symbol=symbol, name=name, gender=gender, time_created=time_created)
-        self.session.add(name_obj)
-        self.session.commit()
-
-    def add_predicate(
-        self,
-        symbol,
-        template,
-        negated_template,
-        arity,
-        structure,
-        semantic_type,
-        tense,
-        time_created,
-    ):
-        pred = Predicate(
-            symbol=symbol,
-            template=template,
-            negated_template=negated_template,
-            arity=arity,
-            structure=structure,
-            semantic_type=semantic_type,
-            tense=tense,
-            time_created=time_created,
-        )
-        self.session.add(pred)
-        self.session.commit()
-
     def add_sentence(
-        self, sentence, type, subtype, soa, form, ast, base, status, time_created, language, counterpart_id=None
+        self,
+        sentence,
+        type,
+        subtype,
+        soa,
+        form,
+        ast,
+        base,
+        status,
+        language,
+        counterpart_id,
+        time_created,
     ):
         normalized_form = normalize_logical_form(form)
         s = Sentence(
@@ -64,9 +47,9 @@ class DatabaseManager:
             ast=ast,
             base=base,
             status=status,
-            time_created=time_created,
             language=language,
             counterpart_id=counterpart_id,
+            time_created=time_created,
         )
         self.session.add(s)
         self.session.commit()
@@ -132,6 +115,75 @@ class DatabaseManager:
         sen = res[0]
         sen["form"] = unescape_logical_form(sen["form"])
         return sen
+
+    def get_last_inserted_id(self):
+        """Get the ID of the last inserted sentence."""
+        try:
+            return self.session.query(Sentence).order_by(Sentence.id.desc()).first().id
+        except Exception as e:
+            print(f"Error getting last inserted ID: {e}")
+            return None
+
+    def update_sentence_counterpart(self, sentence_id, counterpart_id):
+        """Update a sentence's counterpart_id."""
+        try:
+            result = self.session.query(Sentence).filter_by(id=sentence_id).update({"counterpart_id": counterpart_id})
+            self.session.commit()
+            return result > 0
+        except Exception as e:
+            print(f"Error updating sentence counterpart: {e}")
+            self.session.rollback()
+            return False
+
+    def add_argument(self, arg_id, premise_ids, conclusion_id, valid, difficulty=None, source="z3", language=None):
+        """Add a new argument to the database."""
+        try:
+            argument = Argument(
+                id=arg_id,
+                premise_ids=premise_ids,
+                conclusion_id=conclusion_id,
+                valid=valid,
+                difficulty=difficulty,
+                source=source,
+                language=language,
+            )
+            self.session.add(argument)
+            self.session.commit()
+            return True
+        except IntegrityError:
+            self.session.rollback()
+            return False
+        except Exception as e:
+            print(f"Error adding argument: {e}")
+            self.session.rollback()
+            return False
+
+    def get_argument(self, arg_id):
+        """Get an argument by its ID."""
+        try:
+            return self.session.query(Argument).filter_by(id=arg_id).first()
+        except Exception as e:
+            print(f"Error getting argument: {e}")
+            return None
+
+    def get_argument_where(self, **kwargs):
+        """
+        Get arguments based on the provided keyword arguments.
+        Example: get_argument_where(premise_ids="1,2,3", valid=True, language="english")
+        """
+        try:
+            return self.session.query(Argument).filter_by(**kwargs).first()
+        except Exception as e:
+            print(f"Error getting argument: {e}")
+            return None
+
+    def get_valid_argument_count(self, language):
+        """Get the count of valid arguments for a given language."""
+        try:
+            return self.session.query(Argument).filter_by(valid=True, language=language).count()
+        except Exception as e:
+            print(f"Error getting valid argument count: {e}")
+            return 0
 
     def close(self):
         self.session.close()

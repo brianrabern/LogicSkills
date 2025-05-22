@@ -3,7 +3,6 @@ from Database.DB import db
 from Database.models import Sentence, Argument
 from Utils.helpers import generate_argument_id, canonical_premise_str
 from Semantics.eval import evaluate
-from sqlalchemy.exc import IntegrityError
 import time
 import logging
 from datetime import datetime
@@ -16,48 +15,111 @@ from cachetools import TTLCache
 import json
 import os
 import threading
+import requests
+from requests.exceptions import RequestException
+
+# Constants and Configuration
+CACHE_TTL = 3600
+CACHE_MAXSIZE = 10000
+BATCH_SIZE = 1000
+DIFFICULTY_WEIGHTS = {"length": 0.2, "depth": 0.5, "time": 0.002}
+MAX_RETRIES = 3
+BATCH_RETRY_DELAY = 5
+Z3_RETRY_DELAY = 2
+Z3_MAX_RETRIES = 5
+Z3_TIMEOUT = 30
+
+
+class Z3ServerError(Exception):
+    """Custom exception for Z3 server errors."""
+
+    pass
+
+
+def check_z3_server_health(host="localhost", port=8001, timeout=5):
+    """Check if Z3 server is healthy and responding."""
+    try:
+        response = requests.get(f"http://{host}:{port}/health", timeout=timeout)
+        return response.status_code == 200
+    except RequestException:
+        return False
+
+
+def wait_for_z3_server(host="localhost", port=8001, max_retries=Z3_MAX_RETRIES, retry_delay=Z3_RETRY_DELAY):
+    """Wait for Z3 server to become available."""
+    for attempt in range(max_retries):
+        if check_z3_server_health(host, port):
+            logging.info("Z3 server is healthy")
+            return True
+        logging.warning(f"Z3 server not available, attempt {attempt + 1}/{max_retries}")
+        time.sleep(retry_delay)
+    return False
 
 
 class ArgGenerator:
     """Generates logical arguments from a database of sentences."""
 
-    def __init__(self, session, evaluator, lexicon, num_premises=4, subset_percentage=0.2):
+    def __init__(self, session, evaluator, lexicon1, lexicon2, num_premises=3, subset_percentage=0.2):
         """Initialize the argument generator."""
         self.session = session
         self.evaluate = evaluator
         self.num_premises = num_premises
         self.subset_percentage = subset_percentage
-        self.lexicon = lexicon
-        self.language = lexicon.language
+        self.lexicon1 = lexicon1
+        self.lexicon2 = lexicon2
+        self.language1 = lexicon1.language
+        self.language2 = lexicon2.language
+        self.z3_healthy = False
 
-        # Initialize caches with 1-hour TTL
-        self._premise_ast_cache = TTLCache(maxsize=1000, ttl=3600)
-        self._conclusion_from_subset_cache = TTLCache(maxsize=1000, ttl=3600)
+        # Initialize caches with optimized sizes
+        self._premise_ast_cache = TTLCache(maxsize=CACHE_MAXSIZE, ttl=CACHE_TTL)
+        self._conclusion_from_subset_cache = TTLCache(maxsize=CACHE_MAXSIZE, ttl=CACHE_TTL)
+        self._consistency_cache = TTLCache(maxsize=CACHE_MAXSIZE, ttl=CACHE_TTL)
+        self._domain_constraint_cache = TTLCache(maxsize=100, ttl=CACHE_TTL)  # Small cache for domain constraints
+        self._valid_argument_cache = TTLCache(maxsize=CACHE_MAXSIZE, ttl=CACHE_TTL)  # Cache for valid argument checks
 
-        # Define predicate groups for coherent story generation
-        self.kind_predicates = {
-            X for X in self.lexicon.predicates.keys() if self.lexicon.predicates[X]["semantic_type"] == "kind"
-        }
-        self.action_predicates = {
-            X for X in self.lexicon.predicates.keys() if self.lexicon.predicates[X]["semantic_type"] == "action"
-        }
-        self.state_predicates = {
-            X for X in self.lexicon.predicates.keys() if self.lexicon.predicates[X]["semantic_type"] == "state"
-        }
-        self.names = {X for X in self.lexicon.names.keys()}
+        # Initialize predicate groups
+        self._initialize_predicate_groups()
 
         self._domain_constraint = None
         self._domain_constraint_ast = None
 
+        # Check Z3 server health
+        self._check_z3_health()
+
+    # ===== Initialization and Setup Methods =====
+
+    def _initialize_predicate_groups(self):
+        """Initialize predicate groups for coherent story generation."""
+        self.kind_predicates = {
+            X for X in self.lexicon1.predicates.keys() if self.lexicon1.predicates[X]["semantic_type"] == "kind"
+        }
+        self.action_predicates = {
+            X for X in self.lexicon1.predicates.keys() if self.lexicon1.predicates[X]["semantic_type"] == "action"
+        }
+        self.state_predicates = {
+            X for X in self.lexicon1.predicates.keys() if self.lexicon1.predicates[X]["semantic_type"] == "state"
+        }
+        self.names = {X for X in self.lexicon1.names.keys()}
+
     def _get_domain_constraint(self):
         """Get and cache the domain constraint sentence and its AST."""
         try:
+            cache_key = self.language1
+            if cache_key in self._domain_constraint_cache:
+                self._domain_constraint = self._domain_constraint_cache[cache_key]
+                self._domain_constraint_ast = self._domain_constraint.ast
+                logging.debug("Using cached domain constraint")
+                return self._domain_constraint
+
             if self._domain_constraint is None:
                 self._domain_constraint = (
-                    self.session.query(Sentence).filter_by(type="domain_constraint", language=self.language).first()
+                    self.session.query(Sentence).filter_by(type="domain_constraint", language=self.language1).first()
                 )
                 if self._domain_constraint:
                     self._domain_constraint_ast = self._domain_constraint.ast
+                    # Cache the result
+                    self._domain_constraint_cache[cache_key] = self._domain_constraint
                     logging.info(f"Loaded domain constraint with ID: {self._domain_constraint.id}")
                 else:
                     logging.warning("No domain constraint found in database")
@@ -66,11 +128,13 @@ class ArgGenerator:
             logging.error(f"Error loading domain constraint: {e}")
             return None
 
+    # ===== Cache Management =====
+
     def _get_premise_ast(self, premise_id):
         """Get and cache premise AST."""
         try:
             if premise_id not in self._premise_ast_cache:
-                premise = self.session.get(Sentence, premise_id)
+                premise = self.session.query(Sentence).filter_by(id=premise_id).first()
                 if premise:
                     self._premise_ast_cache[premise_id] = premise.ast
                 else:
@@ -79,6 +143,8 @@ class ArgGenerator:
         except Exception as e:
             logging.error(f"Error getting AST for premise {premise_id}: {e}")
             return None
+
+    # ===== Premise Generation =====
 
     def _generate_coherent_predicate_set(self):
         """Generate a coherent set of predicates and names for story generation."""
@@ -103,16 +169,19 @@ class ArgGenerator:
         logging.info(f"Generating {sample_size} premise sets of size {self.num_premises}")
 
         try:
-            # Count available sentences for this language
-            total_sentences = (
-                self.session.query(Sentence.id).filter(Sentence.status == 0, Sentence.language == self.language).count()
-            )
-            logging.info(f"Found {total_sentences} candidate sentences for language {self.language}")
+            # Get all available IDs for language 1
+            available_ids = [
+                id[0]
+                for id in self.session.query(Sentence.id)
+                .filter(Sentence.status == 0, Sentence.language == self.language1)
+                .all()
+            ]
+            total_sentences = len(available_ids)
+            logging.info(f"Found {total_sentences} candidate sentences for language {self.language1}")
 
             # Generate random IDs in batches
-            batch_size = 1000
-            for i in range(0, sample_size, batch_size):
-                current_batch = min(batch_size, sample_size - i)
+            for i in range(0, sample_size, BATCH_SIZE):
+                current_batch = min(BATCH_SIZE, sample_size - i)
                 if i % 1000 == 0:
                     logging.info(f"Processed {i} premise sets")
 
@@ -122,15 +191,15 @@ class ArgGenerator:
                 logging.debug(f"Selected names: {selected_names}")
 
                 try:
-                    # Get random IDs for this language
-                    ids = random.sample(range(1, total_sentences + 1), current_batch * self.num_premises)
+                    # Get random IDs from actual available IDs
+                    ids = random.sample(available_ids, current_batch * self.num_premises)
 
                     # Fetch sentences in batches
                     for j in range(0, len(ids), self.num_premises):
                         premise_ids = ids[j : j + self.num_premises]
                         premises = (
                             self.session.query(Sentence)
-                            .filter(Sentence.id.in_(premise_ids), Sentence.language == self.language)
+                            .filter(Sentence.id.in_(premise_ids), Sentence.language == self.language1)
                             .all()
                         )
 
@@ -169,6 +238,8 @@ class ArgGenerator:
             logging.error(f"Error in generate_premises: {e}")
             raise
 
+    # ===== Argument Validation =====
+
     def _share_predicates(self, premises):
         """Check if the premises share any predicates."""
         try:
@@ -185,12 +256,21 @@ class ArgGenerator:
 
     def is_consistent(self, premises):
         """Check if the premises are logically consistent."""
-
         logging.info(f"Checking consistency of premises: {[p['id'] for p in premises]}")
         try:
+            # Create cache key from sorted premise IDs
+            premise_ids = tuple(sorted(p["id"] for p in premises))
+            cache_key = premise_ids
+
+            # Check cache first
+            if cache_key in self._consistency_cache:
+                result = self._consistency_cache[cache_key]
+                logging.info(f"Using cached consistency result: {'consistent' if result else 'inconsistent'}")
+                return result
+
             # Get domain constraint
             domain_constraint = (
-                self.session.query(Sentence).filter_by(type="domain_constraint", language=self.language).first()
+                self.session.query(Sentence).filter_by(type="domain_constraint", language=self.language1).first()
             )
             if domain_constraint:
                 logging.debug("Including domain constraint in consistency check")
@@ -207,11 +287,16 @@ class ArgGenerator:
                 logging.error(f"Error building joint AST: {e}")
                 return False
 
-            # Check satisfiability
+            # Check satisfiability with safe evaluation
             try:
-                result = self.evaluate(joint_ast, convert_json=True) == "sat"
+                result = self._safe_evaluate(joint_ast, convert_json=True) == "sat"
+                # Cache the result
+                self._consistency_cache[cache_key] = result
                 logging.info(f"Premises are {'consistent' if result else 'inconsistent'}")
                 return result
+            except Z3ServerError as e:
+                logging.error(f"Z3 server error during consistency check: {e}")
+                return False
             except Exception as e:
                 logging.error(f"Error evaluating consistency: {e}")
                 return False
@@ -244,7 +329,7 @@ class ArgGenerator:
             # Check if conclusion follows
             try:
                 implication = ["and", joint_ast, ["not", conclusion_ast]]
-                result = self.evaluate(implication, convert_json=True) == "unsat"
+                result = self._safe_evaluate(implication, convert_json=True) == "unsat"
                 logging.debug(f"Conclusion {'follows' if result else 'does not follow'} from subset")
                 return result
             except Exception as e:
@@ -257,7 +342,6 @@ class ArgGenerator:
 
     def _check_domain_constraints(self, conclusion):
         """Check if the conclusion follows from domain constraints alone."""
-
         logging.info(f"Checking if conclusion {conclusion['id']} follows from domain constraints")
 
         try:
@@ -277,7 +361,7 @@ class ArgGenerator:
             # Check if conclusion follows from domain constraint
             try:
                 domain_implication = ["and", self._domain_constraint_ast, ["not", conclusion_ast]]
-                result = self.evaluate(domain_implication, convert_json=True) == "unsat"
+                result = self._safe_evaluate(domain_implication, convert_json=True) == "unsat"
                 if result:
                     logging.info("Conclusion follows from domain constraint alone")
                 return result
@@ -290,17 +374,7 @@ class ArgGenerator:
             return False
 
     def is_keeper_argument(self, premises, conclusion):
-        """Check if the argument is a keeper (valid and not too trivial).
-
-        This method performs a two-stage validation:
-        1. First checks if the conclusion follows from any subset of premises of size subset_percentage
-        2. Then checks if the argument is valid
-
-        Returns:
-        - True: Argument is a keeper (valid and not too trivial)
-        - False: Argument is invalid
-        - None: Either validation failed due to error, or argument was skipped because too trivial
-        """
+        """Check if the argument is a keeper (valid and not too trivial)."""
         try:
             # Stage 0: Check domain constraints
             if self._check_domain_constraints(conclusion):
@@ -326,8 +400,17 @@ class ArgGenerator:
 
     def _is_valid_argument(self, premises, conclusion_ast):
         """Check if conclusion follows from all premises together."""
-
         try:
+            # Create cache key from sorted premise IDs and conclusion AST
+            premise_ids = tuple(sorted(p["id"] for p in premises))
+            cache_key = (premise_ids, str(conclusion_ast))
+
+            # Check cache first
+            if cache_key in self._valid_argument_cache:
+                result = self._valid_argument_cache[cache_key]
+                logging.info(f"Using cached valid argument result: {'valid' if result else 'invalid'}")
+                return result
+
             premise_asts = [self._get_premise_ast(p["id"]) for p in premises]
             if not all(premise_asts):
                 logging.error("Failed to get all premise ASTs")
@@ -338,7 +421,9 @@ class ArgGenerator:
                 joint_ast = ["and", joint_ast, ast]
             implication = ["and", joint_ast, ["not", conclusion_ast]]
 
-            result = self.evaluate(implication, convert_json=True) == "unsat"
+            result = self._safe_evaluate(implication, convert_json=True) == "unsat"
+            # Cache the result
+            self._valid_argument_cache[cache_key] = result
             if result:
                 logging.info(f"Found keeper argument requiring all premises: {[p['id'] for p in premises]}")
             else:
@@ -348,6 +433,8 @@ class ArgGenerator:
         except Exception as e:
             logging.error(f"Error in full validation: {e}")
             return None
+
+    # ===== Argument Generation and Management Methods =====
 
     def _record_valid_subset(self, premise_ids, conclusion_id):
         """Record a valid premise subset and its conclusion to a JSON file."""
@@ -387,7 +474,6 @@ class ArgGenerator:
 
     def _check_premise_subsets(self, premises, conclusion_id, conclusion_ast):
         """Check if conclusion follows from any subset of premises."""
-
         subset_size = math.ceil(len(premises) * self.subset_percentage)
         logging.info(f"Checking {len(premises)} premises with subset size {subset_size}")
 
@@ -436,7 +522,7 @@ class ArgGenerator:
         premise_ids = [p["id"] for p in premises]
         query = self.session.query(Sentence).filter(
             Sentence.status == 0,
-            Sentence.language == self.language,
+            Sentence.language == self.language1,
             ~Sentence.id.in_(premise_ids),
             ~Sentence.type.in_(["conditional", "disjunction"]),  # Exclude conditionals and disjunctions
             ~Sentence.subtype.in_(["nested"]),  # Exclude nested conditionals
@@ -493,7 +579,7 @@ class ArgGenerator:
     def _get_matching_candidates(self, valid_type, valid_symbols, valid_id, same_type=True):
         """Get candidates that match the valid conclusion's characteristics."""
         # Build query
-        query = self.session.query(Sentence).filter(Sentence.status == 0)
+        query = self.session.query(Sentence).filter(Sentence.status == 0, Sentence.language == self.language1)
         if same_type:
             query = query.filter(Sentence.type == valid_type)
         else:
@@ -541,10 +627,19 @@ class ArgGenerator:
                 continue
 
             if not is_valid:
-                # Save explicitly invalid arguments
-                self.save_argument(premise_ids, candidate["id"], valid=False)
+                # save invalid arguments for language 1
+                self.save_argument(premise_ids, candidate["id"], valid=False, language=self.language1)
+                logging.info(f"Saved invalid argument for language {self.language1}")
+
+                # save invalid counterpart arguments for language 2
+                counterpart_premise_ids = [p["counterpart_id"] for p in premises]
+                counterpart_conclusion_id = candidate["counterpart_id"]
+                self.save_argument(
+                    counterpart_premise_ids, counterpart_conclusion_id, valid=False, language=self.language2
+                )
+                logging.info(f"Saved invalid counterpart argument for language {self.language2}")
+
                 invalid_count += 1
-                logging.info(f"Saved invalid argument {candidate['id']} with matching characteristics")
 
         logging.info(f"Found and saved {invalid_count} invalid arguments")
         return invalid_count
@@ -574,8 +669,23 @@ class ArgGenerator:
                 difficulty = self._compute_difficulty_score(
                     premises=premises, conclusion=candidate, search_depth=i, eval_time_ms=elapsed
                 )
-                self.save_argument(premise_ids, candidate["id"], valid=True, difficulty=difficulty)
-                logging.info(f"Saved valid argument {candidate['id']} with difficulty {difficulty}")
+                # save valid argument for language 1
+                self.save_argument(
+                    premise_ids, candidate["id"], valid=True, difficulty=difficulty, language=self.language1
+                )
+                logging.info(f"Saved valid argument for language {self.language1}")
+
+                # save counterpart valid argument for language 2
+                counterpart_premise_ids = [p["counterpart_id"] for p in premises]
+                counterpart_conclusion_id = candidate["counterpart_id"]
+                self.save_argument(
+                    counterpart_premise_ids,
+                    counterpart_conclusion_id,
+                    valid=True,
+                    difficulty=difficulty,
+                    language=self.language2,
+                )
+                logging.info(f"Saved valid counterpart argument for language {self.language2}")
 
                 # Find matching invalid arguments
                 self.find_invalid_arguments(premises, candidate, candidates)
@@ -584,11 +694,16 @@ class ArgGenerator:
         logging.info("No valid arguments found")
         return None
 
+    # ===== Database and Storage Methods =====
+
     def _has_existing_valid_argument(self, premise_str):
         """Check if we already have a valid argument for these premises."""
-        return self.session.query(Argument).filter_by(premise_ids=premise_str, valid=True).count() > 0
+        return (
+            self.session.query(Argument).filter_by(premise_ids=premise_str, valid=True, language=self.language1).first()
+            is not None
+        )
 
-    def save_argument(self, premise_ids, conclusion_id, valid, difficulty=None, source="z3"):
+    def save_argument(self, premise_ids, conclusion_id, valid, difficulty=None, source="z3", language=None):
         """Save an argument to the database."""
         try:
             # Generate IDs
@@ -603,7 +718,7 @@ class ArgGenerator:
                 valid=valid,
                 difficulty=difficulty,
                 source=source,
-                language=self.language,
+                language=language,
             )
 
             # Save to database
@@ -612,95 +727,50 @@ class ArgGenerator:
             logging.info(f"Successfully saved {'valid' if valid else 'invalid'} argument: {arg_id}")
             return True
 
-        except IntegrityError:
-            self.session.rollback()
-            logging.info(f"Argument already exists: {arg_id}")
-            return False
-
         except Exception as e:
             self.session.rollback()
             logging.error(f"Error saving argument {arg_id}: {str(e)}")
             return False
 
     def _compute_difficulty_score(
-        self, premises, conclusion, search_depth, eval_time_ms, w_len=0.2, w_d=0.5, w_t=0.002
+        self,
+        premises,
+        conclusion,
+        search_depth,
+        eval_time_ms,
+        w_len=DIFFICULTY_WEIGHTS["length"],
+        w_d=DIFFICULTY_WEIGHTS["depth"],
+        w_t=DIFFICULTY_WEIGHTS["time"],
     ):
         """Compute a difficulty score for the argument."""
-
         # Compute length score from premises and conclusion
         length_score = sum(len(p["form"]) for p in premises) + len(conclusion["form"])
+        num_premises = len(premises)
 
         # Compute weighted sum
         score = (
             w_len * length_score  # Longer formulas are harder
             + w_d * search_depth  # More candidates tried means harder to find
             + w_t * eval_time_ms  # Longer validation time means harder to verify
-        )
+        ) * num_premises
 
         return round(score, 2)
 
-    def validate_and_save_argument(self, premises: List[Sentence], conclusion: Sentence, source: str = "manual"):
-        """Validate and save a manually created argument."""
-
-        try:
-            logging.info(f"Validating argument with premises: {[p.id for p in premises]}")
-            logging.info(f"Conclusion: {conclusion.id}")
-
-            # Convert to dictionaries for validation
-            premises_dict = [p.to_dict() for p in premises]
-            conclusion_dict = conclusion.to_dict()
-
-            # Check consistency
-            if not self.is_consistent(premises_dict):
-                logging.info("Premises are inconsistent")
-                return None
-
-            # Check if it's a keeper argument
-            if not self.is_keeper_argument(premises_dict, conclusion_dict):
-                logging.info("Argument is invalid")
-                return None
-
-            # Save the argument
-            premise_ids = [p.id for p in premises]
-            if not self.save_argument(premise_ids, conclusion.id, valid=True, difficulty=0, source=source):
-                logging.error("Failed to save argument")
-                return None
-
-            # Return the saved argument
-            premise_str = canonical_premise_str(premise_ids)
-            saved_arg = (
-                self.session.query(Argument).filter_by(premise_ids=premise_str, conclusion_id=conclusion.id).first()
-            )
-
-            if saved_arg:
-                logging.info(f"Successfully validated and saved argument: {saved_arg.id}")
-            else:
-                logging.error("Argument was saved but not found in database")
-
-            return saved_arg
-
-        except Exception as e:
-            logging.error(f"Error validating and saving argument: {str(e)}")
-            logging.error(traceback.format_exc())
-            return None
-
     def check_manual_argument(self, premise_ids: List[str], conclusion_id: str, source: str = "manual"):
         """Validate and save an argument given premise IDs and a conclusion ID."""
-
-        session = db.session
         try:
             # Get the sentences
-            premises = session.query(Sentence).filter(Sentence.id.in_(premise_ids)).all()
+            premises = self.session.query(Sentence).filter(Sentence.id.in_(premise_ids)).all()
             if len(premises) != self.num_premises:
                 logging.error(f"Expected {self.num_premises} premises, got {len(premises)}")
                 return None
 
-            conclusion = session.query(Sentence).filter_by(id=conclusion_id).first()
+            conclusion = self.session.query(Sentence).filter_by(id=conclusion_id).first()
             if not conclusion:
                 logging.error(f"Conclusion {conclusion_id} not found")
                 return None
 
-            # Convert to dictionaries for consistency
+            # Convert to dictionaries
             premises_dict = [p.to_dict() for p in premises]
             conclusion_dict = conclusion.to_dict()
 
@@ -714,10 +784,23 @@ class ArgGenerator:
                 return None
 
             # Save the valid argument
-            if not self.save_argument([p.id for p in premises], conclusion.id, valid=True, difficulty=0, source=source):
-                logging.error("Failed to save valid argument")
-                return None
-            logging.info(f"Successfully saved valid argument with ID: {conclusion.id}")
+            premise_ids = [p.id for p in premises]
+            self.save_argument(
+                premise_ids, conclusion.id, valid=True, difficulty=0, source=source, language=self.language1
+            )
+            logging.info("Successfully saved valid argument")
+
+            counterpart_premise_ids = [p.counterpart_id for p in premises]
+            counterpart_conclusion_id = conclusion.counterpart_id
+            self.save_argument(
+                counterpart_premise_ids,
+                counterpart_conclusion_id,
+                valid=True,
+                difficulty=0,
+                source=source,
+                language=self.language2,
+            )
+            logging.info("Successfully saved valid counterpart argument")
 
             # Find and save matching invalid arguments
             candidates = self.get_candidate_conclusions(premises_dict, limit=1000)
@@ -730,31 +813,72 @@ class ArgGenerator:
             logging.error(f"Error validating and saving argument: {e}")
             return None
 
+    def _check_z3_health(self):
+        """Check Z3 server health and attempt to reconnect if needed."""
+        if not self.z3_healthy:
+            self.z3_healthy = wait_for_z3_server()
+            if not self.z3_healthy:
+                logging.error("Z3 server is not available. Some operations may be limited.")
+            else:
+                logging.info("Z3 server is available and healthy")
 
-def generate_arguments(target_valid_args=100, session=None, lexicon=None):
+    def _safe_evaluate(self, ast, convert_json=True):
+        """Safely evaluate an AST with Z3 server, with retries and health checks."""
+        if not self.z3_healthy:
+            self._check_z3_health()
+            if not self.z3_healthy:
+                raise Z3ServerError("Z3 server is not available")
+
+        for attempt in range(Z3_MAX_RETRIES):
+            try:
+                result = self.evaluate(ast, convert_json=convert_json)
+                return result
+            except RequestException as e:
+                logging.warning(f"Z3 evaluation failed (attempt {attempt + 1}/{Z3_MAX_RETRIES}): {str(e)}")
+                if attempt < Z3_MAX_RETRIES - 1:
+                    time.sleep(Z3_RETRY_DELAY)
+                    self._check_z3_health()
+                else:
+                    raise Z3ServerError(f"Failed to evaluate AST after {Z3_MAX_RETRIES} attempts")
+
+
+# ===== Main Generation Functions =====
+
+
+def generate_arguments(target_valid_args=100, session=None, lexicon1=None, lexicon2=None):
     """Generate arguments using a single process."""
-
-    # Setup logging
+    # setup logging
     log_file = setup_logging("arg_generator")
     logging.info(f"Starting argument generation. Log file: {log_file}")
-    logging.info(f"Parameters: target_valid_args={target_valid_args}, language={lexicon.language}")
+    logging.info(
+        f"Parameters: target_valid_args={target_valid_args}, languages={lexicon1.language} and {lexicon2.language}"
+    )
 
-    # Initialize generator with provided session or create new one
+    # initialize generator with provided session or create new one
     if session is None:
-        session = db.session
+        session = db.Session()
     evaluator = evaluate
-    generator = ArgGenerator(session, evaluator, lexicon=lexicon)
+    generator = ArgGenerator(session, evaluator, lexicon1=lexicon1, lexicon2=lexicon2)
 
-    # Get initial count of valid arguments for this language
-    initial_valid_count = session.query(Argument).filter_by(valid=True, language=lexicon.language).count()
+    # Check Z3 server health before starting
+    if not generator.z3_healthy:
+        logging.error("Cannot start argument generation - Z3 server is not available")
+        return
 
-    # Initialize counters
+    # get initial count of valid arguments for language 1 (since every argument has a counterpart)
+    initial_valid_count = (
+        session.query(Argument).filter(Argument.valid.is_(True), Argument.language == lexicon1.language).count()
+    )
+
+    # initialize counters
     stats = {
         "processed_premises": 0,
-        "valid_count": 0,  # This will track only new valid arguments
+        "valid_count": 0,  # this will track only new valid arguments
         "invalid_count": 0,
         "start_time": datetime.now(),
         "batch_count": 0,
+        "retry_count": 0,
+        "z3_errors": 0,
     }
 
     try:
@@ -763,36 +887,71 @@ def generate_arguments(target_valid_args=100, session=None, lexicon=None):
                 stats["batch_count"] += 1
                 logging.info(f"\nStarting batch {stats['batch_count']}")
 
-                for premises in generator.generate_premises(1000):
+                # Check Z3 health before processing batch
+                if not generator.z3_healthy:
+                    logging.warning("Z3 server became unavailable, attempting to reconnect...")
+                    generator._check_z3_health()
+                    if not generator.z3_healthy:
+                        logging.error("Z3 server is still unavailable, waiting before retry...")
+                        time.sleep(BATCH_RETRY_DELAY)
+                        continue
+
+                for premises in generator.generate_premises(BATCH_SIZE):
                     try:
-                        # Process premises
+                        # process premises
                         generator.find_arguments(premises)
 
-                        # Update stats - only count new valid arguments
+                        # update stats - only count new valid arguments
                         stats["processed_premises"] += 1
                         current_valid_count = (
-                            session.query(Argument).filter_by(valid=True, language=lexicon.language).count()
+                            session.query(Argument)
+                            .filter(Argument.valid.is_(True), Argument.language == lexicon1.language)
+                            .count()
                         )
                         stats["valid_count"] = current_valid_count - initial_valid_count
                         stats["invalid_count"] = (
-                            session.query(Argument).filter_by(valid=False, language=lexicon.language).count()
+                            session.query(Argument)
+                            .filter(Argument.valid.is_(False), Argument.language == lexicon1.language)
+                            .count()
                         )
 
-                        # Log progress
+                        # log progress
                         _log_progress(stats, target_valid_args)
 
                         if stats["valid_count"] >= target_valid_args:
                             break
 
+                    except Z3ServerError as e:
+                        stats["z3_errors"] += 1
+                        logging.error(f"Z3 server error: {e}")
+                        if stats["z3_errors"] >= Z3_MAX_RETRIES:
+                            logging.error("Too many Z3 server errors, stopping generation")
+                            return
+                        time.sleep(Z3_RETRY_DELAY)
+                        continue
                     except Exception as e:
                         logging.error(f"Error processing premises: {str(e)}")
-                        session.rollback()
-                        continue
+                        if stats["retry_count"] < MAX_RETRIES:
+                            stats["retry_count"] += 1
+                            logging.info(f"Retrying batch {stats['batch_count']} (attempt {stats['retry_count']})")
+                            time.sleep(BATCH_RETRY_DELAY)
+                            continue
+                        else:
+                            logging.error("Max retries reached, skipping batch")
+                            stats["retry_count"] = 0
+                            continue
 
             except Exception as e:
                 logging.error(f"Error in batch processing: {str(e)}")
-                session.rollback()
-                continue
+                if stats["retry_count"] < MAX_RETRIES:
+                    stats["retry_count"] += 1
+                    logging.info(f"Retrying batch {stats['batch_count']} (attempt {stats['retry_count']})")
+                    time.sleep(BATCH_RETRY_DELAY)
+                    continue
+                else:
+                    logging.error("Max retries reached, skipping batch")
+                    stats["retry_count"] = 0
+                    continue
 
     except Exception as e:
         logging.error(f"Critical error in generate_arguments: {str(e)}")
@@ -810,6 +969,7 @@ def _log_progress(stats, target_valid_args):
     logging.info(f"Processed premises: {stats['processed_premises']}")
     logging.info(f"Valid arguments found: {stats['valid_count']}/{target_valid_args}")
     logging.info(f"Invalid arguments found: {stats['invalid_count']}")
+    logging.info(f"Z3 server errors: {stats['z3_errors']}")
     logging.info(f"Total elapsed time: {elapsed_time:.2f} seconds")
 
     if stats["processed_premises"] > 0:
@@ -827,6 +987,7 @@ def _log_final_summary(stats):
     logging.info(f"Total premises processed: {stats['processed_premises']}")
     logging.info(f"Total valid arguments: {stats['valid_count']}")
     logging.info(f"Total invalid arguments: {stats['invalid_count']}")
+    logging.info(f"Total Z3 server errors: {stats['z3_errors']}")
     logging.info(f"Total time: {total_time:.2f} seconds")
 
     if stats["processed_premises"] > 0:
@@ -837,41 +998,48 @@ def _log_final_summary(stats):
 
 
 if __name__ == "__main__":
-    # Import and create lexicon
+    # import and create lexicons
     from Syntax.carroll_lexicon import CarrollLexicon
+    from Syntax.english_lexicon import EnglishLexicon
 
-    lexicon = CarrollLexicon()
+    lexicon1 = CarrollLexicon()
+    lexicon2 = EnglishLexicon()
 
-    # First check how many valid arguments we already have for this language
-    existing_valid = db.session.query(Argument).filter_by(valid=True, language=lexicon.language).count()
-    target_total = 3000  # Total number of valid arguments we want
+    # first check how many valid arguments we already have for language 1
+    existing_valid = db.get_valid_argument_count(lexicon1.language)
+    target_total = 3000  # total number of valid arguments we want
     remaining = max(0, target_total - existing_valid)
 
     if remaining == 0:
-        logging.info(f"Already have {existing_valid} valid arguments for {lexicon.language}, no need to generate more")
+        logging.info(
+            f"Already have {existing_valid} valid arguments for {lexicon1.language} (and their counterparts in {lexicon2.language}), no need to generate more"
+        )
         exit(0)
 
-    # Calculate how many each thread should generate
+    # calculate how many each thread should generate
     num_threads = 6
     per_thread = math.ceil(remaining / num_threads)
 
-    logging.info(f"Found {existing_valid} existing valid arguments for {lexicon.language}")
+    logging.info(f"Found {existing_valid} existing valid arguments for {lexicon1.language}")
     logging.info(f"Need to generate {remaining} more valid arguments")
     logging.info(f"Each thread will target {per_thread} valid arguments")
 
     # Run parallel generators
     threads = []
     for i in range(num_threads):
+        # Create a new session for this thread
         session = db.Session()
         thread = threading.Thread(
-            target=lambda: generate_arguments(target_valid_args=per_thread, session=session, lexicon=lexicon),
-            name=f"Generator-{i}-{lexicon.language}",
+            target=lambda s=session: generate_arguments(
+                target_valid_args=per_thread, session=s, lexicon1=lexicon1, lexicon2=lexicon2
+            ),
+            name=f"Generator-{i}-{lexicon1.language}-{lexicon2.language}",
         )
         threads.append(thread)
         thread.start()
-        logging.info(f"Started worker {i} for {lexicon.language}")
+        logging.info(f"Started worker {i} for {lexicon1.language} and {lexicon2.language}")
 
-    # Wait for all threads to complete
+    # wait for all threads to complete
     for thread in threads:
         thread.join()
         logging.info(f"Worker {thread.name} completed")

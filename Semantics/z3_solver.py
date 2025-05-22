@@ -8,6 +8,9 @@ import traceback
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
+# Constants
+Z3_TIMEOUT = 5000  # 5 second timeout in milliseconds
+
 # Configure logging
 console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setLevel(logging.INFO)
@@ -81,17 +84,30 @@ class Z3Handler(BaseHTTPRequestHandler):
 
     def evaluate_formula(self, formula):
         try:
-            # create a new solver for each request
+            # Create a new solver for each request with timeout
             solver = z3.Solver()
+            solver.set("timeout", Z3_TIMEOUT)  # Set timeout in milliseconds
 
-            # parse the SMT-LIB formula
-            parsed_formula = z3.parse_smt2_string(formula)
+            try:
+                # Parse the SMT-LIB formula
+                parsed_formula = z3.parse_smt2_string(formula)
+            except Exception as e:
+                logger.error(f"Error parsing formula: {str(e)}")
+                return "error: invalid formula"
 
-            # add the formula to the solver
-            solver.add(parsed_formula)
+            try:
+                # Add the formula to the solver
+                solver.add(parsed_formula)
+            except Exception as e:
+                logger.error(f"Error adding formula to solver: {str(e)}")
+                return "error: invalid formula"
 
-            # check satisfiability
-            result = solver.check()
+            try:
+                # Check satisfiability
+                result = solver.check()
+            except Exception as e:
+                logger.error(f"Error checking satisfiability: {str(e)}")
+                return "error: solver error"
 
             if result == z3.sat:
                 return "sat"
@@ -103,7 +119,7 @@ class Z3Handler(BaseHTTPRequestHandler):
         except Exception as e:
             logger.error(f"Error evaluating formula: {str(e)}")
             logger.error(traceback.format_exc())
-            raise
+            return "error: internal error"
 
     def log_message(self, format, *args):
         """Override to use our logger instead of stderr"""

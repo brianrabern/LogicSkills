@@ -34,14 +34,14 @@ def get_invalid_conclusions(premise_ids, valid_conclusion_id, num_options=5):
     return random.sample(invalid_conclusions, min(num_options, len(invalid_conclusions)))
 
 
-def create_question_dict(argument):
+def create_question_dict(language, argument):
     # get premises and conclusion
     premise_ids = [int(pid) for pid in argument.premise_ids.split(",")]
     premises = [session.get(Sentence, pid).to_dict() for pid in premise_ids]
     valid_conclusion = session.get(Sentence, argument.conclusion_id)
 
     # get domain constraint
-    domain_constraint = session.query(Sentence).filter_by(type="domain_constraint").first()
+    domain_constraint = session.query(Sentence).filter_by(type="domain_constraint", language=language).first()
 
     # get invalid options
     invalid_options = get_invalid_conclusions(premise_ids, argument.conclusion_id)
@@ -84,24 +84,25 @@ def create_question_dict(argument):
         "option_to_sentence_id": option_to_sentence_id,
         "premise_ids": premise_ids,
         "domain_constraint_id": domain_constraint.id if domain_constraint else None,
+        "language": language,
     }
 
 
-def generate_eval_questions(num_questions=20):
+def generate_eval_questions(language, num_questions=20):
     # get valid arguments
-    valid_args = session.query(Argument).filter_by(valid=1).all()
+    valid_args = session.query(Argument).filter_by(valid=1, language=language).all()
     selected_args = random.sample(valid_args, min(num_questions, len(valid_args)))
 
     questions = []
     for arg in selected_args:
-        question = create_question_dict(arg)
+        question = create_question_dict(language, arg)
         if question:  # only add if we found invalid options
             questions.append(question)
 
     return questions
 
 
-def save_questions(questions, output_file="questions.json"):
+def save_questions(questions, output_file="questions2.json"):
     output_path = Path(output_file)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(questions, f, indent=2, ensure_ascii=False)
@@ -110,7 +111,7 @@ def save_questions(questions, output_file="questions.json"):
 
 if __name__ == "__main__":
     try:
-        questions = generate_eval_questions(num_questions=20)
+        questions = generate_eval_questions(language="carroll", num_questions=20)
         save_questions(questions)
     except Exception as e:
         print(f"Error: {str(e)}")

@@ -4,7 +4,6 @@ from sqlalchemy import (
     String,
     Text,
     JSON,
-    Enum,
     Boolean,
     Float,
 )
@@ -22,26 +21,6 @@ class Status(IntEnum):
     THEOREM = 1  # logical truth
 
 
-class Name(Base):
-    __tablename__ = "names"
-    symbol = Column(String(56), primary_key=True)
-    name = Column(String(100))
-    gender = Column(Enum("male", "female", "other"), default="other")
-    time_created = Column(Integer)
-
-
-class Predicate(Base):
-    __tablename__ = "predicates"
-    symbol = Column(String(56), primary_key=True)
-    template = Column(String(255))
-    negated_template = Column(String(255), default=None)
-    arity = Column(Integer, default=None)
-    structure = Column(String(56), default=None)
-    semantic_type = Column(String(56), default=None)
-    tense = Column(String(56), default=None)
-    time_created = Column(Integer)
-
-
 class Sentence(Base):
     __tablename__ = "sentences"
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -52,10 +31,10 @@ class Sentence(Base):
     form = Column(Text, default=None)
     ast = Column(JSON, default=None)
     base = Column(TINYINT, default=None)
-    status = Column(TINYINT, default=None)  # or Integer
-    time_created = Column(Integer)
+    status = Column(TINYINT, default=None)
     language = Column(String(50), default=None)
     counterpart_id = Column(Integer, default=None)
+    time_created = Column(Integer)
 
     def to_dict(self):
         return {
