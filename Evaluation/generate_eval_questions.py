@@ -1,7 +1,7 @@
 from Database.DB import db
 from Database.models import Argument, Sentence
 import random
-from Utils.helpers import canonical_premise_str
+from Utils.helpers import canonical_premise_str, generate_argument_id
 import json
 from pathlib import Path
 
@@ -34,7 +34,26 @@ def get_invalid_conclusions(premise_ids, valid_conclusion_id, num_options=5):
     return random.sample(invalid_conclusions, min(num_options, len(invalid_conclusions)))
 
 
-def create_question_dict(language, argument):
+def get_counterpart_argument(argument):
+    """Get the counterpart argument in the other language."""
+    # Get the premises and conclusion
+    premise_ids = [int(pid) for pid in argument.premise_ids.split(",")]
+    premises = [session.get(Sentence, pid) for pid in premise_ids]
+    conclusion = session.get(Sentence, argument.conclusion_id)
+
+    # Get counterpart IDs
+    counterpart_premise_ids = [p.counterpart_id for p in premises]
+    counterpart_conclusion_id = conclusion.counterpart_id
+
+    # Generate the counterpart argument ID
+    counterpart_arg_id = generate_argument_id(counterpart_premise_ids, counterpart_conclusion_id)
+
+    # Get the counterpart argument
+    counterpart_arg = session.query(Argument).filter_by(id=counterpart_arg_id).first()
+    return counterpart_arg
+
+
+def create_question_dict(language, argument, counterpart_id=None):
     # get premises and conclusion
     premise_ids = [int(pid) for pid in argument.premise_ids.split(",")]
     premises = [session.get(Sentence, pid).to_dict() for pid in premise_ids]
@@ -79,6 +98,7 @@ def create_question_dict(language, argument):
 
     return {
         "id": argument.id,
+        "counterpart_id": counterpart_id,
         "text": question_text,
         "correct_answer": correct_option,
         "option_to_sentence_id": option_to_sentence_id,
@@ -94,15 +114,33 @@ def generate_eval_questions(language, num_questions=20):
     selected_args = random.sample(valid_args, min(num_questions, len(valid_args)))
 
     questions = []
+    counterpart_questions = []
+
     for arg in selected_args:
-        question = create_question_dict(language, arg)
+        # Get the counterpart argument
+        counterpart_arg = get_counterpart_argument(arg)
+        if not counterpart_arg:
+            print(f"Warning: No counterpart found for argument {arg.id}")
+            continue
+
+        # Create question for the original language
+        question = create_question_dict(language, arg, counterpart_arg.id)
         if question:  # only add if we found invalid options
             questions.append(question)
 
-    return questions
+            # Create the counterpart question
+            counterpart_question = create_question_dict(
+                "english" if language == "carroll" else "carroll",
+                counterpart_arg,
+                arg.id
+            )
+            if counterpart_question:
+                counterpart_questions.append(counterpart_question)
+
+    return questions, counterpart_questions
 
 
-def save_questions(questions, output_file="questions2.json"):
+def save_questions(questions, output_file):
     output_path = Path(output_file)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(questions, f, indent=2, ensure_ascii=False)
@@ -111,10 +149,13 @@ def save_questions(questions, output_file="questions2.json"):
 
 if __name__ == "__main__":
     try:
-        questions = generate_eval_questions(language="carroll", num_questions=20)
-        save_questions(questions)
+        # Generate questions for Carroll and their English counterparts
+        carroll_questions, english_questions = generate_eval_questions(language="carroll", num_questions=20)
+
+        # Save both sets of questions
+        save_questions(carroll_questions, "questions_carroll.json")
+        save_questions(english_questions, "questions_english.json")
     except Exception as e:
         print(f"Error: {str(e)}")
         import traceback
-
         traceback.print_exc()

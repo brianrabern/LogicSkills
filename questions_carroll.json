@@ -1,0 +1,422 @@
+[
+  {
+    "id": "6b5e812c0361397e",
+    "counterpart_id": "a1e6ce8998b829c4",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. No borogoves chortled at a rath. A rath chortled at every borogove that chortled at it. Not all raths galumphed over Rafin and every borogove snicker-snacked Zindle.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. A borogove chortled at every rath.\n2. There is a borogove that every rath chortled at.\n3. Every borogove chortled at a rath.\n4. A borogove chortled at a rath.\n5. Every borogove chortled at every rath.\n6. No borogoves chortled at every rath.\n",
+    "correct_answer": "6",
+    "option_to_sentence_id": {
+      "1": 912,
+      "2": 920,
+      "3": 910,
+      "4": 914,
+      "5": 908,
+      "6": 916
+    },
+    "premise_ids": [
+      918,
+      1348,
+      2682
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "4621d7e8491ad34f",
+    "counterpart_id": "04b3e450198e75c0",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Zindle is uffish and Bungo didn't chortle at Bungo. No toves chortled at Rafin and every borogove is uffish. Every borogove gyred just in case every rath snicker-snacked Bungo.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Zindle and Bungo gyred.\n2. Zindle is uffish and no toves chortled at Rafin.\n3. Zindle gyred.\n4. Zindle and Rafin gyred.\n5. Rafin gyred.\n6. Zindle didn't gyre.\n",
+    "correct_answer": "2",
+    "option_to_sentence_id": {
+      "1": 84,
+      "2": 2420,
+      "3": 76,
+      "4": 80,
+      "5": 88,
+      "6": 86
+    },
+    "premise_ids": [
+      2422,
+      2576,
+      5892
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "5af2e37a32b59d97",
+    "counterpart_id": "3d25b660fafc89bc",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Rafin didn't galumph over Bungo. Zindle is uffish and a rath galumphed over Zindle. Only borogoves will whiffle and no borogoves will whiffle.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Zindle and Rafin will whiffle.\n2. Not all raths will whiffle.\n3. A rath will whiffle.\n4. Zindle will whiffle.\n5. Every rath will whiffle.\n6. Zindle and Bungo will whiffle.\n",
+    "correct_answer": "2",
+    "option_to_sentence_id": {
+      "1": 8,
+      "2": 426,
+      "3": 422,
+      "4": 4,
+      "5": 420,
+      "6": 12
+    },
+    "premise_ids": [
+      350,
+      2440,
+      11178
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "70cd07b494317532",
+    "counterpart_id": "edb1a79f1e74a9d7",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. If no borogoves are mimsy, then Bungo didn't snicker-snacked Rafin. Not all toves will whiffle but it is not the case that Bungo didn't snicker-snacked Bungo. Not all borogoves will whiffle and only toves are mimsy.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Not all toves will whiffle and no borogoves will whiffle.\n2. Rafin will whiffle.\n3. Not all toves will whiffle and not all borogoves will whiffle.\n4. Not all borogoves will whiffle and every tove will whiffle.\n5. Only borogoves will whiffle and not all toves will whiffle.\n6. Every tove will whiffle and no borogoves will whiffle.\n",
+    "correct_answer": "3",
+    "option_to_sentence_id": {
+      "1": 11236,
+      "2": 16,
+      "3": 11190,
+      "4": 11462,
+      "5": 11146,
+      "6": 11660
+    },
+    "premise_ids": [
+      5076,
+      11196,
+      11420
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "39b4e73e459905cb",
+    "counterpart_id": "368c18bdd687f89b",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. A borogove chortled at a tove. There is a rath that every tove galumphed over. Not all toves will whiffle and not all borogoves will whiffle.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. No toves galumphed over a rath.\n2. No toves galumphed over every rath.\n3. There is a tove that every rath galumphed over.\n4. A tove galumphed over every rath.\n5. A tove galumphed over a rath.\n6. Every tove galumphed over every rath.\n",
+    "correct_answer": "5",
+    "option_to_sentence_id": {
+      "1": 1018,
+      "2": 1016,
+      "3": 1020,
+      "4": 1012,
+      "5": 1014,
+      "6": 1008
+    },
+    "premise_ids": [
+      882,
+      1088,
+      11190
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "386c51d3e3da39e3",
+    "counterpart_id": "de9ba2f5fdb5fbde",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Every borogove chortled at a tove. A borogove chortled at every borogove. A tove galumphed over a tove that galumphed over a rath.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. No toves chortled at every borogove.\n2. Every tove chortled at a borogove.\n3. A borogove chortled at a tove.\n4. A tove chortled at every borogove.\n5. Every tove chortled at every borogove.\n6. A tove chortled at a borogove.\n",
+    "correct_answer": "3",
+    "option_to_sentence_id": {
+      "1": 850,
+      "2": 844,
+      "3": 882,
+      "4": 846,
+      "5": 842,
+      "6": 848
+    },
+    "premise_ids": [
+      878,
+      896,
+      1664
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "56c5f7ff51eb5165",
+    "counterpart_id": "db33bbebb2b17c5a",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Rafin is a tove unless Bungo isn't a borogove. A rath is beamish but it is not the case that Rafin is a tove. Zindle isn't beamish but it is not the case that Rafin isn't beamish.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Bungo isn't a borogove.\n2. If Bungo isn't a borogove, then Bungo is a borogove.\n3. Zindle is beamish.\n4. Zindle and Rafin are beamish.\n5. Bungo isn't a borogove only if Bungo is a borogove.\n6. Bungo is a borogove.\n",
+    "correct_answer": "1",
+    "option_to_sentence_id": {
+      "1": 278,
+      "2": 4412,
+      "3": 220,
+      "4": 224,
+      "5": 4414,
+      "6": 276
+    },
+    "premise_ids": [
+      3310,
+      10768,
+      11020
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "3c97633cca53509c",
+    "counterpart_id": "2ec37a912808ae8c",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. A rath galumphed over every borogove that galumphed over it. Zindle galumphed over every tove. Not all toves snicker-snacked Zindle but it is not the case that Rafin isn't beamish.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Zindle galumphed over a tove.\n2. Zindle is beamish.\n3. A tove galumphed over Zindle.\n4. Not all toves galumphed over Zindle.\n5. Every tove galumphed over Zindle.\n6. No toves galumphed over Zindle.\n",
+    "correct_answer": "1",
+    "option_to_sentence_id": {
+      "1": 1908,
+      "2": 220,
+      "3": 684,
+      "4": 688,
+      "5": 682,
+      "6": 686
+    },
+    "premise_ids": [
+      1438,
+      1906,
+      10842
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "a2acaf08ee870d84",
+    "counterpart_id": "8f698d555ac6c8c9",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Bungo chortled at Bungo and every rath chortled at Zindle. Not all raths gimbled if and only if no raths chortled at Rafin. Rafin gimbled and Bungo chortled at Zindle.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Zindle gimbled.\n2. No raths chortled at Zindle.\n3. Zindle chortled at a rath.\n4. Not all raths chortled at Zindle.\n5. Zindle chortled at every rath.\n6. A rath chortled at Zindle.\n",
+    "correct_answer": "6",
+    "option_to_sentence_id": {
+      "1": 112,
+      "2": 662,
+      "3": 1896,
+      "4": 664,
+      "5": 1894,
+      "6": 660
+    },
+    "premise_ids": [
+      2510,
+      5302,
+      10880
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "542c921dbeee7d31",
+    "counterpart_id": "2dfc649b1afa147c",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Zindle is uffish and Bungo didn't snicker-snacked Zindle. Rafin didn't snicker-snacked Bungo and every tove gyred. Not all toves snicker-snacked Zindle if and only if not all borogoves chortled at Bungo.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Zindle didn't gyre.\n2. Zindle and Bungo gyred.\n3. Bungo didn't snicker-snacked Zindle and Rafin didn't snicker-snacked Bungo.\n4. Zindle gyred.\n5. Zindle and Rafin gyred.\n6. Bungo didn't snicker-snacked Zindle but it is not the case that Rafin didn't snicker-snacked Bungo.\n",
+    "correct_answer": "3",
+    "option_to_sentence_id": {
+      "1": 86,
+      "2": 84,
+      "3": 2480,
+      "4": 76,
+      "5": 80,
+      "6": 2482
+    },
+    "premise_ids": [
+      2416,
+      2936,
+      5832
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "bc70da59abd75d5d",
+    "counterpart_id": "2d45079888d27f8e",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Zindle is a rath. Every rath galumphed over every borogove that galumphed over it. Not all toves snicker-snacked Zindle and Rafin is a tove.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Every borogove galumphed over a rath.\n2. A borogove galumphed over every rath.\n3. A rath galumphed over every borogove that galumphed over it.\n4. Every borogove galumphed over every rath.\n5. No borogoves galumphed over every rath.\n6. A borogove galumphed over a rath.\n",
+    "correct_answer": "3",
+    "option_to_sentence_id": {
+      "1": 1060,
+      "2": 1062,
+      "3": 1438,
+      "4": 1058,
+      "5": 1066,
+      "6": 1064
+    },
+    "premise_ids": [
+      280,
+      1436,
+      10850
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "9af20d2ff6a862d8",
+    "counterpart_id": "219c80e5b17b271c",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. No toves chortled at Rafin and every rath chortled at Zindle. A rath will burble unless every borogove chortled at Bungo. Only toves are mimsy and Bungo is a rath.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Bungo chortled at Zindle.\n2. Zindle didn't chortle at Bungo.\n3. Zindle chortled at Bungo.\n4. Zindle and Rafin will burble.\n5. Zindle will burble.\n6. Bungo didn't chortle at Zindle.\n",
+    "correct_answer": "1",
+    "option_to_sentence_id": {
+      "1": 316,
+      "2": 302,
+      "3": 300,
+      "4": 44,
+      "5": 40,
+      "6": 318
+    },
+    "premise_ids": [
+      2578,
+      4210,
+      11482
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "5c4717c915429bf1",
+    "counterpart_id": "e35bdccbffe9067e",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. There is a borogove that every rath snicker-snacked. A rath galumphed over Bungo unless Zindle isn't a borogove. A rath is beamish and only toves are mimsy.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. A borogove snicker-snacked every rath.\n2. A rath snicker-snacked a borogove.\n3. Every borogove snicker-snacked a rath.\n4. A borogove snicker-snacked a rath.\n5. Every borogove snicker-snacked every rath.\n6. No borogoves snicker-snacked every rath.\n",
+    "correct_answer": "2",
+    "option_to_sentence_id": {
+      "1": 1212,
+      "2": 1248,
+      "3": 1210,
+      "4": 1214,
+      "5": 1208,
+      "6": 1216
+    },
+    "premise_ids": [
+      1220,
+      3468,
+      10742
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "89557d5d5c5b3502",
+    "counterpart_id": "5971ed9b595207d5",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Rafin will whiffle. Rafin chortled at Zindle and every rath chortled at Zindle. Every rath chortled at Zindle but it is not the case that Rafin didn't chortle at Bungo.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Bungo didn't chortle at Bungo but it is not the case that Rafin chortled at Zindle.\n2. Bungo chortled at Bungo and Rafin chortled at Zindle.\n3. Bungo chortled at Bungo but it is not the case that Rafin chortled at Zindle.\n4. Bungo didn't chortle at Bungo and Rafin chortled at Zindle.\n5. Rafin chortled at Zindle but it is not the case that Rafin didn't chortle at Bungo.\n6. Rafin chortled at Zindle and Rafin didn't chortle at Bungo.\n",
+    "correct_answer": "5",
+    "option_to_sentence_id": {
+      "1": 2626,
+      "2": 2504,
+      "3": 2506,
+      "4": 2624,
+      "5": 2762,
+      "6": 2760
+    },
+    "premise_ids": [
+      16,
+      2754,
+      2806
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "0d659d6835fe13ba",
+    "counterpart_id": "a6ae1109be90f6e9",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Every borogove will burble. Every rath galumphed over Rafin but it is not the case that Rafin isn't a tove. A rath galumphed over Rafin or a rath galumphed over Zindle.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. No raths galumphed over Rafin.\n2. Rafin galumphed over a rath.\n3. Not all raths galumphed over Rafin.\n4. Zindle will burble.\n5. Rafin galumphed over every rath.\n6. A rath galumphed over Rafin.\n",
+    "correct_answer": "6",
+    "option_to_sentence_id": {
+      "1": 742,
+      "2": 1936,
+      "3": 744,
+      "4": 40,
+      "5": 1934,
+      "6": 740
+    },
+    "premise_ids": [
+      440,
+      2822,
+      3906
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "02c626bb42e96cb4",
+    "counterpart_id": "98f5ebed9042e5b6",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Every borogove chortled at a rath that chortled at it. A borogove snicker-snacked a borogove that snicker-snacked it. Every tove snicker-snacked Zindle or every tove will burble.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. There is a borogove that every rath chortled at.\n2. A borogove chortled at every rath.\n3. No borogoves chortled at a rath.\n4. Every borogove chortled at every rath.\n5. No borogoves chortled at every rath.\n6. A borogove chortled at a rath.\n",
+    "correct_answer": "6",
+    "option_to_sentence_id": {
+      "1": 920,
+      "2": 912,
+      "3": 918,
+      "4": 908,
+      "5": 916,
+      "6": 914
+    },
+    "premise_ids": [
+      1332,
+      1500,
+      4320
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "007b1eb683c020a0",
+    "counterpart_id": "57f417f040274d07",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Zindle didn't snicker-snacked Zindle and every rath galumphed over Rafin. If every rath galumphed over Rafin, then Rafin snicker-snacked Rafin. If every rath snicker-snacked Bungo, then every rath is mimsy only if Zindle didn't galumph over Bungo.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Rafin snicker-snacked Rafin.\n2. Zindle is mimsy.\n3. Zindle and Bungo are mimsy.\n4. Rafin didn't snicker-snacked Rafin.\n5. Zindle isn't mimsy.\n6. Zindle and Rafin are mimsy.\n",
+    "correct_answer": "1",
+    "option_to_sentence_id": {
+      "1": 380,
+      "2": 148,
+      "3": 156,
+      "4": 382,
+      "5": 158,
+      "6": 152
+    },
+    "premise_ids": [
+      2536,
+      5100,
+      8818
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "a9c8f9acfb3ccb12",
+    "counterpart_id": "c01362e5317c6e09",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Every borogove chortled at every tove. A rath chortled at a borogove that chortled at a tove. If no borogoves are beamish, then Zindle chortled at Zindle only if every borogove chortled at Bungo.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Every tove chortled at every borogove.\n2. No toves chortled at every borogove.\n3. Every tove chortled at a borogove.\n4. A tove chortled at a borogove.\n5. There is a tove that every borogove chortled at.\n6. A tove chortled at every borogove.\n",
+    "correct_answer": "5",
+    "option_to_sentence_id": {
+      "1": 842,
+      "2": 850,
+      "3": 844,
+      "4": 848,
+      "5": 854,
+      "6": 846
+    },
+    "premise_ids": [
+      876,
+      1632,
+      10546
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "6cebdcef49cc67a5",
+    "counterpart_id": "69fbd1811a262d74",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Rafin chortled at Zindle and a rath galumphed over Zindle. A borogove galumphed over Rafin or every borogove chortled at Bungo. Bungo chortled at Zindle and not all toves galumphed over Zindle.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Bungo chortled at Bungo and a rath galumphed over Zindle.\n2. If Zindle didn't galumph over Bungo, then every rath chortled at Bungo only if no raths galumphed over Bungo.\n3. A rath galumphed over Bungo only if a rath chortled at Zindle.\n4. Bungo chortled at Zindle and a rath galumphed over Zindle.\n5. Bungo didn't chortle at Bungo and a rath galumphed over Zindle.\n6. If a rath galumphed over Bungo, then a rath chortled at Zindle.\n",
+    "correct_answer": "4",
+    "option_to_sentence_id": {
+      "1": 2518,
+      "2": 10312,
+      "3": 4542,
+      "4": 11114,
+      "5": 2644,
+      "6": 4540
+    },
+    "premise_ids": [
+      2766,
+      3804,
+      11132
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  },
+  {
+    "id": "936810badeac6641",
+    "counterpart_id": "712f9387e3f44ad1",
+    "text": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Zindle and Rafin are mimsy. If not all borogoves are mimsy, then Rafin is a tove only if not all toves will whiffle. Not all borogoves will whiffle and only toves are mimsy.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Rafin will whiffle.\n2. Zindle is a tove.\n3. Zindle won't whiffle.\n4. Zindle will whiffle.\n5. Zindle isn't a tove.\n6. Zindle and Rafin will whiffle.\n",
+    "correct_answer": "2",
+    "option_to_sentence_id": {
+      "1": 16,
+      "2": 256,
+      "3": 14,
+      "4": 4,
+      "5": 258,
+      "6": 8
+    },
+    "premise_ids": [
+      152,
+      6472,
+      11420
+    ],
+    "domain_constraint_id": 2,
+    "language": "carroll"
+  }
+]

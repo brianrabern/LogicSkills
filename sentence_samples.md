@@ -13,371 +13,371 @@ Carroll: Everything is a tove, or a borogove, or a rath (exclusively), and there
 
 ### atomic_monadic
 
-English: Alfred will attack. :: `Ga`
-Carroll: Zindle will burble. :: `Ga`
+English: Hazel drank. :: `Hc`
+Carroll: Bungo gyred. :: `Hc`
 
-English: Lewis is a donkey. :: `Mb`
-Carroll: Rafin is a tove. :: `Mb`
+English: Lewis drank. :: `Hb`
+Carroll: Rafin gyred. :: `Hb`
 
-English: Hazel is a donkey. :: `Mc`
-Carroll: Bungo is a tove. :: `Mc`
+English: Alfred is a human. :: `Na`
+Carroll: Zindle is a borogove. :: `Na`
 
-English: Lewis is hungry. :: `Lb`
-Carroll: Rafin is beamish. :: `Lb`
+English: Alfred will run. :: `Fa`
+Carroll: Zindle will whiffle. :: `Fa`
 
 ### atomic_dyadic
 
-English: Alfred chased Lewis. :: `Rab`
-Carroll: Zindle snicker-snacked Rafin. :: `Rab`
+English: Alfred saw Alfred. :: `Paa`
+Carroll: Zindle chortled at Zindle. :: `Paa`
 
-English: Alfred saw Lewis. :: `Pab`
-Carroll: Zindle chortled at Rafin. :: `Pab`
+English: Hazel kicked Lewis. :: `Qcb`
+Carroll: Bungo galumphed over Rafin. :: `Qcb`
 
-English: Hazel chased Alfred. :: `Rca`
-Carroll: Bungo snicker-snacked Zindle. :: `Rca`
+English: Alfred chased Alfred. :: `Raa`
+Carroll: Zindle snicker-snacked Zindle. :: `Raa`
 
-English: Lewis kicked Hazel. :: `Qbc`
-Carroll: Rafin galumphed over Bungo. :: `Qbc`
+English: Hazel saw Alfred. :: `Pca`
+Carroll: Bungo chortled at Zindle. :: `Pca`
 
 ## Simple Negations
 
 ### negation_monadic
 
-English: Alfred isn't a human. :: `¬Na`
-Carroll: Zindle isn't a borogove. :: `¬Na`
-
 English: Alfred doesn't see Hazel. :: `¬Pac`
 Carroll: Zindle didn't chortle at Bungo. :: `¬Pac`
 
-English: Lewis didn't drink. :: `¬Hb`
-Carroll: Rafin didn't gyre. :: `¬Hb`
+English: Lewis isn't happy. :: `¬Kb`
+Carroll: Rafin isn't uffish. :: `¬Kb`
 
-English: Hazel won't run. :: `¬Fc`
-Carroll: Bungo won't whiffle. :: `¬Fc`
+English: Lewis didn't chase Hazel. :: `¬Rbc`
+Carroll: Rafin didn't snicker-snacked Bungo. :: `¬Rbc`
+
+English: Lewis isn't asleep. :: `¬Jb`
+Carroll: Rafin isn't mimsy. :: `¬Jb`
 
 ## Quantified Sentences
 
 ### quantified_universal_affirmative
 
-English: Every monkey kicked Alfred. :: `∀x(Ox→Qxa)`
-Carroll: Every rath galumphed over Zindle. :: `∀x(Ox→Qxa)`
+English: Every monkey is asleep. :: `∀x(Ox→Jx)`
+Carroll: Every rath is mimsy. :: `∀x(Ox→Jx)`
 
-English: Every human is asleep. :: `∀x(Nx→Jx)`
-Carroll: Every borogove is mimsy. :: `∀x(Nx→Jx)`
+English: Every monkey will attack. :: `∀x(Ox→Gx)`
+Carroll: Every rath will burble. :: `∀x(Ox→Gx)`
 
-English: Every donkey will run. :: `∀x(Mx→Fx)`
-Carroll: Every tove will whiffle. :: `∀x(Mx→Fx)`
+English: Every donkey ate. :: `∀x(Mx→Ix)`
+Carroll: Every tove gimbled. :: `∀x(Mx→Ix)`
 
-English: Every monkey is happy. :: `∀x(Ox→Kx)`
-Carroll: Every rath is uffish. :: `∀x(Ox→Kx)`
+English: Every donkey is hungry. :: `∀x(Mx→Lx)`
+Carroll: Every tove is beamish. :: `∀x(Mx→Lx)`
 
 ### quantified_particular_affirmative
 
-English: A donkey will attack. :: `∃x(Mx∧Gx)`
-Carroll: A tove will burble. :: `∃x(Mx∧Gx)`
+English: A monkey is happy. :: `∃x(Ox∧Kx)`
+Carroll: A rath is uffish. :: `∃x(Ox∧Kx)`
 
-English: A human saw Lewis. :: `∃x(Nx∧Pxb)`
-Carroll: A borogove chortled at Rafin. :: `∃x(Nx∧Pxb)`
+English: A donkey will run. :: `∃x(Mx∧Fx)`
+Carroll: A tove will whiffle. :: `∃x(Mx∧Fx)`
 
-English: A human is hungry. :: `∃x(Nx∧Lx)`
-Carroll: A borogove is beamish. :: `∃x(Nx∧Lx)`
+English: A donkey saw Hazel. :: `∃x(Mx∧Pxc)`
+Carroll: A tove chortled at Bungo. :: `∃x(Mx∧Pxc)`
 
-English: A donkey is asleep. :: `∃x(Mx∧Jx)`
-Carroll: A tove is mimsy. :: `∃x(Mx∧Jx)`
+English: A donkey is happy. :: `∃x(Mx∧Kx)`
+Carroll: A tove is uffish. :: `∃x(Mx∧Kx)`
 
 ### quantified_universal_negative
 
-English: No humans saw Hazel. :: `¬∃x(Nx∧Pxc)`
-Carroll: No borogoves chortled at Bungo. :: `¬∃x(Nx∧Pxc)`
+English: No monkeys chased Hazel. :: `¬∃x(Ox∧Rxc)`
+Carroll: No raths snicker-snacked Bungo. :: `¬∃x(Ox∧Rxc)`
 
-English: No humans chased Lewis. :: `¬∃x(Nx∧Rxb)`
-Carroll: No borogoves snicker-snacked Rafin. :: `¬∃x(Nx∧Rxb)`
+English: No humans chased Alfred. :: `¬∃x(Nx∧Rxa)`
+Carroll: No borogoves snicker-snacked Zindle. :: `¬∃x(Nx∧Rxa)`
 
-English: No donkeys will run. :: `¬∃x(Mx∧Fx)`
-Carroll: No toves will whiffle. :: `¬∃x(Mx∧Fx)`
+English: No humans kicked Hazel. :: `¬∃x(Nx∧Qxc)`
+Carroll: No borogoves galumphed over Bungo. :: `¬∃x(Nx∧Qxc)`
 
-English: No monkeys kicked Lewis. :: `¬∃x(Ox∧Qxb)`
-Carroll: No raths galumphed over Rafin. :: `¬∃x(Ox∧Qxb)`
+English: No monkeys are happy. :: `¬∃x(Ox∧Kx)`
+Carroll: No raths are uffish. :: `¬∃x(Ox∧Kx)`
 
 ### quantified_particular_negative
 
-English: Not all monkeys kicked Alfred. :: `∃x(Ox∧¬Qxa)`
-Carroll: Not all raths galumphed over Zindle. :: `∃x(Ox∧¬Qxa)`
+English: Not all humans saw Lewis. :: `∃x(Nx∧¬Pxb)`
+Carroll: Not all borogoves chortled at Rafin. :: `∃x(Nx∧¬Pxb)`
 
-English: Not all donkeys will attack. :: `∃x(Mx∧¬Gx)`
-Carroll: Not all toves will burble. :: `∃x(Mx∧¬Gx)`
+English: Not all donkeys chased Alfred. :: `∃x(Mx∧¬Rxa)`
+Carroll: Not all toves snicker-snacked Zindle. :: `∃x(Mx∧¬Rxa)`
 
-English: Not all humans chased Hazel. :: `∃x(Nx∧¬Rxc)`
-Carroll: Not all borogoves snicker-snacked Bungo. :: `∃x(Nx∧¬Rxc)`
+English: Not all donkeys will run. :: `∃x(Mx∧¬Fx)`
+Carroll: Not all toves will whiffle. :: `∃x(Mx∧¬Fx)`
 
-English: Not all humans are asleep. :: `∃x(Nx∧¬Jx)`
-Carroll: Not all borogoves are mimsy. :: `∃x(Nx∧¬Jx)`
+English: Not all monkeys will run. :: `∃x(Ox∧¬Fx)`
+Carroll: Not all raths will whiffle. :: `∃x(Ox∧¬Fx)`
 
 ### quantified_only_restrictor
 
 English: Only humans will run. :: `∀x(Fx→Nx)`
 Carroll: Only borogoves will whiffle. :: `∀x(Fx→Nx)`
 
-English: Only humans drank. :: `∀x(Hx→Nx)`
-Carroll: Only borogoves gyred. :: `∀x(Hx→Nx)`
+English: Only donkeys ate. :: `∀x(Ix→Mx)`
+Carroll: Only toves gimbled. :: `∀x(Ix→Mx)`
 
-English: Only monkeys are asleep. :: `∀x(Jx→Ox)`
-Carroll: Only raths are mimsy. :: `∀x(Jx→Ox)`
+English: Only monkeys are happy. :: `∀x(Kx→Ox)`
+Carroll: Only raths are uffish. :: `∀x(Kx→Ox)`
 
 English: Only humans will attack. :: `∀x(Gx→Nx)`
 Carroll: Only borogoves will burble. :: `∀x(Gx→Nx)`
 
 ### quantified_name_all
 
-English: Alfred kicked every donkey. :: `∀x(Mx→Qax)`
-Carroll: Zindle galumphed over every tove. :: `∀x(Mx→Qax)`
+English: Hazel chased every human. :: `∀x(Nx→Rcx)`
+Carroll: Bungo snicker-snacked every borogove. :: `∀x(Nx→Rcx)`
 
-English: Alfred chased every donkey. :: `∀x(Mx→Rax)`
-Carroll: Zindle snicker-snacked every tove. :: `∀x(Mx→Rax)`
+English: Alfred kicked every monkey. :: `∀x(Ox→Qax)`
+Carroll: Zindle galumphed over every rath. :: `∀x(Ox→Qax)`
 
-English: Hazel chased every monkey. :: `∀x(Ox→Rcx)`
-Carroll: Bungo snicker-snacked every rath. :: `∀x(Ox→Rcx)`
+English: Alfred chased every human. :: `∀x(Nx→Rax)`
+Carroll: Zindle snicker-snacked every borogove. :: `∀x(Nx→Rax)`
 
-English: Lewis saw every human. :: `∀x(Nx→Pbx)`
-Carroll: Rafin chortled at every borogove. :: `∀x(Nx→Pbx)`
+English: Hazel saw every donkey. :: `∀x(Mx→Pcx)`
+Carroll: Bungo chortled at every tove. :: `∀x(Mx→Pcx)`
 
 ### quantified_name_some
 
-English: Hazel kicked a monkey. :: `∃x(Ox∧Qcx)`
-Carroll: Bungo galumphed over a rath. :: `∃x(Ox∧Qcx)`
+English: Alfred chased a donkey. :: `∃x(Mx∧Rax)`
+Carroll: Zindle snicker-snacked a tove. :: `∃x(Mx∧Rax)`
 
-English: Lewis kicked a donkey. :: `∃x(Mx∧Qbx)`
-Carroll: Rafin galumphed over a tove. :: `∃x(Mx∧Qbx)`
+English: Hazel saw a human. :: `∃x(Nx∧Pcx)`
+Carroll: Bungo chortled at a borogove. :: `∃x(Nx∧Pcx)`
+
+English: Lewis chased a human. :: `∃x(Nx∧Rbx)`
+Carroll: Rafin snicker-snacked a borogove. :: `∃x(Nx∧Rbx)`
 
 English: Lewis chased a donkey. :: `∃x(Mx∧Rbx)`
 Carroll: Rafin snicker-snacked a tove. :: `∃x(Mx∧Rbx)`
 
-English: Alfred chased a monkey. :: `∃x(Ox∧Rax)`
-Carroll: Zindle snicker-snacked a rath. :: `∃x(Ox∧Rax)`
-
 ### quantified_all_all
 
-English: Every donkey chased every human. :: `∀x∀y((Mx∧Ny)→Rxy)`
-Carroll: Every tove snicker-snacked every borogove. :: `∀x∀y((Mx∧Ny)→Rxy)`
+English: Every monkey kicked every monkey. :: `∀x∀y((Ox∧Oy)→Qxy)`
+Carroll: Every rath galumphed over every rath. :: `∀x∀y((Ox∧Oy)→Qxy)`
 
-English: Every donkey kicked every monkey. :: `∀x∀y((Mx∧Oy)→Qxy)`
-Carroll: Every tove galumphed over every rath. :: `∀x∀y((Mx∧Oy)→Qxy)`
+English: Every donkey saw every donkey. :: `∀x∀y((Mx∧My)→Pxy)`
+Carroll: Every tove chortled at every tove. :: `∀x∀y((Mx∧My)→Pxy)`
 
-English: Every monkey kicked every human. :: `∀x∀y((Ox∧Ny)→Qxy)`
-Carroll: Every rath galumphed over every borogove. :: `∀x∀y((Ox∧Ny)→Qxy)`
+English: Every donkey saw every monkey. :: `∀x∀y((Mx∧Oy)→Pxy)`
+Carroll: Every tove chortled at every rath. :: `∀x∀y((Mx∧Oy)→Pxy)`
 
-English: Every human kicked every donkey. :: `∀x∀y((Nx∧My)→Qxy)`
-Carroll: Every borogove galumphed over every tove. :: `∀x∀y((Nx∧My)→Qxy)`
+English: Every monkey kicked every donkey. :: `∀x∀y((Ox∧My)→Qxy)`
+Carroll: Every rath galumphed over every tove. :: `∀x∀y((Ox∧My)→Qxy)`
 
 ### quantified_all_all_all
-
-English: Every monkey saw every donkey that saw every donkey. :: `∀x(Ox→∀y((My∧∀z(Mz→Pyz))→Pxy))`
-Carroll: Every rath chortled at every tove that chortled at every tove. :: `∀x(Ox→∀y((My∧∀z(Mz→Pyz))→Pxy))`
 
 English: Every donkey saw every donkey that saw every monkey. :: `∀x(Mx→∀y((My∧∀z(Oz→Pyz))→Pxy))`
 Carroll: Every tove chortled at every tove that chortled at every rath. :: `∀x(Mx→∀y((My∧∀z(Oz→Pyz))→Pxy))`
 
-English: Every human kicked every human that kicked every donkey. :: `∀x(Nx→∀y((Ny∧∀z(Mz→Qyz))→Qxy))`
-Carroll: Every borogove galumphed over every borogove that galumphed over every tove. :: `∀x(Nx→∀y((Ny∧∀z(Mz→Qyz))→Qxy))`
+English: Every monkey chased every human that chased every monkey. :: `∀x(Ox→∀y((Ny∧∀z(Oz→Ryz))→Rxy))`
+Carroll: Every rath snicker-snacked every borogove that snicker-snacked every rath. :: `∀x(Ox→∀y((Ny∧∀z(Oz→Ryz))→Rxy))`
 
-English: Every human kicked every donkey that kicked every human. :: `∀x(Nx→∀y((My∧∀z(Nz→Qyz))→Qxy))`
-Carroll: Every borogove galumphed over every tove that galumphed over every borogove. :: `∀x(Nx→∀y((My∧∀z(Nz→Qyz))→Qxy))`
+English: Every donkey chased every donkey that chased every donkey. :: `∀x(Mx→∀y((My∧∀z(Mz→Ryz))→Rxy))`
+Carroll: Every tove snicker-snacked every tove that snicker-snacked every tove. :: `∀x(Mx→∀y((My∧∀z(Mz→Ryz))→Rxy))`
+
+English: Every monkey saw every monkey that saw every monkey. :: `∀x(Ox→∀y((Oy∧∀z(Oz→Pyz))→Pxy))`
+Carroll: Every rath chortled at every rath that chortled at every rath. :: `∀x(Ox→∀y((Oy∧∀z(Oz→Pyz))→Pxy))`
 
 ### quantified_all_all_back
 
-English: Every donkey chased every human that chased it. :: `∀x(Mx→∀y((Ny∧Ryx)→Rxy))`
-Carroll: Every tove snicker-snacked every borogove that snicker-snacked it. :: `∀x(Mx→∀y((Ny∧Ryx)→Rxy))`
+English: Every donkey chased every monkey that chased it. :: `∀x(Mx→∀y((Oy∧Ryx)→Rxy))`
+Carroll: Every tove snicker-snacked every rath that snicker-snacked it. :: `∀x(Mx→∀y((Oy∧Ryx)→Rxy))`
 
-English: Every donkey saw every human that saw it. :: `∀x(Mx→∀y((Ny∧Pyx)→Pxy))`
-Carroll: Every tove chortled at every borogove that chortled at it. :: `∀x(Mx→∀y((Ny∧Pyx)→Pxy))`
+English: Every monkey chased every human that chased it. :: `∀x(Ox→∀y((Ny∧Ryx)→Rxy))`
+Carroll: Every rath snicker-snacked every borogove that snicker-snacked it. :: `∀x(Ox→∀y((Ny∧Ryx)→Rxy))`
 
 English: Every monkey kicked every monkey that kicked it. :: `∀x(Ox→∀y((Oy∧Qyx)→Qxy))`
 Carroll: Every rath galumphed over every rath that galumphed over it. :: `∀x(Ox→∀y((Oy∧Qyx)→Qxy))`
 
-English: Every human kicked every monkey that kicked it. :: `∀x(Nx→∀y((Oy∧Qyx)→Qxy))`
-Carroll: Every borogove galumphed over every rath that galumphed over it. :: `∀x(Nx→∀y((Oy∧Qyx)→Qxy))`
+English: Every human saw every human that saw it. :: `∀x(Nx→∀y((Ny∧Pyx)→Pxy))`
+Carroll: Every borogove chortled at every borogove that chortled at it. :: `∀x(Nx→∀y((Ny∧Pyx)→Pxy))`
 
 ### quantified_all_some
 
-English: Every monkey saw a donkey. :: `∀x(Ox→∃y(My∧Pxy))`
-Carroll: Every rath chortled at a tove. :: `∀x(Ox→∃y(My∧Pxy))`
-
-English: Every monkey chased a donkey. :: `∀x(Ox→∃y(My∧Rxy))`
-Carroll: Every rath snicker-snacked a tove. :: `∀x(Ox→∃y(My∧Rxy))`
-
-English: Every donkey chased a donkey. :: `∀x(Mx→∃y(My∧Rxy))`
-Carroll: Every tove snicker-snacked a tove. :: `∀x(Mx→∃y(My∧Rxy))`
+English: Every monkey kicked a human. :: `∀x(Ox→∃y(Ny∧Qxy))`
+Carroll: Every rath galumphed over a borogove. :: `∀x(Ox→∃y(Ny∧Qxy))`
 
 English: Every monkey kicked a monkey. :: `∀x(Ox→∃y(Oy∧Qxy))`
 Carroll: Every rath galumphed over a rath. :: `∀x(Ox→∃y(Oy∧Qxy))`
 
+English: Every monkey chased a donkey. :: `∀x(Ox→∃y(My∧Rxy))`
+Carroll: Every rath snicker-snacked a tove. :: `∀x(Ox→∃y(My∧Rxy))`
+
+English: Every monkey saw a human. :: `∀x(Ox→∃y(Ny∧Pxy))`
+Carroll: Every rath chortled at a borogove. :: `∀x(Ox→∃y(Ny∧Pxy))`
+
 ### quantified_all_some_back
+
+English: Every human saw a donkey that saw it. :: `∀x(Nx→∃y(My∧(Pxy∧Pyx)))`
+Carroll: Every borogove chortled at a tove that chortled at it. :: `∀x(Nx→∃y(My∧(Pxy∧Pyx)))`
+
+English: Every human chased a monkey that chased it. :: `∀x(Nx→∃y(Oy∧(Rxy∧Ryx)))`
+Carroll: Every borogove snicker-snacked a rath that snicker-snacked it. :: `∀x(Nx→∃y(Oy∧(Rxy∧Ryx)))`
+
+English: Every monkey kicked a donkey that kicked it. :: `∀x(Ox→∃y(My∧(Qxy∧Qyx)))`
+Carroll: Every rath galumphed over a tove that galumphed over it. :: `∀x(Ox→∃y(My∧(Qxy∧Qyx)))`
 
 English: Every human kicked a donkey that kicked it. :: `∀x(Nx→∃y(My∧(Qxy∧Qyx)))`
 Carroll: Every borogove galumphed over a tove that galumphed over it. :: `∀x(Nx→∃y(My∧(Qxy∧Qyx)))`
 
-English: Every monkey chased a human that chased it. :: `∀x(Ox→∃y(Ny∧(Rxy∧Ryx)))`
-Carroll: Every rath snicker-snacked a borogove that snicker-snacked it. :: `∀x(Ox→∃y(Ny∧(Rxy∧Ryx)))`
-
-English: Every donkey chased a monkey that chased it. :: `∀x(Mx→∃y(Oy∧(Rxy∧Ryx)))`
-Carroll: Every tove snicker-snacked a rath that snicker-snacked it. :: `∀x(Mx→∃y(Oy∧(Rxy∧Ryx)))`
-
-English: Every donkey saw a monkey that saw it. :: `∀x(Mx→∃y(Oy∧(Pxy∧Pyx)))`
-Carroll: Every tove chortled at a rath that chortled at it. :: `∀x(Mx→∃y(Oy∧(Pxy∧Pyx)))`
-
 ### quantified_some_all
 
-English: A donkey saw every human. :: `∃x(Mx∧∀y(Ny→Pxy))`
-Carroll: A tove chortled at every borogove. :: `∃x(Mx∧∀y(Ny→Pxy))`
+English: A monkey chased every monkey. :: `∃x(Ox∧∀y(Oy→Rxy))`
+Carroll: A rath snicker-snacked every rath. :: `∃x(Ox∧∀y(Oy→Rxy))`
 
-English: A monkey chased every donkey. :: `∃x(Ox∧∀y(My→Rxy))`
-Carroll: A rath snicker-snacked every tove. :: `∃x(Ox∧∀y(My→Rxy))`
+English: A monkey chased every human. :: `∃x(Ox∧∀y(Ny→Rxy))`
+Carroll: A rath snicker-snacked every borogove. :: `∃x(Ox∧∀y(Ny→Rxy))`
 
-English: A human chased every monkey. :: `∃x(Nx∧∀y(Oy→Rxy))`
-Carroll: A borogove snicker-snacked every rath. :: `∃x(Nx∧∀y(Oy→Rxy))`
+English: A monkey saw every human. :: `∃x(Ox∧∀y(Ny→Pxy))`
+Carroll: A rath chortled at every borogove. :: `∃x(Ox∧∀y(Ny→Pxy))`
 
-English: A human kicked every human. :: `∃x(Nx∧∀y(Ny→Qxy))`
-Carroll: A borogove galumphed over every borogove. :: `∃x(Nx∧∀y(Ny→Qxy))`
+English: A donkey kicked every donkey. :: `∃x(Mx∧∀y(My→Qxy))`
+Carroll: A tove galumphed over every tove. :: `∃x(Mx∧∀y(My→Qxy))`
 
 ### quantified_some_all_back
 
-English: A human chased every monkey that chased it. :: `∃x(Nx∧∀y((Oy∧Ryx)→Rxy))`
-Carroll: A borogove snicker-snacked every rath that snicker-snacked it. :: `∃x(Nx∧∀y((Oy∧Ryx)→Rxy))`
+English: A monkey saw every monkey that saw it. :: `∃x(Ox∧∀y((Oy∧Pyx)→Pxy))`
+Carroll: A rath chortled at every rath that chortled at it. :: `∃x(Ox∧∀y((Oy∧Pyx)→Pxy))`
 
-English: A donkey chased every human that chased it. :: `∃x(Mx∧∀y((Ny∧Ryx)→Rxy))`
-Carroll: A tove snicker-snacked every borogove that snicker-snacked it. :: `∃x(Mx∧∀y((Ny∧Ryx)→Rxy))`
+English: A monkey saw every human that saw it. :: `∃x(Ox∧∀y((Ny∧Pyx)→Pxy))`
+Carroll: A rath chortled at every borogove that chortled at it. :: `∃x(Ox∧∀y((Ny∧Pyx)→Pxy))`
 
-English: A donkey chased every donkey that chased it. :: `∃x(Mx∧∀y((My∧Ryx)→Rxy))`
-Carroll: A tove snicker-snacked every tove that snicker-snacked it. :: `∃x(Mx∧∀y((My∧Ryx)→Rxy))`
+English: A donkey saw every donkey that saw it. :: `∃x(Mx∧∀y((My∧Pyx)→Pxy))`
+Carroll: A tove chortled at every tove that chortled at it. :: `∃x(Mx∧∀y((My∧Pyx)→Pxy))`
 
-English: A monkey chased every monkey that chased it. :: `∃x(Ox∧∀y((Oy∧Ryx)→Rxy))`
-Carroll: A rath snicker-snacked every rath that snicker-snacked it. :: `∃x(Ox∧∀y((Oy∧Ryx)→Rxy))`
+English: A donkey saw every monkey that saw it. :: `∃x(Mx∧∀y((Oy∧Pyx)→Pxy))`
+Carroll: A tove chortled at every rath that chortled at it. :: `∃x(Mx∧∀y((Oy∧Pyx)→Pxy))`
 
 ### quantified_some_some
+
+English: A monkey saw a monkey. :: `∃x∃y((Ox∧Oy)∧Pxy)`
+Carroll: A rath chortled at a rath. :: `∃x∃y((Ox∧Oy)∧Pxy)`
+
+English: A donkey saw a donkey. :: `∃x∃y((Mx∧My)∧Pxy)`
+Carroll: A tove chortled at a tove. :: `∃x∃y((Mx∧My)∧Pxy)`
+
+English: A human kicked a donkey. :: `∃x∃y((Nx∧My)∧Qxy)`
+Carroll: A borogove galumphed over a tove. :: `∃x∃y((Nx∧My)∧Qxy)`
 
 English: A human chased a human. :: `∃x∃y((Nx∧Ny)∧Rxy)`
 Carroll: A borogove snicker-snacked a borogove. :: `∃x∃y((Nx∧Ny)∧Rxy)`
 
-English: A human chased a donkey. :: `∃x∃y((Nx∧My)∧Rxy)`
-Carroll: A borogove snicker-snacked a tove. :: `∃x∃y((Nx∧My)∧Rxy)`
-
-English: A human kicked a monkey. :: `∃x∃y((Nx∧Oy)∧Qxy)`
-Carroll: A borogove galumphed over a rath. :: `∃x∃y((Nx∧Oy)∧Qxy)`
-
-English: A monkey kicked a human. :: `∃x∃y((Ox∧Ny)∧Qxy)`
-Carroll: A rath galumphed over a borogove. :: `∃x∃y((Ox∧Ny)∧Qxy)`
-
 ### quantified_some_some_back
 
-English: A human kicked a human that kicked it. :: `∃x∃y((Nx∧Ny)∧(Qxy∧Qyx))`
-Carroll: A borogove galumphed over a borogove that galumphed over it. :: `∃x∃y((Nx∧Ny)∧(Qxy∧Qyx))`
-
-English: A human saw a monkey that saw it. :: `∃x∃y((Nx∧Oy)∧(Pxy∧Pyx))`
-Carroll: A borogove chortled at a rath that chortled at it. :: `∃x∃y((Nx∧Oy)∧(Pxy∧Pyx))`
-
-English: A donkey chased a human that chased it. :: `∃x∃y((Mx∧Ny)∧(Rxy∧Ryx))`
-Carroll: A tove snicker-snacked a borogove that snicker-snacked it. :: `∃x∃y((Mx∧Ny)∧(Rxy∧Ryx))`
+English: A donkey kicked a donkey that kicked it. :: `∃x∃y((Mx∧My)∧(Qxy∧Qyx))`
+Carroll: A tove galumphed over a tove that galumphed over it. :: `∃x∃y((Mx∧My)∧(Qxy∧Qyx))`
 
 English: A donkey kicked a monkey that kicked it. :: `∃x∃y((Mx∧Oy)∧(Qxy∧Qyx))`
 Carroll: A tove galumphed over a rath that galumphed over it. :: `∃x∃y((Mx∧Oy)∧(Qxy∧Qyx))`
 
+English: A donkey chased a donkey that chased it. :: `∃x∃y((Mx∧My)∧(Rxy∧Ryx))`
+Carroll: A tove snicker-snacked a tove that snicker-snacked it. :: `∃x∃y((Mx∧My)∧(Rxy∧Ryx))`
+
+English: A human chased a donkey that chased it. :: `∃x∃y((Nx∧My)∧(Rxy∧Ryx))`
+Carroll: A borogove snicker-snacked a tove that snicker-snacked it. :: `∃x∃y((Nx∧My)∧(Rxy∧Ryx))`
+
 ### quantified_some_some_some
 
-English: A human chased a human that chased a monkey. :: `∃x∃y∃z(((Nx∧Ny)∧Oz)∧(Rxy∧Ryz))`
-Carroll: A borogove snicker-snacked a borogove that snicker-snacked a rath. :: `∃x∃y∃z(((Nx∧Ny)∧Oz)∧(Rxy∧Ryz))`
+English: A human kicked a human that kicked a monkey. :: `∃x∃y∃z(((Nx∧Ny)∧Oz)∧(Qxy∧Qyz))`
+Carroll: A borogove galumphed over a borogove that galumphed over a rath. :: `∃x∃y∃z(((Nx∧Ny)∧Oz)∧(Qxy∧Qyz))`
 
-English: A donkey kicked a donkey that kicked a human. :: `∃x∃y∃z(((Mx∧My)∧Nz)∧(Qxy∧Qyz))`
-Carroll: A tove galumphed over a tove that galumphed over a borogove. :: `∃x∃y∃z(((Mx∧My)∧Nz)∧(Qxy∧Qyz))`
+English: A human chased a donkey that chased a monkey. :: `∃x∃y∃z(((Nx∧My)∧Oz)∧(Rxy∧Ryz))`
+Carroll: A borogove snicker-snacked a tove that snicker-snacked a rath. :: `∃x∃y∃z(((Nx∧My)∧Oz)∧(Rxy∧Ryz))`
 
-English: A donkey kicked a donkey that kicked a donkey. :: `∃x∃y∃z(((Mx∧My)∧Mz)∧(Qxy∧Qyz))`
-Carroll: A tove galumphed over a tove that galumphed over a tove. :: `∃x∃y∃z(((Mx∧My)∧Mz)∧(Qxy∧Qyz))`
+English: A monkey saw a human that saw a donkey. :: `∃x∃y∃z(((Ox∧Ny)∧Mz)∧(Pxy∧Pyz))`
+Carroll: A rath chortled at a borogove that chortled at a tove. :: `∃x∃y∃z(((Ox∧Ny)∧Mz)∧(Pxy∧Pyz))`
 
-English: A monkey chased a monkey that chased a human. :: `∃x∃y∃z(((Ox∧Oy)∧Nz)∧(Rxy∧Ryz))`
-Carroll: A rath snicker-snacked a rath that snicker-snacked a borogove. :: `∃x∃y∃z(((Ox∧Oy)∧Nz)∧(Rxy∧Ryz))`
+English: A donkey chased a human that chased a human. :: `∃x∃y∃z(((Mx∧Ny)∧Nz)∧(Rxy∧Ryz))`
+Carroll: A tove snicker-snacked a borogove that snicker-snacked a borogove. :: `∃x∃y∃z(((Mx∧Ny)∧Nz)∧(Rxy∧Ryz))`
 
 ### quantified_no_all
 
-English: No donkeys chased every donkey. :: `¬∃x(Mx∧∀y(My→Rxy))`
-Carroll: No toves snicker-snacked every tove. :: `¬∃x(Mx∧∀y(My→Rxy))`
+English: No humans kicked every human. :: `¬∃x(Nx∧∀y(Ny→Qxy))`
+Carroll: No borogoves galumphed over every borogove. :: `¬∃x(Nx∧∀y(Ny→Qxy))`
 
-English: No donkeys saw every donkey. :: `¬∃x(Mx∧∀y(My→Pxy))`
-Carroll: No toves chortled at every tove. :: `¬∃x(Mx∧∀y(My→Pxy))`
+English: No monkeys kicked every donkey. :: `¬∃x(Ox∧∀y(My→Qxy))`
+Carroll: No raths galumphed over every tove. :: `¬∃x(Ox∧∀y(My→Qxy))`
 
-English: No monkeys saw every donkey. :: `¬∃x(Ox∧∀y(My→Pxy))`
-Carroll: No raths chortled at every tove. :: `¬∃x(Ox∧∀y(My→Pxy))`
+English: No donkeys saw every monkey. :: `¬∃x(Mx∧∀y(Oy→Pxy))`
+Carroll: No toves chortled at every rath. :: `¬∃x(Mx∧∀y(Oy→Pxy))`
 
-English: No donkeys kicked every monkey. :: `¬∃x(Mx∧∀y(Oy→Qxy))`
-Carroll: No toves galumphed over every rath. :: `¬∃x(Mx∧∀y(Oy→Qxy))`
+English: No monkeys chased every human. :: `¬∃x(Ox∧∀y(Ny→Rxy))`
+Carroll: No raths snicker-snacked every borogove. :: `¬∃x(Ox∧∀y(Ny→Rxy))`
 
 ### quantified_no_some
-
-English: No donkeys saw a human. :: `¬∃x∃y((Mx∧Ny)∧Pxy)`
-Carroll: No toves chortled at a borogove. :: `¬∃x∃y((Mx∧Ny)∧Pxy)`
 
 English: No humans chased a human. :: `¬∃x∃y((Nx∧Ny)∧Rxy)`
 Carroll: No borogoves snicker-snacked a borogove. :: `¬∃x∃y((Nx∧Ny)∧Rxy)`
 
-English: No monkeys saw a human. :: `¬∃x∃y((Ox∧Ny)∧Pxy)`
-Carroll: No raths chortled at a borogove. :: `¬∃x∃y((Ox∧Ny)∧Pxy)`
+English: No donkeys saw a donkey. :: `¬∃x∃y((Mx∧My)∧Pxy)`
+Carroll: No toves chortled at a tove. :: `¬∃x∃y((Mx∧My)∧Pxy)`
 
-English: No humans kicked a donkey. :: `¬∃x∃y((Nx∧My)∧Qxy)`
-Carroll: No borogoves galumphed over a tove. :: `¬∃x∃y((Nx∧My)∧Qxy)`
+English: No donkeys saw a monkey. :: `¬∃x∃y((Mx∧Oy)∧Pxy)`
+Carroll: No toves chortled at a rath. :: `¬∃x∃y((Mx∧Oy)∧Pxy)`
+
+English: No monkeys chased a human. :: `¬∃x∃y((Ox∧Ny)∧Rxy)`
+Carroll: No raths snicker-snacked a borogove. :: `¬∃x∃y((Ox∧Ny)∧Rxy)`
 
 ### quantified_no_some_back
 
-English: No humans saw a human that saw it. :: `¬∃x∃y((Nx∧Ny)∧(Pxy∧Pyx))`
-Carroll: No borogoves chortled at a borogove that chortled at it. :: `¬∃x∃y((Nx∧Ny)∧(Pxy∧Pyx))`
+English: No donkeys kicked a monkey that kicked it. :: `¬∃x∃y((Mx∧Oy)∧(Qxy∧Qyx))`
+Carroll: No toves galumphed over a rath that galumphed over it. :: `¬∃x∃y((Mx∧Oy)∧(Qxy∧Qyx))`
 
-English: No monkeys saw a monkey that saw it. :: `¬∃x∃y((Ox∧Oy)∧(Pxy∧Pyx))`
-Carroll: No raths chortled at a rath that chortled at it. :: `¬∃x∃y((Ox∧Oy)∧(Pxy∧Pyx))`
+English: No monkeys chased a monkey that chased it. :: `¬∃x∃y((Ox∧Oy)∧(Rxy∧Ryx))`
+Carroll: No raths snicker-snacked a rath that snicker-snacked it. :: `¬∃x∃y((Ox∧Oy)∧(Rxy∧Ryx))`
 
-English: No donkeys saw a monkey that saw it. :: `¬∃x∃y((Mx∧Oy)∧(Pxy∧Pyx))`
-Carroll: No toves chortled at a rath that chortled at it. :: `¬∃x∃y((Mx∧Oy)∧(Pxy∧Pyx))`
+English: No humans kicked a monkey that kicked it. :: `¬∃x∃y((Nx∧Oy)∧(Qxy∧Qyx))`
+Carroll: No borogoves galumphed over a rath that galumphed over it. :: `¬∃x∃y((Nx∧Oy)∧(Qxy∧Qyx))`
 
-English: No donkeys kicked a donkey that kicked it. :: `¬∃x∃y((Mx∧My)∧(Qxy∧Qyx))`
-Carroll: No toves galumphed over a tove that galumphed over it. :: `¬∃x∃y((Mx∧My)∧(Qxy∧Qyx))`
+English: No humans chased a human that chased it. :: `¬∃x∃y((Nx∧Ny)∧(Rxy∧Ryx))`
+Carroll: No borogoves snicker-snacked a borogove that snicker-snacked it. :: `¬∃x∃y((Nx∧Ny)∧(Rxy∧Ryx))`
 
 ### quantified_rev_some_all
 
 English: There is a donkey that every monkey kicked. :: `∃x(Mx∧∀y(Oy→Qyx))`
 Carroll: There is a tove that every rath galumphed over. :: `∃x(Mx∧∀y(Oy→Qyx))`
 
-English: There is a monkey that every donkey chased. :: `∃x(Ox∧∀y(My→Ryx))`
-Carroll: There is a rath that every tove snicker-snacked. :: `∃x(Ox∧∀y(My→Ryx))`
-
 English: There is a monkey that every monkey kicked. :: `∃x(Ox∧∀y(Oy→Qyx))`
 Carroll: There is a rath that every rath galumphed over. :: `∃x(Ox∧∀y(Oy→Qyx))`
 
-English: There is a monkey that every monkey saw. :: `∃x(Ox∧∀y(Oy→Pyx))`
-Carroll: There is a rath that every rath chortled at. :: `∃x(Ox∧∀y(Oy→Pyx))`
+English: There is a monkey that every human kicked. :: `∃x(Ox∧∀y(Ny→Qyx))`
+Carroll: There is a rath that every borogove galumphed over. :: `∃x(Ox∧∀y(Ny→Qyx))`
+
+English: There is a donkey that every donkey kicked. :: `∃x(Mx∧∀y(My→Qyx))`
+Carroll: There is a tove that every tove galumphed over. :: `∃x(Mx∧∀y(My→Qyx))`
 
 ### quantified_rev_no_all
-
-English: There is not a human that every donkey kicked. :: `¬∃x(Nx∧∀y(My→Qyx))`
-Carroll: There is not a borogove that every tove galumphed over. :: `¬∃x(Nx∧∀y(My→Qyx))`
-
-English: There is not a monkey that every donkey kicked. :: `¬∃x(Ox∧∀y(My→Qyx))`
-Carroll: There is not a rath that every tove galumphed over. :: `¬∃x(Ox∧∀y(My→Qyx))`
 
 English: There is not a monkey that every human chased. :: `¬∃x(Ox∧∀y(Ny→Ryx))`
 Carroll: There is not a rath that every borogove snicker-snacked. :: `¬∃x(Ox∧∀y(Ny→Ryx))`
 
-English: There is not a donkey that every human kicked. :: `¬∃x(Mx∧∀y(Ny→Qyx))`
-Carroll: There is not a tove that every borogove galumphed over. :: `¬∃x(Mx∧∀y(Ny→Qyx))`
+English: There is not a donkey that every human chased. :: `¬∃x(Mx∧∀y(Ny→Ryx))`
+Carroll: There is not a tove that every borogove snicker-snacked. :: `¬∃x(Mx∧∀y(Ny→Ryx))`
+
+English: There is not a human that every donkey chased. :: `¬∃x(Nx∧∀y(My→Ryx))`
+Carroll: There is not a borogove that every tove snicker-snacked. :: `¬∃x(Nx∧∀y(My→Ryx))`
+
+English: There is not a human that every monkey saw. :: `¬∃x(Nx∧∀y(Oy→Pyx))`
+Carroll: There is not a borogove that every rath chortled at. :: `¬∃x(Nx∧∀y(Oy→Pyx))`
 
 ### quantified_some_self
 
-English: A monkey saw itself. :: `∃x(Ox∧Pxx)`
-Carroll: A rath chortled at itself. :: `∃x(Ox∧Pxx)`
-
-English: A human chased itself. :: `∃x(Nx∧Rxx)`
-Carroll: A borogove snicker-snacked itself. :: `∃x(Nx∧Rxx)`
-
-English: A human kicked itself. :: `∃x(Nx∧Qxx)`
-Carroll: A borogove galumphed over itself. :: `∃x(Nx∧Qxx)`
+English: A human saw itself. :: `∃x(Nx∧Pxx)`
+Carroll: A borogove chortled at itself. :: `∃x(Nx∧Pxx)`
 
 English: A donkey kicked itself. :: `∃x(Mx∧Qxx)`
 Carroll: A tove galumphed over itself. :: `∃x(Mx∧Qxx)`
+
+English: A donkey saw itself. :: `∃x(Mx∧Pxx)`
+Carroll: A tove chortled at itself. :: `∃x(Mx∧Pxx)`
+
+English: A monkey kicked itself. :: `∃x(Ox∧Qxx)`
+Carroll: A rath galumphed over itself. :: `∃x(Ox∧Qxx)`
 
 ## Connective Sentences
 
@@ -385,174 +385,175 @@ Carroll: A tove galumphed over itself. :: `∃x(Mx∧Qxx)`
 
 ### conjunction_simple
 
-English: Hazel didn't kick Alfred and no humans will run. :: `(¬Qca∧¬∃x(Nx∧Fx))`
-Carroll: Bungo didn't galumph over Zindle and no borogoves will whiffle. :: `(¬Qca∧¬∃x(Nx∧Fx))`
+English: Hazel saw Hazel and not all monkeys kicked Lewis. :: `(Pcc∧∃x(Ox∧¬Qxb))`
+Carroll: Bungo chortled at Bungo and not all raths galumphed over Rafin. :: `(Pcc∧∃x(Ox∧¬Qxb))`
 
-English: Hazel didn't chase Alfred and only monkeys are happy. :: `(¬Rca∧∀x(Kx→Ox))`
-Carroll: Bungo didn't snicker-snacked Zindle and only raths are uffish. :: `(¬Rca∧∀x(Kx→Ox))`
+English: Every monkey kicked Lewis and every human saw Alfred. :: `(∀x(Ox→Qxb)∧∀x(Nx→Pxa))`
+Carroll: Every rath galumphed over Rafin and every borogove chortled at Zindle. :: `(∀x(Ox→Qxb)∧∀x(Nx→Pxa))`
 
-English: Alfred doesn't see Alfred and not all monkeys will attack. :: `(¬Paa∧∃x(Ox∧¬Gx))`
-Carroll: Zindle didn't chortle at Zindle and not all raths will burble. :: `(¬Paa∧∃x(Ox∧¬Gx))`
+English: A monkey chased Alfred and a monkey is happy. :: `(∃x(Ox∧Rxa)∧∃x(Ox∧Kx))`
+Carroll: A rath snicker-snacked Zindle and a rath is uffish. :: `(∃x(Ox∧Rxa)∧∃x(Ox∧Kx))`
 
-English: A human is asleep and a human kicked Alfred. :: `(∃x(Nx∧Jx)∧∃x(Nx∧Qxa))`
-Carroll: A borogove is mimsy and a borogove galumphed over Zindle. :: `(∃x(Nx∧Jx)∧∃x(Nx∧Qxa))`
+English: Alfred didn't chase Alfred and no donkeys saw Hazel. :: `(¬Raa∧¬∃x(Mx∧Pxc))`
+Carroll: Zindle didn't snicker-snacked Zindle and no toves chortled at Bungo. :: `(¬Raa∧¬∃x(Mx∧Pxc))`
 
 ### conjunction_vp_ellipsis
 
-English: Alfred and Hazel will run. :: `(Fa∧Fc)`
-Carroll: Zindle and Bungo will whiffle. :: `(Fa∧Fc)`
+English: Alfred and Hazel are hungry. :: `(La∧Lc)`
+Carroll: Zindle and Bungo are beamish. :: `(La∧Lc)`
 
-English: Alfred and Hazel will attack. :: `(Ga∧Gc)`
-Carroll: Zindle and Bungo will burble. :: `(Ga∧Gc)`
+English: Hazel and Alfred are hungry. :: `(Lc∧La)`
+Carroll: Bungo and Zindle are beamish. :: `(Lc∧La)`
 
 English: Lewis and Alfred will attack. :: `(Gb∧Ga)`
 Carroll: Rafin and Zindle will burble. :: `(Gb∧Ga)`
 
-English: Hazel and Lewis drank. :: `(Hc∧Hb)`
-Carroll: Bungo and Rafin gyred. :: `(Hc∧Hb)`
+English: Lewis and Alfred are hungry. :: `(Lb∧La)`
+Carroll: Rafin and Zindle are beamish. :: `(Lb∧La)`
 
 ### conjunction_contrastive
 
-English: Every donkey saw Alfred but it is not the case that Hazel doesn't see Hazel. :: `(∀x(Mx→Pxa)∧¬¬Pcc)`
-Carroll: Every tove chortled at Zindle but it is not the case that Bungo didn't chortle at Bungo. :: `(∀x(Mx→Pxa)∧¬¬Pcc)`
+English: Alfred didn't chase Alfred but it is not the case that Hazel doesn't see Hazel. :: `(¬Raa∧¬¬Pcc)`
+Carroll: Zindle didn't snicker-snacked Zindle but it is not the case that Bungo didn't chortle at Bungo. :: `(¬Raa∧¬¬Pcc)`
 
-English: A donkey kicked Alfred but it is not the case that Alfred drank. :: `(∃x(Mx∧Qxa)∧¬Ha)`
-Carroll: A tove galumphed over Zindle but it is not the case that Zindle gyred. :: `(∃x(Mx∧Qxa)∧¬Ha)`
+English: Not all humans are hungry but it is not the case that Lewis didn't kick Alfred. :: `(∃x(Nx∧¬Lx)∧¬¬Qba)`
+Carroll: Not all borogoves are beamish but it is not the case that Rafin didn't galumph over Zindle. :: `(∃x(Nx∧¬Lx)∧¬¬Qba)`
 
-English: A human is hungry but it is not the case that Alfred is happy. :: `(∃x(Nx∧Lx)∧¬Ka)`
-Carroll: A borogove is beamish but it is not the case that Zindle is uffish. :: `(∃x(Nx∧Lx)∧¬Ka)`
+English: Not all humans are hungry but it is not the case that Lewis saw Alfred. :: `(∃x(Nx∧¬Lx)∧¬Pba)`
+Carroll: Not all borogoves are beamish but it is not the case that Rafin chortled at Zindle. :: `(∃x(Nx∧¬Lx)∧¬Pba)`
 
-English: No donkeys are hungry but it is not the case that Alfred saw Lewis. :: `(¬∃x(Mx∧Lx)∧¬Pab)`
-Carroll: No toves are beamish but it is not the case that Zindle chortled at Rafin. :: `(¬∃x(Mx∧Lx)∧¬Pab)`
+English: A human is happy but it is not the case that Hazel saw Hazel. :: `(∃x(Nx∧Kx)∧¬Pcc)`
+Carroll: A borogove is uffish but it is not the case that Bungo chortled at Bungo. :: `(∃x(Nx∧Kx)∧¬Pcc)`
 
 ### Disjunctions
 
 ### disjunction_simple
 
-English: Lewis didn't chase Hazel or no humans chased Hazel. :: `(¬Rbc∨¬∃x(Nx∧Rxc))`
-Carroll: Rafin didn't snicker-snacked Bungo or no borogoves snicker-snacked Bungo. :: `(¬Rbc∨¬∃x(Nx∧Rxc))`
+English: Not all humans chased Lewis or every human saw Hazel. :: `(∃x(Nx∧¬Rxb)∨∀x(Nx→Pxc))`
+Carroll: Not all borogoves snicker-snacked Rafin or every borogove chortled at Bungo. :: `(∃x(Nx∧¬Rxb)∨∀x(Nx→Pxc))`
 
-English: Every monkey is asleep or every monkey will attack. :: `(∀x(Ox→Jx)∨∀x(Ox→Gx))`
-Carroll: Every rath is mimsy or every rath will burble. :: `(∀x(Ox→Jx)∨∀x(Ox→Gx))`
+English: Alfred drank or a monkey kicked Alfred. :: `(Ha∨∃x(Ox∧Qxa))`
+Carroll: Zindle gyred or a rath galumphed over Zindle. :: `(Ha∨∃x(Ox∧Qxa))`
 
-English: Lewis kicked Lewis or no humans saw Lewis. :: `(Qbb∨¬∃x(Nx∧Pxb))`
-Carroll: Rafin galumphed over Rafin or no borogoves chortled at Rafin. :: `(Qbb∨¬∃x(Nx∧Pxb))`
+English: Every monkey will run or a monkey kicked Lewis. :: `(∀x(Ox→Fx)∨∃x(Ox∧Qxb))`
+Carroll: Every rath will whiffle or a rath galumphed over Rafin. :: `(∀x(Ox→Fx)∨∃x(Ox∧Qxb))`
 
-English: Hazel isn't a monkey or no humans chased Hazel. :: `(¬Oc∨¬∃x(Nx∧Rxc))`
-Carroll: Bungo isn't a rath or no borogoves snicker-snacked Bungo. :: `(¬Oc∨¬∃x(Nx∧Rxc))`
+English: A human is asleep or not all monkeys saw Hazel. :: `(∃x(Nx∧Jx)∨∃x(Ox∧¬Pxc))`
+Carroll: A borogove is mimsy or not all raths chortled at Bungo. :: `(∃x(Nx∧Jx)∨∃x(Ox∧¬Pxc))`
 
 ### disjunction_vp_ellipsis
 
-English: Alfred or Lewis will run. :: `(Fa∨Fb)`
-Carroll: Zindle or Rafin will whiffle. :: `(Fa∨Fb)`
+English: Lewis or Hazel will attack. :: `(Gb∨Gc)`
+Carroll: Rafin or Bungo will burble. :: `(Gb∨Gc)`
 
-English: Alfred or Hazel are happy. :: `(Ka∨Kc)`
-Carroll: Zindle or Bungo are uffish. :: `(Ka∨Kc)`
+English: Alfred or Lewis are hungry. :: `(La∨Lb)`
+Carroll: Zindle or Rafin are beamish. :: `(La∨Lb)`
 
-English: Alfred or Hazel will attack. :: `(Ga∨Gc)`
-Carroll: Zindle or Bungo will burble. :: `(Ga∨Gc)`
+English: Lewis or Alfred drank. :: `(Hb∨Ha)`
+Carroll: Rafin or Zindle gyred. :: `(Hb∨Ha)`
 
-English: Lewis or Hazel are asleep. :: `(Jb∨Jc)`
-Carroll: Rafin or Bungo are mimsy. :: `(Jb∨Jc)`
+English: Hazel or Lewis are hungry. :: `(Lc∨Lb)`
+Carroll: Bungo or Rafin are beamish. :: `(Lc∨Lb)`
 
 ### disjunction_unless
 
-English: Alfred doesn't see Alfred unless Hazel doesn't see Lewis. :: `(¬¬Pcb→¬Paa)`
-Carroll: Zindle didn't chortle at Zindle unless Bungo didn't chortle at Rafin. :: `(¬¬Pcb→¬Paa)`
+English: A human kicked Lewis unless only donkeys drank. :: `(¬∀x(Hx→Mx)→∃x(Nx∧Qxb))`
+Carroll: A borogove galumphed over Rafin unless only toves gyred. :: `(¬∀x(Hx→Mx)→∃x(Nx∧Qxb))`
 
-English: No monkeys saw Lewis unless no humans chased Alfred. :: `(¬¬∃x(Nx∧Rxa)→¬∃x(Ox∧Pxb))`
-Carroll: No raths chortled at Rafin unless no borogoves snicker-snacked Zindle. :: `(¬¬∃x(Nx∧Rxa)→¬∃x(Ox∧Pxb))`
+English: A human is asleep unless every human saw Hazel. :: `(¬∀x(Nx→Pxc)→∃x(Nx∧Jx))`
+Carroll: A borogove is mimsy unless every borogove chortled at Bungo. :: `(¬∀x(Nx→Pxc)→∃x(Nx∧Jx))`
 
-English: Every human is happy unless Alfred kicked Lewis. :: `(¬Qab→∀x(Nx→Kx))`
-Carroll: Every borogove is uffish unless Zindle galumphed over Rafin. :: `(¬Qab→∀x(Nx→Kx))`
+English: Every monkey will run unless a monkey is hungry. :: `(¬∃x(Ox∧Lx)→∀x(Ox→Fx))`
+Carroll: Every rath will whiffle unless a rath is beamish. :: `(¬∃x(Ox∧Lx)→∀x(Ox→Fx))`
 
-English: Every monkey is asleep unless every donkey saw Lewis. :: `(¬∀x(Mx→Pxb)→∀x(Ox→Jx))`
-Carroll: Every rath is mimsy unless every tove chortled at Rafin. :: `(¬∀x(Mx→Pxb)→∀x(Ox→Jx))`
+English: Alfred doesn't see Lewis unless not all monkeys saw Hazel. :: `(¬∃x(Ox∧¬Pxc)→¬Pab)`
+Carroll: Zindle didn't chortle at Rafin unless not all raths chortled at Bungo. :: `(¬∃x(Ox∧¬Pxc)→¬Pab)`
 
 ### disjunction_negated_disjunct
 
-English: Every monkey saw Alfred or it is not the case that Lewis isn't hungry. :: `(∀x(Ox→Pxa)∨¬¬Lb)`
-Carroll: Every rath chortled at Zindle or it is not the case that Rafin isn't beamish. :: `(∀x(Ox→Pxa)∨¬¬Lb)`
+English: Alfred drank or it is not the case that Lewis kicked Lewis. :: `(Ha∨¬Qbb)`
+Carroll: Zindle gyred or it is not the case that Rafin galumphed over Rafin. :: `(Ha∨¬Qbb)`
 
-English: Only donkeys will attack or it is not the case that Alfred isn't happy. :: `(∀x(Gx→Mx)∨¬¬Ka)`
-Carroll: Only toves will burble or it is not the case that Zindle isn't uffish. :: `(∀x(Gx→Mx)∨¬¬Ka)`
+English: No donkeys kicked Alfred or it is not the case that Alfred doesn't see Lewis. :: `(¬∃x(Mx∧Qxa)∨¬¬Pab)`
+Carroll: No toves galumphed over Zindle or it is not the case that Zindle didn't chortle at Rafin. :: `(¬∃x(Mx∧Qxa)∨¬¬Pab)`
 
-English: Hazel isn't a human or it is not the case that Lewis chased Lewis. :: `(¬Nc∨¬Rbb)`
-Carroll: Bungo isn't a borogove or it is not the case that Rafin snicker-snacked Rafin. :: `(¬Nc∨¬Rbb)`
+English: No donkeys kicked Alfred or it is not the case that Alfred drank. :: `(¬∃x(Mx∧Qxa)∨¬Ha)`
+Carroll: No toves galumphed over Zindle or it is not the case that Zindle gyred. :: `(¬∃x(Mx∧Qxa)∨¬Ha)`
 
-English: Alfred chased Alfred or it is not the case that Hazel will attack. :: `(Raa∨¬Gc)`
-Carroll: Zindle snicker-snacked Zindle or it is not the case that Bungo will burble. :: `(Raa∨¬Gc)`
+English: Hazel isn't a human or it is not the case that Hazel doesn't see Alfred. :: `(¬Nc∨¬¬Pca)`
+Carroll: Bungo isn't a borogove or it is not the case that Bungo didn't chortle at Zindle. :: `(¬Nc∨¬¬Pca)`
 
 ### Conditionals
 
 ### conditional_if_then
 
-English: If not all donkeys are happy, then not all humans are happy. :: `(∃x(Mx∧¬Kx)→∃x(Nx∧¬Kx))`
-Carroll: If not all toves are uffish, then not all borogoves are uffish. :: `(∃x(Mx∧¬Kx)→∃x(Nx∧¬Kx))`
+English: If Hazel is a human, then Alfred isn't a human. :: `(Nc→¬Na)`
+Carroll: If Bungo is a borogove, then Zindle isn't a borogove. :: `(Nc→¬Na)`
 
-English: If every monkey kicked Alfred, then every donkey is happy. :: `(∀x(Ox→Qxa)→∀x(Mx→Kx))`
-Carroll: If every rath galumphed over Zindle, then every tove is uffish. :: `(∀x(Ox→Qxa)→∀x(Mx→Kx))`
+English: If every monkey kicked Lewis, then not all donkeys saw Lewis. :: `(∀x(Ox→Qxb)→∃x(Mx∧¬Pxb))`
+Carroll: If every rath galumphed over Rafin, then not all toves chortled at Rafin. :: `(∀x(Ox→Qxb)→∃x(Mx∧¬Pxb))`
 
-English: If Hazel isn't a human, then not all donkeys saw Lewis. :: `(¬Nc→∃x(Mx∧¬Pxb))`
-Carroll: If Bungo isn't a borogove, then not all toves chortled at Rafin. :: `(¬Nc→∃x(Mx∧¬Pxb))`
+English: If a monkey chased Hazel, then not all humans kicked Hazel. :: `(∃x(Ox∧Rxc)→∃x(Nx∧¬Qxc))`
+Carroll: If a rath snicker-snacked Bungo, then not all borogoves galumphed over Bungo. :: `(∃x(Ox∧Rxc)→∃x(Nx∧¬Qxc))`
 
-English: If Alfred kicked Lewis, then not all humans are happy. :: `(Qab→∃x(Nx∧¬Kx))`
-Carroll: If Zindle galumphed over Rafin, then not all borogoves are uffish. :: `(Qab→∃x(Nx∧¬Kx))`
+English: If Alfred doesn't see Alfred, then a donkey saw Lewis. :: `(¬Paa→∃x(Mx∧Pxb))`
+Carroll: If Zindle didn't chortle at Zindle, then a tove chortled at Rafin. :: `(¬Paa→∃x(Mx∧Pxb))`
 
 ### conditional_only_if
 
-English: Every donkey will attack only if not all humans are hungry. :: `(∀x(Mx→Gx)→∃x(Nx∧¬Lx))`
-Carroll: Every tove will burble only if not all borogoves are beamish. :: `(∀x(Mx→Gx)→∃x(Nx∧¬Lx))`
+English: Not all humans kicked Hazel only if a donkey saw Lewis. :: `(∃x(Nx∧¬Qxc)→∃x(Mx∧Pxb))`
+Carroll: Not all borogoves galumphed over Bungo only if a tove chortled at Rafin. :: `(∃x(Nx∧¬Qxc)→∃x(Mx∧Pxb))`
 
-English: Every donkey will attack only if no donkeys are asleep. :: `(∀x(Mx→Gx)→¬∃x(Mx∧Jx))`
-Carroll: Every tove will burble only if no toves are mimsy. :: `(∀x(Mx→Gx)→¬∃x(Mx∧Jx))`
+English: No humans chased Hazel only if a monkey saw Alfred. :: `(¬∃x(Nx∧Rxc)→∃x(Ox∧Pxa))`
+Carroll: No borogoves snicker-snacked Bungo only if a rath chortled at Zindle. :: `(¬∃x(Nx∧Rxc)→∃x(Ox∧Pxa))`
 
-English: No humans drank only if not all donkeys saw Hazel. :: `(¬∃x(Nx∧Hx)→∃x(Mx∧¬Pxc))`
-Carroll: No borogoves gyred only if not all toves chortled at Bungo. :: `(¬∃x(Nx∧Hx)→∃x(Mx∧¬Pxc))`
+English: Every monkey kicked Lewis only if not all donkeys are hungry. :: `(∀x(Ox→Qxb)→∃x(Mx∧¬Lx))`
+Carroll: Every rath galumphed over Rafin only if not all toves are beamish. :: `(∀x(Ox→Qxb)→∃x(Mx∧¬Lx))`
 
-English: Every human saw Alfred only if every monkey kicked Alfred. :: `(∀x(Nx→Pxa)→∀x(Ox→Qxa))`
-Carroll: Every borogove chortled at Zindle only if every rath galumphed over Zindle. :: `(∀x(Nx→Pxa)→∀x(Ox→Qxa))`
+English: A human chased Lewis only if every monkey kicked Lewis. :: `(∃x(Nx∧Rxb)→∀x(Ox→Qxb))`
+Carroll: A borogove snicker-snacked Rafin only if every rath galumphed over Rafin. :: `(∃x(Nx∧Rxb)→∀x(Ox→Qxb))`
 
 ### conditional_nested
 
-English: If Alfred kicked Hazel, then Alfred isn't happy only if not all donkeys ate. :: `(Qac→(¬Ka→∃x(Mx∧¬Ix)))`
-Carroll: If Zindle galumphed over Bungo, then Zindle isn't uffish only if not all toves gimbled. :: `(Qac→(¬Ka→∃x(Mx∧¬Ix)))`
+English: If a human chased Lewis, then Hazel kicked Hazel only if every monkey saw Hazel. :: `(∃x(Nx∧Rxb)→(Qcc→∀x(Ox→Pxc)))`
+Carroll: If a borogove snicker-snacked Rafin, then Bungo galumphed over Bungo only if every rath chortled at Bungo. :: `(∃x(Nx∧Rxb)→(Qcc→∀x(Ox→Pxc)))`
 
-English: If every donkey saw Lewis, then Alfred is happy only if a human is happy. :: `(∀x(Mx→Pxb)→(Ka→∃x(Nx∧Kx)))`
-Carroll: If every tove chortled at Rafin, then Zindle is uffish only if a borogove is uffish. :: `(∀x(Mx→Pxb)→(Ka→∃x(Nx∧Kx)))`
+English: If a human chased Lewis, then every monkey saw Lewis only if Hazel is hungry. :: `(∃x(Nx∧Rxb)→(∀x(Ox→Pxb)→Lc))`
+Carroll: If a borogove snicker-snacked Rafin, then every rath chortled at Rafin only if Bungo is beamish. :: `(∃x(Nx∧Rxb)→(∀x(Ox→Pxb)→Lc))`
 
-English: If every human chased Hazel, then Hazel chased Alfred only if not all donkeys ate. :: `(∀x(Nx→Rxc)→(Rca→∃x(Mx∧¬Ix)))`
-Carroll: If every borogove snicker-snacked Bungo, then Bungo snicker-snacked Zindle only if not all toves gimbled. :: `(∀x(Nx→Rxc)→(Rca→∃x(Mx∧¬Ix)))`
+English: If every monkey chased Hazel, then Hazel kicked Hazel only if no monkeys kicked Hazel. :: `(∀x(Ox→Rxc)→(Qcc→¬∃x(Ox∧Qxc)))`
+Carroll: If every rath snicker-snacked Bungo, then Bungo galumphed over Bungo only if no raths galumphed over Bungo. :: `(∀x(Ox→Rxc)→(Qcc→¬∃x(Ox∧Qxc)))`
 
-English: If no humans will attack, then Alfred isn't asleep only if Hazel is a human. :: `(¬∃x(Nx∧Gx)→(¬Ja→Nc))`
-Carroll: If no borogoves will burble, then Zindle isn't mimsy only if Bungo is a borogove. :: `(¬∃x(Nx∧Gx)→(¬Ja→Nc))`
+English: If Lewis is hungry, then not all donkeys kicked Hazel only if no donkeys ate. :: `(Lb→(∃x(Mx∧¬Qxc)→¬∃x(Mx∧Ix)))`
+Carroll: If Rafin is beamish, then not all toves galumphed over Bungo only if no toves gimbled. :: `(Lb→(∃x(Mx∧¬Qxc)→¬∃x(Mx∧Ix)))`
 
 ### Biconditionals
 
 ### biconditional_if_and_only_if
 
-English: Hazel chased Hazel if and only if Lewis isn't asleep. :: `(Rcc↔¬Jb)`
-Carroll: Bungo snicker-snacked Bungo if and only if Rafin isn't mimsy. :: `(Rcc↔¬Jb)`
+English: A human is happy if and only if every donkey chased Lewis. :: `(∃x(Nx∧Kx)↔∀x(Mx→Rxb))`
+Carroll: A borogove is uffish if and only if every tove snicker-snacked Rafin. :: `(∃x(Nx∧Kx)↔∀x(Mx→Rxb))`
 
-English: Alfred didn't kick Alfred if and only if no monkeys chased Lewis. :: `(¬Qaa↔¬∃x(Ox∧Rxb))`
-Carroll: Zindle didn't galumph over Zindle if and only if no raths snicker-snacked Rafin. :: `(¬Qaa↔¬∃x(Ox∧Rxb))`
+English: Alfred doesn't see Hazel if and only if not all humans kicked Lewis. :: `(¬Pac↔∃x(Nx∧¬Qxb))`
+Carroll: Zindle didn't chortle at Bungo if and only if not all borogoves galumphed over Rafin. :: `(¬Pac↔∃x(Nx∧¬Qxb))`
 
-English: A monkey is asleep if and only if every human saw Lewis. :: `(∃x(Ox∧Jx)↔∀x(Nx→Pxb))`
-Carroll: A rath is mimsy if and only if every borogove chortled at Rafin. :: `(∃x(Ox∧Jx)↔∀x(Nx→Pxb))`
+English: No donkeys chased Alfred if and only if a human saw Hazel. :: `(¬∃x(Mx∧Rxa)↔∃x(Nx∧Pxc))`
+Carroll: No toves snicker-snacked Zindle if and only if a borogove chortled at Bungo. :: `(¬∃x(Mx∧Rxa)↔∃x(Nx∧Pxc))`
 
-English: A monkey is asleep if and only if Hazel didn't eat. :: `(∃x(Ox∧Jx)↔¬Ic)`
-Carroll: A rath is mimsy if and only if Bungo didn't gimble. :: `(∃x(Ox∧Jx)↔¬Ic)`
+English: No donkeys will attack if and only if no humans are hungry. :: `(¬∃x(Mx∧Gx)↔¬∃x(Nx∧Lx))`
+Carroll: No toves will burble if and only if no borogoves are beamish. :: `(¬∃x(Mx∧Gx)↔¬∃x(Nx∧Lx))`
 
 ### biconditional_just_in_case
 
-English: No donkeys will run just in case every human kicked Lewis. :: `(¬∃x(Mx∧Fx)↔∀x(Nx→Qxb))`
-Carroll: No toves will whiffle just in case every borogove galumphed over Rafin. :: `(¬∃x(Mx∧Fx)↔∀x(Nx→Qxb))`
+English: A human is happy just in case not all humans are asleep. :: `(∃x(Nx∧Kx)↔∃x(Nx∧¬Jx))`
+Carroll: A borogove is uffish just in case not all borogoves are mimsy. :: `(∃x(Nx∧Kx)↔∃x(Nx∧¬Jx))`
 
-English: Not all monkeys saw Lewis just in case Lewis will run. :: `(∃x(Ox∧¬Pxb)↔Fb)`
-Carroll: Not all raths chortled at Rafin just in case Rafin will whiffle. :: `(∃x(Ox∧¬Pxb)↔Fb)`
+English: Not all donkeys drank just in case no humans are hungry. :: `(∃x(Mx∧¬Hx)↔¬∃x(Nx∧Lx))`
+Carroll: Not all toves gyred just in case no borogoves are beamish. :: `(∃x(Mx∧¬Hx)↔¬∃x(Nx∧Lx))`
 
-English: Not all monkeys saw Lewis just in case a monkey saw Alfred. :: `(∃x(Ox∧¬Pxb)↔∃x(Ox∧Pxa))`
-Carroll: Not all raths chortled at Rafin just in case a rath chortled at Zindle. :: `(∃x(Ox∧¬Pxb)↔∃x(Ox∧Pxa))`
+English: No monkeys saw Lewis just in case Lewis saw Hazel. :: `(¬∃x(Ox∧Pxb)↔Pbc)`
+Carroll: No raths chortled at Rafin just in case Rafin chortled at Bungo. :: `(¬∃x(Ox∧Pxb)↔Pbc)`
 
-English: A monkey is asleep just in case every human kicked Lewis. :: `(∃x(Ox∧Jx)↔∀x(Nx→Qxb))`
-Carroll: A rath is mimsy just in case every borogove galumphed over Rafin. :: `(∃x(Ox∧Jx)↔∀x(Nx→Qxb))`
+English: Not all humans kicked Alfred just in case not all humans kicked Lewis. :: `(∃x(Nx∧¬Qxa)↔∃x(Nx∧¬Qxb))`
+Carroll: Not all borogoves galumphed over Zindle just in case not all borogoves galumphed over Rafin. :: `(∃x(Nx∧¬Qxa)↔∃x(Nx∧¬Qxb))`
+

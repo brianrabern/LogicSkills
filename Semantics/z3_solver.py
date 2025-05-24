@@ -7,6 +7,7 @@ import sys
 import traceback
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
+import gc
 
 # Constants
 Z3_TIMEOUT = 5000  # 5 second timeout in milliseconds
@@ -84,42 +85,95 @@ class Z3Handler(BaseHTTPRequestHandler):
 
     def evaluate_formula(self, formula):
         try:
-            # Create a new solver for each request with timeout
-            solver = z3.Solver()
-            solver.set("timeout", Z3_TIMEOUT)  # Set timeout in milliseconds
+            # Create a fresh Z3 context to isolate memory
+            ctx = z3.Context()
+            solver = z3.Solver(ctx=ctx)
+            solver.set("timeout", Z3_TIMEOUT)
 
             try:
-                # Parse the SMT-LIB formula
-                parsed_formula = z3.parse_smt2_string(formula)
+                parsed_formula = z3.parse_smt2_string(formula, ctx=ctx)
             except Exception as e:
                 logger.error(f"Error parsing formula: {str(e)}")
                 return "error: invalid formula"
 
             try:
-                # Add the formula to the solver
                 solver.add(parsed_formula)
             except Exception as e:
                 logger.error(f"Error adding formula to solver: {str(e)}")
                 return "error: invalid formula"
 
             try:
-                # Check satisfiability
                 result = solver.check()
             except Exception as e:
                 logger.error(f"Error checking satisfiability: {str(e)}")
                 return "error: solver error"
 
             if result == z3.sat:
-                return "sat"
+                response = "sat"
             elif result == z3.unsat:
-                return "unsat"
+                response = "unsat"
             else:
-                return "unknown"
+                response = "unknown"
+
+            # Explicit cleanup
+            del solver
+            del parsed_formula
+            del ctx
+            gc.collect()  # Force full cleanup of memory
+
+            return response
 
         except Exception as e:
             logger.error(f"Error evaluating formula: {str(e)}")
             logger.error(traceback.format_exc())
             return "error: internal error"
+
+    # def evaluate_formula(self, formula):
+    #     try:
+    #         # Create a new solver for each request with timeout
+    #         solver = z3.Solver()
+    #         solver.set("timeout", Z3_TIMEOUT)  # Set timeout in milliseconds
+
+    #         try:
+    #             # Parse the SMT-LIB formula
+    #             parsed_formula = z3.parse_smt2_string(formula)
+    #         except Exception as e:
+    #             logger.error(f"Error parsing formula: {str(e)}")
+    #             return "error: invalid formula"
+
+    #         try:
+    #             # Add the formula to the solver
+    #             solver.add(parsed_formula)
+    #         except Exception as e:
+    #             logger.error(f"Error adding formula to solver: {str(e)}")
+    #             return "error: invalid formula"
+
+    #         try:
+    #             # Check satisfiability
+    #             result = solver.check()
+    #         except Exception as e:
+    #             logger.error(f"Error checking satisfiability: {str(e)}")
+    #             return "error: solver error"
+
+    #         # Get the result before cleanup
+    #         if result == z3.sat:
+    #             response = "sat"
+    #         elif result == z3.unsat:
+    #             response = "unsat"
+    #         else:
+    #             response = "unknown"
+
+    #         # Clean up memory
+    #         solver.reset()
+    #         del solver
+    #         del parsed_formula
+
+    #         return response
+
+    #     except Exception as e:
+    #         logger.error(f"Error evaluating formula: {str(e)}")
+    #         logger.error(traceback.format_exc())
+    #         return "error: internal error"
 
     def log_message(self, format, *args):
         """Override to use our logger instead of stderr"""

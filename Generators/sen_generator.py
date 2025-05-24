@@ -1741,10 +1741,10 @@ class SentenceGenerator:
                 or e3["subtype"] == "only_restrictor"
             ):
                 continue
-            # only create if at least one entry is quantified
-            if any(e["type"] == "quantified" for e in [e1, e2, e3]):
+            # only create if at least two entries are quantified
+            if sum(e["type"] == "quantified" for e in [e1, e2, e3]) >= 2:
                 self._add_if_then_only_if(e1, e2, e3)
-            elif random.random() < 0.2:  # 20% chance to include non-quantified combinations
+            elif random.random() < 0.05:  # 5% chance to include non-quantified combinations
                 self._add_if_then_only_if(e1, e2, e3)
 
     # ===== Compound Sentence Helper Methods =====
@@ -2109,13 +2109,18 @@ class SentenceGenerator:
         # update counterpart relationship
         self.db.update_sentence_counterpart(nested1_id, nested2_id)
 
-    def _sample_base_entries(self, min_size=20, max_size=50, sample_ratio=0.3):
-        """Sample base entries for compound sentence generation."""
+    def _sample_base_entries(self, ratio=0.1):
+        """Sample a random subset (~10%) of base entries."""
         entries = self.get_base_entries(language=self.language1)
-        sample_size = min(max_size, max(min_size, int(len(entries) * sample_ratio)))
+        sample_size = int(len(entries) * ratio)
         sampled_entries = random.sample(entries, sample_size)
-        logger.info(f"Sampled {len(sampled_entries)} entries")
         return sampled_entries
+
+    def _sample_base_entries_by_type(self, ratio=0.1):
+        """Sample a random subset (~10%) of base entries by type."""
+        entries = self.get_base_entries(language=self.language1)
+        sample_size = int(len(entries) * ratio)
+        sampled_entries = random.sample(entries, sample_size)
 
 
 if __name__ == "__main__":
@@ -2128,33 +2133,33 @@ if __name__ == "__main__":
 
     def generate_all_sentences():
         """Generate all sentence types."""
-        print("Generating domain constraint...")
-        generator.generate_domain_constraint()
+        # print("Generating domain constraint...")
+        # generator.generate_domain_constraint()
 
-        print("Generating atomic sentences...")
-        generator.generate_atomic_sentences()
+        # print("Generating atomic sentences...")
+        # generator.generate_atomic_sentences()
 
-        print("Generating simple quantified sentences...")
-        generator.generate_simple_quantified_sentences()
+        # print("Generating simple quantified sentences...")
+        # generator.generate_simple_quantified_sentences()
 
-        print("Generating multiply quantified sentences...")
-        generator.generate_multiply_quantified_sentences()
+        # print("Generating multiply quantified sentences...")
+        # generator.generate_multiply_quantified_sentences()
 
-        print("Generating reciprocal quantified sentences...")
-        generator.generate_reciprocal_quantified_sentences()
+        # print("Generating reciprocal quantified sentences...")
+        # generator.generate_reciprocal_quantified_sentences()
 
-        print("Generating complex dyadic sentences...")
-        generator.generate_complex_dyadic_sentences()
+        # print("Generating complex dyadic sentences...")
+        # generator.generate_complex_dyadic_sentences()
 
-        print("Generating name quantified sentences...")
-        generator.generate_name_quantified_sentences()
+        # print("Generating name quantified sentences...")
+        # generator.generate_name_quantified_sentences()
 
         print("Generating compound sentences...")
         generator.generate_conjunctions()
-        generator.generate_disjunctions()
-        generator.generate_conditionals()
-        generator.generate_biconditionals()
-        generator.generate_nested_conditionals()
+        # generator.generate_disjunctions()
+        # generator.generate_conditionals()
+        # generator.generate_biconditionals()
+        # generator.generate_nested_conditionals()
 
     def create_samples(n=2):
         """Create a markdown file with samples of each sentence type."""
@@ -2284,4 +2289,4 @@ if __name__ == "__main__":
     generate_all_sentences()
 
     # Create samples
-    create_samples(n=4)
+    # create_samples(n=4)
