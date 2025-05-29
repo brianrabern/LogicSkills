@@ -70,7 +70,11 @@ def ast_to_smt2(ast):
 
     return {
         "smt2": smt2,
-        "names": names,
-        "monadic_predicates": {p for p, arity in preds.items() if arity == 1},
-        "binary_predicates": {p for p, arity in preds.items() if arity == 2},
+        "names": [
+            n
+            for n in names
+            if n in ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r"]
+        ],
+        "monadic_predicates": [p for p, arity in preds.items() if arity == 1],
+        "binary_predicates": [p for p, arity in preds.items() if arity == 2],
     }

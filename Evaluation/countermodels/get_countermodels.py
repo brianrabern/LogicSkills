@@ -1,12 +1,15 @@
 from Database.DB import db
 from Database.models import Argument, Sentence
 from Semantics.eval import evaluate
+import json
+import os
+from datetime import datetime
 
 session = db.session
 
 
-def get_argument(argument_id):
-    argument = session.get(Argument, argument_id)
+def get_argument(argument):
+    print("Parsing argument: ", argument.id)
     language = argument.language
     domain_constraint = session.query(Sentence).filter_by(type="domain_constraint", language=language).first()
     domain_constraint_ast = domain_constraint.ast
@@ -37,18 +40,38 @@ def get_countermodel(ast):
         print("\nCountermodel:")
         print(model)
         return model
-        # return parse_model(model) TODO
     else:
         print("No countermodel exists - the argument is valid")
         return None
 
 
-# TODO
-# def parse_model(model):
-#     # parse the model into a dictionary
-#     model_dict = {}
+def save_countermodel(argument_id, model):
+    # Define the file path
+    file_path = os.path.join(os.path.dirname(__file__), "countermodels.json")
+
+    # Load existing countermodels if file exists
+    if os.path.exists(file_path):
+        with open(file_path, "r") as f:
+            countermodels = json.load(f)
+    else:
+        countermodels = {}
+
+    # Add new countermodel with timestamp
+    countermodels[argument_id] = {"model": json.loads(model), "timestamp": datetime.now().isoformat()}
+
+    # Save updated countermodels
+    with open(file_path, "w") as f:
+        json.dump(countermodels, f, indent=2)
 
 
-# Get the argument and find its countermodel
-argument_ast = get_argument("ffff0dcc358c697b")
-model = get_countermodel(argument_ast)
+if __name__ == "__main__":
+
+    invalid_arguments = session.query(Argument).filter_by(valid=False).all()
+
+    for argument in invalid_arguments:
+        argument_ast = get_argument(argument)
+        print("Getting countermodel for argument: ", argument.id)
+        model = get_countermodel(argument_ast)
+        if model:
+            print("Saving countermodel for argument: ", argument.id)
+            save_countermodel(argument.id, model)
