@@ -317,11 +317,20 @@ class ArgGenerator:
                     return False
                 subset_asts.append(ast)
 
+            # Get domain constraint
+            domain_constraint = self._get_domain_constraint()
+            if domain_constraint:
+                logging.debug("Including domain constraint in subset check")
+
             # Build joint AST
             try:
                 joint_ast = subset_asts[0]
                 for ast in subset_asts[1:]:
                     joint_ast = ["and", joint_ast, ast]
+
+                # Add domain constraint if it exists
+                if domain_constraint:
+                    joint_ast = ["and", joint_ast, self._domain_constraint_ast]
             except IndexError as e:
                 logging.error(f"Error building joint AST: {e}")
                 return False
@@ -416,12 +425,24 @@ class ArgGenerator:
                 logging.error("Failed to get all premise ASTs")
                 return None
 
+            # Get domain constraint
+            domain_constraint = self._get_domain_constraint()
+            if domain_constraint:
+                logging.debug("Including domain constraint in validity check")
+
+            # Build joint AST with premises
             joint_ast = premise_asts[0]
             for ast in premise_asts[1:]:
                 joint_ast = ["and", joint_ast, ast]
-            implication = ["and", joint_ast, ["not", conclusion_ast]]
 
+            # Add domain constraint if it exists
+            if domain_constraint:
+                joint_ast = ["and", joint_ast, self._domain_constraint_ast]
+
+            # Check if conclusion follows
+            implication = ["and", joint_ast, ["not", conclusion_ast]]
             result = self._safe_evaluate(implication, convert_json=True) == "unsat"
+
             # Cache the result
             self._valid_argument_cache[cache_key] = result
             if result:
@@ -620,8 +641,19 @@ class ArgGenerator:
                 logging.info(f"Reached maximum of {max_invalid} invalid arguments")
                 break
 
-            # Check if it's actually invalid
-            is_valid = self.is_keeper_argument(premises, candidate)
+            # First check if it follows from domain constraints alone
+            if self._check_domain_constraints(candidate):
+                logging.debug(f"Skipping candidate {candidate['id']} - follows from domain constraints alone")
+                continue
+
+            # Get conclusion AST
+            conclusion_ast = self._get_premise_ast(candidate["id"])
+            if not conclusion_ast:
+                logging.error("Failed to get conclusion AST")
+                continue
+
+            # Check if it's actually invalid using _is_valid_argument directly
+            is_valid = self._is_valid_argument(premises, conclusion_ast)
             if is_valid is None:
                 logging.debug(f"Skipping candidate {candidate['id']} - validation failed")
                 continue

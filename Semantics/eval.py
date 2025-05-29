@@ -14,10 +14,9 @@ Z3_SERVER = "http://localhost:8001"  # single z3 server
 logger.info(f"Using Z3 server at: {Z3_SERVER}")
 
 
-def evaluate(sentence_ast, convert_json=False):
+def evaluate(sentence_ast, convert_json=False, return_model=False):
     """
     Evaluate a sentence AST using Z3.
-    Returns 'sat' if satisfiable, 'unsat' if unsatisfiable, or 'error' if evaluation failed.
     """
     try:
         if convert_json:
@@ -28,8 +27,12 @@ def evaluate(sentence_ast, convert_json=False):
         smt = ast_to_smt2(sentence_ast)["smt2"]
         logger.info(f"SMT sent to Z3: {smt}")
 
+        # Choose endpoint based on whether we want the model
+        endpoint = f"{Z3_SERVER}/model" if return_model else Z3_SERVER
+        logger.info(f"Using endpoint: {endpoint}")
+
         # send to z3 server
-        response = requests.post(Z3_SERVER, data=smt, headers={"Content-Type": "text/plain"}, timeout=10)
+        response = requests.post(endpoint, data=smt, headers={"Content-Type": "text/plain"}, timeout=10)
         response.raise_for_status()
 
         result = response.text.strip()

@@ -1,0 +1,1506 @@
+[
+  {
+    "argument_id": "03d736d0dd99cd66",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 276,
+        "language": "carroll"
+      },
+      {
+        "id": 1142,
+        "language": "carroll"
+      },
+      {
+        "id": 1228,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "04b3dbd16326fbf8",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1152,
+        "language": "carroll"
+      },
+      {
+        "id": 1796,
+        "language": "carroll"
+      },
+      {
+        "id": 3020,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "05315e5d560f3f33",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 2638,
+        "language": "carroll"
+      },
+      {
+        "id": 2876,
+        "language": "carroll"
+      },
+      {
+        "id": 4184,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "068aa60e4c4d52f2",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 867,
+        "language": "english"
+      },
+      {
+        "id": 949,
+        "language": "english"
+      },
+      {
+        "id": 10799,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "09693ccd951ccefa",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 533,
+        "language": "english"
+      },
+      {
+        "id": 3669,
+        "language": "english"
+      },
+      {
+        "id": 5919,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "0af7a1d5a56751bd",
+    "argument_language": "english",
+    "conclusion_id": 2664,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 559,
+        "language": "english"
+      },
+      {
+        "id": 2637,
+        "language": "english"
+      },
+      {
+        "id": 4455,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 2664,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "0b7e89cf46e243bc",
+    "argument_language": "english",
+    "conclusion_id": 11276,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1871,
+        "language": "english"
+      },
+      {
+        "id": 3219,
+        "language": "english"
+      },
+      {
+        "id": 3223,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11276,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "0c341b845c7bd59a",
+    "argument_language": "carroll",
+    "conclusion_id": 5467,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1068,
+        "language": "carroll"
+      },
+      {
+        "id": 1586,
+        "language": "carroll"
+      },
+      {
+        "id": 3832,
+        "language": "carroll"
+      },
+      {
+        "id": 8550,
+        "language": "carroll"
+      },
+      {
+        "id": 10564,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 5467,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "1bcf152b2a8cbf15",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1818,
+        "language": "carroll"
+      },
+      {
+        "id": 2488,
+        "language": "carroll"
+      },
+      {
+        "id": 2910,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "22ba5db5174a7d80",
+    "argument_language": "english",
+    "conclusion_id": 5468,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1001,
+        "language": "english"
+      },
+      {
+        "id": 1011,
+        "language": "english"
+      },
+      {
+        "id": 9303,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 5468,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "2e61c229e0b2bea2",
+    "argument_language": "carroll",
+    "conclusion_id": 5467,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 868,
+        "language": "carroll"
+      },
+      {
+        "id": 950,
+        "language": "carroll"
+      },
+      {
+        "id": 10800,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 5467,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "2f8e66160995c696",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 2796,
+        "language": "carroll"
+      },
+      {
+        "id": 6018,
+        "language": "carroll"
+      },
+      {
+        "id": 11052,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "3b242b80eb81c084",
+    "argument_language": "english",
+    "conclusion_id": 2664,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1235,
+        "language": "english"
+      },
+      {
+        "id": 2285,
+        "language": "english"
+      },
+      {
+        "id": 11509,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 2664,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "45b93edf9f9013b6",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1290,
+        "language": "carroll"
+      },
+      {
+        "id": 1898,
+        "language": "carroll"
+      },
+      {
+        "id": 4762,
+        "language": "carroll"
+      },
+      {
+        "id": 10174,
+        "language": "carroll"
+      },
+      {
+        "id": 11216,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "476c4f51e0ca008d",
+    "argument_language": "english",
+    "conclusion_id": 5468,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1579,
+        "language": "english"
+      },
+      {
+        "id": 2195,
+        "language": "english"
+      },
+      {
+        "id": 4693,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 5468,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "4e572ac8b796e844",
+    "argument_language": "english",
+    "conclusion_id": 2664,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 559,
+        "language": "english"
+      },
+      {
+        "id": 667,
+        "language": "english"
+      },
+      {
+        "id": 11307,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 2664,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "50316775a78d7117",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1225,
+        "language": "english"
+      },
+      {
+        "id": 1523,
+        "language": "english"
+      },
+      {
+        "id": 1853,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "52ddc93599e55e54",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 852,
+        "language": "carroll"
+      },
+      {
+        "id": 1174,
+        "language": "carroll"
+      },
+      {
+        "id": 2546,
+        "language": "carroll"
+      },
+      {
+        "id": 4890,
+        "language": "carroll"
+      },
+      {
+        "id": 8964,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "554e8aeab804d415",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 2120,
+        "language": "carroll"
+      },
+      {
+        "id": 3198,
+        "language": "carroll"
+      },
+      {
+        "id": 3678,
+        "language": "carroll"
+      },
+      {
+        "id": 4496,
+        "language": "carroll"
+      },
+      {
+        "id": 8842,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "5a0bc1f7af8cdd54",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1580,
+        "language": "carroll"
+      },
+      {
+        "id": 2196,
+        "language": "carroll"
+      },
+      {
+        "id": 4694,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "5ef0b500e047b263",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1141,
+        "language": "english"
+      },
+      {
+        "id": 3475,
+        "language": "english"
+      },
+      {
+        "id": 4225,
+        "language": "english"
+      },
+      {
+        "id": 4337,
+        "language": "english"
+      },
+      {
+        "id": 4855,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "62ce2d6d39d92dcd",
+    "argument_language": "english",
+    "conclusion_id": 2664,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1203,
+        "language": "english"
+      },
+      {
+        "id": 3757,
+        "language": "english"
+      },
+      {
+        "id": 5051,
+        "language": "english"
+      },
+      {
+        "id": 10921,
+        "language": "english"
+      },
+      {
+        "id": 11309,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 2664,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "65ca4cdadcac584c",
+    "argument_language": "english",
+    "conclusion_id": 5468,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1067,
+        "language": "english"
+      },
+      {
+        "id": 1585,
+        "language": "english"
+      },
+      {
+        "id": 3831,
+        "language": "english"
+      },
+      {
+        "id": 8549,
+        "language": "english"
+      },
+      {
+        "id": 10563,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 5468,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "6d5ee10a684d5bd2",
+    "argument_language": "carroll",
+    "conclusion_id": 5467,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 264,
+        "language": "carroll"
+      },
+      {
+        "id": 1018,
+        "language": "carroll"
+      },
+      {
+        "id": 4738,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 5467,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "79eea943e0f05785",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 560,
+        "language": "carroll"
+      },
+      {
+        "id": 668,
+        "language": "carroll"
+      },
+      {
+        "id": 11308,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "7c2ae144d5d75b0b",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 162,
+        "language": "carroll"
+      },
+      {
+        "id": 842,
+        "language": "carroll"
+      },
+      {
+        "id": 1604,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "7e04a9b39d7b0f34",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 2754,
+        "language": "carroll"
+      },
+      {
+        "id": 4908,
+        "language": "carroll"
+      },
+      {
+        "id": 9708,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "81696e64a91057ed",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 656,
+        "language": "carroll"
+      },
+      {
+        "id": 1142,
+        "language": "carroll"
+      },
+      {
+        "id": 9784,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "834ff21640ea76d3",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 714,
+        "language": "carroll"
+      },
+      {
+        "id": 6066,
+        "language": "carroll"
+      },
+      {
+        "id": 7066,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "8c0adeeb97314551",
+    "argument_language": "english",
+    "conclusion_id": 5468,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 757,
+        "language": "english"
+      },
+      {
+        "id": 1959,
+        "language": "english"
+      },
+      {
+        "id": 2035,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 5468,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "8c2e511eb4b994cc",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 908,
+        "language": "carroll"
+      },
+      {
+        "id": 2284,
+        "language": "carroll"
+      },
+      {
+        "id": 3836,
+        "language": "carroll"
+      },
+      {
+        "id": 5422,
+        "language": "carroll"
+      },
+      {
+        "id": 6800,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "9bec68bc727fe198",
+    "argument_language": "carroll",
+    "conclusion_id": 5467,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 2796,
+        "language": "carroll"
+      },
+      {
+        "id": 6680,
+        "language": "carroll"
+      },
+      {
+        "id": 11512,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 5467,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "a0431488cf71a19a",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 365,
+        "language": "english"
+      },
+      {
+        "id": 2893,
+        "language": "english"
+      },
+      {
+        "id": 6845,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "a1a05665c7a3ffdb",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1274,
+        "language": "carroll"
+      },
+      {
+        "id": 2796,
+        "language": "carroll"
+      },
+      {
+        "id": 11296,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "a3a1dec9b90ca847",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1160,
+        "language": "carroll"
+      },
+      {
+        "id": 1484,
+        "language": "carroll"
+      },
+      {
+        "id": 1968,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "a9511c9d1c0a36b6",
+    "argument_language": "english",
+    "conclusion_id": 5468,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 3035,
+        "language": "english"
+      },
+      {
+        "id": 10885,
+        "language": "english"
+      },
+      {
+        "id": 11521,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 5468,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "af4b96f3f3b600b3",
+    "argument_language": "english",
+    "conclusion_id": 11276,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 161,
+        "language": "english"
+      },
+      {
+        "id": 841,
+        "language": "english"
+      },
+      {
+        "id": 1603,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11276,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "b639e726fe52666b",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 2526,
+        "language": "carroll"
+      },
+      {
+        "id": 2668,
+        "language": "carroll"
+      },
+      {
+        "id": 3082,
+        "language": "carroll"
+      },
+      {
+        "id": 4606,
+        "language": "carroll"
+      },
+      {
+        "id": 6940,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "b91a50ee552cca3a",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1117,
+        "language": "english"
+      },
+      {
+        "id": 2819,
+        "language": "english"
+      },
+      {
+        "id": 8505,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "c2bde3fdb189f106",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 655,
+        "language": "english"
+      },
+      {
+        "id": 1141,
+        "language": "english"
+      },
+      {
+        "id": 9783,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "cc0060d79d232e95",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 560,
+        "language": "carroll"
+      },
+      {
+        "id": 2638,
+        "language": "carroll"
+      },
+      {
+        "id": 4456,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "d0936a67ed5b642c",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 559,
+        "language": "english"
+      },
+      {
+        "id": 2743,
+        "language": "english"
+      },
+      {
+        "id": 4287,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "d9af7915864afbee",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 3036,
+        "language": "carroll"
+      },
+      {
+        "id": 10886,
+        "language": "carroll"
+      },
+      {
+        "id": 11522,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "dbcd2952437dc90c",
+    "argument_language": "english",
+    "conclusion_id": 2664,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 2795,
+        "language": "english"
+      },
+      {
+        "id": 6679,
+        "language": "english"
+      },
+      {
+        "id": 11511,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 2664,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "dcf829bbd2c157b9",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1142,
+        "language": "carroll"
+      },
+      {
+        "id": 3476,
+        "language": "carroll"
+      },
+      {
+        "id": 4226,
+        "language": "carroll"
+      },
+      {
+        "id": 4338,
+        "language": "carroll"
+      },
+      {
+        "id": 4856,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "e174b38e85aa388d",
+    "argument_language": "english",
+    "conclusion_id": 5468,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 1141,
+        "language": "english"
+      },
+      {
+        "id": 3475,
+        "language": "english"
+      },
+      {
+        "id": 4225,
+        "language": "english"
+      },
+      {
+        "id": 4337,
+        "language": "english"
+      },
+      {
+        "id": 4855,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 5468,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "e84f4167dc35c484",
+    "argument_language": "english",
+    "conclusion_id": 11234,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 275,
+        "language": "english"
+      },
+      {
+        "id": 1141,
+        "language": "english"
+      },
+      {
+        "id": 1227,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11234,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "e8a08551dbe45184",
+    "argument_language": "english",
+    "conclusion_id": 11276,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 2753,
+        "language": "english"
+      },
+      {
+        "id": 4907,
+        "language": "english"
+      },
+      {
+        "id": 9707,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 11276,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "ea6c3db9e0877c53",
+    "argument_language": "english",
+    "conclusion_id": 2664,
+    "conclusion_language": "carroll",
+    "premises": [
+      {
+        "id": 2119,
+        "language": "english"
+      },
+      {
+        "id": 3197,
+        "language": "english"
+      },
+      {
+        "id": 3677,
+        "language": "english"
+      },
+      {
+        "id": 4495,
+        "language": "english"
+      },
+      {
+        "id": 8841,
+        "language": "english"
+      }
+    ],
+    "conclusion": {
+      "id": 2664,
+      "language": "carroll"
+    }
+  },
+  {
+    "argument_id": "eb8b4f85894f2286",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 2584,
+        "language": "carroll"
+      },
+      {
+        "id": 2702,
+        "language": "carroll"
+      },
+      {
+        "id": 5254,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "f0a4d6f99329d381",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 656,
+        "language": "carroll"
+      },
+      {
+        "id": 1142,
+        "language": "carroll"
+      },
+      {
+        "id": 9784,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "f314be1c67e74a81",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1872,
+        "language": "carroll"
+      },
+      {
+        "id": 3220,
+        "language": "carroll"
+      },
+      {
+        "id": 3224,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "f51443526f783da2",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 366,
+        "language": "carroll"
+      },
+      {
+        "id": 2894,
+        "language": "carroll"
+      },
+      {
+        "id": 6846,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "f7031bdae601f828",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 976,
+        "language": "carroll"
+      },
+      {
+        "id": 3350,
+        "language": "carroll"
+      },
+      {
+        "id": 3858,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "f7683f600af3db7e",
+    "argument_language": "carroll",
+    "conclusion_id": 11233,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1142,
+        "language": "carroll"
+      },
+      {
+        "id": 3476,
+        "language": "carroll"
+      },
+      {
+        "id": 4226,
+        "language": "carroll"
+      },
+      {
+        "id": 4338,
+        "language": "carroll"
+      },
+      {
+        "id": 4856,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11233,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "fe2d2edc83b6b5d4",
+    "argument_language": "carroll",
+    "conclusion_id": 11275,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 414,
+        "language": "carroll"
+      },
+      {
+        "id": 6586,
+        "language": "carroll"
+      },
+      {
+        "id": 10610,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 11275,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "ff1500b3d177682e",
+    "argument_language": "carroll",
+    "conclusion_id": 2663,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 162,
+        "language": "carroll"
+      },
+      {
+        "id": 842,
+        "language": "carroll"
+      },
+      {
+        "id": 1604,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 2663,
+      "language": "english"
+    }
+  },
+  {
+    "argument_id": "ffe1f91b55a80891",
+    "argument_language": "carroll",
+    "conclusion_id": 5467,
+    "conclusion_language": "english",
+    "premises": [
+      {
+        "id": 1038,
+        "language": "carroll"
+      },
+      {
+        "id": 1798,
+        "language": "carroll"
+      },
+      {
+        "id": 2572,
+        "language": "carroll"
+      },
+      {
+        "id": 4978,
+        "language": "carroll"
+      },
+      {
+        "id": 5956,
+        "language": "carroll"
+      }
+    ],
+    "conclusion": {
+      "id": 5467,
+      "language": "english"
+    }
+  }
+]

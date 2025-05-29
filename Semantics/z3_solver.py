@@ -42,6 +42,7 @@ class Z3Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         """Handle SMT formula evaluation requests"""
         try:
+            print("posting!!")
             content_length = int(self.headers.get("Content-Length", 0))
             if content_length == 0:
                 self.send_response(400)
@@ -54,7 +55,13 @@ class Z3Handler(BaseHTTPRequestHandler):
 
             logger.info(f"Received formula: {formula[:100]}...")  # Log first 100 chars
 
-            result = self.evaluate_formula(formula)
+            # Check if this is a model request
+            if self.path == "/model":
+                print("Getting model....")
+                result = self.get_model(formula)
+            else:
+                print("Evaluating formula....")
+                result = self.evaluate_formula(formula)
 
             try:
                 self.send_response(200)
@@ -84,6 +91,7 @@ class Z3Handler(BaseHTTPRequestHandler):
                 return
 
     def evaluate_formula(self, formula):
+        print("in here")
         try:
             # Create a fresh Z3 context to isolate memory
             ctx = z3.Context()
@@ -100,6 +108,7 @@ class Z3Handler(BaseHTTPRequestHandler):
                 solver.add(parsed_formula)
             except Exception as e:
                 logger.error(f"Error adding formula to solver: {str(e)}")
+
                 return "error: invalid formula"
 
             try:
@@ -128,52 +137,56 @@ class Z3Handler(BaseHTTPRequestHandler):
             logger.error(traceback.format_exc())
             return "error: internal error"
 
-    # def evaluate_formula(self, formula):
-    #     try:
-    #         # Create a new solver for each request with timeout
-    #         solver = z3.Solver()
-    #         solver.set("timeout", Z3_TIMEOUT)  # Set timeout in milliseconds
+    def get_model(self, formula):
+        """Get the model for a satisfiable formula"""
+        try:
+            print("Starting get_model...")  # Debug
+            # Create a fresh Z3 context to isolate memory
+            ctx = z3.Context()
+            solver = z3.Solver(ctx=ctx)
+            solver.set("timeout", Z3_TIMEOUT)
 
-    #         try:
-    #             # Parse the SMT-LIB formula
-    #             parsed_formula = z3.parse_smt2_string(formula)
-    #         except Exception as e:
-    #             logger.error(f"Error parsing formula: {str(e)}")
-    #             return "error: invalid formula"
+            try:
+                print("Parsing formula...")  # Debug
+                parsed_formula = z3.parse_smt2_string(formula, ctx=ctx)
+            except Exception as e:
+                logger.error(f"Error parsing formula: {str(e)}")
+                return "error: invalid formula"
 
-    #         try:
-    #             # Add the formula to the solver
-    #             solver.add(parsed_formula)
-    #         except Exception as e:
-    #             logger.error(f"Error adding formula to solver: {str(e)}")
-    #             return "error: invalid formula"
+            try:
+                print("Adding formula to solver...")  # Debug
+                solver.add(parsed_formula)
+            except Exception as e:
+                logger.error(f"Error adding formula to solver: {str(e)}")
+                return "error: invalid formula"
 
-    #         try:
-    #             # Check satisfiability
-    #             result = solver.check()
-    #         except Exception as e:
-    #             logger.error(f"Error checking satisfiability: {str(e)}")
-    #             return "error: solver error"
+            try:
+                print("Checking satisfiability...")  # Debug
+                result = solver.check()
+                print(f"Solver result: {result}")  # Debug
+            except Exception as e:
+                logger.error(f"Error checking satisfiability: {str(e)}")
+                return "error: solver error"
 
-    #         # Get the result before cleanup
-    #         if result == z3.sat:
-    #             response = "sat"
-    #         elif result == z3.unsat:
-    #             response = "unsat"
-    #         else:
-    #             response = "unknown"
+            if result == z3.sat:
+                model = solver.model()
+                print("Raw model:", model)  # Debug print
+                response = str(model)
+            else:
+                response = None
+            # Explicit cleanup
+            del solver
+            del parsed_formula
+            del ctx
+            gc.collect()  # Force full cleanup of memory
 
-    #         # Clean up memory
-    #         solver.reset()
-    #         del solver
-    #         del parsed_formula
+            return response
 
-    #         return response
-
-    #     except Exception as e:
-    #         logger.error(f"Error evaluating formula: {str(e)}")
-    #         logger.error(traceback.format_exc())
-    #         return "error: internal error"
+        except Exception as e:
+            print(f"Error in get_model: {str(e)}")  # Debug
+            logger.error(f"Error getting model: {str(e)}")
+            logger.error(traceback.format_exc())
+            return "error: internal error"
 
     def log_message(self, format, *args):
         """Override to use our logger instead of stderr"""
