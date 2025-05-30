@@ -52,8 +52,6 @@ def ast_to_smt2(ast):
 
     # Collect all symbols
     preds, names = collect_symbols(ast)
-    print(f"Predicates: {preds}")
-    print(f"Names: {names}")
 
     # Declarations
     decls = ["(declare-sort Object 0)"]

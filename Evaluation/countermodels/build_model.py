@@ -4,108 +4,241 @@ from Utils.helpers import ast_from_json
 from Syntax.convert_to_smt import ast_to_smt2
 
 
-def build_model_assertions(model_dict, domain):
-    # Declare constants for domain elements
-    domain_consts = {i: z3.Const(f"d{i}", z3.DeclareSort("Object")) for i in domain}
+def check_countermodel(user_model, sentence_ast):
+    """
+    Return True if the user_model is a countermodel for the given sentence.
+    """
 
-    # Create declarations
-    decls = {}
+    # convert sentence AST to SMT (and negate it)
+    sentence_info = ast_to_smt2(("not", sentence_ast))
+    sentence_smt = sentence_info["smt2"]
+    print("\nSentence inof:", sentence_info)
 
-    # Constants
-    for name in model_dict["names"]:
-        decls[name] = z3.Const(name, domain_consts[0].sort())  # same sort as domain elements
+    constants = sentence_info.get("names", [])
+    monadic = sentence_info.get("monadic_predicates", [])
+    binary = sentence_info.get("binary_predicates", [])
+
+    # Validate that all required symbols are interpreted
+    for symbol in constants + monadic + binary:
+        if symbol not in user_model:
+            print(f"Missing interpretation for: {symbol}")
+            return False
+
+    # convert model to SMT
+    smtlib_model = convert_model_to_smtlib(user_model, constants, monadic, binary)
+    if smtlib_model is None:
+        return False
+
+    # merge SMT strings and parse
+    merged_smt = merge_smts(smtlib_model, sentence_smt)
+    print("\nMerged SMT:", merged_smt)
+    try:
+        parsed_formula = z3.parse_smt2_string(merged_smt)
+    except z3.Z3Exception as e:
+        print("Z3 parse error:", e)
+        return False
+
+    # check satisfiability
+    solver = z3.Solver()
+    solver.add(parsed_formula)
+    result = solver.check()
+
+    # interpret result
+    if result == z3.sat:
+        print("\nCountermodel:", solver.model())
+        return True  # countermodel (sentence is false in this model)
+    elif result == z3.unsat:
+        return False  # not a countermodel (sentence is true in this model)
+    else:
+        print("Z3 returned unknown")
+        return None
+
+
+def validate_model(model):
+    """
+    Validates that a model is well-formed:
+    """
+    if "Domain" not in model:
+        raise ValueError("Model must contain a 'Domain' key")
+
+    domain = model["Domain"]
+    if not all(isinstance(x, int) for x in domain):
+        raise ValueError("Domain must be a list of integers")
+
+    # Get all values from the model
+    all_values = []
+    for key, value in model.items():
+        if key == "Domain":
+            continue
+        if isinstance(value, list):
+            # Handle both monadic and binary predicates
+            if value and isinstance(value[0], list):
+                # Binary predicate - flatten pairs
+                all_values.extend([x for pair in value for x in pair])
+            else:
+                # Monadic predicate
+                all_values.extend(value)
+        else:
+            # Constant
+            all_values.append(value)
+
+    # Check all values are in domain, using set to get unique values
+    invalid_values = sorted(set(v for v in all_values if v not in domain))
+    if invalid_values:
+        print(f"Model contains values not in domain: {invalid_values}")
+        return False
+    return True
+
+
+def convert_model_to_smtlib(model, names, monadic, binary):
+    # Validate model first
+    if not validate_model(model):
+        return None
+
+    domain = model["Domain"]
+    const_map = {i: f"d{i}" for i in domain}
+    lines = []
+
+    # Declare domain elements
+    for i in domain:
+        lines.append(f"(declare-const {const_map[i]} Object)")
+
+    # Declare constants
+    for name in names:
+        lines.append(f"(declare-const {name} Object)")
+        lines.append(f"(assert (= {name} {const_map[model[name]]}))")
 
     # Monadic predicates
-    for pred in model_dict["monadic_predicates"]:
-        decls[pred] = z3.Function(pred, domain_consts[0].sort(), z3.BoolSort())
+    for pred in monadic:
+        lines.append(f"(declare-fun {pred} (Object) Bool)")
+        true_set = set(model.get(pred, []))
+        for i in domain:
+            atom = f"({pred} {const_map[i]})"
+            if i in true_set:
+                lines.append(f"(assert {atom})")
+            else:
+                lines.append(f"(assert (not {atom}))")
 
     # Binary predicates
-    for pred in model_dict["binary_predicates"]:
-        decls[pred] = z3.Function(pred, domain_consts[0].sort(), domain_consts[0].sort(), z3.BoolSort())
-
-    return decls, domain_consts
-
-
-def build_model_assertions_from_user_model(user_model, decls, domain_consts):
-    assertions = []
-
-    # Assign constants
-    for name, val in user_model.items():
-        if name == "Domain":  # Skip the Domain key
-            continue
-        if isinstance(val, int):  # e.g., c = 0
-            assertions.append(decls[name] == domain_consts[val])
-
-    # Monadic predicates (e.g., M: [1, 2])
-    # Monadic predicates (e.g., M: [1, 2])
-    for name, val in user_model.items():
-        if name == "Domain":
-            continue
-        if isinstance(val, list) and all(isinstance(x, int) for x in val):
-            for i in domain_consts:
-                if i in val:
-                    assertions.append(decls[name](domain_consts[i]))
+    for pred in binary:
+        lines.append(f"(declare-fun {pred} (Object Object) Bool)")
+        true_pairs = set(tuple(p) for p in model.get(pred, []))
+        for i in domain:
+            for j in domain:
+                atom = f"({pred} {const_map[i]} {const_map[j]})"
+                if (i, j) in true_pairs:
+                    lines.append(f"(assert {atom})")
                 else:
-                    assertions.append(z3.Not(decls[name](domain_consts[i])))
+                    lines.append(f"(assert (not {atom}))")
 
-    # Binary predicates (e.g., P: [[0, 1], [0, 2]])
-    for name, val in user_model.items():
-        if name == "Domain":
-            continue
-        if isinstance(val, list) and all(isinstance(x, list) and len(x) == 2 for x in val):
-            all_pairs = [(i, j) for i in domain_consts for j in domain_consts]
-            for i, j in all_pairs:
-                if [i, j] in val:
-                    assertions.append(decls[name](domain_consts[i], domain_consts[j]))
-                else:
-                    assertions.append(z3.Not(decls[name](domain_consts[i], domain_consts[j])))
+    # Domain closure
+    or_clauses = " ".join([f"(= x {const_map[i]})" for i in domain])
+    lines.append(f"(assert (forall ((x Object)) (or {or_clauses})))")
 
-    return assertions
+    return "\n".join(lines)
 
 
-# --- Main model checking logic ---
+def extract_declarations(smtlib_str):
+    """
+    Extracts all (declare-...) lines from an SMT-LIB string.
+    Returns a tuple: (list of declarations, list of other lines)
+    """
+    decls = []
+    others = []
+    for line in smtlib_str.strip().splitlines():
+        line = line.strip()
+        if line.startswith("(declare-"):
+            decls.append(line)
+        elif line:  # ignore empty lines
+            others.append(line)
+    return decls, others
+
+
+def merge_smts(model_smt, sentence_smt):
+    model_decls, model_rest = extract_declarations(model_smt)
+    sent_decls, sent_rest = extract_declarations(sentence_smt)
+
+    # combine and dedupe declarations
+    seen = set()
+    all_decls = []
+    for decl in model_decls + sent_decls:
+        if decl not in seen:
+            all_decls.append(decl)
+            seen.add(decl)
+
+    # combine all parts
+    # sort declarations: sort first, then others
+    all_decls_sorted = sorted(all_decls, key=lambda d: 0 if "(declare-sort" in d else 1)
+    return "\n".join(all_decls_sorted + model_rest + sent_rest)
+
+
 if __name__ == "__main__":
-    # Example user model: Bungo chortled at every tove
+    from Database.models import Argument, Sentence
+
+    session = db.session
+
+    # get argument
+    argument_id = "5614c7ec8cf2a80c"
+    argument = session.query(Argument).filter_by(id=argument_id).first()
+    print("Parsing argument: ", argument.id)
+    language = argument.language
+    domain_constraint = session.query(Sentence).filter_by(type="domain_constraint", language=language).first()
+    premise_id_string = argument.premise_ids
+    premise_ids = premise_id_string.split(",")
+    conclusion_id = argument.conclusion_id
+    premises = session.query(Sentence).filter(Sentence.id.in_(premise_ids)).all()
+    conclusion = session.get(Sentence, conclusion_id)
+    domain_contraint_ast = ast_from_json(domain_constraint.ast)
+    premises_asts = [ast_from_json(premise.ast) for premise in premises]
+    conclusion_ast = ast_from_json(conclusion.ast)
+
+    argument_ast = domain_contraint_ast
+    for premise_ast in premises_asts:
+        argument_ast = ("and", argument_ast, premise_ast)
+    argument_ast = ("imp", argument_ast, conclusion_ast)
+
+    print("\nArgument AST:", argument_ast)
+
     user_model = {
         "Domain": [0, 1, 2],
-        "c": 0,  # Bungo is element 0
-        "M": [1, 2],  # Toves are elements 1 and 2
-        "P": [[0, 1], [0, 2]],  # Bungo chortled at both toves
+        "c": 0,
+        "b": 1,
+        "a": 0,
+        "M": [1],
+        "P": [[1, 1], [1, 2]],
+        "N": [0],
+        "O": [2],
+        "K": [1],
+        "L": [2],
     }
-    sentence = db.get_sentence_where(id=1878)[0]
-    print("\nOriginal sentence:", sentence["sentence"])  # Print the actual sentence
-    ast = ast_from_json(sentence["ast"])
-    print("\nAST:", ast)
-    formula_info = ast_to_smt2(("not", ast))
-    print("\nSMT2:", formula_info["smt2"])
 
-    domain = user_model["Domain"]
-    decls, domain_map = build_model_assertions(formula_info, domain)
-    model_assertions = build_model_assertions_from_user_model(user_model, decls, domain_map)
-
-    s = z3.Solver()
-    s.add(*model_assertions)
-
-    smt2_lines = formula_info["smt2"].split("\n")
-    sort_line = [line for line in smt2_lines if line.startswith("(declare-sort")][0]
-    non_decl_lines = [
-        line for line in smt2_lines if not line.startswith("(declare-fun") and not line.startswith("(declare-const")
-    ]
-    smt2_clean = sort_line + "\n" + "\n".join(non_decl_lines[1:])  # skip duplicated sort
-
-    print("\nFinal SMT2 body:")
-    print(smt2_clean)
-    print("\nZ3 decls:", decls.keys())
-
-    # Now parse the SMT2 string using the existing declarations
-    fml = z3.parse_smt2_string(smt2_clean, decls=decls)
-    s.add(fml[0])
-    print(fml[0])
-
-    print("\nChecking if sentence holds in model...")
-    result = s.check()
+    result = check_countermodel(user_model, argument_ast)
     print("\nResult:", result)
-    if result == z3.sat:
-        print("\nSentence is false in the model")
-    else:
-        print("\nSentence is true in the model")
+
+    # #
+    # user_model_A = {
+    #     "Domain": [0, 1, 2],
+    #     "c": 0,
+    #     "M": [0, 1, 2],
+    #     "P": [[0, 1], [0, 2]],
+    # }
+
+    # #
+    # user_model_B = {
+    #     "Domain": [0, 1, 2],
+    #     "c": 3,
+    #     "b": 1,
+    #     "M": [0, 1, 2],
+    #     "P": [[2, 1], [2, 2], [2, 3]],
+    # }
+
+    # user_model = user_model_A
+
+    # sentence = db.get_sentence_where(id=1878)[0]
+    # print("\nSentence:", sentence["form"])
+    # print()
+
+    # sentence_ast = ast_from_json(sentence["ast"])
+
+    # result = check_countermodel(user_model, sentence_ast)
+    # print("\nResult:", result)
