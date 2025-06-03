@@ -1,420 +1,109 @@
 [
   {
-    "id": "a1e6ce8998b829c4",
-    "counterpart_id": "6b5e812c0361397e",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. No humans saw a monkey. A monkey saw every human that saw it. Not all monkeys kicked Lewis and every human chased Alfred.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Every human saw every monkey.\n2. Every human saw a monkey.\n3. A human saw every monkey.\n4. There is a human that every monkey saw.\n5. A human saw a monkey.\n6. No humans saw every monkey.\n",
-    "correct_answer": "6",
-    "option_to_sentence_id": {
-      "1": 907,
-      "2": 909,
-      "3": 911,
-      "4": 919,
-      "5": 913,
-      "6": 915
-    },
-    "premise_ids": [
-      917,
-      1347,
-      2681
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "04b3e450198e75c0",
-    "counterpart_id": "4621d7e8491ad34f",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Alfred is happy and Hazel doesn't see Hazel. No donkeys saw Lewis and every human is happy. Every human drank just in case every monkey chased Hazel.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Alfred drank.\n2. Alfred and Lewis drank.\n3. Alfred is happy and no donkeys saw Lewis.\n4. Lewis drank.\n5. Alfred didn't drink.\n6. Alfred and Hazel drank.\n",
-    "correct_answer": "3",
-    "option_to_sentence_id": {
-      "1": 75,
-      "2": 79,
-      "3": 2419,
-      "4": 87,
-      "5": 85,
-      "6": 83
-    },
-    "premise_ids": [
-      2421,
-      2575,
-      5891
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "3d25b660fafc89bc",
-    "counterpart_id": "5af2e37a32b59d97",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Lewis didn't kick Hazel. Alfred is happy and a monkey kicked Alfred. Only humans will run and no humans will run.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Not all monkeys will run.\n2. Every monkey will run.\n3. A monkey will run.\n4. Alfred and Lewis will run.\n5. Alfred will run.\n6. Alfred and Hazel will run.\n",
-    "correct_answer": "1",
-    "option_to_sentence_id": {
-      "1": 425,
-      "2": 419,
-      "3": 421,
-      "4": 7,
-      "5": 3,
-      "6": 11
-    },
-    "premise_ids": [
-      349,
-      2439,
-      11177
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "edb1a79f1e74a9d7",
-    "counterpart_id": "70cd07b494317532",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. If no humans are asleep, then Hazel didn't chase Lewis. Not all donkeys will run but it is not the case that Hazel didn't chase Hazel. Not all humans will run and only donkeys are asleep.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Not all humans will run and every donkey will run.\n2. Only humans will run and not all donkeys will run.\n3. Not all donkeys will run and not all humans will run.\n4. Lewis will run.\n5. Not all donkeys will run and no humans will run.\n6. Every donkey will run and no humans will run.\n",
-    "correct_answer": "3",
-    "option_to_sentence_id": {
-      "1": 11461,
-      "2": 11145,
-      "3": 11189,
-      "4": 15,
-      "5": 11235,
-      "6": 11659
-    },
-    "premise_ids": [
-      5075,
-      11195,
-      11419
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "368c18bdd687f89b",
-    "counterpart_id": "39b4e73e459905cb",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. A human saw a donkey. There is a monkey that every donkey kicked. Not all donkeys will run and not all humans will run.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. A donkey kicked every monkey.\n2. No donkeys kicked a monkey.\n3. There is a donkey that every monkey kicked.\n4. Every donkey kicked every monkey.\n5. No donkeys kicked every monkey.\n6. A donkey kicked a monkey.\n",
-    "correct_answer": "6",
-    "option_to_sentence_id": {
-      "1": 1011,
-      "2": 1017,
-      "3": 1019,
-      "4": 1007,
-      "5": 1015,
-      "6": 1013
-    },
-    "premise_ids": [
-      881,
-      1087,
-      11189
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "de9ba2f5fdb5fbde",
-    "counterpart_id": "386c51d3e3da39e3",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Every human saw a donkey. A human saw every human. A donkey kicked a donkey that kicked a monkey.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Every donkey saw every human.\n2. No donkeys saw every human.\n3. A donkey saw a human.\n4. A human saw a donkey.\n5. Every donkey saw a human.\n6. A donkey saw every human.\n",
+    "id": "b40e4c3712705525",
+    "counterpart_id": "d010ae68f82c28b6",
+    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Lewis saw Lewis. Every donkey chased every donkey that chased it. Only humans are hungry and every human is happy. Not all donkeys chased Alfred just in case no donkeys chased Alfred. If a human chased Lewis, then Hazel didn't chase Hazel only if every monkey saw Hazel.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. No donkeys chased every donkey.\n2. Every donkey chased every donkey.\n3. A donkey chased every donkey.\n4. A donkey chased every donkey that chased it.\n5. Every donkey chased a donkey.\n6. A donkey chased a donkey.\n",
     "correct_answer": "4",
     "option_to_sentence_id": {
-      "1": 841,
-      "2": 849,
-      "3": 847,
-      "4": 881,
-      "5": 843,
-      "6": 845
+      "1": 1133,
+      "2": 1125,
+      "3": 1129,
+      "4": 1457,
+      "5": 1127,
+      "6": 1131
     },
     "premise_ids": [
-      877,
-      895,
-      1663
+      307,
+      1455,
+      2245,
+      5815,
+      7037
     ],
     "domain_constraint_id": 1,
     "language": "english"
   },
   {
-    "id": "db33bbebb2b17c5a",
-    "counterpart_id": "56c5f7ff51eb5165",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Lewis is a donkey unless Hazel isn't a human. A monkey is hungry but it is not the case that Lewis is a donkey. Alfred isn't hungry but it is not the case that Lewis isn't hungry.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. If Hazel isn't a human, then Hazel is a human.\n2. Alfred and Lewis are hungry.\n3. Alfred is hungry.\n4. Hazel isn't a human only if Hazel is a human.\n5. Hazel isn't a human.\n6. Hazel is a human.\n",
-    "correct_answer": "5",
-    "option_to_sentence_id": {
-      "1": 4411,
-      "2": 223,
-      "3": 219,
-      "4": 4413,
-      "5": 277,
-      "6": 275
-    },
-    "premise_ids": [
-      3309,
-      10767,
-      11019
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "2ec37a912808ae8c",
-    "counterpart_id": "3c97633cca53509c",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. A monkey kicked every human that kicked it. Alfred kicked every donkey. Not all donkeys chased Alfred but it is not the case that Lewis isn't hungry.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Alfred is hungry.\n2. Alfred kicked a donkey.\n3. No donkeys kicked Alfred.\n4. Every donkey kicked Alfred.\n5. A donkey kicked Alfred.\n6. Not all donkeys kicked Alfred.\n",
+    "id": "2ebc0aa71b065567",
+    "counterpart_id": "b561e78db7c1595c",
+    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Alfred or Hazel will run. Only donkeys will run. Every monkey saw Hazel. If Alfred will run, then every monkey is asleep only if every human saw Hazel.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Alfred will run.\n2. A donkey will run.\n3. Not all donkeys will run.\n4. Alfred and Hazel will run.\n5. Every donkey will run.\n6. No donkeys will run.\n",
     "correct_answer": "2",
-    "option_to_sentence_id": {
-      "1": 219,
-      "2": 1907,
-      "3": 685,
-      "4": 681,
-      "5": 683,
-      "6": 687
-    },
-    "premise_ids": [
-      1437,
-      1905,
-      10841
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "8f698d555ac6c8c9",
-    "counterpart_id": "a2acaf08ee870d84",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Hazel saw Hazel and every monkey saw Alfred. Not all monkeys ate if and only if no monkeys saw Lewis. Lewis ate and Hazel saw Alfred.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Alfred saw every monkey.\n2. Not all monkeys saw Alfred.\n3. No monkeys saw Alfred.\n4. Alfred saw a monkey.\n5. Alfred ate.\n6. A monkey saw Alfred.\n",
-    "correct_answer": "6",
-    "option_to_sentence_id": {
-      "1": 1893,
-      "2": 663,
-      "3": 661,
-      "4": 1895,
-      "5": 111,
-      "6": 659
-    },
-    "premise_ids": [
-      2509,
-      5301,
-      10879
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "2dfc649b1afa147c",
-    "counterpart_id": "542c921dbeee7d31",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Alfred is happy and Hazel didn't chase Alfred. Lewis didn't chase Hazel and every donkey drank. Not all donkeys chased Alfred if and only if not all humans saw Hazel.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Hazel didn't chase Alfred but it is not the case that Lewis didn't chase Hazel.\n2. Alfred and Lewis drank.\n3. Alfred drank.\n4. Hazel didn't chase Alfred and Lewis didn't chase Hazel.\n5. Alfred and Hazel drank.\n6. Alfred didn't drink.\n",
-    "correct_answer": "4",
-    "option_to_sentence_id": {
-      "1": 2481,
-      "2": 79,
-      "3": 75,
-      "4": 2479,
-      "5": 83,
-      "6": 85
-    },
-    "premise_ids": [
-      2415,
-      2935,
-      5831
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "2d45079888d27f8e",
-    "counterpart_id": "bc70da59abd75d5d",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Alfred is a monkey. Every monkey kicked every human that kicked it. Not all donkeys chased Alfred and Lewis is a donkey.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. A human kicked a monkey.\n2. No humans kicked every monkey.\n3. Every human kicked every monkey.\n4. A human kicked every monkey.\n5. A monkey kicked every human that kicked it.\n6. Every human kicked a monkey.\n",
-    "correct_answer": "5",
-    "option_to_sentence_id": {
-      "1": 1063,
-      "2": 1065,
-      "3": 1057,
-      "4": 1061,
-      "5": 1437,
-      "6": 1059
-    },
-    "premise_ids": [
-      279,
-      1435,
-      10849
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "219c80e5b17b271c",
-    "counterpart_id": "9af20d2ff6a862d8",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. No donkeys saw Lewis and every monkey saw Alfred. A monkey will attack unless every human saw Hazel. Only donkeys are asleep and Hazel is a monkey.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Alfred will attack.\n2. Hazel doesn't see Alfred.\n3. Alfred doesn't see Hazel.\n4. Alfred saw Hazel.\n5. Alfred and Lewis will attack.\n6. Hazel saw Alfred.\n",
-    "correct_answer": "6",
-    "option_to_sentence_id": {
-      "1": 39,
-      "2": 317,
-      "3": 301,
-      "4": 299,
-      "5": 43,
-      "6": 315
-    },
-    "premise_ids": [
-      2577,
-      4209,
-      11481
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "e35bdccbffe9067e",
-    "counterpart_id": "5c4717c915429bf1",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. There is a human that every monkey chased. A monkey kicked Hazel unless Alfred isn't a human. A monkey is hungry and only donkeys are asleep.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. A monkey chased a human.\n2. Every human chased a monkey.\n3. Every human chased every monkey.\n4. A human chased every monkey.\n5. A human chased a monkey.\n6. No humans chased every monkey.\n",
-    "correct_answer": "1",
-    "option_to_sentence_id": {
-      "1": 1247,
-      "2": 1209,
-      "3": 1207,
-      "4": 1211,
-      "5": 1213,
-      "6": 1215
-    },
-    "premise_ids": [
-      1219,
-      3467,
-      10741
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "5971ed9b595207d5",
-    "counterpart_id": "89557d5d5c5b3502",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Lewis will run. Lewis saw Alfred and every monkey saw Alfred. Every monkey saw Alfred but it is not the case that Lewis doesn't see Hazel.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Hazel saw Hazel but it is not the case that Lewis saw Alfred.\n2. Lewis saw Alfred but it is not the case that Lewis doesn't see Hazel.\n3. Hazel doesn't see Hazel and Lewis saw Alfred.\n4. Hazel saw Hazel and Lewis saw Alfred.\n5. Lewis saw Alfred and Lewis doesn't see Hazel.\n6. Hazel doesn't see Hazel but it is not the case that Lewis saw Alfred.\n",
-    "correct_answer": "2",
-    "option_to_sentence_id": {
-      "1": 2505,
-      "2": 2761,
-      "3": 2623,
-      "4": 2503,
-      "5": 2759,
-      "6": 2625
-    },
-    "premise_ids": [
-      15,
-      2753,
-      2805
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "a6ae1109be90f6e9",
-    "counterpart_id": "0d659d6835fe13ba",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Every human will attack. Every monkey kicked Lewis but it is not the case that Lewis isn't a donkey. A monkey kicked Lewis or a monkey kicked Alfred.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Not all monkeys kicked Lewis.\n2. Lewis kicked a monkey.\n3. Lewis kicked every monkey.\n4. No monkeys kicked Lewis.\n5. Alfred will attack.\n6. A monkey kicked Lewis.\n",
-    "correct_answer": "6",
-    "option_to_sentence_id": {
-      "1": 743,
-      "2": 1935,
-      "3": 1933,
-      "4": 741,
-      "5": 39,
-      "6": 739
-    },
-    "premise_ids": [
-      439,
-      2821,
-      3905
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "98f5ebed9042e5b6",
-    "counterpart_id": "02c626bb42e96cb4",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Every human saw a monkey that saw it. A human chased a human that chased it. Every donkey chased Alfred or every donkey will attack.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. No humans saw a monkey.\n2. No humans saw every monkey.\n3. There is a human that every monkey saw.\n4. A human saw every monkey.\n5. A human saw a monkey.\n6. Every human saw every monkey.\n",
-    "correct_answer": "5",
-    "option_to_sentence_id": {
-      "1": 917,
-      "2": 915,
-      "3": 919,
-      "4": 911,
-      "5": 913,
-      "6": 907
-    },
-    "premise_ids": [
-      1331,
-      1499,
-      4319
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "57f417f040274d07",
-    "counterpart_id": "007b1eb683c020a0",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Alfred didn't chase Alfred and every monkey kicked Lewis. If every monkey kicked Lewis, then Lewis chased Lewis. If every monkey chased Hazel, then every monkey is asleep only if Alfred didn't kick Hazel.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Lewis chased Lewis.\n2. Alfred is asleep.\n3. Alfred and Hazel are asleep.\n4. Lewis didn't chase Lewis.\n5. Alfred isn't asleep.\n6. Alfred and Lewis are asleep.\n",
-    "correct_answer": "1",
-    "option_to_sentence_id": {
-      "1": 379,
-      "2": 147,
-      "3": 155,
-      "4": 381,
-      "5": 157,
-      "6": 151
-    },
-    "premise_ids": [
-      2535,
-      5099,
-      8817
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "c01362e5317c6e09",
-    "counterpart_id": "a9c8f9acfb3ccb12",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Every human saw every donkey. A monkey saw a human that saw a donkey. If no humans are hungry, then Alfred saw Alfred only if every human saw Hazel.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. No donkeys saw every human.\n2. There is a donkey that every human saw.\n3. A donkey saw a human.\n4. Every donkey saw a human.\n5. A donkey saw every human.\n6. Every donkey saw every human.\n",
-    "correct_answer": "2",
-    "option_to_sentence_id": {
-      "1": 849,
-      "2": 853,
-      "3": 847,
-      "4": 843,
-      "5": 845,
-      "6": 841
-    },
-    "premise_ids": [
-      875,
-      1631,
-      10545
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "69fbd1811a262d74",
-    "counterpart_id": "6cebdcef49cc67a5",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Lewis saw Alfred and a monkey kicked Alfred. A human kicked Lewis or every human saw Hazel. Hazel saw Alfred and not all donkeys kicked Alfred.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. If a monkey kicked Hazel, then a monkey saw Alfred.\n2. Hazel doesn't see Hazel and a monkey kicked Alfred.\n3. A monkey kicked Hazel only if a monkey saw Alfred.\n4. Hazel saw Hazel and a monkey kicked Alfred.\n5. If Alfred didn't kick Hazel, then every monkey saw Hazel only if no monkeys kicked Hazel.\n6. Hazel saw Alfred and a monkey kicked Alfred.\n",
-    "correct_answer": "6",
-    "option_to_sentence_id": {
-      "1": 4539,
-      "2": 2643,
-      "3": 4541,
-      "4": 2517,
-      "5": 10311,
-      "6": 11113
-    },
-    "premise_ids": [
-      2765,
-      3803,
-      11131
-    ],
-    "domain_constraint_id": 1,
-    "language": "english"
-  },
-  {
-    "id": "712f9387e3f44ad1",
-    "counterpart_id": "936810badeac6641",
-    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Alfred and Lewis are asleep. If not all humans are asleep, then Lewis is a donkey only if not all donkeys will run. Not all humans will run and only donkeys are asleep.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Alfred will run.\n2. Alfred and Lewis will run.\n3. Alfred isn't a donkey.\n4. Alfred is a donkey.\n5. Alfred won't run.\n6. Lewis will run.\n",
-    "correct_answer": "4",
     "option_to_sentence_id": {
       "1": 3,
-      "2": 7,
-      "3": 257,
-      "4": 255,
-      "5": 13,
-      "6": 15
+      "2": 401,
+      "3": 405,
+      "4": 11,
+      "5": 399,
+      "6": 403
     },
     "premise_ids": [
-      151,
-      6471,
-      11419
+      9,
+      407,
+      673,
+      9823
+    ],
+    "domain_constraint_id": 1,
+    "language": "english"
+  },
+  {
+    "id": "fdd07759e4b746e7",
+    "counterpart_id": "03458b54d07b9b7d",
+    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. A donkey saw every donkey. No donkeys saw Lewis and no donkeys saw Hazel. A human saw Alfred just in case every monkey chased Hazel.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Lewis is a donkey.\n2. Hazel is a donkey.\n3. Lewis isn't a donkey.\n4. Alfred isn't a donkey.\n5. Alfred is a donkey.\n",
+    "correct_answer": "3",
+    "option_to_sentence_id": {
+      "1": 259,
+      "2": 263,
+      "3": 261,
+      "4": 257,
+      "5": 255
+    },
+    "premise_ids": [
+      829,
+      2587,
+      5539
+    ],
+    "domain_constraint_id": 1,
+    "language": "english"
+  },
+  {
+    "id": "31a4280bd8676493",
+    "counterpart_id": "196af1e25f6c255d",
+    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. A donkey chased a donkey that chased a monkey. Lewis saw every human. No donkeys saw Lewis but it is not the case that Lewis isn't a donkey. Not all monkeys kicked Lewis and no donkeys saw Hazel. A donkey kicked Lewis only if no donkeys chased Alfred.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Hazel is a donkey.\n2. Alfred isn't a donkey.\n3. Lewis isn't a donkey.\n4. Alfred is a donkey.\n5. Lewis isn't a human.\n6. Lewis is a human.\n",
+    "correct_answer": "5",
+    "option_to_sentence_id": {
+      "1": 263,
+      "2": 257,
+      "3": 261,
+      "4": 255,
+      "5": 273,
+      "6": 271
+    },
+    "premise_ids": [
+      1771,
+      1885,
+      2585,
+      2671,
+      4637
+    ],
+    "domain_constraint_id": 1,
+    "language": "english"
+  },
+  {
+    "id": "d825c198a9139b81",
+    "counterpart_id": "659632467c86adc2",
+    "text": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Lewis saw Hazel. Not all donkeys kicked Hazel. A monkey chased Alfred and every monkey saw Alfred.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. If Alfred doesn't see Lewis, then every monkey chased Hazel only if every monkey saw Lewis.\n2. A monkey chased Alfred and Lewis doesn't see Hazel.\n3. Alfred didn't chase Hazel just in case no monkeys saw Lewis.\n4. Every monkey chased Alfred but it is not the case that Lewis doesn't see Hazel.\n5. Every monkey chased Alfred and Lewis doesn't see Hazel.\n6. A monkey chased Alfred but it is not the case that Lewis doesn't see Hazel.\n",
+    "correct_answer": "6",
+    "option_to_sentence_id": {
+      "1": 7953,
+      "2": 2721,
+      "3": 5787,
+      "4": 11649,
+      "5": 11647,
+      "6": 2723
+    },
+    "premise_ids": [
+      311,
+      703,
+      2709
     ],
     "domain_constraint_id": 1,
     "language": "english"

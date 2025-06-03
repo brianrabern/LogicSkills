@@ -1,8 +1,10 @@
 # Countermodel Checker
 
-Evaluate whether a user-supplied structure is a **countermodel** to a given sentence/argument
+Evaluates whether a user- or LLM-supplied structure is a **countermodel** to a given sentence or argument.
+(Arguments are converted into conditional sentences by conjoining the premises and the domain constraint into the antecedent and setting the consequent to the conclusion.)
 
-A **countermodel** is a fully specified interpretation that makes the sentence **false**. This system checks countermodels by converting them to SMT-LIB and verifying satisfiability using Z3.
+A **countermodel** is a fully specified interpretation that makes the sentence **false**.
+The system checks countermodels by converting them to SMT-LIB assertions, merging them with the negation of the sentence, and checking satisfiability using Z3.
 
 ---
 

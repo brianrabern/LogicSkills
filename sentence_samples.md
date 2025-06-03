@@ -556,4 +556,3 @@ Carroll: No raths chortled at Rafin just in case Rafin chortled at Bungo. :: `(�
 
 English: Not all humans kicked Alfred just in case not all humans kicked Lewis. :: `(∃x(Nx∧¬Qxa)↔∃x(Nx∧¬Qxb))`
 Carroll: Not all borogoves galumphed over Zindle just in case not all borogoves galumphed over Rafin. :: `(∃x(Nx∧¬Qxa)↔∃x(Nx∧¬Qxb))`
-

@@ -1,3 +1,9 @@
+"""
+This is a weird script that uses Wolfgang's Tree Proof Generator to get countermodels for invalid arguments.
+It's a bit of a hack, but it works. Wo's algorithm finds the minimal countermodels, so are nicer than the often large ones found by the Z3 solver.
+https://github.com/wo/tpg
+"""
+
 from Database.DB import db
 from Database.models import Argument, Sentence
 import json
@@ -8,7 +14,6 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
 from bs4 import BeautifulSoup
 
@@ -55,28 +60,27 @@ def parse_model_table(html):
     soup = BeautifulSoup(html, "html.parser")
     model = {}
 
-    # Get all rows except the header
+    # get all rows except the header
     rows = soup.find_all("tr")
     for row in rows:
-        # Get the key (first column) and value (second column)
+        # get the key (first column) and value (second column)
         cols = row.find_all("td")
         if len(cols) == 2:
-            key = cols[0].text.strip().rstrip(":")  # Remove trailing colon
+            key = cols[0].text.strip().rstrip(":")
             value = cols[1].text.strip()
 
-            # Parse the value based on its format
+            # parse the value based on its format
             if value.startswith("{") and value.endswith("}"):
-                # Handle set notation
-                if value == "{  }":  # Empty set
+                # handle set notation
+                if value == "{  }":  # empty set
                     value = []
                 else:
-                    # Remove braces and split by comma
+                    # remove braces and split by comma
                     content = value[1:-1].strip()
                     if content:
-                        # Handle tuples in the set
+                        # handle tuples in the set
                         if "(" in content:
-                            # Parse tuples like (1,0), (1,1)
-                            # First split by closing parenthesis and comma
+                            # Pparse tuples like (1,0), (1,1)
                             tuples = []
                             current = ""
                             for char in content:
@@ -90,14 +94,14 @@ def parse_model_table(html):
                                     current += char
                             value = [eval(t) for t in tuples]
                         else:
-                            # Parse simple values like 0, 1, 2
+                            # parse simple values like 0, 1, 2
                             value = [int(x.strip()) for x in content.split(",")]
             else:
-                # Handle single values
+                # handle single values
                 try:
                     value = int(value)
                 except ValueError:
-                    value = value  # Keep as string if not an integer
+                    value = value  # keep as string if not an integer
 
             model[key] = value
 
@@ -105,41 +109,39 @@ def parse_model_table(html):
 
 
 if __name__ == "__main__":
-    problem_args = ["e89da97d6bb95d63"]  # "a70596728882c1b4",
     no_countermodel_found = []
-
     countermodels = {}
 
-    # Set up Chrome options
+    # set up Chrome options
     chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Run in headless mode
+    chrome_options.add_argument("--headless")  # run in headless mode
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
-    # Initialize the driver with automatic ChromeDriver management
+    # initialize the driver
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     try:
-        # Load the base page once
+        # load the base page once
         print("Loading base page...")
         driver.get("https://www.umsu.de/trees/")
-        time.sleep(2)  # Give initial page time to load
+        time.sleep(2)  # give initial page time to load
 
-        # Get all invalid arguments
-        # invalid_arguments = session.query(Argument).filter_by(valid=False).all()
-        invalid_arguments = session.query(Argument).filter(Argument.id.in_(problem_args)).all()
-        # Process each argument
+        # get all invalid arguments
+        invalid_arguments = session.query(Argument).filter_by(valid=False).all()
+
+        # process each argument
         for argument in invalid_arguments:
             print(f"Processing argument {argument.id}...")
             arg = get_argument(argument)
 
-            # Update the URL with the new argument
+            # update the URL with the new argument
             driver.get(f"https://www.umsu.de/trees/#{arg}")
 
-            # Wait for either the model to appear or a timeout
+            # wait for either the model to appear or a timeout
             try:
-                # Wait up to 10 seconds for the model div to be visible
+                # wait up to 100 seconds for the model div to be visible
                 WebDriverWait(driver, 100).until(
                     lambda d: d.find_element(By.ID, "model").get_attribute("style") != "display: none;"
                 )
@@ -148,7 +150,7 @@ if __name__ == "__main__":
                 no_countermodel_found.append(argument.id)
                 continue
 
-            # Find the model div
+            # find the model div
             model_div = driver.find_element(By.ID, "model")
             model_div_style = model_div.get_attribute("style")
             if "display: none;" in model_div_style:
@@ -156,10 +158,10 @@ if __name__ == "__main__":
                 no_countermodel_found.append(argument.id)
                 continue
             if model_div:
-                # Get the model HTML
+                # get the model HTML
                 model_html = model_div.get_attribute("outerHTML")
 
-                # Parse the model into a dictionary
+                # parse the model into a dictionary
                 model_dict = parse_model_table(model_html)
                 print("Adding countermodel for argument: ", argument.id)
                 countermodels[argument.id] = model_dict
@@ -174,5 +176,5 @@ if __name__ == "__main__":
             json.dump(countermodels, f, indent=2)
 
     finally:
-        # Close the driver when done
+        # close the driver
         driver.quit()

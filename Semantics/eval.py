@@ -4,7 +4,6 @@ from Syntax.convert_to_smt import ast_to_smt2
 from Utils.helpers import ast_from_json
 from Utils.logging_config import setup_logging
 import traceback
-import json
 
 # set up logging for this module
 log_file = setup_logging("z3_evaluator")
@@ -15,7 +14,7 @@ Z3_SERVER = "http://localhost:8001"  # single z3 server
 logger.info(f"Using Z3 server at: {Z3_SERVER}")
 
 
-def evaluate(sentence_ast, convert_json=False, return_model=False):
+def evaluate(sentence_ast, convert_json=False):
     """
     Evaluate a sentence AST using Z3.
     """
@@ -25,12 +24,10 @@ def evaluate(sentence_ast, convert_json=False, return_model=False):
         logger.info(f"Evaluating sentence AST: {sentence_ast}")
 
         # convert to smt format
-        data = json.dumps(ast_to_smt2(sentence_ast)) if return_model else ast_to_smt2(sentence_ast)["smt2"]
+        data = ast_to_smt2(sentence_ast)["smt2"]
         logger.info(f"SMT sent to Z3: {data}")
 
-        # Choose endpoint based on whether we want the model
-        endpoint = f"{Z3_SERVER}/model" if return_model else Z3_SERVER
-        logger.info(f"Using endpoint: {endpoint}")
+        endpoint = Z3_SERVER
 
         # send to z3 server
         response = requests.post(endpoint, data=data, headers={"Content-Type": "text/plain"}, timeout=10)
