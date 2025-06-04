@@ -8,11 +8,12 @@ def check_countermodel(user_model, sentence_ast):
     """
     Return True if the user_model is a countermodel for the given sentence.
     """
+    comments = []
 
     # convert sentence AST to SMT (and negate it)
     sentence_info = ast_to_smt2(("not", sentence_ast))
     sentence_smt = sentence_info["smt2"]
-    print("\nSentence inof:", sentence_info)
+    print("\nSentence info:", sentence_info)
 
     constants = sentence_info.get("names", [])
     monadic = sentence_info.get("monadic_predicates", [])
@@ -22,12 +23,20 @@ def check_countermodel(user_model, sentence_ast):
     for symbol in constants + monadic + binary:
         if symbol not in user_model:
             print(f"Missing interpretation for: {symbol}")
-            return False
+            comments.append(f"Missing interpretation for: {symbol}")
+            return False, comments
+
+    # Validate model first
+    valid, error = validate_model(user_model)
+    if not valid:
+        comments.append(error)
+        return False, comments
 
     # convert model to SMT
     smtlib_model = convert_model_to_smtlib(user_model, constants, monadic, binary)
     if smtlib_model is None:
-        return False
+        comments.append("Unable to parse model into SMT")
+        return False, comments
 
     # merge SMT strings and parse
     merged_smt = merge_smts(smtlib_model, sentence_smt)
@@ -36,7 +45,8 @@ def check_countermodel(user_model, sentence_ast):
         parsed_formula = z3.parse_smt2_string(merged_smt)
     except z3.Z3Exception as e:
         print("Z3 parse error:", e)
-        return False
+        comments.append(f"Z3 parse error: {e}")
+        return False, comments
 
     # check satisfiability
     solver = z3.Solver()
@@ -46,24 +56,24 @@ def check_countermodel(user_model, sentence_ast):
     # interpret result
     if result == z3.sat:
         print("\nCountermodel:", solver.model())
-        return True  # countermodel (sentence is false in this model)
+        return True, comments  # countermodel (sentence is false in this model)
     elif result == z3.unsat:
-        return False  # not a countermodel (sentence is true in this model)
+        comments.append("Not a countermodel")
+        return False, comments  # not a countermodel (sentence is true in this model)
     else:
         print("Z3 returned unknown")
-        return None
+        comments.append("Z3 returned unknown")
+        return None, comments
 
 
 def validate_model(model):
-    """
-    Validates that a model is well-formed:
-    """
+    """Validates that a model is well-formed:"""
     if "Domain" not in model:
-        raise ValueError("Model must contain a 'Domain' key")
+        return False, "Model does not contain a 'Domain' key"
 
     domain = model["Domain"]
     if not all(isinstance(x, int) for x in domain):
-        raise ValueError("Domain must be a list of integers")
+        return False, "Domain must be a list of integers"
 
     # Get all values from the model
     all_values = []
@@ -86,14 +96,11 @@ def validate_model(model):
     invalid_values = sorted(set(v for v in all_values if v not in domain))
     if invalid_values:
         print(f"Model contains values not in domain: {invalid_values}")
-        return False
+        return False, f"Model contains values not in domain: {invalid_values}"
     return True
 
 
 def convert_model_to_smtlib(model, names, monadic, binary):
-    # Validate model first
-    if not validate_model(model):
-        return None
 
     domain = model["Domain"]
     const_map = {i: f"d{i}" for i in domain}
@@ -212,8 +219,9 @@ if __name__ == "__main__":
         "L": [2],
     }
 
-    result = check_countermodel(user_model, argument_ast)
+    result, comments = check_countermodel(user_model, argument_ast)
     print("\nResult:", result)
+    print("\nComments:", comments)
 
     # #
     # user_model_A = {

@@ -1,68 +1,52 @@
 import json
 import logging
-from typing import List, Dict, Any
+from typing import Dict, Any
 from Evaluation.model import Model
-from Evaluation.prompts.extractor_prompt import extractor_prompt
-from Evaluation.prompts.evaluation_subject_prompt import evaluation_subject_prompt
+from Evaluation.countermodel_questions.prompts.extractor_prompt import extractor_prompt
+from Evaluation.countermodel_questions.prompts.evaluation_subject_prompt import evaluation_subject_prompt
 from config import EXTRACTOR_MODEL
+from Evaluation.countermodel_questions.countermodel_checker import check_countermodel
+from Utils.helpers import ast_from_json
 
 
-class Evaluator:
+class CountermodelEvaluator:
     def __init__(self, model: Model):
         self.model = model
         self.extractor_model = Model(EXTRACTOR_MODEL)
         self.results = []
 
-    def evaluate_question(self, question: Dict[str, Any]) -> Dict[str, Any]:
+    def evaluate_question(self, question):
         """Evaluate a single question."""
 
         # get model's response to the question
-        response = self.model.query(question["text"])
+        response = self.model.query(question["argument_form"])
         print(f"\nQuestion {question['id']}:")
         print(f"Model response: {response}")
 
         # extract the answer using our extractor model
         extraction = self.extractor_model.query(extractor_prompt(response), parse_json=True)
-        print(f"Extracted answer: {extraction.get('answer') if extraction else 'None'}")
+        print(f"Extracted answer: {extraction}")
 
-        # get the sentence ids for model's answer and correct answer
-        model_answer_sentence_ids = []
-        correct_answer_sentence_ids = []
-
-        if extraction and extraction.get("answer"):
-            for num in extraction.get("answer").split(","):
-                num = num.strip()
-                if num in question.get("option_to_sentence_id", {}):
-                    model_answer_sentence_ids.append(question["option_to_sentence_id"][num])
-
-        if question["correct_answer"]:
-            for num in question["correct_answer"].split(","):
-                num = num.strip()
-                if num in question.get("option_to_sentence_id", {}):
-                    correct_answer_sentence_ids.append(question["option_to_sentence_id"][num])
+        is_correct, comments = check_countermodel(extraction, ast_from_json(question["argument_ast"]))
 
         # log whether the answer was correct
-        is_correct = extraction.get("answer") == question["correct_answer"] if extraction else None
         print(f"Answer was {'correct' if is_correct else 'incorrect' if is_correct is False else 'indeterminate'}")
 
         # prepare result
         result = {
             "question_id": question["id"],
-            "question": question["text"],
+            "question_type": "countermodel",
+            "question": question["argument_form"],
             "model_response": response,
-            "extracted_answer": extraction.get("answer") if extraction else "None",
-            "model_answer_sentence_ids": model_answer_sentence_ids,
-            "correct_answer": question["correct_answer"],
-            "correct_answer_sentence_ids": correct_answer_sentence_ids,
+            "extracted_answer": extraction if extraction else "None",
             "is_correct": is_correct,
-            "premise_ids": question.get("premise_ids", []),
-            "domain_constraint_id": question.get("domain_constraint_id"),
+            "comments": comments,
         }
 
         self.results.append(result)
         return result
 
-    def evaluate_questions(self, questions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def evaluate_questions(self, questions):
         """Evaluate a list of questions."""
         for question in questions:
             try:
@@ -96,10 +80,14 @@ class Evaluator:
 
 
 if __name__ == "__main__":
+    from pathlib import Path
+
     evaluation_subject = Model("meta-llama/llama-3.2-3b-instruct", system_prompt=evaluation_subject_prompt)
-    evaluator = Evaluator(evaluation_subject)
-    with open("questions.json", "r") as f:
+    evaluator = CountermodelEvaluator(evaluation_subject)
+    # quesiton are in same directory as this file
+    questions_path = Path(__file__).parent / "questions_invalid_arguments.json"
+    with open(questions_path, "r") as f:
         questions = json.load(f)
 
-    results = evaluator.evaluate_question(questions[1])
+    results = evaluator.evaluate_questions(questions)
     print(results)

@@ -10,6 +10,7 @@ def prompt_model(model_name: str, prompt: str, system_prompt: str = None):
     try:
         print(f"{model_name} is thinking...")
         full_prompt = f"{system_prompt}\n\n{prompt}" if system_prompt else prompt
+        print(full_prompt)
 
         completion = client.chat.completions.create(
             model=model_name,

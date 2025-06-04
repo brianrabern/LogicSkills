@@ -1,9 +1,10 @@
-from Database.DB import db
-from Database.models import Argument, Sentence
 import random
-from Utils.helpers import canonical_premise_str, generate_argument_id
 import json
 from pathlib import Path
+from Database.DB import db
+from Database.models import Argument, Sentence
+from Utils.helpers import canonical_premise_str, generate_argument_id
+
 
 # Initialize database session
 session = db.session
@@ -108,7 +109,7 @@ def create_question_dict(language, argument, counterpart_id=None):
     }
 
 
-def generate_eval_questions(language, num_questions=20):
+def generate_questions(language, num_questions=20):
     # get valid arguments
     valid_args = session.query(Argument).filter_by(valid=1, language=language).all()
     selected_args = random.sample(valid_args, min(num_questions, len(valid_args)))
@@ -148,7 +149,7 @@ def save_questions(questions, output_file):
 if __name__ == "__main__":
     try:
         # Generate questions for Carroll and their English counterparts
-        carroll_questions, english_questions = generate_eval_questions(language="carroll", num_questions=5)
+        carroll_questions, english_questions = generate_questions(language="carroll", num_questions=20)
 
         # Save both sets of questions
         save_questions(carroll_questions, "questions_carroll.json")

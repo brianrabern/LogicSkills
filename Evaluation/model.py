@@ -1,7 +1,6 @@
 import json
 import logging
 from Evaluation.llm import prompt_model
-from Evaluation.prompts.json_fixer_prompt import fixer_prompt
 from config import JSON_FIXER_MODEL
 
 
@@ -41,7 +40,15 @@ class Model:
             return None
 
     def fix_json_response(self, broken_output: str):
-        fixed = prompt_model(JSON_FIXER_MODEL, fixer_prompt(broken_output))
+        fixed = prompt_model(
+            JSON_FIXER_MODEL,
+            (
+                "The following text was supposed to be a JSON object, but it's invalid, and possibly contains extra text:\n\n"
+                f"{broken_output}\n\n"
+                "Please fix the formatting and return ONLY the corrected JSON. "
+                "Do not include any explanation or markdown formatting."
+            ),
+        )
         print(f"[{JSON_FIXER_MODEL} fixed] {fixed}")
 
         try:

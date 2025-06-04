@@ -5,8 +5,8 @@ from pathlib import Path
 from typing import List, Dict, Any
 
 from Evaluation.model import Model
-from Evaluation.evaluator import Evaluator
-from Evaluation.prompts.evaluation_subject_prompt import evaluation_subject_prompt
+from Evaluation.validity_questions.evaluator import Evaluator
+from Evaluation.validity_questions.prompts.evaluation_subject_prompt import evaluation_subject_prompt
 
 
 def load_questions(filepath: str) -> List[Dict[str, Any]]:
