@@ -3,11 +3,8 @@ import json
 from pathlib import Path
 from Database.DB import db
 from Database.models import Argument, Sentence
-from Utils.helpers import canonical_premise_str, generate_argument_id
 from Utils.normalize import unescape_logical_form
 from Utils.helpers import ast_from_json
-from Syntax.convert_to_smt import ast_to_smt2
-
 
 # Initialize database session
 session = db.session
@@ -86,7 +83,7 @@ def save_questions(questions, output_file):
 if __name__ == "__main__":
     try:
         language = "Carroll"  # stick to one language so that we don't get identical (counterpart) arguments
-        invalid_arguments = generate_questions(language, num_questions=2)
+        invalid_arguments = generate_questions(language, num_questions=10)
         print(invalid_arguments)
 
         # Save questions

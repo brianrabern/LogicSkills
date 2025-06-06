@@ -2,14 +2,12 @@ import json
 import logging
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Any
-
 from Evaluation.model import Model
-from Evaluation.validity_questions.evaluator import Evaluator
-from Evaluation.validity_questions.prompts.evaluation_subject_prompt import evaluation_subject_prompt
+from Evaluation.countermodel_questions.evaluator import CountermodelEvaluator
+from Evaluation.countermodel_questions.prompts.evaluation_subject_prompt import evaluation_subject_prompt
 
 
-def load_questions(filepath: str) -> List[Dict[str, Any]]:
+def load_questions(filepath):
     """Load questions from a JSON file."""
     with open(filepath, "r") as f:
         return json.load(f)
@@ -30,11 +28,11 @@ def setup_logging():
     )
 
 
-def run_evaluation(model_name: str, questions_file: str):
+def run_evaluation(model_name, questions_file):
     """Run evaluation for a single model."""
     # setup logging
     setup_logging()
-    logging.info(f"Starting evaluation for model: {model_name}")
+    logging.info(f"Starting countermodel evaluation for model: {model_name}")
 
     # create output directory
     output_dir = Path("results")
@@ -50,7 +48,7 @@ def run_evaluation(model_name: str, questions_file: str):
 
     # initialize model and evaluator
     model = Model(model_name, system_prompt=evaluation_subject_prompt)
-    evaluator = Evaluator(model)
+    evaluator = CountermodelEvaluator(model)
 
     # run evaluation
     evaluator.evaluate_questions(questions)
@@ -58,7 +56,7 @@ def run_evaluation(model_name: str, questions_file: str):
     # save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     safe_model_name = model_name.replace("/", "_")
-    output_path = output_dir / f"{safe_model_name}_{timestamp}.json"
+    output_path = output_dir / f"countermodel_{safe_model_name}_{timestamp}.json"
     evaluator.save_results(str(output_path))
 
     # log summary
@@ -72,8 +70,8 @@ def run_evaluation(model_name: str, questions_file: str):
 
 if __name__ == "__main__":
     # configure these values
-    MODEL_NAME = "mistralai/mixtral-8x7b-instruct"
-    QUESTIONS_FILE = "questions.json"
+    MODEL_NAME = "openai/gpt-4o-mini"
+    QUESTIONS_FILE = "Evaluation/countermodel_questions/questions_invalid_arguments.json"
 
     run_evaluation(MODEL_NAME, QUESTIONS_FILE)
 

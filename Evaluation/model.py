@@ -1,7 +1,7 @@
 import json
 import logging
 from Evaluation.llm import prompt_model
-from config import JSON_FIXER_MODEL
+from config import JSON_FIXER_MODEL, EXTRACTOR_MODEL
 
 
 class Model:
@@ -56,3 +56,34 @@ class Model:
         except json.JSONDecodeError as e:
             logging.error(f"Could not fix JSON: {e}")
             return {"raw_response": fixed}
+
+    def fix_syntax(self, bad_formula: str):
+        prompt = f"""
+        You are an expert in formal logic and syntax. You are given a formula that is not a well-formed formula (WFF). Your task is to correct it according to the syntax rules below.
+
+        # Input (Ill-Formed)
+        {bad_formula}
+
+        # Formal Syntax
+        WFF         ::= ATOM
+                    | "¬" WFF
+                    | "(" WFF CONNECTIVE WFF ")"
+                    | QUANTIFIER VARIABLE WFF
+
+        ATOM        ::= PREDICATE TERM
+                    | PREDICATE TERM TERM
+
+        TERM        ::= VARIABLE | CONSTANT
+
+        QUANTIFIER  ::= "∀" | "∃"
+        CONNECTIVE  ::= "∧" | "∨" | "→" | "↔"
+        PREDICATE   ::= A single uppercase letter (A–Z)
+        VARIABLE    ::= A lowercase letter from s–z
+        CONSTANT    ::= A lowercase letter from a–r
+
+        # Output
+        Return only the corrected formula, with no explanation or extra text.
+        """
+
+        fixed = prompt_model(self.model_name, prompt)
+        return fixed.strip()

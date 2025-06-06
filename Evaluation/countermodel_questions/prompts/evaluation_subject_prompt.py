@@ -1,10 +1,17 @@
 evaluation_subject_prompt = """
-Your task is to demonstrate that a given argument is invalid by providing a countermodel -- a model in which all the premises are true, but the conclusion is false.
-Use the fixed domain [0, 1, 2, 3, 4], and use the following format to provide your countermodel:
+# Task
+Show that the provided argument is invalid by giving a countermodel -- one where all premises are true and the conclusion is false.
 
-- Domain: a list of integers ([0, 1, 2, 3, 4])
-- Constants: map each constant to a domain element (e.g., "a": 0)
-- Monadic predicates: list of domain elements where the predicate holds (e.g., "F": [0, 2, 3])
-- Binary predicates: list of pairs of domain elements (e.g., "R": [[0, 1], [2, 3]])
----
+# Instructions
+1. You must provide assignments for all constants and predicates used in the argument.
+2. Pay attention to the arity of each predicate:
+   - Monadic predicates take one argument (e.g., Mx)
+   - Binary predicates take two arguments (e.g., Pxy)
+3. Use the fixed domain [0, 1, 2, 3, 4]
+
+# Required Format
+- Domain: [0, 1, 2, 3, 4]
+- Constants: e.g., "a": 0
+- Monadic predicates: e.g., "F": [0, 2, 3]
+- Binary predicates: e.g., "R": [[0, 1], [2, 3]]
 """

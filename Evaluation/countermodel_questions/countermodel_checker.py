@@ -19,6 +19,7 @@ def check_countermodel(user_model, sentence_ast):
     monadic = sentence_info.get("monadic_predicates", [])
     binary = sentence_info.get("binary_predicates", [])
 
+    print("here 1")
     # Validate that all required symbols are interpreted
     for symbol in constants + monadic + binary:
         if symbol not in user_model:
@@ -26,23 +27,29 @@ def check_countermodel(user_model, sentence_ast):
             comments.append(f"Missing interpretation for: {symbol}")
             return False, comments
 
+    print("here 2")
     # Validate model first
-    valid, error = validate_model(user_model)
+    valid, error = validate_model(user_model, monadic, binary)
     if not valid:
+        print("model is not valid")
         comments.append(error)
         return False, comments
 
+    print("here 3")
     # convert model to SMT
     smtlib_model = convert_model_to_smtlib(user_model, constants, monadic, binary)
     if smtlib_model is None:
+        print("Unable to parse model into SMT")
         comments.append("Unable to parse model into SMT")
         return False, comments
 
+    print("here 4")
     # merge SMT strings and parse
     merged_smt = merge_smts(smtlib_model, sentence_smt)
     print("\nMerged SMT:", merged_smt)
     try:
         parsed_formula = z3.parse_smt2_string(merged_smt)
+        print("here 5", parsed_formula)
     except z3.Z3Exception as e:
         print("Z3 parse error:", e)
         comments.append(f"Z3 parse error: {e}")
@@ -66,14 +73,33 @@ def check_countermodel(user_model, sentence_ast):
         return None, comments
 
 
-def validate_model(model):
+def validate_model(model, monadic_predicates=None, binary_predicates=None):
     """Validates that a model is well-formed:"""
+    print("here 2.1")
     if "Domain" not in model:
+        print("Model does not contain a 'Domain' key")
         return False, "Model does not contain a 'Domain' key"
 
+    print("here 2.2")
     domain = model["Domain"]
     if not all(isinstance(x, int) for x in domain):
+        print("Domain must be a list of integers")
         return False, "Domain must be a list of integers"
+
+    # Check predicate arity if predicate lists are provided
+    if monadic_predicates is not None:
+        for pred in monadic_predicates:
+            if pred in model:
+                value = model[pred]
+                if not isinstance(value, list) or (value and isinstance(value[0], list)):
+                    return False, f"Monadic predicate '{pred}' must be a list of integers, not a list of pairs"
+
+    if binary_predicates is not None:
+        for pred in binary_predicates:
+            if pred in model:
+                value = model[pred]
+                if not isinstance(value, list) or (value and not isinstance(value[0], list)):
+                    return False, f"Binary predicate '{pred}' must be a list of pairs"
 
     # Get all values from the model
     all_values = []
@@ -92,12 +118,14 @@ def validate_model(model):
             # Constant
             all_values.append(value)
 
+    print("here 2.3")
     # Check all values are in domain, using set to get unique values
     invalid_values = sorted(set(v for v in all_values if v not in domain))
     if invalid_values:
         print(f"Model contains values not in domain: {invalid_values}")
         return False, f"Model contains values not in domain: {invalid_values}"
-    return True
+    print("here 2.4")
+    return True, None
 
 
 def convert_model_to_smtlib(model, names, monadic, binary):
