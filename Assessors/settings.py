@@ -16,9 +16,7 @@ class QuestionTypeConfig:
     """Configuration for a specific question type."""
 
     name: str
-    question_file: str
     system_prompt: str
-    output_file: str
     model_name: str
     temperature: float = 0.0
     max_tokens: int = 2500
@@ -27,12 +25,8 @@ class QuestionTypeConfig:
     presence_penalty: float = 0.0
     max_questions: Optional[int] = None  # None = all questions
 
-    def get_timestamped_output_file(self) -> str:
+    def get_timestamped_output_file(self, language: str = None):
         """Generate timestamped output filename for inference results."""
-        # Extract language from question file name
-        # e.g., "questions_validity_carroll.json" -> "carroll"
-        question_filename = Path(self.question_file).name
-        language = question_filename.split("_")[-1].replace(".json", "")
 
         # Ensure results/inference/{question_type} directory exists
         Path(f"results/inference/{self.name}").mkdir(parents=True, exist_ok=True)
@@ -43,10 +37,10 @@ class QuestionTypeConfig:
         # Create filename: {language}_{model_name}_{timestamp}.json
         # For countermodel, skip language prefix since it doesn't have language variants
         model_name_safe = self.model_name.replace("/", "_")
-        if self.name == "countermodel":
-            filename = f"{model_name_safe}_{timestamp}.json"
-        else:
+        if language:
             filename = f"{language}_{model_name_safe}_{timestamp}.json"
+        else:
+            filename = f"{model_name_safe}_{timestamp}.json"
 
         return f"results/inference/{self.name}/{filename}"
 
@@ -55,28 +49,22 @@ class QuestionTypeConfig:
 VALIDITY_CONFIG = QuestionTypeConfig(
     name="validity",
     model_name="openai/gpt-4o-mini",
-    question_file="Assessors/validity/questions_validity_carroll.json",
     system_prompt=validity_system_prompt,
-    output_file="inference_results_validity_carroll.json",
-    max_questions=2,
+    max_questions=10,
 )
 
 SYMBOLIZATION_CONFIG = QuestionTypeConfig(
     name="symbolization",
     model_name="openai/gpt-4o-mini",
-    question_file="Assessors/symbolization/questions_symbolization_carroll.json",
     system_prompt=symbolization_system_prompt,
-    output_file="inference_results_symbolization_carroll.json",
-    max_questions=2,
+    max_questions=10,
 )
 
 COUNTERMODEL_CONFIG = QuestionTypeConfig(
     name="countermodel",
     model_name="openai/gpt-4o-mini",
-    question_file="Assessors/countermodel/questions_countermodel.json",
     system_prompt=countermodel_system_prompt,
-    output_file="inference_results_countermodel.json",
-    max_questions=2,
+    max_questions=10,
 )
 
 # Registry of all question types
@@ -102,10 +90,6 @@ def list_question_types() -> list:
 def get_evaluation_filename_from_inference(inference_file: str) -> str:
     """Generate evaluation filename based on inference filename."""
     inference_path = Path(inference_file)
-
-    # Extract components from inference filename
-    # e.g., "results/inference/validity/carroll_openai_gpt-4o-mini_20250620_144423.json"
-    # -> question_type = "validity", filename = "carroll_openai_gpt-4o-mini_20250620_144423.json"
 
     question_type = inference_path.parent.name
     filename = inference_path.name

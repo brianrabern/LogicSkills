@@ -14,50 +14,65 @@ class SymbolizationEvaluator:
 
     def evaluate_response(self, response):
         """Evaluate a single question."""
+        try:
+            # get model's response to the question
+            raw_response = response["response"]["raw_response"]
 
-        # get model's response to the question
-        raw_response = response["response"]["raw_response"]
+            # extract the answer using our extractor model
+            extraction = self.extractor_model.query(extractor_prompt(raw_response), parse_json=True)
+            print(f"Extracted answer: {extraction}")
 
-        # extract the answer using our extractor model
-        extraction = self.extractor_model.query(extractor_prompt(raw_response), parse_json=True)
-        print(f"Extracted answer: {extraction}")
-
-        if extraction["formula"] == response["question"]["form"]:
-            is_correct = True
-            comments = "Exact match: LLM symbolization is identical to DB symbolization"
-        else:
-            # check to see if the LLM's symbolization is logically equivalent to the DB symbolization
-            is_correct = check_equivalence(extraction["formula"], response["question"]["form"])
-            if is_correct is None:
-                is_correct = "UNKNOWN"
-                comments = f"Failed to parse the model's symbolization: {extraction['formula']}"
-            elif is_correct:
-                comments = "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+            if extraction["formula"] == response["question"]["form"]:
+                is_correct = True
+                comments = "Exact match: LLM symbolization is identical to DB symbolization"
             else:
-                comments = "Not logically equivalent"
+                # check to see if the LLM's symbolization is logically equivalent to the DB symbolization
+                is_correct = check_equivalence(extraction["formula"], response["question"]["form"])
+                if is_correct is None:
+                    is_correct = "UNKNOWN"
+                    comments = f"Failed to parse the model's symbolization: {extraction['formula']}"
+                elif is_correct:
+                    comments = "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+                else:
+                    comments = "Not logically equivalent"
 
-        # log whether the answer was correct
-        print(
-            f"Answer was {'correct' if is_correct is True else 'incorrect' if is_correct is False else 'indeterminate'}"
-        )
+            # prepare result
+            result = {
+                "question_id": response["question"]["id"],
+                "question_type": "symbolization",
+                "question": response["question"]["question"],
+                "model_response": response["response"]["raw_response"],
+                "extracted_answer": extraction if extraction else "None",
+                "model_metadata": response["response"]["inference_metadata"],
+                "is_correct": is_correct,
+                "comments": {
+                    "correct_answer": response["question"]["form"],
+                    "assessment": comments,
+                },
+            }
 
-        # prepare result
-        result = {
-            "question_id": response["question"]["id"],
-            "question_type": "symbolization",
-            "question": response["question"]["question"],
-            "model_response": response["response"]["raw_response"],
-            "extracted_answer": extraction if extraction else "None",
-            "model_metadata": response["response"]["inference_metadata"],
-            "is_correct": is_correct,
-            "comments": {
-                "correct_answer": response["question"]["form"],
-                "assessment": comments,
-            },
-        }
+            self.results.append(result)
+            return result
 
-        self.results.append(result)
-        return result
+        except Exception as e:
+            # Create a result entry for failed evaluation
+            result = {
+                "question_id": response["question"]["id"],
+                "question_type": "symbolization",
+                "question": response["question"]["question"],
+                "model_response": response["response"]["raw_response"],
+                "extracted_answer": "ERROR",
+                "model_metadata": response["response"]["inference_metadata"],
+                "is_correct": "UNKNOWN",
+                "comments": {
+                    "correct_answer": response["question"]["form"],
+                    "assessment": f"Evaluation failed: {str(e)}",
+                },
+            }
+
+            self.results.append(result)
+            print(f"Error evaluating question {response['question']['id']}: {e}")
+            return result
 
     def get_summary(self) -> Dict[str, Any]:
         """Get a summary of evaluation results."""

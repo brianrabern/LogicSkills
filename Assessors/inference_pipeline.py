@@ -3,14 +3,15 @@ import logging
 from pathlib import Path
 from datetime import datetime
 from Assessors.core.response_engine import ResponseEngine
-from Assessors.settings import get_question_type_config, list_question_types
+from Assessors.settings import get_question_type_config
 
 
 class InferencePipeline:
     """Generalized pipeline for running inference on different question types."""
 
-    def __init__(self, question_type: str):
+    def __init__(self, question_type: str, language: str = None):
         self.config = get_question_type_config(question_type)
+        self.language = language
 
         # Initialize inference engine
         self.engine = ResponseEngine(
@@ -27,7 +28,14 @@ class InferencePipeline:
 
     def load_questions(self):
         """Load questions from the configured file."""
-        filepath = Path(self.config.question_file)
+        # Use language parameter to construct question file path
+        if self.language is not None:
+            question_file = f"Assessors/{self.question_type}/questions_{self.question_type}_{self.language}.json"
+        else:
+            # For countermodel, use the default path since it doesn't have language variants
+            question_file = f"Assessors/{self.question_type}/questions_{self.question_type}.json"
+
+        filepath = Path(question_file)
         if not filepath.exists():
             raise FileNotFoundError(f"Question file not found: {filepath}")
 
@@ -76,8 +84,14 @@ class InferencePipeline:
 
     def save_results(self):
         """Save inference results to JSON file."""
+        Path("results/inference").mkdir(parents=True, exist_ok=True)
+        Path("results/evaluation").mkdir(parents=True, exist_ok=True)
 
-        output_file = self.config.get_timestamped_output_file()
+        # Use language parameter if provided, otherwise auto-detect
+        if self.language is not None:
+            output_file = self.config.get_timestamped_output_file(language=self.language)
+        else:
+            output_file = self.config.get_timestamped_output_file()
 
         with open(output_file, "w") as f:
             json.dump(self.results, f, indent=4)
@@ -95,26 +109,32 @@ class InferencePipeline:
 
 
 if __name__ == "__main__":
-    # Example usage
-    logging.basicConfig(level=logging.INFO)
 
-    print("Available question types:", list_question_types())
+    # # Run inference for validity questions
+    # print("\nRunning inference for Carrollian validity questions...")
+    # inference_pipeline = InferencePipeline("validity", "carroll")
+    # carrollian_validity_inference_file = inference_pipeline.run_pipeline()
 
-    # Run inference for validity questions
-    print("\nRunning inference for validity questions...")
-    inference_pipeline = InferencePipeline("validity")
-    validity_inference_file = inference_pipeline.run_pipeline()
+    # print("\nRunning inference for English validity questions...")
+    # inference_pipeline = InferencePipeline("validity", "english")
+    # english_validity_inference_file = inference_pipeline.run_pipeline()
 
-    # Run inference for symbolization questions
-    print("\nRunning inference for symbolization questions...")
-    inference_pipeline = InferencePipeline("symbolization")
-    symbolization_inference_file = inference_pipeline.run_pipeline()
+    # # Run inference for symbolization questions
+    # print("\nRunning inference for Carrollian symbolization questions...")
+    # inference_pipeline = InferencePipeline("symbolization", "carroll")
+    # carrollian_symbolization_inference_file = inference_pipeline.run_pipeline()
+
+    # print("\nRunning inference for English symbolization questions...")
+    # inference_pipeline = InferencePipeline("symbolization", "english")
+    # english_symbolization_inference_file = inference_pipeline.run_pipeline()
 
     # Run inference for countermodel questions
     print("\nRunning inference for countermodel questions...")
     inference_pipeline = InferencePipeline("countermodel")
     countermodel_inference_file = inference_pipeline.run_pipeline()
 
-    print(f"Validity responses saved to: {validity_inference_file}")
-    print(f"Symbolization responses saved to: {symbolization_inference_file}")
-    print(f"Countermodel responses saved to: {countermodel_inference_file}")
+    # print(f"Carrollian validity responses saved to: {carrollian_validity_inference_file}")
+    # print(f"English validity responses saved to: {english_validity_inference_file}")
+    # print(f"Symbolization responses saved to: {carrollian_symbolization_inference_file}")
+    # print(f"English symbolization responses saved to: {english_symbolization_inference_file}")
+    # print(f"Countermodel responses saved to: {countermodel_inference_file}")

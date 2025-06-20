@@ -1,0 +1,263 @@
+{
+  "results": [
+    {
+      "question_id": 2929,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nLewis doesn't see Hazel and only humans drank.\n\nAbbreviations:\n\nP: [1] saw [2]\nb: Lewis\nc: Hazel\nN: [1] is a human\nH: [1] drank",
+      "model_response": "\u00acPbc \u2227 \u2200x(Nx \u2192 Hx)",
+      "extracted_answer": {
+        "formula": "(\u00acPbc \u2227 \u2200x(Nx\u2192Hx))"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:05.579086",
+        "end_time": "2025-06-20T15:56:06.158689",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00acPbc\u2227\u2200x(Hx\u2192Nx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 725,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNo humans kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nc: Hazel",
+      "model_response": "\u00ac\u2203x(Nx \u2227 Qxc)",
+      "extracted_answer": {
+        "formula": "\u00ac\u2203x(Nx\u2227Qxc)"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:06.158714",
+        "end_time": "2025-06-20T15:56:06.753016",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "\u00ac\u2203x(Nx\u2227Qxc)",
+        "assessment": "Exact match: LLM symbolization is identical to DB symbolization"
+      }
+    },
+    {
+      "question_id": 3467,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey kicked Hazel unless Alfred isn't a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel\nN: [1] is a human\na: Alfred",
+      "model_response": "\u2203x(Ox \u2227 Qxc) \u2228 \u00acNa",
+      "extracted_answer": {
+        "formula": "(\u2203x(Ox\u2227Qxc) \u2228 \u00acNa)"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:06.753041",
+        "end_time": "2025-06-20T15:56:07.393680",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u00ac\u00acNa\u2192\u2203x(Ox\u2227Qxc))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 4581,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey kicked Hazel only if every monkey saw Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel\nP: [1] saw [2]\nb: Lewis",
+      "model_response": "\u2203x(Ox \u2227 Qxc) \u2192 \u2200y(Oy \u2192 Pyb)",
+      "extracted_answer": {
+        "formula": "(\u2203x(Ox\u2227Qxc)\u2192\u2200y(Oy\u2192Pyb))"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:07.393705",
+        "end_time": "2025-06-20T15:56:08.096726",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227Qxc)\u2192\u2200x(Ox\u2192Pxb))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 4081,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nHazel doesn't see Alfred unless every donkey will attack.\n\nAbbreviations:\n\nP: [1] saw [2]\nc: Hazel\na: Alfred\nM: [1] is a donkey\nG: [1] will attack",
+      "model_response": "\u00acPca \u2228 (\u2200x(Mx \u2192 Gx))",
+      "extracted_answer": {
+        "formula": "(\u00acPca \u2228 \u2200x(Mx\u2192Gx))"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:08.096753",
+        "end_time": "2025-06-20T15:56:08.720889",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u00ac\u2200x(Mx\u2192Gx)\u2192\u00acPca)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 10363,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis won't run, then every monkey saw Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nF: [1] will run\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel\nQ: [1] kicked [2]",
+      "model_response": "\u00acFb \u2192 \u2200x(Ox \u2192 (Px c \u2194 \u2200y(Oy \u2192 Qyb)))",
+      "extracted_answer": {
+        "formula": "(\u00acFb\u2192\u2200x(Ox\u2192(Pxc\u2194\u2200y(Oy\u2192Qyb))))"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:08.720914",
+        "end_time": "2025-06-20T15:56:09.706680",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u00acFb\u2192(\u2200x(Ox\u2192Pxc)\u2192\u2200x(Ox\u2192Qxb)))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 2103,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all monkeys will run and every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nF: [1] will run\nQ: [1] kicked [2]\nb: Lewis",
+      "model_response": "\u00ac\u2200x(Ox\u2192Fx) \u2227 \u2200y(Oy\u2192Qyb)",
+      "extracted_answer": {
+        "formula": "(\u00ac\u2200x(Ox\u2192Fx) \u2227 \u2200y(Oy\u2192Qyb))"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:09.706705",
+        "end_time": "2025-06-20T15:56:10.356912",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227\u00acFx)\u2227\u2200x(Ox\u2192Qxb))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 11283,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA human will attack and only donkeys ate.\n\nAbbreviations:\n\nN: [1] is a human\nG: [1] will attack\nM: [1] is a donkey\nI: [1] ate",
+      "model_response": "\u2203x(Nx \u2227 Gx) \u2227 \u2200y(My \u2192 Iy)",
+      "extracted_answer": {
+        "formula": "(\u2203x(Nx\u2227Gx) \u2227 \u2200y(My\u2192Iy))"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:10.356937",
+        "end_time": "2025-06-20T15:56:11.028879",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227Gx)\u2227\u2200x(Ix\u2192Mx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 7099,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf a human chased Lewis, then not all donkeys kicked Alfred only if Alfred didn't kick Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nc: Hazel",
+      "model_response": "\u2200x((Nx \u2192 Rxb) \u2192 (\u00ac\u2203y(My \u2227 Qya) \u2194 \u00acQac))",
+      "extracted_answer": {
+        "formula": "\u2200x(((Nx\u2192Rxb)\u2192(\u00ac\u2203y(My\u2227Qya)\u2194\u00acQac)))"
+      },
+      "model_metadata": {
+        "model_name": "openai/gpt-4o-mini",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2500,
+          "top_p": 1.0,
+          "frequency_penalty": 0.0,
+          "presence_penalty": 0.0
+        },
+        "start_time": "2025-06-20T15:56:11.028906",
+        "end_time": "2025-06-20T15:56:11.878979",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227Rxb)\u2192(\u2203x(Mx\u2227\u00acQxa)\u2192\u00acQac))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(((Nx\u2192Rxb)\u2192(\u00ac\u2203y(My\u2227Qya)\u2194\u00acQac)))"
+      }
+    }
+  ],
+  "summary": {
+    "total_questions": 9,
+    "correct_answers": 6,
+    "accuracy": 0.6666666666666666,
+    "errors": 0,
+    "unknown": 0
+  }
+}

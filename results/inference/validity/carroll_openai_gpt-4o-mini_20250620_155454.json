@@ -1,0 +1,419 @@
+[
+    {
+        "question": {
+            "id": "39756f7aec521fdc",
+            "counterpart_id": "a6fa9dad2ce68dd2",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Zindle is uffish. Every borogove snicker-snacked a tove. A rath galumphed over Zindle but it is not the case that Rafin is uffish. If a rath snicker-snacked Bungo, then not all borogoves galumphed over Bungo. If Zindle won't burble, then not all toves galumphed over Bungo only if no raths galumphed over Bungo.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Zindle and Rafin will burble.\n2. Zindle is uffish and a rath galumphed over Zindle.\n3. Zindle will burble.\n4. Zindle won't burble.\n5. Zindle and Bungo will burble.\n6. A rath is uffish and a rath galumphed over Zindle.\n",
+            "correct_answer": "2",
+            "option_to_sentence_id": {
+                "1": 44,
+                "2": 2440,
+                "3": 40,
+                "4": 50,
+                "5": 48,
+                "6": 2856
+            },
+            "premise_ids": [
+                184,
+                1178,
+                2962,
+                4624,
+                7526
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the situation, let's break down the information provided:\n\n1. **Categories**: Everything is either a tove, a borogove, or a rath. There is at least one of each.\n2. **Zindle's State**: Zindle is described as \"uffish.\"\n3. **Borogoves and Toves**: Every borogove has snicker-snacked a tove.\n4. **Rath's Action**: A rath galumphed over Zindle, but Rafin is not uffish.\n5. **Conditional Statement**: If a rath snicker-snacked Bungo, then not all borogoves galumphed over Bungo.\n6. **Burble Condition**: If Zindle won't burble, then not all toves galumphed over Bungo only if no raths galumphed over Bungo.\n\nNow, let's evaluate the statements:\n\n1. **Zindle and Rafin will burble.** - We cannot conclude this from the information given. Rafin is not uffish, but we have no information about whether either will burble.\n   \n2. **Zindle is uffish and a rath galumphed over Zindle.** - This is true based on the information provided. Zindle is indeed uffish, and it is stated that a rath galumphed over Zindle.\n\n3. **Zindle will burble.** - We cannot conclude this. There is no information confirming that Zindle will burble.\n\n4. **Zindle won't burble.** - We cannot conclude this either. There is no definitive information about Zindle's ability to burble.\n\n5. **Zindle and Bungo will burble.** - We cannot conclude this. There is no information about Bungo's state or whether Zindle will burble.\n\n6. **A rath is uffish and a rath galumphed over Zindle.** - We know a rath galumphed over Zindle, but we do not have information confirming that a rath is uffish.\n\nBased on the analysis, the only statement that must be true is:\n\n**Final Answer: 2. Zindle is uffish and a rath galumphed over Zindle.**",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:53:50.770099",
+                "end_time": "2025-06-20T15:53:59.045921",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "4dcbe4fd304e7487",
+            "counterpart_id": "01f77d7cdbe7ebcf",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. No toves galumphed over Bungo and Bungo didn't chortle at Bungo. If a rath chortled at Zindle, then a tove chortled at Rafin. Not all toves galumphed over Zindle and Rafin didn't chortle at Bungo.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. A tove galumphed over Bungo.\n2. Zindle is a tove.\n3. Not all toves galumphed over Bungo.\n4. Bungo galumphed over every tove.\n5. Bungo galumphed over a tove.\n6. Every tove galumphed over Bungo.\n",
+            "correct_answer": "3",
+            "option_to_sentence_id": {
+                "1": 700,
+                "2": 256,
+                "3": 704,
+                "4": 1914,
+                "5": 1916,
+                "6": 698
+            },
+            "premise_ids": [
+                2360,
+                4916,
+                11606
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the situation, let's break down the information provided:\n\n1. Everything is either a tove, a borogove, or a rath (exclusively), and there is at least one of each.\n2. No toves galumphed over Bungo.\n3. Bungo didn't chortle at Bungo.\n4. If a rath chortled at Zindle, then a tove chortled at Rafin.\n5. Not all toves galumphed over Zindle.\n6. Rafin didn't chortle at Bungo.\n\nNow, let's evaluate each statement:\n\n1. **A tove galumphed over Bungo.**  \n   This statement cannot be true because it contradicts the information that no toves galumphed over Bungo.\n\n2. **Zindle is a tove.**  \n   We cannot conclude this from the information given. Zindle could be a borogove or a rath.\n\n3. **Not all toves galumphed over Bungo.**  \n   This statement is true because we know that no toves galumphed over Bungo, which means it is certainly true that not all toves did.\n\n4. **Bungo galumphed over every tove.**  \n   There is no information to support this statement. In fact, since no toves galumphed over Bungo, this statement cannot be true.\n\n5. **Bungo galumphed over a tove.**  \n   There is no evidence to support this statement. In fact, it is likely false since we know no toves galumphed over Bungo.\n\n6. **Every tove galumphed over Bungo.**  \n   This statement is false because we know that no toves galumphed over Bungo.\n\nBased on the analysis, the only statement that must be true is:\n\n**Final Answer: 3. Not all toves galumphed over Bungo.**",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:53:59.045962",
+                "end_time": "2025-06-20T15:54:06.960875",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "311de57d405c10b3",
+            "counterpart_id": "3f532be36de27e23",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Every borogove is uffish. A rath snicker-snacked Zindle and Rafin is uffish. Every borogove chortled at Bungo unless every tove snicker-snacked Zindle.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. A rath snicker-snacked Zindle and every borogove is uffish.\n2. Every borogove is mimsy just in case not all borogoves are mimsy.\n3. A rath is uffish and every borogove snicker-snacked Zindle.\n4. Zindle and Rafin are uffish.\n5. Zindle and Bungo are uffish.\n6. Zindle is uffish.\n",
+            "correct_answer": "1",
+            "option_to_sentence_id": {
+                "1": 2708,
+                "2": 5468,
+                "3": 2854,
+                "4": 188,
+                "5": 192,
+                "6": 184
+            },
+            "premise_ids": [
+                560,
+                2744,
+                4288
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the statements, let's break down the information provided in the situation:\n\n1. **Categories**: Everything is either a tove, a borogove, or a rath. There is at least one of each.\n2. **Properties**:\n   - Every borogove is uffish.\n   - A rath snicker-snacked Zindle and Rafin is uffish.\n   - Every borogove chortled at Bungo unless every tove snicker-snacked Zindle.\n\nNow, let's evaluate each statement:\n\n1. **A rath snicker-snacked Zindle and every borogove is uffish.**\n   - This is true because we know from the premises that a rath snicker-snacked Zindle and Rafin is uffish, and every borogove is uffish.\n\n2. **Every borogove is mimsy just in case not all borogoves are mimsy.**\n   - This statement is a logical biconditional and does not necessarily follow from the premises. We cannot conclude anything about the mimsy status of borogoves based on the information given.\n\n3. **A rath is uffish and every borogove snicker-snacked Zindle.**\n   - We know a rath snicker-snacked Zindle and Rafin is uffish, but we do not have information that every borogove snicker-snacked Zindle. Therefore, this statement is not necessarily true.\n\n4. **Zindle and Rafin are uffish.**\n   - We know that a rath snicker-snacked Zindle and Rafin is uffish, but we do not know if Zindle and Rafin themselves are uffish. This statement cannot be concluded as true.\n\n5. **Zindle and Bungo are uffish.**\n   - We have no information about Bungo's status, and while Zindle is involved in the snicker-snack, we cannot conclude that Zindle is uffish either. Thus, this statement is not necessarily true.\n\n6. **Zindle is uffish.**\n   - Similar to the previous point, we cannot conclude that Zindle is uffish based on the information provided.\n\nAfter evaluating all the statements, the only one that must be true based on the premises is:\n\n**Final Answer: 1. A rath snicker-snacked Zindle and every borogove is uffish.**",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:54:06.960909",
+                "end_time": "2025-06-20T15:54:12.962104",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "23bc61612a81595e",
+            "counterpart_id": "84d73f935fa6528a",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. A tove snicker-snacked a rath that snicker-snacked a rath. No toves chortled at Rafin and Rafin isn't a tove. If Bungo is a borogove, then every rath chortled at Rafin.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Rafin chortled at every tove.\n2. No toves chortled at Rafin but it is not the case that Rafin isn't a tove.\n3. Every tove chortled at Rafin.\n4. Not all toves chortled at Rafin.\n5. A tove chortled at Rafin.\n6. Rafin chortled at a tove.\n",
+            "correct_answer": "4",
+            "option_to_sentence_id": {
+                "1": 1874,
+                "2": 2586,
+                "3": 618,
+                "4": 624,
+                "5": 620,
+                "6": 1876
+            },
+            "premise_ids": [
+                1796,
+                2584,
+                5044
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the situation, let's break down the information provided:\n\n1. **Categories**: Everything is either a tove, a borogove, or a rath. There is at least one of each.\n2. **Tove and Rath Interaction**: A tove snicker-snacked a rath that snicker-snacked another rath. This indicates that toves can interact with raths, but we don't have information about their interactions with borogoves.\n3. **Rafin's Identity**: Rafin is not a tove, and no toves chortled at Rafin.\n4. **Bungo's Identity**: If Bungo is a borogove, then every rath chortled at Rafin.\n\nNow, let's evaluate the statements:\n\n1. **Rafin chortled at every tove.**  \n   - This cannot be true because Rafin is not a tove and no toves chortled at Rafin.\n\n2. **No toves chortled at Rafin but it is not the case that Rafin isn't a tove.**  \n   - This is contradictory because we know Rafin is not a tove. Therefore, this statement cannot be true.\n\n3. **Every tove chortled at Rafin.**  \n   - This cannot be true because we know that no toves chortled at Rafin.\n\n4. **Not all toves chortled at Rafin.**  \n   - This must be true because we know that no toves chortled at Rafin.\n\n5. **A tove chortled at Rafin.**  \n   - This cannot be true because we know that no toves chortled at Rafin.\n\n6. **Rafin chortled at a tove.**  \n   - We have no information to support this statement. Rafin's interactions with toves are not defined.\n\nBased on the analysis, the only statement that must be true is:\n\n**Final Answer: 4. Not all toves chortled at Rafin.**",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:54:12.962138",
+                "end_time": "2025-06-20T15:54:19.748085",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "6ddbdfd94c08d100",
+            "counterpart_id": "a53dd3c4f552f0c2",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. No toves chortled at Rafin and every borogove chortled at Zindle. No borogoves are mimsy only if every rath chortled at Rafin. A borogove chortled at Rafin but it is not the case that Bungo didn't snicker-snacked Bungo.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Zindle chortled at a borogove.\n2. Not all borogoves chortled at Zindle.\n3. Zindle is mimsy.\n4. No borogoves chortled at Zindle.\n5. A borogove chortled at Zindle.\n6. Zindle chortled at every borogove.\n",
+            "correct_answer": "5",
+            "option_to_sentence_id": {
+                "1": 1884,
+                "2": 640,
+                "3": 148,
+                "4": 638,
+                "5": 636,
+                "6": 1882
+            },
+            "premise_ids": [
+                2610,
+                5074,
+                10660
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the situation, let's break down the information provided:\n\n1. **Categories**: Everything is either a tove, a borogove, or a rath. There is at least one of each.\n2. **Chortling Behavior**:\n   - No toves chortled at Rafin.\n   - Every borogove chortled at Zindle.\n3. **Conditional Statement**: No borogoves are mimsy only if every rath chortled at Rafin.\n4. **Specific Instance**: A borogove chortled at Rafin, and it is stated that Bungo did snicker-snacked Bungo.\n\nNow, let's analyze the statements one by one:\n\n1. **Zindle chortled at a borogove.**\n   - This is true because every borogove chortled at Zindle.\n\n2. **Not all borogoves chortled at Zindle.**\n   - This is false because we know that every borogove chortled at Zindle.\n\n3. **Zindle is mimsy.**\n   - We cannot determine this from the information provided. The relationship between Zindle and mimsy is not established.\n\n4. **No borogoves chortled at Zindle.**\n   - This is false because we know that every borogove chortled at Zindle.\n\n5. **A borogove chortled at Zindle.**\n   - This is true because every borogove chortled at Zindle.\n\n6. **Zindle chortled at every borogove.**\n   - We cannot determine this from the information provided. While every borogove chortled at Zindle, we do not have information about Zindle's chortling behavior towards every borogove.\n\nBased on this analysis, the statements that must be true are:\n\n1. Zindle chortled at a borogove.\n5. A borogove chortled at Zindle.\n\nThus, the final answer is that statements 1 and 5 must be true.",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:54:19.748104",
+                "end_time": "2025-06-20T15:54:23.980883",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "a86b7a930c38db24",
+            "counterpart_id": "fec09bd7d3adb594",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Zindle and Bungo gyred. Not all toves gimbled. If not all toves will whiffle, then Bungo galumphed over Zindle only if no raths galumphed over Bungo. Only borogoves will whiffle and a rath galumphed over Zindle.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Zindle and Bungo will whiffle.\n2. Zindle won't whiffle.\n3. Zindle gyred and only borogoves will whiffle.\n4. Zindle gyred and not all borogoves will whiffle.\n5. Zindle gyred and no borogoves will whiffle.\n6. Zindle will whiffle.\n",
+            "correct_answer": "3",
+            "option_to_sentence_id": {
+                "1": 12,
+                "2": 14,
+                "3": 10936,
+                "4": 10950,
+                "5": 10994,
+                "6": 4
+            },
+            "premise_ids": [
+                84,
+                496,
+                10238,
+                11150
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To solve this logical reasoning problem, we need to analyze the given statements and their implications step by step.\n\n1. **Definitions**:\n   - Everything is either a tove, a borogove, or a rath.\n   - There is at least one of each type.\n\n2. **Key Statements**:\n   - Zindle and Bungo gyred.\n   - Not all toves gimbled.\n   - If not all toves will whiffle, then Bungo galumphed over Zindle only if no raths galumphed over Bungo.\n   - Only borogoves will whiffle.\n   - A rath galumphed over Zindle.\n\n3. **Implications**:\n   - Since only borogoves will whiffle, it follows that if Zindle or Bungo whiffles, they must be borogoves.\n   - A rath galumphed over Zindle, which means Zindle cannot be a rath.\n   - Since Zindle and Bungo gyred, they are not the same type as the rath that galumphed over Zindle.\n\n4. **Analyzing the Statements**:\n   - **Statement 1**: Zindle and Bungo will whiffle. (Not necessarily true, as we don't know if Zindle or Bungo are borogoves.)\n   - **Statement 2**: Zindle won't whiffle. (This could be true since Zindle is not confirmed to be a borogove.)\n   - **Statement 3**: Zindle gyred and only borogoves will whiffle. (This is true, but we don't know if Zindle is a borogove.)\n   - **Statement 4**: Zindle gyred and not all borogoves will whiffle. (This could be true, but we don't have enough information to confirm.)\n   - **Statement 5**: Zindle gyred and no borogoves will whiffle. (This contradicts the fact that only borogoves will whiffle.)\n   - **Statement 6**: Zindle will whiffle. (This is not necessarily true, as Zindle may not be a borogove.)\n\n5. **Conclusion**:\n   - The only statement that must be true based on the information provided is **Statement 3**: \"Zindle gyred and only borogoves will whiffle.\" This is true because it is a direct consequence of the information given.\n\nThus, the final answer is:\n\n**Statement 3 must be true.**",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:54:23.980909",
+                "end_time": "2025-06-20T15:54:29.879808",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "eb5a8b03f001b2c0",
+            "counterpart_id": "2f8dcc7fa161d677",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Not all borogoves are uffish. There is not a borogove that every rath chortled at. A tove chortled at a tove that chortled at a rath. No toves chortled at Bungo and Rafin is uffish. Bungo didn't chortle at Zindle or a rath is beamish.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Bungo chortled at every tove.\n2. Not all toves chortled at Bungo.\n3. Bungo chortled at a tove.\n4. Every tove chortled at Bungo.\n5. Not all toves chortled at Bungo and Bungo chortled at Bungo.\n6. A tove chortled at Bungo.\n",
+            "correct_answer": "2",
+            "option_to_sentence_id": {
+                "1": 1878,
+                "2": 632,
+                "3": 1880,
+                "4": 626,
+                "5": 2158,
+                "6": 628
+            },
+            "premise_ids": [
+                566,
+                922,
+                1556,
+                2912,
+                4072
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the situation, let's break down the information provided:\n\n1. **Categories**: Everything is either a tove, a borogove, or a rath. There is at least one of each.\n2. **Borogoves**: Not all borogoves are uffish, meaning some borogoves are not uffish.\n3. **Chortling**: There is not a borogove that every rath chortled at, indicating that raths do not chortle at all borogoves.\n4. **Tove Chortling**: A tove chortled at a tove that chortled at a rath, indicating a chain of chortling involving toves and raths.\n5. **Bungo and Rafin**: Bungo and Rafin are both described as uffish, and no toves chortled at them.\n6. **Bungo's Chortling**: Bungo did not chortle at Zindle, and it is stated that a rath is beamish.\n\nNow, let's evaluate the statements:\n\n1. **Bungo chortled at every tove.**  \n   - This cannot be true because it contradicts the information that no toves chortled at Bungo. If Bungo chortled at every tove, then at least one tove would have to chortle back at Bungo, which is not possible.\n\n2. **Not all toves chortled at Bungo.**  \n   - This must be true because we know that no toves chortled at Bungo. Therefore, it is true that not all toves chortled at Bungo (in fact, none did).\n\n3. **Bungo chortled at a tove.**  \n   - This cannot be determined as true. We have no information that confirms Bungo chortled at any tove.\n\n4. **Every tove chortled at Bungo.**  \n   - This is false because we know that no toves chortled at Bungo.\n\n5. **Not all toves chortled at Bungo and Bungo chortled at Bungo.**  \n   - The first part is true (not all toves chortled at Bungo), but the second part is false (Bungo did not chortle at any toves). Therefore, this statement cannot be true.\n\n6. **A tove chortled at Bungo.**  \n   - This is false because we know that no toves chortled at Bungo.\n\nBased on this analysis, the only statement that must be true is:\n\n**Final Answer: 2. Not all toves chortled at Bungo.**",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:54:29.879835",
+                "end_time": "2025-06-20T15:54:37.498913",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "a7a744af6adbee83",
+            "counterpart_id": "26bc5f09b1aa1f5f",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Zindle is a tove. Zindle didn't snicker-snacked Zindle. If every rath snicker-snacked Rafin, then Bungo will burble.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Not all toves snicker-snacked Zindle.\n2. No toves snicker-snacked Zindle.\n3. Zindle snicker-snacked every tove.\n4. A tove snicker-snacked Zindle.\n5. Every tove snicker-snacked Zindle.\n6. Zindle snicker-snacked a tove.\n",
+            "correct_answer": "1",
+            "option_to_sentence_id": {
+                "1": 760,
+                "2": 758,
+                "3": 1942,
+                "4": 756,
+                "5": 754,
+                "6": 1944
+            },
+            "premise_ids": [
+                256,
+                366,
+                4480
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the statements, let's break down the information given:\n\n1. **Categories**: Everything is either a tove, a borogove, or a rath. There is at least one of each.\n2. **Zindle's Identity**: Zindle is a tove.\n3. **Zindle's Action**: Zindle did not snicker-snack Zindle.\n4. **Conditional Statement**: If every rath snicker-snacked Rafin, then Bungo will burble.\n\nNow, let's evaluate each statement:\n\n1. **Not all toves snicker-snacked Zindle.**\n   - This statement could be true because Zindle did not snicker-snack Zindle, and we don't know the actions of other toves. Therefore, it is possible that not all toves snicker-snacked Zindle.\n\n2. **No toves snicker-snacked Zindle.**\n   - This statement cannot be concluded as true. While Zindle did not snicker-snack Zindle, it does not imply that other toves did not snicker-snack Zindle.\n\n3. **Zindle snicker-snacked every tove.**\n   - This statement is false because we know Zindle did not snicker-snack Zindle, and we have no information suggesting Zindle snicker-snacked any other toves.\n\n4. **A tove snicker-snacked Zindle.**\n   - This statement is not necessarily true. We have no evidence that any tove snicker-snacked Zindle.\n\n5. **Every tove snicker-snacked Zindle.**\n   - This statement is false because we know Zindle did not snicker-snack Zindle, and we cannot assume that every tove snicker-snacked Zindle.\n\n6. **Zindle snicker-snacked a tove.**\n   - This statement is false because Zindle did not snicker-snack Zindle, and we have no evidence that Zindle snicker-snacked any other toves.\n\nBased on this analysis, the only statement that must be true is:\n\n**Final Answer: 1. Not all toves snicker-snacked Zindle.**",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:54:37.498952",
+                "end_time": "2025-06-20T15:54:42.349051",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "b1bcefca814d30a7",
+            "counterpart_id": "98ea7f8d5a708ecf",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Bungo didn't snicker-snacked Bungo. A borogove will whiffle. If every rath snicker-snacked Bungo, then Zindle will whiffle only if every rath is beamish. If Bungo didn't snicker-snacked Bungo, then a borogove snicker-snacked Bungo only if no borogoves are beamish. Not all toves will whiffle and Bungo is a rath.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Every rath snicker-snacked Bungo.\n2. Bungo snicker-snacked a rath.\n3. A rath snicker-snacked Bungo.\n4. Not all raths snicker-snacked Bungo.\n5. No raths snicker-snacked Bungo.\n6. Bungo snicker-snacked every rath.\n",
+            "correct_answer": "4",
+            "option_to_sentence_id": {
+                "1": 818,
+                "2": 1976,
+                "3": 820,
+                "4": 824,
+                "5": 822,
+                "6": 1974
+            },
+            "premise_ids": [
+                398,
+                412,
+                8778,
+                9002,
+                11222
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the situation, let's break down the information provided:\n\n1. **Categories**: Everything is either a tove, a borogove, or a rath. There is at least one of each.\n2. **Bungo's Status**: Bungo is a rath.\n3. **Snicker-snacking**: Bungo didn't snicker-snacked Bungo.\n4. **Borogove Behavior**: A borogove will whiffle.\n5. **Conditional Statements**:\n   - If every rath snicker-snacked Bungo, then Zindle will whiffle only if every rath is beamish.\n   - If Bungo didn't snicker-snacked Bungo, then a borogove snicker-snacked Bungo only if no borogoves are beamish.\n6. **Whiffle Behavior**: Not all toves will whiffle.\n\nNow, let's analyze the statements one by one:\n\n1. **Every rath snicker-snacked Bungo**: This cannot be true because we know Bungo (who is a rath) did not snicker-snack Bungo. Therefore, this statement is false.\n\n2. **Bungo snicker-snacked a rath**: Since Bungo is a rath and did not snicker-snack Bungo, this statement cannot be true. Therefore, this statement is false.\n\n3. **A rath snicker-snacked Bungo**: Since Bungo is a rath and did not snicker-snack Bungo, this statement cannot be true. Therefore, this statement is false.\n\n4. **Not all raths snicker-snacked Bungo**: Since we know Bungo (a rath) did not snicker-snack Bungo, it follows that at least one rath (Bungo) did not snicker-snack Bungo. Therefore, this statement is true.\n\n5. **No raths snicker-snacked Bungo**: This cannot be definitively concluded because we only know that Bungo (a rath) did not snicker-snack Bungo. Other raths may or may not have snicker-snacked Bungo. Therefore, this statement is false.\n\n6. **Bungo snicker-snacked every rath**: This is false because Bungo did not snicker-snack Bungo, and we cannot conclude that Bungo snicker-snacked every rath.\n\nBased on this analysis, the only statement that must be true is:\n\n**Final Answer**: 4. Not all raths snicker-snacked Bungo.",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:54:42.349077",
+                "end_time": "2025-06-20T15:54:48.735640",
+                "success": true
+            },
+            "success": true
+        }
+    },
+    {
+        "question": {
+            "id": "fe12c7a51fcb876d",
+            "counterpart_id": "68833e98da547ce8",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. No raths chortled at a tove. Not all toves chortled at Bungo and no toves chortled at Bungo. If Zindle gimbled, then every rath snicker-snacked Bungo only if no toves gimbled.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Every tove chortled at a rath.\n2. A tove chortled at every rath.\n3. No raths chortled at every tove.\n4. No toves chortled at every rath.\n5. Every tove chortled at every rath.\n6. A tove chortled at a rath.\n",
+            "correct_answer": "3",
+            "option_to_sentence_id": {
+                "1": 860,
+                "2": 862,
+                "3": 934,
+                "4": 866,
+                "5": 858,
+                "6": 864
+            },
+            "premise_ids": [
+                936,
+                2192,
+                6700
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "To analyze the situation, let's break down the information provided:\n\n1. Everything is either a tove, a borogove, or a rath (exclusively), and there is at least one of each.\n2. No raths chortled at a tove.\n3. Not all toves chortled at Bungo, and no toves chortled at Bungo.\n4. If Zindle gimbled, then every rath snicker-snacked Bungo only if no toves gimbled.\n\nNow, let's evaluate each statement:\n\n1. **Every tove chortled at a rath.**  \n   This is not necessarily true. We know that no raths chortled at a tove, but we have no information about whether all toves chortled at raths.\n\n2. **A tove chortled at every rath.**  \n   This is also not necessarily true. Similar to the first statement, we cannot conclude that a tove chortled at every rath.\n\n3. **No raths chortled at every tove.**  \n   This statement is true because it is given that no raths chortled at a tove.\n\n4. **No toves chortled at every rath.**  \n   This is not necessarily true. We do not have information that prevents some toves from chortling at raths.\n\n5. **Every tove chortled at every rath.**  \n   This is not true based on the information we have. We cannot conclude that every tove chortled at every rath.\n\n6. **A tove chortled at a rath.**  \n   This is not necessarily true. We do not have enough information to conclude that at least one tove chortled at a rath.\n\nBased on the analysis, the only statement that must be true is:\n\n**3. No raths chortled at every tove.** \n\nFinal answer: **3. No raths chortled at every tove.**",
+            "inference_metadata": {
+                "model_name": "openai/gpt-4o-mini",
+                "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
+                "model_parameters": {
+                    "temperature": 0.0,
+                    "max_tokens": 2500,
+                    "top_p": 1.0,
+                    "frequency_penalty": 0.0,
+                    "presence_penalty": 0.0
+                },
+                "start_time": "2025-06-20T15:54:48.735665",
+                "end_time": "2025-06-20T15:54:54.185431",
+                "success": true
+            },
+            "success": true
+        }
+    }
+]

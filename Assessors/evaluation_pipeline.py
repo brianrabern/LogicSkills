@@ -107,19 +107,26 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
     CONFIG = {
-        "validity": {"file": "carroll_openai_gpt-4o-mini_20250620_145545.json", "run": False},
-        "symbolization": {"file": "carroll_openai_gpt-4o-mini_20250620_150609.json", "run": True},
-        "countermodel": {"file": "openai_gpt-4o-mini_20250620_150644.json", "run": True},
+        "validity": [
+            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250620_155454.json", "run": True},
+            {"language": "english", "file": "english_openai_gpt-4o-mini_20250620_155557.json", "run": True},
+        ],
+        "symbolization": [
+            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250620_155605.json", "run": True},
+            {"language": "english", "file": "english_openai_gpt-4o-mini_20250620_155611.json", "run": True},
+        ],
+        "countermodel": [{"language": "default", "file": "openai_gpt-4o-mini_20250620_160856.json", "run": True}],
     }
 
     record = {}
-    for question_type, config in CONFIG.items():
-        if config["run"]:
-            print(f"Running evaluation for {question_type}...")
-            evaluation_file = run_evaluation_for_type(question_type, config["file"])
-            print(f"Evaluation results saved to: {evaluation_file}")
-            record[question_type] = evaluation_file
-        else:
-            print(f"Skipping evaluation for {type}...")
+    for question_type, configs in CONFIG.items():
+        for config in configs:
+            if config["run"]:
+                print(f"Running evaluation for {question_type} ({config['language']})...")
+                evaluation_file = run_evaluation_for_type(question_type, config["file"])
+                print(f"Evaluation results saved to: {evaluation_file}")
+                record[f"{question_type}_{config['language']}"] = evaluation_file
+            else:
+                print(f"Skipping evaluation for {question_type} ({config['language']})...")
 
     print(f"Evaluation results saved to: {record}")
