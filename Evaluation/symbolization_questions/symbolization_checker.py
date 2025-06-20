@@ -42,8 +42,12 @@ def check_equivalence(model_form, db_form):
     print("model_ast", model_ast)
     print("db_ast", db_ast)
     if model_ast is None:
-        print("Failed to parse model symbolization")
-        return None
+        # try to repair the formula by adding outer parentheses
+        model_ast = parse_ast(f"({model_form})")
+        if model_ast is None:
+            print("Failed to parse model symbolization with outer parentheses")
+            return None
+        print("Added outer parentheses to model symbolization")
 
     neg_biconditional = ast_to_smt2(("not", ("imp", model_ast, db_ast)))
     print("smt2", neg_biconditional["smt2"])

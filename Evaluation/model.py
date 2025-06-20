@@ -1,7 +1,7 @@
 import json
 import logging
 from Evaluation.llm import prompt_model
-from config import JSON_FIXER_MODEL, EXTRACTOR_MODEL
+from config import JSON_FIXER_MODEL
 
 
 class Model:

@@ -19,6 +19,4 @@ Abbreviations:
 
 Formalization:
 ∀x(Lx→Rxc)
-
----
 """
