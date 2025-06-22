@@ -1,8 +1,10 @@
 from openai import OpenAI
 from config import OPENROUTER_BASE_URL, OPENROUTER_API_KEY
 
+# TODO: Philipp: add a toggle to point at local models instead of the external API
 BASE_URL = OPENROUTER_BASE_URL
 API_KEY = OPENROUTER_API_KEY
+
 client = OpenAI(base_url=BASE_URL, api_key=API_KEY)
 
 
@@ -10,7 +12,7 @@ def prompt_model(
     model_name: str,
     prompt: str,
     system_prompt: str = None,
-    temperature: float = 0.0,
+    temperature: float = 0.0,  # keeping it greedy for now
     max_tokens: int = 2500,
     top_p: float = 1.0,
     frequency_penalty: float = 0.0,
