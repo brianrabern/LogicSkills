@@ -59,10 +59,10 @@ JabberBench is designed to rigorously evaluate the deductive reasoning capabilit
 
 There are two main aspects to the project:
 
-1. Generating the database of sentences and arguments (both in English and in the Carrollian language) from which different exercises can be extracted
+1. **Generating the database** of sentences and arguments (both in English and in the Carrollian language) from which different exercises can be extracted
    - For example, symbolization exercises, countermodel exercises, and validity exercises
-2. Evaluating models on these exercises
-   - This involves a pipeline of generating questions, prompting the model, extracting the model's responses, and evaluating the model's responses
+2. **Evaluating models** on these exercises using the Assessors framework
+   - This involves a two-stage pipeline: inference (getting raw responses) and evaluation (analyzing responses)
 
 ### Generating the database
 
@@ -91,15 +91,43 @@ This will take a while, but you can stop it and resume it later. There is no dan
 
 ### Evaluating models
 
-At present the only evaluation pipeline is for validity exercises. First you need to generate the questions (toggle `num_questions=20` to generate more questions):
+The project uses the **Assessors framework** for model evaluation, which supports three types of logical reasoning tasks:
+
+1. **Validity Assessment** - Tests whether models can correctly identify valid/invalid logical arguments
+2. **Symbolization** - Tests whether models can translate natural language statements into formal logical notation
+3. **Countermodel Generation** - Tests whether models can generate counterexamples to invalid arguments
+
+#### Running Inference
+
+The inference stage gets raw responses from models and saves them to JSON files. You run this directly from the `inference_pipeline.py` file:
 
 ```bash
-python Evaluation/generate_validity_questions.py
+python Assessors/inference_pipeline.py
 ```
 
-This will generate two files: `questions_carroll.json` and `questions_english.json`.
+This will run inference for all question types. You can modify the `if __name__ == "__main__":` block at the bottom of the file to run specific question types or language variants.
 
-You'll need to inspect `Evaluation/run_evaluation.py` to figure out how to run the evaluation against different models and different question sets.
+The model to use is configured in `Assessors/settings.py`.
+
+#### Running Evaluation
+
+The evaluation stage processes the inference results and generates accuracy metrics. You run this directly from the `evaluation_pipeline.py` file:
+
+```bash
+python Assessors/evaluation_pipeline.py
+```
+
+You'll need to manually specify which inference results to evaluate by modifying the file paths in the `if __name__ == "__main__":` block at the bottom of the file.
+
+#### Evaluation Process
+
+Each question type has specialized evaluation:
+
+- **Validity**: Extracts answer choices and compares with correct answers from the database
+- **Symbolization**: Extracts logical formulas and checks for logical equivalence using Z3
+- **Countermodel**: Extracts countermodels and checks for correctness using Z3
+
+Results are saved in `results/inference/` and `results/evaluation/` directories with timestamped filenames.
 
 ## Example Exercises
 
@@ -173,6 +201,21 @@ Argument:
 
 ## Project Structure
 
+### `Assessors/`
+
+Framework for evaluating LLMs on logic tasks extracted from the dataset. Consists of two stages: inference and evaluation.
+
+- **`core/`** - Shared infrastructure
+  - `llm.py` - Low-level LLM interface (can be modified to point at local models)
+  - `response_engine.py` - Handles inference stage (getting raw responses from models)
+  - `evaluation_engine.py` - Handles evaluation stage (processing and analyzing responses)
+- **`inference_pipeline.py`** - Orchestrates the inference process for all question types
+- **`evaluation_pipeline.py`** - Orchestrates the evaluation process for all question types
+- **`settings.py`** - Centralized configuration for all question types and models
+- **`validity/`** - Validity assessment evaluator and question datasets
+- **`symbolization/`** - Symbolization evaluator with logical equivalence checking
+- **`countermodel/`** - Countermodel generation evaluator and validation tools
+
 ### `Database/`
 
 Database models and connection handling
@@ -180,18 +223,6 @@ Database models and connection handling
 - `DB.py`: Core database connection and session management
 - `models.py`: SQLAlchemy models for Arguments, Sentences, and other database entities
 - `backups/`: Directory containing database backup files
-
-### `Evaluation/`
-
-Evaluation scripts and tools for testing LLM reasoning
-
-- `run_evaluation.py`: Main script for running evaluations on LLMs
-- `evaluator.py`: Core evaluation logic and scoring
-- `generate_eval_questions.py`: Generates evaluation questions from the database
-- `llm.py`: OpenAI client wrapper for model prompting with OpenRouter integration
-- `model.py`: Class for interacting with a model
-- `prompts/`: Directory containing evaluation prompts
-- `countermodels/`: Tools for generating and verifying countermodels
 
 ### `Generators/`
 
