@@ -12,6 +12,10 @@ from Assessors.validity.evaluator import ValidityEvaluator
 from Assessors.symbolization.evaluator import SymbolizationEvaluator
 from Assessors.countermodel.evaluator import CountermodelEvaluator
 from Assessors.settings import get_evaluation_filename_from_inference
+from Utils.logging_config import setup_logging
+
+# Set up logging
+setup_logging("evaluation_pipeline")
 
 
 class EvaluationPipeline:
@@ -108,14 +112,14 @@ if __name__ == "__main__":
 
     CONFIG = {
         "validity": [
-            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250620_155454.json", "run": True},
-            {"language": "english", "file": "english_openai_gpt-4o-mini_20250620_155557.json", "run": True},
+            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250623_150504.json", "run": True},
+            {"language": "english", "file": "english_openai_gpt-4o-mini_20250623_152128.json", "run": True},
         ],
-        "symbolization": [
-            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250620_155605.json", "run": True},
-            {"language": "english", "file": "english_openai_gpt-4o-mini_20250620_155611.json", "run": True},
-        ],
-        "countermodel": [{"language": "default", "file": "openai_gpt-4o-mini_20250620_160856.json", "run": True}],
+        # "symbolization": [
+        #     {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250620_155605.json", "run": True},
+        #     {"language": "english", "file": "english_openai_gpt-4o-mini_20250620_155611.json", "run": True},
+        # ],
+        # "countermodel": [{"language": "default", "file": "openai_gpt-4o-mini_20250620_160856.json", "run": True}],
     }
 
     record = {}

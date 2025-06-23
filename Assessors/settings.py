@@ -50,21 +50,21 @@ VALIDITY_CONFIG = QuestionTypeConfig(
     name="validity",
     model_name="openai/gpt-4o-mini",
     system_prompt=validity_system_prompt,
-    max_questions=10,
+    # max_questions=10,
 )
 
 SYMBOLIZATION_CONFIG = QuestionTypeConfig(
     name="symbolization",
     model_name="openai/gpt-4o-mini",
     system_prompt=symbolization_system_prompt,
-    max_questions=10,
+    # max_questions=10,
 )
 
 COUNTERMODEL_CONFIG = QuestionTypeConfig(
     name="countermodel",
     model_name="openai/gpt-4o-mini",
     system_prompt=countermodel_system_prompt,
-    max_questions=10,
+    # max_questions=10,
 )
 
 # Registry of all question types

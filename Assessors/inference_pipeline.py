@@ -4,6 +4,10 @@ from pathlib import Path
 from datetime import datetime
 from Assessors.core.response_engine import ResponseEngine
 from Assessors.settings import get_question_type_config
+from Utils.logging_config import setup_logging
+
+# Set up logging
+setup_logging("inference_pipeline")
 
 
 class InferencePipeline:
@@ -115,9 +119,9 @@ if __name__ == "__main__":
     # inference_pipeline = InferencePipeline("validity", "carroll")
     # carrollian_validity_inference_file = inference_pipeline.run_pipeline()
 
-    # print("\nRunning inference for English validity questions...")
-    # inference_pipeline = InferencePipeline("validity", "english")
-    # english_validity_inference_file = inference_pipeline.run_pipeline()
+    print("\nRunning inference for English validity questions...")
+    inference_pipeline = InferencePipeline("validity", "english")
+    english_validity_inference_file = inference_pipeline.run_pipeline()
 
     # # Run inference for symbolization questions
     # print("\nRunning inference for Carrollian symbolization questions...")
@@ -128,10 +132,10 @@ if __name__ == "__main__":
     # inference_pipeline = InferencePipeline("symbolization", "english")
     # english_symbolization_inference_file = inference_pipeline.run_pipeline()
 
-    # Run inference for countermodel questions
-    print("\nRunning inference for countermodel questions...")
-    inference_pipeline = InferencePipeline("countermodel")
-    countermodel_inference_file = inference_pipeline.run_pipeline()
+    # # Run inference for countermodel questions
+    # print("\nRunning inference for countermodel questions...")
+    # inference_pipeline = InferencePipeline("countermodel")
+    # countermodel_inference_file = inference_pipeline.run_pipeline()
 
     # print(f"Carrollian validity responses saved to: {carrollian_validity_inference_file}")
     # print(f"English validity responses saved to: {english_validity_inference_file}")
