@@ -18,14 +18,9 @@ class QuestionTypeConfig:
     name: str
     system_prompt: str
     model_name: str
-    temperature: float = 0.0
-    max_tokens: int = 2500
-    top_p: float = 1.0
-    frequency_penalty: float = 0.0
-    presence_penalty: float = 0.0
     max_questions: Optional[int] = None  # None = all questions
 
-    def get_timestamped_output_file(self, language: str = None):
+    def get_timestamped_output_file(self, language: str = None) -> str:
         """Generate timestamped output filename for inference results."""
 
         # Ensure results/inference/{question_type} directory exists
