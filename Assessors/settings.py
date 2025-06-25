@@ -18,6 +18,11 @@ class QuestionTypeConfig:
     name: str
     system_prompt: str
     model_name: str
+    temperature: float = 0.0
+    max_tokens: int = 2500
+    top_p: float = 1.0
+    frequency_penalty: float = 0.0
+    presence_penalty: float = 0.0
     max_questions: Optional[int] = None  # None = all questions
 
     def get_timestamped_output_file(self, language: str = None) -> str:
