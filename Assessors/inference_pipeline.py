@@ -212,7 +212,7 @@ class InferencePipeline:
                 inference_metadata = {
                     "model_name": self.model_name,
                     "system_prompt": self.system_prompt,
-                    "model_parameters": asdict(self.model_args),
+                    "model_parameters": self.model_args.inference_kwargs,
                     "start_time": start_time.isoformat(),
                     "end_time": datetime.now().isoformat(),
                     "success": response is not None,
