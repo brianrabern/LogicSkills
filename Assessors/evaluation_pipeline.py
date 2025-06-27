@@ -111,14 +111,14 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
 
     CONFIG = {
-        "validity": [
-            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250623_150504.json", "run": True},
-            {"language": "english", "file": "english_openai_gpt-4o-mini_20250623_152128.json", "run": True},
-        ],
-        # "symbolization": [
-        #     {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250620_155605.json", "run": True},
-        #     {"language": "english", "file": "english_openai_gpt-4o-mini_20250620_155611.json", "run": True},
+        # "validity": [
+        #     {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250623_150504.json", "run": True},
+        #     {"language": "english", "file": "english_openai_gpt-4o-mini_20250623_152128.json", "run": True},
         # ],
+        "symbolization": [
+            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250624_104629.json", "run": True},
+            {"language": "english", "file": "english_openai_gpt-4o-mini_20250624_104752.json", "run": True},
+        ],
         # "countermodel": [{"language": "default", "file": "openai_gpt-4o-mini_20250620_160856.json", "run": True}],
     }
 

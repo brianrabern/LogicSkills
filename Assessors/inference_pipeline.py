@@ -119,18 +119,18 @@ if __name__ == "__main__":
     # inference_pipeline = InferencePipeline("validity", "carroll")
     # carrollian_validity_inference_file = inference_pipeline.run_pipeline()
 
-    print("\nRunning inference for English validity questions...")
-    inference_pipeline = InferencePipeline("validity", "english")
-    english_validity_inference_file = inference_pipeline.run_pipeline()
+    # print("\nRunning inference for English validity questions...")
+    # inference_pipeline = InferencePipeline("validity", "english")
+    # english_validity_inference_file = inference_pipeline.run_pipeline()
 
-    # # Run inference for symbolization questions
-    # print("\nRunning inference for Carrollian symbolization questions...")
-    # inference_pipeline = InferencePipeline("symbolization", "carroll")
-    # carrollian_symbolization_inference_file = inference_pipeline.run_pipeline()
+    # Run inference for symbolization questions
+    print("\nRunning inference for Carrollian symbolization questions...")
+    inference_pipeline = InferencePipeline("symbolization", "carroll")
+    carrollian_symbolization_inference_file = inference_pipeline.run_pipeline()
 
-    # print("\nRunning inference for English symbolization questions...")
-    # inference_pipeline = InferencePipeline("symbolization", "english")
-    # english_symbolization_inference_file = inference_pipeline.run_pipeline()
+    print("\nRunning inference for English symbolization questions...")
+    inference_pipeline = InferencePipeline("symbolization", "english")
+    english_symbolization_inference_file = inference_pipeline.run_pipeline()
 
     # # Run inference for countermodel questions
     # print("\nRunning inference for countermodel questions...")

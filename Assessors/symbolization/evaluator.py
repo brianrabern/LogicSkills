@@ -82,7 +82,7 @@ class SymbolizationEvaluator:
         total = len(self.results)
         correct = sum(1 for r in self.results if r.get("is_correct", False) is True)
         errors = sum(1 for r in self.results if "error" in r)
-        unknown = sum(1 for r in self.results if r.get("is_correct", False) is None)
+        unknown = sum(1 for r in self.results if r.get("is_correct", False) == "UNKNOWN")
 
         return {
             "total_questions": total,
