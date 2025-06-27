@@ -203,7 +203,7 @@ class InferencePipeline:
 
             chat_prompt_batch = chat_prompts[start_idx:end_idx]
             question_dict_batch = question_dicts[start_idx:end_idx]
-            
+
             batched_response = model_wrapper.forward(
                 prompts=chat_prompt_batch, inference_kwargs=self.model_args.inference_kwargs
             )

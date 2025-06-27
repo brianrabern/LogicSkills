@@ -12,7 +12,16 @@ from transformers import (
     PreTrainedModel,
     PreTrainedTokenizerBase,
 )
-from vllm import LLM, SamplingParams
+
+# make vllm optional since it requires CUDA
+try:
+    from vllm import LLM, SamplingParams
+
+    VLLM_AVAILABLE = True
+except ImportError:
+    VLLM_AVAILABLE = False
+    LLM = None
+    SamplingParams = None
 
 from config import OPENROUTER_API_KEY, OPENROUTER_BASE_URL
 from Models.model_type import LOCAL_MODEL
@@ -74,6 +83,8 @@ class ModelWrapper:
                     **model_init_kwargs,
                 )
             elif backend == "vllm":
+                if not VLLM_AVAILABLE:
+                    raise ImportError("vllm is not available. It requires CUDA. ")
                 model_init_kwargs["dtype"] = model_init_kwargs.pop("torch_dtype")
                 model = LLM(
                     model=model_name,
@@ -269,6 +280,8 @@ class ModelWrapper:
         if self.backend == "transformers":
             return self.forward_transformers(prompts, inference_kwargs)
         elif self.backend == "vllm":
+            if not VLLM_AVAILABLE:
+                raise ImportError("vllm is not available. It requires CUDA. ")
             return self.forward_vllm(prompts, inference_kwargs)
         elif self.backend == "api":
             return self.forward_api(prompts, inference_kwargs)

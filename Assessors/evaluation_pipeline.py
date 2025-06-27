@@ -112,8 +112,16 @@ if __name__ == "__main__":
 
     CONFIG = {
         "validity": [
-            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250623_150504.json", "run": True},
-            {"language": "english", "file": "english_openai_gpt-4o-mini_20250623_152128.json", "run": True},
+            # {
+            #     "language": "carroll",
+            #     "file": "english_meta-llama_Llama-3.2-3B-Instruct_20250625_182607.json",
+            #     "run": True,
+            # },
+            {
+                "language": "english",
+                "file": "english_meta-llama_Llama-3.2-3B-Instruct_20250625_182607.json",
+                "run": True,
+            },
         ],
         # "symbolization": [
         #     {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250620_155605.json", "run": True},

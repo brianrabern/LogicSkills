@@ -28,16 +28,12 @@ def assemble_chat_messages(
     # handle system prompt
     if system_prompt is not None:
         if accepts_system_prompt:
-            system_chat_prompt = [
-                {"role": "system", "content": system_prompt}
-            ]
+            system_chat_prompt = [{"role": "system", "content": system_prompt}]
             chat_prompt = system_chat_prompt + chat_prompt
         else:
-            chat_prompt[0][
-                "content"
-            ] = f"{system_prompt}\n\n{chat_prompt[0]['content']}"
+            chat_prompt[0]["content"] = f"{system_prompt}\n\n{chat_prompt[0]['content']}"
 
-    return chat_prompt    
+    return chat_prompt
 
 
 def build_api_chat_prompts(
@@ -60,12 +56,10 @@ def build_api_chat_prompts(
 
     for prompt in prompts:
         chat_messages = assemble_chat_messages(
-            prompt=prompt,
-            accepts_system_prompt=accepts_system_prompt,
-            system_prompt=system_prompt
+            prompt=prompt, accepts_system_prompt=accepts_system_prompt, system_prompt=system_prompt
         )
         chat_prompts.append(chat_messages)
-    
+
     return chat_prompts
 
 
@@ -92,9 +86,7 @@ def build_local_chat_prompts(
 
     for prompt in prompts:
         chat_messages = assemble_chat_messages(
-            prompt=prompt,
-            accepts_system_prompt=accepts_system_prompt,
-            system_prompt=system_prompt
+            prompt=prompt, accepts_system_prompt=accepts_system_prompt, system_prompt=system_prompt
         )
 
         chat_template_prompt = tokenizer.apply_chat_template(
@@ -104,5 +96,5 @@ def build_local_chat_prompts(
             return_tensors=False,
         )
         chat_prompts.append(chat_template_prompt)
-    
+
     return chat_prompts
