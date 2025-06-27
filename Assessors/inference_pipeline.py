@@ -89,12 +89,12 @@ class InferencePipeline:
         Raises:
             FileNotFoundError: If the question file does not exist.
         """
-        # Use language parameter to construct question file path
-        if self.language is not None:
-            question_file = f"Assessors/{self.question_type}/questions_{self.question_type}_{self.language}.json"
-        else:
-            # For countermodel, use the default path since it doesn't have language variants
+        # For countermodel, use the default path since it doesn't have language variants
+        if self.question_type == "countermodel":
             question_file = f"Assessors/{self.question_type}/questions_{self.question_type}.json"
+        else:
+            # Use language parameter to construct question file path for other question types
+            question_file = f"Assessors/{self.question_type}/questions_{self.question_type}_{self.language}.json"
 
         filepath = Path(question_file)
         if not filepath.exists():
@@ -262,10 +262,10 @@ class InferencePipeline:
         # Create filename: {language}_{model_name}_{timestamp}.json
         # For countermodel, skip language prefix since it doesn't have language variants
         model_name_safe = self.model_name.replace("/", "_")
-        if self.language:
-            filename = f"{self.language}_{model_name_safe}_{timestamp}.json"
-        else:
+        if self.question_type == "countermodel":
             filename = f"{model_name_safe}_{timestamp}.json"
+        else:
+            filename = f"{self.language}_{model_name_safe}_{timestamp}.json"
 
         return f"results/inference/{self.question_type}/{filename}"
 
@@ -284,7 +284,11 @@ class InferencePipeline:
         with open(output_file, "w") as f:
             json.dump(results, f, indent=4)
 
-        logging.info(f"{self.language} {self.question_type} responses saved to: {output_file}")
+        # For countermodel, don't include language in the log message
+        if self.question_type == "countermodel":
+            logging.info(f"{self.question_type} responses saved to: {output_file}")
+        else:
+            logging.info(f"{self.language} {self.question_type} responses saved to: {output_file}")
 
     def run_pipeline(self, batch_size: int = 1):
         """
@@ -386,7 +390,7 @@ if __name__ == "__main__":
     set_seed(args.seed)
 
     # Check command-line arguments
-    if not args.model in LOCAL_MODEL.keys():
+    if args.model not in LOCAL_MODEL.keys():
         raise ValueError(f"Unsupported model: {args.model}! Currently only supports:\n{LOCAL_MODEL.keys()}")
 
     if not LOCAL_MODEL[args.model]:
