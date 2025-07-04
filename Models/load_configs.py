@@ -34,7 +34,8 @@ def load_model_args(model_args_dict: Dict[str, Any]) -> ModelArgs:
                 "bfloat16": torch.bfloat16,
                 "float16": torch.float16,
             }
-            init_kwargs["torch_dtype"] = mapping[init_kwargs["torch_dtype"]]
+            if init_kwargs["torch_dtype"] in mapping.keys():
+                init_kwargs["torch_dtype"] = mapping[init_kwargs["torch_dtype"]]
 
     if "inference" not in model_args_dict:
         logging.warning("No 'inference' argument provided in model-config.yaml file. Using no additional parameters...")

@@ -124,6 +124,7 @@ class ModelWrapper:
         Returns:
             PreTrainedTokenizerBase: The initialized tokenizer.
         """
+        print(f"tokenizer_path: {tokenizer_path}")
         try:
             if backend == "api":
                 return None
@@ -153,6 +154,7 @@ class ModelWrapper:
             "<|im_start|> assistant\n",
             "<|assistant|>",
             "assistant\n\n",
+            "assistant\n",
             "model\n",
         ]
         decoded_input = []

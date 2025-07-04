@@ -136,7 +136,7 @@ class InferencePipeline:
 
     def init_model_wrapper(
         self,
-        model_path: str | None,
+        cache_dir: str | None,
         backend: Literal["transformers", "vllm", "api"],
         num_gpus: int = 1,
     ) -> ModelWrapper:
@@ -144,7 +144,7 @@ class InferencePipeline:
         Initializes the model wrapper with the specified model name, path, and initialization arguments.
 
         Args:
-            model_path (str | None): The path to the model.
+            cache_dir (str | None): The path to the model.
             backend (Literal['transformers', 'vllm', 'api']): The inference backend to use. Can be 'transformers', 'vllm', or 'api'.
             num_gpus (int, optional): Number of GPUs used for model inference. Defaults to 1.
 
@@ -156,8 +156,8 @@ class InferencePipeline:
             model_path = None
             tokenizer_path = None
         else:
-            model_path = os.path.join(model_path, "model", self.model_name)
-            tokenizer_path = os.path.join(model_path, "tokenizer", self.model_name)
+            model_path = os.path.join(cache_dir, "model", self.model_name)
+            tokenizer_path = os.path.join(cache_dir, "tokenizer", self.model_name)
 
         model_wrapper = ModelWrapper(
             model_name=self.model_name,
@@ -302,7 +302,7 @@ class InferencePipeline:
 
         # Load model and prep data
         model_wrapper = self.init_model_wrapper(
-            model_path=self.model_path, backend=self.backend, num_gpus=self.num_gpus
+            cache_dir=self.model_path, backend=self.backend, num_gpus=self.num_gpus
         )
         chat_dataset = self.load_chat_prompts(
             questions=[question_dict["question"] for question_dict in question_dicts], tokenizer=model_wrapper.tokenizer
