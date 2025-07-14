@@ -62,7 +62,7 @@ The inference pipeline (`inference_pipeline.py`) handles the first stage:
 
 1. **Configuration Loading** - Loads question type-specific settings from `settings.py`
 2. **Question Loading** - Loads questions from JSON files based on language variant
-3. **Model Querying** - Uses `ResponseEngine` to query the LLM with each question
+3. **Model Querying** - Uses `ModelWrapper` to query the LLM with each question
 4. **Result Storage** - Saves raw model responses to timestamped JSON files
 
 ### 2. Evaluation Pipeline

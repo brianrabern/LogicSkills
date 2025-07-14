@@ -25,7 +25,7 @@ class QuestionTypeConfig:
     presence_penalty: float = 0.0
     max_questions: Optional[int] = None  # None = all questions
 
-    def get_timestamped_output_file(self, language: str = None):
+    def get_timestamped_output_file(self, language: str = None) -> str:
         """Generate timestamped output filename for inference results."""
 
         # Ensure results/inference/{question_type} directory exists

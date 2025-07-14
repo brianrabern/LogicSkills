@@ -102,12 +102,12 @@ The project uses the **Assessors framework** for model evaluation, which support
 The inference stage gets raw responses from models and saves them to JSON files. You run this directly from the `inference_pipeline.py` file:
 
 ```bash
-python Assessors/inference_pipeline.py
+python Assessors/inference_pipeline.py --model <name of model to use> --backend <'transformers'/'vllm'/'api'> --question_type <desired qtype> --language <language>
 ```
 
 This will run inference for all question types. You can modify the `if __name__ == "__main__":` block at the bottom of the file to run specific question types or language variants.
 
-The model to use is configured in `Assessors/settings.py`.
+The model to use is configured in `Models/model_config`.
 
 #### Running Evaluation
 
@@ -206,8 +206,7 @@ Argument:
 Framework for evaluating LLMs on logic tasks extracted from the dataset. Consists of two stages: inference and evaluation.
 
 - **`core/`** - Shared infrastructure
-  - `llm.py` - Low-level LLM interface (can be modified to point at local models)
-  - `response_engine.py` - Handles inference stage (getting raw responses from models)
+  - `prompt_prep.py` - Prepares prompts for inference.
   - `evaluation_engine.py` - Handles evaluation stage (processing and analyzing responses)
 - **`inference_pipeline.py`** - Orchestrates the inference process for all question types
 - **`evaluation_pipeline.py`** - Orchestrates the evaluation process for all question types
@@ -230,6 +229,16 @@ Sentence and argument generators
 
 - `sentence_generator.py`: Generates sentences from the lexicon and adds them to the database
 - `argument_generator.py`: Finds arguments (valid and invalid) from the sentences in the database and records them to the database
+
+### `Models/`
+
+Functions and wrappers to load and interface (local) LLMs.
+
+- `load_configs.py`: Load .yaml config files that specify model hyperparameters
+- `model_args.py`: Dataclasses that define model hyperparameter formats
+- `model_type.py`: A dictionary mapping model names to local support (True/False)
+- `model_wrapper.py`: Class that wraps around local or API model support different backends
+
 
 ### `Scripts/`
 
