@@ -62,7 +62,7 @@ def save_questions(questions, output_file):
 
 if __name__ == "__main__":
     try:
-        carroll_sentences, english_sentences = generate_questions(num_questions=100)
+        carroll_sentences, english_sentences = generate_questions(num_questions=300)
 
         # Save questions
         save_questions(carroll_sentences, "questions_symbolization_carroll.json")

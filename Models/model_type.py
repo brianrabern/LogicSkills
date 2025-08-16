@@ -13,4 +13,5 @@ LOCAL_MODEL = {
     "openai/gpt-4o-mini": False,
     "anthropic/claude-3.7-sonnet": False,
     "google/gemini-2.5-flash": False,
+    "openai/gpt-5-mini": False,
 }

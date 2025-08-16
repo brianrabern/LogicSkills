@@ -1,410 +1,116 @@
 [
   {
-    "id": 679,
-    "question": "Sentence:\n\nNot all monkeys saw Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
-    "form": "∃x(Ox∧¬Pxc)",
+    "id": 11131,
+    "question": "Sentence:\n\nHazel saw Alfred and not all donkeys kicked Alfred.\n\nAbbreviations:\n\nP: [1] saw [2]\nc: Hazel\na: Alfred\nM: [1] is a donkey\nQ: [1] kicked [2]",
+    "form": "(Pca∧∃x(Mx∧¬Qxa))",
     "language": "english"
   },
   {
-    "id": 2929,
-    "question": "Sentence:\n\nLewis doesn't see Hazel and only humans drank.\n\nAbbreviations:\n\nP: [1] saw [2]\nb: Lewis\nc: Hazel\nN: [1] is a human\nH: [1] drank",
-    "form": "(¬Pbc∧∀x(Hx→Nx))",
+    "id": 10317,
+    "question": "Sentence:\n\nIf Alfred didn't kick Hazel, then no humans are hungry only if every human saw Hazel.\n\nAbbreviations:\n\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]",
+    "form": "(¬Qac→(¬∃x(Nx∧Lx)→∀x(Nx→Pxc)))",
     "language": "english"
   },
   {
-    "id": 725,
-    "question": "Sentence:\n\nNo humans kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nc: Hazel",
-    "form": "¬∃x(Nx∧Qxc)",
+    "id": 4017,
+    "question": "Sentence:\n\nNot all donkeys kicked Lewis or every donkey kicked Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis",
+    "form": "(∃x(Mx∧¬Qxb)∨∀x(Mx→Qxb))",
     "language": "english"
   },
   {
-    "id": 3467,
-    "question": "Sentence:\n\nA monkey kicked Hazel unless Alfred isn't a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel\nN: [1] is a human\na: Alfred",
-    "form": "(¬¬Na→∃x(Ox∧Qxc))",
+    "id": 7589,
+    "question": "Sentence:\n\nIf every human is asleep, then Lewis didn't chase Lewis only if not all donkeys saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∀x(Nx→Jx)→(¬Rbb→∃x(Mx∧¬Pxc)))",
     "language": "english"
   },
   {
-    "id": 4581,
-    "question": "Sentence:\n\nA monkey kicked Hazel only if every monkey saw Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel\nP: [1] saw [2]\nb: Lewis",
-    "form": "(∃x(Ox∧Qxc)→∀x(Ox→Pxb))",
+    "id": 6433,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Alfred will run only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∃x(Nx∧¬Jx)→(Fa→¬∃x(Ox∧Qxc)))",
     "language": "english"
   },
   {
-    "id": 4081,
-    "question": "Sentence:\n\nHazel doesn't see Alfred unless every donkey will attack.\n\nAbbreviations:\n\nP: [1] saw [2]\nc: Hazel\na: Alfred\nM: [1] is a donkey\nG: [1] will attack",
-    "form": "(¬∀x(Mx→Gx)→¬Pca)",
+    "id": 7387,
+    "question": "Sentence:\n\nIf Alfred won't attack, then every monkey saw Lewis only if every monkey is asleep.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nJ: [1] is asleep",
+    "form": "(¬Ga→(∀x(Ox→Pxb)→∀x(Ox→Jx)))",
     "language": "english"
   },
   {
-    "id": 10363,
-    "question": "Sentence:\n\nIf Lewis won't run, then every monkey saw Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nF: [1] will run\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel\nQ: [1] kicked [2]",
-    "form": "(¬Fb→(∀x(Ox→Pxc)→∀x(Ox→Qxb)))",
+    "id": 5355,
+    "question": "Sentence:\n\nA human is happy just in case no donkeys chased Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nK: [1] is happy\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred",
+    "form": "(∃x(Nx∧Kx)↔¬∃x(Mx∧Rxa))",
     "language": "english"
   },
   {
-    "id": 2103,
-    "question": "Sentence:\n\nNot all monkeys will run and every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nF: [1] will run\nQ: [1] kicked [2]\nb: Lewis",
-    "form": "(∃x(Ox∧¬Fx)∧∀x(Ox→Qxb))",
+    "id": 8273,
+    "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then a human chased Hazel only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nN: [1] is a human\nc: Hazel\nO: [1] is a monkey\nQ: [1] kicked [2]",
+    "form": "(¬Rbb→(∃x(Nx∧Rxc)→¬∃x(Ox∧Qxc)))",
     "language": "english"
   },
   {
-    "id": 11283,
-    "question": "Sentence:\n\nA human will attack and only donkeys ate.\n\nAbbreviations:\n\nN: [1] is a human\nG: [1] will attack\nM: [1] is a donkey\nI: [1] ate",
-    "form": "(∃x(Nx∧Gx)∧∀x(Ix→Mx))",
+    "id": 7849,
+    "question": "Sentence:\n\nIf every human is asleep, then Alfred didn't kick Hazel only if no humans are hungry.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nL: [1] is hungry",
+    "form": "(∀x(Nx→Jx)→(¬Qac→¬∃x(Nx∧Lx)))",
     "language": "english"
   },
   {
-    "id": 7099,
-    "question": "Sentence:\n\nIf a human chased Lewis, then not all donkeys kicked Alfred only if Alfred didn't kick Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nc: Hazel",
-    "form": "(∃x(Nx∧Rxb)→(∃x(Mx∧¬Qxa)→¬Qac))",
+    "id": 10269,
+    "question": "Sentence:\n\nIf not all donkeys will run, then Alfred saw Alfred only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nF: [1] will run\nP: [1] saw [2]\na: Alfred\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∃x(Mx∧¬Fx)→(Paa→¬∃x(Ox∧Qxc)))",
     "language": "english"
   },
   {
-    "id": 8855,
-    "question": "Sentence:\n\nIf every monkey chased Hazel, then not all donkeys will run only if Alfred saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nF: [1] will run\nP: [1] saw [2]\na: Alfred",
-    "form": "(∀x(Ox→Rxc)→(∃x(Mx∧¬Fx)→Paa))",
+    "id": 1847,
+    "question": "Sentence:\n\nA monkey chased a human that chased a donkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nN: [1] is a human\nM: [1] is a donkey\nR: [1] chased [2]",
+    "form": "∃x∃y∃z(((Ox∧Ny)∧Mz)∧(Rxy∧Ryz))",
     "language": "english"
   },
   {
-    "id": 7441,
-    "question": "Sentence:\n\nIf Alfred won't attack, then a human chased Hazel only if every monkey saw Hazel.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nP: [1] saw [2]",
-    "form": "(¬Ga→(∃x(Nx∧Rxc)→∀x(Ox→Pxc)))",
+    "id": 9287,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Hazel kicked Alfred only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel\na: Alfred\nM: [1] is a donkey",
+    "form": "(∀x(Ox→Pxb)→(Qca→∃x(Mx∧¬Qxc)))",
     "language": "english"
   },
   {
-    "id": 4315,
-    "question": "Sentence:\n\nA monkey is hungry or every donkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis",
-    "form": "(∃x(Ox∧Lx)∨∀x(Mx→Qxb))",
+    "id": 7239,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Lewis won't run only if no donkeys ate.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nF: [1] will run\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(∃x(Nx∧Rxb)→(¬Fb→¬∃x(Mx∧Ix)))",
     "language": "english"
   },
   {
-    "id": 10895,
-    "question": "Sentence:\n\nLewis ate and Lewis isn't happy.\n\nAbbreviations:\n\nI: [1] ate\nb: Lewis\nK: [1] is happy",
-    "form": "(Ib∧¬Kb)",
+    "id": 5927,
+    "question": "Sentence:\n\nNot all donkeys drank if and only if no monkeys saw Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nH: [1] drank\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis",
+    "form": "(∃x(Mx∧¬Hx)↔¬∃x(Ox∧Pxb))",
     "language": "english"
   },
   {
-    "id": 5385,
-    "question": "Sentence:\n\nHazel isn't a human if and only if no donkeys will attack.\n\nAbbreviations:\n\nN: [1] is a human\nc: Hazel\nM: [1] is a donkey\nG: [1] will attack",
-    "form": "(¬Nc↔¬∃x(Mx∧Gx))",
+    "id": 7843,
+    "question": "Sentence:\n\nIf every human is asleep, then Alfred didn't kick Hazel only if every monkey is hungry.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nO: [1] is a monkey\nL: [1] is hungry",
+    "form": "(∀x(Nx→Jx)→(¬Qac→∀x(Ox→Lx)))",
     "language": "english"
   },
   {
-    "id": 7853,
-    "question": "Sentence:\n\nIf every human is asleep, then Alfred didn't kick Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nP: [1] saw [2]",
-    "form": "(∀x(Nx→Jx)→(¬Qac→∀x(Nx→Pxc)))",
+    "id": 181,
+    "question": "Sentence:\n\nHazel isn't asleep.\n\nAbbreviations:\n\nJ: [1] is asleep\nc: Hazel",
+    "form": "¬Jc",
     "language": "english"
   },
   {
-    "id": 11189,
-    "question": "Sentence:\n\nNot all donkeys will run and not all humans will run.\n\nAbbreviations:\n\nM: [1] is a donkey\nF: [1] will run\nN: [1] is a human",
-    "form": "(∃x(Mx∧¬Fx)∧∃x(Nx∧¬Fx))",
+    "id": 8529,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then Lewis is hungry only if every monkey is asleep.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nL: [1] is hungry\nb: Lewis\nO: [1] is a monkey\nJ: [1] is asleep",
+    "form": "(∃x(Mx∧¬Pxc)→(Lb→∀x(Ox→Jx)))",
     "language": "english"
   },
   {
-    "id": 7021,
-    "question": "Sentence:\n\nIf a human chased Lewis, then every monkey chased Hazel only if Alfred saw Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nc: Hazel\nP: [1] saw [2]\na: Alfred",
-    "form": "(∃x(Nx∧Rxb)→(∀x(Ox→Rxc)→Paa))",
+    "id": 8513,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then Alfred will run only if every monkey is hungry.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry",
+    "form": "(∃x(Mx∧¬Pxc)→(Fa→∀x(Ox→Lx)))",
     "language": "english"
   },
   {
-    "id": 5243,
-    "question": "Sentence:\n\nIf Hazel didn't chase Lewis, then not all donkeys are hungry.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nb: Lewis\nM: [1] is a donkey\nL: [1] is hungry",
-    "form": "(¬Rcb→∃x(Mx∧¬Lx))",
-    "language": "english"
-  },
-  {
-    "id": 1809,
-    "question": "Sentence:\n\nEvery human chased every human that chased every donkey.\n\nAbbreviations:\n\nN: [1] is a human\nM: [1] is a donkey\nR: [1] chased [2]",
-    "form": "∀x(Nx→∀y((Ny∧∀z(Mz→Ryz))→Rxy))",
-    "language": "english"
-  },
-  {
-    "id": 11485,
-    "question": "Sentence:\n\nOnly donkeys are asleep and every monkey chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nJ: [1] is asleep\nO: [1] is a monkey\nR: [1] chased [2]\na: Alfred",
-    "form": "(∀x(Jx→Mx)∧∀x(Ox→Rxa))",
-    "language": "english"
-  },
-  {
-    "id": 9011,
-    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then Alfred will run only if every monkey saw Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nP: [1] saw [2]",
-    "form": "(¬Rcc→(Fa→∀x(Ox→Pxc)))",
-    "language": "english"
-  },
-  {
-    "id": 2697,
-    "question": "Sentence:\n\nNot all monkeys kicked Lewis but it is not the case that Lewis is happy.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis\nK: [1] is happy",
-    "form": "(∃x(Ox∧¬Qxb)∧¬Kb)",
-    "language": "english"
-  },
-  {
-    "id": 10833,
-    "question": "Sentence:\n\nNot all donkeys chased Alfred but it is not the case that Lewis isn't happy.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred\nK: [1] is happy\nb: Lewis",
-    "form": "(∃x(Mx∧¬Rxa)∧¬¬Kb)",
-    "language": "english"
-  },
-  {
-    "id": 1651,
-    "question": "Sentence:\n\nA monkey saw a monkey that saw a monkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]",
-    "form": "∃x∃y∃z(((Ox∧Oy)∧Oz)∧(Pxy∧Pyz))",
-    "language": "english"
-  },
-  {
-    "id": 9853,
-    "question": "Sentence:\n\nIf Alfred will run, then every monkey is hungry only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel",
-    "form": "(Fa→(∀x(Ox→Lx)→∃x(Mx∧¬Qxc)))",
-    "language": "english"
-  },
-  {
-    "id": 4265,
-    "question": "Sentence:\n\nNot all donkeys will run or a monkey is hungry.\n\nAbbreviations:\n\nM: [1] is a donkey\nF: [1] will run\nO: [1] is a monkey\nL: [1] is hungry",
-    "form": "(∃x(Mx∧¬Fx)∨∃x(Ox∧Lx))",
-    "language": "english"
-  },
-  {
-    "id": 325,
-    "question": "Sentence:\n\nHazel doesn't see Hazel.\n\nAbbreviations:\n\nP: [1] saw [2]\nc: Hazel",
-    "form": "¬Pcc",
-    "language": "english"
-  },
-  {
-    "id": 1539,
-    "question": "Sentence:\n\nA monkey chased a monkey that chased it.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]",
-    "form": "∃x∃y((Ox∧Oy)∧(Rxy∧Ryx))",
-    "language": "english"
-  },
-  {
-    "id": 9433,
-    "question": "Sentence:\n\nIf Hazel is hungry, then not all donkeys kicked Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nM: [1] is a donkey\nQ: [1] kicked [2]\nO: [1] is a monkey\nb: Lewis",
-    "form": "(Lc→(∃x(Mx∧¬Qxc)→∀x(Ox→Qxb)))",
-    "language": "english"
-  },
-  {
-    "id": 2529,
-    "question": "Sentence:\n\nAlfred didn't chase Alfred but it is not the case that Hazel doesn't see Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\na: Alfred\nP: [1] saw [2]\nc: Hazel",
-    "form": "(¬Raa∧¬¬Pcc)",
-    "language": "english"
-  },
-  {
-    "id": 11293,
-    "question": "Sentence:\n\nAlfred isn't asleep and every monkey drank.\n\nAbbreviations:\n\nJ: [1] is asleep\na: Alfred\nO: [1] is a monkey\nH: [1] drank",
-    "form": "(¬Ja∧∀x(Ox→Hx))",
-    "language": "english"
-  },
-  {
-    "id": 6583,
-    "question": "Sentence:\n\nIf Alfred ate, then a human chased Lewis only if every monkey chased Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nc: Hazel",
-    "form": "(Ia→(∃x(Nx∧Rxb)→∀x(Ox→Rxc)))",
-    "language": "english"
-  },
-  {
-    "id": 2839,
-    "question": "Sentence:\n\nA monkey is happy and Lewis isn't a donkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nK: [1] is happy\nM: [1] is a donkey\nb: Lewis",
-    "form": "(∃x(Ox∧Kx)∧¬Mb)",
-    "language": "english"
-  },
-  {
-    "id": 2877,
-    "question": "Sentence:\n\nLewis isn't a donkey and Lewis doesn't see Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nb: Lewis\nP: [1] saw [2]\nc: Hazel",
-    "form": "(¬Mb∧¬Pbc)",
-    "language": "english"
-  },
-  {
-    "id": 1065,
-    "question": "Sentence:\n\nNo humans kicked every monkey.\n\nAbbreviations:\n\nN: [1] is a human\nO: [1] is a monkey\nQ: [1] kicked [2]",
-    "form": "¬∃x(Nx∧∀y(Oy→Qxy))",
-    "language": "english"
-  },
-  {
-    "id": 5861,
-    "question": "Sentence:\n\nEvery donkey chased Lewis just in case not all donkeys ate.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\nb: Lewis\nI: [1] ate",
-    "form": "(∀x(Mx→Rxb)↔∃x(Mx∧¬Ix))",
-    "language": "english"
-  },
-  {
-    "id": 8075,
-    "question": "Sentence:\n\nIf Alfred doesn't see Lewis, then not all donkeys will run only if every monkey saw Hazel.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nM: [1] is a donkey\nF: [1] will run\nO: [1] is a monkey\nc: Hazel",
-    "form": "(¬Pab→(∃x(Mx∧¬Fx)→∀x(Ox→Pxc)))",
-    "language": "english"
-  },
-  {
-    "id": 765,
-    "question": "Sentence:\n\nNo donkeys chased Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\nb: Lewis",
-    "form": "¬∃x(Mx∧Rxb)",
-    "language": "english"
-  },
-  {
-    "id": 1831,
-    "question": "Sentence:\n\nA human chased a monkey that chased a monkey.\n\nAbbreviations:\n\nN: [1] is a human\nO: [1] is a monkey\nR: [1] chased [2]",
-    "form": "∃x∃y∃z(((Nx∧Oy)∧Oz)∧(Rxy∧Ryz))",
-    "language": "english"
-  },
-  {
-    "id": 6959,
-    "question": "Sentence:\n\nIf a human chased Lewis, then Lewis didn't chase Lewis only if not all donkeys kicked Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred",
-    "form": "(∃x(Nx∧Rxb)→(¬Rbb→∃x(Mx∧¬Qxa)))",
-    "language": "english"
-  },
-  {
-    "id": 1963,
-    "question": "Sentence:\n\nHazel chased a human.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel",
-    "form": "∃x(Nx∧Rcx)",
-    "language": "english"
-  },
-  {
-    "id": 103,
-    "question": "Sentence:\n\nHazel and Alfred drank.\n\nAbbreviations:\n\nH: [1] drank\nc: Hazel\na: Alfred",
-    "form": "(Hc∧Ha)",
-    "language": "english"
-  },
-  {
-    "id": 2865,
-    "question": "Sentence:\n\nA monkey is happy and every human saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nK: [1] is happy\nN: [1] is a human\nP: [1] saw [2]\na: Alfred",
-    "form": "(∃x(Ox∧Kx)∧∀x(Nx→Pxa))",
-    "language": "english"
-  },
-  {
-    "id": 8429,
-    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then Hazel didn't chase Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nR: [1] chased [2]\nN: [1] is a human",
-    "form": "(∃x(Mx∧¬Pxc)→(¬Rcc→∀x(Nx→Pxc)))",
-    "language": "english"
-  },
-  {
-    "id": 3383,
-    "question": "Sentence:\n\nEvery monkey ate unless a monkey kicked Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nQ: [1] kicked [2]\na: Alfred",
-    "form": "(¬∃x(Ox∧Qxa)→∀x(Ox→Ix))",
-    "language": "english"
-  },
-  {
-    "id": 205,
-    "question": "Sentence:\n\nLewis isn't happy.\n\nAbbreviations:\n\nK: [1] is happy\nb: Lewis",
-    "form": "¬Kb",
-    "language": "english"
-  },
-  {
-    "id": 4307,
-    "question": "Sentence:\n\nA monkey is hungry unless every donkey will attack.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nG: [1] will attack",
-    "form": "(¬∀x(Mx→Gx)→∃x(Ox∧Lx))",
-    "language": "english"
-  },
-  {
-    "id": 9987,
-    "question": "Sentence:\n\nIf Lewis is hungry, then no humans are hungry only if no donkeys ate.\n\nAbbreviations:\n\nL: [1] is hungry\nb: Lewis\nN: [1] is a human\nM: [1] is a donkey\nI: [1] ate",
-    "form": "(Lb→(¬∃x(Nx∧Lx)→¬∃x(Mx∧Ix)))",
-    "language": "english"
-  },
-  {
-    "id": 1685,
-    "question": "Sentence:\n\nEvery donkey kicked every monkey that kicked every monkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nQ: [1] kicked [2]",
-    "form": "∀x(Mx→∀y((Oy∧∀z(Oz→Qyz))→Qxy))",
-    "language": "english"
-  },
-  {
-    "id": 2467,
-    "question": "Sentence:\n\nHazel didn't chase Alfred and a monkey is happy.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\na: Alfred\nO: [1] is a monkey\nK: [1] is happy",
-    "form": "(¬Rca∧∃x(Ox∧Kx))",
-    "language": "english"
-  },
-  {
-    "id": 8561,
-    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then Lewis is a donkey only if not all donkeys will run.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nb: Lewis\nF: [1] will run",
-    "form": "(∃x(Mx∧¬Pxc)→(Mb→∃x(Mx∧¬Fx)))",
-    "language": "english"
-  },
-  {
-    "id": 5357,
-    "question": "Sentence:\n\nA human is happy if and only if no monkeys saw Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nK: [1] is happy\nO: [1] is a monkey\nP: [1] saw [2]\na: Alfred",
-    "form": "(∃x(Nx∧Kx)↔¬∃x(Ox∧Pxa))",
-    "language": "english"
-  },
-  {
-    "id": 10771,
-    "question": "Sentence:\n\nA monkey is hungry and Hazel is a monkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nc: Hazel",
-    "form": "(∃x(Ox∧Lx)∧Oc)",
-    "language": "english"
-  },
-  {
-    "id": 9205,
-    "question": "Sentence:\n\nIf every monkey saw Lewis, then Lewis is hungry only if every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nL: [1] is hungry\nQ: [1] kicked [2]",
-    "form": "(∀x(Ox→Pxb)→(Lb→∀x(Ox→Qxb)))",
-    "language": "english"
-  },
-  {
-    "id": 1159,
-    "question": "Sentence:\n\nEvery donkey chased a monkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nR: [1] chased [2]",
-    "form": "∀x(Mx→∃y(Oy∧Rxy))",
-    "language": "english"
-  },
-  {
-    "id": 10739,
-    "question": "Sentence:\n\nA monkey is hungry and not all humans will run.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nN: [1] is a human\nF: [1] will run",
-    "form": "(∃x(Ox∧Lx)∧∃x(Nx∧¬Fx))",
-    "language": "english"
-  },
-  {
-    "id": 10119,
-    "question": "Sentence:\n\nIf Lewis is a donkey, then not all donkeys will run only if every human saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nb: Lewis\nF: [1] will run\nN: [1] is a human\nP: [1] saw [2]\nc: Hazel",
-    "form": "(Mb→(∃x(Mx∧¬Fx)→∀x(Nx→Pxc)))",
-    "language": "english"
-  },
-  {
-    "id": 10081,
-    "question": "Sentence:\n\nIf every monkey is asleep, then Hazel kicked Hazel only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel\nM: [1] is a donkey",
-    "form": "(∀x(Ox→Jx)→(Qcc→∃x(Mx∧¬Qxc)))",
-    "language": "english"
-  },
-  {
-    "id": 8221,
-    "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then every monkey saw Lewis only if no humans are hungry.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]\nN: [1] is a human\nL: [1] is hungry",
-    "form": "(¬Rbb→(∀x(Ox→Pxb)→¬∃x(Nx∧Lx)))",
-    "language": "english"
-  },
-  {
-    "id": 9825,
-    "question": "Sentence:\n\nIf Alfred will run, then every monkey is asleep only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel",
-    "form": "(Fa→(∀x(Ox→Jx)→¬∃x(Ox∧Qxc)))",
-    "language": "english"
-  },
-  {
-    "id": 2413,
-    "question": "Sentence:\n\nNo donkeys kicked Hazel and only humans drank.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nN: [1] is a human\nH: [1] drank",
-    "form": "(¬∃x(Mx∧Qxc)∧∀x(Hx→Nx))",
-    "language": "english"
-  },
-  {
-    "id": 7885,
-    "question": "Sentence:\n\nIf every human is asleep, then Hazel kicked Alfred only if every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel\na: Alfred\nP: [1] saw [2]",
-    "form": "(∀x(Nx→Jx)→(Qca→∀x(Nx→Pxc)))",
-    "language": "english"
-  },
-  {
-    "id": 9281,
-    "question": "Sentence:\n\nIf every monkey saw Lewis, then Lewis won't run only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nF: [1] will run\nQ: [1] kicked [2]\nc: Hazel",
-    "form": "(∀x(Ox→Pxb)→(¬Fb→¬∃x(Ox∧Qxc)))",
-    "language": "english"
-  },
-  {
-    "id": 4635,
-    "question": "Sentence:\n\nIf a donkey kicked Lewis, then no donkeys chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis\nR: [1] chased [2]\na: Alfred",
-    "form": "(∃x(Mx∧Qxb)→¬∃x(Mx∧Rxa))",
-    "language": "english"
-  },
-  {
-    "id": 9967,
-    "question": "Sentence:\n\nIf Lewis is hungry, then not all donkeys kicked Hazel only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nL: [1] is hungry\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nO: [1] is a monkey",
-    "form": "(Lb→(∃x(Mx∧¬Qxc)→¬∃x(Ox∧Qxc)))",
-    "language": "english"
-  },
-  {
-    "id": 9019,
-    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then every monkey is asleep only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nJ: [1] is asleep\nM: [1] is a donkey\nQ: [1] kicked [2]",
-    "form": "(¬Rcc→(∀x(Ox→Jx)→∃x(Mx∧¬Qxc)))",
-    "language": "english"
-  },
-  {
-    "id": 1475,
-    "question": "Sentence:\n\nEvery donkey chased every monkey that chased it.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nR: [1] chased [2]",
-    "form": "∀x(Mx→∀y((Oy∧Ryx)→Rxy))",
+    "id": 8379,
+    "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then every monkey kicked Lewis only if no donkeys ate.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nQ: [1] kicked [2]\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(¬Rbb→(∀x(Ox→Qxb)→¬∃x(Mx∧Ix)))",
     "language": "english"
   },
   {
@@ -414,123 +120,1143 @@
     "language": "english"
   },
   {
-    "id": 11593,
-    "question": "Sentence:\n\nNot all donkeys kicked Alfred but it is not the case that Lewis is a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nb: Lewis",
-    "form": "(∃x(Mx∧¬Qxa)∧¬Mb)",
+    "id": 8615,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then Lewis won't run only if every monkey kicked Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nF: [1] will run\nb: Lewis\nO: [1] is a monkey\nQ: [1] kicked [2]",
+    "form": "(∃x(Mx∧¬Pxc)→(¬Fb→∀x(Ox→Qxb)))",
     "language": "english"
   },
   {
-    "id": 4199,
-    "question": "Sentence:\n\nNot all donkeys will attack or not all monkeys saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nG: [1] will attack\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
-    "form": "(∃x(Mx∧¬Gx)∨∃x(Ox∧¬Pxc))",
+    "id": 9851,
+    "question": "Sentence:\n\nIf Alfred will run, then Lewis won't run only if every human saw Hazel.\n\nAbbreviations:\n\nF: [1] will run\na: Alfred\nb: Lewis\nN: [1] is a human\nP: [1] saw [2]\nc: Hazel",
+    "form": "(Fa→(¬Fb→∀x(Nx→Pxc)))",
     "language": "english"
   },
   {
-    "id": 2575,
-    "question": "Sentence:\n\nNo donkeys saw Lewis and every human is happy.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nb: Lewis\nN: [1] is a human\nK: [1] is happy",
-    "form": "(¬∃x(Mx∧Pxb)∧∀x(Nx→Kx))",
+    "id": 2425,
+    "question": "Sentence:\n\nAlfred is happy and not all monkeys kicked Lewis.\n\nAbbreviations:\n\nK: [1] is happy\na: Alfred\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis",
+    "form": "(Ka∧∃x(Ox∧¬Qxb))",
     "language": "english"
   },
   {
-    "id": 5795,
-    "question": "Sentence:\n\nAlfred didn't chase Hazel if and only if not all donkeys ate.\n\nAbbreviations:\n\nR: [1] chased [2]\na: Alfred\nc: Hazel\nM: [1] is a donkey\nI: [1] ate",
-    "form": "(¬Rac↔∃x(Mx∧¬Ix))",
+    "id": 189,
+    "question": "Sentence:\n\nAlfred or Hazel are happy.\n\nAbbreviations:\n\nK: [1] is happy\na: Alfred\nc: Hazel",
+    "form": "(Ka∨Kc)",
     "language": "english"
   },
   {
-    "id": 10853,
-    "question": "Sentence:\n\nNot all donkeys chased Alfred and no humans will attack.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred\nN: [1] is a human\nG: [1] will attack",
-    "form": "(∃x(Mx∧¬Rxa)∧¬∃x(Nx∧Gx))",
+    "id": 4193,
+    "question": "Sentence:\n\nNot all donkeys will attack unless every donkey will attack.\n\nAbbreviations:\n\nM: [1] is a donkey\nG: [1] will attack",
+    "form": "(¬∀x(Mx→Gx)→∃x(Mx∧¬Gx))",
     "language": "english"
   },
   {
-    "id": 5875,
-    "question": "Sentence:\n\nEvery human drank just in case no donkeys chased Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nH: [1] drank\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred",
-    "form": "(∀x(Nx→Hx)↔¬∃x(Mx∧Rxa))",
+    "id": 7517,
+    "question": "Sentence:\n\nIf Alfred won't attack, then not all donkeys kicked Hazel only if every monkey saw Hazel.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nO: [1] is a monkey\nP: [1] saw [2]",
+    "form": "(¬Ga→(∃x(Mx∧¬Qxc)→∀x(Ox→Pxc)))",
     "language": "english"
   },
   {
-    "id": 4941,
-    "question": "Sentence:\n\nEvery donkey saw Hazel only if Alfred is asleep.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nJ: [1] is asleep\na: Alfred",
-    "form": "(∀x(Mx→Pxc)→Ja)",
+    "id": 9563,
+    "question": "Sentence:\n\nIf not all donkeys kicked Alfred, then not all donkeys will run only if Hazel kicked Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nF: [1] will run\nc: Hazel",
+    "form": "(∃x(Mx∧¬Qxa)→(∃x(Mx∧¬Fx)→Qca))",
     "language": "english"
   },
   {
-    "id": 5813,
-    "question": "Sentence:\n\nNot all donkeys chased Alfred just in case not all donkeys drank.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred\nH: [1] drank",
-    "form": "(∃x(Mx∧¬Rxa)↔∃x(Mx∧¬Hx))",
+    "id": 2409,
+    "question": "Sentence:\n\nNo donkeys kicked Hazel but it is not the case that Lewis is happy.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nK: [1] is happy\nb: Lewis",
+    "form": "(¬∃x(Mx∧Qxc)∧¬Kb)",
     "language": "english"
   },
   {
-    "id": 3403,
-    "question": "Sentence:\n\nEvery monkey ate or a human is asleep.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nN: [1] is a human\nJ: [1] is asleep",
-    "form": "(∀x(Ox→Ix)∨∃x(Nx∧Jx))",
+    "id": 2697,
+    "question": "Sentence:\n\nNot all monkeys kicked Lewis but it is not the case that Lewis is happy.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis\nK: [1] is happy",
+    "form": "(∃x(Ox∧¬Qxb)∧¬Kb)",
     "language": "english"
   },
   {
-    "id": 433,
-    "question": "Sentence:\n\nNo donkeys will attack.\n\nAbbreviations:\n\nM: [1] is a donkey\nG: [1] will attack",
-    "form": "¬∃x(Mx∧Gx)",
+    "id": 10579,
+    "question": "Sentence:\n\nEvery monkey ate but it is not the case that Hazel saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nP: [1] saw [2]\nc: Hazel\na: Alfred",
+    "form": "(∀x(Ox→Ix)∧¬Pca)",
     "language": "english"
   },
   {
-    "id": 7175,
-    "question": "Sentence:\n\nIf a human chased Lewis, then every monkey is asleep only if Hazel kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel",
-    "form": "(∃x(Nx∧Rxb)→(∀x(Ox→Jx)→Qcc))",
+    "id": 3549,
+    "question": "Sentence:\n\nAlfred doesn't see Lewis unless only donkeys drank.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nM: [1] is a donkey\nH: [1] drank",
+    "form": "(¬∀x(Hx→Mx)→¬Pab)",
     "language": "english"
   },
   {
-    "id": 10569,
-    "question": "Sentence:\n\nEvery monkey ate and Lewis ate.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nb: Lewis",
-    "form": "(∀x(Ox→Ix)∧Ib)",
+    "id": 9185,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Alfred will run only if every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nF: [1] will run\na: Alfred\nQ: [1] kicked [2]",
+    "form": "(∀x(Ox→Pxb)→(Fa→∀x(Ox→Qxb)))",
     "language": "english"
   },
   {
-    "id": 2251,
-    "question": "Sentence:\n\nOnly humans are hungry and Lewis doesn't see Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]\nb: Lewis\nc: Hazel",
-    "form": "(∀x(Lx→Nx)∧¬Pbc)",
+    "id": 1489,
+    "question": "Sentence:\n\nA human chased a donkey that chased it.\n\nAbbreviations:\n\nN: [1] is a human\nM: [1] is a donkey\nR: [1] chased [2]",
+    "form": "∃x∃y((Nx∧My)∧(Rxy∧Ryx))",
     "language": "english"
   },
   {
-    "id": 3779,
-    "question": "Sentence:\n\nEvery donkey is happy unless every donkey kicked Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nQ: [1] kicked [2]\nb: Lewis",
-    "form": "(¬∀x(Mx→Qxb)→∀x(Mx→Kx))",
+    "id": 3713,
+    "question": "Sentence:\n\nEvery donkey is happy or it is not the case that Lewis will run.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nF: [1] will run\nb: Lewis",
+    "form": "(∀x(Mx→Kx)∨¬Fb)",
     "language": "english"
   },
   {
-    "id": 5211,
-    "question": "Sentence:\n\nIf Lewis chased Lewis, then not all humans kicked Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nN: [1] is a human\nQ: [1] kicked [2]\nc: Hazel",
-    "form": "(Rbb→∃x(Nx∧¬Qxc))",
+    "id": 9435,
+    "question": "Sentence:\n\nIf Hazel is hungry, then not all donkeys kicked Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nM: [1] is a donkey\nQ: [1] kicked [2]\nN: [1] is a human\nP: [1] saw [2]",
+    "form": "(Lc→(∃x(Mx∧¬Qxc)→∀x(Nx→Pxc)))",
     "language": "english"
   },
   {
-    "id": 6247,
-    "question": "Sentence:\n\nIf not all humans are asleep, then Lewis didn't chase Lewis only if not all donkeys saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel",
-    "form": "(∃x(Nx∧¬Jx)→(¬Rbb→∃x(Mx∧¬Pxc)))",
+    "id": 9309,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Hazel kicked Hazel only if no humans are hungry.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel\nN: [1] is a human\nL: [1] is hungry",
+    "form": "(∀x(Ox→Pxb)→(Qcc→¬∃x(Nx∧Lx)))",
     "language": "english"
   },
   {
-    "id": 3805,
-    "question": "Sentence:\n\nA human kicked Lewis unless every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nb: Lewis\nP: [1] saw [2]\nc: Hazel",
-    "form": "(¬∀x(Nx→Pxc)→∃x(Nx∧Qxb))",
+    "id": 9469,
+    "question": "Sentence:\n\nIf Hazel is hungry, then no monkeys kicked Hazel only if no donkeys ate.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nO: [1] is a monkey\nQ: [1] kicked [2]\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(Lc→(¬∃x(Ox∧Qxc)→¬∃x(Mx∧Ix)))",
     "language": "english"
   },
   {
-    "id": 1577,
-    "question": "Sentence:\n\nEvery donkey saw every monkey that saw every monkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nP: [1] saw [2]",
-    "form": "∀x(Mx→∀y((Oy∧∀z(Oz→Pyz))→Pxy))",
+    "id": 10713,
+    "question": "Sentence:\n\nA monkey is hungry but it is not the case that Alfred isn't hungry.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\na: Alfred",
+    "form": "(∃x(Ox∧Lx)∧¬¬La)",
     "language": "english"
   },
   {
-    "id": 9603,
-    "question": "Sentence:\n\nIf not all donkeys kicked Alfred, then Hazel kicked Alfred only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nc: Hazel",
-    "form": "(∃x(Mx∧¬Qxa)→(Qca→∃x(Mx∧¬Qxc)))",
+    "id": 9157,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then a human chased Hazel only if Alfred will run.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nF: [1] will run\na: Alfred",
+    "form": "(∀x(Ox→Pxb)→(∃x(Nx∧Rxc)→Fa))",
     "language": "english"
   },
   {
-    "id": 2285,
-    "question": "Sentence:\n\nNot all humans are hungry and Hazel doesn't see Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]\nc: Hazel",
-    "form": "(∃x(Nx∧¬Lx)∧¬Pcc)",
+    "id": 7281,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Alfred saw Alfred only if every monkey kicked Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nP: [1] saw [2]\na: Alfred\nO: [1] is a monkey\nQ: [1] kicked [2]",
+    "form": "(∃x(Nx∧Rxb)→(Paa→∀x(Ox→Qxb)))",
+    "language": "english"
+  },
+  {
+    "id": 9113,
+    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then every human saw Hazel only if no donkeys ate.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nN: [1] is a human\nP: [1] saw [2]\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(¬Rcc→(∀x(Nx→Pxc)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 2023,
+    "question": "Sentence:\n\nA human is happy and a monkey is happy.\n\nAbbreviations:\n\nN: [1] is a human\nK: [1] is happy\nO: [1] is a monkey",
+    "form": "(∃x(Nx∧Kx)∧∃x(Ox∧Kx))",
+    "language": "english"
+  },
+  {
+    "id": 7235,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Lewis won't run only if every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nF: [1] will run\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∃x(Nx∧Rxb)→(¬Fb→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 1105,
+    "question": "Sentence:\n\nThere is not a monkey that every human kicked.\n\nAbbreviations:\n\nO: [1] is a monkey\nN: [1] is a human\nQ: [1] kicked [2]",
+    "form": "¬∃x(Ox∧∀y(Ny→Qyx))",
+    "language": "english"
+  },
+  {
+    "id": 4429,
+    "question": "Sentence:\n\nHazel isn't a human only if Lewis didn't chase Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nc: Hazel\nR: [1] chased [2]\nb: Lewis",
+    "form": "(¬Nc→¬Rbb)",
+    "language": "english"
+  },
+  {
+    "id": 4593,
+    "question": "Sentence:\n\nA monkey chased Hazel only if no donkeys chased Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\na: Alfred",
+    "form": "(∃x(Ox∧Rxc)→¬∃x(Mx∧Rxa))",
+    "language": "english"
+  },
+  {
+    "id": 3687,
+    "question": "Sentence:\n\nAlfred isn't a human or every donkey chased Alfred.\n\nAbbreviations:\n\nN: [1] is a human\na: Alfred\nM: [1] is a donkey\nR: [1] chased [2]",
+    "form": "(¬Na∨∀x(Mx→Rxa))",
+    "language": "english"
+  },
+  {
+    "id": 7259,
+    "question": "Sentence:\n\nIf a human chased Lewis, then every monkey is hungry only if Alfred saw Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nL: [1] is hungry\nP: [1] saw [2]\na: Alfred",
+    "form": "(∃x(Nx∧Rxb)→(∀x(Ox→Lx)→Paa))",
+    "language": "english"
+  },
+  {
+    "id": 6977,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Lewis didn't chase Lewis only if every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∃x(Nx∧Rxb)→(¬Rbb→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 11237,
+    "question": "Sentence:\n\nA human will attack and Alfred isn't asleep.\n\nAbbreviations:\n\nN: [1] is a human\nG: [1] will attack\nJ: [1] is asleep\na: Alfred",
+    "form": "(∃x(Nx∧Gx)∧¬Ja)",
+    "language": "english"
+  },
+  {
+    "id": 10681,
+    "question": "Sentence:\n\nA human saw Lewis but it is not the case that Lewis is a donkey.\n\nAbbreviations:\n\nN: [1] is a human\nP: [1] saw [2]\nb: Lewis\nM: [1] is a donkey",
+    "form": "(∃x(Nx∧Pxb)∧¬Mb)",
+    "language": "english"
+  },
+  {
+    "id": 10921,
+    "question": "Sentence:\n\nLewis ate and every donkey will run.\n\nAbbreviations:\n\nI: [1] ate\nb: Lewis\nM: [1] is a donkey\nF: [1] will run",
+    "form": "(Ib∧∀x(Mx→Fx))",
+    "language": "english"
+  },
+  {
+    "id": 3865,
+    "question": "Sentence:\n\nHazel isn't a human or not all monkeys saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nc: Hazel\nO: [1] is a monkey\nP: [1] saw [2]",
+    "form": "(¬Nc∨∃x(Ox∧¬Pxc))",
+    "language": "english"
+  },
+  {
+    "id": 7241,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Hazel kicked Alfred only if every monkey is hungry.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry",
+    "form": "(∃x(Nx∧Rxb)→(Qca→∀x(Ox→Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 6533,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Hazel kicked Alfred only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel\na: Alfred\nM: [1] is a donkey",
+    "form": "(∃x(Nx∧¬Jx)→(Qca→∃x(Mx∧¬Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 3891,
+    "question": "Sentence:\n\nLewis will run unless not all donkeys will run.\n\nAbbreviations:\n\nF: [1] will run\nb: Lewis\nM: [1] is a donkey",
+    "form": "(¬∃x(Mx∧¬Fx)→Fb)",
+    "language": "english"
+  },
+  {
+    "id": 683,
+    "question": "Sentence:\n\nA donkey kicked Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred",
+    "form": "∃x(Mx∧Qxa)",
+    "language": "english"
+  },
+  {
+    "id": 6723,
+    "question": "Sentence:\n\nIf Alfred ate, then every monkey saw Lewis only if every human saw Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nN: [1] is a human\nc: Hazel",
+    "form": "(Ia→(∀x(Ox→Pxb)→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 6817,
+    "question": "Sentence:\n\nIf Alfred ate, then every monkey is hungry only if no donkeys ate.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey",
+    "form": "(Ia→(∀x(Ox→Lx)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 6071,
+    "question": "Sentence:\n\nNot all donkeys ate if and only if every monkey chased Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nI: [1] ate\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel",
+    "form": "(∃x(Mx∧¬Ix)↔∀x(Ox→Rxc))",
+    "language": "english"
+  },
+  {
+    "id": 1101,
+    "question": "Sentence:\n\nNo monkeys kicked a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nN: [1] is a human\nQ: [1] kicked [2]",
+    "form": "¬∃x∃y((Ox∧Ny)∧Qxy)",
+    "language": "english"
+  },
+  {
+    "id": 825,
+    "question": "Sentence:\n\nEvery donkey saw every donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]",
+    "form": "∀x∀y((Mx∧My)→Pxy)",
+    "language": "english"
+  },
+  {
+    "id": 4363,
+    "question": "Sentence:\n\nIf Alfred doesn't see Alfred, then Alfred didn't kick Hazel.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(¬Paa→¬Qac)",
+    "language": "english"
+  },
+  {
+    "id": 1331,
+    "question": "Sentence:\n\nEvery human saw a monkey that saw it.\n\nAbbreviations:\n\nN: [1] is a human\nO: [1] is a monkey\nP: [1] saw [2]",
+    "form": "∀x(Nx→∃y(Oy∧(Pxy∧Pyx)))",
+    "language": "english"
+  },
+  {
+    "id": 167,
+    "question": "Sentence:\n\nLewis and Hazel are asleep.\n\nAbbreviations:\n\nJ: [1] is asleep\nb: Lewis\nc: Hazel",
+    "form": "(Jb∧Jc)",
+    "language": "english"
+  },
+  {
+    "id": 9413,
+    "question": "Sentence:\n\nIf Hazel is hungry, then Lewis won't run only if no donkeys ate.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nF: [1] will run\nb: Lewis\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(Lc→(¬Fb→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 7557,
+    "question": "Sentence:\n\nIf Alfred won't attack, then no monkeys kicked Hazel only if no donkeys ate.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(¬Ga→(¬∃x(Ox∧Qxc)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 457,
+    "question": "Sentence:\n\nOnly monkeys will attack.\n\nAbbreviations:\n\nO: [1] is a monkey\nG: [1] will attack",
+    "form": "∀x(Gx→Ox)",
+    "language": "english"
+  },
+  {
+    "id": 1093,
+    "question": "Sentence:\n\nEvery monkey kicked a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nN: [1] is a human\nQ: [1] kicked [2]",
+    "form": "∀x(Ox→∃y(Ny∧Qxy))",
+    "language": "english"
+  },
+  {
+    "id": 11649,
+    "question": "Sentence:\n\nEvery monkey chased Alfred but it is not the case that Lewis doesn't see Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\na: Alfred\nP: [1] saw [2]\nb: Lewis\nc: Hazel",
+    "form": "(∀x(Ox→Rxa)∧¬¬Pbc)",
+    "language": "english"
+  },
+  {
+    "id": 3875,
+    "question": "Sentence:\n\nLewis will run unless not all donkeys kicked Lewis.\n\nAbbreviations:\n\nF: [1] will run\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]",
+    "form": "(¬∃x(Mx∧¬Qxb)→Fb)",
+    "language": "english"
+  },
+  {
+    "id": 5427,
+    "question": "Sentence:\n\nLewis saw Lewis if and only if not all humans kicked Alfred.\n\nAbbreviations:\n\nP: [1] saw [2]\nb: Lewis\nN: [1] is a human\nQ: [1] kicked [2]\na: Alfred",
+    "form": "(Pbb↔∃x(Nx∧¬Qxa))",
+    "language": "english"
+  },
+  {
+    "id": 1755,
+    "question": "Sentence:\n\nA monkey kicked a monkey that kicked a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nN: [1] is a human\nQ: [1] kicked [2]",
+    "form": "∃x∃y∃z(((Ox∧Oy)∧Nz)∧(Qxy∧Qyz))",
+    "language": "english"
+  },
+  {
+    "id": 6485,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Lewis is a donkey only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nM: [1] is a donkey\nb: Lewis\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∃x(Nx∧¬Jx)→(Mb→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 8301,
+    "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then every monkey is asleep only if no donkeys ate.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nJ: [1] is asleep\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(¬Rbb→(∀x(Ox→Jx)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 6541,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Hazel kicked Alfred only if every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel\na: Alfred\nP: [1] saw [2]",
+    "form": "(∃x(Nx∧¬Jx)→(Qca→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 5585,
+    "question": "Sentence:\n\nNo humans ate if and only if not all humans saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nI: [1] ate\nP: [1] saw [2]\nc: Hazel",
+    "form": "(¬∃x(Nx∧Ix)↔∃x(Nx∧¬Pxc))",
+    "language": "english"
+  },
+  {
+    "id": 5269,
+    "question": "Sentence:\n\nNot all monkeys ate just in case every human is asleep.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nN: [1] is a human\nJ: [1] is asleep",
+    "form": "(∃x(Ox∧¬Ix)↔∀x(Nx→Jx))",
+    "language": "english"
+  },
+  {
+    "id": 717,
+    "question": "Sentence:\n\nNo humans kicked Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nb: Lewis",
+    "form": "¬∃x(Nx∧Qxb)",
+    "language": "english"
+  },
+  {
+    "id": 2231,
+    "question": "Sentence:\n\nOnly humans are hungry and Hazel didn't chase Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nL: [1] is hungry\nR: [1] chased [2]\nc: Hazel\na: Alfred",
+    "form": "(∀x(Lx→Nx)∧¬Rca)",
+    "language": "english"
+  },
+  {
+    "id": 9891,
+    "question": "Sentence:\n\nIf Alfred will run, then no humans are hungry only if every human saw Hazel.\n\nAbbreviations:\n\nF: [1] will run\na: Alfred\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]\nc: Hazel",
+    "form": "(Fa→(¬∃x(Nx∧Lx)→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 859,
+    "question": "Sentence:\n\nEvery donkey saw a monkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nP: [1] saw [2]",
+    "form": "∀x(Mx→∃y(Oy∧Pxy))",
+    "language": "english"
+  },
+  {
+    "id": 9559,
+    "question": "Sentence:\n\nIf not all donkeys kicked Alfred, then not all donkeys will run only if Alfred didn't kick Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nF: [1] will run\nc: Hazel",
+    "form": "(∃x(Mx∧¬Qxa)→(∃x(Mx∧¬Fx)→¬Qac))",
+    "language": "english"
+  },
+  {
+    "id": 9319,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then not all donkeys kicked Hazel only if Alfred saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\na: Alfred",
+    "form": "(∀x(Ox→Pxb)→(∃x(Mx∧¬Qxc)→Paa))",
+    "language": "english"
+  },
+  {
+    "id": 11393,
+    "question": "Sentence:\n\nA monkey kicked Alfred but it is not the case that Lewis drank.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\na: Alfred\nH: [1] drank\nb: Lewis",
+    "form": "(∃x(Ox∧Qxa)∧¬Hb)",
+    "language": "english"
+  },
+  {
+    "id": 9201,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Lewis is hungry only if every monkey saw Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nL: [1] is hungry\nc: Hazel",
+    "form": "(∀x(Ox→Pxb)→(Lb→∀x(Ox→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 3909,
+    "question": "Sentence:\n\nA monkey kicked Lewis or only donkeys drank.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis\nM: [1] is a donkey\nH: [1] drank",
+    "form": "(∃x(Ox∧Qxb)∨∀x(Hx→Mx))",
+    "language": "english"
+  },
+  {
+    "id": 3321,
+    "question": "Sentence:\n\nLewis is a donkey unless not all donkeys kicked Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nb: Lewis\nQ: [1] kicked [2]",
+    "form": "(¬∃x(Mx∧¬Qxb)→Mb)",
+    "language": "english"
+  },
+  {
+    "id": 9731,
+    "question": "Sentence:\n\nIf a human chased Hazel, then Alfred didn't kick Hazel only if every monkey is hungry.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nQ: [1] kicked [2]\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry",
+    "form": "(∃x(Nx∧Rxc)→(¬Qac→∀x(Ox→Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 2293,
+    "question": "Sentence:\n\nNot all humans are hungry and Lewis saw Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]\nb: Lewis\na: Alfred",
+    "form": "(∃x(Nx∧¬Lx)∧Pba)",
+    "language": "english"
+  },
+  {
+    "id": 11397,
+    "question": "Sentence:\n\nA monkey kicked Alfred and Lewis is a donkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\na: Alfred\nM: [1] is a donkey\nb: Lewis",
+    "form": "(∃x(Ox∧Qxa)∧Mb)",
+    "language": "english"
+  },
+  {
+    "id": 7647,
+    "question": "Sentence:\n\nIf every human is asleep, then every monkey chased Hazel only if Lewis is a donkey.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nb: Lewis",
+    "form": "(∀x(Nx→Jx)→(∀x(Ox→Rxc)→Mb))",
+    "language": "english"
+  },
+  {
+    "id": 933,
+    "question": "Sentence:\n\nNo monkeys saw every donkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nM: [1] is a donkey\nP: [1] saw [2]",
+    "form": "¬∃x(Ox∧∀y(My→Pxy))",
+    "language": "english"
+  },
+  {
+    "id": 1893,
+    "question": "Sentence:\n\nAlfred saw every monkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\na: Alfred",
+    "form": "∀x(Ox→Pax)",
+    "language": "english"
+  },
+  {
+    "id": 6403,
+    "question": "Sentence:\n\nIf not all humans are asleep, then a human chased Hazel only if Lewis is hungry.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nc: Hazel\nL: [1] is hungry\nb: Lewis",
+    "form": "(∃x(Nx∧¬Jx)→(∃x(Nx∧Rxc)→Lb))",
+    "language": "english"
+  },
+  {
+    "id": 5045,
+    "question": "Sentence:\n\nHazel is a human only if every monkey saw Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nc: Hazel\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis",
+    "form": "(Nc→∀x(Ox→Pxb))",
+    "language": "english"
+  },
+  {
+    "id": 9025,
+    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then every monkey is asleep only if Alfred saw Alfred.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nJ: [1] is asleep\nP: [1] saw [2]\na: Alfred",
+    "form": "(¬Rcc→(∀x(Ox→Jx)→Paa))",
+    "language": "english"
+  },
+  {
+    "id": 6431,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Alfred will run only if every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nF: [1] will run\na: Alfred\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∃x(Nx∧¬Jx)→(Fa→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 5173,
+    "question": "Sentence:\n\nNot all monkeys chased Lewis only if not all humans kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nb: Lewis\nN: [1] is a human\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∃x(Ox∧¬Rxb)→∃x(Nx∧¬Qxc))",
+    "language": "english"
+  },
+  {
+    "id": 7339,
+    "question": "Sentence:\n\nIf Alfred won't attack, then not all donkeys saw Hazel only if every monkey is hungry.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nO: [1] is a monkey\nL: [1] is hungry",
+    "form": "(¬Ga→(∃x(Mx∧¬Pxc)→∀x(Ox→Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 493,
+    "question": "Sentence:\n\nNo donkeys ate.\n\nAbbreviations:\n\nM: [1] is a donkey\nI: [1] ate",
+    "form": "¬∃x(Mx∧Ix)",
+    "language": "english"
+  },
+  {
+    "id": 11269,
+    "question": "Sentence:\n\nA human will attack and not all donkeys kicked Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nG: [1] will attack\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred",
+    "form": "(∃x(Nx∧Gx)∧∃x(Mx∧¬Qxa))",
+    "language": "english"
+  },
+  {
+    "id": 353,
+    "question": "Sentence:\n\nHazel didn't kick Alfred.\n\nAbbreviations:\n\nQ: [1] kicked [2]\nc: Hazel\na: Alfred",
+    "form": "¬Qca",
+    "language": "english"
+  },
+  {
+    "id": 1199,
+    "question": "Sentence:\n\nNo humans chased every human.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]",
+    "form": "¬∃x(Nx∧∀y(Ny→Rxy))",
+    "language": "english"
+  },
+  {
+    "id": 243,
+    "question": "Sentence:\n\nHazel is hungry.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel",
+    "form": "Lc",
+    "language": "english"
+  },
+  {
+    "id": 8723,
+    "question": "Sentence:\n\nIf every monkey chased Hazel, then Hazel is hungry only if every monkey is hungry.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nL: [1] is hungry",
+    "form": "(∀x(Ox→Rxc)→(Lc→∀x(Ox→Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 9173,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Alfred will run only if every monkey is asleep.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nF: [1] will run\na: Alfred\nJ: [1] is asleep",
+    "form": "(∀x(Ox→Pxb)→(Fa→∀x(Ox→Jx)))",
+    "language": "english"
+  },
+  {
+    "id": 2717,
+    "question": "Sentence:\n\nA monkey chased Alfred but it is not the case that Lewis isn't a donkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\na: Alfred\nM: [1] is a donkey\nb: Lewis",
+    "form": "(∃x(Ox∧Rxa)∧¬¬Mb)",
+    "language": "english"
+  },
+  {
+    "id": 1131,
+    "question": "Sentence:\n\nA donkey chased a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]",
+    "form": "∃x∃y((Mx∧My)∧Rxy)",
+    "language": "english"
+  },
+  {
+    "id": 6285,
+    "question": "Sentence:\n\nIf not all humans are asleep, then not all donkeys saw Hazel only if Lewis is a donkey.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nb: Lewis",
+    "form": "(∃x(Nx∧¬Jx)→(∃x(Mx∧¬Pxc)→Mb))",
+    "language": "english"
+  },
+  {
+    "id": 7705,
+    "question": "Sentence:\n\nIf every human is asleep, then Hazel is hungry only if a human chased Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nL: [1] is hungry\nc: Hazel\nR: [1] chased [2]",
+    "form": "(∀x(Nx→Jx)→(Lc→∃x(Nx∧Rxc)))",
+    "language": "english"
+  },
+  {
+    "id": 5303,
+    "question": "Sentence:\n\nNot all monkeys ate just in case Hazel isn't hungry.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nL: [1] is hungry\nc: Hazel",
+    "form": "(∃x(Ox∧¬Ix)↔¬Lc)",
+    "language": "english"
+  },
+  {
+    "id": 1523,
+    "question": "Sentence:\n\nNo monkeys chased a donkey that chased it.\n\nAbbreviations:\n\nO: [1] is a monkey\nM: [1] is a donkey\nR: [1] chased [2]",
+    "form": "¬∃x∃y((Ox∧My)∧(Rxy∧Ryx))",
+    "language": "english"
+  },
+  {
+    "id": 6061,
+    "question": "Sentence:\n\nA human saw Hazel if and only if every monkey chased Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nP: [1] saw [2]\nc: Hazel\nO: [1] is a monkey\nR: [1] chased [2]",
+    "form": "(∃x(Nx∧Pxc)↔∀x(Ox→Rxc))",
+    "language": "english"
+  },
+  {
+    "id": 8819,
+    "question": "Sentence:\n\nIf every monkey chased Hazel, then every monkey is asleep only if Lewis won't run.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nJ: [1] is asleep\nF: [1] will run\nb: Lewis",
+    "form": "(∀x(Ox→Rxc)→(∀x(Ox→Jx)→¬Fb))",
+    "language": "english"
+  },
+  {
+    "id": 8399,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then every monkey chased Hazel only if Lewis won't run.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nO: [1] is a monkey\nR: [1] chased [2]\nF: [1] will run\nb: Lewis",
+    "form": "(∃x(Mx∧¬Pxc)→(∀x(Ox→Rxc)→¬Fb))",
+    "language": "english"
+  },
+  {
+    "id": 8743,
+    "question": "Sentence:\n\nIf every monkey chased Hazel, then not all donkeys kicked Alfred only if Lewis is a donkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nb: Lewis",
+    "form": "(∀x(Ox→Rxc)→(∃x(Mx∧¬Qxa)→Mb))",
+    "language": "english"
+  },
+  {
+    "id": 5161,
+    "question": "Sentence:\n\nNot all humans chased Lewis only if not all humans kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∃x(Nx∧¬Rxb)→∃x(Nx∧¬Qxc))",
+    "language": "english"
+  },
+  {
+    "id": 10613,
+    "question": "Sentence:\n\nA human saw Lewis and a monkey is hungry.\n\nAbbreviations:\n\nN: [1] is a human\nP: [1] saw [2]\nb: Lewis\nO: [1] is a monkey\nL: [1] is hungry",
+    "form": "(∃x(Nx∧Pxb)∧∃x(Ox∧Lx))",
+    "language": "english"
+  },
+  {
+    "id": 5743,
+    "question": "Sentence:\n\nNot all humans are asleep if and only if every donkey chased Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nM: [1] is a donkey\nR: [1] chased [2]\nb: Lewis",
+    "form": "(∃x(Nx∧¬Jx)↔∀x(Mx→Rxb))",
+    "language": "english"
+  },
+  {
+    "id": 449,
+    "question": "Sentence:\n\nEvery monkey will attack.\n\nAbbreviations:\n\nO: [1] is a monkey\nG: [1] will attack",
+    "form": "∀x(Ox→Gx)",
+    "language": "english"
+  },
+  {
+    "id": 9323,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then no humans are hungry only if Alfred saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nN: [1] is a human\nL: [1] is hungry\na: Alfred",
+    "form": "(∀x(Ox→Pxb)→(¬∃x(Nx∧Lx)→Paa))",
+    "language": "english"
+  },
+  {
+    "id": 8871,
+    "question": "Sentence:\n\nIf every monkey chased Hazel, then Alfred didn't kick Hazel only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nQ: [1] kicked [2]\na: Alfred",
+    "form": "(∀x(Ox→Rxc)→(¬Qac→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 5851,
+    "question": "Sentence:\n\nEvery donkey chased Lewis just in case no monkeys saw Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]",
+    "form": "(∀x(Mx→Rxb)↔¬∃x(Ox∧Pxb))",
+    "language": "english"
+  },
+  {
+    "id": 5155,
+    "question": "Sentence:\n\nIf not all humans chased Lewis, then every monkey saw Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]",
+    "form": "(∃x(Nx∧¬Rxb)→∀x(Ox→Pxb))",
+    "language": "english"
+  },
+  {
+    "id": 195,
+    "question": "Sentence:\n\nLewis is happy.\n\nAbbreviations:\n\nK: [1] is happy\nb: Lewis",
+    "form": "Kb",
+    "language": "english"
+  },
+  {
+    "id": 6783,
+    "question": "Sentence:\n\nIf Alfred ate, then every monkey is asleep only if every human saw Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nO: [1] is a monkey\nJ: [1] is asleep\nN: [1] is a human\nP: [1] saw [2]\nc: Hazel",
+    "form": "(Ia→(∀x(Ox→Jx)→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 1365,
+    "question": "Sentence:\n\nEvery donkey kicked every donkey that kicked it.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]",
+    "form": "∀x(Mx→∀y((My∧Qyx)→Qxy))",
+    "language": "english"
+  },
+  {
+    "id": 8115,
+    "question": "Sentence:\n\nIf Alfred doesn't see Lewis, then not all donkeys kicked Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nO: [1] is a monkey",
+    "form": "(¬Pab→(∃x(Mx∧¬Qxc)→∀x(Ox→Qxb)))",
+    "language": "english"
+  },
+  {
+    "id": 2657,
+    "question": "Sentence:\n\nNot all monkeys kicked Lewis but it is not the case that Lewis saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis\nP: [1] saw [2]\na: Alfred",
+    "form": "(∃x(Ox∧¬Qxb)∧¬Pba)",
+    "language": "english"
+  },
+  {
+    "id": 11653,
+    "question": "Sentence:\n\nOnly donkeys ate and no humans will run.\n\nAbbreviations:\n\nM: [1] is a donkey\nI: [1] ate\nN: [1] is a human\nF: [1] will run",
+    "form": "(∀x(Ix→Mx)∧¬∃x(Nx∧Fx))",
+    "language": "english"
+  },
+  {
+    "id": 3083,
+    "question": "Sentence:\n\nNo donkeys kicked Alfred unless Lewis is a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nb: Lewis",
+    "form": "(¬Mb→¬∃x(Mx∧Qxa))",
+    "language": "english"
+  },
+  {
+    "id": 3961,
+    "question": "Sentence:\n\nA monkey kicked Alfred or a monkey is hungry.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\na: Alfred\nL: [1] is hungry",
+    "form": "(∃x(Ox∧Qxa)∨∃x(Ox∧Lx))",
+    "language": "english"
+  },
+  {
+    "id": 8405,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then every monkey chased Hazel only if Alfred saw Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nO: [1] is a monkey\nR: [1] chased [2]\na: Alfred",
+    "form": "(∃x(Mx∧¬Pxc)→(∀x(Ox→Rxc)→Paa))",
+    "language": "english"
+  },
+  {
+    "id": 10227,
+    "question": "Sentence:\n\nIf not all donkeys will run, then Hazel kicked Alfred only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nF: [1] will run\nQ: [1] kicked [2]\nc: Hazel\na: Alfred",
+    "form": "(∃x(Mx∧¬Fx)→(Qca→∃x(Mx∧¬Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 10575,
+    "question": "Sentence:\n\nEvery monkey ate but it is not the case that Hazel saw Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∀x(Ox→Ix)∧¬Pcc)",
+    "language": "english"
+  },
+  {
+    "id": 11331,
+    "question": "Sentence:\n\nAlfred isn't asleep but it is not the case that Lewis doesn't see Hazel.\n\nAbbreviations:\n\nJ: [1] is asleep\na: Alfred\nP: [1] saw [2]\nb: Lewis\nc: Hazel",
+    "form": "(¬Ja∧¬¬Pbc)",
+    "language": "english"
+  },
+  {
+    "id": 10741,
+    "question": "Sentence:\n\nA monkey is hungry and only donkeys are asleep.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nJ: [1] is asleep",
+    "form": "(∃x(Ox∧Lx)∧∀x(Jx→Mx))",
+    "language": "english"
+  },
+  {
+    "id": 7373,
+    "question": "Sentence:\n\nIf Alfred won't attack, then every monkey chased Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nQ: [1] kicked [2]\nb: Lewis",
+    "form": "(¬Ga→(∀x(Ox→Rxc)→∀x(Ox→Qxb)))",
+    "language": "english"
+  },
+  {
+    "id": 5609,
+    "question": "Sentence:\n\nNo donkeys will attack just in case every human drank.\n\nAbbreviations:\n\nM: [1] is a donkey\nG: [1] will attack\nN: [1] is a human\nH: [1] drank",
+    "form": "(¬∃x(Mx∧Gx)↔∀x(Nx→Hx))",
+    "language": "english"
+  },
+  {
+    "id": 11423,
+    "question": "Sentence:\n\nNot all humans will run but it is not the case that Hazel didn't chase Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nF: [1] will run\nR: [1] chased [2]\nc: Hazel",
+    "form": "(∃x(Nx∧¬Fx)∧¬¬Rcc)",
+    "language": "english"
+  },
+  {
+    "id": 6597,
+    "question": "Sentence:\n\nIf Alfred ate, then a human chased Lewis only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(Ia→(∃x(Nx∧Rxb)→∃x(Mx∧¬Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 5779,
+    "question": "Sentence:\n\nAlfred didn't chase Hazel if and only if a human is asleep.\n\nAbbreviations:\n\nR: [1] chased [2]\na: Alfred\nc: Hazel\nN: [1] is a human\nJ: [1] is asleep",
+    "form": "(¬Rac↔∃x(Nx∧Jx))",
+    "language": "english"
+  },
+  {
+    "id": 491,
+    "question": "Sentence:\n\nA donkey ate.\n\nAbbreviations:\n\nM: [1] is a donkey\nI: [1] ate",
+    "form": "∃x(Mx∧Ix)",
+    "language": "english"
+  },
+  {
+    "id": 6565,
+    "question": "Sentence:\n\nIf not all humans are asleep, then not all donkeys kicked Hazel only if Alfred saw Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nP: [1] saw [2]\na: Alfred",
+    "form": "(∃x(Nx∧¬Jx)→(∃x(Mx∧¬Qxc)→Paa))",
+    "language": "english"
+  },
+  {
+    "id": 3301,
+    "question": "Sentence:\n\nLewis is a donkey unless every donkey is happy.\n\nAbbreviations:\n\nM: [1] is a donkey\nb: Lewis\nK: [1] is happy",
+    "form": "(¬∀x(Mx→Kx)→Mb)",
+    "language": "english"
+  },
+  {
+    "id": 6313,
+    "question": "Sentence:\n\nIf not all humans are asleep, then every monkey chased Hazel only if Hazel kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nQ: [1] kicked [2]",
+    "form": "(∃x(Nx∧¬Jx)→(∀x(Ox→Rxc)→Qcc))",
+    "language": "english"
+  },
+  {
+    "id": 7029,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Hazel didn't chase Hazel only if every monkey is asleep.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nc: Hazel\nO: [1] is a monkey\nJ: [1] is asleep",
+    "form": "(∃x(Nx∧Rxb)→(¬Rcc→∀x(Ox→Jx)))",
+    "language": "english"
+  },
+  {
+    "id": 7289,
+    "question": "Sentence:\n\nIf Alfred won't attack, then every human is asleep only if Lewis didn't chase Lewis.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis",
+    "form": "(¬Ga→(∀x(Nx→Jx)→¬Rbb))",
+    "language": "english"
+  },
+  {
+    "id": 6593,
+    "question": "Sentence:\n\nIf Alfred ate, then a human chased Lewis only if not all donkeys will run.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nF: [1] will run",
+    "form": "(Ia→(∃x(Nx∧Rxb)→∃x(Mx∧¬Fx)))",
+    "language": "english"
+  },
+  {
+    "id": 9697,
+    "question": "Sentence:\n\nIf a human chased Hazel, then every monkey is asleep only if Hazel kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]",
+    "form": "(∃x(Nx∧Rxc)→(∀x(Ox→Jx)→Qcc))",
+    "language": "english"
+  },
+  {
+    "id": 10549,
+    "question": "Sentence:\n\nIf no humans are hungry, then Alfred saw Alfred only if no donkeys ate.\n\nAbbreviations:\n\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]\na: Alfred\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(¬∃x(Nx∧Lx)→(Paa→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 1887,
+    "question": "Sentence:\n\nLewis saw a human.\n\nAbbreviations:\n\nN: [1] is a human\nP: [1] saw [2]\nb: Lewis",
+    "form": "∃x(Nx∧Pbx)",
+    "language": "english"
+  },
+  {
+    "id": 2819,
+    "question": "Sentence:\n\nEvery monkey kicked Lewis and Lewis isn't a donkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis\nM: [1] is a donkey",
+    "form": "(∀x(Ox→Qxb)∧¬Mb)",
+    "language": "english"
+  },
+  {
+    "id": 2479,
+    "question": "Sentence:\n\nHazel didn't chase Alfred and Lewis didn't chase Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\na: Alfred\nb: Lewis",
+    "form": "(¬Rca∧¬Rbc)",
+    "language": "english"
+  },
+  {
+    "id": 6223,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Alfred doesn't see Lewis only if a human chased Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nP: [1] saw [2]\na: Alfred\nb: Lewis\nR: [1] chased [2]\nc: Hazel",
+    "form": "(∃x(Nx∧¬Jx)→(¬Pab→∃x(Nx∧Rxc)))",
+    "language": "english"
+  },
+  {
+    "id": 119,
+    "question": "Sentence:\n\nAlfred and Hazel ate.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nc: Hazel",
+    "form": "(Ia∧Ic)",
+    "language": "english"
+  },
+  {
+    "id": 1051,
+    "question": "Sentence:\n\nNo humans kicked a human.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]",
+    "form": "¬∃x∃y((Nx∧Ny)∧Qxy)",
+    "language": "english"
+  },
+  {
+    "id": 10029,
+    "question": "Sentence:\n\nIf every monkey is asleep, then Alfred didn't kick Hazel only if every monkey is hungry.\n\nAbbreviations:\n\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nL: [1] is hungry",
+    "form": "(∀x(Ox→Jx)→(¬Qac→∀x(Ox→Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 9507,
+    "question": "Sentence:\n\nIf not all donkeys kicked Alfred, then Lewis is hungry only if every monkey is asleep.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nL: [1] is hungry\nb: Lewis\nO: [1] is a monkey\nJ: [1] is asleep",
+    "form": "(∃x(Mx∧¬Qxa)→(Lb→∀x(Ox→Jx)))",
+    "language": "english"
+  },
+  {
+    "id": 6505,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Alfred didn't kick Hazel only if no humans are hungry.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nL: [1] is hungry",
+    "form": "(∃x(Nx∧¬Jx)→(¬Qac→¬∃x(Nx∧Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 9031,
+    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then every monkey is asleep only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]",
+    "form": "(¬Rcc→(∀x(Ox→Jx)→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 6605,
+    "question": "Sentence:\n\nIf Alfred ate, then a human chased Lewis only if every human saw Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nP: [1] saw [2]\nc: Hazel",
+    "form": "(Ia→(∃x(Nx∧Rxb)→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 4189,
+    "question": "Sentence:\n\nNot all donkeys will attack unless every donkey chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nG: [1] will attack\nR: [1] chased [2]\na: Alfred",
+    "form": "(¬∀x(Mx→Rxa)→∃x(Mx∧¬Gx))",
+    "language": "english"
+  },
+  {
+    "id": 9261,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Alfred didn't kick Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nQ: [1] kicked [2]\na: Alfred\nc: Hazel",
+    "form": "(∀x(Ox→Pxb)→(¬Qac→∀x(Ox→Qxb)))",
+    "language": "english"
+  },
+  {
+    "id": 8097,
+    "question": "Sentence:\n\nIf Alfred doesn't see Lewis, then every monkey is hungry only if no humans are hungry.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nO: [1] is a monkey\nL: [1] is hungry\nN: [1] is a human",
+    "form": "(¬Pab→(∀x(Ox→Lx)→¬∃x(Nx∧Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 3327,
+    "question": "Sentence:\n\nLewis is a donkey or a monkey will attack.\n\nAbbreviations:\n\nM: [1] is a donkey\nb: Lewis\nO: [1] is a monkey\nG: [1] will attack",
+    "form": "(Mb∨∃x(Ox∧Gx))",
+    "language": "english"
+  },
+  {
+    "id": 941,
+    "question": "Sentence:\n\nEvery monkey saw every human.\n\nAbbreviations:\n\nO: [1] is a monkey\nN: [1] is a human\nP: [1] saw [2]",
+    "form": "∀x∀y((Ox∧Ny)→Pxy)",
+    "language": "english"
+  },
+  {
+    "id": 2773,
+    "question": "Sentence:\n\nLewis saw Alfred and Lewis is happy.\n\nAbbreviations:\n\nP: [1] saw [2]\nb: Lewis\na: Alfred\nK: [1] is happy",
+    "form": "(Pba∧Kb)",
+    "language": "english"
+  },
+  {
+    "id": 7863,
+    "question": "Sentence:\n\nIf every human is asleep, then Lewis won't run only if every monkey saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nF: [1] will run\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∀x(Nx→Jx)→(¬Fb→∀x(Ox→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 3761,
+    "question": "Sentence:\n\nEvery donkey is happy or every human saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nN: [1] is a human\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∀x(Mx→Kx)∨∀x(Nx→Pxc))",
+    "language": "english"
+  },
+  {
+    "id": 2431,
+    "question": "Sentence:\n\nAlfred is happy and a monkey is happy.\n\nAbbreviations:\n\nK: [1] is happy\na: Alfred\nO: [1] is a monkey",
+    "form": "(Ka∧∃x(Ox∧Kx))",
+    "language": "english"
+  },
+  {
+    "id": 9449,
+    "question": "Sentence:\n\nIf Hazel is hungry, then every monkey saw Hazel only if no donkeys ate.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nO: [1] is a monkey\nP: [1] saw [2]\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(Lc→(∀x(Ox→Pxc)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 10281,
+    "question": "Sentence:\n\nIf Alfred didn't kick Hazel, then every monkey is hungry only if no humans are hungry.\n\nAbbreviations:\n\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nO: [1] is a monkey\nL: [1] is hungry\nN: [1] is a human",
+    "form": "(¬Qac→(∀x(Ox→Lx)→¬∃x(Nx∧Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 1927,
+    "question": "Sentence:\n\nHazel kicked a human.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "∃x(Nx∧Qcx)",
+    "language": "english"
+  },
+  {
+    "id": 7919,
+    "question": "Sentence:\n\nIf every human is asleep, then Alfred saw Alfred only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nP: [1] saw [2]\na: Alfred\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∀x(Nx→Jx)→(Paa→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 5157,
+    "question": "Sentence:\n\nNot all humans chased Lewis only if every monkey saw Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]",
+    "form": "(∃x(Nx∧¬Rxb)→∀x(Ox→Pxb))",
+    "language": "english"
+  },
+  {
+    "id": 8761,
+    "question": "Sentence:\n\nIf every monkey chased Hazel, then a human chased Hazel only if Alfred didn't kick Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nN: [1] is a human\nQ: [1] kicked [2]\na: Alfred",
+    "form": "(∀x(Ox→Rxc)→(∃x(Nx∧Rxc)→¬Qac))",
+    "language": "english"
+  },
+  {
+    "id": 11029,
+    "question": "Sentence:\n\nAlfred isn't hungry but it is not the case that Lewis is a donkey.\n\nAbbreviations:\n\nL: [1] is hungry\na: Alfred\nM: [1] is a donkey\nb: Lewis",
+    "form": "(¬La∧¬Mb)",
+    "language": "english"
+  },
+  {
+    "id": 7427,
+    "question": "Sentence:\n\nIf Alfred won't attack, then not all donkeys kicked Alfred only if every human saw Hazel.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nM: [1] is a donkey\nQ: [1] kicked [2]\nN: [1] is a human\nP: [1] saw [2]\nc: Hazel",
+    "form": "(¬Ga→(∃x(Mx∧¬Qxa)→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 4677,
+    "question": "Sentence:\n\nA donkey kicked Lewis only if not all humans kicked Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis\nN: [1] is a human\nc: Hazel",
+    "form": "(∃x(Mx∧Qxb)→∃x(Nx∧¬Qxc))",
+    "language": "english"
+  },
+  {
+    "id": 7353,
+    "question": "Sentence:\n\nIf Alfred won't attack, then not all donkeys saw Hazel only if no donkeys ate.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nI: [1] ate",
+    "form": "(¬Ga→(∃x(Mx∧¬Pxc)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 5887,
+    "question": "Sentence:\n\nEvery human drank if and only if not all donkeys ate.\n\nAbbreviations:\n\nN: [1] is a human\nH: [1] drank\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(∀x(Nx→Hx)↔∃x(Mx∧¬Ix))",
+    "language": "english"
+  },
+  {
+    "id": 8503,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then a human chased Hazel only if Hazel kicked Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nN: [1] is a human\nR: [1] chased [2]\nQ: [1] kicked [2]\na: Alfred",
+    "form": "(∃x(Mx∧¬Pxc)→(∃x(Nx∧Rxc)→Qca))",
+    "language": "english"
+  },
+  {
+    "id": 7531,
+    "question": "Sentence:\n\nIf Alfred won't attack, then every monkey saw Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel\nQ: [1] kicked [2]\nb: Lewis",
+    "form": "(¬Ga→(∀x(Ox→Pxc)→∀x(Ox→Qxb)))",
+    "language": "english"
+  },
+  {
+    "id": 3025,
+    "question": "Sentence:\n\nNot all humans chased Lewis unless every donkey is happy.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nK: [1] is happy",
+    "form": "(¬∀x(Mx→Kx)→∃x(Nx∧¬Rxb))",
+    "language": "english"
+  },
+  {
+    "id": 7247,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Hazel kicked Alfred only if no humans are hungry.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel\na: Alfred\nL: [1] is hungry",
+    "form": "(∃x(Nx∧Rxb)→(Qca→¬∃x(Nx∧Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 6153,
+    "question": "Sentence:\n\nIf not all humans are asleep, then a human chased Lewis only if Hazel kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∃x(Nx∧¬Jx)→(∃x(Nx∧Rxb)→Qcc))",
+    "language": "english"
+  },
+  {
+    "id": 7499,
+    "question": "Sentence:\n\nIf Alfred won't attack, then every monkey is hungry only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(¬Ga→(∀x(Ox→Lx)→∃x(Mx∧¬Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 295,
+    "question": "Sentence:\n\nAlfred saw Lewis.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis",
+    "form": "Pab",
+    "language": "english"
+  },
+  {
+    "id": 9685,
+    "question": "Sentence:\n\nIf a human chased Hazel, then Lewis is hungry only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nL: [1] is hungry\nb: Lewis\nO: [1] is a monkey\nQ: [1] kicked [2]",
+    "form": "(∃x(Nx∧Rxc)→(Lb→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 9315,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Hazel kicked Hazel only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∀x(Ox→Pxb)→(Qcc→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 9111,
+    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then every human saw Hazel only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nN: [1] is a human\nP: [1] saw [2]\nO: [1] is a monkey\nQ: [1] kicked [2]",
+    "form": "(¬Rcc→(∀x(Nx→Pxc)→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 831,
+    "question": "Sentence:\n\nA donkey saw a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]",
+    "form": "∃x∃y((Mx∧My)∧Pxy)",
+    "language": "english"
+  },
+  {
+    "id": 1243,
+    "question": "Sentence:\n\nEvery monkey chased a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nN: [1] is a human\nR: [1] chased [2]",
+    "form": "∀x(Ox→∃y(Ny∧Rxy))",
+    "language": "english"
+  },
+  {
+    "id": 9719,
+    "question": "Sentence:\n\nIf a human chased Hazel, then Lewis is a donkey only if no donkeys ate.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nb: Lewis\nI: [1] ate",
+    "form": "(∃x(Nx∧Rxc)→(Mb→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 6793,
+    "question": "Sentence:\n\nIf Alfred ate, then not all donkeys will run only if every monkey saw Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nM: [1] is a donkey\nF: [1] will run\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
+    "form": "(Ia→(∃x(Mx∧¬Fx)→∀x(Ox→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 7133,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Alfred will run only if every monkey saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∃x(Nx∧Rxb)→(Fa→∀x(Ox→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 9061,
+    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then every monkey is hungry only if every monkey saw Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nL: [1] is hungry\nP: [1] saw [2]",
+    "form": "(¬Rcc→(∀x(Ox→Lx)→∀x(Ox→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 5385,
+    "question": "Sentence:\n\nHazel isn't a human if and only if no donkeys will attack.\n\nAbbreviations:\n\nN: [1] is a human\nc: Hazel\nM: [1] is a donkey\nG: [1] will attack",
+    "form": "(¬Nc↔¬∃x(Mx∧Gx))",
+    "language": "english"
+  },
+  {
+    "id": 10361,
+    "question": "Sentence:\n\nIf Lewis won't run, then every monkey saw Hazel only if no humans are hungry.\n\nAbbreviations:\n\nF: [1] will run\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel\nN: [1] is a human\nL: [1] is hungry",
+    "form": "(¬Fb→(∀x(Ox→Pxc)→¬∃x(Nx∧Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 3803,
+    "question": "Sentence:\n\nA human kicked Lewis or every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nb: Lewis\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∃x(Nx∧Qxb)∨∀x(Nx→Pxc))",
+    "language": "english"
+  },
+  {
+    "id": 7215,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Alfred didn't kick Hazel only if no humans are hungry.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nL: [1] is hungry",
+    "form": "(∃x(Nx∧Rxb)→(¬Qac→¬∃x(Nx∧Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 5997,
+    "question": "Sentence:\n\nNo monkeys saw Lewis if and only if a monkey ate.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nI: [1] ate",
+    "form": "(¬∃x(Ox∧Pxb)↔∃x(Ox∧Ix))",
+    "language": "english"
+  },
+  {
+    "id": 8445,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then every monkey saw Lewis only if Lewis won't run.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nO: [1] is a monkey\nb: Lewis\nF: [1] will run",
+    "form": "(∃x(Mx∧¬Pxc)→(∀x(Ox→Pxb)→¬Fb))",
+    "language": "english"
+  },
+  {
+    "id": 4239,
+    "question": "Sentence:\n\nNo donkeys are happy or every donkey chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nR: [1] chased [2]\na: Alfred",
+    "form": "(¬∃x(Mx∧Kx)∨∀x(Mx→Rxa))",
+    "language": "english"
+  },
+  {
+    "id": 283,
+    "question": "Sentence:\n\nLewis is a monkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nb: Lewis",
+    "form": "Ob",
+    "language": "english"
+  },
+  {
+    "id": 8143,
+    "question": "Sentence:\n\nIf Alfred doesn't see Lewis, then every monkey kicked Lewis only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(¬Pab→(∀x(Ox→Qxb)→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 2553,
+    "question": "Sentence:\n\nAlfred didn't chase Alfred and Lewis didn't kick Alfred.\n\nAbbreviations:\n\nR: [1] chased [2]\na: Alfred\nQ: [1] kicked [2]\nb: Lewis",
+    "form": "(¬Raa∧¬Qba)",
+    "language": "english"
+  },
+  {
+    "id": 5281,
+    "question": "Sentence:\n\nNot all monkeys ate if and only if Hazel is happy.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nK: [1] is happy\nc: Hazel",
+    "form": "(∃x(Ox∧¬Ix)↔Kc)",
     "language": "english"
   },
   {
@@ -540,63 +1266,537 @@
     "language": "english"
   },
   {
+    "id": 1193,
+    "question": "Sentence:\n\nEvery human chased a human.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]",
+    "form": "∀x(Nx→∃y(Ny∧Rxy))",
+    "language": "english"
+  },
+  {
+    "id": 9281,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Lewis won't run only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nF: [1] will run\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(∀x(Ox→Pxb)→(¬Fb→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 8823,
+    "question": "Sentence:\n\nIf every monkey chased Hazel, then every monkey is asleep only if Hazel kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nJ: [1] is asleep\nQ: [1] kicked [2]",
+    "form": "(∀x(Ox→Rxc)→(∀x(Ox→Jx)→Qcc))",
+    "language": "english"
+  },
+  {
+    "id": 4345,
+    "question": "Sentence:\n\nEvery donkey kicked Lewis unless not all monkeys saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
+    "form": "(¬∃x(Ox∧¬Pxc)→∀x(Mx→Qxb))",
+    "language": "english"
+  },
+  {
+    "id": 10471,
+    "question": "Sentence:\n\nIf every monkey is hungry, then Alfred saw Alfred only if every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nP: [1] saw [2]\na: Alfred\nQ: [1] kicked [2]\nb: Lewis",
+    "form": "(∀x(Ox→Lx)→(Paa→∀x(Ox→Qxb)))",
+    "language": "english"
+  },
+  {
+    "id": 6181,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Alfred won't attack only if no humans are hungry.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nG: [1] will attack\na: Alfred\nL: [1] is hungry",
+    "form": "(∃x(Nx∧¬Jx)→(¬Ga→¬∃x(Nx∧Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 1363,
+    "question": "Sentence:\n\nNo monkeys saw a monkey that saw it.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]",
+    "form": "¬∃x∃y((Ox∧Oy)∧(Pxy∧Pyx))",
+    "language": "english"
+  },
+  {
+    "id": 993,
+    "question": "Sentence:\n\nEvery donkey kicked a human.\n\nAbbreviations:\n\nM: [1] is a donkey\nN: [1] is a human\nQ: [1] kicked [2]",
+    "form": "∀x(Mx→∃y(Ny∧Qxy))",
+    "language": "english"
+  },
+  {
+    "id": 2899,
+    "question": "Sentence:\n\nNo donkeys saw Hazel and a monkey kicked Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nO: [1] is a monkey\nQ: [1] kicked [2]\na: Alfred",
+    "form": "(¬∃x(Mx∧Pxc)∧∃x(Ox∧Qxa))",
+    "language": "english"
+  },
+  {
+    "id": 3189,
+    "question": "Sentence:\n\nEvery monkey will run or Alfred doesn't see Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nF: [1] will run\nP: [1] saw [2]\na: Alfred\nb: Lewis",
+    "form": "(∀x(Ox→Fx)∨¬Pab)",
+    "language": "english"
+  },
+  {
+    "id": 4361,
+    "question": "Sentence:\n\nAlfred doesn't see Alfred only if a human chased Hazel.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel",
+    "form": "(¬Paa→∃x(Nx∧Rxc))",
+    "language": "english"
+  },
+  {
+    "id": 8395,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then every monkey chased Hazel only if Lewis is a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nO: [1] is a monkey\nR: [1] chased [2]\nb: Lewis",
+    "form": "(∃x(Mx∧¬Pxc)→(∀x(Ox→Rxc)→Mb))",
+    "language": "english"
+  },
+  {
+    "id": 2567,
+    "question": "Sentence:\n\nNo donkeys saw Lewis and not all monkeys kicked Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nb: Lewis\nO: [1] is a monkey\nQ: [1] kicked [2]",
+    "form": "(¬∃x(Mx∧Pxb)∧∃x(Ox∧¬Qxb))",
+    "language": "english"
+  },
+  {
+    "id": 4029,
+    "question": "Sentence:\n\nNo humans are hungry or a monkey will attack.\n\nAbbreviations:\n\nN: [1] is a human\nL: [1] is hungry\nO: [1] is a monkey\nG: [1] will attack",
+    "form": "(¬∃x(Nx∧Lx)∨∃x(Ox∧Gx))",
+    "language": "english"
+  },
+  {
+    "id": 177,
+    "question": "Sentence:\n\nHazel or Lewis are asleep.\n\nAbbreviations:\n\nJ: [1] is asleep\nc: Hazel\nb: Lewis",
+    "form": "(Jc∨Jb)",
+    "language": "english"
+  },
+  {
+    "id": 7071,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Hazel is hungry only if every monkey is asleep.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nL: [1] is hungry\nc: Hazel\nO: [1] is a monkey\nJ: [1] is asleep",
+    "form": "(∃x(Nx∧Rxb)→(Lc→∀x(Ox→Jx)))",
+    "language": "english"
+  },
+  {
+    "id": 1763,
+    "question": "Sentence:\n\nA donkey chased a donkey that chased a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]",
+    "form": "∃x∃y∃z(((Mx∧My)∧Mz)∧(Rxy∧Ryz))",
+    "language": "english"
+  },
+  {
+    "id": 3557,
+    "question": "Sentence:\n\nAlfred doesn't see Lewis unless not all donkeys will attack.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nM: [1] is a donkey\nG: [1] will attack",
+    "form": "(¬∃x(Mx∧¬Gx)→¬Pab)",
+    "language": "english"
+  },
+  {
+    "id": 495,
+    "question": "Sentence:\n\nNot all donkeys ate.\n\nAbbreviations:\n\nM: [1] is a donkey\nI: [1] ate",
+    "form": "∃x(Mx∧¬Ix)",
+    "language": "english"
+  },
+  {
+    "id": 7663,
+    "question": "Sentence:\n\nIf every human is asleep, then Hazel didn't chase Hazel only if a human chased Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nc: Hazel",
+    "form": "(∀x(Nx→Jx)→(¬Rcc→∃x(Nx∧Rxc)))",
+    "language": "english"
+  },
+  {
+    "id": 2837,
+    "question": "Sentence:\n\nEvery monkey kicked Lewis and only humans drank.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis\nN: [1] is a human\nH: [1] drank",
+    "form": "(∀x(Ox→Qxb)∧∀x(Hx→Nx))",
+    "language": "english"
+  },
+  {
+    "id": 7497,
+    "question": "Sentence:\n\nIf Alfred won't attack, then every monkey is hungry only if Hazel kicked Hazel.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry\nQ: [1] kicked [2]\nc: Hazel",
+    "form": "(¬Ga→(∀x(Ox→Lx)→Qcc))",
+    "language": "english"
+  },
+  {
+    "id": 3749,
+    "question": "Sentence:\n\nEvery donkey is happy or a monkey will attack.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nO: [1] is a monkey\nG: [1] will attack",
+    "form": "(∀x(Mx→Kx)∨∃x(Ox∧Gx))",
+    "language": "english"
+  },
+  {
+    "id": 3129,
+    "question": "Sentence:\n\nNo donkeys kicked Alfred unless a monkey kicked Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nO: [1] is a monkey\nb: Lewis",
+    "form": "(¬∃x(Ox∧Qxb)→¬∃x(Mx∧Qxa))",
+    "language": "english"
+  },
+  {
+    "id": 4307,
+    "question": "Sentence:\n\nA monkey is hungry unless every donkey will attack.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nG: [1] will attack",
+    "form": "(¬∀x(Mx→Gx)→∃x(Ox∧Lx))",
+    "language": "english"
+  },
+  {
+    "id": 7451,
+    "question": "Sentence:\n\nIf Alfred won't attack, then a human chased Hazel only if no donkeys ate.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(¬Ga→(∃x(Nx∧Rxc)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 8925,
+    "question": "Sentence:\n\nIf every monkey chased Hazel, then not all donkeys kicked Hazel only if Alfred saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nQ: [1] kicked [2]\nP: [1] saw [2]\na: Alfred",
+    "form": "(∀x(Ox→Rxc)→(∃x(Mx∧¬Qxc)→Paa))",
+    "language": "english"
+  },
+  {
+    "id": 8969,
+    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then not all donkeys kicked Alfred only if Alfred will run.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nF: [1] will run",
+    "form": "(¬Rcc→(∃x(Mx∧¬Qxa)→Fa))",
+    "language": "english"
+  },
+  {
+    "id": 5801,
+    "question": "Sentence:\n\nAlfred didn't chase Hazel if and only if Lewis saw Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\na: Alfred\nc: Hazel\nP: [1] saw [2]\nb: Lewis",
+    "form": "(¬Rac↔Pbc)",
+    "language": "english"
+  },
+  {
+    "id": 4773,
+    "question": "Sentence:\n\nAlfred didn't kick Hazel only if every donkey saw Hazel.\n\nAbbreviations:\n\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nM: [1] is a donkey\nP: [1] saw [2]",
+    "form": "(¬Qac→∀x(Mx→Pxc))",
+    "language": "english"
+  },
+  {
+    "id": 9241,
+    "question": "Sentence:\n\nIf every monkey saw Lewis, then Lewis is a donkey only if no donkeys ate.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(∀x(Ox→Pxb)→(Mb→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 2363,
+    "question": "Sentence:\n\nNo donkeys kicked Hazel and not all monkeys kicked Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nO: [1] is a monkey\nb: Lewis",
+    "form": "(¬∃x(Mx∧Qxc)∧∃x(Ox∧¬Qxb))",
+    "language": "english"
+  },
+  {
+    "id": 9493,
+    "question": "Sentence:\n\nIf not all donkeys kicked Alfred, then Alfred will run only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nF: [1] will run\nc: Hazel",
+    "form": "(∃x(Mx∧¬Qxa)→(Fa→∃x(Mx∧¬Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 9409,
+    "question": "Sentence:\n\nIf Hazel is hungry, then not all donkeys will run only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nM: [1] is a donkey\nF: [1] will run\nO: [1] is a monkey\nQ: [1] kicked [2]",
+    "form": "(Lc→(∃x(Mx∧¬Fx)→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 3791,
+    "question": "Sentence:\n\nA human kicked Lewis or a monkey kicked Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nb: Lewis\nO: [1] is a monkey\na: Alfred",
+    "form": "(∃x(Nx∧Qxb)∨∃x(Ox∧Qxa))",
+    "language": "english"
+  },
+  {
+    "id": 6339,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Hazel didn't chase Hazel only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nQ: [1] kicked [2]",
+    "form": "(∃x(Nx∧¬Jx)→(¬Rcc→¬∃x(Ox∧Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 8655,
+    "question": "Sentence:\n\nIf not all donkeys saw Hazel, then Hazel kicked Hazel only if no donkeys ate.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nQ: [1] kicked [2]\nI: [1] ate",
+    "form": "(∃x(Mx∧¬Pxc)→(Qcc→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 1963,
+    "question": "Sentence:\n\nHazel chased a human.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel",
+    "form": "∃x(Nx∧Rcx)",
+    "language": "english"
+  },
+  {
+    "id": 5475,
+    "question": "Sentence:\n\nEvery human is asleep just in case no donkeys chased Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred",
+    "form": "(∀x(Nx→Jx)↔¬∃x(Mx∧Rxa))",
+    "language": "english"
+  },
+  {
     "id": 6151,
     "question": "Sentence:\n\nIf not all humans are asleep, then a human chased Lewis only if Hazel kicked Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel\na: Alfred",
     "form": "(∃x(Nx∧¬Jx)→(∃x(Nx∧Rxb)→Qca))",
     "language": "english"
   },
   {
-    "id": 8175,
-    "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then not all donkeys saw Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nN: [1] is a human",
-    "form": "(¬Rbb→(∃x(Mx∧¬Pxc)→∀x(Nx→Pxc)))",
+    "id": 2835,
+    "question": "Sentence:\n\nEvery monkey kicked Lewis and every human saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis\nN: [1] is a human\nP: [1] saw [2]\na: Alfred",
+    "form": "(∀x(Ox→Qxb)∧∀x(Nx→Pxa))",
     "language": "english"
   },
   {
-    "id": 6695,
-    "question": "Sentence:\n\nIf Alfred ate, then every monkey chased Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nN: [1] is a human\nP: [1] saw [2]",
-    "form": "(Ia→(∀x(Ox→Rxc)→∀x(Nx→Pxc)))",
+    "id": 843,
+    "question": "Sentence:\n\nEvery donkey saw a human.\n\nAbbreviations:\n\nM: [1] is a donkey\nN: [1] is a human\nP: [1] saw [2]",
+    "form": "∀x(Mx→∃y(Ny∧Pxy))",
     "language": "english"
   },
   {
-    "id": 1127,
-    "question": "Sentence:\n\nEvery donkey chased a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]",
-    "form": "∀x(Mx→∃y(My∧Rxy))",
+    "id": 2135,
+    "question": "Sentence:\n\nNot all monkeys will run and Lewis is happy.\n\nAbbreviations:\n\nO: [1] is a monkey\nF: [1] will run\nK: [1] is happy\nb: Lewis",
+    "form": "(∃x(Ox∧¬Fx)∧Kb)",
     "language": "english"
   },
   {
-    "id": 6269,
-    "question": "Sentence:\n\nIf not all humans are asleep, then Lewis didn't chase Lewis only if every monkey kicked Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nQ: [1] kicked [2]",
-    "form": "(∃x(Nx∧¬Jx)→(¬Rbb→∀x(Ox→Qxb)))",
+    "id": 5683,
+    "question": "Sentence:\n\nNot all humans kicked Alfred if and only if a human is asleep.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\na: Alfred\nJ: [1] is asleep",
+    "form": "(∃x(Nx∧¬Qxa)↔∃x(Nx∧Jx))",
     "language": "english"
   },
   {
-    "id": 83,
-    "question": "Sentence:\n\nAlfred and Hazel drank.\n\nAbbreviations:\n\nH: [1] drank\na: Alfred\nc: Hazel",
-    "form": "(Ha∧Hc)",
+    "id": 9461,
+    "question": "Sentence:\n\nIf Hazel is hungry, then every monkey kicked Lewis only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis",
+    "form": "(Lc→(∀x(Ox→Qxb)→¬∃x(Ox∧Qxc)))",
     "language": "english"
   },
   {
-    "id": 871,
-    "question": "Sentence:\n\nThere is not a donkey that every monkey saw.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nP: [1] saw [2]",
-    "form": "¬∃x(Mx∧∀y(Oy→Pyx))",
+    "id": 3467,
+    "question": "Sentence:\n\nA monkey kicked Hazel unless Alfred isn't a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel\nN: [1] is a human\na: Alfred",
+    "form": "(¬¬Na→∃x(Ox∧Qxc))",
     "language": "english"
   },
   {
-    "id": 6263,
-    "question": "Sentence:\n\nIf not all humans are asleep, then Lewis didn't chase Lewis only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel",
-    "form": "(∃x(Nx∧¬Jx)→(¬Rbb→∃x(Mx∧¬Qxc)))",
+    "id": 6363,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Hazel is hungry only if a human chased Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nL: [1] is hungry\nc: Hazel\nR: [1] chased [2]",
+    "form": "(∃x(Nx∧¬Jx)→(Lc→∃x(Nx∧Rxc)))",
     "language": "english"
   },
   {
-    "id": 10943,
-    "question": "Sentence:\n\nAlfred drank but it is not the case that Alfred isn't asleep.\n\nAbbreviations:\n\nH: [1] drank\na: Alfred\nJ: [1] is asleep",
-    "form": "(Ha∧¬¬Ja)",
+    "id": 5125,
+    "question": "Sentence:\n\nA donkey kicked Hazel only if Lewis doesn't see Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nP: [1] saw [2]\nb: Lewis",
+    "form": "(∃x(Mx∧Qxc)→¬Pbb)",
     "language": "english"
   },
   {
-    "id": 4239,
-    "question": "Sentence:\n\nNo donkeys are happy or every donkey chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nR: [1] chased [2]\na: Alfred",
-    "form": "(¬∃x(Mx∧Kx)∨∀x(Mx→Rxa))",
+    "id": 6215,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Alfred doesn't see Lewis only if not all donkeys saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nP: [1] saw [2]\na: Alfred\nb: Lewis\nM: [1] is a donkey\nc: Hazel",
+    "form": "(∃x(Nx∧¬Jx)→(¬Pab→∃x(Mx∧¬Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 11339,
+    "question": "Sentence:\n\nEvery monkey drank and Hazel isn't asleep.\n\nAbbreviations:\n\nO: [1] is a monkey\nH: [1] drank\nJ: [1] is asleep\nc: Hazel",
+    "form": "(∀x(Ox→Hx)∧¬Jc)",
+    "language": "english"
+  },
+  {
+    "id": 8873,
+    "question": "Sentence:\n\nIf every monkey chased Hazel, then Alfred didn't kick Hazel only if no donkeys ate.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nQ: [1] kicked [2]\na: Alfred\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(∀x(Ox→Rxc)→(¬Qac→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 6099,
+    "question": "Sentence:\n\nIf not all humans are asleep, then Alfred ate only if every human is asleep.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nI: [1] ate\na: Alfred",
+    "form": "(∃x(Nx∧¬Jx)→(Ia→∀x(Nx→Jx)))",
+    "language": "english"
+  },
+  {
+    "id": 4931,
+    "question": "Sentence:\n\nIf Hazel ate, then not all donkeys are hungry.\n\nAbbreviations:\n\nI: [1] ate\nc: Hazel\nM: [1] is a donkey\nL: [1] is hungry",
+    "form": "(Ic→∃x(Mx∧¬Lx))",
+    "language": "english"
+  },
+  {
+    "id": 4007,
+    "question": "Sentence:\n\nNot all donkeys kicked Lewis unless a monkey is hungry.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis\nO: [1] is a monkey\nL: [1] is hungry",
+    "form": "(¬∃x(Ox∧Lx)→∃x(Mx∧¬Qxb))",
+    "language": "english"
+  },
+  {
+    "id": 4897,
+    "question": "Sentence:\n\nA monkey saw Alfred only if not all humans chased Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis",
+    "form": "(∃x(Ox∧Pxa)→∃x(Nx∧¬Rxb))",
+    "language": "english"
+  },
+  {
+    "id": 2099,
+    "question": "Sentence:\n\nNot all monkeys will run and every human is happy.\n\nAbbreviations:\n\nO: [1] is a monkey\nF: [1] will run\nN: [1] is a human\nK: [1] is happy",
+    "form": "(∃x(Ox∧¬Fx)∧∀x(Nx→Kx))",
+    "language": "english"
+  },
+  {
+    "id": 4477,
+    "question": "Sentence:\n\nEvery monkey chased Lewis only if every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]",
+    "form": "(∀x(Ox→Rxb)→∀x(Ox→Qxb))",
+    "language": "english"
+  },
+  {
+    "id": 1513,
+    "question": "Sentence:\n\nNo humans chased a monkey that chased it.\n\nAbbreviations:\n\nN: [1] is a human\nO: [1] is a monkey\nR: [1] chased [2]",
+    "form": "¬∃x∃y((Nx∧Oy)∧(Rxy∧Ryx))",
+    "language": "english"
+  },
+  {
+    "id": 3849,
+    "question": "Sentence:\n\nHazel isn't a human unless not all donkeys will attack.\n\nAbbreviations:\n\nN: [1] is a human\nc: Hazel\nM: [1] is a donkey\nG: [1] will attack",
+    "form": "(¬∃x(Mx∧¬Gx)→¬Nc)",
+    "language": "english"
+  },
+  {
+    "id": 2853,
+    "question": "Sentence:\n\nA monkey is happy and every human chased Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nK: [1] is happy\nN: [1] is a human\nR: [1] chased [2]\na: Alfred",
+    "form": "(∃x(Ox∧Kx)∧∀x(Nx→Rxa))",
+    "language": "english"
+  },
+  {
+    "id": 9043,
+    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then not all donkeys will run only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nF: [1] will run\nQ: [1] kicked [2]",
+    "form": "(¬Rcc→(∃x(Mx∧¬Fx)→∃x(Mx∧¬Qxc)))",
+    "language": "english"
+  },
+  {
+    "id": 8369,
+    "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then no humans are hungry only if every human saw Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]\nc: Hazel",
+    "form": "(¬Rbb→(¬∃x(Nx∧Lx)→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 769,
+    "question": "Sentence:\n\nEvery donkey chased Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\nc: Hazel",
+    "form": "∀x(Mx→Rxc)",
+    "language": "english"
+  },
+  {
+    "id": 8029,
+    "question": "Sentence:\n\nIf Alfred doesn't see Lewis, then not all donkeys kicked Alfred only if no donkeys ate.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\nI: [1] ate",
+    "form": "(¬Pab→(∃x(Mx∧¬Qxa)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 3771,
+    "question": "Sentence:\n\nEvery donkey is happy unless every donkey chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nR: [1] chased [2]\na: Alfred",
+    "form": "(¬∀x(Mx→Rxa)→∀x(Mx→Kx))",
+    "language": "english"
+  },
+  {
+    "id": 2541,
+    "question": "Sentence:\n\nAlfred didn't chase Alfred but it is not the case that Lewis isn't a donkey.\n\nAbbreviations:\n\nR: [1] chased [2]\na: Alfred\nM: [1] is a donkey\nb: Lewis",
+    "form": "(¬Raa∧¬¬Mb)",
+    "language": "english"
+  },
+  {
+    "id": 4635,
+    "question": "Sentence:\n\nIf a donkey kicked Lewis, then no donkeys chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis\nR: [1] chased [2]\na: Alfred",
+    "form": "(∃x(Mx∧Qxb)→¬∃x(Mx∧Rxa))",
+    "language": "english"
+  },
+  {
+    "id": 6019,
+    "question": "Sentence:\n\nHazel isn't hungry if and only if a human saw Hazel.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nN: [1] is a human\nP: [1] saw [2]",
+    "form": "(¬Lc↔∃x(Nx∧Pxc))",
+    "language": "english"
+  },
+  {
+    "id": 2111,
+    "question": "Sentence:\n\nNot all monkeys will run and no donkeys saw Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nF: [1] will run\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∃x(Ox∧¬Fx)∧¬∃x(Mx∧Pxc))",
+    "language": "english"
+  },
+  {
+    "id": 10743,
+    "question": "Sentence:\n\nA monkey is hungry and Hazel didn't chase Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nR: [1] chased [2]\nc: Hazel",
+    "form": "(∃x(Ox∧Lx)∧¬Rcc)",
+    "language": "english"
+  },
+  {
+    "id": 5549,
+    "question": "Sentence:\n\nNo humans ate just in case Alfred doesn't see Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nI: [1] ate\nP: [1] saw [2]\na: Alfred\nc: Hazel",
+    "form": "(¬∃x(Nx∧Ix)↔¬Pac)",
+    "language": "english"
+  },
+  {
+    "id": 2007,
+    "question": "Sentence:\n\nA human is happy but it is not the case that Hazel doesn't see Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nK: [1] is happy\nP: [1] saw [2]\nc: Hazel",
+    "form": "(∃x(Nx∧Kx)∧¬¬Pcc)",
+    "language": "english"
+  },
+  {
+    "id": 321,
+    "question": "Sentence:\n\nHazel doesn't see Lewis.\n\nAbbreviations:\n\nP: [1] saw [2]\nc: Hazel\nb: Lewis",
+    "form": "¬Pcb",
+    "language": "english"
+  },
+  {
+    "id": 4587,
+    "question": "Sentence:\n\nIf a monkey chased Hazel, then a human chased Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nN: [1] is a human\nb: Lewis",
+    "form": "(∃x(Ox∧Rxc)→∃x(Nx∧Rxb))",
+    "language": "english"
+  },
+  {
+    "id": 4605,
+    "question": "Sentence:\n\nA monkey chased Hazel only if Hazel is a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nN: [1] is a human",
+    "form": "(∃x(Ox∧Rxc)→Nc)",
+    "language": "english"
+  },
+  {
+    "id": 5625,
+    "question": "Sentence:\n\nNo donkeys will attack if and only if no humans are hungry.\n\nAbbreviations:\n\nM: [1] is a donkey\nG: [1] will attack\nN: [1] is a human\nL: [1] is hungry",
+    "form": "(¬∃x(Mx∧Gx)↔¬∃x(Nx∧Lx))",
+    "language": "english"
+  },
+  {
+    "id": 9857,
+    "question": "Sentence:\n\nIf Alfred will run, then every monkey is hungry only if no humans are hungry.\n\nAbbreviations:\n\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry\nN: [1] is a human",
+    "form": "(Fa→(∀x(Ox→Lx)→¬∃x(Nx∧Lx)))",
+    "language": "english"
+  },
+  {
+    "id": 6989,
+    "question": "Sentence:\n\nIf a human chased Lewis, then not all donkeys saw Hazel only if Lewis is hungry.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nL: [1] is hungry",
+    "form": "(∃x(Nx∧Rxb)→(∃x(Mx∧¬Pxc)→Lb))",
+    "language": "english"
+  },
+  {
+    "id": 6581,
+    "question": "Sentence:\n\nIf Alfred ate, then a human chased Lewis only if not all donkeys saw Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel",
+    "form": "(Ia→(∃x(Nx∧Rxb)→∃x(Mx∧¬Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 4303,
+    "question": "Sentence:\n\nA monkey is hungry unless every donkey chased Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred",
+    "form": "(¬∀x(Mx→Rxa)→∃x(Ox∧Lx))",
+    "language": "english"
+  },
+  {
+    "id": 8965,
+    "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then Hazel is hungry only if every human saw Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nL: [1] is hungry\nN: [1] is a human\nP: [1] saw [2]",
+    "form": "(¬Rcc→(Lc→∀x(Nx→Pxc)))",
+    "language": "english"
+  },
+  {
+    "id": 9721,
+    "question": "Sentence:\n\nIf a human chased Hazel, then not all donkeys will run only if Alfred didn't kick Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nF: [1] will run\nQ: [1] kicked [2]\na: Alfred",
+    "form": "(∃x(Nx∧Rxc)→(∃x(Mx∧¬Fx)→¬Qac))",
+    "language": "english"
+  },
+  {
+    "id": 10541,
+    "question": "Sentence:\n\nIf every monkey saw Hazel, then Alfred saw Alfred only if no donkeys ate.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel\na: Alfred\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(∀x(Ox→Pxc)→(Paa→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 4475,
+    "question": "Sentence:\n\nIf every monkey chased Lewis, then every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]",
+    "form": "(∀x(Ox→Rxb)→∀x(Ox→Qxb))",
+    "language": "english"
+  },
+  {
+    "id": 10321,
+    "question": "Sentence:\n\nIf Alfred didn't kick Hazel, then no humans are hungry only if no donkeys ate.\n\nAbbreviations:\n\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nN: [1] is a human\nL: [1] is hungry\nM: [1] is a donkey\nI: [1] ate",
+    "form": "(¬Qac→(¬∃x(Nx∧Lx)→¬∃x(Mx∧Ix)))",
+    "language": "english"
+  },
+  {
+    "id": 7623,
+    "question": "Sentence:\n\nIf every human is asleep, then not all donkeys saw Hazel only if Alfred will run.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nF: [1] will run\na: Alfred",
+    "form": "(∀x(Nx→Jx)→(∃x(Mx∧¬Pxc)→Fa))",
+    "language": "english"
+  },
+  {
+    "id": 3535,
+    "question": "Sentence:\n\nAlfred doesn't see Lewis unless Hazel will attack.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nG: [1] will attack\nc: Hazel",
+    "form": "(¬Gc→¬Pab)",
+    "language": "english"
+  },
+  {
+    "id": 6929,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Alfred doesn't see Lewis only if a human chased Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nP: [1] saw [2]\na: Alfred\nc: Hazel",
+    "form": "(∃x(Nx∧Rxb)→(¬Pab→∃x(Nx∧Rxc)))",
+    "language": "english"
+  },
+  {
+    "id": 6959,
+    "question": "Sentence:\n\nIf a human chased Lewis, then Lewis didn't chase Lewis only if not all donkeys kicked Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred",
+    "form": "(∃x(Nx∧Rxb)→(¬Rbb→∃x(Mx∧¬Qxa)))",
     "language": "english"
   }
 ]

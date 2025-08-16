@@ -23,15 +23,14 @@ Extract the full countermodel from the LLM's response below. Return it as a JSON
 
 # Example Format
 {{
-  "Domain": [0, 1, 2, 3, 4],
+  "Domain": [0, 1, 2],
   "a": 0,
   "b": 1,
   "c": 2,
   "M": [0, 2],
   "N": [1],
-  "O": [4],
   "K": [0],
-  "R": [[1, 4], [4, 1]],
+  "R": [[1, 0], [2, 0]],
   "P": [[1, 0], [2, 0]]
 }}
 

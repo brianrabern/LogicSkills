@@ -1,410 +1,116 @@
 [
   {
-    "id": 680,
-    "question": "Sentence:\n\nNot all raths chortled at Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "∃x(Ox∧¬Pxc)",
+    "id": 11132,
+    "question": "Sentence:\n\nBungo chortled at Zindle and not all toves galumphed over Zindle.\n\nAbbreviations:\n\nP: [1] chortled at [2]\nc: Bungo\na: Zindle\nM: [1] is a tove\nQ: [1] galumphed over [2]",
+    "form": "(Pca∧∃x(Mx∧¬Qxa))",
     "language": "carroll"
   },
   {
-    "id": 2930,
-    "question": "Sentence:\n\nRafin didn't chortle at Bungo and only borogoves gyred.\n\nAbbreviations:\n\nP: [1] chortled at [2]\nb: Rafin\nc: Bungo\nN: [1] is a borogove\nH: [1] gyred",
-    "form": "(¬Pbc∧∀x(Hx→Nx))",
+    "id": 10318,
+    "question": "Sentence:\n\nIf Zindle didn't galumph over Bungo, then no borogoves are beamish only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nN: [1] is a borogove\nL: [1] is beamish\nP: [1] chortled at [2]",
+    "form": "(¬Qac→(¬∃x(Nx∧Lx)→∀x(Nx→Pxc)))",
     "language": "carroll"
   },
   {
-    "id": 726,
-    "question": "Sentence:\n\nNo borogoves galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nQ: [1] galumphed over [2]\nc: Bungo",
-    "form": "¬∃x(Nx∧Qxc)",
+    "id": 4018,
+    "question": "Sentence:\n\nNot all toves galumphed over Rafin or every tove galumphed over Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nb: Rafin",
+    "form": "(∃x(Mx∧¬Qxb)∨∀x(Mx→Qxb))",
     "language": "carroll"
   },
   {
-    "id": 3468,
-    "question": "Sentence:\n\nA rath galumphed over Bungo unless Zindle isn't a borogove.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo\nN: [1] is a borogove\na: Zindle",
-    "form": "(¬¬Na→∃x(Ox∧Qxc))",
+    "id": 7590,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then Rafin didn't snicker-snacked Rafin only if not all toves chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∀x(Nx→Jx)→(¬Rbb→∃x(Mx∧¬Pxc)))",
     "language": "carroll"
   },
   {
-    "id": 4582,
-    "question": "Sentence:\n\nA rath galumphed over Bungo only if every rath chortled at Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo\nP: [1] chortled at [2]\nb: Rafin",
-    "form": "(∃x(Ox∧Qxc)→∀x(Ox→Pxb))",
+    "id": 6434,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Zindle will whiffle only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nF: [1] will whiffle\na: Zindle\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∃x(Nx∧¬Jx)→(Fa→¬∃x(Ox∧Qxc)))",
     "language": "carroll"
   },
   {
-    "id": 4082,
-    "question": "Sentence:\n\nBungo didn't chortle at Zindle unless every tove will burble.\n\nAbbreviations:\n\nP: [1] chortled at [2]\nc: Bungo\na: Zindle\nM: [1] is a tove\nG: [1] will burble",
-    "form": "(¬∀x(Mx→Gx)→¬Pca)",
+    "id": 7388,
+    "question": "Sentence:\n\nIf Zindle won't burble, then every rath chortled at Rafin only if every rath is mimsy.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nJ: [1] is mimsy",
+    "form": "(¬Ga→(∀x(Ox→Pxb)→∀x(Ox→Jx)))",
     "language": "carroll"
   },
   {
-    "id": 10364,
-    "question": "Sentence:\n\nIf Rafin won't whiffle, then every rath chortled at Bungo only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nF: [1] will whiffle\nb: Rafin\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo\nQ: [1] galumphed over [2]",
-    "form": "(¬Fb→(∀x(Ox→Pxc)→∀x(Ox→Qxb)))",
+    "id": 5356,
+    "question": "Sentence:\n\nA borogove is uffish just in case no toves snicker-snacked Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nK: [1] is uffish\nM: [1] is a tove\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(∃x(Nx∧Kx)↔¬∃x(Mx∧Rxa))",
     "language": "carroll"
   },
   {
-    "id": 2104,
-    "question": "Sentence:\n\nNot all raths will whiffle and every rath galumphed over Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nF: [1] will whiffle\nQ: [1] galumphed over [2]\nb: Rafin",
-    "form": "(∃x(Ox∧¬Fx)∧∀x(Ox→Qxb))",
+    "id": 8274,
+    "question": "Sentence:\n\nIf Rafin didn't snicker-snacked Rafin, then a borogove snicker-snacked Bungo only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nb: Rafin\nN: [1] is a borogove\nc: Bungo\nO: [1] is a rath\nQ: [1] galumphed over [2]",
+    "form": "(¬Rbb→(∃x(Nx∧Rxc)→¬∃x(Ox∧Qxc)))",
     "language": "carroll"
   },
   {
-    "id": 11284,
-    "question": "Sentence:\n\nA borogove will burble and only toves gimbled.\n\nAbbreviations:\n\nN: [1] is a borogove\nG: [1] will burble\nM: [1] is a tove\nI: [1] gimbled",
-    "form": "(∃x(Nx∧Gx)∧∀x(Ix→Mx))",
+    "id": 7850,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then Zindle didn't galumph over Bungo only if no borogoves are beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nL: [1] is beamish",
+    "form": "(∀x(Nx→Jx)→(¬Qac→¬∃x(Nx∧Lx)))",
     "language": "carroll"
   },
   {
-    "id": 7100,
-    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then not all toves galumphed over Zindle only if Zindle didn't galumph over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo",
-    "form": "(∃x(Nx∧Rxb)→(∃x(Mx∧¬Qxa)→¬Qac))",
+    "id": 10270,
+    "question": "Sentence:\n\nIf not all toves will whiffle, then Zindle chortled at Zindle only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nF: [1] will whiffle\nP: [1] chortled at [2]\na: Zindle\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∃x(Mx∧¬Fx)→(Paa→¬∃x(Ox∧Qxc)))",
     "language": "carroll"
   },
   {
-    "id": 8856,
-    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then not all toves will whiffle only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nF: [1] will whiffle\nP: [1] chortled at [2]\na: Zindle",
-    "form": "(∀x(Ox→Rxc)→(∃x(Mx∧¬Fx)→Paa))",
+    "id": 1848,
+    "question": "Sentence:\n\nA rath snicker-snacked a borogove that snicker-snacked a tove.\n\nAbbreviations:\n\nO: [1] is a rath\nN: [1] is a borogove\nM: [1] is a tove\nR: [1] snicker-snacked [2]",
+    "form": "∃x∃y∃z(((Ox∧Ny)∧Mz)∧(Rxy∧Ryz))",
     "language": "carroll"
   },
   {
-    "id": 7442,
-    "question": "Sentence:\n\nIf Zindle won't burble, then a borogove snicker-snacked Bungo only if every rath chortled at Bungo.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo\nO: [1] is a rath\nP: [1] chortled at [2]",
-    "form": "(¬Ga→(∃x(Nx∧Rxc)→∀x(Ox→Pxc)))",
+    "id": 9288,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Bungo galumphed over Zindle only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle\nM: [1] is a tove",
+    "form": "(∀x(Ox→Pxb)→(Qca→∃x(Mx∧¬Qxc)))",
     "language": "carroll"
   },
   {
-    "id": 4316,
-    "question": "Sentence:\n\nA rath is beamish or every tove galumphed over Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nM: [1] is a tove\nQ: [1] galumphed over [2]\nb: Rafin",
-    "form": "(∃x(Ox∧Lx)∨∀x(Mx→Qxb))",
+    "id": 7240,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Rafin won't whiffle only if no toves gimbled.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nF: [1] will whiffle\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(∃x(Nx∧Rxb)→(¬Fb→¬∃x(Mx∧Ix)))",
     "language": "carroll"
   },
   {
-    "id": 10896,
-    "question": "Sentence:\n\nRafin gimbled and Rafin isn't uffish.\n\nAbbreviations:\n\nI: [1] gimbled\nb: Rafin\nK: [1] is uffish",
-    "form": "(Ib∧¬Kb)",
+    "id": 5928,
+    "question": "Sentence:\n\nNot all toves gyred if and only if no raths chortled at Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nH: [1] gyred\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin",
+    "form": "(∃x(Mx∧¬Hx)↔¬∃x(Ox∧Pxb))",
     "language": "carroll"
   },
   {
-    "id": 5386,
-    "question": "Sentence:\n\nBungo isn't a borogove if and only if no toves will burble.\n\nAbbreviations:\n\nN: [1] is a borogove\nc: Bungo\nM: [1] is a tove\nG: [1] will burble",
-    "form": "(¬Nc↔¬∃x(Mx∧Gx))",
+    "id": 7844,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then Zindle didn't galumph over Bungo only if every rath is beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nO: [1] is a rath\nL: [1] is beamish",
+    "form": "(∀x(Nx→Jx)→(¬Qac→∀x(Ox→Lx)))",
     "language": "carroll"
   },
   {
-    "id": 7854,
-    "question": "Sentence:\n\nIf every borogove is mimsy, then Zindle didn't galumph over Bungo only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nP: [1] chortled at [2]",
-    "form": "(∀x(Nx→Jx)→(¬Qac→∀x(Nx→Pxc)))",
+    "id": 182,
+    "question": "Sentence:\n\nBungo isn't mimsy.\n\nAbbreviations:\n\nJ: [1] is mimsy\nc: Bungo",
+    "form": "¬Jc",
     "language": "carroll"
   },
   {
-    "id": 11190,
-    "question": "Sentence:\n\nNot all toves will whiffle and not all borogoves will whiffle.\n\nAbbreviations:\n\nM: [1] is a tove\nF: [1] will whiffle\nN: [1] is a borogove",
-    "form": "(∃x(Mx∧¬Fx)∧∃x(Nx∧¬Fx))",
+    "id": 8530,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then Rafin is beamish only if every rath is mimsy.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nL: [1] is beamish\nb: Rafin\nO: [1] is a rath\nJ: [1] is mimsy",
+    "form": "(∃x(Mx∧¬Pxc)→(Lb→∀x(Ox→Jx)))",
     "language": "carroll"
   },
   {
-    "id": 7022,
-    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then every rath snicker-snacked Bungo only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nc: Bungo\nP: [1] chortled at [2]\na: Zindle",
-    "form": "(∃x(Nx∧Rxb)→(∀x(Ox→Rxc)→Paa))",
+    "id": 8514,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then Zindle will whiffle only if every rath is beamish.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nF: [1] will whiffle\na: Zindle\nO: [1] is a rath\nL: [1] is beamish",
+    "form": "(∃x(Mx∧¬Pxc)→(Fa→∀x(Ox→Lx)))",
     "language": "carroll"
   },
   {
-    "id": 5244,
-    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Rafin, then not all toves are beamish.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nb: Rafin\nM: [1] is a tove\nL: [1] is beamish",
-    "form": "(¬Rcb→∃x(Mx∧¬Lx))",
-    "language": "carroll"
-  },
-  {
-    "id": 1810,
-    "question": "Sentence:\n\nEvery borogove snicker-snacked every borogove that snicker-snacked every tove.\n\nAbbreviations:\n\nN: [1] is a borogove\nM: [1] is a tove\nR: [1] snicker-snacked [2]",
-    "form": "∀x(Nx→∀y((Ny∧∀z(Mz→Ryz))→Rxy))",
-    "language": "carroll"
-  },
-  {
-    "id": 11486,
-    "question": "Sentence:\n\nOnly toves are mimsy and every rath snicker-snacked Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nJ: [1] is mimsy\nO: [1] is a rath\nR: [1] snicker-snacked [2]\na: Zindle",
-    "form": "(∀x(Jx→Mx)∧∀x(Ox→Rxa))",
-    "language": "carroll"
-  },
-  {
-    "id": 9012,
-    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then Zindle will whiffle only if every rath chortled at Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nF: [1] will whiffle\na: Zindle\nO: [1] is a rath\nP: [1] chortled at [2]",
-    "form": "(¬Rcc→(Fa→∀x(Ox→Pxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 2698,
-    "question": "Sentence:\n\nNot all raths galumphed over Rafin but it is not the case that Rafin is uffish.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin\nK: [1] is uffish",
-    "form": "(∃x(Ox∧¬Qxb)∧¬Kb)",
-    "language": "carroll"
-  },
-  {
-    "id": 10834,
-    "question": "Sentence:\n\nNot all toves snicker-snacked Zindle but it is not the case that Rafin isn't uffish.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]\na: Zindle\nK: [1] is uffish\nb: Rafin",
-    "form": "(∃x(Mx∧¬Rxa)∧¬¬Kb)",
-    "language": "carroll"
-  },
-  {
-    "id": 1652,
-    "question": "Sentence:\n\nA rath chortled at a rath that chortled at a rath.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]",
-    "form": "∃x∃y∃z(((Ox∧Oy)∧Oz)∧(Pxy∧Pyz))",
-    "language": "carroll"
-  },
-  {
-    "id": 9854,
-    "question": "Sentence:\n\nIf Zindle will whiffle, then every rath is beamish only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nF: [1] will whiffle\na: Zindle\nO: [1] is a rath\nL: [1] is beamish\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo",
-    "form": "(Fa→(∀x(Ox→Lx)→∃x(Mx∧¬Qxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 4266,
-    "question": "Sentence:\n\nNot all toves will whiffle or a rath is beamish.\n\nAbbreviations:\n\nM: [1] is a tove\nF: [1] will whiffle\nO: [1] is a rath\nL: [1] is beamish",
-    "form": "(∃x(Mx∧¬Fx)∨∃x(Ox∧Lx))",
-    "language": "carroll"
-  },
-  {
-    "id": 326,
-    "question": "Sentence:\n\nBungo didn't chortle at Bungo.\n\nAbbreviations:\n\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "¬Pcc",
-    "language": "carroll"
-  },
-  {
-    "id": 1540,
-    "question": "Sentence:\n\nA rath snicker-snacked a rath that snicker-snacked it.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]",
-    "form": "∃x∃y((Ox∧Oy)∧(Rxy∧Ryx))",
-    "language": "carroll"
-  },
-  {
-    "id": 9434,
-    "question": "Sentence:\n\nIf Bungo is beamish, then not all toves galumphed over Bungo only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo\nM: [1] is a tove\nQ: [1] galumphed over [2]\nO: [1] is a rath\nb: Rafin",
-    "form": "(Lc→(∃x(Mx∧¬Qxc)→∀x(Ox→Qxb)))",
-    "language": "carroll"
-  },
-  {
-    "id": 2530,
-    "question": "Sentence:\n\nZindle didn't snicker-snacked Zindle but it is not the case that Bungo didn't chortle at Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\na: Zindle\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "(¬Raa∧¬¬Pcc)",
-    "language": "carroll"
-  },
-  {
-    "id": 11294,
-    "question": "Sentence:\n\nZindle isn't mimsy and every rath gyred.\n\nAbbreviations:\n\nJ: [1] is mimsy\na: Zindle\nO: [1] is a rath\nH: [1] gyred",
-    "form": "(¬Ja∧∀x(Ox→Hx))",
-    "language": "carroll"
-  },
-  {
-    "id": 6584,
-    "question": "Sentence:\n\nIf Zindle gimbled, then a borogove snicker-snacked Rafin only if every rath snicker-snacked Bungo.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nc: Bungo",
-    "form": "(Ia→(∃x(Nx∧Rxb)→∀x(Ox→Rxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 2840,
-    "question": "Sentence:\n\nA rath is uffish and Rafin isn't a tove.\n\nAbbreviations:\n\nO: [1] is a rath\nK: [1] is uffish\nM: [1] is a tove\nb: Rafin",
-    "form": "(∃x(Ox∧Kx)∧¬Mb)",
-    "language": "carroll"
-  },
-  {
-    "id": 2878,
-    "question": "Sentence:\n\nRafin isn't a tove and Rafin didn't chortle at Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nb: Rafin\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "(¬Mb∧¬Pbc)",
-    "language": "carroll"
-  },
-  {
-    "id": 1066,
-    "question": "Sentence:\n\nNo borogoves galumphed over every rath.\n\nAbbreviations:\n\nN: [1] is a borogove\nO: [1] is a rath\nQ: [1] galumphed over [2]",
-    "form": "¬∃x(Nx∧∀y(Oy→Qxy))",
-    "language": "carroll"
-  },
-  {
-    "id": 5862,
-    "question": "Sentence:\n\nEvery tove snicker-snacked Rafin just in case not all toves gimbled.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]\nb: Rafin\nI: [1] gimbled",
-    "form": "(∀x(Mx→Rxb)↔∃x(Mx∧¬Ix))",
-    "language": "carroll"
-  },
-  {
-    "id": 8076,
-    "question": "Sentence:\n\nIf Zindle didn't chortle at Rafin, then not all toves will whiffle only if every rath chortled at Bungo.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nM: [1] is a tove\nF: [1] will whiffle\nO: [1] is a rath\nc: Bungo",
-    "form": "(¬Pab→(∃x(Mx∧¬Fx)→∀x(Ox→Pxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 766,
-    "question": "Sentence:\n\nNo toves snicker-snacked Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]\nb: Rafin",
-    "form": "¬∃x(Mx∧Rxb)",
-    "language": "carroll"
-  },
-  {
-    "id": 1832,
-    "question": "Sentence:\n\nA borogove snicker-snacked a rath that snicker-snacked a rath.\n\nAbbreviations:\n\nN: [1] is a borogove\nO: [1] is a rath\nR: [1] snicker-snacked [2]",
-    "form": "∃x∃y∃z(((Nx∧Oy)∧Oz)∧(Rxy∧Ryz))",
-    "language": "carroll"
-  },
-  {
-    "id": 6960,
-    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Rafin didn't snicker-snacked Rafin only if not all toves galumphed over Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle",
-    "form": "(∃x(Nx∧Rxb)→(¬Rbb→∃x(Mx∧¬Qxa)))",
-    "language": "carroll"
-  },
-  {
-    "id": 1964,
-    "question": "Sentence:\n\nBungo snicker-snacked a borogove.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo",
-    "form": "∃x(Nx∧Rcx)",
-    "language": "carroll"
-  },
-  {
-    "id": 104,
-    "question": "Sentence:\n\nBungo and Zindle gyred.\n\nAbbreviations:\n\nH: [1] gyred\nc: Bungo\na: Zindle",
-    "form": "(Hc∧Ha)",
-    "language": "carroll"
-  },
-  {
-    "id": 2866,
-    "question": "Sentence:\n\nA rath is uffish and every borogove chortled at Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nK: [1] is uffish\nN: [1] is a borogove\nP: [1] chortled at [2]\na: Zindle",
-    "form": "(∃x(Ox∧Kx)∧∀x(Nx→Pxa))",
-    "language": "carroll"
-  },
-  {
-    "id": 8430,
-    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then Bungo didn't snicker-snacked Bungo only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nR: [1] snicker-snacked [2]\nN: [1] is a borogove",
-    "form": "(∃x(Mx∧¬Pxc)→(¬Rcc→∀x(Nx→Pxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 3384,
-    "question": "Sentence:\n\nEvery rath gimbled unless a rath galumphed over Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nI: [1] gimbled\nQ: [1] galumphed over [2]\na: Zindle",
-    "form": "(¬∃x(Ox∧Qxa)→∀x(Ox→Ix))",
-    "language": "carroll"
-  },
-  {
-    "id": 206,
-    "question": "Sentence:\n\nRafin isn't uffish.\n\nAbbreviations:\n\nK: [1] is uffish\nb: Rafin",
-    "form": "¬Kb",
-    "language": "carroll"
-  },
-  {
-    "id": 4308,
-    "question": "Sentence:\n\nA rath is beamish unless every tove will burble.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nM: [1] is a tove\nG: [1] will burble",
-    "form": "(¬∀x(Mx→Gx)→∃x(Ox∧Lx))",
-    "language": "carroll"
-  },
-  {
-    "id": 9988,
-    "question": "Sentence:\n\nIf Rafin is beamish, then no borogoves are beamish only if no toves gimbled.\n\nAbbreviations:\n\nL: [1] is beamish\nb: Rafin\nN: [1] is a borogove\nM: [1] is a tove\nI: [1] gimbled",
-    "form": "(Lb→(¬∃x(Nx∧Lx)→¬∃x(Mx∧Ix)))",
-    "language": "carroll"
-  },
-  {
-    "id": 1686,
-    "question": "Sentence:\n\nEvery tove galumphed over every rath that galumphed over every rath.\n\nAbbreviations:\n\nM: [1] is a tove\nO: [1] is a rath\nQ: [1] galumphed over [2]",
-    "form": "∀x(Mx→∀y((Oy∧∀z(Oz→Qyz))→Qxy))",
-    "language": "carroll"
-  },
-  {
-    "id": 2468,
-    "question": "Sentence:\n\nBungo didn't snicker-snacked Zindle and a rath is uffish.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\na: Zindle\nO: [1] is a rath\nK: [1] is uffish",
-    "form": "(¬Rca∧∃x(Ox∧Kx))",
-    "language": "carroll"
-  },
-  {
-    "id": 8562,
-    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then Rafin is a tove only if not all toves will whiffle.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nb: Rafin\nF: [1] will whiffle",
-    "form": "(∃x(Mx∧¬Pxc)→(Mb→∃x(Mx∧¬Fx)))",
-    "language": "carroll"
-  },
-  {
-    "id": 5358,
-    "question": "Sentence:\n\nA borogove is uffish if and only if no raths chortled at Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nK: [1] is uffish\nO: [1] is a rath\nP: [1] chortled at [2]\na: Zindle",
-    "form": "(∃x(Nx∧Kx)↔¬∃x(Ox∧Pxa))",
-    "language": "carroll"
-  },
-  {
-    "id": 10772,
-    "question": "Sentence:\n\nA rath is beamish and Bungo is a rath.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nc: Bungo",
-    "form": "(∃x(Ox∧Lx)∧Oc)",
-    "language": "carroll"
-  },
-  {
-    "id": 9206,
-    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Rafin is beamish only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nL: [1] is beamish\nQ: [1] galumphed over [2]",
-    "form": "(∀x(Ox→Pxb)→(Lb→∀x(Ox→Qxb)))",
-    "language": "carroll"
-  },
-  {
-    "id": 1160,
-    "question": "Sentence:\n\nEvery tove snicker-snacked a rath.\n\nAbbreviations:\n\nM: [1] is a tove\nO: [1] is a rath\nR: [1] snicker-snacked [2]",
-    "form": "∀x(Mx→∃y(Oy∧Rxy))",
-    "language": "carroll"
-  },
-  {
-    "id": 10740,
-    "question": "Sentence:\n\nA rath is beamish and not all borogoves will whiffle.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nN: [1] is a borogove\nF: [1] will whiffle",
-    "form": "(∃x(Ox∧Lx)∧∃x(Nx∧¬Fx))",
-    "language": "carroll"
-  },
-  {
-    "id": 10120,
-    "question": "Sentence:\n\nIf Rafin is a tove, then not all toves will whiffle only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nb: Rafin\nF: [1] will whiffle\nN: [1] is a borogove\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "(Mb→(∃x(Mx∧¬Fx)→∀x(Nx→Pxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 10082,
-    "question": "Sentence:\n\nIf every rath is mimsy, then Bungo galumphed over Bungo only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\nc: Bungo\nM: [1] is a tove",
-    "form": "(∀x(Ox→Jx)→(Qcc→∃x(Mx∧¬Qxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 8222,
-    "question": "Sentence:\n\nIf Rafin didn't snicker-snacked Rafin, then every rath chortled at Rafin only if no borogoves are beamish.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nP: [1] chortled at [2]\nN: [1] is a borogove\nL: [1] is beamish",
-    "form": "(¬Rbb→(∀x(Ox→Pxb)→¬∃x(Nx∧Lx)))",
-    "language": "carroll"
-  },
-  {
-    "id": 9826,
-    "question": "Sentence:\n\nIf Zindle will whiffle, then every rath is mimsy only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nF: [1] will whiffle\na: Zindle\nO: [1] is a rath\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\nc: Bungo",
-    "form": "(Fa→(∀x(Ox→Jx)→¬∃x(Ox∧Qxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 2414,
-    "question": "Sentence:\n\nNo toves galumphed over Bungo and only borogoves gyred.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\nN: [1] is a borogove\nH: [1] gyred",
-    "form": "(¬∃x(Mx∧Qxc)∧∀x(Hx→Nx))",
-    "language": "carroll"
-  },
-  {
-    "id": 7886,
-    "question": "Sentence:\n\nIf every borogove is mimsy, then Bungo galumphed over Zindle only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle\nP: [1] chortled at [2]",
-    "form": "(∀x(Nx→Jx)→(Qca→∀x(Nx→Pxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 9282,
-    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Rafin won't whiffle only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nF: [1] will whiffle\nQ: [1] galumphed over [2]\nc: Bungo",
-    "form": "(∀x(Ox→Pxb)→(¬Fb→¬∃x(Ox∧Qxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 4636,
-    "question": "Sentence:\n\nIf a tove galumphed over Rafin, then no toves snicker-snacked Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nb: Rafin\nR: [1] snicker-snacked [2]\na: Zindle",
-    "form": "(∃x(Mx∧Qxb)→¬∃x(Mx∧Rxa))",
-    "language": "carroll"
-  },
-  {
-    "id": 9968,
-    "question": "Sentence:\n\nIf Rafin is beamish, then not all toves galumphed over Bungo only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nL: [1] is beamish\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\nO: [1] is a rath",
-    "form": "(Lb→(∃x(Mx∧¬Qxc)→¬∃x(Ox∧Qxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 9020,
-    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then every rath is mimsy only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nO: [1] is a rath\nJ: [1] is mimsy\nM: [1] is a tove\nQ: [1] galumphed over [2]",
-    "form": "(¬Rcc→(∀x(Ox→Jx)→∃x(Mx∧¬Qxc)))",
-    "language": "carroll"
-  },
-  {
-    "id": 1476,
-    "question": "Sentence:\n\nEvery tove snicker-snacked every rath that snicker-snacked it.\n\nAbbreviations:\n\nM: [1] is a tove\nO: [1] is a rath\nR: [1] snicker-snacked [2]",
-    "form": "∀x(Mx→∀y((Oy∧Ryx)→Rxy))",
+    "id": 8380,
+    "question": "Sentence:\n\nIf Rafin didn't snicker-snacked Rafin, then every rath galumphed over Rafin only if no toves gimbled.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nQ: [1] galumphed over [2]\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(¬Rbb→(∀x(Ox→Qxb)→¬∃x(Mx∧Ix)))",
     "language": "carroll"
   },
   {
@@ -414,123 +120,1143 @@
     "language": "carroll"
   },
   {
-    "id": 11594,
-    "question": "Sentence:\n\nNot all toves galumphed over Zindle but it is not the case that Rafin is a tove.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nb: Rafin",
-    "form": "(∃x(Mx∧¬Qxa)∧¬Mb)",
+    "id": 8616,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then Rafin won't whiffle only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nF: [1] will whiffle\nb: Rafin\nO: [1] is a rath\nQ: [1] galumphed over [2]",
+    "form": "(∃x(Mx∧¬Pxc)→(¬Fb→∀x(Ox→Qxb)))",
     "language": "carroll"
   },
   {
-    "id": 4200,
-    "question": "Sentence:\n\nNot all toves will burble or not all raths chortled at Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nG: [1] will burble\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "(∃x(Mx∧¬Gx)∨∃x(Ox∧¬Pxc))",
+    "id": 9852,
+    "question": "Sentence:\n\nIf Zindle will whiffle, then Rafin won't whiffle only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nF: [1] will whiffle\na: Zindle\nb: Rafin\nN: [1] is a borogove\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(Fa→(¬Fb→∀x(Nx→Pxc)))",
     "language": "carroll"
   },
   {
-    "id": 2576,
-    "question": "Sentence:\n\nNo toves chortled at Rafin and every borogove is uffish.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nb: Rafin\nN: [1] is a borogove\nK: [1] is uffish",
-    "form": "(¬∃x(Mx∧Pxb)∧∀x(Nx→Kx))",
+    "id": 2426,
+    "question": "Sentence:\n\nZindle is uffish and not all raths galumphed over Rafin.\n\nAbbreviations:\n\nK: [1] is uffish\na: Zindle\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin",
+    "form": "(Ka∧∃x(Ox∧¬Qxb))",
     "language": "carroll"
   },
   {
-    "id": 5796,
-    "question": "Sentence:\n\nZindle didn't snicker-snacked Bungo if and only if not all toves gimbled.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\na: Zindle\nc: Bungo\nM: [1] is a tove\nI: [1] gimbled",
-    "form": "(¬Rac↔∃x(Mx∧¬Ix))",
+    "id": 190,
+    "question": "Sentence:\n\nZindle or Bungo are uffish.\n\nAbbreviations:\n\nK: [1] is uffish\na: Zindle\nc: Bungo",
+    "form": "(Ka∨Kc)",
     "language": "carroll"
   },
   {
-    "id": 10854,
-    "question": "Sentence:\n\nNot all toves snicker-snacked Zindle and no borogoves will burble.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]\na: Zindle\nN: [1] is a borogove\nG: [1] will burble",
-    "form": "(∃x(Mx∧¬Rxa)∧¬∃x(Nx∧Gx))",
+    "id": 4194,
+    "question": "Sentence:\n\nNot all toves will burble unless every tove will burble.\n\nAbbreviations:\n\nM: [1] is a tove\nG: [1] will burble",
+    "form": "(¬∀x(Mx→Gx)→∃x(Mx∧¬Gx))",
     "language": "carroll"
   },
   {
-    "id": 5876,
-    "question": "Sentence:\n\nEvery borogove gyred just in case no toves snicker-snacked Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nH: [1] gyred\nM: [1] is a tove\nR: [1] snicker-snacked [2]\na: Zindle",
-    "form": "(∀x(Nx→Hx)↔¬∃x(Mx∧Rxa))",
+    "id": 7518,
+    "question": "Sentence:\n\nIf Zindle won't burble, then not all toves galumphed over Bungo only if every rath chortled at Bungo.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\nO: [1] is a rath\nP: [1] chortled at [2]",
+    "form": "(¬Ga→(∃x(Mx∧¬Qxc)→∀x(Ox→Pxc)))",
     "language": "carroll"
   },
   {
-    "id": 4942,
-    "question": "Sentence:\n\nEvery tove chortled at Bungo only if Zindle is mimsy.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nJ: [1] is mimsy\na: Zindle",
-    "form": "(∀x(Mx→Pxc)→Ja)",
+    "id": 9564,
+    "question": "Sentence:\n\nIf not all toves galumphed over Zindle, then not all toves will whiffle only if Bungo galumphed over Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nF: [1] will whiffle\nc: Bungo",
+    "form": "(∃x(Mx∧¬Qxa)→(∃x(Mx∧¬Fx)→Qca))",
     "language": "carroll"
   },
   {
-    "id": 5814,
-    "question": "Sentence:\n\nNot all toves snicker-snacked Zindle just in case not all toves gyred.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]\na: Zindle\nH: [1] gyred",
-    "form": "(∃x(Mx∧¬Rxa)↔∃x(Mx∧¬Hx))",
+    "id": 2410,
+    "question": "Sentence:\n\nNo toves galumphed over Bungo but it is not the case that Rafin is uffish.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\nK: [1] is uffish\nb: Rafin",
+    "form": "(¬∃x(Mx∧Qxc)∧¬Kb)",
     "language": "carroll"
   },
   {
-    "id": 3404,
-    "question": "Sentence:\n\nEvery rath gimbled or a borogove is mimsy.\n\nAbbreviations:\n\nO: [1] is a rath\nI: [1] gimbled\nN: [1] is a borogove\nJ: [1] is mimsy",
-    "form": "(∀x(Ox→Ix)∨∃x(Nx∧Jx))",
+    "id": 2698,
+    "question": "Sentence:\n\nNot all raths galumphed over Rafin but it is not the case that Rafin is uffish.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin\nK: [1] is uffish",
+    "form": "(∃x(Ox∧¬Qxb)∧¬Kb)",
     "language": "carroll"
   },
   {
-    "id": 434,
-    "question": "Sentence:\n\nNo toves will burble.\n\nAbbreviations:\n\nM: [1] is a tove\nG: [1] will burble",
-    "form": "¬∃x(Mx∧Gx)",
+    "id": 10580,
+    "question": "Sentence:\n\nEvery rath gimbled but it is not the case that Bungo chortled at Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nI: [1] gimbled\nP: [1] chortled at [2]\nc: Bungo\na: Zindle",
+    "form": "(∀x(Ox→Ix)∧¬Pca)",
     "language": "carroll"
   },
   {
-    "id": 7176,
-    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then every rath is mimsy only if Bungo galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\nc: Bungo",
-    "form": "(∃x(Nx∧Rxb)→(∀x(Ox→Jx)→Qcc))",
+    "id": 3550,
+    "question": "Sentence:\n\nZindle didn't chortle at Rafin unless only toves gyred.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nM: [1] is a tove\nH: [1] gyred",
+    "form": "(¬∀x(Hx→Mx)→¬Pab)",
     "language": "carroll"
   },
   {
-    "id": 10570,
-    "question": "Sentence:\n\nEvery rath gimbled and Rafin gimbled.\n\nAbbreviations:\n\nO: [1] is a rath\nI: [1] gimbled\nb: Rafin",
-    "form": "(∀x(Ox→Ix)∧Ib)",
+    "id": 9186,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Zindle will whiffle only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nF: [1] will whiffle\na: Zindle\nQ: [1] galumphed over [2]",
+    "form": "(∀x(Ox→Pxb)→(Fa→∀x(Ox→Qxb)))",
     "language": "carroll"
   },
   {
-    "id": 2252,
-    "question": "Sentence:\n\nOnly borogoves are beamish and Rafin didn't chortle at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nL: [1] is beamish\nP: [1] chortled at [2]\nb: Rafin\nc: Bungo",
-    "form": "(∀x(Lx→Nx)∧¬Pbc)",
+    "id": 1490,
+    "question": "Sentence:\n\nA borogove snicker-snacked a tove that snicker-snacked it.\n\nAbbreviations:\n\nN: [1] is a borogove\nM: [1] is a tove\nR: [1] snicker-snacked [2]",
+    "form": "∃x∃y((Nx∧My)∧(Rxy∧Ryx))",
     "language": "carroll"
   },
   {
-    "id": 3780,
-    "question": "Sentence:\n\nEvery tove is uffish unless every tove galumphed over Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nK: [1] is uffish\nQ: [1] galumphed over [2]\nb: Rafin",
-    "form": "(¬∀x(Mx→Qxb)→∀x(Mx→Kx))",
+    "id": 3714,
+    "question": "Sentence:\n\nEvery tove is uffish or it is not the case that Rafin will whiffle.\n\nAbbreviations:\n\nM: [1] is a tove\nK: [1] is uffish\nF: [1] will whiffle\nb: Rafin",
+    "form": "(∀x(Mx→Kx)∨¬Fb)",
     "language": "carroll"
   },
   {
-    "id": 5212,
-    "question": "Sentence:\n\nIf Rafin snicker-snacked Rafin, then not all borogoves galumphed over Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nb: Rafin\nN: [1] is a borogove\nQ: [1] galumphed over [2]\nc: Bungo",
-    "form": "(Rbb→∃x(Nx∧¬Qxc))",
+    "id": 9436,
+    "question": "Sentence:\n\nIf Bungo is beamish, then not all toves galumphed over Bungo only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo\nM: [1] is a tove\nQ: [1] galumphed over [2]\nN: [1] is a borogove\nP: [1] chortled at [2]",
+    "form": "(Lc→(∃x(Mx∧¬Qxc)→∀x(Nx→Pxc)))",
     "language": "carroll"
   },
   {
-    "id": 6248,
-    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Rafin didn't snicker-snacked Rafin only if not all toves chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "(∃x(Nx∧¬Jx)→(¬Rbb→∃x(Mx∧¬Pxc)))",
+    "id": 9310,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Bungo galumphed over Bungo only if no borogoves are beamish.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nQ: [1] galumphed over [2]\nc: Bungo\nN: [1] is a borogove\nL: [1] is beamish",
+    "form": "(∀x(Ox→Pxb)→(Qcc→¬∃x(Nx∧Lx)))",
     "language": "carroll"
   },
   {
-    "id": 3806,
-    "question": "Sentence:\n\nA borogove galumphed over Rafin unless every borogove chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nQ: [1] galumphed over [2]\nb: Rafin\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "(¬∀x(Nx→Pxc)→∃x(Nx∧Qxb))",
+    "id": 9470,
+    "question": "Sentence:\n\nIf Bungo is beamish, then no raths galumphed over Bungo only if no toves gimbled.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo\nO: [1] is a rath\nQ: [1] galumphed over [2]\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(Lc→(¬∃x(Ox∧Qxc)→¬∃x(Mx∧Ix)))",
     "language": "carroll"
   },
   {
-    "id": 1578,
-    "question": "Sentence:\n\nEvery tove chortled at every rath that chortled at every rath.\n\nAbbreviations:\n\nM: [1] is a tove\nO: [1] is a rath\nP: [1] chortled at [2]",
-    "form": "∀x(Mx→∀y((Oy∧∀z(Oz→Pyz))→Pxy))",
+    "id": 10714,
+    "question": "Sentence:\n\nA rath is beamish but it is not the case that Zindle isn't beamish.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\na: Zindle",
+    "form": "(∃x(Ox∧Lx)∧¬¬La)",
     "language": "carroll"
   },
   {
-    "id": 9604,
-    "question": "Sentence:\n\nIf not all toves galumphed over Zindle, then Bungo galumphed over Zindle only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo",
-    "form": "(∃x(Mx∧¬Qxa)→(Qca→∃x(Mx∧¬Qxc)))",
+    "id": 9158,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then a borogove snicker-snacked Bungo only if Zindle will whiffle.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo\nF: [1] will whiffle\na: Zindle",
+    "form": "(∀x(Ox→Pxb)→(∃x(Nx∧Rxc)→Fa))",
     "language": "carroll"
   },
   {
-    "id": 2286,
-    "question": "Sentence:\n\nNot all borogoves are beamish and Bungo didn't chortle at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nL: [1] is beamish\nP: [1] chortled at [2]\nc: Bungo",
-    "form": "(∃x(Nx∧¬Lx)∧¬Pcc)",
+    "id": 7282,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Zindle chortled at Zindle only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nP: [1] chortled at [2]\na: Zindle\nO: [1] is a rath\nQ: [1] galumphed over [2]",
+    "form": "(∃x(Nx∧Rxb)→(Paa→∀x(Ox→Qxb)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9114,
+    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then every borogove chortled at Bungo only if no toves gimbled.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nN: [1] is a borogove\nP: [1] chortled at [2]\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(¬Rcc→(∀x(Nx→Pxc)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 2024,
+    "question": "Sentence:\n\nA borogove is uffish and a rath is uffish.\n\nAbbreviations:\n\nN: [1] is a borogove\nK: [1] is uffish\nO: [1] is a rath",
+    "form": "(∃x(Nx∧Kx)∧∃x(Ox∧Kx))",
+    "language": "carroll"
+  },
+  {
+    "id": 7236,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Rafin won't whiffle only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nF: [1] will whiffle\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∃x(Nx∧Rxb)→(¬Fb→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 1106,
+    "question": "Sentence:\n\nThere is not a rath that every borogove galumphed over.\n\nAbbreviations:\n\nO: [1] is a rath\nN: [1] is a borogove\nQ: [1] galumphed over [2]",
+    "form": "¬∃x(Ox∧∀y(Ny→Qyx))",
+    "language": "carroll"
+  },
+  {
+    "id": 4430,
+    "question": "Sentence:\n\nBungo isn't a borogove only if Rafin didn't snicker-snacked Rafin.\n\nAbbreviations:\n\nN: [1] is a borogove\nc: Bungo\nR: [1] snicker-snacked [2]\nb: Rafin",
+    "form": "(¬Nc→¬Rbb)",
+    "language": "carroll"
+  },
+  {
+    "id": 4594,
+    "question": "Sentence:\n\nA rath snicker-snacked Bungo only if no toves snicker-snacked Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\na: Zindle",
+    "form": "(∃x(Ox∧Rxc)→¬∃x(Mx∧Rxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 3688,
+    "question": "Sentence:\n\nZindle isn't a borogove or every tove snicker-snacked Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\na: Zindle\nM: [1] is a tove\nR: [1] snicker-snacked [2]",
+    "form": "(¬Na∨∀x(Mx→Rxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 7260,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then every rath is beamish only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nL: [1] is beamish\nP: [1] chortled at [2]\na: Zindle",
+    "form": "(∃x(Nx∧Rxb)→(∀x(Ox→Lx)→Paa))",
+    "language": "carroll"
+  },
+  {
+    "id": 6978,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Rafin didn't snicker-snacked Rafin only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∃x(Nx∧Rxb)→(¬Rbb→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 11238,
+    "question": "Sentence:\n\nA borogove will burble and Zindle isn't mimsy.\n\nAbbreviations:\n\nN: [1] is a borogove\nG: [1] will burble\nJ: [1] is mimsy\na: Zindle",
+    "form": "(∃x(Nx∧Gx)∧¬Ja)",
+    "language": "carroll"
+  },
+  {
+    "id": 10682,
+    "question": "Sentence:\n\nA borogove chortled at Rafin but it is not the case that Rafin is a tove.\n\nAbbreviations:\n\nN: [1] is a borogove\nP: [1] chortled at [2]\nb: Rafin\nM: [1] is a tove",
+    "form": "(∃x(Nx∧Pxb)∧¬Mb)",
+    "language": "carroll"
+  },
+  {
+    "id": 10922,
+    "question": "Sentence:\n\nRafin gimbled and every tove will whiffle.\n\nAbbreviations:\n\nI: [1] gimbled\nb: Rafin\nM: [1] is a tove\nF: [1] will whiffle",
+    "form": "(Ib∧∀x(Mx→Fx))",
+    "language": "carroll"
+  },
+  {
+    "id": 3866,
+    "question": "Sentence:\n\nBungo isn't a borogove or not all raths chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nc: Bungo\nO: [1] is a rath\nP: [1] chortled at [2]",
+    "form": "(¬Nc∨∃x(Ox∧¬Pxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 7242,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Bungo galumphed over Zindle only if every rath is beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle\nO: [1] is a rath\nL: [1] is beamish",
+    "form": "(∃x(Nx∧Rxb)→(Qca→∀x(Ox→Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6534,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Bungo galumphed over Zindle only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle\nM: [1] is a tove",
+    "form": "(∃x(Nx∧¬Jx)→(Qca→∃x(Mx∧¬Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 3892,
+    "question": "Sentence:\n\nRafin will whiffle unless not all toves will whiffle.\n\nAbbreviations:\n\nF: [1] will whiffle\nb: Rafin\nM: [1] is a tove",
+    "form": "(¬∃x(Mx∧¬Fx)→Fb)",
+    "language": "carroll"
+  },
+  {
+    "id": 684,
+    "question": "Sentence:\n\nA tove galumphed over Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "∃x(Mx∧Qxa)",
+    "language": "carroll"
+  },
+  {
+    "id": 6724,
+    "question": "Sentence:\n\nIf Zindle gimbled, then every rath chortled at Rafin only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nN: [1] is a borogove\nc: Bungo",
+    "form": "(Ia→(∀x(Ox→Pxb)→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6818,
+    "question": "Sentence:\n\nIf Zindle gimbled, then every rath is beamish only if no toves gimbled.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nO: [1] is a rath\nL: [1] is beamish\nM: [1] is a tove",
+    "form": "(Ia→(∀x(Ox→Lx)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6072,
+    "question": "Sentence:\n\nNot all toves gimbled if and only if every rath snicker-snacked Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nI: [1] gimbled\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo",
+    "form": "(∃x(Mx∧¬Ix)↔∀x(Ox→Rxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 1102,
+    "question": "Sentence:\n\nNo raths galumphed over a borogove.\n\nAbbreviations:\n\nO: [1] is a rath\nN: [1] is a borogove\nQ: [1] galumphed over [2]",
+    "form": "¬∃x∃y((Ox∧Ny)∧Qxy)",
+    "language": "carroll"
+  },
+  {
+    "id": 826,
+    "question": "Sentence:\n\nEvery tove chortled at every tove.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]",
+    "form": "∀x∀y((Mx∧My)→Pxy)",
+    "language": "carroll"
+  },
+  {
+    "id": 4364,
+    "question": "Sentence:\n\nIf Zindle didn't chortle at Zindle, then Zindle didn't galumph over Bungo.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(¬Paa→¬Qac)",
+    "language": "carroll"
+  },
+  {
+    "id": 1332,
+    "question": "Sentence:\n\nEvery borogove chortled at a rath that chortled at it.\n\nAbbreviations:\n\nN: [1] is a borogove\nO: [1] is a rath\nP: [1] chortled at [2]",
+    "form": "∀x(Nx→∃y(Oy∧(Pxy∧Pyx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 168,
+    "question": "Sentence:\n\nRafin and Bungo are mimsy.\n\nAbbreviations:\n\nJ: [1] is mimsy\nb: Rafin\nc: Bungo",
+    "form": "(Jb∧Jc)",
+    "language": "carroll"
+  },
+  {
+    "id": 9414,
+    "question": "Sentence:\n\nIf Bungo is beamish, then Rafin won't whiffle only if no toves gimbled.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo\nF: [1] will whiffle\nb: Rafin\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(Lc→(¬Fb→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 7558,
+    "question": "Sentence:\n\nIf Zindle won't burble, then no raths galumphed over Bungo only if no toves gimbled.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(¬Ga→(¬∃x(Ox∧Qxc)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 458,
+    "question": "Sentence:\n\nOnly raths will burble.\n\nAbbreviations:\n\nO: [1] is a rath\nG: [1] will burble",
+    "form": "∀x(Gx→Ox)",
+    "language": "carroll"
+  },
+  {
+    "id": 1094,
+    "question": "Sentence:\n\nEvery rath galumphed over a borogove.\n\nAbbreviations:\n\nO: [1] is a rath\nN: [1] is a borogove\nQ: [1] galumphed over [2]",
+    "form": "∀x(Ox→∃y(Ny∧Qxy))",
+    "language": "carroll"
+  },
+  {
+    "id": 11650,
+    "question": "Sentence:\n\nEvery rath snicker-snacked Zindle but it is not the case that Rafin didn't chortle at Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\na: Zindle\nP: [1] chortled at [2]\nb: Rafin\nc: Bungo",
+    "form": "(∀x(Ox→Rxa)∧¬¬Pbc)",
+    "language": "carroll"
+  },
+  {
+    "id": 3876,
+    "question": "Sentence:\n\nRafin will whiffle unless not all toves galumphed over Rafin.\n\nAbbreviations:\n\nF: [1] will whiffle\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]",
+    "form": "(¬∃x(Mx∧¬Qxb)→Fb)",
+    "language": "carroll"
+  },
+  {
+    "id": 5428,
+    "question": "Sentence:\n\nRafin chortled at Rafin if and only if not all borogoves galumphed over Zindle.\n\nAbbreviations:\n\nP: [1] chortled at [2]\nb: Rafin\nN: [1] is a borogove\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "(Pbb↔∃x(Nx∧¬Qxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 1756,
+    "question": "Sentence:\n\nA rath galumphed over a rath that galumphed over a borogove.\n\nAbbreviations:\n\nO: [1] is a rath\nN: [1] is a borogove\nQ: [1] galumphed over [2]",
+    "form": "∃x∃y∃z(((Ox∧Oy)∧Nz)∧(Qxy∧Qyz))",
+    "language": "carroll"
+  },
+  {
+    "id": 6486,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Rafin is a tove only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nM: [1] is a tove\nb: Rafin\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∃x(Nx∧¬Jx)→(Mb→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 8302,
+    "question": "Sentence:\n\nIf Rafin didn't snicker-snacked Rafin, then every rath is mimsy only if no toves gimbled.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nJ: [1] is mimsy\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(¬Rbb→(∀x(Ox→Jx)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6542,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Bungo galumphed over Zindle only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle\nP: [1] chortled at [2]",
+    "form": "(∃x(Nx∧¬Jx)→(Qca→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5586,
+    "question": "Sentence:\n\nNo borogoves gimbled if and only if not all borogoves chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nI: [1] gimbled\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(¬∃x(Nx∧Ix)↔∃x(Nx∧¬Pxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 5270,
+    "question": "Sentence:\n\nNot all raths gimbled just in case every borogove is mimsy.\n\nAbbreviations:\n\nO: [1] is a rath\nI: [1] gimbled\nN: [1] is a borogove\nJ: [1] is mimsy",
+    "form": "(∃x(Ox∧¬Ix)↔∀x(Nx→Jx))",
+    "language": "carroll"
+  },
+  {
+    "id": 718,
+    "question": "Sentence:\n\nNo borogoves galumphed over Rafin.\n\nAbbreviations:\n\nN: [1] is a borogove\nQ: [1] galumphed over [2]\nb: Rafin",
+    "form": "¬∃x(Nx∧Qxb)",
+    "language": "carroll"
+  },
+  {
+    "id": 2232,
+    "question": "Sentence:\n\nOnly borogoves are beamish and Bungo didn't snicker-snacked Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nL: [1] is beamish\nR: [1] snicker-snacked [2]\nc: Bungo\na: Zindle",
+    "form": "(∀x(Lx→Nx)∧¬Rca)",
+    "language": "carroll"
+  },
+  {
+    "id": 9892,
+    "question": "Sentence:\n\nIf Zindle will whiffle, then no borogoves are beamish only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nF: [1] will whiffle\na: Zindle\nN: [1] is a borogove\nL: [1] is beamish\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(Fa→(¬∃x(Nx∧Lx)→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 860,
+    "question": "Sentence:\n\nEvery tove chortled at a rath.\n\nAbbreviations:\n\nM: [1] is a tove\nO: [1] is a rath\nP: [1] chortled at [2]",
+    "form": "∀x(Mx→∃y(Oy∧Pxy))",
+    "language": "carroll"
+  },
+  {
+    "id": 9560,
+    "question": "Sentence:\n\nIf not all toves galumphed over Zindle, then not all toves will whiffle only if Zindle didn't galumph over Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nF: [1] will whiffle\nc: Bungo",
+    "form": "(∃x(Mx∧¬Qxa)→(∃x(Mx∧¬Fx)→¬Qac))",
+    "language": "carroll"
+  },
+  {
+    "id": 9320,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then not all toves galumphed over Bungo only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle",
+    "form": "(∀x(Ox→Pxb)→(∃x(Mx∧¬Qxc)→Paa))",
+    "language": "carroll"
+  },
+  {
+    "id": 11394,
+    "question": "Sentence:\n\nA rath galumphed over Zindle but it is not the case that Rafin gyred.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\na: Zindle\nH: [1] gyred\nb: Rafin",
+    "form": "(∃x(Ox∧Qxa)∧¬Hb)",
+    "language": "carroll"
+  },
+  {
+    "id": 9202,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Rafin is beamish only if every rath chortled at Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nL: [1] is beamish\nc: Bungo",
+    "form": "(∀x(Ox→Pxb)→(Lb→∀x(Ox→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 3910,
+    "question": "Sentence:\n\nA rath galumphed over Rafin or only toves gyred.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin\nM: [1] is a tove\nH: [1] gyred",
+    "form": "(∃x(Ox∧Qxb)∨∀x(Hx→Mx))",
+    "language": "carroll"
+  },
+  {
+    "id": 3322,
+    "question": "Sentence:\n\nRafin is a tove unless not all toves galumphed over Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nb: Rafin\nQ: [1] galumphed over [2]",
+    "form": "(¬∃x(Mx∧¬Qxb)→Mb)",
+    "language": "carroll"
+  },
+  {
+    "id": 9732,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Bungo, then Zindle didn't galumph over Bungo only if every rath is beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo\nQ: [1] galumphed over [2]\na: Zindle\nO: [1] is a rath\nL: [1] is beamish",
+    "form": "(∃x(Nx∧Rxc)→(¬Qac→∀x(Ox→Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 2294,
+    "question": "Sentence:\n\nNot all borogoves are beamish and Rafin chortled at Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nL: [1] is beamish\nP: [1] chortled at [2]\nb: Rafin\na: Zindle",
+    "form": "(∃x(Nx∧¬Lx)∧Pba)",
+    "language": "carroll"
+  },
+  {
+    "id": 11398,
+    "question": "Sentence:\n\nA rath galumphed over Zindle and Rafin is a tove.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\na: Zindle\nM: [1] is a tove\nb: Rafin",
+    "form": "(∃x(Ox∧Qxa)∧Mb)",
+    "language": "carroll"
+  },
+  {
+    "id": 7648,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then every rath snicker-snacked Bungo only if Rafin is a tove.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nb: Rafin",
+    "form": "(∀x(Nx→Jx)→(∀x(Ox→Rxc)→Mb))",
+    "language": "carroll"
+  },
+  {
+    "id": 934,
+    "question": "Sentence:\n\nNo raths chortled at every tove.\n\nAbbreviations:\n\nO: [1] is a rath\nM: [1] is a tove\nP: [1] chortled at [2]",
+    "form": "¬∃x(Ox∧∀y(My→Pxy))",
+    "language": "carroll"
+  },
+  {
+    "id": 1894,
+    "question": "Sentence:\n\nZindle chortled at every rath.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\na: Zindle",
+    "form": "∀x(Ox→Pax)",
+    "language": "carroll"
+  },
+  {
+    "id": 6404,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then a borogove snicker-snacked Bungo only if Rafin is beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nc: Bungo\nL: [1] is beamish\nb: Rafin",
+    "form": "(∃x(Nx∧¬Jx)→(∃x(Nx∧Rxc)→Lb))",
+    "language": "carroll"
+  },
+  {
+    "id": 5046,
+    "question": "Sentence:\n\nBungo is a borogove only if every rath chortled at Rafin.\n\nAbbreviations:\n\nN: [1] is a borogove\nc: Bungo\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin",
+    "form": "(Nc→∀x(Ox→Pxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 9026,
+    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then every rath is mimsy only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nO: [1] is a rath\nJ: [1] is mimsy\nP: [1] chortled at [2]\na: Zindle",
+    "form": "(¬Rcc→(∀x(Ox→Jx)→Paa))",
+    "language": "carroll"
+  },
+  {
+    "id": 6432,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Zindle will whiffle only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nF: [1] will whiffle\na: Zindle\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∃x(Nx∧¬Jx)→(Fa→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5174,
+    "question": "Sentence:\n\nNot all raths snicker-snacked Rafin only if not all borogoves galumphed over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nb: Rafin\nN: [1] is a borogove\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∃x(Ox∧¬Rxb)→∃x(Nx∧¬Qxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 7340,
+    "question": "Sentence:\n\nIf Zindle won't burble, then not all toves chortled at Bungo only if every rath is beamish.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nO: [1] is a rath\nL: [1] is beamish",
+    "form": "(¬Ga→(∃x(Mx∧¬Pxc)→∀x(Ox→Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 494,
+    "question": "Sentence:\n\nNo toves gimbled.\n\nAbbreviations:\n\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "¬∃x(Mx∧Ix)",
+    "language": "carroll"
+  },
+  {
+    "id": 11270,
+    "question": "Sentence:\n\nA borogove will burble and not all toves galumphed over Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nG: [1] will burble\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "(∃x(Nx∧Gx)∧∃x(Mx∧¬Qxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 354,
+    "question": "Sentence:\n\nBungo didn't galumph over Zindle.\n\nAbbreviations:\n\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle",
+    "form": "¬Qca",
+    "language": "carroll"
+  },
+  {
+    "id": 1200,
+    "question": "Sentence:\n\nNo borogoves snicker-snacked every borogove.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]",
+    "form": "¬∃x(Nx∧∀y(Ny→Rxy))",
+    "language": "carroll"
+  },
+  {
+    "id": 244,
+    "question": "Sentence:\n\nBungo is beamish.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo",
+    "form": "Lc",
+    "language": "carroll"
+  },
+  {
+    "id": 8724,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then Bungo is beamish only if every rath is beamish.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nL: [1] is beamish",
+    "form": "(∀x(Ox→Rxc)→(Lc→∀x(Ox→Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9174,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Zindle will whiffle only if every rath is mimsy.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nF: [1] will whiffle\na: Zindle\nJ: [1] is mimsy",
+    "form": "(∀x(Ox→Pxb)→(Fa→∀x(Ox→Jx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 2718,
+    "question": "Sentence:\n\nA rath snicker-snacked Zindle but it is not the case that Rafin isn't a tove.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\na: Zindle\nM: [1] is a tove\nb: Rafin",
+    "form": "(∃x(Ox∧Rxa)∧¬¬Mb)",
+    "language": "carroll"
+  },
+  {
+    "id": 1132,
+    "question": "Sentence:\n\nA tove snicker-snacked a tove.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]",
+    "form": "∃x∃y((Mx∧My)∧Rxy)",
+    "language": "carroll"
+  },
+  {
+    "id": 6286,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then not all toves chortled at Bungo only if Rafin is a tove.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nb: Rafin",
+    "form": "(∃x(Nx∧¬Jx)→(∃x(Mx∧¬Pxc)→Mb))",
+    "language": "carroll"
+  },
+  {
+    "id": 7706,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then Bungo is beamish only if a borogove snicker-snacked Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nL: [1] is beamish\nc: Bungo\nR: [1] snicker-snacked [2]",
+    "form": "(∀x(Nx→Jx)→(Lc→∃x(Nx∧Rxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5304,
+    "question": "Sentence:\n\nNot all raths gimbled just in case Bungo isn't beamish.\n\nAbbreviations:\n\nO: [1] is a rath\nI: [1] gimbled\nL: [1] is beamish\nc: Bungo",
+    "form": "(∃x(Ox∧¬Ix)↔¬Lc)",
+    "language": "carroll"
+  },
+  {
+    "id": 1524,
+    "question": "Sentence:\n\nNo raths snicker-snacked a tove that snicker-snacked it.\n\nAbbreviations:\n\nO: [1] is a rath\nM: [1] is a tove\nR: [1] snicker-snacked [2]",
+    "form": "¬∃x∃y((Ox∧My)∧(Rxy∧Ryx))",
+    "language": "carroll"
+  },
+  {
+    "id": 6062,
+    "question": "Sentence:\n\nA borogove chortled at Bungo if and only if every rath snicker-snacked Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nP: [1] chortled at [2]\nc: Bungo\nO: [1] is a rath\nR: [1] snicker-snacked [2]",
+    "form": "(∃x(Nx∧Pxc)↔∀x(Ox→Rxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 8820,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then every rath is mimsy only if Rafin won't whiffle.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nJ: [1] is mimsy\nF: [1] will whiffle\nb: Rafin",
+    "form": "(∀x(Ox→Rxc)→(∀x(Ox→Jx)→¬Fb))",
+    "language": "carroll"
+  },
+  {
+    "id": 8400,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then every rath snicker-snacked Bungo only if Rafin won't whiffle.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nF: [1] will whiffle\nb: Rafin",
+    "form": "(∃x(Mx∧¬Pxc)→(∀x(Ox→Rxc)→¬Fb))",
+    "language": "carroll"
+  },
+  {
+    "id": 8744,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then not all toves galumphed over Zindle only if Rafin is a tove.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nb: Rafin",
+    "form": "(∀x(Ox→Rxc)→(∃x(Mx∧¬Qxa)→Mb))",
+    "language": "carroll"
+  },
+  {
+    "id": 5162,
+    "question": "Sentence:\n\nNot all borogoves snicker-snacked Rafin only if not all borogoves galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∃x(Nx∧¬Rxb)→∃x(Nx∧¬Qxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 10614,
+    "question": "Sentence:\n\nA borogove chortled at Rafin and a rath is beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nP: [1] chortled at [2]\nb: Rafin\nO: [1] is a rath\nL: [1] is beamish",
+    "form": "(∃x(Nx∧Pxb)∧∃x(Ox∧Lx))",
+    "language": "carroll"
+  },
+  {
+    "id": 5744,
+    "question": "Sentence:\n\nNot all borogoves are mimsy if and only if every tove snicker-snacked Rafin.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nM: [1] is a tove\nR: [1] snicker-snacked [2]\nb: Rafin",
+    "form": "(∃x(Nx∧¬Jx)↔∀x(Mx→Rxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 450,
+    "question": "Sentence:\n\nEvery rath will burble.\n\nAbbreviations:\n\nO: [1] is a rath\nG: [1] will burble",
+    "form": "∀x(Ox→Gx)",
+    "language": "carroll"
+  },
+  {
+    "id": 9324,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then no borogoves are beamish only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nN: [1] is a borogove\nL: [1] is beamish\na: Zindle",
+    "form": "(∀x(Ox→Pxb)→(¬∃x(Nx∧Lx)→Paa))",
+    "language": "carroll"
+  },
+  {
+    "id": 8872,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then Zindle didn't galumph over Bungo only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "(∀x(Ox→Rxc)→(¬Qac→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5852,
+    "question": "Sentence:\n\nEvery tove snicker-snacked Rafin just in case no raths chortled at Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nP: [1] chortled at [2]",
+    "form": "(∀x(Mx→Rxb)↔¬∃x(Ox∧Pxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 5156,
+    "question": "Sentence:\n\nIf not all borogoves snicker-snacked Rafin, then every rath chortled at Rafin.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nP: [1] chortled at [2]",
+    "form": "(∃x(Nx∧¬Rxb)→∀x(Ox→Pxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 196,
+    "question": "Sentence:\n\nRafin is uffish.\n\nAbbreviations:\n\nK: [1] is uffish\nb: Rafin",
+    "form": "Kb",
+    "language": "carroll"
+  },
+  {
+    "id": 6784,
+    "question": "Sentence:\n\nIf Zindle gimbled, then every rath is mimsy only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nO: [1] is a rath\nJ: [1] is mimsy\nN: [1] is a borogove\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(Ia→(∀x(Ox→Jx)→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 1366,
+    "question": "Sentence:\n\nEvery tove galumphed over every tove that galumphed over it.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]",
+    "form": "∀x(Mx→∀y((My∧Qyx)→Qxy))",
+    "language": "carroll"
+  },
+  {
+    "id": 8116,
+    "question": "Sentence:\n\nIf Zindle didn't chortle at Rafin, then not all toves galumphed over Bungo only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\nO: [1] is a rath",
+    "form": "(¬Pab→(∃x(Mx∧¬Qxc)→∀x(Ox→Qxb)))",
+    "language": "carroll"
+  },
+  {
+    "id": 2658,
+    "question": "Sentence:\n\nNot all raths galumphed over Rafin but it is not the case that Rafin chortled at Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin\nP: [1] chortled at [2]\na: Zindle",
+    "form": "(∃x(Ox∧¬Qxb)∧¬Pba)",
+    "language": "carroll"
+  },
+  {
+    "id": 11654,
+    "question": "Sentence:\n\nOnly toves gimbled and no borogoves will whiffle.\n\nAbbreviations:\n\nM: [1] is a tove\nI: [1] gimbled\nN: [1] is a borogove\nF: [1] will whiffle",
+    "form": "(∀x(Ix→Mx)∧¬∃x(Nx∧Fx))",
+    "language": "carroll"
+  },
+  {
+    "id": 3084,
+    "question": "Sentence:\n\nNo toves galumphed over Zindle unless Rafin is a tove.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nb: Rafin",
+    "form": "(¬Mb→¬∃x(Mx∧Qxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 3962,
+    "question": "Sentence:\n\nA rath galumphed over Zindle or a rath is beamish.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\na: Zindle\nL: [1] is beamish",
+    "form": "(∃x(Ox∧Qxa)∨∃x(Ox∧Lx))",
+    "language": "carroll"
+  },
+  {
+    "id": 8406,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then every rath snicker-snacked Bungo only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nO: [1] is a rath\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(∃x(Mx∧¬Pxc)→(∀x(Ox→Rxc)→Paa))",
+    "language": "carroll"
+  },
+  {
+    "id": 10228,
+    "question": "Sentence:\n\nIf not all toves will whiffle, then Bungo galumphed over Zindle only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nF: [1] will whiffle\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle",
+    "form": "(∃x(Mx∧¬Fx)→(Qca→∃x(Mx∧¬Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 10576,
+    "question": "Sentence:\n\nEvery rath gimbled but it is not the case that Bungo chortled at Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nI: [1] gimbled\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∀x(Ox→Ix)∧¬Pcc)",
+    "language": "carroll"
+  },
+  {
+    "id": 11332,
+    "question": "Sentence:\n\nZindle isn't mimsy but it is not the case that Rafin didn't chortle at Bungo.\n\nAbbreviations:\n\nJ: [1] is mimsy\na: Zindle\nP: [1] chortled at [2]\nb: Rafin\nc: Bungo",
+    "form": "(¬Ja∧¬¬Pbc)",
+    "language": "carroll"
+  },
+  {
+    "id": 10742,
+    "question": "Sentence:\n\nA rath is beamish and only toves are mimsy.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nM: [1] is a tove\nJ: [1] is mimsy",
+    "form": "(∃x(Ox∧Lx)∧∀x(Jx→Mx))",
+    "language": "carroll"
+  },
+  {
+    "id": 7374,
+    "question": "Sentence:\n\nIf Zindle won't burble, then every rath snicker-snacked Bungo only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nQ: [1] galumphed over [2]\nb: Rafin",
+    "form": "(¬Ga→(∀x(Ox→Rxc)→∀x(Ox→Qxb)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5610,
+    "question": "Sentence:\n\nNo toves will burble just in case every borogove gyred.\n\nAbbreviations:\n\nM: [1] is a tove\nG: [1] will burble\nN: [1] is a borogove\nH: [1] gyred",
+    "form": "(¬∃x(Mx∧Gx)↔∀x(Nx→Hx))",
+    "language": "carroll"
+  },
+  {
+    "id": 11424,
+    "question": "Sentence:\n\nNot all borogoves will whiffle but it is not the case that Bungo didn't snicker-snacked Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nF: [1] will whiffle\nR: [1] snicker-snacked [2]\nc: Bungo",
+    "form": "(∃x(Nx∧¬Fx)∧¬¬Rcc)",
+    "language": "carroll"
+  },
+  {
+    "id": 6598,
+    "question": "Sentence:\n\nIf Zindle gimbled, then a borogove snicker-snacked Rafin only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(Ia→(∃x(Nx∧Rxb)→∃x(Mx∧¬Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5780,
+    "question": "Sentence:\n\nZindle didn't snicker-snacked Bungo if and only if a borogove is mimsy.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\na: Zindle\nc: Bungo\nN: [1] is a borogove\nJ: [1] is mimsy",
+    "form": "(¬Rac↔∃x(Nx∧Jx))",
+    "language": "carroll"
+  },
+  {
+    "id": 492,
+    "question": "Sentence:\n\nA tove gimbled.\n\nAbbreviations:\n\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "∃x(Mx∧Ix)",
+    "language": "carroll"
+  },
+  {
+    "id": 6566,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then not all toves galumphed over Bungo only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\nP: [1] chortled at [2]\na: Zindle",
+    "form": "(∃x(Nx∧¬Jx)→(∃x(Mx∧¬Qxc)→Paa))",
+    "language": "carroll"
+  },
+  {
+    "id": 3302,
+    "question": "Sentence:\n\nRafin is a tove unless every tove is uffish.\n\nAbbreviations:\n\nM: [1] is a tove\nb: Rafin\nK: [1] is uffish",
+    "form": "(¬∀x(Mx→Kx)→Mb)",
+    "language": "carroll"
+  },
+  {
+    "id": 6314,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then every rath snicker-snacked Bungo only if Bungo galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nQ: [1] galumphed over [2]",
+    "form": "(∃x(Nx∧¬Jx)→(∀x(Ox→Rxc)→Qcc))",
+    "language": "carroll"
+  },
+  {
+    "id": 7030,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Bungo didn't snicker-snacked Bungo only if every rath is mimsy.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nc: Bungo\nO: [1] is a rath\nJ: [1] is mimsy",
+    "form": "(∃x(Nx∧Rxb)→(¬Rcc→∀x(Ox→Jx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 7290,
+    "question": "Sentence:\n\nIf Zindle won't burble, then every borogove is mimsy only if Rafin didn't snicker-snacked Rafin.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nb: Rafin",
+    "form": "(¬Ga→(∀x(Nx→Jx)→¬Rbb))",
+    "language": "carroll"
+  },
+  {
+    "id": 6594,
+    "question": "Sentence:\n\nIf Zindle gimbled, then a borogove snicker-snacked Rafin only if not all toves will whiffle.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nF: [1] will whiffle",
+    "form": "(Ia→(∃x(Nx∧Rxb)→∃x(Mx∧¬Fx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9698,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Bungo, then every rath is mimsy only if Bungo galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo\nO: [1] is a rath\nJ: [1] is mimsy\nQ: [1] galumphed over [2]",
+    "form": "(∃x(Nx∧Rxc)→(∀x(Ox→Jx)→Qcc))",
+    "language": "carroll"
+  },
+  {
+    "id": 10550,
+    "question": "Sentence:\n\nIf no borogoves are beamish, then Zindle chortled at Zindle only if no toves gimbled.\n\nAbbreviations:\n\nN: [1] is a borogove\nL: [1] is beamish\nP: [1] chortled at [2]\na: Zindle\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(¬∃x(Nx∧Lx)→(Paa→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 1888,
+    "question": "Sentence:\n\nRafin chortled at a borogove.\n\nAbbreviations:\n\nN: [1] is a borogove\nP: [1] chortled at [2]\nb: Rafin",
+    "form": "∃x(Nx∧Pbx)",
+    "language": "carroll"
+  },
+  {
+    "id": 2820,
+    "question": "Sentence:\n\nEvery rath galumphed over Rafin and Rafin isn't a tove.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin\nM: [1] is a tove",
+    "form": "(∀x(Ox→Qxb)∧¬Mb)",
+    "language": "carroll"
+  },
+  {
+    "id": 2480,
+    "question": "Sentence:\n\nBungo didn't snicker-snacked Zindle and Rafin didn't snicker-snacked Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\na: Zindle\nb: Rafin",
+    "form": "(¬Rca∧¬Rbc)",
+    "language": "carroll"
+  },
+  {
+    "id": 6224,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Zindle didn't chortle at Rafin only if a borogove snicker-snacked Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nR: [1] snicker-snacked [2]\nc: Bungo",
+    "form": "(∃x(Nx∧¬Jx)→(¬Pab→∃x(Nx∧Rxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 120,
+    "question": "Sentence:\n\nZindle and Bungo gimbled.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nc: Bungo",
+    "form": "(Ia∧Ic)",
+    "language": "carroll"
+  },
+  {
+    "id": 1052,
+    "question": "Sentence:\n\nNo borogoves galumphed over a borogove.\n\nAbbreviations:\n\nN: [1] is a borogove\nQ: [1] galumphed over [2]",
+    "form": "¬∃x∃y((Nx∧Ny)∧Qxy)",
+    "language": "carroll"
+  },
+  {
+    "id": 10030,
+    "question": "Sentence:\n\nIf every rath is mimsy, then Zindle didn't galumph over Bungo only if every rath is beamish.\n\nAbbreviations:\n\nO: [1] is a rath\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nL: [1] is beamish",
+    "form": "(∀x(Ox→Jx)→(¬Qac→∀x(Ox→Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9508,
+    "question": "Sentence:\n\nIf not all toves galumphed over Zindle, then Rafin is beamish only if every rath is mimsy.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nL: [1] is beamish\nb: Rafin\nO: [1] is a rath\nJ: [1] is mimsy",
+    "form": "(∃x(Mx∧¬Qxa)→(Lb→∀x(Ox→Jx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6506,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Zindle didn't galumph over Bungo only if no borogoves are beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nL: [1] is beamish",
+    "form": "(∃x(Nx∧¬Jx)→(¬Qac→¬∃x(Nx∧Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9032,
+    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then every rath is mimsy only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nO: [1] is a rath\nJ: [1] is mimsy\nQ: [1] galumphed over [2]",
+    "form": "(¬Rcc→(∀x(Ox→Jx)→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6606,
+    "question": "Sentence:\n\nIf Zindle gimbled, then a borogove snicker-snacked Rafin only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(Ia→(∃x(Nx∧Rxb)→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 4190,
+    "question": "Sentence:\n\nNot all toves will burble unless every tove snicker-snacked Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nG: [1] will burble\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(¬∀x(Mx→Rxa)→∃x(Mx∧¬Gx))",
+    "language": "carroll"
+  },
+  {
+    "id": 9262,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Zindle didn't galumph over Bungo only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo",
+    "form": "(∀x(Ox→Pxb)→(¬Qac→∀x(Ox→Qxb)))",
+    "language": "carroll"
+  },
+  {
+    "id": 8098,
+    "question": "Sentence:\n\nIf Zindle didn't chortle at Rafin, then every rath is beamish only if no borogoves are beamish.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nO: [1] is a rath\nL: [1] is beamish\nN: [1] is a borogove",
+    "form": "(¬Pab→(∀x(Ox→Lx)→¬∃x(Nx∧Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 3328,
+    "question": "Sentence:\n\nRafin is a tove or a rath will burble.\n\nAbbreviations:\n\nM: [1] is a tove\nb: Rafin\nO: [1] is a rath\nG: [1] will burble",
+    "form": "(Mb∨∃x(Ox∧Gx))",
+    "language": "carroll"
+  },
+  {
+    "id": 942,
+    "question": "Sentence:\n\nEvery rath chortled at every borogove.\n\nAbbreviations:\n\nO: [1] is a rath\nN: [1] is a borogove\nP: [1] chortled at [2]",
+    "form": "∀x∀y((Ox∧Ny)→Pxy)",
+    "language": "carroll"
+  },
+  {
+    "id": 2774,
+    "question": "Sentence:\n\nRafin chortled at Zindle and Rafin is uffish.\n\nAbbreviations:\n\nP: [1] chortled at [2]\nb: Rafin\na: Zindle\nK: [1] is uffish",
+    "form": "(Pba∧Kb)",
+    "language": "carroll"
+  },
+  {
+    "id": 7864,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then Rafin won't whiffle only if every rath chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nF: [1] will whiffle\nb: Rafin\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∀x(Nx→Jx)→(¬Fb→∀x(Ox→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 3762,
+    "question": "Sentence:\n\nEvery tove is uffish or every borogove chortled at Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nK: [1] is uffish\nN: [1] is a borogove\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∀x(Mx→Kx)∨∀x(Nx→Pxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 2432,
+    "question": "Sentence:\n\nZindle is uffish and a rath is uffish.\n\nAbbreviations:\n\nK: [1] is uffish\na: Zindle\nO: [1] is a rath",
+    "form": "(Ka∧∃x(Ox∧Kx))",
+    "language": "carroll"
+  },
+  {
+    "id": 9450,
+    "question": "Sentence:\n\nIf Bungo is beamish, then every rath chortled at Bungo only if no toves gimbled.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo\nO: [1] is a rath\nP: [1] chortled at [2]\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(Lc→(∀x(Ox→Pxc)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 10282,
+    "question": "Sentence:\n\nIf Zindle didn't galumph over Bungo, then every rath is beamish only if no borogoves are beamish.\n\nAbbreviations:\n\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nO: [1] is a rath\nL: [1] is beamish\nN: [1] is a borogove",
+    "form": "(¬Qac→(∀x(Ox→Lx)→¬∃x(Nx∧Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 1928,
+    "question": "Sentence:\n\nBungo galumphed over a borogove.\n\nAbbreviations:\n\nN: [1] is a borogove\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "∃x(Nx∧Qcx)",
+    "language": "carroll"
+  },
+  {
+    "id": 7920,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then Zindle chortled at Zindle only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nP: [1] chortled at [2]\na: Zindle\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∀x(Nx→Jx)→(Paa→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5158,
+    "question": "Sentence:\n\nNot all borogoves snicker-snacked Rafin only if every rath chortled at Rafin.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nP: [1] chortled at [2]",
+    "form": "(∃x(Nx∧¬Rxb)→∀x(Ox→Pxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 8762,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then a borogove snicker-snacked Bungo only if Zindle didn't galumph over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nN: [1] is a borogove\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "(∀x(Ox→Rxc)→(∃x(Nx∧Rxc)→¬Qac))",
+    "language": "carroll"
+  },
+  {
+    "id": 11030,
+    "question": "Sentence:\n\nZindle isn't beamish but it is not the case that Rafin is a tove.\n\nAbbreviations:\n\nL: [1] is beamish\na: Zindle\nM: [1] is a tove\nb: Rafin",
+    "form": "(¬La∧¬Mb)",
+    "language": "carroll"
+  },
+  {
+    "id": 7428,
+    "question": "Sentence:\n\nIf Zindle won't burble, then not all toves galumphed over Zindle only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nM: [1] is a tove\nQ: [1] galumphed over [2]\nN: [1] is a borogove\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(¬Ga→(∃x(Mx∧¬Qxa)→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 4678,
+    "question": "Sentence:\n\nA tove galumphed over Rafin only if not all borogoves galumphed over Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nb: Rafin\nN: [1] is a borogove\nc: Bungo",
+    "form": "(∃x(Mx∧Qxb)→∃x(Nx∧¬Qxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 7354,
+    "question": "Sentence:\n\nIf Zindle won't burble, then not all toves chortled at Bungo only if no toves gimbled.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nI: [1] gimbled",
+    "form": "(¬Ga→(∃x(Mx∧¬Pxc)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5888,
+    "question": "Sentence:\n\nEvery borogove gyred if and only if not all toves gimbled.\n\nAbbreviations:\n\nN: [1] is a borogove\nH: [1] gyred\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(∀x(Nx→Hx)↔∃x(Mx∧¬Ix))",
+    "language": "carroll"
+  },
+  {
+    "id": 8504,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then a borogove snicker-snacked Bungo only if Bungo galumphed over Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "(∃x(Mx∧¬Pxc)→(∃x(Nx∧Rxc)→Qca))",
+    "language": "carroll"
+  },
+  {
+    "id": 7532,
+    "question": "Sentence:\n\nIf Zindle won't burble, then every rath chortled at Bungo only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo\nQ: [1] galumphed over [2]\nb: Rafin",
+    "form": "(¬Ga→(∀x(Ox→Pxc)→∀x(Ox→Qxb)))",
+    "language": "carroll"
+  },
+  {
+    "id": 3026,
+    "question": "Sentence:\n\nNot all borogoves snicker-snacked Rafin unless every tove is uffish.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nK: [1] is uffish",
+    "form": "(¬∀x(Mx→Kx)→∃x(Nx∧¬Rxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 7248,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Bungo galumphed over Zindle only if no borogoves are beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle\nL: [1] is beamish",
+    "form": "(∃x(Nx∧Rxb)→(Qca→¬∃x(Nx∧Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6154,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then a borogove snicker-snacked Rafin only if Bungo galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nb: Rafin\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∃x(Nx∧¬Jx)→(∃x(Nx∧Rxb)→Qcc))",
+    "language": "carroll"
+  },
+  {
+    "id": 7500,
+    "question": "Sentence:\n\nIf Zindle won't burble, then every rath is beamish only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nO: [1] is a rath\nL: [1] is beamish\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(¬Ga→(∀x(Ox→Lx)→∃x(Mx∧¬Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 296,
+    "question": "Sentence:\n\nZindle chortled at Rafin.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin",
+    "form": "Pab",
+    "language": "carroll"
+  },
+  {
+    "id": 9686,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Bungo, then Rafin is beamish only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo\nL: [1] is beamish\nb: Rafin\nO: [1] is a rath\nQ: [1] galumphed over [2]",
+    "form": "(∃x(Nx∧Rxc)→(Lb→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9316,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Bungo galumphed over Bungo only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∀x(Ox→Pxb)→(Qcc→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9112,
+    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then every borogove chortled at Bungo only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nN: [1] is a borogove\nP: [1] chortled at [2]\nO: [1] is a rath\nQ: [1] galumphed over [2]",
+    "form": "(¬Rcc→(∀x(Nx→Pxc)→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 832,
+    "question": "Sentence:\n\nA tove chortled at a tove.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]",
+    "form": "∃x∃y((Mx∧My)∧Pxy)",
+    "language": "carroll"
+  },
+  {
+    "id": 1244,
+    "question": "Sentence:\n\nEvery rath snicker-snacked a borogove.\n\nAbbreviations:\n\nO: [1] is a rath\nN: [1] is a borogove\nR: [1] snicker-snacked [2]",
+    "form": "∀x(Ox→∃y(Ny∧Rxy))",
+    "language": "carroll"
+  },
+  {
+    "id": 9720,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Bungo, then Rafin is a tove only if no toves gimbled.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nb: Rafin\nI: [1] gimbled",
+    "form": "(∃x(Nx∧Rxc)→(Mb→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6794,
+    "question": "Sentence:\n\nIf Zindle gimbled, then not all toves will whiffle only if every rath chortled at Bungo.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nM: [1] is a tove\nF: [1] will whiffle\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(Ia→(∃x(Mx∧¬Fx)→∀x(Ox→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 7134,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Zindle will whiffle only if every rath chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nF: [1] will whiffle\na: Zindle\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∃x(Nx∧Rxb)→(Fa→∀x(Ox→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9062,
+    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then every rath is beamish only if every rath chortled at Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nO: [1] is a rath\nL: [1] is beamish\nP: [1] chortled at [2]",
+    "form": "(¬Rcc→(∀x(Ox→Lx)→∀x(Ox→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5386,
+    "question": "Sentence:\n\nBungo isn't a borogove if and only if no toves will burble.\n\nAbbreviations:\n\nN: [1] is a borogove\nc: Bungo\nM: [1] is a tove\nG: [1] will burble",
+    "form": "(¬Nc↔¬∃x(Mx∧Gx))",
+    "language": "carroll"
+  },
+  {
+    "id": 10362,
+    "question": "Sentence:\n\nIf Rafin won't whiffle, then every rath chortled at Bungo only if no borogoves are beamish.\n\nAbbreviations:\n\nF: [1] will whiffle\nb: Rafin\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo\nN: [1] is a borogove\nL: [1] is beamish",
+    "form": "(¬Fb→(∀x(Ox→Pxc)→¬∃x(Nx∧Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 3804,
+    "question": "Sentence:\n\nA borogove galumphed over Rafin or every borogove chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nQ: [1] galumphed over [2]\nb: Rafin\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∃x(Nx∧Qxb)∨∀x(Nx→Pxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 7216,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Zindle didn't galumph over Bungo only if no borogoves are beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nL: [1] is beamish",
+    "form": "(∃x(Nx∧Rxb)→(¬Qac→¬∃x(Nx∧Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 5998,
+    "question": "Sentence:\n\nNo raths chortled at Rafin if and only if a rath gimbled.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nI: [1] gimbled",
+    "form": "(¬∃x(Ox∧Pxb)↔∃x(Ox∧Ix))",
+    "language": "carroll"
+  },
+  {
+    "id": 8446,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then every rath chortled at Rafin only if Rafin won't whiffle.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nO: [1] is a rath\nb: Rafin\nF: [1] will whiffle",
+    "form": "(∃x(Mx∧¬Pxc)→(∀x(Ox→Pxb)→¬Fb))",
+    "language": "carroll"
+  },
+  {
+    "id": 4240,
+    "question": "Sentence:\n\nNo toves are uffish or every tove snicker-snacked Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nK: [1] is uffish\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(¬∃x(Mx∧Kx)∨∀x(Mx→Rxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 284,
+    "question": "Sentence:\n\nRafin is a rath.\n\nAbbreviations:\n\nO: [1] is a rath\nb: Rafin",
+    "form": "Ob",
+    "language": "carroll"
+  },
+  {
+    "id": 8144,
+    "question": "Sentence:\n\nIf Zindle didn't chortle at Rafin, then every rath galumphed over Rafin only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(¬Pab→(∀x(Ox→Qxb)→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 2554,
+    "question": "Sentence:\n\nZindle didn't snicker-snacked Zindle and Rafin didn't galumph over Zindle.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\na: Zindle\nQ: [1] galumphed over [2]\nb: Rafin",
+    "form": "(¬Raa∧¬Qba)",
+    "language": "carroll"
+  },
+  {
+    "id": 5282,
+    "question": "Sentence:\n\nNot all raths gimbled if and only if Bungo is uffish.\n\nAbbreviations:\n\nO: [1] is a rath\nI: [1] gimbled\nK: [1] is uffish\nc: Bungo",
+    "form": "(∃x(Ox∧¬Ix)↔Kc)",
     "language": "carroll"
   },
   {
@@ -540,63 +1266,537 @@
     "language": "carroll"
   },
   {
+    "id": 1194,
+    "question": "Sentence:\n\nEvery borogove snicker-snacked a borogove.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]",
+    "form": "∀x(Nx→∃y(Ny∧Rxy))",
+    "language": "carroll"
+  },
+  {
+    "id": 9282,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Rafin won't whiffle only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nF: [1] will whiffle\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(∀x(Ox→Pxb)→(¬Fb→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 8824,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then every rath is mimsy only if Bungo galumphed over Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nJ: [1] is mimsy\nQ: [1] galumphed over [2]",
+    "form": "(∀x(Ox→Rxc)→(∀x(Ox→Jx)→Qcc))",
+    "language": "carroll"
+  },
+  {
+    "id": 4346,
+    "question": "Sentence:\n\nEvery tove galumphed over Rafin unless not all raths chortled at Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nb: Rafin\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(¬∃x(Ox∧¬Pxc)→∀x(Mx→Qxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 10472,
+    "question": "Sentence:\n\nIf every rath is beamish, then Zindle chortled at Zindle only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nP: [1] chortled at [2]\na: Zindle\nQ: [1] galumphed over [2]\nb: Rafin",
+    "form": "(∀x(Ox→Lx)→(Paa→∀x(Ox→Qxb)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6182,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Zindle won't burble only if no borogoves are beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nG: [1] will burble\na: Zindle\nL: [1] is beamish",
+    "form": "(∃x(Nx∧¬Jx)→(¬Ga→¬∃x(Nx∧Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 1364,
+    "question": "Sentence:\n\nNo raths chortled at a rath that chortled at it.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]",
+    "form": "¬∃x∃y((Ox∧Oy)∧(Pxy∧Pyx))",
+    "language": "carroll"
+  },
+  {
+    "id": 994,
+    "question": "Sentence:\n\nEvery tove galumphed over a borogove.\n\nAbbreviations:\n\nM: [1] is a tove\nN: [1] is a borogove\nQ: [1] galumphed over [2]",
+    "form": "∀x(Mx→∃y(Ny∧Qxy))",
+    "language": "carroll"
+  },
+  {
+    "id": 2900,
+    "question": "Sentence:\n\nNo toves chortled at Bungo and a rath galumphed over Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nO: [1] is a rath\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "(¬∃x(Mx∧Pxc)∧∃x(Ox∧Qxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 3190,
+    "question": "Sentence:\n\nEvery rath will whiffle or Zindle didn't chortle at Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nF: [1] will whiffle\nP: [1] chortled at [2]\na: Zindle\nb: Rafin",
+    "form": "(∀x(Ox→Fx)∨¬Pab)",
+    "language": "carroll"
+  },
+  {
+    "id": 4362,
+    "question": "Sentence:\n\nZindle didn't chortle at Zindle only if a borogove snicker-snacked Bungo.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo",
+    "form": "(¬Paa→∃x(Nx∧Rxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 8396,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then every rath snicker-snacked Bungo only if Rafin is a tove.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nb: Rafin",
+    "form": "(∃x(Mx∧¬Pxc)→(∀x(Ox→Rxc)→Mb))",
+    "language": "carroll"
+  },
+  {
+    "id": 2568,
+    "question": "Sentence:\n\nNo toves chortled at Rafin and not all raths galumphed over Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nb: Rafin\nO: [1] is a rath\nQ: [1] galumphed over [2]",
+    "form": "(¬∃x(Mx∧Pxb)∧∃x(Ox∧¬Qxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 4030,
+    "question": "Sentence:\n\nNo borogoves are beamish or a rath will burble.\n\nAbbreviations:\n\nN: [1] is a borogove\nL: [1] is beamish\nO: [1] is a rath\nG: [1] will burble",
+    "form": "(¬∃x(Nx∧Lx)∨∃x(Ox∧Gx))",
+    "language": "carroll"
+  },
+  {
+    "id": 178,
+    "question": "Sentence:\n\nBungo or Rafin are mimsy.\n\nAbbreviations:\n\nJ: [1] is mimsy\nc: Bungo\nb: Rafin",
+    "form": "(Jc∨Jb)",
+    "language": "carroll"
+  },
+  {
+    "id": 7072,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Bungo is beamish only if every rath is mimsy.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nL: [1] is beamish\nc: Bungo\nO: [1] is a rath\nJ: [1] is mimsy",
+    "form": "(∃x(Nx∧Rxb)→(Lc→∀x(Ox→Jx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 1764,
+    "question": "Sentence:\n\nA tove snicker-snacked a tove that snicker-snacked a tove.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]",
+    "form": "∃x∃y∃z(((Mx∧My)∧Mz)∧(Rxy∧Ryz))",
+    "language": "carroll"
+  },
+  {
+    "id": 3558,
+    "question": "Sentence:\n\nZindle didn't chortle at Rafin unless not all toves will burble.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nM: [1] is a tove\nG: [1] will burble",
+    "form": "(¬∃x(Mx∧¬Gx)→¬Pab)",
+    "language": "carroll"
+  },
+  {
+    "id": 496,
+    "question": "Sentence:\n\nNot all toves gimbled.\n\nAbbreviations:\n\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "∃x(Mx∧¬Ix)",
+    "language": "carroll"
+  },
+  {
+    "id": 7664,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then Bungo didn't snicker-snacked Bungo only if a borogove snicker-snacked Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nc: Bungo",
+    "form": "(∀x(Nx→Jx)→(¬Rcc→∃x(Nx∧Rxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 2838,
+    "question": "Sentence:\n\nEvery rath galumphed over Rafin and only borogoves gyred.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin\nN: [1] is a borogove\nH: [1] gyred",
+    "form": "(∀x(Ox→Qxb)∧∀x(Hx→Nx))",
+    "language": "carroll"
+  },
+  {
+    "id": 7498,
+    "question": "Sentence:\n\nIf Zindle won't burble, then every rath is beamish only if Bungo galumphed over Bungo.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nO: [1] is a rath\nL: [1] is beamish\nQ: [1] galumphed over [2]\nc: Bungo",
+    "form": "(¬Ga→(∀x(Ox→Lx)→Qcc))",
+    "language": "carroll"
+  },
+  {
+    "id": 3750,
+    "question": "Sentence:\n\nEvery tove is uffish or a rath will burble.\n\nAbbreviations:\n\nM: [1] is a tove\nK: [1] is uffish\nO: [1] is a rath\nG: [1] will burble",
+    "form": "(∀x(Mx→Kx)∨∃x(Ox∧Gx))",
+    "language": "carroll"
+  },
+  {
+    "id": 3130,
+    "question": "Sentence:\n\nNo toves galumphed over Zindle unless a rath galumphed over Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nO: [1] is a rath\nb: Rafin",
+    "form": "(¬∃x(Ox∧Qxb)→¬∃x(Mx∧Qxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 4308,
+    "question": "Sentence:\n\nA rath is beamish unless every tove will burble.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nM: [1] is a tove\nG: [1] will burble",
+    "form": "(¬∀x(Mx→Gx)→∃x(Ox∧Lx))",
+    "language": "carroll"
+  },
+  {
+    "id": 7452,
+    "question": "Sentence:\n\nIf Zindle won't burble, then a borogove snicker-snacked Bungo only if no toves gimbled.\n\nAbbreviations:\n\nG: [1] will burble\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(¬Ga→(∃x(Nx∧Rxc)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 8926,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then not all toves galumphed over Bungo only if Zindle chortled at Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nQ: [1] galumphed over [2]\nP: [1] chortled at [2]\na: Zindle",
+    "form": "(∀x(Ox→Rxc)→(∃x(Mx∧¬Qxc)→Paa))",
+    "language": "carroll"
+  },
+  {
+    "id": 8970,
+    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then not all toves galumphed over Zindle only if Zindle will whiffle.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nF: [1] will whiffle",
+    "form": "(¬Rcc→(∃x(Mx∧¬Qxa)→Fa))",
+    "language": "carroll"
+  },
+  {
+    "id": 5802,
+    "question": "Sentence:\n\nZindle didn't snicker-snacked Bungo if and only if Rafin chortled at Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\na: Zindle\nc: Bungo\nP: [1] chortled at [2]\nb: Rafin",
+    "form": "(¬Rac↔Pbc)",
+    "language": "carroll"
+  },
+  {
+    "id": 4774,
+    "question": "Sentence:\n\nZindle didn't galumph over Bungo only if every tove chortled at Bungo.\n\nAbbreviations:\n\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nM: [1] is a tove\nP: [1] chortled at [2]",
+    "form": "(¬Qac→∀x(Mx→Pxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 9242,
+    "question": "Sentence:\n\nIf every rath chortled at Rafin, then Rafin is a tove only if no toves gimbled.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nb: Rafin\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(∀x(Ox→Pxb)→(Mb→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 2364,
+    "question": "Sentence:\n\nNo toves galumphed over Bungo and not all raths galumphed over Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\nO: [1] is a rath\nb: Rafin",
+    "form": "(¬∃x(Mx∧Qxc)∧∃x(Ox∧¬Qxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 9494,
+    "question": "Sentence:\n\nIf not all toves galumphed over Zindle, then Zindle will whiffle only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle\nF: [1] will whiffle\nc: Bungo",
+    "form": "(∃x(Mx∧¬Qxa)→(Fa→∃x(Mx∧¬Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9410,
+    "question": "Sentence:\n\nIf Bungo is beamish, then not all toves will whiffle only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo\nM: [1] is a tove\nF: [1] will whiffle\nO: [1] is a rath\nQ: [1] galumphed over [2]",
+    "form": "(Lc→(∃x(Mx∧¬Fx)→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 3792,
+    "question": "Sentence:\n\nA borogove galumphed over Rafin or a rath galumphed over Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nQ: [1] galumphed over [2]\nb: Rafin\nO: [1] is a rath\na: Zindle",
+    "form": "(∃x(Nx∧Qxb)∨∃x(Ox∧Qxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 6340,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Bungo didn't snicker-snacked Bungo only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nc: Bungo\nO: [1] is a rath\nQ: [1] galumphed over [2]",
+    "form": "(∃x(Nx∧¬Jx)→(¬Rcc→¬∃x(Ox∧Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 8656,
+    "question": "Sentence:\n\nIf not all toves chortled at Bungo, then Bungo galumphed over Bungo only if no toves gimbled.\n\nAbbreviations:\n\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nQ: [1] galumphed over [2]\nI: [1] gimbled",
+    "form": "(∃x(Mx∧¬Pxc)→(Qcc→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 1964,
+    "question": "Sentence:\n\nBungo snicker-snacked a borogove.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo",
+    "form": "∃x(Nx∧Rcx)",
+    "language": "carroll"
+  },
+  {
+    "id": 5476,
+    "question": "Sentence:\n\nEvery borogove is mimsy just in case no toves snicker-snacked Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nM: [1] is a tove\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(∀x(Nx→Jx)↔¬∃x(Mx∧Rxa))",
+    "language": "carroll"
+  },
+  {
     "id": 6152,
     "question": "Sentence:\n\nIf not all borogoves are mimsy, then a borogove snicker-snacked Rafin only if Bungo galumphed over Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nb: Rafin\nQ: [1] galumphed over [2]\nc: Bungo\na: Zindle",
     "form": "(∃x(Nx∧¬Jx)→(∃x(Nx∧Rxb)→Qca))",
     "language": "carroll"
   },
   {
-    "id": 8176,
-    "question": "Sentence:\n\nIf Rafin didn't snicker-snacked Rafin, then not all toves chortled at Bungo only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nN: [1] is a borogove",
-    "form": "(¬Rbb→(∃x(Mx∧¬Pxc)→∀x(Nx→Pxc)))",
+    "id": 2836,
+    "question": "Sentence:\n\nEvery rath galumphed over Rafin and every borogove chortled at Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin\nN: [1] is a borogove\nP: [1] chortled at [2]\na: Zindle",
+    "form": "(∀x(Ox→Qxb)∧∀x(Nx→Pxa))",
     "language": "carroll"
   },
   {
-    "id": 6696,
-    "question": "Sentence:\n\nIf Zindle gimbled, then every rath snicker-snacked Bungo only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nN: [1] is a borogove\nP: [1] chortled at [2]",
-    "form": "(Ia→(∀x(Ox→Rxc)→∀x(Nx→Pxc)))",
+    "id": 844,
+    "question": "Sentence:\n\nEvery tove chortled at a borogove.\n\nAbbreviations:\n\nM: [1] is a tove\nN: [1] is a borogove\nP: [1] chortled at [2]",
+    "form": "∀x(Mx→∃y(Ny∧Pxy))",
     "language": "carroll"
   },
   {
-    "id": 1128,
-    "question": "Sentence:\n\nEvery tove snicker-snacked a tove.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]",
-    "form": "∀x(Mx→∃y(My∧Rxy))",
+    "id": 2136,
+    "question": "Sentence:\n\nNot all raths will whiffle and Rafin is uffish.\n\nAbbreviations:\n\nO: [1] is a rath\nF: [1] will whiffle\nK: [1] is uffish\nb: Rafin",
+    "form": "(∃x(Ox∧¬Fx)∧Kb)",
     "language": "carroll"
   },
   {
-    "id": 6270,
-    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Rafin didn't snicker-snacked Rafin only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nb: Rafin\nO: [1] is a rath\nQ: [1] galumphed over [2]",
-    "form": "(∃x(Nx∧¬Jx)→(¬Rbb→∀x(Ox→Qxb)))",
+    "id": 5684,
+    "question": "Sentence:\n\nNot all borogoves galumphed over Zindle if and only if a borogove is mimsy.\n\nAbbreviations:\n\nN: [1] is a borogove\nQ: [1] galumphed over [2]\na: Zindle\nJ: [1] is mimsy",
+    "form": "(∃x(Nx∧¬Qxa)↔∃x(Nx∧Jx))",
     "language": "carroll"
   },
   {
-    "id": 84,
-    "question": "Sentence:\n\nZindle and Bungo gyred.\n\nAbbreviations:\n\nH: [1] gyred\na: Zindle\nc: Bungo",
-    "form": "(Ha∧Hc)",
+    "id": 9462,
+    "question": "Sentence:\n\nIf Bungo is beamish, then every rath galumphed over Rafin only if no raths galumphed over Bungo.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo\nO: [1] is a rath\nQ: [1] galumphed over [2]\nb: Rafin",
+    "form": "(Lc→(∀x(Ox→Qxb)→¬∃x(Ox∧Qxc)))",
     "language": "carroll"
   },
   {
-    "id": 872,
-    "question": "Sentence:\n\nThere is not a tove that every rath chortled at.\n\nAbbreviations:\n\nM: [1] is a tove\nO: [1] is a rath\nP: [1] chortled at [2]",
-    "form": "¬∃x(Mx∧∀y(Oy→Pyx))",
+    "id": 3468,
+    "question": "Sentence:\n\nA rath galumphed over Bungo unless Zindle isn't a borogove.\n\nAbbreviations:\n\nO: [1] is a rath\nQ: [1] galumphed over [2]\nc: Bungo\nN: [1] is a borogove\na: Zindle",
+    "form": "(¬¬Na→∃x(Ox∧Qxc))",
     "language": "carroll"
   },
   {
-    "id": 6264,
-    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Rafin didn't snicker-snacked Rafin only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo",
-    "form": "(∃x(Nx∧¬Jx)→(¬Rbb→∃x(Mx∧¬Qxc)))",
+    "id": 6364,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Bungo is beamish only if a borogove snicker-snacked Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nL: [1] is beamish\nc: Bungo\nR: [1] snicker-snacked [2]",
+    "form": "(∃x(Nx∧¬Jx)→(Lc→∃x(Nx∧Rxc)))",
     "language": "carroll"
   },
   {
-    "id": 10944,
-    "question": "Sentence:\n\nZindle gyred but it is not the case that Zindle isn't mimsy.\n\nAbbreviations:\n\nH: [1] gyred\na: Zindle\nJ: [1] is mimsy",
-    "form": "(Ha∧¬¬Ja)",
+    "id": 5126,
+    "question": "Sentence:\n\nA tove galumphed over Bungo only if Rafin didn't chortle at Rafin.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nc: Bungo\nP: [1] chortled at [2]\nb: Rafin",
+    "form": "(∃x(Mx∧Qxc)→¬Pbb)",
     "language": "carroll"
   },
   {
-    "id": 4240,
-    "question": "Sentence:\n\nNo toves are uffish or every tove snicker-snacked Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nK: [1] is uffish\nR: [1] snicker-snacked [2]\na: Zindle",
-    "form": "(¬∃x(Mx∧Kx)∨∀x(Mx→Rxa))",
+    "id": 6216,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Zindle didn't chortle at Rafin only if not all toves chortled at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nM: [1] is a tove\nc: Bungo",
+    "form": "(∃x(Nx∧¬Jx)→(¬Pab→∃x(Mx∧¬Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 11340,
+    "question": "Sentence:\n\nEvery rath gyred and Bungo isn't mimsy.\n\nAbbreviations:\n\nO: [1] is a rath\nH: [1] gyred\nJ: [1] is mimsy\nc: Bungo",
+    "form": "(∀x(Ox→Hx)∧¬Jc)",
+    "language": "carroll"
+  },
+  {
+    "id": 8874,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Bungo, then Zindle didn't galumph over Bungo only if no toves gimbled.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nQ: [1] galumphed over [2]\na: Zindle\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(∀x(Ox→Rxc)→(¬Qac→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6100,
+    "question": "Sentence:\n\nIf not all borogoves are mimsy, then Zindle gimbled only if every borogove is mimsy.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nI: [1] gimbled\na: Zindle",
+    "form": "(∃x(Nx∧¬Jx)→(Ia→∀x(Nx→Jx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 4932,
+    "question": "Sentence:\n\nIf Bungo gimbled, then not all toves are beamish.\n\nAbbreviations:\n\nI: [1] gimbled\nc: Bungo\nM: [1] is a tove\nL: [1] is beamish",
+    "form": "(Ic→∃x(Mx∧¬Lx))",
+    "language": "carroll"
+  },
+  {
+    "id": 4008,
+    "question": "Sentence:\n\nNot all toves galumphed over Rafin unless a rath is beamish.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nb: Rafin\nO: [1] is a rath\nL: [1] is beamish",
+    "form": "(¬∃x(Ox∧Lx)→∃x(Mx∧¬Qxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 4898,
+    "question": "Sentence:\n\nA rath chortled at Zindle only if not all borogoves snicker-snacked Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin",
+    "form": "(∃x(Ox∧Pxa)→∃x(Nx∧¬Rxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 2100,
+    "question": "Sentence:\n\nNot all raths will whiffle and every borogove is uffish.\n\nAbbreviations:\n\nO: [1] is a rath\nF: [1] will whiffle\nN: [1] is a borogove\nK: [1] is uffish",
+    "form": "(∃x(Ox∧¬Fx)∧∀x(Nx→Kx))",
+    "language": "carroll"
+  },
+  {
+    "id": 4478,
+    "question": "Sentence:\n\nEvery rath snicker-snacked Rafin only if every rath galumphed over Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nb: Rafin\nQ: [1] galumphed over [2]",
+    "form": "(∀x(Ox→Rxb)→∀x(Ox→Qxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 1514,
+    "question": "Sentence:\n\nNo borogoves snicker-snacked a rath that snicker-snacked it.\n\nAbbreviations:\n\nN: [1] is a borogove\nO: [1] is a rath\nR: [1] snicker-snacked [2]",
+    "form": "¬∃x∃y((Nx∧Oy)∧(Rxy∧Ryx))",
+    "language": "carroll"
+  },
+  {
+    "id": 3850,
+    "question": "Sentence:\n\nBungo isn't a borogove unless not all toves will burble.\n\nAbbreviations:\n\nN: [1] is a borogove\nc: Bungo\nM: [1] is a tove\nG: [1] will burble",
+    "form": "(¬∃x(Mx∧¬Gx)→¬Nc)",
+    "language": "carroll"
+  },
+  {
+    "id": 2854,
+    "question": "Sentence:\n\nA rath is uffish and every borogove snicker-snacked Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nK: [1] is uffish\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(∃x(Ox∧Kx)∧∀x(Nx→Rxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 9044,
+    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then not all toves will whiffle only if not all toves galumphed over Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nF: [1] will whiffle\nQ: [1] galumphed over [2]",
+    "form": "(¬Rcc→(∃x(Mx∧¬Fx)→∃x(Mx∧¬Qxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 8370,
+    "question": "Sentence:\n\nIf Rafin didn't snicker-snacked Rafin, then no borogoves are beamish only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nb: Rafin\nN: [1] is a borogove\nL: [1] is beamish\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(¬Rbb→(¬∃x(Nx∧Lx)→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 770,
+    "question": "Sentence:\n\nEvery tove snicker-snacked Bungo.\n\nAbbreviations:\n\nM: [1] is a tove\nR: [1] snicker-snacked [2]\nc: Bungo",
+    "form": "∀x(Mx→Rxc)",
+    "language": "carroll"
+  },
+  {
+    "id": 8030,
+    "question": "Sentence:\n\nIf Zindle didn't chortle at Rafin, then not all toves galumphed over Zindle only if no toves gimbled.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\nI: [1] gimbled",
+    "form": "(¬Pab→(∃x(Mx∧¬Qxa)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 3772,
+    "question": "Sentence:\n\nEvery tove is uffish unless every tove snicker-snacked Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nK: [1] is uffish\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(¬∀x(Mx→Rxa)→∀x(Mx→Kx))",
+    "language": "carroll"
+  },
+  {
+    "id": 2542,
+    "question": "Sentence:\n\nZindle didn't snicker-snacked Zindle but it is not the case that Rafin isn't a tove.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\na: Zindle\nM: [1] is a tove\nb: Rafin",
+    "form": "(¬Raa∧¬¬Mb)",
+    "language": "carroll"
+  },
+  {
+    "id": 4636,
+    "question": "Sentence:\n\nIf a tove galumphed over Rafin, then no toves snicker-snacked Zindle.\n\nAbbreviations:\n\nM: [1] is a tove\nQ: [1] galumphed over [2]\nb: Rafin\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(∃x(Mx∧Qxb)→¬∃x(Mx∧Rxa))",
+    "language": "carroll"
+  },
+  {
+    "id": 6020,
+    "question": "Sentence:\n\nBungo isn't beamish if and only if a borogove chortled at Bungo.\n\nAbbreviations:\n\nL: [1] is beamish\nc: Bungo\nN: [1] is a borogove\nP: [1] chortled at [2]",
+    "form": "(¬Lc↔∃x(Nx∧Pxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 2112,
+    "question": "Sentence:\n\nNot all raths will whiffle and no toves chortled at Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nF: [1] will whiffle\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∃x(Ox∧¬Fx)∧¬∃x(Mx∧Pxc))",
+    "language": "carroll"
+  },
+  {
+    "id": 10744,
+    "question": "Sentence:\n\nA rath is beamish and Bungo didn't snicker-snacked Bungo.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nR: [1] snicker-snacked [2]\nc: Bungo",
+    "form": "(∃x(Ox∧Lx)∧¬Rcc)",
+    "language": "carroll"
+  },
+  {
+    "id": 5550,
+    "question": "Sentence:\n\nNo borogoves gimbled just in case Zindle didn't chortle at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nI: [1] gimbled\nP: [1] chortled at [2]\na: Zindle\nc: Bungo",
+    "form": "(¬∃x(Nx∧Ix)↔¬Pac)",
+    "language": "carroll"
+  },
+  {
+    "id": 2008,
+    "question": "Sentence:\n\nA borogove is uffish but it is not the case that Bungo didn't chortle at Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nK: [1] is uffish\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(∃x(Nx∧Kx)∧¬¬Pcc)",
+    "language": "carroll"
+  },
+  {
+    "id": 322,
+    "question": "Sentence:\n\nBungo didn't chortle at Rafin.\n\nAbbreviations:\n\nP: [1] chortled at [2]\nc: Bungo\nb: Rafin",
+    "form": "¬Pcb",
+    "language": "carroll"
+  },
+  {
+    "id": 4588,
+    "question": "Sentence:\n\nIf a rath snicker-snacked Bungo, then a borogove snicker-snacked Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nN: [1] is a borogove\nb: Rafin",
+    "form": "(∃x(Ox∧Rxc)→∃x(Nx∧Rxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 4606,
+    "question": "Sentence:\n\nA rath snicker-snacked Bungo only if Bungo is a borogove.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nc: Bungo\nN: [1] is a borogove",
+    "form": "(∃x(Ox∧Rxc)→Nc)",
+    "language": "carroll"
+  },
+  {
+    "id": 5626,
+    "question": "Sentence:\n\nNo toves will burble if and only if no borogoves are beamish.\n\nAbbreviations:\n\nM: [1] is a tove\nG: [1] will burble\nN: [1] is a borogove\nL: [1] is beamish",
+    "form": "(¬∃x(Mx∧Gx)↔¬∃x(Nx∧Lx))",
+    "language": "carroll"
+  },
+  {
+    "id": 9858,
+    "question": "Sentence:\n\nIf Zindle will whiffle, then every rath is beamish only if no borogoves are beamish.\n\nAbbreviations:\n\nF: [1] will whiffle\na: Zindle\nO: [1] is a rath\nL: [1] is beamish\nN: [1] is a borogove",
+    "form": "(Fa→(∀x(Ox→Lx)→¬∃x(Nx∧Lx)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6990,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then not all toves chortled at Bungo only if Rafin is beamish.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nL: [1] is beamish",
+    "form": "(∃x(Nx∧Rxb)→(∃x(Mx∧¬Pxc)→Lb))",
+    "language": "carroll"
+  },
+  {
+    "id": 6582,
+    "question": "Sentence:\n\nIf Zindle gimbled, then a borogove snicker-snacked Rafin only if not all toves chortled at Bungo.\n\nAbbreviations:\n\nI: [1] gimbled\na: Zindle\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo",
+    "form": "(Ia→(∃x(Nx∧Rxb)→∃x(Mx∧¬Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 4304,
+    "question": "Sentence:\n\nA rath is beamish unless every tove snicker-snacked Zindle.\n\nAbbreviations:\n\nO: [1] is a rath\nL: [1] is beamish\nM: [1] is a tove\nR: [1] snicker-snacked [2]\na: Zindle",
+    "form": "(¬∀x(Mx→Rxa)→∃x(Ox∧Lx))",
+    "language": "carroll"
+  },
+  {
+    "id": 8966,
+    "question": "Sentence:\n\nIf Bungo didn't snicker-snacked Bungo, then Bungo is beamish only if every borogove chortled at Bungo.\n\nAbbreviations:\n\nR: [1] snicker-snacked [2]\nc: Bungo\nL: [1] is beamish\nN: [1] is a borogove\nP: [1] chortled at [2]",
+    "form": "(¬Rcc→(Lc→∀x(Nx→Pxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 9722,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Bungo, then not all toves will whiffle only if Zindle didn't galumph over Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nc: Bungo\nM: [1] is a tove\nF: [1] will whiffle\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "(∃x(Nx∧Rxc)→(∃x(Mx∧¬Fx)→¬Qac))",
+    "language": "carroll"
+  },
+  {
+    "id": 10542,
+    "question": "Sentence:\n\nIf every rath chortled at Bungo, then Zindle chortled at Zindle only if no toves gimbled.\n\nAbbreviations:\n\nO: [1] is a rath\nP: [1] chortled at [2]\nc: Bungo\na: Zindle\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(∀x(Ox→Pxc)→(Paa→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 4476,
+    "question": "Sentence:\n\nIf every rath snicker-snacked Rafin, then every rath galumphed over Rafin.\n\nAbbreviations:\n\nO: [1] is a rath\nR: [1] snicker-snacked [2]\nb: Rafin\nQ: [1] galumphed over [2]",
+    "form": "(∀x(Ox→Rxb)→∀x(Ox→Qxb))",
+    "language": "carroll"
+  },
+  {
+    "id": 10322,
+    "question": "Sentence:\n\nIf Zindle didn't galumph over Bungo, then no borogoves are beamish only if no toves gimbled.\n\nAbbreviations:\n\nQ: [1] galumphed over [2]\na: Zindle\nc: Bungo\nN: [1] is a borogove\nL: [1] is beamish\nM: [1] is a tove\nI: [1] gimbled",
+    "form": "(¬Qac→(¬∃x(Nx∧Lx)→¬∃x(Mx∧Ix)))",
+    "language": "carroll"
+  },
+  {
+    "id": 7624,
+    "question": "Sentence:\n\nIf every borogove is mimsy, then not all toves chortled at Bungo only if Zindle will whiffle.\n\nAbbreviations:\n\nN: [1] is a borogove\nJ: [1] is mimsy\nM: [1] is a tove\nP: [1] chortled at [2]\nc: Bungo\nF: [1] will whiffle\na: Zindle",
+    "form": "(∀x(Nx→Jx)→(∃x(Mx∧¬Pxc)→Fa))",
+    "language": "carroll"
+  },
+  {
+    "id": 3536,
+    "question": "Sentence:\n\nZindle didn't chortle at Rafin unless Bungo will burble.\n\nAbbreviations:\n\nP: [1] chortled at [2]\na: Zindle\nb: Rafin\nG: [1] will burble\nc: Bungo",
+    "form": "(¬Gc→¬Pab)",
+    "language": "carroll"
+  },
+  {
+    "id": 6930,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Zindle didn't chortle at Rafin only if a borogove snicker-snacked Bungo.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nP: [1] chortled at [2]\na: Zindle\nc: Bungo",
+    "form": "(∃x(Nx∧Rxb)→(¬Pab→∃x(Nx∧Rxc)))",
+    "language": "carroll"
+  },
+  {
+    "id": 6960,
+    "question": "Sentence:\n\nIf a borogove snicker-snacked Rafin, then Rafin didn't snicker-snacked Rafin only if not all toves galumphed over Zindle.\n\nAbbreviations:\n\nN: [1] is a borogove\nR: [1] snicker-snacked [2]\nb: Rafin\nM: [1] is a tove\nQ: [1] galumphed over [2]\na: Zindle",
+    "form": "(∃x(Nx∧Rxb)→(¬Rbb→∃x(Mx∧¬Qxa)))",
     "language": "carroll"
   }
 ]

@@ -149,7 +149,7 @@ def save_questions(questions, output_file):
 if __name__ == "__main__":
     try:
         # Generate questions for Carroll and their English counterparts
-        carroll_questions, english_questions = generate_questions(language="carroll", num_questions=100)
+        carroll_questions, english_questions = generate_questions(language="carroll", num_questions=300)
 
         # Save both sets of questions
         save_questions(carroll_questions, "questions_validity_carroll.json")

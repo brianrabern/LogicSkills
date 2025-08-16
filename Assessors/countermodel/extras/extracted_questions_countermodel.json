@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "62d4f6152155aa29",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Mx∧My)∧Pxy), (¬∃x(Ox∧Qxc)→Mb), (¬∃x(Nx∧Rxc)→∃x(Nx∧¬Rxb)), (∀x(Ox→Rxc)→(Mb→∀x(Nx→Pxc))), (Pcc∧∀x(Ox→Rxa)) |= Mc"
+  },
+  {
+    "id": "60ea949e81bab4a3",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Qxc)∧¬¬Mb), (¬Rca∧¬Pcc), (∃x(Ox∧Rxc)→¬∃x(Mx∧Rxa)), (¬Rbb→(∀x(Ox→Pxc)→∀x(Ox→Qxb))) |= (¬∃x(Mx∧Qxc)∧¬¬Raa)"
+  },
+  {
+    "id": "3df85171ad457ecc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Nx∧My)∧Mz)∧(Rxy∧Ryz)), (∃x(Nx∧Kx)∧¬Pcc), (∃x(Mx∧¬Pxc)∧¬Pba) |= (∃x(Nx∧Kx)∧¬∃x(Mx∧Pxc))"
+  },
+  {
+    "id": "e9f1de32bb8cf78d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Pxc), (¬Pcc∧∀x(Hx→Nx)), (∃x(Mx∧¬Pxb)→∃x(Mx∧¬Lx)), (∀x(Ox→Rxc)→(∃x(Nx∧Rxc)→Lb)), (¬La∧¬Hb) |= Mc"
+  },
+  {
+    "id": "81ec3ffb8398bfaf",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧¬Fx)∧∀x(Ix→Nx)), (∃x(Ox∧Qxa)∧¬¬Qba), (Ia→(∃x(Mx∧¬Qxa)→∃x(Mx∧¬Fx))) |= (Fb∧Fa)"
+  },
+  {
+    "id": "3df74dd3d1a87dc0",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Ox∧Oy)∧(Pxy∧Pyx)), (∃x(Nx∧¬Lx)∧¬Kb), (¬Pbc∧¬Kb) |= (∃x(Nx∧¬Lx)∧¬¬Pbc)"
+  },
+  {
+    "id": "247d1e8b0259a1a0",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧Rax), (¬Nc↔¬Rac), (∃x(Nx∧¬Jx)→(∃x(Nx∧Rxb)→Qca)), (∃x(Nx∧¬Jx)→(¬Fb→∃x(Mx∧¬Qxc))), (Oc∧¬∃x(Nx∧Fx)) |= (∀x(Fx→Nx)∧∃x(Nx∧¬Fx))"
+  },
+  {
+    "id": "c267e9e6c8273a49",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ob, ¬∃x∃y((Nx∧My)∧Pxy), ¬∃x∃y((Ox∧Ny)∧Qxy) |= ∃x∃y((Nx∧Oy)∧Qxy)"
+  },
+  {
+    "id": "033a119961777e1f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬La, (Fa→(∀x(Ox→Lx)→∀x(Nx→Pxc))), (Pca∧¬∃x(Nx∧Fx)) |= (Fa∧Fc)"
+  },
+  {
+    "id": "251d989990a7e637",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Nx∧Ny)∧Qxy), (∃x(Mx∧¬Pxc)∧¬Mb), (Pbb↔∃x(Nx∧Pxc)), (∀x(Ox→Ix)∧¬Pbc) |= (∃x(Mx∧¬Pxc)∧¬∃x(Mx∧Pxb))"
+  },
+  {
+    "id": "77550aae5bc66be3",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Pxa), ∃x(Mx∧Pxc), (∃x(Ox∧¬Fx)∧∃x(Ox∧Kx)) |= ∀x(Mx→Pax)"
+  },
+  {
+    "id": "57c8277c2dc66776",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧∀y((Ny∧Qyx)→Qxy)), ∀x(Mx→Qax), (∃x(Mx∧¬Rxa)∧¬¬Lb) |= ∃x(Mx∧Qxa)"
+  },
+  {
+    "id": "23c239e9575f01bc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Raa∧∀x(Ox→Qxb)), (∀x(Ox→Qxb)→Rbb), (∀x(Ox→Rxc)→(∀x(Ox→Jx)→¬Qac)) |= ¬Ja"
+  },
+  {
+    "id": "bf73a966c0bef764",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Mx∧My)∧Rxy), ∃x∃y((Ox∧My)∧Rxy), (¬Raa∧¬Mb), (∀x(Ox→Fx)∨¬Mb), (¬∃x(Nx∧Rxc)→∀x(Ox→Qxb)) |= ∃x(Mx∧∀y(My→Ryx))"
+  },
+  {
+    "id": "cd559f62eab782ce",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Nx∧Gx), (Ia→(∀x(Nx→Jx)→∀x(Ox→Jx))), (∃x(Ox∧Lx)∧¬La) |= (∃x(Ox∧Lx)∧∃x(Nx∧Gx))"
+  },
+  {
+    "id": "4102b9b241470abf",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧Kx)∧¬¬Pbc), (∃x(Ox∧Rxa)∧∀x(Nx→Kx)), (¬Pab→(∀x(Nx→Pxc)→¬∃x(Ox∧Qxc))) |= (Ka∧Kb)"
+  },
+  {
+    "id": "4ed6df6c222c49df",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Paa, (∀x(Ox→Pxb)→(∀x(Ox→Jx)→Mb)), (∃x(Nx∧Pxb)∧Pcc), (¬Ja∧¬Pbc) |= (¬Pab∨∃x(Nx∧Jx))"
+  },
+  {
+    "id": "430e88621619b83a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∀x(Nx→Hx)↔¬∃x(Mx∧Rxa)), (Ib∧¬Pbc), (¬Kb∧Oc) |= (¬Pbc∧Kb)"
+  },
+  {
+    "id": "c141ec8638f8f0c9",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Nc→Nc), (Pcc∧∃x(Mx∧¬Qxa)), (∀x(Ox→Hx)∧¬Oc) |= ∀x(Nx→Pxc)"
+  },
+  {
+    "id": "d099d8e9dfc24210",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→∃y(My∧Rxy)), ∃x∃y∃z(((Ox∧My)∧Mz)∧(Qxy∧Qyz)), (¬∃x(Mx∧Qxc)∧¬¬Pbc), (∃x(Nx∧¬Rxb)∨∀x(Mx→Rxa)), (∀x(Ox→Rxb)→∃x(Nx∧¬Rxb)) |= ∃x(Mx∧Qcx)"
+  },
+  {
+    "id": "4eeba412ab809d84",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧¬Fx)∧∃x(Mx∧¬Pxc)), (¬∃x(Mx∧Pxc)∧∀x(Nx→Pxa)), (∃x(Mx∧¬Qxa)→(Qca→∀x(Ox→Pxc))) |= Fa"
+  },
+  {
+    "id": "a6a60777dafca70e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧¬Qxb)∧¬¬Pbc), (∃x(Nx∧¬Fx)∧∀x(Mx→Fx)), (∃x(Nx∧¬Fx)∧¬∃x(Nx∧Fx)) |= (∃x(Nx∧¬Fx)∧¬Pbc)"
+  },
+  {
+    "id": "aead2cf03acca75b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Kb, (∃x(Mx∧¬Pxc)∧¬∃x(Mx∧Pxb)), (Pcc∧¬∃x(Mx∧Pxb)), (∀x(Ox→Qxb)→∃x(Mx∧Qxc)) |= (∃x(Mx∧¬Pxc)∧¬∃x(Mx∧Pxc))"
+  },
+  {
+    "id": "ae52b93b416d852a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Rca∧¬Mb), (∀x(Ox→Rxb)→∃x(Ox∧Rxc)), (∃x(Nx∧Pxb)∧¬∃x(Nx∧Gx)) |= (∃x(Nx∧Pxb)∧Mb)"
+  },
+  {
+    "id": "a14c016eed3c3038",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Nx∧My)∧Qxy), (∀x(Ox→Qxb)∧∃x(Ox∧Kx)), (∀x(Ox→Qxb)→∃x(Nx∧¬Qxc)) |= ¬∃x(Nx∧Qxc)"
+  },
+  {
+    "id": "80cd21ade2b642d8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧Qxc), (∀x(Ox→Rxc)→(∃x(Mx∧¬Qxa)→Fa)), (∃x(Nx∧Gx)∧¬Mb) |= ¬Fa"
+  },
+  {
+    "id": "a80087a3ff98b9e2",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧¬Rxc), ∀x(Ox→∃y(My∧Rxy)), ∀x(Ox→∀y((My∧∀z(Nz→Ryz))→Rxy)) |= ¬∃x(Mx∧∀y(Oy→Rxy))"
+  },
+  {
+    "id": "74335f45308e8472",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→Kx), (∃x(Ox∧Rxa)∧Kb), (¬∀x(Mx→Rxa)→∀x(Nx→Pxc)) |= Ka"
+  },
+  {
+    "id": "4c8807e28cff70c8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧∀y(Ny→Qyx)), (¬Rbb→(∃x(Mx∧¬Qxc)→¬∃x(Ox∧Qxc))), (∃x(Nx∧Pxb)∧∀x(Jx→Mx)) |= ∀x(Mx→∃y(Ny∧Qxy))"
+  },
+  {
+    "id": "be7e587b0ac2eb30",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ob, ¬Qbc, (¬∃x(Mx∧Pxb)∧¬Rbc) |= ¬∃x(Ox∧Qxc)"
+  },
+  {
+    "id": "2699961c96083c66",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧Rxa), ∃x(Nx∧Rbx), (∃x(Nx∧Kx)∧¬Rbc) |= (∃x(Nx∧Gx)∧¬∃x(Nx∧Gx))"
+  },
+  {
+    "id": "4be8b0c3810e28a3",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∃y(My∧(Pxy∧Pyx))), (Fa→(Mb→∃x(Mx∧¬Fx))), (Pca∧Mb) |= ∀x(Mx→Pxb)"
+  },
+  {
+    "id": "218b662fb97691f8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ga∨Gc), (∃x(Nx∧¬Jx)→(Lc→∀x(Ox→Lx))), (¬Ja∧∀x(Jx→Mx)), (∀x(Ox→Hx)∧Mb), (∀x(Jx→Mx)∧¬Pbc) |= ¬∃x(Mx∧Pxc)"
+  },
+  {
+    "id": "675b9a969ae8d9fc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→Qxb), ∃x∃y((Ox∧Ny)∧Pxy), (Ja→Rbb) |= ∀x(Nx→Qbx)"
+  },
+  {
+    "id": "d1286e03263ba7ca",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧¬Pxc), (∃x(Mx∧¬Rxa)∧Pcc), (¬Jc∧Oc) |= ∀x(Ox→Pxc)"
+  },
+  {
+    "id": "2bac8b638ac5016e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Mx∧Oy)∧Oz)∧(Pxy∧Pyz)), (¬∃x(Mx∧Pxb)∧¬∃x(Mx∧Pxc)), (¬Pab→(¬Qac→Qca)) |= ∀x(Mx→Pxb)"
+  },
+  {
+    "id": "66056677ba0b44fa",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Nx∧Ny)∧Qxy), (∃x(Mx∧¬Pxc)∧¬Mb), (Pbb↔∃x(Nx∧Pxc)), (∀x(Ox→Ix)∧¬Pbc) |= (∃x(Mx∧¬Pxc)∧¬¬Pbc)"
+  },
+  {
+    "id": "40bca93ff46b1a14",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧Pxa)→∀x(Ox→Pxb)), (∃x(Nx∧Pxa)↔¬∃x(Ox∧Pxa)), (∃x(Nx∧Pxa)↔∃x(Nx∧Pxc)) |= (¬Nc→∃x(Ox∧Pxa))"
+  },
+  {
+    "id": "1ffb1974e409e0ae",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧Pcx), (∃x(Nx∧¬Jx)↔∃x(Mx∧¬Ix)), (∃x(Nx∧Gx)∧Oc) |= ∀x(Ox→∃y(Oy∧Pxy))"
+  },
+  {
+    "id": "3bab02048fcbbc12",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ob, ∃x(Nx∧Rcx), (∀x(Mx→Fx)∧¬∃x(Nx∧Fx)) |= ∃x(Nx∧Fx)"
+  },
+  {
+    "id": "8c2836316754bbbf",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Pax), (∃x(Mx∧¬Pxc)∧¬Pba), (¬∃x(Mx∧Pxc)∧¬¬Pbc) |= Ma"
+  },
+  {
+    "id": "5169a1de05fbfaff",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ja∧Jb), (Ja→∃x(Mx∧Qxc)), (Mb∧¬∃x(Nx∧Fx)) |= ¬∃x(Mx∧Jx)"
+  },
+  {
+    "id": "c3c7d8325b874497",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Mx∧Oy)→Qxy), (∀x(Mx→Hx)∧∀x(Ix→Nx)), (∀x(Lx→Nx)∧∃x(Nx∧¬Fx)), (∃x(Mx∧¬Fx)∧¬Lb) |= ∃x(Mx∧¬Hx)"
+  },
+  {
+    "id": "9c59edc2398833d2",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧Ix), (∃x(Mx∧¬Pxc)∧¬Pbc), (¬Pcc∧¬Pbc) |= ∀x(Mx→Ix)"
+  },
+  {
+    "id": "ae9e66ac5dd37972",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧¬Qxb), ∃x∃y((Ox∧Ny)∧Rxy), ∃x(Ox∧∀y(Oy→Rxy)) |= ∃x∃y((Nx∧Oy)∧Rxy)"
+  },
+  {
+    "id": "965445075a11f211",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Pac↔∃x(Mx∧¬Hx)), (∃x(Nx∧Pxb)∧∀x(Ox→Hx)), (Ha∧¬Pbc) |= (Ha∧Hb)"
+  },
+  {
+    "id": "24a164628c939157",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧Qxb), (∃x(Ox∧Qxa)∧¬Mb), (∃x(Mx∧¬Qxa)∧¬Pbc) |= (∃x(Mx∧¬Pxc)∧¬Pbc)"
+  },
+  {
+    "id": "a6b7238a64a7ce82",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y(Ny→Pyx)), ∃x(Mx∧∀y(Ny→Ryx)), (Nc→Rbb), (∃x(Mx∧Qxc)→∀x(Ox→Pxb)) |= ∃x(Mx∧∀y(Ny→Rxy))"
+  },
+  {
+    "id": "8a5155ea5b018164",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧∀y((Oy∧Pyx)→Pxy)), (¬∃x(Mx∧Pxb)∧∃x(Ox∧¬Qxb)), (∀x(Nx→Rxa)∧∃x(Ox∧Qxa)), (∃x(Ox∧Ix)↔∃x(Nx∧¬Qxb)) |= (¬∃x(Mx∧Pxb)∧¬Mb)"
+  },
+  {
+    "id": "a8f14c52963d4f2c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Ox∧Ny)∧Nz)∧(Qxy∧Qyz)), (¬∀x(Mx→Qxb)→¬Nc), (Ib∧∀x(Ox→Rxa)) |= ∃x(Ox∧Rax)"
+  },
+  {
+    "id": "6e6348e1caf56dd5",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ha, (∃x(Mx∧¬Pxc)∧¬¬Pcc), (∃x(Ox∧Qxc)∨∃x(Ox∧Qxa)) |= (Ha∧¬Pcc)"
+  },
+  {
+    "id": "93798f65a9ab064a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧Qcx), (∃x(Nx∧Kx)∧∃x(Ox∧¬Qxb)), (¬∃x(Mx∧Pxb)∧∀x(Nx→Kx)) |= (Kb∧Kc)"
+  },
+  {
+    "id": "b06fde4199b08a03",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Pxb)∧∀x(Ix→Nx)), (∃x(Ox∧Lx)∧¬Pcc), (∃x(Ox∧Lx)∧Oc) |= ∃x(Ox∧Pxc)"
+  },
+  {
+    "id": "57c2888afce363bc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∀y((Oy∧∀z(Oz→Qyz))→Qxy)), (∀x(Ox→Fx)∨¬Pab), (¬∀x(Mx→Rxa)→∃x(Ox∧Qxc)), (∀x(Ox→Pxb)→(∃x(Nx∧Rxc)→¬Fb)), (∃x(Mx∧¬Rxa)∧∃x(Ox∧Qxa)) |= ∀x(Ox→Qxc)"
+  },
+  {
+    "id": "da8ee5567e9632a1",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→∃y(My∧Qxy)), ∃x∃y∃z(((Nx∧Oy)∧Nz)∧(Rxy∧Ryz)), (∀x(Ox→Rxc)→(Qcc→¬∃x(Ox∧Qxc))) |= ∀x(Mx→∃y(Oy∧Qxy))"
+  },
+  {
+    "id": "fc18f2f9cf2bdec4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧Ny)∧(Qxy∧Qyx)), ∀x(Ox→∀y((Oy∧Ryx)→Rxy)), (Mb∧Oc) |= ∃x(Ox∧∀y(Oy→Rxy))"
+  },
+  {
+    "id": "5864d899b42305f8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Hc∧Hb), ∀x(Mx→Hx), (∃x(Ox∧¬Qxb)∧∃x(Ox∧Rxa)), (¬∀x(Mx→Rxa)→∃x(Mx∧¬Qxb)), (∃x(Nx∧Rxb)→(Lb→¬∃x(Nx∧Lx))) |= Ha"
+  },
+  {
+    "id": "49b78cb6794e0a52",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Nx∧My)→Pxy), (∃x(Nx∧Rxc)→¬Rbb), (∃x(Nx∧Gx)∧¬Rcc) |= ¬∃x(Mx∧∀y(Ny→Pxy))"
+  },
+  {
+    "id": "a72ac7b2b44a7519",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Fb, (Ga∧Gb), ∀x(Ox→Qxb), ∀x(Nx→Rbx), (Mb∨Fb) |= Fa"
+  },
+  {
+    "id": "0753a6dc880061df",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y(Oy→Ryx)), ∃x∃y∃z(((Mx∧Oy)∧Mz)∧(Qxy∧Qyz)), (¬Na∨∃x(Mx∧¬Qxb)), (∀x(Ox→Pxb)→(¬Qac→¬∃x(Ox∧Qxc))), (∃x(Nx∧¬Fx)∧¬Oc) |= ∀x(Nx→∃y(Oy∧Rxy))"
+  },
+  {
+    "id": "1c801d410e0277da",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→∃y(My∧Pxy)), ¬∃x∃y((Nx∧My)∧Qxy), ∀x(Ox→∀y((My∧Qyx)→Qxy)) |= ∀x(Nx→∀y((My∧∀z(Oz→Qyz))→Qxy))"
+  },
+  {
+    "id": "21f24f94786257cc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Ox∧My)→Rxy), ∃x∃y((Mx∧Ny)∧(Rxy∧Ryx)), (∃x(Ox∧Qxc)→¬∃x(Nx∧Jx)), (¬∃x(Nx∧Rxc)→Rbb) |= ¬∃x(Mx∧∀y(Oy→Rxy))"
+  },
+  {
+    "id": "cadee0675bdf9152",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧∀y(Ny→Qxy)), (¬∃x(Mx∧Kx)∨∀x(Mx→Qxb)), (∀x(Nx→Jx)↔∃x(Nx∧¬Qxb)) |= ∀x(Mx→∃y(Ny∧Qxy))"
+  },
+  {
+    "id": "5bd2a455c2650a42",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Mx∧My)∧(Pxy∧Pyx)), (Pcc∧¬Pba), (∃x(Mx∧¬Pxb)→∀x(Ox→Pxb)) |= Mb"
+  },
+  {
+    "id": "26da7880fafc84b7",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→∀y((Ny∧Pyx)→Pxy)), ∀x(Mx→Pax), (∃x(Ox∧¬Fx)∧¬Mb), (∃x(Mx∧¬Pxc)∧¬¬Pcc), (∃x(Mx∧¬Pxc)→(¬Rcc→¬∃x(Ox∧Qxc))) |= ¬∃x(Mx∧Pxa)"
+  },
+  {
+    "id": "e890f3bf87533f07",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ka∧Kc), (¬Pcc∧∃x(Ox∧Qxa)), (Mb→(∀x(Ox→Lx)→∀x(Ox→Pxc))) |= (Kb∧Ka)"
+  },
+  {
+    "id": "a540f00568a0d23e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Qbb, ∀x(Lx→Nx), ∀x(Nx→Qcx), (¬∃x(Mx∧Qxc)∧¬Rca), (∃x(Ox∧¬Rxb)→∃x(Nx∧¬Qxc)) |= (∃x(Nx∧¬Lx)∧¬∃x(Mx∧Qxc))"
+  },
+  {
+    "id": "088c4a2deebf6652",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ha, (∃x(Mx∧¬Pxc)∧¬¬Pcc), (∃x(Ox∧Qxc)∨∃x(Ox∧Qxa)) |= ¬Ha"
+  },
+  {
+    "id": "083eb6a897abffff",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧My)∧Qxy), ∀x(Nx→Qax), (¬∃x(Mx∧Pxc)∧∀x(Ix→Nx)), (∃x(Ox∧Rxc)→∀x(Ox→Qxb)), (Paa→(¬∃x(Ox∧Qxc)→¬∃x(Mx∧Ix))) |= (∃x(Mx∧¬Pxc)∧Pcc)"
+  },
+  {
+    "id": "a226f19859955b7f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→Rxa), (∀x(Nx→Rxa)∧∃x(Ox∧Qxa)), (¬∃x(Nx∧Jx)→¬Rcb) |= ∃x(Ox∧¬Rxa)"
+  },
+  {
+    "id": "874bbedf7270a9ba",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧Oy)∧(Qxy∧Qyx)), (¬∃x(Mx∧Qxc)∧¬Rbc), (¬Raa∧∀x(Hx→Nx)), (¬∃x(Ox∧Qxa)→¬Nc), (∃x(Ox∧Qxa)∨∀x(Hx→Mx)) |= (¬∃x(Mx∧Qxc)∧¬¬Rca)"
+  },
+  {
+    "id": "c2a22bc4a742981c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Pcb, (∀x(Ox→Ix)∧¬Pca), (Pcc∧∀x(Ox→Rxa)) |= Ia"
+  },
+  {
+    "id": "89c5292ccd226684",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧¬Lx)∧∀x(Ox→Pxa)), (¬∃x(Mx∧Qxc)∧Pba), (∀x(Mx→Pxc)→∀x(Ox→Pxb)) |= La"
+  },
+  {
+    "id": "4a127b2339023378",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Rxa), ∃x∃y((Nx∧My)∧(Qxy∧Qyx)), (¬∃x(Mx∧Pxb)∧¬Pba), (∃x(Nx∧Rxb)→∀x(Ox→Pxb)), (∃x(Nx∧Pxc)↔∃x(Nx∧¬Qxb)) |= ∃x(Mx∧Pbx)"
+  },
+  {
+    "id": "2f1da513ae5d6650",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Kc∧Ka), ∃x(Mx∧¬Rxa), ∀x(Ox→∀y((Ny∧∀z(Mz→Ryz))→Rxy)) |= Ma"
+  },
+  {
+    "id": "62350c1950c9e9ac",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧∀y(Oy→Pyx)), ∀x(Mx→Pbx), (∀x(Ox→Rxc)→(∀x(Ox→Pxc)→Paa)) |= ∃x(Mx∧Pxb)"
+  },
+  {
+    "id": "b5546a7693a1f7e1",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Mb, (∀x(Nx→Kx)∧¬¬Rbc), (¬Nc↔∃x(Mx∧¬Rxa)) |= ∀x(Mx→Rxc)"
+  },
+  {
+    "id": "98abb14faae57bd1",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ga, ¬∃x∃y((Ox∧Oy)∧(Qxy∧Qyx)), ∃x∃y∃z(((Ox∧Ny)∧Mz)∧(Qxy∧Qyz)), (∃x(Ox∧¬Fx)∧Kb), (Ka∧∃x(Ox∧Kx)) |= Fb"
+  },
+  {
+    "id": "c1b01a0a592e1fb6",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Pax), (∃x(Mx∧¬Pxc)∧¬Pba), (¬∃x(Mx∧Pxc)∧¬¬Pbc) |= ¬∃x(Mx∧Pxa)"
+  },
+  {
+    "id": "b81139c67fdfa3ef",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧Pxx), (Pba∧¬∃x(Mx∧Pxc)), (∃x(Ox∧Lx)∧∀x(Ox→Hx)) |= ∃x(Mx∧Pcx)"
+  },
+  {
+    "id": "e56021f50fde9d4e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∀y((Oy∧∀z(Oz→Qyz))→Qxy)), (∀x(Ox→Fx)∨¬Pab), (¬∀x(Mx→Rxa)→∃x(Ox∧Qxc)), (∀x(Ox→Pxb)→(∃x(Nx∧Rxc)→¬Fb)), (∃x(Mx∧¬Rxa)∧∃x(Ox∧Qxa)) |= ∃x(Ox∧Qcx)"
+  },
+  {
+    "id": "87439bac6067632f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→Fx), ∃x∃y∃z(((Ox∧Ny)∧Oz)∧(Qxy∧Qyz)), (∃x(Mx∧Qxb)→∃x(Ox∧Pxa)), (∃x(Nx∧¬Qxa)↔∃x(Nx∧¬Pxc)), (∃x(Nx∧Pxb)∧¬Oc) |= (∀x(Fx→Nx)∧∃x(Nx∧¬Fx))"
+  },
+  {
+    "id": "497c380d2230a6d8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Nx∧My)∧Nz)∧(Qxy∧Qyz)), (∃x(Nx∧Rxb)→∃x(Nx∧¬Rxb)), (¬Fb→(∃x(Mx∧¬Qxc)→¬∃x(Ox∧Qxc))) |= ¬∃x(Nx∧Rxb)"
+  },
+  {
+    "id": "51f8571e0043af68",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧∀y(Ny→Ryx)), ∀x∀y((Ox∧Oy)→Rxy), ∀x(Nx→∀y((My∧Ryx)→Rxy)) |= ∀x∀y((Mx∧Ny)→Rxy)"
+  },
+  {
+    "id": "6c2e1422b6bc86e4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧Rxb)→(¬Rbb→¬∃x(Nx∧Lx))), (∀x(Ox→Ix)∧∃x(Ox∧Lx)), (¬Jc∧¬Lb) |= (∀x(Ox→Ix)∧¬¬Jc)"
+  },
+  {
+    "id": "4156e871cc1bbad0",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→∃y(My∧Rxy)), ∃x∃y∃z(((Nx∧Ny)∧Oz)∧(Pxy∧Pyz)), (∀x(Ox→Rxc)→(¬Rcc→∀x(Ox→Pxb))) |= ¬∃x(Mx∧∀y(Oy→Rxy))"
+  },
+  {
+    "id": "6762c1bdc0b27820",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Pcc∧∀x(Hx→Nx)), (∃x(Ox∧Rxa)∧¬Rbc), (¬∀x(Nx→Pxc)→Ha), (∀x(Ox→Pxb)→¬Rbb), (∃x(Nx∧Rxb)→(¬Rbb→∀x(Nx→Pxc))) |= (¬Paa→∃x(Ox∧Rxc))"
+  },
+  {
+    "id": "25a8cd37b74dbbee",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Nc, Pcb, Qba, (∃x(Mx∧¬Pxb)→∃x(Mx∧¬Lx)), (∀x(Ox→Jx)→(Mb→¬∃x(Ox∧Qxc))) |= ∀x(Nx→Pbx)"
+  },
+  {
+    "id": "c34afd4773a43bba",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Pcb, ∀x(Hx→Ox), (∃x(Nx∧Kx)∧¬Pcc), (¬Pcc∧∃x(Ox∧Kx)), (¬Mb∧¬¬Pbc) |= ¬Hb"
+  },
+  {
+    "id": "a03fa51045267c61",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→Fx), (¬∃x(Mx∧Pxb)∧∀x(Hx→Nx)), (¬∃x(Nx∧Rxc)→∃x(Nx∧¬Rxb)), (∃x(Mx∧¬Pxc)→(Paa→∀x(Nx→Pxc))), (∀x(Ox→Rxc)→(∀x(Ox→Pxb)→¬Fb)) |= ∃x(Nx∧¬Fx)"
+  },
+  {
+    "id": "3f92e73b8401f24c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧Hx), ∃x(Mx∧Pxb), ∃x∃y∃z(((Ox∧Ny)∧Oz)∧(Qxy∧Qyz)) |= Hb"
+  },
+  {
+    "id": "ffff0dcc358c697b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Pcx), ∃x(Mx∧Rax), (∃x(Ox∧Pxa)→∀x(Ox→Pxb)) |= (∃x(Mx∧¬Pxc)∧Pcc)"
+  },
+  {
+    "id": "afb553fa1cece041",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧Pxb), ∃x(Nx∧∀y(Oy→Pyx)), ∀x(Ox→∀y((Ny∧∀z(Nz→Pyz))→Pxy)) |= ∃x(Nx∧∀y(Oy→Pxy))"
+  },
+  {
+    "id": "1d481e72be5a5951",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Pcc∧¬∃x(Mx∧Pxc)), (¬Mb∧¬∃x(Mx∧Pxc)), (∃x(Mx∧¬Gx)∨∀x(Nx→Pxc)) |= (∀x(Nx→Jx)↔∃x(Nx∧¬Jx))"
+  },
+  {
+    "id": "ec5df75984c31d3f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Nx∧Ny)∧Qxy), (∃x(Mx∧¬Pxc)∧¬Mb), (Pbb↔∃x(Nx∧Pxc)), (∀x(Ox→Ix)∧¬Pbc) |= (¬∃x(Mx∧Pxb)∧¬Pcc)"
+  },
+  {
+    "id": "1ab073c32f4710ed",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Na, ∃x(Mx∧Rxc), (¬∃x(Mx∧Pxc)∧¬¬Pbc) |= ∀x(Mx→Pxc)"
+  },
+  {
+    "id": "c34775154ee9b662",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧Qxa)∧∀x(Mx→Hx)), (∃x(Ox∧Lx)∧Pca), (∀x(Ox→Hx)∧¬¬Lb) |= Ha"
+  },
+  {
+    "id": "ff3a36cb89733f34",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Mx∧Ny)→Rxy), (∃x(Ox∧Qxc)∨∃x(Nx∧Qxb)), (¬∃x(Ox∧¬Pxc)→∃x(Ox∧Gx)), (¬∃x(Ox∧¬Pxc)→∀x(Mx→Gx)), (¬∃x(Nx∧Rxc)→∃x(Nx∧¬Rxb)) |= ¬∃x∃y((Mx∧Ny)∧Rxy)"
+  },
+  {
+    "id": "b593f2dce76508b5",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Rxc), (∃x(Ox∧¬Qxb)∧¬¬Mb), (¬∃x(Nx∧Qxb)→∃x(Ox∧Qxc)) |= ¬Rbc"
+  },
+  {
+    "id": "9f93bae88898ed33",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Mx∧Oy)→Rxy), ∃x(Nx∧Rbx), (∃x(Ox∧Qxa)∧Mb) |= ∀x∀y((Mx∧Ny)→Rxy)"
+  },
+  {
+    "id": "8c6bb7194d0aed23",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧Kx)∧∀x(Nx→Pxa)), (∃x(Nx∧¬Lx)∧¬¬Pcc), (Pba∧∀x(Nx→Kx)) |= (∃x(Nx∧Kx)↔¬∃x(Nx∧Lx))"
+  },
+  {
+    "id": "9898b9b1fe94e061",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Ja, Rca, ∃x(Mx∧¬Rxc), ∀x(Mx→∀y((Ny∧Qyx)→Qxy)), (¬Rac↔∀x(Nx→Rxc)) |= ¬∃x(Mx∧∀y(Ny→Qxy))"
+  },
+  {
+    "id": "95c669cb64292bbd",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧∀y(Oy→Ryx)), ∃x∃y∃z(((Nx∧Ny)∧Oz)∧(Rxy∧Ryz)), (Ic→¬∃x(Nx∧Jx)) |= ¬∃x(Mx∧∀y(Oy→Rxy))"
+  },
+  {
+    "id": "dfcd34b6bf79d782",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Raa∧∀x(Ox→Qxb)), (∃x(Ox∧Rxa)∧¬¬Mb), (¬∃x(Ox∧Pxa)↔∀x(Ox→Rxc)) |= Ma"
+  },
+  {
+    "id": "d5810afc33968353",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Mx∧¬Pxc)∧¬¬Rca), (∃x(Mx∧¬Rxa)↔Pbc), (Pcc∧∀x(Ox→Rxa)) |= (∃x(Mx∧¬Pxc)∧¬Pcc)"
+  },
+  {
+    "id": "f0255fd169d0cb4e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ib∧Ic), (∃x(Nx∧¬Rxb)∨¬Ha), (Ic→¬Rbb) |= (Ha∧Hb)"
+  },
+  {
+    "id": "98abc6a9c3c4cf24",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Mx∧Oy)∧Oz)∧(Pxy∧Pyz)), (∃x(Mx∧¬Pxc)∧¬¬Pbc), (∃x(Nx∧Rxb)→∀x(Mx→Pxc)) |= (∃x(Nx∧Gx)∧¬∃x(Nx∧Gx))"
+  },
+  {
+    "id": "d3bbde2732cf9bc1",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧Pxb), ∀x(Nx→Pxc), (¬Pcc∧∃x(Ox∧Qxa)), (∃x(Mx∧¬Pxc)→(Qcc→∃x(Mx∧¬Qxc))) |= (¬Nc→Nc)"
+  },
+  {
+    "id": "5309df4bcc91cffe",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ob, ¬Qbc, (¬∃x(Mx∧Pxb)∧¬Rbc) |= ∃x(Ox∧Qcx)"
+  },
+  {
+    "id": "9bdb9a50cd7f5d19",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Nx∧Oy)∧(Rxy∧Ryx)), (∃x(Mx∧¬Pxc)→(¬Rcc→∀x(Ox→Pxb))), (∃x(Mx∧¬Rxa)∧¬∃x(Nx∧Fx)) |= (∀x(Fx→Nx)∧¬∃x(Nx∧Fx))"
+  },
+  {
+    "id": "f2d8bb47712d3a46",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y(Oy→Qyx)), (¬∃x(Nx∧Qxb)→∃x(Ox∧Qxc)), (Mb→(∃x(Mx∧¬Fx)→∀x(Ox→Qxb))), (∃x(Ox∧Qxa)∧¬∃x(Nx∧Fx)) |= (∀x(Fx→Nx)∧∃x(Nx∧¬Fx))"
+  },
+  {
+    "id": "a6cd98e29962906f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧¬Fx), (¬Nc↔∃x(Nx∧¬Pxc)), (∀x(Ox→Ix)∧Pcc) |= (∃x(Ox∧¬Fx)∧∀x(Ix→Nx))"
+  },
+  {
+    "id": "b5923667285f1a1b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Nx∧Jx)→∀x(Ox→Fx)), (¬Fb→Mb), (¬Ja∧¬Mb) |= ¬Fb"
+  },
+  {
+    "id": "c37277f6db4d7155",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→Rxa), (∀x(Nx→Rxa)∧∃x(Ox∧Qxa)), (¬∃x(Nx∧Jx)→¬Rcb) |= ∀x(Ox→Rax)"
+  },
+  {
+    "id": "401daca96cd20819",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→∀y((Oy∧∀z(Oz→Qyz))→Qxy)), (∃x(Ox∧Rxa)∧¬¬Mb), (∀x(Ox→Hx)∧¬Hb) |= ∀x(Hx→Mx)"
+  },
+  {
+    "id": "a8263b07f73c8ed2",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧¬Qxc), ∃x(Mx∧∀y(Oy→Qxy)), ∃x(Nx∧∀y(My→Qxy)) |= ¬∃x(Mx∧∀y(Ny→Qxy))"
+  },
+  {
+    "id": "53b632590030073c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ic∨Ib), ∀x(Ox→∃y(Oy∧(Qxy∧Qyx))), (∃x(Ox∧¬Fx)∧¬¬Qba) |= ¬∃x∃y((Ox∧Oy)∧Qxy)"
+  },
+  {
+    "id": "9eaadcd0b4107d97",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Ox∧My)∧Mz)∧(Rxy∧Ryz)), (¬∀x(Nx→Pxc)→∀x(Ox→Fx)), (∀x(Fx→Nx)∧¬∃x(Nx∧Fx)) |= ∀x(Mx→Fx)"
+  },
+  {
+    "id": "027a1fe680956b41",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Nx∧Pxa), (∃x(Nx∧Kx)↔∃x(Mx∧¬Rxa)), (∃x(Nx∧Pxa)↔¬Lc) |= (Ka∧Kc)"
+  },
+  {
+    "id": "1fd64ff89ca1e14a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Mx∧Ny)∧(Qxy∧Qyx)), (¬∃x(Mx∧Qxc)∧¬¬Pcc), (∃x(Mx∧¬Pxc)→(∃x(Mx∧¬Qxa)→Qcc)) |= Ma"
+  },
+  {
+    "id": "90456ecb335aca85",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Mx∧My)∧Oz)∧(Qxy∧Qyz)), (∃x(Ox∧¬Fx)∧∃x(Ox∧Rxa)), (¬∃x(Mx∧Qxc)∧¬Rbc), (∃x(Nx∧Rxb)→(∃x(Mx∧¬Fx)→Paa)), (∃x(Nx∧¬Fx)∧¬∃x(Nx∧Fx)) |= ∃x(Mx∧Qxc)"
+  },
+  {
+    "id": "2af72142d20cc864",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y((My∧Ryx)→Rxy)), (¬Pcc∧¬Mb), (Pba∧∃x(Nx∧Fx)), (¬∀x(Nx→Pxc)→¬Pab), (∃x(Ox∧Rxc)→∀x(Mx→Pxc)) |= (Pcc∧¬Pba)"
+  },
+  {
+    "id": "fdda194625f285b7",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Nx∧My)→Pxy), ∀x(Mx→∃y(Oy∧(Rxy∧Ryx))), ∀x(Mx→∀y((Oy∧∀z(Oz→Ryz))→Rxy)), ∃x∃y∃z(((Nx∧My)∧Oz)∧(Rxy∧Ryz)) |= ∀x(Mx→∃y(Ny∧Pxy))"
+  },
+  {
+    "id": "10a5610e825ecc8d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→∃y(Oy∧(Pxy∧Pyx))), (∃x(Ox∧¬Fx)∧¬Pcc), (¬Pcc∧¬Pbc) |= ¬Fb"
+  },
+  {
+    "id": "1bf29bdf6989baa1",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ob, ∃x(Nx∧Rcx), (∀x(Mx→Fx)∧¬∃x(Nx∧Fx)) |= (∀x(Fx→Nx)∧∃x(Nx∧¬Fx))"
+  },
+  {
+    "id": "9ec04be1737a2fa4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Qbb, ∀x(Lx→Nx), ∀x(Nx→Qcx), (¬∃x(Mx∧Qxc)∧¬Rca), (∃x(Ox∧¬Rxb)→∃x(Nx∧¬Qxc)) |= (Qcc→(∃x(Mx∧¬Qxc)→¬∃x(Nx∧Lx)))"
+  },
+  {
+    "id": "db645fe0e6d515cf",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Nx∧Ny)→Pxy), ∃x(Mx∧∀y((Oy∧Pyx)→Pxy)), ∃x∃y∃z(((Mx∧Ny)∧Nz)∧(Pxy∧Pyz)), ∀x(Nx→∀y((My∧∀z(Nz→Pyz))→Pxy)), (∃x(Nx∧Pxa)↔∃x(Nx∧¬Qxb)) |= ¬∃x(Nx∧∀y(Ny→Pyx))"
+  },
+  {
+    "id": "f70e8b59e59eeb6a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→Hx), (∃x(Mx∧¬Pxc)→(¬Qac→∀x(Ox→Pxc))), (∃x(Nx∧Pxb)∧¬¬La) |= Ha"
+  },
+  {
+    "id": "d4c326d2032fcd05",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ka∧¬Rca), (¬Rbc∧∀x(Mx→Hx)), (∃x(Mx∧¬Rxa)↔∃x(Nx∧¬Pxc)) |= (Ha∧Hb)"
+  },
+  {
+    "id": "618997690883e727",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ob, ¬∃x∃y((Nx∧My)∧Pxy), ¬∃x∃y((Ox∧Ny)∧Qxy) |= ∀x(Nx→∃y(Oy∧Qxy))"
+  },
+  {
+    "id": "d2962ffbaa0fbe45",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Mx∧Ny)∧Qxy), ∃x(Mx∧∀y(Oy→Qxy)), (∀x(Ox→Pxb)→(∀x(Ox→Lx)→Paa)) |= ∃x(Mx∧∀y(Ny→Qxy))"
+  },
+  {
+    "id": "be78e299d3a41db3",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Nx∧Ny)∧Rxy), ∃x∃y∃z(((Ox∧Ny)∧Mz)∧(Rxy∧Ryz)), (¬∃x(Mx∧Qxa)∨¬Mb), (¬∃x(Mx∧Rxa)↔¬∃x(Ox∧Pxb)), (∀x(Ox→Rxc)→(Fa→Paa)) |= ∃x(Nx∧∀y(Ny→Rxy))"
+  },
+  {
+    "id": "c5a6a0c0e7169609",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Rab, (∃x(Ox∧¬Fx)∧¬Pbc), (∀x(Ox→Rxb)→∃x(Nx∧Rxc)), (∃x(Nx∧Rxb)→∀x(Ox→Pxb)), (∀x(Fx→Nx)∧∃x(Mx∧¬Fx)) |= Fa"
+  },
+  {
+    "id": "b5aaf203c8b7534b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧Pxb), (Pba∧∃x(Nx∧Fx)), (¬Qac→Rbb) |= (¬¬Pab→Mb)"
+  },
+  {
+    "id": "bf201812f82aa5fc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧Rxc), ∀x(Mx→∀y((Ny∧Pyx)→Pxy)), ¬∃x∃y((Nx∧My)∧(Rxy∧Ryx)) |= ∀x∀y((Mx∧Ny)→Pxy)"
+  },
+  {
+    "id": "42abf7dd5a8e713f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Mx∧¬Pxc)∧¬¬Qba), (¬Mb∧∃x(Nx∧Fx)), (∀x(Ox→Fx)∨Mb) |= ∀x(Fx→Ox)"
+  },
+  {
+    "id": "62abbedf03b5da39",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Ox∧Hx), ¬∃x(Ox∧Qxc), ∃x∃y((Ox∧Oy)∧(Rxy∧Ryx)), (∃x(Nx∧¬Pxc)↔Pbc), (¬Rbb→(∃x(Nx∧Rxc)→∀x(Ox→Qxb))) |= ∀x(Hx→Ox)"
+  },
+  {
+    "id": "8d56c7c3f79689cc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧¬Qxc), (¬Pcc∧¬∃x(Mx∧Pxc)), (∃x(Nx∧Pxa)↔∃x(Nx∧¬Qxa)) |= ∃x(Mx∧Pcx)"
+  },
+  {
+    "id": "e7831774b5ebdc9c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧∀y(Ny→Qxy)), ∀x(Nx→Qbx), (∀x(Hx→Mx)∨∀x(Mx→Qxb)), (¬∃x(Mx∧Rxa)→¬Rbb) |= Mb"
+  },
+  {
+    "id": "735a25bff79ba746",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Oc, ¬∃x∃y((Mx∧My)∧Pxy), (¬∃x(Mx∧Pxb)∧∀x(Ix→Nx)), (¬∃x(Ox∧Pxb)↔∃x(Nx∧Pxc)), (Ha∧∀x(Ix→Mx)) |= (Ha∧Hc)"
+  },
+  {
+    "id": "23cd83c57460e2cc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Ox∧Ny)∧Nz)∧(Rxy∧Ryz)), (∃x(Ox∧¬Qxb)∧∀x(Nx→Rxa)), (¬Qac→∃x(Ox∧¬Rxb)) |= ∀x(Nx→Rax)"
+  },
+  {
+    "id": "cd181762fd825b2e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Ox∧Gx), (∃x(Ox∧Gx)∨¬∃x(Mx∧Kx)), (∃x(Mx∧¬Fx)∧¬Jc) |= ∀x(Mx→Kx)"
+  },
+  {
+    "id": "52efcd1f672500ac",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→∃y(Ny∧(Pxy∧Pyx))), (∃x(Nx∧Pxa)↔∃x(Nx∧¬Qxa)), (∃x(Nx∧Pxb)∧¬Pca) |= ∀x∀y((Nx∧Ny)→Pxy)"
+  },
+  {
+    "id": "6a24cccb5ffec0db",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ga∧Gc), Na, (¬Ga→(∃x(Mx∧¬Pxc)→∀x(Ox→Qxb))) |= ∃x(Nx∧¬Gx)"
+  },
+  {
+    "id": "6278f88f5a30e9d2",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Pcc∧¬Pbc), (∃x(Mx∧¬Pxc)→(¬Rcc→∃x(Nx∧Rxc))), (∃x(Mx∧¬Rxa)∧¬Hb) |= (∃x(Mx∧¬Pxc)∧¬Rca)"
+  },
+  {
+    "id": "40e4c25a2581c4a9",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Nx∧Oy)→Pxy), (∃x(Nx∧¬Lx)∧¬∃x(Mx∧Pxb)), (¬¬∃x(Nx∧Lx)→¬Nc), (Pbb↔∃x(Nx∧Pxa)), (Ia→(∃x(Mx∧¬Fx)→∀x(Nx→Pxc))) |= ¬∃x(Nx∧∀y(Oy→Pxy))"
+  },
+  {
+    "id": "9bced330b400b4b3",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Pxb)∧¬Mb), (∃x(Ox∧¬Qxb)∧∀x(Hx→Nx)), (∃x(Nx∧¬Qxc)→∃x(Mx∧Pxb)) |= ¬∃x(Nx∧Qxc)"
+  },
+  {
+    "id": "a68b5b1e1a4c558a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y(Ny→Pxy)), (¬∃x(Mx∧Qxc)∧¬Rca), (¬Jc∧¬¬Pbc) |= (∃x(Mx∧Qxb)→∀x(Mx→Pxc))"
+  },
+  {
+    "id": "cb782b1f28a153dd",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧Rxa)∧¬Rbc), (Pbb↔∃x(Nx∧¬Qxb)), (∃x(Mx∧¬Qxa)∧Mb) |= ∀x(Mx→Rcx)"
+  },
+  {
+    "id": "5b4cae46c9f14d08",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Mb, (∀x(Nx→Kx)∧¬¬Rbc), (¬Nc↔∃x(Mx∧¬Rxa)) |= ∃x(Mx∧Rcx)"
+  },
+  {
+    "id": "153122c4e545b5f9",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧My)∧(Pxy∧Pyx)), (¬Rca∧∀x(Ox→Qxb)), (∃x(Nx∧Rxb)→(¬Rcc→∃x(Mx∧¬Qxa))) |= ∃x(Ox∧¬Qxb)"
+  },
+  {
+    "id": "4190a161c7618300",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Mx∧Oy)∧Oz)∧(Pxy∧Pyz)), (∃x(Mx∧¬Pxc)∧¬¬Pbc), (∃x(Nx∧Rxb)→∀x(Mx→Pxc)) |= ∀x(Nx→Rbx)"
+  },
+  {
+    "id": "fd79bd39813815f1",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧Pxc), (∃x(Mx∧¬Pxc)∧¬∃x(Mx∧Pxc)), (¬∃x(Mx∧Pxc)∧¬¬Pbc) |= (∃x(Mx∧¬Pxc)∧¬Pbc)"
+  },
+  {
+    "id": "df2291be4242a3ee",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Gb, ∀x(Nx→∀y((Oy∧Pyx)→Pxy)), (∃x(Nx∧Fx)∧∀x(Nx→Pxa)) |= ¬∃x(Nx∧∀y(Oy→Pxy))"
+  },
+  {
+    "id": "d6a9c2cd9e054b1c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ja∧Jb), (∃x(Nx∧¬Jx)→(Mb→∃x(Mx∧¬Fx))), (∃x(Nx∧¬Fx)∧∀x(Jx→Mx)) |= ¬Fa"
+  },
+  {
+    "id": "8eb6f5c78c6c7a1d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Nx∧Rxb), ∃x∃y((Mx∧Ny)∧Rxy), ∃x∃y∃z(((Nx∧My)∧Mz)∧(Rxy∧Ryz)) |= Mb"
+  },
+  {
+    "id": "57bc514d3295f4d4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Pcc, (¬∃x(Ox∧¬Pxc)→∀x(Ox→Fx)), (∃x(Nx∧Pxb)∧Pca) |= (∃x(Nx∧Pxb)∧¬¬Pbc)"
+  },
+  {
+    "id": "0c3082296c515b49",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Ox∧Ny)→Qxy), (∀x(Ox→Rxb)→∃x(Ox∧Rxc)), (¬Kb∧∃x(Mx∧¬Qxa)) |= ∃x∃y((Nx∧Oy)∧Qxy)"
+  },
+  {
+    "id": "742056ebe03ed59a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→Pxc), ∃x(Nx∧¬Qxb), ∀x(Ox→∀y((Oy∧Pyx)→Pxy)) |= ∀x(Nx→Pcx)"
+  },
+  {
+    "id": "a7a1bc2402d1710d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧Hx), (∃x(Mx∧¬Rxa)∧¬¬Ja), (Ha∧¬¬Jc) |= (Ha∧Hc)"
+  },
+  {
+    "id": "4d517cf91ac268b6",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧¬Fx)∧∀x(Lx→Nx)), (∃x(Nx∧¬Lx)∧¬Raa), (¬Pab→(∀x(Ox→Pxb)→∃x(Nx∧Rxc))) |= (¬¬∃x(Nx∧Lx)→∀x(Ox→Fx))"
+  },
+  {
+    "id": "fddd637a4011d1e3",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Ox∧∀y(My→Pyx)), (¬Rca∧∃x(Nx∧Fx)), (∃x(Mx∧¬Rxa)∧∀x(Ox→Rxa)) |= Fc"
+  },
+  {
+    "id": "1710f991517b792e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→∃y(Oy∧(Pxy∧Pyx))), (∃x(Ox∧Rxa)∧∃x(Nx∧Fx)), (∀x(Ox→Pxa)∧¬∃x(Mx∧Pxc)) |= ∃x(Ox∧Pax)"
+  },
+  {
+    "id": "ccacdf0c24b9a1b6",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧My)∧Qxy), (¬∃x(Mx∧Qxc)∧¬Rca), (¬∃x(Mx∧Qxa)∨∀x(Mx→Qxb)) |= Ma"
+  },
+  {
+    "id": "e5af96e46716d144",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧Rxc), ∀x(Mx→∀y((Ny∧Pyx)→Pxy)), ¬∃x∃y((Nx∧My)∧(Rxy∧Ryx)) |= ∀x(Mx→∃y(Ny∧Pxy))"
+  },
+  {
+    "id": "6564e51d589c8824",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→∃y(Ny∧(Qxy∧Qyx))), (∃x(Ox∧Qxc)∨∃x(Ox∧Qxa)), (¬Nc↔∃x(Mx∧¬Hx)) |= ¬∃x∃y((Nx∧Oy)∧Qxy)"
+  },
+  {
+    "id": "c7ebd9e8fa2b265d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Mx∧Ny)→Rxy), (∃x(Ox∧Qxc)∨∃x(Nx∧Qxb)), (¬∃x(Ox∧¬Pxc)→∃x(Ox∧Gx)), (¬∃x(Ox∧¬Pxc)→∀x(Mx→Gx)), (¬∃x(Nx∧Rxc)→∃x(Nx∧¬Rxb)) |= (∃x(Mx∧¬Fx)∧∀x(Mx→Fx))"
+  },
+  {
+    "id": "804a94235c8406eb",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Pbb→∃x(Mx∧Pxb)), (¬La∧¬¬Lb), (∀x(Ox→Hx)∧¬¬Lb) |= (Ha∧Hb)"
+  },
+  {
+    "id": "2887227f678aea78",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Ox∧Oy)→Qxy), (∃x(Ox∧¬Qxb)∧Pba), (¬Rbb→(∀x(Ox→Jx)→∃x(Mx∧¬Qxc))) |= Ob"
+  },
+  {
+    "id": "32d3818752a4aeee",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Pxb)∧∀x(Nx→Pxa)), (∃x(Nx∧Rxb)→(∃x(Nx∧Rxc)→Qcc)), (Ha∧Pcc) |= (∃x(Mx∧¬Pxc)∧¬Mb)"
+  },
+  {
+    "id": "b824621ea775df73",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Lc∨Lb), (∃x(Nx∧¬Jx)→(Qca→∀x(Nx→Pxc))), (∀x(Lx→Nx)∧¬¬Jc) |= ∀x(Nx→Lx)"
+  },
+  {
+    "id": "eced1b7a961ba2c3",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y(Oy→Qxy)), ∀x(Ox→∃y(Oy∧Qxy)), (Oc∧¬∃x(Nx∧Fx)) |= (∀x(Fx→Nx)∧¬∃x(Nx∧Fx))"
+  },
+  {
+    "id": "d2f7a566c5d54b04",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∃y(Ny∧(Qxy∧Qyx))), (¬∀x(Hx→Mx)→¬Pab), (∀x(Ox→Qxb)→∀x(Ox→Pxb)), (∃x(Nx∧Pxb)∧∃x(Mx∧¬Rxa)), (∀x(Ox→Hx)∧∃x(Ox∧Qxa)) |= ¬∃x∃y((Mx∧Ny)∧Qxy)"
+  },
+  {
+    "id": "7afd0e63cc0a5307",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧Rxc), ∃x(Ox∧∀y(Ny→Pyx)), (¬Rca∧∀x(Ox→Pxa)), (¬∃x(Ox∧Lx)→¬Na), (∃x(Nx∧Rxb)→(∃x(Mx∧¬Fx)→¬Fb)) |= ∃x(Ox∧Pax)"
+  },
+  {
+    "id": "2e9b847a090df46d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧¬Hx), (¬∃x(Nx∧Rxc)→Rbb), (¬Rac↔∀x(Ox→Rxc)), (∃x(Mx∧¬Rxa)∧∃x(Nx∧Gx)), (Ha∧¬La) |= (¬∀x(Mx→Rxa)→∀x(Hx→Mx))"
+  },
+  {
+    "id": "91399f99ea9f3bdd",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Nx∧Ny)∧Qxy), ∃x(Nx∧∀y(Oy→Qyx)), (∃x(Ox∧Qxc)∨∀x(Hx→Mx)), (∃x(Nx∧Rxc)→(Mb→∃x(Mx∧¬Qxc))), (∃x(Mx∧¬Rxa)∧Oc) |= ∀x(Nx→∃y(Oy∧Qxy))"
+  },
+  {
+    "id": "965ec829b43bfb5c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ha∧Hc), ∃x(Mx∧¬Ix), (∃x(Mx∧¬Fx)→(Qca→¬∃x(Ox∧Qxc))), (∀x(Fx→Nx)∧∃x(Ox∧Qxa)) |= Fa"
+  },
+  {
+    "id": "8ae12d4dc5a77958",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧Hx), (∃x(Mx∧¬Rxa)∧¬¬Ja), (Ha∧¬¬Jc) |= ¬Ha"
+  },
+  {
+    "id": "fc2712c92515d28c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→∃y(My∧Qxy)), ∃x∃y∃z(((Nx∧Oy)∧Nz)∧(Rxy∧Ryz)), (∀x(Ox→Rxc)→(Qcc→¬∃x(Ox∧Qxc))) |= ∃x∃y((Mx∧Oy)∧Qxy)"
+  },
+  {
+    "id": "50af32b53c4883c0",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧Qxa), (Pba∧¬¬Pbc), (∃x(Ox∧Qxa)∧∀x(Mx→Fx)) |= ¬∃x(Mx∧Fx)"
+  },
+  {
+    "id": "a29675c6e1ac477a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬Pcc∧∀x(Hx→Nx)), (∃x(Ox∧Rxa)∧¬Rbc), (¬∀x(Nx→Pxc)→Ha), (∀x(Ox→Pxb)→¬Rbb), (∃x(Nx∧Rxb)→(¬Rbb→∀x(Nx→Pxc))) |= (Pcc∧∀x(Ox→Rxa))"
+  },
+  {
+    "id": "1aa47d9628e1dcc4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧¬Qxb)∧¬Qba), (¬Pbc∧∀x(Nx→Pxa)), (¬∀x(Nx→Pxc)→¬∃x(Nx∧Lx)), (∃x(Mx∧¬Qxc)→(Paa→∀x(Nx→Pxc))) |= (Pcc∧∃x(Ox∧¬Qxb))"
+  },
+  {
+    "id": "5c9d0c4639abb875",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧Rxa), ∀x(Nx→∃y(Ny∧Pxy)), (∀x(Mx→Kx)∨¬¬Pca), (∀x(Ox→Rxc)→(¬Rcc→∃x(Mx∧¬Fx))), (∃x(Nx∧Pxb)∧∀x(Mx→Fx)) |= ¬∃x∃y((Nx∧Ny)∧Pxy)"
+  },
+  {
+    "id": "5f22b6fda8dd6052",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Hb∨Hc), ¬∃x(Nx∧Qxb), ∃x∃y∃z(((Ox∧Ny)∧Nz)∧(Qxy∧Qyz)) |= ∃x(Nx∧Qxb)"
+  },
+  {
+    "id": "b8ad06674b8fcc78",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Rxb), ∀x(Ox→Rbx), (Ib∧∃x(Mx∧¬Fx)) |= ¬∃x(Mx∧Rxb)"
+  },
+  {
+    "id": "826f982bee841ab7",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧¬Qxc), ∃x∃y((Nx∧Oy)∧(Rxy∧Ryx)), (∃x(Mx∧¬Rxa)∧¬∃x(Nx∧Gx)) |= Ga"
+  },
+  {
+    "id": "8a0fca8fd08dd177",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Rab, ∃x(Mx∧Qxc), (¬Rca∧¬¬Mb) |= ∀x(Mx→Rxa)"
+  },
+  {
+    "id": "d8e0b5c3019844db",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Pcc∧∀x(Nx→Rxa)), (∃x(Ox∧¬Qxb)∧¬Qba), (∃x(Nx∧Rxb)→(¬Pab→∀x(Ox→Pxb))) |= (¬Pcc∧∀x(Ox→Qxb))"
+  },
+  {
+    "id": "74161c43a889c78b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→Pxc), (∃x(Nx∧Rxb)→(∀x(Ox→Pxb)→Lb)), (∃x(Ox∧Lx)∧¬Pcc) |= ¬Lb"
+  },
+  {
+    "id": "12189d248d3fe8be",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Ox∧My)∧Pxy), (∃x(Mx∧¬Pxc)∧¬∃x(Mx∧Pxc)), (Ia→(∀x(Ox→Rxc)→¬∃x(Mx∧Ix))) |= ∃x∃y((Mx∧Oy)∧Pxy)"
+  },
+  {
+    "id": "45c60c201de245ea",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬La, (¬La∧∀x(Ox→Hx)), (∃x(Nx∧¬Fx)∧Mb) |= ¬Fa"
+  },
+  {
+    "id": "fc26092a78b0566b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧My)∧Pxy), ∃x(Nx∧∀y(Oy→Qyx)), ∀x∀y((Ox∧My)→Rxy) |= ¬∃x(Nx∧∀y(Oy→Qxy))"
+  },
+  {
+    "id": "41138637d7bc0077",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∀y((My∧∀z(Oz→Ryz))→Rxy)), (∃x(Nx∧Kx)∧Kb), (∃x(Mx∧¬Pxc)∧¬Rca), (¬∃x(Mx∧Pxb)∧Kb), (∃x(Ox∧Rxc)→∀x(Ox→Pxb)) |= ∃x(Mx∧Pbx)"
+  },
+  {
+    "id": "13869e467792e17b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Pcb, (∀x(Ox→Ix)∧¬Pca), (Pcc∧∀x(Ox→Rxa)) |= ¬Ia"
+  },
+  {
+    "id": "52e476a11717a192",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧∀y((Ny∧Qyx)→Qxy)), ∀x(Mx→Qax), (∃x(Mx∧¬Rxa)∧¬¬Lb) |= ¬∃x(Mx∧Qxa)"
+  },
+  {
+    "id": "fa6470186e7b02ce",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧Ix), ¬∃x∃y((Ox∧Oy)∧Pxy), ∀x(Nx→∀y((Ny∧Ryx)→Rxy)), ∀x(Nx→∀y((Oy∧∀z(Mz→Pyz))→Pxy)), (¬∃x(Mx∧Rxa)↔∃x(Nx∧Pxc)) |= ∀x(Ox→∃y(Oy∧Pxy))"
+  },
+  {
+    "id": "ea9b3457632f9b63",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧My)∧Qxy), ∀x(Nx→Qax), (¬∃x(Mx∧Pxc)∧∀x(Ix→Nx)), (∃x(Ox∧Rxc)→∀x(Ox→Qxb)), (Paa→(¬∃x(Ox∧Qxc)→¬∃x(Mx∧Ix))) |= ∃x(Mx∧Pcx)"
+  },
+  {
+    "id": "3d385de31d16773d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧¬Qxb), (∃x(Mx∧¬Pxc)∧∀x(Hx→Nx)), (¬Rbb→(∃x(Nx∧Rxc)→∃x(Mx∧¬Qxc))) |= (∀x(Mx→Qxb)∨∃x(Ox∧¬Pxc))"
+  },
+  {
+    "id": "ccfc60cb5570bfdd",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Fb, ∀x∀y((Nx∧Oy)→Qxy), (Qcc→(∃x(Mx∧¬Qxc)→¬∃x(Mx∧Ix))), (∃x(Nx∧¬Fx)∧¬Hb) |= ¬∃x(Nx∧∀y(Oy→Qxy))"
+  },
+  {
+    "id": "a17e37cdd1cd121f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Pcc∧∀x(Nx→Rxa)), (∃x(Ox∧¬Qxb)∧¬Qba), (∃x(Nx∧Rxb)→(¬Pab→∀x(Ox→Pxb))) |= (∃x(Ox∧¬Qxb)∧¬Pbc)"
+  },
+  {
+    "id": "08b21caa437e36d6",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Oa, ∀x(Ox→∀y((Ny∧Qyx)→Qxy)), (∃x(Mx∧¬Rxa)∧Mb) |= ∀x∀y((Nx∧Oy)→Qxy)"
+  },
+  {
+    "id": "fab2fbc5a34fb30f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∃y(Ny∧(Qxy∧Qyx))), (¬∀x(Hx→Mx)→¬Pab), (∀x(Ox→Qxb)→∀x(Ox→Pxb)), (∃x(Nx∧Pxb)∧∃x(Mx∧¬Rxa)), (∀x(Ox→Hx)∧∃x(Ox∧Qxa)) |= ∃x(Mx∧∀y(Ny→Qxy))"
+  },
+  {
+    "id": "475a497dd8a53059",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Fa, (¬Paa→∃x(Nx∧Rxc)), (∃x(Nx∧¬Fx)∧¬∃x(Nx∧Fx)) |= ¬Fa"
+  },
+  {
+    "id": "7467cc7ac4ca9798",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧¬Lx)∧¬Rbc), (¬∃x(Mx∧Pxb)∧¬¬Pbc), (∃x(Nx∧Pxa)↔∃x(Nx∧¬Jx)), (¬Pab→(∀x(Ox→Pxb)→∀x(Ox→Jx))) |= (Ja∧Jb)"
+  },
+  {
+    "id": "82fd8e25aee4dcca",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Mx∧Ny)→Qxy), ∀x(Mx→∃y(Oy∧(Pxy∧Pyx))), (Pca∧∃x(Mx∧¬Qxa)) |= Ma"
+  },
+  {
+    "id": "9135d401cef17d25",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧Oy)∧Pxy), ∃x∃y((Mx∧My)∧Qxy), (∃x(Mx∧¬Pxc)∧¬Kb), (¬∃x(Mx∧Pxb)∧∃x(Ox∧Qxa)), (¬Pab→(∀x(Ox→Pxb)→¬∃x(Ox∧Qxc))) |= ∃x(Mx∧Pbx)"
+  },
+  {
+    "id": "95528dd9590ff927",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y∃z(((Nx∧Ny)∧Oz)∧(Pxy∧Pyz)), (¬Rca∧∀x(Nx→Pxa)), (∃x(Nx∧Rxb)→∀x(Mx→Pxc)), (∀x(Ox→Rxc)→(¬Rcc→∀x(Ox→Pxb))), (∃x(Nx∧Pxb)∧¬Mb) |= Ma"
+  },
+  {
+    "id": "413eec4f0d56702d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∀x(Ox→Pxa)∧∃x(Ox∧Qxa)), (¬Mb∧∀x(Mx→Hx)), (∃x(Nx∧Qxb)∨∀x(Nx→Pxc)) |= ¬Ha"
+  },
+  {
+    "id": "b643c1fe2e6ec880",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Paa, (∀x(Ox→Pxb)→(∀x(Ox→Jx)→Mb)), (∃x(Nx∧Pxb)∧Pcc), (¬Ja∧¬Pbc) |= Ja"
+  },
+  {
+    "id": "18f58dcd563f0403",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y((Oy∧Qyx)→Qxy)), (∀x(Lx→Nx)∧¬∃x(Mx∧Pxb)), (∀x(Mx→Pxc)→∃x(Nx∧¬Qxc)), (∀x(Ox→Pxb)→(Lb→∀x(Ox→Qxb))), (¬La∧¬¬Lb) |= ¬Nb"
+  },
+  {
+    "id": "68ed7c85cd7b0bbf",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Jx→Nx), ∀x(Mx→Pxc), (¬∀x(Hx→Mx)→¬Na), (∀x(Mx→Pxc)→¬Pbb), (Pca∧∀x(Mx→Fx)) |= Fa"
+  },
+  {
+    "id": "18347d1f271f6cc6",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧Qxa)∧¬¬Qba), (Ic→¬∃x(Nx∧Jx)), (∀x(Jx→Mx)∧∃x(Mx∧¬Qxa)) |= (Ia∧Ib)"
+  },
+  {
+    "id": "ce3b5a4fcc84cfbc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Mb∨¬Gc), (∃x(Ox∧Lx)∧¬¬La), (∃x(Nx∧Gx)∧¬Lb) |= (Ga∧Gb)"
+  },
+  {
+    "id": "c485b0b5b695d746",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Kb∧Ka), ∃x(Nx∧∀y((Oy∧Ryx)→Rxy)), (Ha∧¬Oc) |= (Ha∧Hc)"
+  },
+  {
+    "id": "8983ae2dafac7226",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Pac, ¬∃x(Nx∧Lx), (∀x(Mx→Pxc)→∀x(Ox→Pxb)) |= La"
+  },
+  {
+    "id": "e333f7be267817ea",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Pcb, (∃x(Mx∧¬Pxc)∧∀x(Lx→Nx)), (∃x(Nx∧Pxb)∧∀x(Ix→Mx)) |= (Pbb↔¬∃x(Nx∧Lx))"
+  },
+  {
+    "id": "f2ce57bf470f7f13",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Mx∧Oy)∧(Rxy∧Ryx)), (∀x(Nx→Rxa)∧∀x(Ix→Nx)), (∃x(Mx∧¬Rxa)∧¬¬Rcc) |= (∀x(Nx→Jx)↔∃x(Nx∧¬Jx))"
+  },
+  {
+    "id": "8e078391ca37e34a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Lc→(∀x(Ox→Pxc)→¬∃x(Nx∧Lx))), (∃x(Ox∧Lx)∧Pca), (¬Rcc∧¬¬Pbc) |= (∀x(Ox→Rxc)→(Lc→∀x(Ox→Lx)))"
+  },
+  {
+    "id": "3c03821a11b59982",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Mx∧¬Pxc)∧∃x(Ox∧Qxa)), (∃x(Ox∧Qxc)→∀x(Mx→Pxc)), (Ia→(¬∃x(Nx∧Lx)→∀x(Ox→Qxb))), (∃x(Mx∧¬Pxc)→(∃x(Mx∧¬Qxa)→Qca)), (Lc→(∃x(Mx∧¬Qxa)→∀x(Nx→Pxc))) |= ∃x(Ox∧Qxc)"
+  },
+  {
+    "id": "9448318d2e72cfb2",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Pxb)∧∀x(Ox→Pxa)), (¬Pcc∧∃x(Ox∧Rxa)), (∃x(Ox∧Pxa)→Rbb) |= Ma"
+  },
+  {
+    "id": "901def81ad93139c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→Pbx), (∃x(Mx∧¬Pxc)→(¬Fb→∀x(Nx→Pxc))), (∀x(Fx→Nx)∧∃x(Nx∧¬Fx)) |= ∀x(Nx→Pxb)"
+  },
+  {
+    "id": "08564f83b2aa5beb",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧¬Qxc), ∀x(Mx→Rax), (∃x(Mx∧¬Rxa)∧¬Jc) |= (∃x(Mx∧¬Rxa)↔¬∃x(Mx∧Rxa))"
+  },
+  {
+    "id": "3581ba216351f920",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→Pax), (¬∃x(Mx∧Pxb)∧¬¬Mb), (∃x(Mx∧¬Pxb)→∃x(Mx∧¬Lx)) |= La"
+  },
+  {
+    "id": "c61df6e30d17743f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∀y((Ny∧Ryx)→Rxy)), ∃x∃y∃z(((Nx∧My)∧Oz)∧(Qxy∧Qyz)), (¬Ga→(∀x(Ox→Rxc)→∃x(Mx∧¬Qxa))) |= ∀x(Mx→∃y(Ny∧Rxy))"
+  },
+  {
+    "id": "69e2e1b41cfa1853",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Rxa), (¬¬Na→Ha), (∃x(Mx∧¬Rxa)↔¬∃x(Mx∧Rxa)) |= ¬∃x(Mx∧Rxa)"
+  },
+  {
+    "id": "e5263fdd5e362fd4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧¬Lx)∧∃x(Ox∧Qxa)), (∀x(Ox→Pxa)∧∃x(Ox∧Qxa)), (Lb→(∀x(Ox→Lx)→¬∃x(Nx∧Lx))) |= La"
+  },
+  {
+    "id": "fca8d6d1c5ebbde6",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧Qxb), (∃x(Ox∧Qxa)∧¬Mb), (∃x(Mx∧¬Qxa)∧¬Pbc) |= (∃x(Mx∧¬Pxc)∧¬Mb)"
+  },
+  {
+    "id": "bd73b38ba3f7576e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧∀y(Oy→Ryx)), ∃x∃y∃z(((Nx∧Ny)∧Oz)∧(Rxy∧Ryz)), (Ic→¬∃x(Nx∧Jx)) |= ∀x∀y((Mx∧Oy)→Rxy)"
+  },
+  {
+    "id": "404d6b863776078f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧Pxa)→Rbb), (∀x(Nx→Jx)↔∃x(Nx∧¬Qxb)), (¬∃x(Nx∧Gx)∧Oc) |= ∀x(Gx→Nx)"
+  },
+  {
+    "id": "8018b69a2fcb2f75",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧¬Qxb), ∃x∃y((Ox∧Ny)∧Rxy), ∃x(Ox∧∀y(Oy→Rxy)) |= ∀x(Nx→∃y(Oy∧Rxy))"
+  },
+  {
+    "id": "1e30ee5dc8b54c95",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Fb, ∀x∀y((Nx∧Oy)→Qxy), (Qcc→(∃x(Mx∧¬Qxc)→¬∃x(Mx∧Ix))), (∃x(Nx∧¬Fx)∧¬Hb) |= ∃x(Nx∧∀y(Oy→Qyx))"
+  },
+  {
+    "id": "ecbcd5018bfeabcc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧Oy)∧Pxy), ∃x∃y((Mx∧My)∧Qxy), (∃x(Mx∧¬Pxc)∧¬Kb), (¬∃x(Mx∧Pxb)∧∃x(Ox∧Qxa)), (¬Pab→(∀x(Ox→Pxb)→¬∃x(Ox∧Qxc))) |= ∀x(Mx→Pbx)"
+  },
+  {
+    "id": "17e792fa3d5b1da8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∃y(Oy∧Qxy)), (∃x(Ox∧¬Qxb)∧∃x(Nx∧Fx)), (∃x(Ox∧Qxb)∨∃x(Ox∧Qxa)), (¬Jc∧∃x(Mx∧¬Qxa)) |= ¬∃x∃y((Mx∧Oy)∧Qxy)"
+  },
+  {
+    "id": "11d80167f69d959a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Qcc, ∀x(Ox→Qxa), (∃x(Ox∧Kx)∧¬Mb) |= ∃x(Ox∧Qax)"
+  },
+  {
+    "id": "aefb2c7883cb9e6b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Nb, ∀x(Nx→Pxb), ∃x(Mx∧Pxx) |= ¬Pbb"
+  },
+  {
+    "id": "cb8d57f207bfc31f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧Qxc), ∃x(Ox∧¬Qxc), (¬Raa∧∃x(Ox∧¬Qxb)) |= (¬Rcc∧∃x(Mx∧¬Qxa))"
+  },
+  {
+    "id": "6bbefc03af34207d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Nx∧My)∧Pxy), (¬∃x(Ox∧¬Pxc)→∀x(Mx→Kx)), (¬Nc→Nc), (¬Pbb→¬Rcb), (∃x(Mx∧¬Rxa)∧¬Pcc) |= ¬∃x(Nx∧Pxc)"
+  },
+  {
+    "id": "9ae7f30611be6d63",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Nx∧Jx), ∃x(Ox∧¬Jx), (¬∃x(Nx∧Jx)→∃x(Nx∧¬Rxb)) |= ∀x(Nx→Jx)"
+  },
+  {
+    "id": "592758eae7339c52",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Mb, (Pba∧∃x(Ox∧Qxa)), (∃x(Nx∧Qxb)∨Qbb) |= ∃x(Mx∧¬Pxa)"
+  },
+  {
+    "id": "1191002f40880c62",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ka∧¬∃x(Mx∧Pxb)), (¬Rca∧∀x(Ox→Pxa)), (∀x(Ox→Rxb)→∃x(Ox∧¬Rxb)) |= ∀x(Ox→Pax)"
+  },
+  {
+    "id": "15790eb4cf3cfa73",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Nx∧Oy)∧Pxy), ∀x(Ox→Pcx), ∃x(Ox∧Rcx) |= Oc"
+  },
+  {
+    "id": "eb925152f5aede03",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Ka, ¬∃x(Mx∧Pxb), ¬∃x(Ox∧∀y(Oy→Pyx)) |= Kb"
+  },
+  {
+    "id": "8dc5aa0c15bb7712",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Ox∧My)→Pxy), (∃x(Ox∧¬Fx)∧∃x(Ox∧Rxa)), (¬Nc→∀x(Ox→Qxb)) |= ∀x∀y((Mx∧Oy)→Pxy)"
+  },
+  {
+    "id": "1c4bf3907a02dbc6",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧Qcx), (∃x(Nx∧Kx)∧∃x(Ox∧¬Qxb)), (¬∃x(Mx∧Pxb)∧∀x(Nx→Kx)) |= Kb"
+  },
+  {
+    "id": "870288eeec5fdd46",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧Pxa)↔¬∃x(Mx∧Rxa)), (¬∃x(Mx∧Rxa)↔¬∃x(Ox∧Pxb)), (¬Pab→(∀x(Ox→Rxc)→∀x(Ox→Lx))) |= (∀x(Ox→Pxb)→¬Na)"
+  },
+  {
+    "id": "8743c5fabbb8f455",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧¬Kx), ¬∃x(Nx∧∀y(Oy→Pyx)), ∃x∃y∃z(((Mx∧My)∧Oz)∧(Pxy∧Pyz)), (¬∃x(Mx∧Pxc)∧Kb), (¬Pca∨∃x(Ox∧Lx)) |= ∀x(Mx→Pcx)"
+  },
+  {
+    "id": "71c4f2ccc1bd84c5",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→∀y((Oy∧∀z(Oz→Qyz))→Qxy)), (∃x(Ox∧Rxa)∧¬¬Mb), (∀x(Ox→Hx)∧¬Hb) |= ∀x(Mx→Hx)"
+  },
+  {
+    "id": "882b8b9222e13362",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∃y(Ny∧(Rxy∧Ryx))), ∃x∃y∃z(((Ox∧My)∧Mz)∧(Qxy∧Qyz)), (∀x(Ox→Qxb)→∃x(Ox∧¬Rxb)) |= ¬∃x(Mx∧∀y(Ny→Rxy))"
+  },
+  {
+    "id": "990c42c15c7b61b8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Lc∧La), ∀x(Ox→Pxa), (Oc∧∀x(Mx→Fx)) |= Pac"
+  },
+  {
+    "id": "77d6057931e57270",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧Kx)∧¬¬Rbc), (¬Qac→Ja), (¬Ja∧Oc) |= ¬Qca"
+  },
+  {
+    "id": "f398320bc2ac6ec0",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬Qbc, (Ka∧∃x(Ox∧Qxa)), (∀x(Fx→Nx)∧¬∃x(Nx∧Fx)) |= (Fa∧Fc)"
+  },
+  {
+    "id": "367f1da9f7fbfbab",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→∃y(Oy∧Pxy)), (∃x(Ox∧¬Fx)∧¬∃x(Mx∧Pxc)), (∀x(Ox→Qxb)∧∃x(Nx∧Fx)), (∀x(Ox→Pxb)→(∃x(Mx∧¬Qxa)→Qcc)) |= ∃x(Ox∧¬Qxb)"
+  },
+  {
+    "id": "f5d0a91164d623b6",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧Rxb)→∃x(Nx∧¬Rxb)), (¬Nc↔∃x(Nx∧Jx)), (¬Pab→(∀x(Ox→Rxc)→∃x(Nx∧Rxc))) |= ¬∃x(Nx∧Rxb)"
+  },
+  {
+    "id": "5d662e0f2c475969",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Lx→Mx), ∃x(Nx∧¬Qxb), (¬Nc→∀x(Mx→Pxc)), (∃x(Mx∧Qxc)→¬Na), (∃x(Ox∧Qxa)∧¬Mb) |= (La∧Lc)"
+  },
+  {
+    "id": "3ee91864db89b720",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Nx∧Ny)∧(Rxy∧Ryx)), (∀x(Lx→Nx)∧∃x(Ox∧Qxa)), (¬∃x(Nx∧Qxb)→∃x(Ox∧Qxc)), (∃x(Nx∧Rxb)→∃x(Nx∧¬Qxc)), (∀x(Lx→Nx)∧¬Ja) |= Jb"
+  },
+  {
+    "id": "b477b8d7393d8872",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧∀y(My→Pyx)), ∀x∀y((Nx∧My)→Qxy), (∀x(Mx→Kx)∨∃x(Ox∧Qxa)) |= ∃x(Mx∧∀y(Ny→Qxy))"
+  },
+  {
+    "id": "936c28a9f890a995",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), Fb, (Pba∧∀x(Ox→Pxa)), (∀x(Ox→Pxa)∧¬¬Pbc) |= (Pcc∧Pba)"
+  },
+  {
+    "id": "0fbb5eae52093024",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Nx∧Kx)∧¬¬Pbc), (∃x(Ox∧Rxa)∧∀x(Nx→Kx)), (¬Pab→(∀x(Nx→Pxc)→¬∃x(Ox∧Qxc))) |= Ka"
+  },
+  {
+    "id": "cdb32e8a8af23718",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Nx∧Rxb), ∃x∃y((Mx∧Ny)∧Rxy), ∃x∃y∃z(((Nx∧My)∧Mz)∧(Rxy∧Ryz)) |= ∃x(Nx∧Rxb)"
+  },
+  {
+    "id": "2025c7fc14433e79",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Ox∧Rxb), (∃x(Nx∧Kx)∧¬Qba), (¬∃x(Mx∧Qxc)∧Ka), (∀x(Ox→Jx)→(¬Qac→∃x(Mx∧¬Qxc))) |= (Ja∧Jc)"
+  },
+  {
+    "id": "297f11bfc82e5abc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧¬Pxb), (∀x(Nx→Hx)↔∃x(Nx∧Jx)), (∀x(Nx→Hx)↔¬∃x(Ox∧Pxb)) |= (¬∃x(Nx∧Jx)→∀x(Ox→Pxb))"
+  },
+  {
+    "id": "36e0fcb39a004db3",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Mx∧Oy)∧Rxy), ∃x∃y∃z(((Ox∧Oy)∧Mz)∧(Qxy∧Qyz)), (¬¬Pca→¬∃x(Mx∧Qxa)), (∀x(Ox→Rxb)→∃x(Ox∧Rxc)), (∀x(Ox→Pxb)→(∃x(Mx∧¬Qxa)→¬Qac)) |= ∀x∀y((Mx∧Oy)→Rxy)"
+  },
+  {
+    "id": "da4c13c806cd731c",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Nx∧Ny)→Pxy), ∀x(Ox→∀y((My∧Pyx)→Pxy)), ∃x∃y((Nx∧Oy)∧(Qxy∧Qyx)), ∃x(Ox∧∀y((Ny∧Qyx)→Qxy)), (∃x(Nx∧Pxa)↔Pbc) |= ¬∃x∃y((Nx∧Ny)∧Pxy)"
+  },
+  {
+    "id": "7d8a2cb271307edf",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧∀y(Ny→Pxy)), ∀x(Mx→Rcx), (¬Nc→Nc), (¬Pac↔∃x(Nx∧Pxc)), (∃x(Ox∧Lx)∧¬¬Rcc) |= ¬∃x(Ox∧Pxc)"
+  },
+  {
+    "id": "a746e1818fffedc8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∀x(Ox→Qxb)∧¬Mb), (∀x(Ox→Rxb)→∀x(Ox→Qxb)), (∃x(Nx∧Gx)∧∃x(Ox∧Qxa)) |= ¬∃x(Ox∧Qxb)"
+  },
+  {
+    "id": "ba3bac1dbacfce52",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Jb∨Ja), ∀x∀y((Nx∧Ny)→Qxy), ∃x∃y∃z(((Mx∧My)∧Nz)∧(Pxy∧Pyz)) |= Ja"
+  },
+  {
+    "id": "df44d5dcc6fe53ac",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Ox∧My)∧Rxy), (∃x(Nx∧¬Lx)∧¬Pcc), (¬Rcc∧Mb) |= ∀x(Ox→Rxb)"
+  },
+  {
+    "id": "70f7037236123e93",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧¬Pxb), ∃x∃y((Mx∧Oy)∧(Pxy∧Pyx)), (∃x(Nx∧Kx)↔∃x(Nx∧Pxc)), (¬Lb∧Oc), (¬∃x(Nx∧Gx)∧¬¬Pbc) |= ¬∃x(Ox∧Pxb)"
+  },
+  {
+    "id": "43e2171109e7680f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→∃y(Oy∧Pxy)), ∃x∃y∃z(((Nx∧Ny)∧Mz)∧(Pxy∧Pyz)), ∃x(Nx∧Pcx), (¬Rca∧¬Pba), (∀x(Ox→Rxc)↔∀x(Nx→Rxc)) |= ∃x(Mx∧∀y(Oy→Pyx))"
+  },
+  {
+    "id": "fda5bfd3c4b1a4e4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Nx→∃y(My∧(Qxy∧Qyx))), (∃x(Nx∧Kx)∧¬Qba), (¬Qac→(∃x(Mx∧¬Qxc)→∀x(Nx→Pxc))) |= ∀x(Mx→∃y(Ny∧Qxy))"
+  },
+  {
+    "id": "dff288219fe03a4d",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧Rxa), (¬Pcc∧¬Pba), (∀x(Lx→Nx)∧¬Jc), (∀x(Lx→Nx)∧Oc) |= ∀x(Ox→Jx)"
+  },
+  {
+    "id": "01e74e64d7be417b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Hc∧Hb), ∀x(Mx→Hx), (∃x(Ox∧¬Qxb)∧∃x(Ox∧Rxa)), (¬∀x(Mx→Rxa)→∃x(Mx∧¬Qxb)), (∃x(Nx∧Rxb)→(Lb→¬∃x(Nx∧Lx))) |= (∀x(Ox→Qxb)∧∀x(Mx→Hx))"
+  },
+  {
+    "id": "258aea9a18ff5cc7",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Mx→Pxa), (Fb∨¬∃x(Mx∧Kx)), (∃x(Mx∧¬Fx)∧¬Oc), (∃x(Mx∧¬Qxa)∧¬¬Pbc) |= ∀x(Mx→Pax)"
+  },
+  {
+    "id": "f56851e03e0e83c4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Ox∧Pxa), ∃x(Nx∧∀y(My→Pyx)), (¬Pcc∧¬¬Pbc) |= (∀x(Ox→Pxa)∧¬Pbc)"
+  },
+  {
+    "id": "d245adddf50f6d1f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧∀y(Ny→Rxy)), (∀x(Mx→Kx)∨∀x(Mx→Rxa)), (¬∃x(Mx∧Kx)∨∀x(Mx→Rxa)) |= Ka"
+  },
+  {
+    "id": "117260cb11182443",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Ox∧Pxc), (∃x(Nx∧Pxb)∧∀x(Mx→Fx)), (Ib∧¬Mb) |= (∃x(Nx∧Pxb)∧¬Ib)"
+  },
+  {
+    "id": "fb753f25ce8a7cda",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x∃y((Mx∧Oy)∧Qxy), ∀x(Ox→∀y((My∧∀z(Mz→Qyz))→Qxy)), (∃x(Ox∧¬Qxb)∧∀x(Nx→Kx)), (∀x(Nx→Kx)∧Kb), (∀x(Ox→Jx)→(∀x(Ox→Lx)→Qcc)) |= ∃x∃y((Mx∧Oy)∧Qxy)"
+  },
+  {
+    "id": "355e6b14fd22d076",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Mx∧Pxb), ∃x(Nx∧Qxc), ∃x(Mx∧∀y(Ny→Qyx)) |= ∀x∀y((Mx∧Ny)→Qxy)"
+  },
+  {
+    "id": "4e13f24b30e8fad8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ¬∃x(Mx∧∀y(Ny→Qxy)), ∀x(Nx→Qbx), (∀x(Hx→Mx)∨∀x(Mx→Qxb)), (¬∃x(Mx∧Rxa)→¬Rbb) |= (Ha∧Hb)"
+  },
+  {
+    "id": "4f9fd40cdd8bfbfc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Qxc)∧¬¬Qba), (∃x(Ox∧¬Qxb)∧¬¬Mb), (¬∀x(Mx→Qxb)→Fb), (∀x(Ox→Pxb)→∃x(Nx∧¬Qxc)), (∃x(Mx∧¬Fx)→(¬Fb→∃x(Mx∧¬Qxc))) |= Qcb"
+  },
+  {
+    "id": "537726b44c4a1944",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x∃y((Ox∧Ny)∧(Rxy∧Ryx)), (∃x(Ox∧Rxa)∧∀x(Nx→Rxa)), (∃x(Ox∧Qxc)→∀x(Mx→Pxc)), (∃x(Nx∧¬Qxc)→∃x(Mx∧Pxb)), (¬Fb→(∃x(Mx∧¬Qxc)→∀x(Nx→Pxc))) |= ¬∃x(Nx∧Rxa)"
+  },
+  {
+    "id": "e6a956e565698815",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧¬Pxb), (∀x(Nx→Hx)↔∃x(Nx∧Jx)), (∀x(Nx→Hx)↔¬∃x(Ox∧Pxb)) |= Hb"
+  },
+  {
+    "id": "54bbf790e247c2b4",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Nx∧Ny)→Pxy), ∀x(Ox→∀y((My∧Pyx)→Pxy)), ∃x∃y((Nx∧Oy)∧(Qxy∧Qyx)), ∃x(Ox∧∀y((Ny∧Qyx)→Qxy)), (∃x(Nx∧Pxa)↔Pbc) |= ¬∃x(Nx∧∀y(Ny→Pxy))"
+  },
+  {
+    "id": "1be92655d04de5b2",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Pcc∧∀x(Nx→Rxa)), (Pcc∧∃x(Nx∧Fx)), (∃x(Ox∧¬Rxb)→Rbb), (∃x(Nx∧Pxa)↔∀x(Ox→Rxc)), (¬Pac↔¬∃x(Nx∧Lx)) |= ∃x(Nx∧¬Rxa)"
+  },
+  {
+    "id": "9ea9debbffdad878",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y(My→Pyx)), (∃x(Ox∧¬Fx)∧∀x(Nx→Rxa)), (∃x(Nx∧¬Fx)∧¬Pbc) |= ¬∃x(Nx∧Rxa)"
+  },
+  {
+    "id": "c416280a505848d2",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Pxb)∧¬¬Mb), (∃x(Mx∧¬Ix)↔∃x(Nx∧¬Qxb)), (Ia→(∀x(Nx→Pxc)→¬∃x(Mx∧Ix))), (Pcc∧∃x(Mx∧¬Qxa)) |= (∃x(Mx∧¬Pxc)∧¬¬Mb)"
+  },
+  {
+    "id": "7b73c8994b01821a",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→Pxc), (∃x(Nx∧Rxb)→(∀x(Ox→Pxb)→Lb)), (∃x(Ox∧Lx)∧¬Pcc) |= Lb"
+  },
+  {
+    "id": "ed7f986935c81a5e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Pxb)∧∀x(Nx→Pxa)), (∃x(Nx∧Qxb)∨¬Fb), (∀x(Ox→Pxb)→∃x(Mx∧Pxb)) |= ∃x(Ox∧Pbx)"
+  },
+  {
+    "id": "1d6b76c6f808246f",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧¬Fx)∧∃x(Mx∧¬Pxc)), (¬∃x(Mx∧Pxc)∧∀x(Nx→Pxa)), (∃x(Mx∧¬Qxa)→(Qca→∀x(Ox→Pxc))) |= (Fc∧Fa)"
+  },
+  {
+    "id": "c34cc3f5840c4a10",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y(Ny→Ryx)), (∀x(Mx→Kx)∨∃x(Mx∧¬Fx)), (Nc→¬Na), (Ib∧∀x(Mx→Fx)), (¬Ja∧¬Jc) |= ∃x(Mx∧¬Kx)"
+  },
+  {
+    "id": "afeda93e0fe091b7",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x(Ox→Qxa), ∃x∃y((Ox∧My)∧(Qxy∧Qyx)), ∀x(Nx→∀y((Oy∧∀z(Mz→Ryz))→Rxy)) |= ∀x(Ox→Qax)"
+  },
+  {
+    "id": "1d506b1c9e465585",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∀x∀y((Ox∧My)→Pxy), (∀x(Mx→Rxb)↔∃x(Mx∧¬Hx)), (¬Ga→(∀x(Ox→Rxc)→∃x(Nx∧Rxc))) |= ¬∃x(Mx∧∀y(Oy→Pxy))"
+  },
+  {
+    "id": "1f01bae5191eac47",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Ib∨Ic), (∃x(Nx∧Kx)∧Ka), (Mb∨¬¬Nc), (¬Kb∧∀x(Ix→Mx)) |= ∀x(Mx→Ix)"
+  },
+  {
+    "id": "1950711b93fd2b8b",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (¬∃x(Mx∧Pxb)∧¬Mb), (∃x(Ox∧¬Qxb)∧∀x(Hx→Nx)), (∃x(Nx∧¬Qxc)→∃x(Mx∧Pxb)) |= ∃x(Nx∧¬Qxc)"
+  },
+  {
+    "id": "9cf5579e2f5055ea",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧Qxc), ∀x(Nx→∃y(Oy∧(Qxy∧Qyx))), ∃x∃y∃z(((Nx∧My)∧Oz)∧(Rxy∧Ryz)), (¬∃x(Mx∧Qxa)∨¬∃x(Nx∧Lx)), (¬Rbb→(∃x(Mx∧¬Qxa)→¬∃x(Ox∧Qxc))) |= ∃x(Nx∧∀y(Oy→Qxy))"
+  },
+  {
+    "id": "5aed7b56561d7e94",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (∃x(Ox∧Kx)∧¬∃x(Mx∧Pxc)), (∃x(Ox∧Qxa)∧∀x(Mx→Hx)), (∀x(Hx→Mx)∨∀x(Mx→Qxb)) |= Ha"
+  },
+  {
+    "id": "1e873ff4fff4bbf8",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧∀y((My∧Ryx)→Rxy)), (¬Pcc∧¬Mb), (Pba∧∃x(Nx∧Fx)), (¬∀x(Nx→Pxc)→¬Pab), (∃x(Ox∧Rxc)→∀x(Mx→Pxc)) |= (Pcc∧Pba)"
+  },
+  {
+    "id": "f07a338e45af2c4e",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Ox∧Rxc), ∃x(Ox∧∀y(Ny→Pyx)), (¬Rca∧∀x(Ox→Pxa)), (¬∃x(Ox∧Lx)→¬Na), (∃x(Nx∧Rxb)→(∃x(Mx∧¬Fx)→¬Fb)) |= Fa"
+  },
+  {
+    "id": "202cdd2bca25dedc",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), (Pcc∧¬∃x(Mx∧Pxc)), (∃x(Mx∧¬Rxa)↔¬∃x(Mx∧Rxa)), (∀x(Ox→Pxb)→(Paa→∀x(Nx→Pxc))) |= ∀x(Mx→Pxc)"
+  },
+  {
+    "id": "12a84019dfb02e01",
+    "question": "((∀x(Mx∨(Nx∨Ox))∧(¬∃x(Mx∧Nx)∧(¬∃x(Mx∧Ox)∧¬∃x(Nx∧Ox))))∧(∃xMx∧(∃xNx∧∃xOx))), ∃x(Nx∧¬Pxa), ∃x(Ox∧∀y((My∧Qyx)→Qxy)), (Pcc∧¬∃x(Nx∧Fx)) |= ∃x(Nx∧Fx)"
+  }
+]

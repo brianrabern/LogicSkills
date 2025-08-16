@@ -83,7 +83,7 @@ def save_questions(questions, output_file):
 if __name__ == "__main__":
     try:
         language = "Carroll"  # stick to one language so that we don't get identical (counterpart) arguments
-        invalid_arguments = generate_questions(language, num_questions=100)
+        invalid_arguments = generate_questions(language, num_questions=300)
         print(invalid_arguments)
 
         # Save questions

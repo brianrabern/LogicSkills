@@ -4,10 +4,7 @@ It's a bit of a hack, but it works. Wo's algorithm finds the minimal countermode
 https://github.com/wo/tpg
 """
 
-from Database.DB import db
-from Database.models import Argument, Sentence
 import json
-from Utils.normalize import unescape_logical_form
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -17,34 +14,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 from bs4 import BeautifulSoup
 
-session = db.session
-
 symbol_map = {"¬": "~3", "∧": "~1", "∨": "~2", "→": "~5", "↔": "~4", "∀": "~6", "∃": "~7"}
 
 
-def get_argument(argument):
-    print("Parsing argument: ", argument.id)
-    language = argument.language
-    domain_constraint = session.query(Sentence).filter_by(type="domain_constraint", language=language).first()
-    domain_constraint_form = unescape_logical_form(domain_constraint.form)
+def get_argument_from_question(question: str) -> str:
+    """Encode a logical argument string for TPG by replacing unicode symbols with squiggle codes.
 
-    premise_id_string = argument.premise_ids
-    premise_ids = premise_id_string.split(",")
-    conclusion_id = argument.conclusion_id
-
-    premises = session.query(Sentence).filter(Sentence.id.in_(premise_ids)).all()
-    premises_forms = [unescape_logical_form(premise.form) for premise in premises]
-
-    conclusion = session.get(Sentence, conclusion_id)
-    conclusion_form = unescape_logical_form(conclusion.form)
-
-    argument_form = domain_constraint_form
-    for premise_form in premises_forms:
-        argument_form += "," + premise_form
-    argument_form += "|=" + conclusion_form
-    print(argument_form)
-
-    # replace symbols with squggle encoiding
+    The input is expected to look like: "φ1, φ2, ..., |= ψ".
+    """
+    argument_form = question
+    # replace symbols with squiggle encoding
     argument_form = argument_form.replace("¬", "~3")
     argument_form = argument_form.replace("∧", "~1")
     argument_form = argument_form.replace("∨", "~2")
@@ -128,13 +107,17 @@ if __name__ == "__main__":
         driver.get("https://www.umsu.de/trees/")
         time.sleep(2)  # give initial page time to load
 
-        # get all invalid arguments
-        invalid_arguments = session.query(Argument).filter_by(valid=False).all()
+        # get all invalid arguments from the local JSON file produced by the extractor
+        with open(
+            "Assessors/countermodel/extras/extracted_questions_countermodel_prelim.json", "r", encoding="utf-8"
+        ) as f:
+            invalid_arguments = json.load(f)
 
         # process each argument
-        for argument in invalid_arguments:
-            print(f"Processing argument {argument.id}...")
-            arg = get_argument(argument)
+        for item in invalid_arguments:
+            arg_id = item["id"]
+            print(f"Processing argument {arg_id}...")
+            arg = get_argument_from_question(item["question"])
 
             # update the URL with the new argument
             driver.get(f"https://www.umsu.de/trees/#{arg}")
@@ -146,16 +129,16 @@ if __name__ == "__main__":
                     lambda d: d.find_element(By.ID, "model").get_attribute("style") != "display: none;"
                 )
             except Exception as e:
-                print(f"Timeout waiting for model for argument {argument.id}: {e}")
-                no_countermodel_found.append(argument.id)
+                print(f"Timeout waiting for model for argument {arg_id}: {e}")
+                no_countermodel_found.append(arg_id)
                 continue
 
             # find the model div
             model_div = driver.find_element(By.ID, "model")
             model_div_style = model_div.get_attribute("style")
             if "display: none;" in model_div_style:
-                print(f"No model found for argument {argument.id}")
-                no_countermodel_found.append(argument.id)
+                print(f"No model found for argument {arg_id}")
+                no_countermodel_found.append(arg_id)
                 continue
             if model_div:
                 # get the model HTML
@@ -163,16 +146,16 @@ if __name__ == "__main__":
 
                 # parse the model into a dictionary
                 model_dict = parse_model_table(model_html)
-                print("Adding countermodel for argument: ", argument.id)
-                countermodels[argument.id] = model_dict
+                print("Adding countermodel for argument: ", arg_id)
+                countermodels[arg_id] = model_dict
             else:
-                print(f"No model found for argument {argument.id}")
-                no_countermodel_found.append(argument.id)
+                print(f"No model found for argument {arg_id}")
+                no_countermodel_found.append(arg_id)
 
-        with open("no_countermodel_found3.json", "w", encoding="utf-8") as f:
+        with open("no_countermodel_found4.json", "w", encoding="utf-8") as f:
             json.dump(no_countermodel_found, f, indent=2)
 
-        with open("countermodels3.json", "w", encoding="utf-8") as f:
+        with open("countermodels4.json", "w", encoding="utf-8") as f:
             json.dump(countermodels, f, indent=2)
 
     finally:
