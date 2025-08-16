@@ -2,7 +2,7 @@ import argparse
 import json
 import logging
 import os
-from dataclasses import asdict
+
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Literal
@@ -152,7 +152,7 @@ class InferencePipeline:
             ModelWrapper: The initialized model wrapper.
         """
         if not LOCAL_MODEL[self.model_name]:
-            assert backend == "api", f"Non-local model must be called via API backend! Specify backend as 'api'."
+            assert backend == "api", "Non-local model must be called via API backend! Specify backend as 'api'."
             model_path = None
             tokenizer_path = None
         else:

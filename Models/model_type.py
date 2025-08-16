@@ -11,4 +11,6 @@ LOCAL_MODEL = {
     "Qwen/Qwen2.5-72B-Instruct": True,
     "Qwen/Qwen3-32B": True,
     "openai/gpt-4o-mini": False,
+    "anthropic/claude-3.7-sonnet": False,
+    "google/gemini-2.5-flash": False,
 }

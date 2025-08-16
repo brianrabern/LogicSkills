@@ -17,6 +17,121 @@ from Utils.logging_config import setup_logging
 # Set up logging
 setup_logging("evaluation_pipeline")
 
+# Model-specific configurations
+llama3_1_8B = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.1-8B-Instruct_20250704_111415.json", "run": False},
+        {"language": "english", "file": "english_meta-llama_Llama-3.1-8B-Instruct_20250704_111146.json", "run": False},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.1-8B-Instruct_20250704_110812.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.1-8B-Instruct_20250704_110742.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "meta-llama_Llama-3.1-8B-Instruct_20250704_111745.json", "run": False}
+    ],
+}
+
+llama3_1_70B = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.1-70B-Instruct_20250704_163947.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.1-70B-Instruct_20250704_115857.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.1-70B-Instruct_20250704_113420.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.1-70B-Instruct_20250704_113044.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "meta-llama_Llama-3.1-70B-Instruct_20250704_174747.json", "run": True}
+    ],
+}
+
+llama3_2_3B = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.2-3B-Instruct_20250704_111807.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.2-3B-Instruct_20250625_182607.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.2-3B-Instruct_20250704_111411.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.2-3B-Instruct_20250704_111411.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "meta-llama_Llama-3.2-3B-Instruct_20250704_114729.json", "run": True}
+    ],
+}
+
+qwen2_5_32B = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen2.5-32B-Instruct_20250704_143900.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen2.5-32B-Instruct_20250704_143949.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen2.5-32B-Instruct_20250704_142339.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen2.5-32B-Instruct_20250704_142322.json", "run": True},
+    ],
+    "countermodel": [{"language": "default", "file": "Qwen_Qwen2.5-32B-Instruct_20250704_144822.json", "run": True}],
+}
+
+qwen2_5_72B = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen2.5-72B-Instruct_20250704_150117.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen2.5-72B-Instruct_20250704_145450.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen2.5-72B-Instruct_20250704_142617.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen2.5-72B-Instruct_20250704_142643.json", "run": True},
+    ],
+    "countermodel": [{"language": "default", "file": "Qwen_Qwen2.5-72B-Instruct_20250704_235036.json", "run": True}],
+}
+
+qwen3_32B = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen3-32B_20250704_215121.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen3-32B_20250704_211833.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen3-32B_20250704_172030.json", "run": True},
+        # Note: English symbolization file for Qwen3-32B doesn't exist
+    ],
+    "countermodel": [{"language": "default", "file": "Qwen_Qwen3-32B_20250704_214308.json", "run": True}],
+}
+
+# gpt4o_mini = {
+#     "validity": [
+#         {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250623_150504.json", "run": True},
+#         {"language": "english", "file": "english_openai_gpt-4o-mini_20250623_152128.json", "run": True},
+#     ],
+#     "symbolization": [
+#         {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250624_104629.json", "run": True},
+#         {"language": "english", "file": "english_openai_gpt-4o-mini_20250624_104752.json", "run": True},
+#     ],
+#     "countermodel": [{"language": "default", "file": "openai_gpt-4o-mini_20250627_112938.json", "run": True}],
+# }
+
+claude_3_7_sonnet = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_anthropic_claude-3.7-sonnet_20250715_090919.json", "run": True},
+        {"language": "english", "file": "english_anthropic_claude-3.7-sonnet_20250715_085332.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_anthropic_claude-3.7-sonnet_20250715_091602.json", "run": True},
+        {"language": "english", "file": "english_anthropic_claude-3.7-sonnet_20250715_094020.json", "run": True},
+    ],
+    "countermodel": [{"language": "default", "file": "anthropic_claude-3.7-sonnet_20250715_105308.json", "run": True}],
+}
+
+gemini_2_5_flash = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_google_gemini-2.5-flash_20250715_130916.json", "run": True},
+        {"language": "english", "file": "english_google_gemini-2.5-flash_20250715_125326.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_google_gemini-2.5-flash_20250715_131652.json", "run": True},
+        {"language": "english", "file": "english_google_gemini-2.5-flash_20250715_133755.json", "run": True},
+    ],
+    "countermodel": [{"language": "default", "file": "google_gemini-2.5-flash_20250715_142745.json", "run": True}],
+}
+
 
 class EvaluationPipeline:
 
@@ -56,9 +171,41 @@ class EvaluationPipeline:
         self.logger.info(f"Loaded {len(results)} inference results from {filepath}")
         return results
 
+    def extract_metadata_from_results(self, inference_results):
+        """Extract language and model information from inference results."""
+        if not inference_results:
+            return None, None
+
+        # Extract language from the first result
+        language = None
+        model_name = None
+
+        if len(inference_results) > 0:
+            first_result = inference_results[0]
+
+            # Get language from question (only for validity and symbolization)
+            if "question" in first_result and "language" in first_result["question"]:
+                language = first_result["question"]["language"]
+            elif self.question_type == "countermodel":
+                # Countermodel doesn't have language variants
+                language = "default"
+
+            # Get model name from inference metadata
+            if "response" in first_result and "inference_metadata" in first_result["response"]:
+                model_name = first_result["response"]["inference_metadata"].get("model_name")
+
+        return language, model_name
+
     def run_evaluation(self, inference_results):
         """Run evaluation on inference results using the existing evaluator."""
         self.logger.info(f"Starting evaluation for {len(inference_results)} {self.question_type} responses")
+
+        # Extract metadata and update evaluator
+        language, model_name = self.extract_metadata_from_results(inference_results)
+        if language:
+            self.evaluator.language = language
+        if model_name:
+            self.evaluator.model_name = model_name
 
         # Use the existing evaluator's interface
         for i, response in enumerate(inference_results, 1):
@@ -92,7 +239,56 @@ class EvaluationPipeline:
         self.logger.info(f"Evaluation Summary: {summary}")
         self.logger.info(f"Evaluation results saved to: {output_file}")
 
+        # Add to main results file
+        self.add_to_main_results(summary, output_file)
+
         return output_file
+
+    def add_to_main_results(self, summary: Dict[str, Any], evaluation_file: str):
+        """Add evaluation summary to the main results file."""
+        main_results_file = "results/main_evaluation_results.json"
+
+        # Load existing results or create new
+        if Path(main_results_file).exists():
+            with open(main_results_file, "r", encoding="utf-8") as f:
+                main_results = json.load(f)
+        else:
+            main_results = {"evaluations": [], "last_updated": None}
+
+        # Create evaluation entry
+        evaluation_entry = {
+            "evaluation_file": evaluation_file,
+            "timestamp": Path(evaluation_file).stem.split("_")[-1],  # Extract timestamp from filename
+            "summary": summary,
+        }
+
+        # Check if this evaluation already exists (based on file path)
+        existing_indices = [
+            i
+            for i, eval_entry in enumerate(main_results["evaluations"])
+            if eval_entry["evaluation_file"] == evaluation_file
+        ]
+
+        if existing_indices:
+            # Update existing entry
+            main_results["evaluations"][existing_indices[0]] = evaluation_entry
+            self.logger.info(f"Updated existing evaluation in main results: {evaluation_file}")
+        else:
+            # Add new entry
+            main_results["evaluations"].append(evaluation_entry)
+            self.logger.info(f"Added new evaluation to main results: {evaluation_file}")
+
+        # Update timestamp
+        from datetime import datetime
+
+        main_results["last_updated"] = datetime.now().isoformat()
+
+        # Save main results
+        Path(main_results_file).parent.mkdir(parents=True, exist_ok=True)
+        with open(main_results_file, "w", encoding="utf-8") as f:
+            json.dump(main_results, f, indent=2, ensure_ascii=False)
+
+        self.logger.info(f"Main results updated: {main_results_file}")
 
     def get_summary(self) -> Dict[str, Any]:
         """Get evaluation summary."""
@@ -110,17 +306,16 @@ if __name__ == "__main__":
     # Example usage
     logging.basicConfig(level=logging.INFO)
 
-    CONFIG = {
-        # "validity": [
-        #     {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250623_150504.json", "run": True},
-        #     {"language": "english", "file": "english_openai_gpt-4o-mini_20250623_152128.json", "run": True},
-        # ],
-        "symbolization": [
-            {"language": "carroll", "file": "carroll_openai_gpt-4o-mini_20250624_104629.json", "run": True},
-            {"language": "english", "file": "english_openai_gpt-4o-mini_20250624_104752.json", "run": True},
-        ],
-        # "countermodel": [{"language": "default", "file": "openai_gpt-4o-mini_20250620_160856.json", "run": True}],
-    }
+    # Available configs:
+    # - llama3_1_8B /done
+    # - llama3_1_70B \done
+    # - llama3_2_3B \done
+    # - qwen2_5_32B \done
+    # - qwen3_32B \done
+    # - claude_3_7_sonnet \done
+    # - gemini_2_5_flash
+    # Select which model config to use
+    CONFIG = gemini_2_5_flash  # Change this to any of the model configs above
 
     record = {}
     for question_type, configs in CONFIG.items():

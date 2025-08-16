@@ -62,6 +62,12 @@ class EvaluationEngine:
         prompt = f"""
         You are an expert in formal logic and syntax. You are given a formula that is not a well-formed formula (WFF). Your task is to correct it according to the syntax rules below.
 
+        # IMPORTANT: Pay special attention to parentheses and how they figure into the syntax.
+			- For binary connectives, use: (WFF CONNECTIVE WFF) — include outer parentheses.
+			- For negation, use: ¬WFF (e.g., ¬Fa, ¬(Fa∧Rab), ¬∀x(Lx→Rxc)) — **do not** wrap inner WFF with parentheses.
+			- For quantifiers, use: QUANTIFIER VARIABLE WFF (e.g., ∀xLx, ∃yRyc, ∀x(Lx→Rxc))  — **do not** wrap inner WFF with parentheses.
+			- Do **not** add unnecessary or redundant parentheses
+
         # Input (Ill-Formed)
         {bad_formula}
 

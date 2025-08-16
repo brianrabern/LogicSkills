@@ -1529,7 +1529,7 @@
       "question_type": "validity",
       "question": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Not all donkeys saw Hazel and Hazel saw Hazel. Not all monkeys kicked Lewis and Lewis saw Alfred. A human saw Lewis and every donkey will run.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Alfred and Lewis will run.\n2. Alfred will run.\n3. Not all donkeys will run.\n4. A donkey will run.\n5. No donkeys will run.\n6. Only donkeys will run.\n",
       "model_response": "To solve this problem, let's analyze the given statements:\n\n1. Not all donkeys saw Hazel and Hazel saw Hazel.\n   - This statement implies that at least one donkey saw Hazel, and at least one human saw Hazel. Since not all donkeys saw Hazel, there must be at least one human who saw Hazel.\n\n2. Not all monkeys kicked Lewis and Lewis saw Alfred.\n   - This statement implies that at least one monkey kicked Lewis, and at least one human saw Alfred. Since not all monkeys kicked Lewis, there must be at least one human who saw Alfred.\n\n3. A human saw Lewis and every donkey will run.\n   - This statement implies that at least one human saw Lewis, and all donkeys will run.\n\nFrom statements 1 and 2, we can conclude that there is at least one human who saw both Hazel and Alfred. Since every donkey will run (statement 3), and at least one human saw Lewis (statement 3), we can conclude that at least one human will run.\n\nNow, let's analyze the options:\n\n1. Alfred and Lewis will run.\n   - This statement is not necessarily true. We know that at least one human will run, but we don't know if Alfred and Lewis are the same person or not.\n\n2. Alfred will run.\n   - This statement is not necessarily true. We know that at least one human will run, but we don't know if Alfred is that human.\n\n3. Not all donkeys will run.\n   - This statement is false. We know that every donkey will run (statement 3).\n\n4. A donkey will run.\n   - This statement is true. We know that every donkey will run (statement 3).\n\n5. No donkeys will run.\n   - This statement is false. We know that every donkey will run (statement 3).\n\n6. Only donkeys will run.\n   - This statement is false. We know that every donkey will run, but we also know that at least one human will run.\n\nTherefore, the only statement that must be true is:\n\n4. A donkey will run.",
-      "extracted_answer": null,
+      "extracted_answer": "4",
       "model_metadata": {
         "model_name": "meta-llama/Llama-3.2-3B-Instruct",
         "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
@@ -1541,10 +1541,12 @@
         "end_time": "2025-06-25T18:25:18.252497",
         "success": true
       },
-      "is_correct": false,
+      "is_correct": true,
       "comments": {
         "correct_answer": "4",
-        "model_answer_sentence_ids": [],
+        "model_answer_sentence_ids": [
+          401
+        ],
         "correct_answer_sentence_ids": [
           401
         ]
@@ -2176,7 +2178,7 @@
       "question_type": "validity",
       "question": "Consider the following situation:\n\nEverything is a donkey, or a human, or a monkey (exclusively), and there's at least one of each. Hazel and Alfred are hungry. Every monkey saw Alfred. Hazel is a monkey and every donkey will run.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. Alfred saw Hazel.\n2. Alfred will run.\n3. Alfred doesn't see Hazel.\n4. Hazel saw Alfred.\n5. Hazel doesn't see Alfred.\n6. Alfred and Hazel will run.\n",
       "model_response": "To solve this problem, let's analyze each statement one by one.\n\n1. Alfred saw every monkey. Since there's at least one monkey, and Hazel is a monkey, Alfred must have seen Hazel. So, statement 1 is true.\n\n2. Every donkey will run. Since Hazel is a donkey, Hazel will run. However, we don't have any information about Alfred being a donkey. Therefore, we cannot conclude that Alfred will run. Statement 2 is not necessarily true.\n\n3. Since Alfred saw every monkey, and Hazel is a monkey, Alfred must have seen Hazel. Therefore, statement 3 is false.\n\n4. We already know that Alfred saw Hazel (from statement 1). Therefore, statement 4 is true.\n\n5. Since Alfred saw Hazel, and Hazel is a monkey, it's possible that Alfred is a human and didn't see Hazel. However, it's also possible that Alfred is a monkey and saw Hazel. Therefore, we cannot conclude that Hazel doesn't see Alfred. Statement 5 is not necessarily true.\n\n6. We don't have any information about Alfred being a donkey. Therefore, we cannot conclude that Alfred and Hazel will run. Statement 6 is not necessarily true.\n\nIn conclusion, the statements that must be true in this situation are:\n\n1. Alfred saw Hazel.\n2. Hazel saw Alfred.\n3. (This was not one of the options)",
-      "extracted_answer": "Indeterminate",
+      "extracted_answer": "1,4",
       "model_metadata": {
         "model_name": "meta-llama/Llama-3.2-3B-Instruct",
         "system_prompt": "\nYour task is to solve a logical reasoning problem.\nUse any approach you find effective, but clearly and explicitly state your final answer.\n",
@@ -2191,7 +2193,10 @@
       "is_correct": false,
       "comments": {
         "correct_answer": "4",
-        "model_answer_sentence_ids": [],
+        "model_answer_sentence_ids": [
+          299,
+          315
+        ],
         "correct_answer_sentence_ids": [
           315
         ]
@@ -2823,8 +2828,11 @@
   ],
   "summary": {
     "total_questions": 100,
-    "correct_answers": 40,
-    "accuracy": 0.4,
-    "errors": 0
+    "correct_answers": 41,
+    "accuracy": 0.41,
+    "errors": 0,
+    "question_type": "validity",
+    "language": "english",
+    "model_name": "meta-llama/Llama-3.2-3B-Instruct"
   }
 }

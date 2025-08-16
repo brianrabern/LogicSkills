@@ -7,10 +7,19 @@ from config import EXTRACTOR_MODEL
 
 
 class SymbolizationEvaluator:
-    def __init__(self, model: EvaluationEngine):
+    def __init__(
+        self,
+        model: EvaluationEngine,
+        question_type: str = "symbolization",
+        language: str = None,
+        model_name: str = None,
+    ):
         self.model = model
         self.extractor_model = EvaluationEngine(EXTRACTOR_MODEL)
         self.results = []
+        self.question_type = question_type
+        self.language = language
+        self.model_name = model_name
 
     def evaluate_response(self, response):
         """Evaluate a single question."""
@@ -84,13 +93,23 @@ class SymbolizationEvaluator:
         errors = sum(1 for r in self.results if "error" in r)
         unknown = sum(1 for r in self.results if r.get("is_correct", False) == "UNKNOWN")
 
-        return {
+        summary = {
             "total_questions": total,
             "correct_answers": correct,
             "accuracy": correct / total if total > 0 else 0,
             "errors": errors,
             "unknown": unknown,
         }
+
+        # Add metadata if available
+        if self.question_type:
+            summary["question_type"] = self.question_type
+        if self.language:
+            summary["language"] = self.language
+        if self.model_name:
+            summary["model_name"] = self.model_name
+
+        return summary
 
     def save_results(self, filepath: str):
         """Save evaluation results to a JSON file."""

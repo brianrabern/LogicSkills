@@ -1,0 +1,460 @@
+{
+  "evaluations": [
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_meta-llama_Llama-3.1-8B-Instruct_20250704_111415.json",
+      "timestamp": "111415",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 50,
+        "accuracy": 0.5,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_meta-llama_Llama-3.1-8B-Instruct_20250704_111146.json",
+      "timestamp": "111146",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 47,
+        "accuracy": 0.47,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_meta-llama_Llama-3.1-8B-Instruct_20250704_110812.json",
+      "timestamp": "110812",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 17,
+        "accuracy": 0.17,
+        "errors": 0,
+        "unknown": 48,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_meta-llama_Llama-3.1-8B-Instruct_20250704_110742.json",
+      "timestamp": "110742",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 20,
+        "accuracy": 0.2,
+        "errors": 0,
+        "unknown": 44,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/meta-llama_Llama-3.1-8B-Instruct_20250704_111745.json",
+      "timestamp": "111745",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 0,
+        "accuracy": 0.0,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_meta-llama_Llama-3.1-70B-Instruct_20250704_163947.json",
+      "timestamp": "163947",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 78,
+        "accuracy": 0.78,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_meta-llama_Llama-3.1-70B-Instruct_20250704_115857.json",
+      "timestamp": "115857",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 79,
+        "accuracy": 0.79,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_meta-llama_Llama-3.1-70B-Instruct_20250704_113420.json",
+      "timestamp": "113420",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 59,
+        "accuracy": 0.59,
+        "errors": 0,
+        "unknown": 11,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_meta-llama_Llama-3.1-70B-Instruct_20250704_113044.json",
+      "timestamp": "113044",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 66,
+        "accuracy": 0.66,
+        "errors": 0,
+        "unknown": 11,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/meta-llama_Llama-3.1-70B-Instruct_20250704_174747.json",
+      "timestamp": "174747",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 0,
+        "accuracy": 0.0,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_meta-llama_Llama-3.2-3B-Instruct_20250704_111807.json",
+      "timestamp": "111807",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 29,
+        "accuracy": 0.29,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.2-3B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_meta-llama_Llama-3.2-3B-Instruct_20250625_182607.json",
+      "timestamp": "182607",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 41,
+        "accuracy": 0.41,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.2-3B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_meta-llama_Llama-3.2-3B-Instruct_20250704_111411.json",
+      "timestamp": "111411",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 6,
+        "accuracy": 0.06,
+        "errors": 0,
+        "unknown": 60,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.2-3B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_meta-llama_Llama-3.2-3B-Instruct_20250704_111411.json",
+      "timestamp": "111411",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 11,
+        "accuracy": 0.11,
+        "errors": 0,
+        "unknown": 56,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.2-3B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/meta-llama_Llama-3.2-3B-Instruct_20250704_114729.json",
+      "timestamp": "114729",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 0,
+        "accuracy": 0.0,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "meta-llama/Llama-3.2-3B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_Qwen_Qwen2.5-32B-Instruct_20250704_143900.json",
+      "timestamp": "143900",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 82,
+        "accuracy": 0.82,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "Qwen/Qwen2.5-32B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_Qwen_Qwen2.5-32B-Instruct_20250704_143949.json",
+      "timestamp": "143949",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 83,
+        "accuracy": 0.83,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "Qwen/Qwen2.5-32B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_Qwen_Qwen2.5-32B-Instruct_20250704_142339.json",
+      "timestamp": "142339",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 64,
+        "accuracy": 0.64,
+        "errors": 0,
+        "unknown": 12,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "Qwen/Qwen2.5-32B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_Qwen_Qwen2.5-32B-Instruct_20250704_142322.json",
+      "timestamp": "142322",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 68,
+        "accuracy": 0.68,
+        "errors": 0,
+        "unknown": 13,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "Qwen/Qwen2.5-32B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/Qwen_Qwen2.5-32B-Instruct_20250704_144822.json",
+      "timestamp": "144822",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 6,
+        "accuracy": 0.06,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "Qwen/Qwen2.5-32B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_Qwen_Qwen3-32B_20250704_215121.json",
+      "timestamp": "215121",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 99,
+        "accuracy": 0.99,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "Qwen/Qwen3-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_Qwen_Qwen3-32B_20250704_211833.json",
+      "timestamp": "211833",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 96,
+        "accuracy": 0.96,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "Qwen/Qwen3-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_Qwen_Qwen3-32B_20250704_172030.json",
+      "timestamp": "172030",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 85,
+        "accuracy": 0.85,
+        "errors": 0,
+        "unknown": 11,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "Qwen/Qwen3-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/Qwen_Qwen3-32B_20250704_214308.json",
+      "timestamp": "214308",
+      "summary": {
+        "total_questions": 98,
+        "correct_answers": 92,
+        "accuracy": 0.9387755102040817,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "Qwen/Qwen3-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_anthropic_claude-3.7-sonnet_20250715_090919.json",
+      "timestamp": "090919",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 97,
+        "accuracy": 0.97,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_anthropic_claude-3.7-sonnet_20250715_085332.json",
+      "timestamp": "085332",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 95,
+        "accuracy": 0.95,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_anthropic_claude-3.7-sonnet_20250715_091602.json",
+      "timestamp": "091602",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 74,
+        "accuracy": 0.74,
+        "errors": 0,
+        "unknown": 15,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_anthropic_claude-3.7-sonnet_20250715_094020.json",
+      "timestamp": "094020",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 82,
+        "accuracy": 0.82,
+        "errors": 0,
+        "unknown": 14,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/anthropic_claude-3.7-sonnet_20250715_105308.json",
+      "timestamp": "105308",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 33,
+        "accuracy": 0.33,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_google_gemini-2.5-flash_20250715_130916.json",
+      "timestamp": "130916",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 98,
+        "accuracy": 0.98,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_google_gemini-2.5-flash_20250715_125326.json",
+      "timestamp": "125326",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 95,
+        "accuracy": 0.95,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_google_gemini-2.5-flash_20250715_131652.json",
+      "timestamp": "131652",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 77,
+        "accuracy": 0.77,
+        "errors": 0,
+        "unknown": 15,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_google_gemini-2.5-flash_20250715_133755.json",
+      "timestamp": "133755",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 81,
+        "accuracy": 0.81,
+        "errors": 0,
+        "unknown": 8,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/google_gemini-2.5-flash_20250715_142745.json",
+      "timestamp": "142745",
+      "summary": {
+        "total_questions": 100,
+        "correct_answers": 3,
+        "accuracy": 0.03,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    }
+  ],
+  "last_updated": "2025-07-15T15:24:49.826031"
+}
