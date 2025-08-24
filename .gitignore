@@ -1,6 +1,7 @@
 
 config.py
 logs/
+bash_scripts/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
