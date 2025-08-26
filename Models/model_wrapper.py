@@ -148,13 +148,14 @@ class ModelWrapper:
         Returns:
             Tuple[List[str], List[str]]: A tuple containing two lists, the formatted decoded input and decoded output.
         """
-        instruction_start_tokens: List[str] = ["[INST]", "user\n\n", "user\n"]
+        instruction_start_tokens: List[str] = ["[INST]", "user\n\n", "user\n", "user"]
         assistant_start_tokens = [
             "[/INST] ",
             "<|im_start|> assistant\n",
             "<|assistant|>",
             "assistant\n\n",
             "assistant\n",
+            "assistant",
             "model\n",
         ]
         decoded_input = []
