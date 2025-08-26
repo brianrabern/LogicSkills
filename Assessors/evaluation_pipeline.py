@@ -120,6 +120,22 @@ claude_3_7_sonnet = {
     "countermodel": [{"language": "default", "file": "anthropic_claude-3.7-sonnet_20250715_105308.json", "run": True}],
 }
 
+
+# Latest explicit config for anthropic/claude-3.7-sonnet (2025-08-22 runs)
+claude_3_7_sonnet_20250822 = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_anthropic_claude-3.7-sonnet_20250822_194011.json", "run": True},
+        {"language": "english", "file": "english_anthropic_claude-3.7-sonnet_20250822_190250.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_anthropic_claude-3.7-sonnet_20250822_195739.json", "run": True},
+        {"language": "english", "file": "english_anthropic_claude-3.7-sonnet_20250822_194859.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "anthropic_claude-3.7-sonnet_20250822_210348.json", "run": True},
+    ],
+}
+
 gemini_2_5_flash = {
     "validity": [
         {"language": "carroll", "file": "carroll_google_gemini-2.5-flash_20250715_130916.json", "run": True},
@@ -130,6 +146,27 @@ gemini_2_5_flash = {
         {"language": "english", "file": "english_google_gemini-2.5-flash_20250715_133755.json", "run": True},
     ],
     "countermodel": [{"language": "default", "file": "google_gemini-2.5-flash_20250715_142745.json", "run": True}],
+}
+
+
+gpt5_mini = {
+    "countermodel": [{"language": "default", "file": "openai_gpt-5-mini_20250816_165658.json", "run": True}],
+}
+
+
+# Latest explicit config for google/gemini-2.5-flash (2025-08-22 runs)
+gemini_2_5_flash_20250822 = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_google_gemini-2.5-flash_20250822_145432.json", "run": True},
+        {"language": "english", "file": "english_google_gemini-2.5-flash_20250822_142558.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_google_gemini-2.5-flash_20250822_150206.json", "run": True},
+        {"language": "english", "file": "english_google_gemini-2.5-flash_20250822_145748.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "google_gemini-2.5-flash_20250822_151018.json", "run": True},
+    ],
 }
 
 
@@ -314,8 +351,11 @@ if __name__ == "__main__":
     # - qwen3_32B \done
     # - claude_3_7_sonnet \done
     # - gemini_2_5_flash
+    # - gemini_2_5_flash_20250822
+    # - gpt5_mini
     # Select which model config to use
-    CONFIG = gemini_2_5_flash  # Change this to any of the model configs above
+    # CONFIG = gemini_2_5_flash_20250822  # Change this to any of the model configs above
+    CONFIG = claude_3_7_sonnet_20250822
 
     record = {}
     for question_type, configs in CONFIG.items():

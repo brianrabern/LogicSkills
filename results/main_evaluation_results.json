@@ -454,7 +454,154 @@
         "language": "default",
         "model_name": "google/gemini-2.5-flash"
       }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/openai_gpt-5-mini_20250816_165658.json",
+      "timestamp": "165658",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 217,
+        "accuracy": 0.7233333333333334,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "openai/gpt-5-mini"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_google_gemini-2.5-flash_20250822_145432.json",
+      "timestamp": "145432",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 288,
+        "accuracy": 0.96,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_google_gemini-2.5-flash_20250822_142558.json",
+      "timestamp": "142558",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 283,
+        "accuracy": 0.9433333333333334,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_google_gemini-2.5-flash_20250822_150206.json",
+      "timestamp": "150206",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 229,
+        "accuracy": 0.7633333333333333,
+        "errors": 0,
+        "unknown": 41,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_google_gemini-2.5-flash_20250822_145748.json",
+      "timestamp": "145748",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 238,
+        "accuracy": 0.7933333333333333,
+        "errors": 0,
+        "unknown": 31,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/google_gemini-2.5-flash_20250822_151018.json",
+      "timestamp": "151018",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 40,
+        "accuracy": 0.13333333333333333,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "google/gemini-2.5-flash"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_anthropic_claude-3.7-sonnet_20250822_194011.json",
+      "timestamp": "194011",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 287,
+        "accuracy": 0.9566666666666667,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_anthropic_claude-3.7-sonnet_20250822_190250.json",
+      "timestamp": "190250",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 282,
+        "accuracy": 0.94,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_anthropic_claude-3.7-sonnet_20250822_195739.json",
+      "timestamp": "195739",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 214,
+        "accuracy": 0.7133333333333334,
+        "errors": 0,
+        "unknown": 62,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_anthropic_claude-3.7-sonnet_20250822_194859.json",
+      "timestamp": "194859",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 228,
+        "accuracy": 0.76,
+        "errors": 0,
+        "unknown": 49,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/anthropic_claude-3.7-sonnet_20250822_210348.json",
+      "timestamp": "210348",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 126,
+        "accuracy": 0.42,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "anthropic/claude-3.7-sonnet"
+      }
     }
   ],
-  "last_updated": "2025-07-15T15:24:49.826031"
+  "last_updated": "2025-08-23T08:35:35.799501"
 }
