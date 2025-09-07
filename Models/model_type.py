@@ -17,8 +17,10 @@ LOCAL_MODEL = {
     "open-thoughts/OpenThinker2-32B": True,
     "openai/gpt-oss-20b": True,
     "openai/gpt-oss-120b": True,
+    "openai/gpt-4o": False,
     "openai/gpt-4o-mini": False,
     "anthropic/claude-3.7-sonnet": False,
     "google/gemini-2.5-flash": False,
     "openai/gpt-5-mini": False,
+    "deepseek/deepseek-chat": False,
 }

@@ -601,7 +601,342 @@
         "language": "default",
         "model_name": "anthropic/claude-3.7-sonnet"
       }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_microsoft_phi-4_20250819_234021.json",
+      "timestamp": "234021",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 239,
+        "accuracy": 0.7966666666666666,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "microsoft/phi-4"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_microsoft_phi-4_20250819_232501.json",
+      "timestamp": "232501",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 220,
+        "accuracy": 0.7333333333333333,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "microsoft/phi-4"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_microsoft_phi-4_20250819_231353.json",
+      "timestamp": "231353",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 152,
+        "accuracy": 0.5066666666666667,
+        "errors": 0,
+        "unknown": 72,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "microsoft/phi-4"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_microsoft_phi-4_20250819_231259.json",
+      "timestamp": "231259",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 172,
+        "accuracy": 0.5733333333333334,
+        "errors": 0,
+        "unknown": 61,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "microsoft/phi-4"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/microsoft_phi-4_20250820_000522.json",
+      "timestamp": "000522",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 43,
+        "accuracy": 0.14333333333333334,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "microsoft/phi-4"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_open-thoughts_OpenThinker2-32B_20250822_085511.json",
+      "timestamp": "085511",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 253,
+        "accuracy": 0.8433333333333334,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "open-thoughts/OpenThinker2-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_open-thoughts_OpenThinker2-32B_20250822_003253.json",
+      "timestamp": "003253",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 266,
+        "accuracy": 0.8866666666666667,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "open-thoughts/OpenThinker2-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_open-thoughts_OpenThinker2-32B_20250821_161949.json",
+      "timestamp": "161949",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 147,
+        "accuracy": 0.49,
+        "errors": 0,
+        "unknown": 106,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "open-thoughts/OpenThinker2-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_open-thoughts_OpenThinker2-32B_20250821_080442.json",
+      "timestamp": "080442",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 219,
+        "accuracy": 0.73,
+        "errors": 0,
+        "unknown": 38,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "open-thoughts/OpenThinker2-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/open-thoughts_OpenThinker2-32B_20250822_171802.json",
+      "timestamp": "171802",
+      "summary": {
+        "total_questions": 298,
+        "correct_answers": 154,
+        "accuracy": 0.5167785234899329,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "open-thoughts/OpenThinker2-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_openai_gpt-4o_20250905_160039.json",
+      "timestamp": "160039",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 262,
+        "accuracy": 0.8733333333333333,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "openai/gpt-4o"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_openai_gpt-4o_20250905_152608.json",
+      "timestamp": "152608",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 256,
+        "accuracy": 0.8533333333333334,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "openai/gpt-4o"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_openai_gpt-4o_20250905_161030.json",
+      "timestamp": "161030",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 223,
+        "accuracy": 0.7433333333333333,
+        "errors": 0,
+        "unknown": 35,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "openai/gpt-4o"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_openai_gpt-4o_20250905_160544.json",
+      "timestamp": "160544",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 217,
+        "accuracy": 0.7233333333333334,
+        "errors": 0,
+        "unknown": 48,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "openai/gpt-4o"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/openai_gpt-4o_20250905_164818.json",
+      "timestamp": "164818",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 30,
+        "accuracy": 0.1,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "openai/gpt-4o"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_deepseek_deepseek-chat_20250906_134412.json",
+      "timestamp": "134412",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 244,
+        "accuracy": 0.8133333333333334,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_deepseek_deepseek-chat_20250906_114800.json",
+      "timestamp": "114800",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 229,
+        "accuracy": 0.7633333333333333,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_deepseek_deepseek-chat_20250906_140004.json",
+      "timestamp": "140004",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 240,
+        "accuracy": 0.8,
+        "errors": 0,
+        "unknown": 36,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_deepseek_deepseek-chat_20250906_135216.json",
+      "timestamp": "135216",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 242,
+        "accuracy": 0.8066666666666666,
+        "errors": 0,
+        "unknown": 39,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/deepseek_deepseek-chat_20250906_160610.json",
+      "timestamp": "160610",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 104,
+        "accuracy": 0.3466666666666667,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "deepseek/deepseek-chat"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_meta-llama_Llama-3.1-8B-Instruct_20250819_003756.json",
+      "timestamp": "003756",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 138,
+        "accuracy": 0.46,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_meta-llama_Llama-3.1-8B-Instruct_20250819_001821.json",
+      "timestamp": "001821",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 135,
+        "accuracy": 0.45,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_meta-llama_Llama-3.1-8B-Instruct_20250819_000139.json",
+      "timestamp": "000139",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 42,
+        "accuracy": 0.14,
+        "errors": 0,
+        "unknown": 134,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_meta-llama_Llama-3.1-8B-Instruct_20250819_000059.json",
+      "timestamp": "000059",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 41,
+        "accuracy": 0.13666666666666666,
+        "errors": 0,
+        "unknown": 154,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/meta-llama_Llama-3.1-8B-Instruct_20250819_005902.json",
+      "timestamp": "005902",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 0,
+        "accuracy": 0.0,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+      }
     }
   ],
-  "last_updated": "2025-08-23T08:35:35.799501"
+  "last_updated": "2025-09-07T09:03:00.592524"
 }

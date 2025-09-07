@@ -153,6 +153,63 @@ gpt5_mini = {
     "countermodel": [{"language": "default", "file": "openai_gpt-5-mini_20250816_165658.json", "run": True}],
 }
 
+# Placeholders for upcoming models — set file names and flip run=True when ready
+qwen2_5_math_72b = {
+    "validity": [
+        {"language": "carroll", "file": "", "run": False},
+        {"language": "english", "file": "english_Qwen_Qwen2.5-Math-72B-Instruct_20250823_201432.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen2.5-Math-72B-Instruct_20250822_144613.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen2.5-Math-72B-Instruct_20250821_191428.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "", "run": False},
+    ],
+}
+
+microsoft_phi_4 = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_microsoft_phi-4_20250819_234021.json", "run": True},
+        {"language": "english", "file": "english_microsoft_phi-4_20250819_232501.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_microsoft_phi-4_20250819_231353.json", "run": True},
+        {"language": "english", "file": "english_microsoft_phi-4_20250819_231259.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "microsoft_phi-4_20250820_000522.json", "run": True},
+    ],
+}
+
+openthinker2_32b = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_open-thoughts_OpenThinker2-32B_20250822_085511.json", "run": False},
+        {"language": "english", "file": "english_open-thoughts_OpenThinker2-32B_20250822_003253.json", "run": False},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_open-thoughts_OpenThinker2-32B_20250821_161949.json", "run": False},
+        {"language": "english", "file": "english_open-thoughts_OpenThinker2-32B_20250821_080442.json", "run": False},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "open-thoughts_OpenThinker2-32B_20250822_171802.json", "run": True},
+    ],
+}
+
+gpt_oss_120b = {
+    "validity": [
+        {"language": "carroll", "file": "", "run": False},
+        {"language": "english", "file": "", "run": False},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "", "run": False},
+        {"language": "english", "file": "", "run": False},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "", "run": False},
+    ],
+}
+
 
 # Latest explicit config for google/gemini-2.5-flash (2025-08-22 runs)
 gemini_2_5_flash_20250822 = {
@@ -166,6 +223,49 @@ gemini_2_5_flash_20250822 = {
     ],
     "countermodel": [
         {"language": "default", "file": "google_gemini-2.5-flash_20250822_151018.json", "run": True},
+    ],
+}
+
+gpt_4o = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_openai_gpt-4o_20250905_160039.json", "run": True},
+        {"language": "english", "file": "english_openai_gpt-4o_20250905_152608.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_openai_gpt-4o_20250905_161030.json", "run": True},
+        {"language": "english", "file": "english_openai_gpt-4o_20250905_160544.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "openai_gpt-4o_20250905_164818.json", "run": True},
+    ],
+}
+
+deepseek_chat = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_deepseek_deepseek-chat_20250906_134412.json", "run": True},
+        {"language": "english", "file": "english_deepseek_deepseek-chat_20250906_114800.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_deepseek_deepseek-chat_20250906_140004.json", "run": True},
+        {"language": "english", "file": "english_deepseek_deepseek-chat_20250906_135216.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "deepseek_deepseek-chat_20250906_160610.json", "run": True},
+    ],
+}
+
+# Latest explicit config for meta-llama/Llama-3.1-8B-Instruct (2025-08-19 runs)
+llama3_1_8B_20250819 = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.1-8B-Instruct_20250819_003756.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.1-8B-Instruct_20250819_001821.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.1-8B-Instruct_20250819_000139.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.1-8B-Instruct_20250819_000059.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "meta-llama_Llama-3.1-8B-Instruct_20250819_005902.json", "run": True},
     ],
 }
 
@@ -345,6 +445,7 @@ if __name__ == "__main__":
 
     # Available configs:
     # - llama3_1_8B /done
+    # - llama3_1_8B_20250819
     # - llama3_1_70B \done
     # - llama3_2_3B \done
     # - qwen2_5_32B \done
@@ -353,9 +454,12 @@ if __name__ == "__main__":
     # - gemini_2_5_flash
     # - gemini_2_5_flash_20250822
     # - gpt5_mini
+    # - gpt_4o
+    # - deepseek_chat
     # Select which model config to use
     # CONFIG = gemini_2_5_flash_20250822  # Change this to any of the model configs above
-    CONFIG = claude_3_7_sonnet_20250822
+    # CONFIG = claude_3_7_sonnet_20250822
+    CONFIG = llama3_1_8B_20250819
 
     record = {}
     for question_type, configs in CONFIG.items():
