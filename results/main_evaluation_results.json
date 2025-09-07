@@ -936,7 +936,208 @@
         "language": "default",
         "model_name": "meta-llama/Llama-3.1-8B-Instruct"
       }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_meta-llama_Llama-3.1-70B-Instruct_20250824_223131.json",
+      "timestamp": "223131",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 251,
+        "accuracy": 0.8366666666666667,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_meta-llama_Llama-3.1-70B-Instruct_20250824_052624.json",
+      "timestamp": "052624",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 257,
+        "accuracy": 0.8566666666666667,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_meta-llama_Llama-3.1-70B-Instruct_20250820_075252.json",
+      "timestamp": "075252",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 198,
+        "accuracy": 0.66,
+        "errors": 0,
+        "unknown": 34,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_meta-llama_Llama-3.1-70B-Instruct_20250820_033728.json",
+      "timestamp": "033728",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 206,
+        "accuracy": 0.6866666666666666,
+        "errors": 0,
+        "unknown": 26,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/meta-llama_Llama-3.1-70B-Instruct_20250826_064043.json",
+      "timestamp": "064043",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 36,
+        "accuracy": 0.12,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "meta-llama/Llama-3.1-70B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_Qwen_Qwen2.5-Math-72B-Instruct_20250825_081443.json",
+      "timestamp": "081443",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 241,
+        "accuracy": 0.8033333333333333,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "Qwen/Qwen2.5-Math-72B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_Qwen_Qwen2.5-Math-72B-Instruct_20250823_201432.json",
+      "timestamp": "201432",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 239,
+        "accuracy": 0.7966666666666666,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "Qwen/Qwen2.5-Math-72B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_Qwen_Qwen2.5-Math-72B-Instruct_20250822_144613.json",
+      "timestamp": "144613",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 241,
+        "accuracy": 0.8033333333333333,
+        "errors": 0,
+        "unknown": 28,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "Qwen/Qwen2.5-Math-72B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_Qwen_Qwen2.5-Math-72B-Instruct_20250821_191428.json",
+      "timestamp": "191428",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 240,
+        "accuracy": 0.8,
+        "errors": 0,
+        "unknown": 24,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "Qwen/Qwen2.5-Math-72B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/Qwen_Qwen2.5-Math-72B-Instruct_20250906_145612.json",
+      "timestamp": "145612",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 44,
+        "accuracy": 0.14666666666666667,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "Qwen/Qwen2.5-Math-72B-Instruct"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/carroll_Qwen_Qwen3-32B_20250820_083617.json",
+      "timestamp": "083617",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 284,
+        "accuracy": 0.9466666666666667,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "carroll",
+        "model_name": "Qwen/Qwen3-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/validity/english_Qwen_Qwen3-32B_20250819_192200.json",
+      "timestamp": "192200",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 292,
+        "accuracy": 0.9733333333333334,
+        "errors": 0,
+        "question_type": "validity",
+        "language": "english",
+        "model_name": "Qwen/Qwen3-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/carroll_Qwen_Qwen3-32B_20250819_072312.json",
+      "timestamp": "072312",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 247,
+        "accuracy": 0.8233333333333334,
+        "errors": 0,
+        "unknown": 40,
+        "question_type": "symbolization",
+        "language": "carroll",
+        "model_name": "Qwen/Qwen3-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/symbolization/english_Qwen_Qwen3-32B_20250819_035018.json",
+      "timestamp": "035018",
+      "summary": {
+        "total_questions": 300,
+        "correct_answers": 255,
+        "accuracy": 0.85,
+        "errors": 0,
+        "unknown": 28,
+        "question_type": "symbolization",
+        "language": "english",
+        "model_name": "Qwen/Qwen3-32B"
+      }
+    },
+    {
+      "evaluation_file": "results/evaluation/countermodel/Qwen_Qwen3-32B_20250820_190335.json",
+      "timestamp": "190335",
+      "summary": {
+        "total_questions": 294,
+        "correct_answers": 261,
+        "accuracy": 0.8877551020408163,
+        "errors": 0,
+        "question_type": "countermodel",
+        "language": "default",
+        "model_name": "Qwen/Qwen3-32B"
+      }
     }
   ],
-  "last_updated": "2025-09-07T09:03:00.592524"
+  "last_updated": "2025-09-07T13:51:01.991184"
 }

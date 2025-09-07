@@ -154,19 +154,7 @@ gpt5_mini = {
 }
 
 # Placeholders for upcoming models — set file names and flip run=True when ready
-qwen2_5_math_72b = {
-    "validity": [
-        {"language": "carroll", "file": "", "run": False},
-        {"language": "english", "file": "english_Qwen_Qwen2.5-Math-72B-Instruct_20250823_201432.json", "run": True},
-    ],
-    "symbolization": [
-        {"language": "carroll", "file": "carroll_Qwen_Qwen2.5-Math-72B-Instruct_20250822_144613.json", "run": True},
-        {"language": "english", "file": "english_Qwen_Qwen2.5-Math-72B-Instruct_20250821_191428.json", "run": True},
-    ],
-    "countermodel": [
-        {"language": "default", "file": "", "run": False},
-    ],
-}
+
 
 microsoft_phi_4 = {
     "validity": [
@@ -266,6 +254,51 @@ llama3_1_8B_20250819 = {
     ],
     "countermodel": [
         {"language": "default", "file": "meta-llama_Llama-3.1-8B-Instruct_20250819_005902.json", "run": True},
+    ],
+}
+
+# Latest explicit config for meta-llama/Llama-3.1-70B-Instruct (2025-08-26 runs)
+llama3_1_70B_20250826 = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.1-70B-Instruct_20250824_223131.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.1-70B-Instruct_20250824_052624.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_meta-llama_Llama-3.1-70B-Instruct_20250820_075252.json", "run": True},
+        {"language": "english", "file": "english_meta-llama_Llama-3.1-70B-Instruct_20250820_033728.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "meta-llama_Llama-3.1-70B-Instruct_20250826_064043.json", "run": True},
+    ],
+}
+
+# Latest explicit config for Qwen/Qwen2.5-Math-72B-Instruct (2025-09-06 runs)
+qwen2_5_math_72b_20250906 = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen2.5-Math-72B-Instruct_20250825_081443.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen2.5-Math-72B-Instruct_20250823_201432.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen2.5-Math-72B-Instruct_20250822_144613.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen2.5-Math-72B-Instruct_20250821_191428.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "Qwen_Qwen2.5-Math-72B-Instruct_20250906_145612.json", "run": True},
+    ],
+}
+
+# Latest explicit config for Qwen/Qwen3-32B (2025-08-20 runs)
+qwen3_32B_20250820 = {
+    "validity": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen3-32B_20250820_083617.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen3-32B_20250819_192200.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "carroll", "file": "carroll_Qwen_Qwen3-32B_20250819_072312.json", "run": True},
+        {"language": "english", "file": "english_Qwen_Qwen3-32B_20250819_035018.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "Qwen_Qwen3-32B_20250820_190335.json", "run": True},
     ],
 }
 
@@ -447,9 +480,12 @@ if __name__ == "__main__":
     # - llama3_1_8B /done
     # - llama3_1_8B_20250819
     # - llama3_1_70B \done
+    # - llama3_1_70B_20250826
     # - llama3_2_3B \done
     # - qwen2_5_32B \done
+    # - qwen2_5_math_72b_20250906
     # - qwen3_32B \done
+    # - qwen3_32B_20250820
     # - claude_3_7_sonnet \done
     # - gemini_2_5_flash
     # - gemini_2_5_flash_20250822
@@ -459,7 +495,7 @@ if __name__ == "__main__":
     # Select which model config to use
     # CONFIG = gemini_2_5_flash_20250822  # Change this to any of the model configs above
     # CONFIG = claude_3_7_sonnet_20250822
-    CONFIG = llama3_1_8B_20250819
+    CONFIG = qwen3_32B_20250820
 
     record = {}
     for question_type, configs in CONFIG.items():
