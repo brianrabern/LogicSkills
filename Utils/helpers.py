@@ -1,10 +1,11 @@
-from typing import Dict, Any
+from typing import Dict, Any, List
 import logging
 import yaml
 import hashlib
 import random
 import numpy as np
 import torch
+import json
 
 def ast_from_json(data):
     if isinstance(data, list):
@@ -43,14 +44,14 @@ def read_yaml_file(file_path: str) -> Dict[str, Any]:
     Reads a YAML file and returns its content.
 
     Args:
-    file_path (str): The path to the YAML file.
+        file_path (str): The path to the YAML file.
 
     Returns:
-    Dict[str, Any]: A dictionary containing the content of the YAML file.
+        Dict[str, Any]: A dictionary containing the content of the YAML file.
 
     Raises:
-    FileNotFoundError: If the YAML file does not exist.
-    yaml.YAMLError: If the YAML file cannot be parsed.
+        FileNotFoundError: If the YAML file does not exist.
+        yaml.YAMLError: If the YAML file cannot be parsed.
     """
     try:
         with open(file_path, "r", encoding="utf-8") as file:
@@ -62,3 +63,22 @@ def read_yaml_file(file_path: str) -> Dict[str, Any]:
     except FileNotFoundError:
         logging.error(f"YAML file not found at {file_path}.")
         raise FileNotFoundError(f"YAML file not found at {file_path}.")
+    
+
+def load_json_rows(path: str) -> List[Dict]:
+    """
+    Loads a JSON file and returns its content as a list of dictionaries.
+
+    Args:
+        path (str): The path to the JSON file.
+
+    Returns:
+        List[Dict]: A list of dictionaries containing the content of the JSON file.
+
+    Raises:
+        AssertionError: If the top-level JSON is not a list.
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        assert isinstance(data, list), "Top-level JSON must be a list!"
+        return data

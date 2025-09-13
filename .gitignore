@@ -57,3 +57,12 @@ poetry.lock
 # Database files
 *.db
 *.sqlite3
+
+# Train data files
+data
+
+# VSCode
+.vscode/
+
+# Weights & Biases
+wandb
