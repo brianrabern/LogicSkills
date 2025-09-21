@@ -6,6 +6,7 @@ LOCAL_MODEL = {
     "meta-llama/Llama-3.1-70B-Instruct": True,
     "meta-llama/Llama-3.1-8B-Instruct": True,
     "meta-llama/Llama-3.2-3B-Instruct": True,
+    "meta-llama/Llama-3.2-3B-Instruct-sft-countermodel": True,
     "google/gemma-3-27b-it": True,
     "Qwen/Qwen2.5-3B-Instruct": True,
     "Qwen/Qwen2.5-7B-Instruct": True,

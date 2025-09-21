@@ -4,6 +4,7 @@ Model wrapper around HF and VLLM models
 
 import logging
 from typing import Any, Dict, List, Literal, Tuple
+from pathlib import Path
 
 from openai import OpenAI
 from transformers import (
@@ -12,6 +13,7 @@ from transformers import (
     PreTrainedModel,
     PreTrainedTokenizerBase,
 )
+from peft import PeftConfig, PeftModel
 
 # make vllm optional since it requires CUDA
 try:
@@ -76,12 +78,25 @@ class ModelWrapper:
         """
         try:
             if backend == "transformers":
-                model = AutoModelForCausalLM.from_pretrained(
-                    model_name,
-                    cache_dir=model_path,
-                    device_map="auto",
-                    **model_init_kwargs,
-                )
+                is_local_path = Path(model_name).exists()
+                is_adapter_dir = is_local_path and (Path(model_name) / "adapter_config.json").exists()
+
+                if is_adapter_dir:
+                    # Load base id from the adapter itself
+                    peft_cfg = PeftConfig.from_pretrained(model_name)
+                    base_id = peft_cfg.base_model_name_or_path
+
+                    base = AutoModelForCausalLM.from_pretrained(
+                        base_id, cache_dir=model_path, device_map="auto", **model_init_kwargs
+                    )
+                    model = PeftModel.from_pretrained(base, model_name)
+                else:
+                    model = AutoModelForCausalLM.from_pretrained(
+                        model_name,
+                        cache_dir=model_path,
+                        device_map="auto",
+                        **model_init_kwargs
+                    )
             elif backend == "vllm":
                 if not VLLM_AVAILABLE:
                     raise ImportError("vllm is not available. It requires CUDA. ")

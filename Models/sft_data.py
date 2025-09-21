@@ -23,14 +23,12 @@ class SFTDataset(Dataset):
         rows: List[Dict],
         tokenizer: AutoTokenizer,
         max_length: int,
-        question_type: Literal["validity", "symbolization", "countermodel"],
         accepts_system_prompt: bool = True,
     ):
         self.rows = rows
         self.tok = tokenizer
         self.max_length = max_length
         self.accepts_system_prompt = accepts_system_prompt
-        self.system_prompt = self.load_system_prompt(question_type)
 
     def load_system_prompt(self, question_type: Literal["validity", "symbolization", "countermodel"]) -> str:
         """
@@ -56,7 +54,7 @@ class SFTDataset(Dataset):
     def __len__(self) -> int:
         return len(self.rows)
 
-    def _encode_example(self, task: str, answer: str) -> Dict[str, Any]:
+    def _encode_example(self, task: str, answer: str, question_type: Literal["validity", "symbolization", "countermodel"]) -> Dict[str, Any]:
         """
         Encodes a single example from the dataset.
 
@@ -69,8 +67,9 @@ class SFTDataset(Dataset):
         Returns:
             A dictionary containing the encoded example.
         """
+        system_prompt = self.load_system_prompt(question_type)
         messages = assemble_chat_messages(
-            prompt=task, accepts_system_prompt=self.accepts_system_prompt, system_prompt=self.system_prompt
+            prompt=task, accepts_system_prompt=self.accepts_system_prompt, system_prompt=system_prompt
         )
 
         prompt = self.tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
@@ -106,4 +105,4 @@ class SFTDataset(Dataset):
 
     def __getitem__(self, idx) -> Dict[str, Any]:
         row = self.rows[idx]
-        return self._encode_example(row["task"], row["answer"])
+        return self._encode_example(row["task"], row["answer"], row["question_type"])

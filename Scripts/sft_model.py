@@ -26,7 +26,7 @@ except Exception:
     PEFT_AVAILABLE = False
 
 
-from Models.callbacks import BatchedGenerationEvalCallback
+from Models.callbacks import BatchedGenerationEvalCallback, InDomainGenEvalCallback, OODGenEvalCallback
 from Models.sft_data import SFTDataset
 from Utils.helpers import load_json_rows
 
@@ -60,6 +60,7 @@ def parse_arguments() -> argparse.Namespace:
 
     # Data configs
     parser.add_argument("--data_path", type=str, required=True, help="Path to JSON list SFT data.")
+    parser.add_argument("--additional_data_path", type=str, default=None, help="Path to additional JSON list SFT data.")
     parser.add_argument("--ood_data_path", type=str, required=True, help="Path to JSON list OOD test data.")
 
     # Model configs
@@ -73,7 +74,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument("--weight_decay", type=float, default=0.05)
     parser.add_argument("--warmup_ratio", type=float, default=0.03)
     parser.add_argument("--save_steps", type=int, default=100)
-    parser.add_argument("--save_total_limit", type=int, default=2)
+    parser.add_argument("--save_total_limit", type=int, default=20)
     parser.add_argument("--early_stopping_patience", type=int, default=4)
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1)
     parser.add_argument("--no_lora", action="store_true", help="Disable LoRA and do full fine-tune.")
@@ -95,6 +96,38 @@ def parse_arguments() -> argparse.Namespace:
     args = parser.parse_args()
 
     return args
+
+
+def load_sft_data(data_path: str) -> List[Dict]:
+    """
+    Load SFT data from a JSON file.
+
+    Args:
+        data_path: The path to the JSON file containing JabberBench data.
+
+    Returns:
+        A list of dictionaries, where each dictionary contains the keys
+        "id", "task", "answer", and "question_type", where "question_type" is either
+        "symbolization" or "countermodel".
+    """
+    rows = [
+        {("task" if k == "question" else "answer" if k == "correct_answer" else k): v for k, v in row.items()}
+        for row in load_json_rows(data_path)
+    ]
+
+    if "symbolizations" in data_path:
+        question_type = "symbolization"
+    elif "countermodels" in data_path:
+        question_type = "countermodel"
+    elif "validity" in data_path:
+        question_type = "validity"
+    else:
+        raise ValueError(f"Could not specify question_type from data path: {data_path}")
+
+    for row_dict in rows:
+        row_dict["question_type"] = question_type
+    
+    return rows
 
 
 def split_train_eval(data: List[Dict], eval_ratio: float, seed: int) -> Tuple[List[Any], List[Any]]:
@@ -174,24 +207,25 @@ def main() -> None:
         model = get_peft_model(model, lconf)
 
     # Data
-    rows = load_json_rows(args.data_path)
+    rows = load_sft_data(args.data_path)
     train_rows, eval_rows = split_train_eval(rows, args.eval_ratio, args.seed)
 
-    if "symbolizations" in args.data_path:
-        question_type = "symbolization"
-    elif "countermodels" in args.data_path:
-        question_type = "countermodel"
-    else:
-        raise ValueError(f"Could not specify question_type from data path: {args.data_path}")
+    # Additional data (optional)
+    if args.additional_data_path is not None:
+        additional_rows = load_sft_data(args.additional_data_path)
+        additional_train_rows, additional_eval_rows = split_train_eval(additional_rows, args.eval_ratio, args.seed)
 
-    train_ds = SFTDataset(train_rows, tok, args.max_length, question_type=question_type, accepts_system_prompt=True)
-    eval_ds = SFTDataset(eval_rows, tok, args.max_length, question_type=question_type, accepts_system_prompt=True)
+        train_rows += additional_train_rows
+        eval_rows += additional_eval_rows
+
+        random.shuffle(train_rows)
+        random.shuffle(eval_rows)
+
+    train_ds = SFTDataset(train_rows, tok, args.max_length, accepts_system_prompt=True)
+    eval_ds = SFTDataset(eval_rows, tok, args.max_length, accepts_system_prompt=True)
 
     # Test data
-    ood_test_rows = [
-        {("task" if k == "question" else "answer" if k == "correct_answer" else k): v for k, v in row.items()}
-        for row in load_json_rows(args.ood_data_path)
-    ]
+    ood_test_rows = load_sft_data(args.ood_data_path)
 
     # TrainingArguments
     bf16 = (not args.fp16) and torch.cuda.is_available() and torch.cuda.is_bf16_supported()
@@ -230,10 +264,9 @@ def main() -> None:
             pass
 
     # Callbacks
-    eval_callback = BatchedGenerationEvalCallback(
+    eval_callback = InDomainGenEvalCallback(
         tokenizer=tok,
         eval_rows=eval_rows,
-        question_type="countermodel" if "countermodel" in args.data_path else "symbolization",
         accepts_system_prompt=True,
         batch_size=args.per_device_eval_batch_size,
         max_new_tokens=1024,
@@ -242,14 +275,13 @@ def main() -> None:
         eval_name="eval",
         save_dir=f"{args.output_dir}/ckpts/pred_results",
     )
-    ood_test_callback = BatchedGenerationEvalCallback(
+    ood_test_callback = OODGenEvalCallback(
         tokenizer=tok,
         eval_rows=ood_test_rows,
-        question_type="validity",
         accepts_system_prompt=True,
         batch_size=args.per_device_eval_batch_size,
         max_new_tokens=1024,
-        sample_cap=100,
+        sample_cap=len(ood_test_rows),
         add_generation_prompt=True,
         eval_name="ood_test",
         save_dir=f"{args.output_dir}/ckpts/pred_results",

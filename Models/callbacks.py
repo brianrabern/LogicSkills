@@ -288,7 +288,6 @@ class BatchedGenerationEvalCallback(TrainerCallback):
         self,
         tokenizer: AutoTokenizer,
         eval_rows: List[Dict],
-        question_type: Literal["validity", "symbolization", "countermodel"] = "validity",
         accepts_system_prompt: bool = True,
         batch_size: int = 8,
         max_new_tokens: int = 128,
@@ -303,9 +302,7 @@ class BatchedGenerationEvalCallback(TrainerCallback):
         self.max_new_tokens = max_new_tokens
         self.sample_cap = sample_cap
         self.accepts_system_prompt = accepts_system_prompt
-        self.system_prompt = self.load_system_prompt(question_type)
         self.add_generation_prompt = add_generation_prompt
-        self.question_type = question_type
         self.eval_name = eval_name
         self.save_dir = save_dir
         self._orig_padding_side = tokenizer.padding_side or "right"
@@ -357,12 +354,12 @@ class BatchedGenerationEvalCallback(TrainerCallback):
             last_pred = last_gold = last_extracted = ""
 
             # Build prompts
-            prompts, golds, ids = [], [], []
+            prompts, golds, ids, q_types = [], [], [], []
             for r in rows:
                 messages = assemble_chat_messages(
                     prompt=r["task"],
                     accepts_system_prompt=self.accepts_system_prompt,
-                    system_prompt=self.system_prompt,
+                    system_prompt=self.load_system_prompt(r["question_type"]),
                 )
                 prompt = self.tok.apply_chat_template(
                     messages, tokenize=False, add_generation_prompt=self.add_generation_prompt
@@ -370,6 +367,7 @@ class BatchedGenerationEvalCallback(TrainerCallback):
                 prompts.append(prompt)
                 golds.append(nfkc_strip(r["answer"]))
                 ids.append(r["id"])
+                q_types.append(r["question_type"])
 
             # tqdm only on rank-0
             iterator = range(0, n, self.batch_size)
@@ -382,6 +380,7 @@ class BatchedGenerationEvalCallback(TrainerCallback):
                 batch_prompts = prompts[start:end]
                 batch_golds = golds[start:end]
                 batch_ids = ids[start:end]
+                batch_q_types = q_types[start:end]
 
                 enc = self.tok(
                     batch_prompts,
@@ -415,16 +414,17 @@ class BatchedGenerationEvalCallback(TrainerCallback):
                     if strip_all_ws(pred_full) == strip_all_ws(gold):
                         rem_full += 1
 
-                    extracted = extract_answer_for_type(self.question_type, pred_full)
+                    q_type = batch_q_types[i]
+                    extracted = extract_answer_for_type(q_type, pred_full)
                     last_extracted = extracted
                     if (
-                        normalize_for_type(self.question_type, extracted)
-                        == normalize_for_type(self.question_type, gold)
+                        normalize_for_type(q_type, extracted)
+                        == normalize_for_type(q_type, gold)
                         and gold != ""
                     ):
                         em_extracted += 1
 
-                    if contains_answer_for_type(self.question_type, pred_full, gold):
+                    if contains_answer_for_type(q_type, pred_full, gold):
                         contains_re += 1
 
                     predictions.append(
@@ -479,7 +479,7 @@ class BatchedGenerationEvalCallback(TrainerCallback):
                 # Save to dir
                 if self.save_dir:
                     os.makedirs(self.save_dir, exist_ok=True)
-                    out_path = os.path.join(self.save_dir, f"{self.question_type}_{state.global_step}.jsonl")
+                    out_path = os.path.join(self.save_dir, f"{self.eval_name}_{state.global_step}.jsonl")
                     with open(out_path, "w", encoding="utf-8") as f:
                         for rec in predictions:
                             f.write(json.dumps(rec, ensure_ascii=False) + "\n")
@@ -489,3 +489,11 @@ class BatchedGenerationEvalCallback(TrainerCallback):
             if hasattr(model.config, "use_cache"):
                 model.config.use_cache = prev_use_cache
             self.tok.padding_side = self._orig_padding_side
+
+
+class InDomainGenEvalCallback(BatchedGenerationEvalCallback):
+    pass
+
+
+class OODGenEvalCallback(BatchedGenerationEvalCallback):
+    pass

@@ -63,6 +63,7 @@ data
 
 # VSCode
 .vscode/
+settings.json
 
 # Weights & Biases
 wandb
