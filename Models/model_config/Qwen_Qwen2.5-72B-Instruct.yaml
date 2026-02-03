@@ -1,0 +1,10 @@
+model:
+  init:
+    torch_dtype: "auto"
+  inference:
+    max_new_tokens: 2500
+    do_sample: False
+tokenizer:
+  padding_side: "left"
+prompt:
+  system_message: True

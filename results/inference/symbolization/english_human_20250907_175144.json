@@ -1,0 +1,24 @@
+[
+    {
+        "question": {
+            "id": 7387,
+            "question": "Sentence:\n\nIf Alfred won't attack, then every monkey saw Lewis only if every monkey is asleep.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nJ: [1] is asleep",
+            "form": "(¬Ga→(∀x(Ox→Pxb)→∀x(Ox→Jx)))",
+            "language": "english"
+        },
+        "response": {
+            "raw_response": "¬Ga→(∀xOx →( Pxb → ∀y(Oy → Jy)))",
+            "inference_metadata": {
+                "Honor pledge": "Yes, I agree",
+                "University": "Universidad del Valle, Cali, COlombia.",
+                "Major": "Philosophy",
+                "Year in university": "Junior",
+                "Have you completed an intro logic course?": "Yes",
+                "Grade in intro logic (optional)": "Don't know / Prefer not to say",
+                "Self-rated formal logic comfort": "5",
+                "participant_id": "1LGUNN6VDAwSarmRRChqm7GpTfD7kuOZayABnfOm0198"
+            },
+            "success": true
+        }
+    }
+]

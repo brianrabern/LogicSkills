@@ -1,0 +1,39 @@
+[
+    {
+        "question": {
+            "id": "23b7ff2897be7385",
+            "counterpart_id": "2417078cc20e1e49",
+            "question": "Consider the following situation:\n\nEverything is a tove, or a borogove, or a rath (exclusively), and there's at least one of each. Rafin is a borogove. Every borogove snicker-snacked every tove that snicker-snacked every rath. A rath is uffish but it is not the case that Rafin is uffish.\n\nWhich, if any, of the following statements must be true in this situation?\n\n1. A borogove is uffish and every borogove is uffish.\n2. Only borogoves are uffish.\n3. No borogoves are uffish.\n4. A borogove is uffish.\n5. Not all borogoves are uffish.\n6. Every borogove is uffish.\n",
+            "correct_answer": "5",
+            "option_to_sentence_id": {
+                "1": 2018,
+                "2": 568,
+                "3": 564,
+                "4": 562,
+                "5": 566,
+                "6": 560
+            },
+            "premise_ids": [
+                272,
+                1806,
+                2870
+            ],
+            "domain_constraint_id": 2,
+            "language": "carroll"
+        },
+        "response": {
+            "raw_response": "5",
+            "inference_metadata": {
+                "Honor pledge": "Yes, I agree",
+                "University": "Universidad del Valle, Cali, COlombia.",
+                "Major": "Philosophy",
+                "Year in university": "Junior",
+                "Have you completed an intro logic course?": "Yes",
+                "Grade in intro logic (optional)": "Don't know / Prefer not to say",
+                "Self-rated formal logic comfort": "5",
+                "participant_id": "1LGUNN6VDAwSarmRRChqm7GpTfD7kuOZayABnfOm0198"
+            },
+            "success": true
+        }
+    }
+]

@@ -1,0 +1,9 @@
+model:
+  inference:
+    max_tokens: 2500
+    temperature: 0.0
+    top_p: 1.0
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+prompt:
+  system_message: True

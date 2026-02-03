@@ -1,0 +1,2502 @@
+{
+  "results": [
+    {
+      "question_id": 679,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all monkeys saw Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2203x(Ox \u2227 \u00acPxh)",
+      "extracted_answer": {
+        "formula": "\u2203x(Ox\u2227\u00acPxh)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198340",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "\u2203x(Ox\u2227\u00acPxc)",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 2929,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nLewis doesn't see Hazel and only humans drank.\n\nAbbreviations:\n\nP: [1] saw [2]\nb: Lewis\nc: Hazel\nN: [1] is a human\nH: [1] drank",
+      "model_response": "\u2203x(Nx \u2227 Pxbx) \u2192 \u2200y(Ny \u2192 \u00acPyyc)",
+      "extracted_answer": {
+        "formula": "(\u2203x(Nx\u2227Pxbx)\u2192\u2200y(Ny\u2192\u00acPyyc))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198360",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acPbc\u2227\u2200x(Hx\u2192Nx))",
+        "assessment": "Failed to parse the model's symbolization: (\u2203x(Nx\u2227Pxbx)\u2192\u2200y(Ny\u2192\u00acPyyc))"
+      }
+    },
+    {
+      "question_id": 725,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNo humans kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nc: Hazel",
+      "model_response": "\u2200x(Nx\u2192\u00acQxc)",
+      "extracted_answer": {
+        "formula": "\u2200x(Nx\u2192\u00acQxc)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198364",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "\u00ac\u2203x(Nx\u2227Qxc)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 3467,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey kicked Hazel unless Alfred isn't a human.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel\nN: [1] is a human\na: Alfred",
+      "model_response": "\u2203x(Ox \u2227 Qxc) \u2192 \u00acNa",
+      "extracted_answer": {
+        "formula": "(\u2203x(Ox\u2227Qxc)\u2192\u00acNa)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198367",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00ac\u00acNa\u2192\u2203x(Ox\u2227Qxc))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 4581,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey kicked Hazel only if every monkey saw Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nc: Hazel\nP: [1] saw [2]\nb: Lewis",
+      "model_response": "\u2200x(Ox \u2192 (Ox \u2227 x=c \u2192 Qcx \u2227 \u2200y(Oy \u2192 Pyb)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Ox\u2192((Ox\u2227x=c)\u2192(Qcx\u2227\u2200y(Oy\u2192Pyb))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198371",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227Qxc)\u2192\u2200x(Ox\u2192Pxb))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(Ox\u2192((Ox\u2227x=c)\u2192(Qcx\u2227\u2200y(Oy\u2192Pyb))))"
+      }
+    },
+    {
+      "question_id": 4081,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nHazel doesn't see Alfred unless every donkey will attack.\n\nAbbreviations:\n\nP: [1] saw [2]\nc: Hazel\na: Alfred\nM: [1] is a donkey\nG: [1] will attack",
+      "model_response": "\u2203x(\u00acPx(c,a) \u2228 \u2200y(My\u2192Gy))",
+      "extracted_answer": {
+        "formula": "\u2203x(\u00acPxc \u2228 \u2200y(My\u2192Gy))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198374",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00ac\u2200x(Mx\u2192Gx)\u2192\u00acPca)",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 10363,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis won't run, then every monkey saw Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nF: [1] will run\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel\nQ: [1] kicked [2]",
+      "model_response": "\u2200x(\u00acFx\u2192(\u2200y(Oy\u2192(PyC\u2192\u2200z(Oz\u2192Qzc))))).",
+      "extracted_answer": {
+        "formula": "\u2200x(\u00acFx\u2192\u2200y(Oy\u2192(PyC\u2192\u2200z(Oz\u2192Qzc))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198378",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acFb\u2192(\u2200x(Ox\u2192Pxc)\u2192\u2200x(Ox\u2192Qxb)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(\u00acFx\u2192\u2200y(Oy\u2192(PyC\u2192\u2200z(Oz\u2192Qzc))))"
+      }
+    },
+    {
+      "question_id": 2103,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all monkeys will run and every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nF: [1] will run\nQ: [1] kicked [2]\nb: Lewis",
+      "model_response": "\u2203x(Ox \u2227 \u00ac(\u2200y(Oy\u2192Fy)\u2192Qxb))",
+      "extracted_answer": {
+        "formula": "\u2203x(Ox\u2227\u00ac(\u2200y(Oy\u2192Fy)\u2192Qxb))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198381",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227\u00acFx)\u2227\u2200x(Ox\u2192Qxb))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 11283,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA human will attack and only donkeys ate.\n\nAbbreviations:\n\nN: [1] is a human\nG: [1] will attack\nM: [1] is a donkey\nI: [1] ate",
+      "model_response": "\u2203x(Nx \u2227 (Gx \u2227 \u2200y (My \u2192 Iy)))",
+      "extracted_answer": {
+        "formula": "\u2203x(Nx\u2227(Gx\u2227\u2200y(My\u2192Iy)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198384",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227Gx)\u2227\u2200x(Ix\u2192Mx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 7099,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf a human chased Lewis, then not all donkeys kicked Alfred only if Alfred didn't kick Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nc: Hazel",
+      "model_response": "\u2203x(Nx \u2227 Rx(b, x) \u2192 \u00ac\u2200y(My \u2192 (Qya \u2192 \u00acQya)))",
+      "extracted_answer": {
+        "formula": "\u2203x((Nx\u2227Rxb)\u2192\u00ac\u2200y(My\u2192(Qya\u2192\u00acQya)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198387",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227Rxb)\u2192(\u2203x(Mx\u2227\u00acQxa)\u2192\u00acQac))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 8855,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf every monkey chased Hazel, then not all donkeys will run only if Alfred saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nM: [1] is a donkey\nF: [1] will run\nP: [1] saw [2]\na: Alfred",
+      "model_response": "\u2200x(\u2126x\u2192(\u00ac\u2200y(My\u2192(Fy\u2192Pa a))) )",
+      "extracted_answer": {
+        "formula": "\u2200x(\u03a9x\u2192\u00ac\u2200y(My\u2192(Fy\u2192Paa)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198391",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2200x(Ox\u2192Rxc)\u2192(\u2203x(Mx\u2227\u00acFx)\u2192Paa))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(\u03a9x\u2192\u00ac\u2200y(My\u2192(Fy\u2192Paa)))"
+      }
+    },
+    {
+      "question_id": 7441,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Alfred won't attack, then a human chased Hazel only if every monkey saw Hazel.\n\nAbbreviations:\n\nG: [1] will attack\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nP: [1] saw [2]",
+      "model_response": "\u2200x(Gx\u2192(Nx\u2192(Oc\u2192\u2200y(Oy\u2192Pyxc)))a)",
+      "extracted_answer": {
+        "formula": "\u2200x(Gx\u2192(Nx\u2192(Oc\u2192\u2200y(Oy\u2192Pyxc))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198394",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acGa\u2192(\u2203x(Nx\u2227Rxc)\u2192\u2200x(Ox\u2192Pxc)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(Gx\u2192(Nx\u2192(Oc\u2192\u2200y(Oy\u2192Pyxc))))"
+      }
+    },
+    {
+      "question_id": 4315,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey is hungry or every donkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis",
+      "model_response": "\u2203x(Ox\u2228\u2200y(My\u2192Qyb))",
+      "extracted_answer": {
+        "formula": "\u2203x(Ox\u2228\u2200y(My\u2192Qyb))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198397",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227Lx)\u2228\u2200x(Mx\u2192Qxb))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 10895,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nLewis ate and Lewis isn't happy.\n\nAbbreviations:\n\nI: [1] ate\nb: Lewis\nK: [1] is happy",
+      "model_response": "\u2200x(Ix \u2227 \u00acKx)",
+      "extracted_answer": {
+        "formula": "\u2200x(Ix\u2227\u00acKx)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198400",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(Ib\u2227\u00acKb)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 5385,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nHazel isn't a human if and only if no donkeys will attack.\n\nAbbreviations:\n\nN: [1] is a human\nc: Hazel\nM: [1] is a donkey\nG: [1] will attack",
+      "model_response": "\u2200x(Nx\u2192\u00ac(Mx\u2192Gcx))",
+      "extracted_answer": "ERROR",
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198404",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acNc\u2194\u00ac\u2203x(Mx\u2227Gx))",
+        "assessment": "Evaluation failed: b'(error \"line 7 column 131: unknown constant G (Object) \\ndeclared: (declare-fun G (Object Object) Bool) \")\\n'"
+      }
+    },
+    {
+      "question_id": 7853,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf every human is asleep, then Alfred didn't kick Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\na: Alfred\nc: Hazel\nP: [1] saw [2]",
+      "model_response": "\u2200x(Nx\u2192(\u00ac(Qax\u2192\u2200y(Ny\u2192Pyx)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Nx\u2192(\u00ac(Qax\u2192\u2200y(Ny\u2192Pyx))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198407",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2200x(Nx\u2192Jx)\u2192(\u00acQac\u2192\u2200x(Nx\u2192Pxc)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(Nx\u2192(\u00ac(Qax\u2192\u2200y(Ny\u2192Pyx))))"
+      }
+    },
+    {
+      "question_id": 11189,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all donkeys will run and not all humans will run.\n\nAbbreviations:\n\nM: [1] is a donkey\nF: [1] will run\nN: [1] is a human",
+      "model_response": "\u2203x(Mx \u2227 \u00acFx) \u2227 \u2203x(Nx \u2227 \u00acFx)",
+      "extracted_answer": {
+        "formula": "(\u2203x(Mx\u2227\u00acFx) \u2227 \u2203x(Nx\u2227\u00acFx))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198410",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acFx)\u2227\u2203x(Nx\u2227\u00acFx))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 7021,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf a human chased Lewis, then every monkey chased Hazel only if Alfred saw Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nc: Hazel\nP: [1] saw [2]\na: Alfred",
+      "model_response": "\u2200x(Nx\u2192(Ox\u2192(Rxb\u2192(Pa\u2192Pac)))",
+      "extracted_answer": "ERROR",
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198413",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227Rxb)\u2192(\u2200x(Ox\u2192Rxc)\u2192Paa))",
+        "assessment": "Evaluation failed: b'(error \"line 10 column 78: unknown constant P (Object) \\ndeclared: (declare-fun P (Object Object) Bool) \")\\n'"
+      }
+    },
+    {
+      "question_id": 5243,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Hazel didn't chase Lewis, then not all donkeys are hungry.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nb: Lewis\nM: [1] is a donkey\nL: [1] is hungry",
+      "model_response": "\u2200x(\u00acRx(b,x) \u2192 \u00ac\u2200y(My \u2192 Ly))",
+      "extracted_answer": {
+        "formula": "\u2200x(\u00acRxb\u2192\u00ac\u2200y(My\u2192Ly))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198417",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u00acRcb\u2192\u2203x(Mx\u2227\u00acLx))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 1809,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery human chased every human that chased every donkey.\n\nAbbreviations:\n\nN: [1] is a human\nM: [1] is a donkey\nR: [1] chased [2]",
+      "model_response": "\u2200x\u2200y\u2200z((Nx \u2227 Ny \u2227 Nz \u2192 Rxy \u2192 Ryz)",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y\u2200z(((Nx\u2227Ny)\u2227Nz)\u2192(Rxy\u2192Ryz))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:37.198420",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "\u2200x(Nx\u2192\u2200y((Ny\u2227\u2200z(Mz\u2192Ryz))\u2192Rxy))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 11485,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nOnly donkeys are asleep and every monkey chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nJ: [1] is asleep\nO: [1] is a monkey\nR: [1] chased [2]\na: Alfred",
+      "model_response": "\u2200x((Mx \u2227 Jx) \u2228 (Ox \u2227 \u2203y(Ryx)))",
+      "extracted_answer": {
+        "formula": "\u2200x(((Mx\u2227Jx)\u2228(Ox\u2227\u2203yRyx)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.637969",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2200x(Jx\u2192Mx)\u2227\u2200x(Ox\u2192Rxa))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(((Mx\u2227Jx)\u2228(Ox\u2227\u2203yRyx)))"
+      }
+    },
+    {
+      "question_id": 9011,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then Alfred will run only if every monkey saw Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nP: [1] saw [2]",
+      "model_response": "\u2203x(\u00acRxcx \u2192 (Fa \u2192 \u2200y(Oy \u2192 Py)))",
+      "extracted_answer": {
+        "formula": "\u2203x(\u00acRxcx\u2192(Fa\u2192\u2200y(Oy\u2192Py)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.637982",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acRcc\u2192(Fa\u2192\u2200x(Ox\u2192Pxc)))",
+        "assessment": "Failed to parse the model's symbolization: \u2203x(\u00acRxcx\u2192(Fa\u2192\u2200y(Oy\u2192Py)))"
+      }
+    },
+    {
+      "question_id": 2697,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all monkeys kicked Lewis but it is not the case that Lewis is happy.\n\nAbbreviations:\n\nO: [1] is a monkey\nQ: [1] kicked [2]\nb: Lewis\nK: [1] is happy",
+      "model_response": "\u2203x(Ox \u2227 \u00acQxb) \u2227 \u00acKb",
+      "extracted_answer": {
+        "formula": "(\u2203x(Ox\u2227\u00acQxb) \u2227 \u00acKb)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.637986",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227\u00acQxb)\u2227\u00acKb)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 10833,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all donkeys chased Alfred but it is not the case that Lewis isn't happy.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred\nK: [1] is happy\nb: Lewis",
+      "model_response": "\u2203x(Mx \u2227 \u00acRxax) \u2227 \u00acKb",
+      "extracted_answer": {
+        "formula": "(\u2203x(Mx\u2227\u00acRxax) \u2227 \u00acKb)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.637989",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acRxa)\u2227\u00ac\u00acKb)",
+        "assessment": "Failed to parse the model's symbolization: (\u2203x(Mx\u2227\u00acRxax) \u2227 \u00acKb)"
+      }
+    },
+    {
+      "question_id": 1651,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey saw a monkey that saw a monkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]",
+      "model_response": "\u2203x\u2203y\u2203z(Ox \u2227 Oy \u2227 Oz \u2227 (Oy \u2192 (Oz \u2192 (Pxy \u2227 Pxz)))",
+      "extracted_answer": {
+        "formula": "\u2203x\u2203y\u2203z(Ox \u2227 Oy \u2227 Oz \u2227 (Oy\u2192(Oz\u2192(Pxy\u2227Pxz))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.637992",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u2203x\u2203y\u2203z(((Ox\u2227Oy)\u2227Oz)\u2227(Pxy\u2227Pyz))",
+        "assessment": "Failed to parse the model's symbolization: \u2203x\u2203y\u2203z(Ox \u2227 Oy \u2227 Oz \u2227 (Oy\u2192(Oz\u2192(Pxy\u2227Pxz))))"
+      }
+    },
+    {
+      "question_id": 9853,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Alfred will run, then every monkey is hungry only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel",
+      "model_response": "\u2200x(Fx \u2192 (\u2200y(Oy \u2192 (\u00ac\u2200z(Mz \u2192 Qzc)) \u2192 Ly)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Fx\u2192(\u2200y(Oy\u2192(\u00ac\u2200z(Mz\u2192Qzc))\u2192Ly)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.637996",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(Fa\u2192(\u2200x(Ox\u2192Lx)\u2192\u2203x(Mx\u2227\u00acQxc)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(Fx\u2192(\u2200y(Oy\u2192(\u00ac\u2200z(Mz\u2192Qzc))\u2192Ly)))"
+      }
+    },
+    {
+      "question_id": 4265,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all donkeys will run or a monkey is hungry.\n\nAbbreviations:\n\nM: [1] is a donkey\nF: [1] will run\nO: [1] is a monkey\nL: [1] is hungry",
+      "model_response": "\u2203x\u2203y((Mx \u2227 My) \u2192 (Fx \u2228 Ly))",
+      "extracted_answer": {
+        "formula": "\u2203x\u2203y((Mx\u2227My)\u2192(Fx\u2228Ly))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.637999",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acFx)\u2228\u2203x(Ox\u2227Lx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 325,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nHazel doesn't see Hazel.\n\nAbbreviations:\n\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2203x(\u00acPx)",
+      "extracted_answer": "ERROR",
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638002",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u00acPcc",
+        "assessment": "Evaluation failed: b'(error \"line 5 column 47: unknown constant P (Object) \\ndeclared: (declare-fun P (Object Object) Bool) \")\\n'"
+      }
+    },
+    {
+      "question_id": 1539,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey chased a monkey that chased it.\n\nAbbreviations:\n\nO: [1] is a monkey\nR: [1] chased [2]",
+      "model_response": "\u2203x(\u2203y(Ox \u2227 Oy \u2227 x \u2260 y \u2192 Rxy \u2227 Ryx))",
+      "extracted_answer": {
+        "formula": "\u2203x\u2203y(((Ox\u2227Oy)\u2227x\u2260y)\u2192(Rxy\u2227Ryx))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638006",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u2203x\u2203y((Ox\u2227Oy)\u2227(Rxy\u2227Ryx))",
+        "assessment": "Failed to parse the model's symbolization: \u2203x\u2203y(((Ox\u2227Oy)\u2227x\u2260y)\u2192(Rxy\u2227Ryx))"
+      }
+    },
+    {
+      "question_id": 9433,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Hazel is hungry, then not all donkeys kicked Hazel only if every monkey kicked Lewis.\n\nAbbreviations:\n\nL: [1] is hungry\nc: Hazel\nM: [1] is a donkey\nQ: [1] kicked [2]\nO: [1] is a monkey\nb: Lewis",
+      "model_response": "\u2203x(Mx \u2227 Lc \u2192 (\u00ac\u2200y(My \u2192 Qyc) \u2192 \u2200z(Oz \u2192 Qzb)))",
+      "extracted_answer": {
+        "formula": "\u2203x((Mx\u2227Lc)\u2192(\u00ac\u2200y(My\u2192Qyc)\u2192\u2200z(Oz\u2192Qzb)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638009",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(Lc\u2192(\u2203x(Mx\u2227\u00acQxc)\u2192\u2200x(Ox\u2192Qxb)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 2529,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nAlfred didn't chase Alfred but it is not the case that Hazel doesn't see Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\na: Alfred\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2203x(Rax \u2227 \u00ac\u2203y(Ryx \u2227 \u00acPyx))",
+      "extracted_answer": {
+        "formula": "\u2203x(Rax\u2227\u00ac\u2203y(Ryx\u2227\u00acPyx))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638012",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00acRaa\u2227\u00ac\u00acPcc)",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 11293,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nAlfred isn't asleep and every monkey drank.\n\nAbbreviations:\n\nJ: [1] is asleep\na: Alfred\nO: [1] is a monkey\nH: [1] drank",
+      "model_response": "\u2200x(Ox\u2192Hx) \u2227 \u00acJa",
+      "extracted_answer": {
+        "formula": "(\u2200x(Ox\u2192Hx) \u2227 \u00acJa)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638015",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u00acJa\u2227\u2200x(Ox\u2192Hx))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 6583,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Alfred ate, then a human chased Lewis only if every monkey chased Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nc: Hazel",
+      "model_response": "\u2200x(Ix \u2192 (\u2203y(Ny \u2227 Rxy) \u2192 \u2200z(Oz \u2192 Rzc)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Ix\u2192(\u2203y(Ny\u2227Rxy)\u2192\u2200z(Oz\u2192Rzc)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638018",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(Ia\u2192(\u2203x(Nx\u2227Rxb)\u2192\u2200x(Ox\u2192Rxc)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 2839,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey is happy and Lewis isn't a donkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nK: [1] is happy\nM: [1] is a donkey\nb: Lewis",
+      "model_response": "\u2203x(Ox \u2227 (Lb \u2192 \u00acMx))",
+      "extracted_answer": {
+        "formula": "\u2203x(Ox\u2227(Lb\u2192\u00acMx))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638022",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227Kx)\u2227\u00acMb)",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 2877,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nLewis isn't a donkey and Lewis doesn't see Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nb: Lewis\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u00acMb \u2227 \u00acPbc",
+      "extracted_answer": {
+        "formula": "(\u00acMb \u2227 \u00acPbc)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638025",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u00acMb\u2227\u00acPbc)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 1065,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNo humans kicked every monkey.\n\nAbbreviations:\n\nN: [1] is a human\nO: [1] is a monkey\nQ: [1] kicked [2]",
+      "model_response": "\u2203x(Nx \u2227 \u2200y(Oy \u2192 \u00acQyx))",
+      "extracted_answer": {
+        "formula": "\u2203x(Nx\u2227\u2200y(Oy\u2192\u00acQyx))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638028",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "\u00ac\u2203x(Nx\u2227\u2200y(Oy\u2192Qxy))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 5861,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey chased Lewis just in case not all donkeys ate.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\nb: Lewis\nI: [1] ate",
+      "model_response": "\u2200x\u2203y(Mx \u2227 (Rxby \u2192 \u00ac\u2200zMz))",
+      "extracted_answer": {
+        "formula": "\u2200x\u2203y(Mx\u2227(Rxby\u2192\u00ac\u2200zMz))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638031",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2200x(Mx\u2192Rxb)\u2194\u2203x(Mx\u2227\u00acIx))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x\u2203y(Mx\u2227(Rxby\u2192\u00ac\u2200zMz))"
+      }
+    },
+    {
+      "question_id": 8075,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Alfred doesn't see Lewis, then not all donkeys will run only if every monkey saw Hazel.\n\nAbbreviations:\n\nP: [1] saw [2]\na: Alfred\nb: Lewis\nM: [1] is a donkey\nF: [1] will run\nO: [1] is a monkey\nc: Hazel",
+      "model_response": "\u2200x(\u00acPxab \u2192 (\u2203y(My \u2192 (\u00ac\u2200z(Oz \u2192 Pyzc))))",
+      "extracted_answer": {
+        "formula": "\u2200x(\u00acPxab\u2192\u2203y(My\u2192\u00ac\u2200z(Oz\u2192Pyzc)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638034",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acPab\u2192(\u2203x(Mx\u2227\u00acFx)\u2192\u2200x(Ox\u2192Pxc)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(\u00acPxab\u2192\u2203y(My\u2192\u00ac\u2200z(Oz\u2192Pyzc)))"
+      }
+    },
+    {
+      "question_id": 765,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNo donkeys chased Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\nb: Lewis",
+      "model_response": "\u2200x(Mx\u2192\u00acRxbx)",
+      "extracted_answer": {
+        "formula": "\u2200x(Mx\u2192\u00acRxbx)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638037",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u00ac\u2203x(Mx\u2227Rxb)",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(Mx\u2192\u00acRxbx)"
+      }
+    },
+    {
+      "question_id": 1831,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA human chased a monkey that chased a monkey.\n\nAbbreviations:\n\nN: [1] is a human\nO: [1] is a monkey\nR: [1] chased [2]",
+      "model_response": "\u2203x(Nx \u2227 \u2203y(Oy \u2227 Rxy \u2227 Ryx))",
+      "extracted_answer": {
+        "formula": "\u2203x(Nx\u2227\u2203y(Oy\u2227Rxy\u2227Ryx))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:38.638041",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u2203x\u2203y\u2203z(((Nx\u2227Oy)\u2227Oz)\u2227(Rxy\u2227Ryz))",
+        "assessment": "Failed to parse the model's symbolization: \u2203x(Nx\u2227\u2203y(Oy\u2227Rxy\u2227Ryx))"
+      }
+    },
+    {
+      "question_id": 6959,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf a human chased Lewis, then Lewis didn't chase Lewis only if not all donkeys kicked Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred",
+      "model_response": "\u2200x(Nx\u2192(Rx(b)\u2192\u00ac(\u00ac\u2200y(My\u2192\u00acQya))))",
+      "extracted_answer": {
+        "formula": "\u2200x(Nx\u2192(Rxb\u2192\u00ac\u00ac\u2200y(My\u2192\u00acQya)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953519",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227Rxb)\u2192(\u00acRbb\u2192\u2203x(Mx\u2227\u00acQxa)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 1963,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nHazel chased a human.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nc: Hazel",
+      "model_response": "\u2203x(Nx \u2227 Rxhc)",
+      "extracted_answer": {
+        "formula": "\u2203x(Nx\u2227Rxhc)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953530",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u2203x(Nx\u2227Rcx)",
+        "assessment": "Failed to parse the model's symbolization: \u2203x(Nx\u2227Rxhc)"
+      }
+    },
+    {
+      "question_id": 103,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nHazel and Alfred drank.\n\nAbbreviations:\n\nH: [1] drank\nc: Hazel\na: Alfred",
+      "model_response": "Ha \u2227 Hc",
+      "extracted_answer": {
+        "formula": "(Ha \u2227 Hc)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953533",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(Hc\u2227Ha)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 2865,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey is happy and every human saw Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nK: [1] is happy\nN: [1] is a human\nP: [1] saw [2]\na: Alfred",
+      "model_response": "\u2203x(Ox \u2227 Kx) \u2227 \u2200y(Ny \u2192 Pya)",
+      "extracted_answer": {
+        "formula": "(\u2203x(Ox\u2227Kx) \u2227 \u2200y(Ny\u2192Pya))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953537",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227Kx)\u2227\u2200x(Nx\u2192Pxa))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 8429,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf not all donkeys saw Hazel, then Hazel didn't chase Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nR: [1] chased [2]\nN: [1] is a human",
+      "model_response": "\u2203x(Mx \u2227 \u00ac\u2200y(Pyc) \u2192 \u00acRcc)",
+      "extracted_answer": {
+        "formula": "\u2203x((Mx\u2227\u00ac\u2200yPyc)\u2192\u00acRcc)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953540",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acPxc)\u2192(\u00acRcc\u2192\u2200x(Nx\u2192Pxc)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 3383,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery monkey ate unless a monkey kicked Alfred.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nQ: [1] kicked [2]\na: Alfred",
+      "model_response": "\u2200x(\u2203y(Oy\u2192(Ix\u2228\u00acQyx))",
+      "extracted_answer": {
+        "formula": "\u2200x(\u2203y(Oy\u2192(Ix\u2228\u00acQyx)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953543",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00ac\u2203x(Ox\u2227Qxa)\u2192\u2200x(Ox\u2192Ix))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(\u2203y(Oy\u2192(Ix\u2228\u00acQyx)))"
+      }
+    },
+    {
+      "question_id": 205,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nLewis isn't happy.\n\nAbbreviations:\n\nK: [1] is happy\nb: Lewis",
+      "model_response": "\u2200x(Lxb\u2192\u00acKx)",
+      "extracted_answer": {
+        "formula": "\u2200x(Lxb\u2192\u00acKx)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953546",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "\u00acKb",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 4307,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey is hungry unless every donkey will attack.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nM: [1] is a donkey\nG: [1] will attack",
+      "model_response": "\u2203x(Ox \u2227 \u00ac\u2200y(My\u2192Gy))",
+      "extracted_answer": {
+        "formula": "\u2203x(Ox\u2227\u00ac\u2200y(My\u2192Gy))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953550",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00ac\u2200x(Mx\u2192Gx)\u2192\u2203x(Ox\u2227Lx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 9987,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis is hungry, then no humans are hungry only if no donkeys ate.\n\nAbbreviations:\n\nL: [1] is hungry\nb: Lewis\nN: [1] is a human\nM: [1] is a donkey\nI: [1] ate",
+      "model_response": "\u2200x(Lx \u2227 x=b \u2192 (\u2203y(Ny) \u2192 \u00ac\u2203y(My)))",
+      "extracted_answer": {
+        "formula": "\u2200x((Lx\u2227x=b)\u2192(\u2203yNy\u2192\u00ac\u2203yMy))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953553",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(Lb\u2192(\u00ac\u2203x(Nx\u2227Lx)\u2192\u00ac\u2203x(Mx\u2227Ix)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x((Lx\u2227x=b)\u2192(\u2203yNy\u2192\u00ac\u2203yMy))"
+      }
+    },
+    {
+      "question_id": 1685,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey kicked every monkey that kicked every monkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nQ: [1] kicked [2]",
+      "model_response": "\u2200x\u2200y\u2200z((Mx\u2227Qyz\u2192Qxy)\u2227Oz\u2192Qxy)",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y\u2200z(((Mx\u2227Qyz)\u2192Qxy)\u2227Oz\u2192Qxy)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953556",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u2200x(Mx\u2192\u2200y((Oy\u2227\u2200z(Oz\u2192Qyz))\u2192Qxy))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x\u2200y\u2200z(((Mx\u2227Qyz)\u2192Qxy)\u2227Oz\u2192Qxy)"
+      }
+    },
+    {
+      "question_id": 2467,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nHazel didn't chase Alfred and a monkey is happy.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\na: Alfred\nO: [1] is a monkey\nK: [1] is happy",
+      "model_response": "\u2203x(Ox \u2227 (x \u2260 c \u2227 x \u2260 a) \u2227 \u00acRca) \u2227 Oa \u2192 Kc",
+      "extracted_answer": {
+        "formula": "(\u2203x(Ox\u2227(x\u2260c\u2227x\u2260a)\u2227\u00acRca)\u2227Oa\u2192Kc)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953559",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acRca\u2227\u2203x(Ox\u2227Kx))",
+        "assessment": "Failed to parse the model's symbolization: (\u2203x(Ox\u2227(x\u2260c\u2227x\u2260a)\u2227\u00acRca)\u2227Oa\u2192Kc)"
+      }
+    },
+    {
+      "question_id": 8561,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf not all donkeys saw Hazel, then Lewis is a donkey only if not all donkeys will run.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nb: Lewis\nF: [1] will run",
+      "model_response": "\u2203x\u00ac(Px \u2227 x=c) \u2192 (Mb \u2192 \u00ac\u2200x(Mx \u2192 Fx))",
+      "extracted_answer": {
+        "formula": "(\u2203x\u00ac(Px\u2227x=c)\u2192(Mb\u2192\u00ac\u2200x(Mx\u2192Fx)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953562",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acPxc)\u2192(Mb\u2192\u2203x(Mx\u2227\u00acFx)))",
+        "assessment": "Failed to parse the model's symbolization: (\u2203x\u00ac(Px\u2227x=c)\u2192(Mb\u2192\u00ac\u2200x(Mx\u2192Fx)))"
+      }
+    },
+    {
+      "question_id": 5357,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA human is happy if and only if no monkeys saw Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nK: [1] is happy\nO: [1] is a monkey\nP: [1] saw [2]\na: Alfred",
+      "model_response": "\u2200x(Nx \u2192 (Kx \u2194 \u00ac\u2203y(Oy \u2227 Pyx)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Nx\u2192(Kx\u2194\u00ac\u2203y(Oy\u2227Pyx)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953565",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227Kx)\u2194\u00ac\u2203x(Ox\u2227Pxa))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 10771,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey is hungry and Hazel is a monkey.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nc: Hazel",
+      "model_response": "\u2203x(Ox \u2227 Lx) \u2227 Ox",
+      "extracted_answer": {
+        "formula": "(\u2203x(Ox\u2227Lx) \u2227 Ox)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953568",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227Lx)\u2227Oc)",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 9205,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf every monkey saw Lewis, then Lewis is hungry only if every monkey kicked Lewis.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nL: [1] is hungry\nQ: [1] kicked [2]",
+      "model_response": "\u2200x(OMx\u2192(PxL\u2192(Lb\u2192\u2200y(Oy\u2192Qyb)))",
+      "extracted_answer": {
+        "formula": "\u2200x(OMx\u2192(PxL\u2192(Lb\u2192\u2200y(Oy\u2192Qyb))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953572",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2200x(Ox\u2192Pxb)\u2192(Lb\u2192\u2200x(Ox\u2192Qxb)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(OMx\u2192(PxL\u2192(Lb\u2192\u2200y(Oy\u2192Qyb))))"
+      }
+    },
+    {
+      "question_id": 1159,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey chased a monkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nR: [1] chased [2]",
+      "model_response": "\u2200x\u2203y(Mx \u2227 Oy \u2192 Rx yx)",
+      "extracted_answer": {
+        "formula": "\u2200x\u2203y((Mx\u2227Oy)\u2192Rxyx)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953575",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u2200x(Mx\u2192\u2203y(Oy\u2227Rxy))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x\u2203y((Mx\u2227Oy)\u2192Rxyx)"
+      }
+    },
+    {
+      "question_id": 10739,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA monkey is hungry and not all humans will run.\n\nAbbreviations:\n\nO: [1] is a monkey\nL: [1] is hungry\nN: [1] is a human\nF: [1] will run",
+      "model_response": "\u2203x(Ox \u2227 Lx) \u2227 \u00ac\u2200x(Nx \u2192 Fx)",
+      "extracted_answer": {
+        "formula": "(\u2203x(Ox\u2227Lx) \u2227 \u00ac\u2200x(Nx\u2192Fx))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953578",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Ox\u2227Lx)\u2227\u2203x(Nx\u2227\u00acFx))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 10119,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis is a donkey, then not all donkeys will run only if every human saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nb: Lewis\nF: [1] will run\nN: [1] is a human\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2200x(Mx \u2227 x=b \u2192 (\u2200y(My \u2192 \u00ac(Fy \u2228 \u2200z(Nz \u2192 Pbz)))",
+      "extracted_answer": {
+        "formula": "\u2200x((Mx\u2227x=b)\u2192\u2200y(My\u2192\u00ac(Fy\u2228\u2200z(Nz\u2192Pbz))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953581",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(Mb\u2192(\u2203x(Mx\u2227\u00acFx)\u2192\u2200x(Nx\u2192Pxc)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x((Mx\u2227x=b)\u2192\u2200y(My\u2192\u00ac(Fy\u2228\u2200z(Nz\u2192Pbz))))"
+      }
+    },
+    {
+      "question_id": 10081,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf every monkey is asleep, then Hazel kicked Hazel only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel\nM: [1] is a donkey",
+      "model_response": "\u2200x(Ox\u2192Jx) \u2192 (Qcx \u2192 \u00ac\u2200y(My\u2192Qyc))",
+      "extracted_answer": {
+        "formula": "(\u2200x(Ox\u2192Jx)\u2192(Qcx\u2192\u00ac\u2200y(My\u2192Qyc)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953584",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2200x(Ox\u2192Jx)\u2192(Qcc\u2192\u2203x(Mx\u2227\u00acQxc)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 8221,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then every monkey saw Lewis only if no humans are hungry.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nP: [1] saw [2]\nN: [1] is a human\nL: [1] is hungry",
+      "model_response": "\u2200x\u2200y((Rxby\u2192(Oy\u2192(Pyb\u2192\u00acNx\u2192\u00acLy)))",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y((Rxby\u2192(Oy\u2192(Pyb\u2192(\u00acNx\u2192\u00acLy)))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:39.953587",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acRbb\u2192(\u2200x(Ox\u2192Pxb)\u2192\u00ac\u2203x(Nx\u2227Lx)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x\u2200y((Rxby\u2192(Oy\u2192(Pyb\u2192(\u00acNx\u2192\u00acLy)))))"
+      }
+    },
+    {
+      "question_id": 9825,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Alfred will run, then every monkey is asleep only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nF: [1] will run\na: Alfred\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel",
+      "model_response": "\u2200x(Fa\u2192(\u2200y(Oy\u2192(Oy\u2192\u00ac\u2203z(Qzy\u2227\u00acQcz))))",
+      "extracted_answer": {
+        "formula": "\u2200x(Fa\u2192\u2200y(Oy\u2192(Oy\u2192\u00ac\u2203z(Qzy\u2227\u00acQcz))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454674",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(Fa\u2192(\u2200x(Ox\u2192Jx)\u2192\u00ac\u2203x(Ox\u2227Qxc)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 2413,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNo donkeys kicked Hazel and only humans drank.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nN: [1] is a human\nH: [1] drank",
+      "model_response": "\u2200x(\u2203y(Mx \u2227 Qxy) \u2192 (x = c \u2192 Nx) \u2227 \u2200y(Ny \u2192 Hy))",
+      "extracted_answer": {
+        "formula": "\u2200x(\u2203y((Mx\u2227Qxy)\u2192((x=c)\u2192Nx))\u2227\u2200y(Ny\u2192Hy))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454687",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00ac\u2203x(Mx\u2227Qxc)\u2227\u2200x(Hx\u2192Nx))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(\u2203y((Mx\u2227Qxy)\u2192((x=c)\u2192Nx))\u2227\u2200y(Ny\u2192Hy))"
+      }
+    },
+    {
+      "question_id": 7885,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf every human is asleep, then Hazel kicked Alfred only if every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel\na: Alfred\nP: [1] saw [2]",
+      "model_response": "\u2200x(Nx\u2192(Jx\u2192(Qca\u2192\u2200y(Ny\u2192Pyx))))",
+      "extracted_answer": {
+        "formula": "\u2200x(Nx\u2192(Jx\u2192(Qca\u2192\u2200y(Ny\u2192Pyx))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454690",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2200x(Nx\u2192Jx)\u2192(Qca\u2192\u2200x(Nx\u2192Pxc)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 9281,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf every monkey saw Lewis, then Lewis won't run only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nO: [1] is a monkey\nP: [1] saw [2]\nb: Lewis\nF: [1] will run\nQ: [1] kicked [2]\nc: Hazel",
+      "model_response": "\u2200x(Ox\u2192(Px\u21d2(\u00acFb\u2192\u00ac\u2203y(Oy\u2227Qyb)))",
+      "extracted_answer": "ERROR",
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454694",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2200x(Ox\u2192Pxb)\u2192(\u00acFb\u2192\u00ac\u2203x(Ox\u2227Qxc)))",
+        "assessment": "Evaluation failed: b'(error \"line 10 column 56: unknown constant P (Object) \\ndeclared: (declare-fun P (Object Object) Bool) \")\\n'"
+      }
+    },
+    {
+      "question_id": 4635,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf a donkey kicked Lewis, then no donkeys chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\nb: Lewis\nR: [1] chased [2]\na: Alfred",
+      "model_response": "\u2200x\u2200y((Qxy \u2227 Mx) \u2192 \u00acRyx)",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y((Qxy\u2227Mx)\u2192\u00acRyx)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454697",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227Qxb)\u2192\u00ac\u2203x(Mx\u2227Rxa))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 9967,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis is hungry, then not all donkeys kicked Hazel only if no monkeys kicked Hazel.\n\nAbbreviations:\n\nL: [1] is hungry\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel\nO: [1] is a monkey",
+      "model_response": "\u2203x(Mx \u2227 Qxc) \u2192 (Lb \u2192 \u00ac\u2200y(My \u2192 Qyc) \u2228 \u2203y(Oy \u2227 Qyc))",
+      "extracted_answer": {
+        "formula": "(\u2203x(Mx\u2227Qxc)\u2192(Lb\u2192(\u00ac\u2200y(My\u2192Qyc)\u2228\u2203y(Oy\u2227Qyc))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454704",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(Lb\u2192(\u2203x(Mx\u2227\u00acQxc)\u2192\u00ac\u2203x(Ox\u2227Qxc)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 9019,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Hazel didn't chase Hazel, then every monkey is asleep only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nc: Hazel\nO: [1] is a monkey\nJ: [1] is asleep\nM: [1] is a donkey\nQ: [1] kicked [2]",
+      "model_response": "\u2200x(\u00acRxcx \u2192 (\u2200y(Oy \u2192 (Jy \u2227 \u00ac\u2200z(Mz \u2192 Qzc))))",
+      "extracted_answer": {
+        "formula": "\u2200x(\u00acRxcx\u2192\u2200y(Oy\u2192(Jy\u2227\u00ac\u2200z(Mz\u2192Qzc))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454708",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acRcc\u2192(\u2200x(Ox\u2192Jx)\u2192\u2203x(Mx\u2227\u00acQxc)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(\u00acRxcx\u2192\u2200y(Oy\u2192(Jy\u2227\u00ac\u2200z(Mz\u2192Qzc))))"
+      }
+    },
+    {
+      "question_id": 1475,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey chased every monkey that chased it.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nR: [1] chased [2]",
+      "model_response": "\u2200x\u2200y((Mx \u2227 Ryx) \u2192 Rxy)",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y((Mx\u2227Ryx)\u2192Rxy)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454711",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "\u2200x(Mx\u2192\u2200y((Oy\u2227Ryx)\u2192Rxy))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 8231,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then Hazel is hungry only if Lewis is hungry.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nL: [1] is hungry\nc: Hazel",
+      "model_response": "\u2200x\u2200y(\u00acRxby\u2192(Ly\u2192Ly\u2192Cy))",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y(\u00acRxby\u2192(Ly\u2192Cy))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454714",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acRbb\u2192(Lc\u2192Lb))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x\u2200y(\u00acRxby\u2192(Ly\u2192Cy))"
+      }
+    },
+    {
+      "question_id": 11593,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all donkeys kicked Alfred but it is not the case that Lewis is a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nb: Lewis",
+      "model_response": "\u2203x(Mx \u2227 \u00acQxa) \u2227 \u00acMb",
+      "extracted_answer": {
+        "formula": "(\u2203x(Mx\u2227\u00acQxa) \u2227 \u00acMb)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454718",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acQxa)\u2227\u00acMb)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 4199,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all donkeys will attack or not all monkeys saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nG: [1] will attack\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2203x\u2203y((Mx \u2227 \u00acGx) \u2228 (Oy \u2227 \u00acPyx))",
+      "extracted_answer": {
+        "formula": "\u2203x\u2203y(((Mx\u2227\u00acGx)\u2228(Oy\u2227\u00acPyx)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454721",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acGx)\u2228\u2203x(Ox\u2227\u00acPxc))",
+        "assessment": "Failed to parse the model's symbolization: \u2203x\u2203y(((Mx\u2227\u00acGx)\u2228(Oy\u2227\u00acPyx)))"
+      }
+    },
+    {
+      "question_id": 2575,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNo donkeys saw Lewis and every human is happy.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nb: Lewis\nN: [1] is a human\nK: [1] is happy",
+      "model_response": "\u2203x(Mx \u2227 Px(b, x)) \u2192 \u2200y(Ny \u2192 Ky)",
+      "extracted_answer": {
+        "formula": "(\u2203x(Mx\u2227Pxb)\u2192\u2200y(Ny\u2192Ky))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454725",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00ac\u2203x(Mx\u2227Pxb)\u2227\u2200x(Nx\u2192Kx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 5795,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nAlfred didn't chase Hazel if and only if not all donkeys ate.\n\nAbbreviations:\n\nR: [1] chased [2]\na: Alfred\nc: Hazel\nM: [1] is a donkey\nI: [1] ate",
+      "model_response": "\u2200x(Rax\u2192\u00ac\u2200y(My\u2192Iy))",
+      "extracted_answer": {
+        "formula": "\u2200x(Rax\u2192\u00ac\u2200y(My\u2192Iy))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454728",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00acRac\u2194\u2203x(Mx\u2227\u00acIx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 10853,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all donkeys chased Alfred and no humans will attack.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred\nN: [1] is a human\nG: [1] will attack",
+      "model_response": "\u2203x(Mx \u2227 Nx) \u2192 (\u2203x(Mx \u2227 Rxax) \u2228 \u00ac\u2203x(Nx \u2227 Gx))",
+      "extracted_answer": {
+        "formula": "(\u2203x(Mx\u2227Nx)\u2192(\u2203x(Mx\u2227Rxax)\u2228\u00ac\u2203x(Nx\u2227Gx)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454731",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acRxa)\u2227\u00ac\u2203x(Nx\u2227Gx))",
+        "assessment": "Failed to parse the model's symbolization: (\u2203x(Mx\u2227Nx)\u2192(\u2203x(Mx\u2227Rxax)\u2228\u00ac\u2203x(Nx\u2227Gx)))"
+      }
+    },
+    {
+      "question_id": 5875,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery human drank just in case no donkeys chased Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nH: [1] drank\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred",
+      "model_response": "\u2200x(Nx\u2192(Hx\u2192\u00ac\u2203y(My\u2192Rya)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Nx\u2192(Hx\u2192\u00ac\u2203y(My\u2192Rya)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454735",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2200x(Nx\u2192Hx)\u2194\u00ac\u2203x(Mx\u2227Rxa))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 4941,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey saw Hazel only if Alfred is asleep.\n\nAbbreviations:\n\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nJ: [1] is asleep\na: Alfred",
+      "model_response": "\u2200x(Mx\u2192(Px\u22c0\u2200y(Pxy\u2192y=c)\u2192Ja))",
+      "extracted_answer": {
+        "formula": "\u2200x(Mx\u2192((Px\u2227\u2200y((Pxy\u2192y=c)\u2192Ja))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454738",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2200x(Mx\u2192Pxc)\u2192Ja)",
+        "assessment": "Failed to parse the model's symbolization: \u2200x(Mx\u2192((Px\u2227\u2200y((Pxy\u2192y=c)\u2192Ja))))"
+      }
+    },
+    {
+      "question_id": 5813,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all donkeys chased Alfred just in case not all donkeys drank.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]\na: Alfred\nH: [1] drank",
+      "model_response": "\u2203x\u2203y(Mx \u2227 \u00acMy \u2227 (Mx \u2192 (Rxay \u2192 \u00acHx)))",
+      "extracted_answer": {
+        "formula": "\u2203x\u2203y(Mx \u2227 \u00acMy \u2227 (Mx\u2192(Rxay\u2192\u00acHx)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454742",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acRxa)\u2194\u2203x(Mx\u2227\u00acHx))",
+        "assessment": "Failed to parse the model's symbolization: \u2203x\u2203y(Mx \u2227 \u00acMy \u2227 (Mx\u2192(Rxay\u2192\u00acHx)))"
+      }
+    },
+    {
+      "question_id": 3403,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery monkey ate or a human is asleep.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nN: [1] is a human\nJ: [1] is asleep",
+      "model_response": "\u2200x(Ox\u2192(Ix\u2228Jx))",
+      "extracted_answer": {
+        "formula": "\u2200x(Ox\u2192(Ix\u2228Jx))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454745",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2200x(Ox\u2192Ix)\u2228\u2203x(Nx\u2227Jx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 433,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNo donkeys will attack.\n\nAbbreviations:\n\nM: [1] is a donkey\nG: [1] will attack",
+      "model_response": "\u2200x(Mx \u2192 \u00acGx)",
+      "extracted_answer": {
+        "formula": "\u2200x(Mx\u2192\u00acGx)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454749",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "\u00ac\u2203x(Mx\u2227Gx)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 7175,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf a human chased Lewis, then every monkey is asleep only if Hazel kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nJ: [1] is asleep\nQ: [1] kicked [2]\nc: Hazel",
+      "model_response": "\u2200x(Nx\u2192(Rx(b)\u2192(Ox\u2192(Qcx\u2192Jc)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Nx\u2192(Rxb\u2192(Ox\u2192(Qcx\u2192Jc))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:41.454752",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227Rxb)\u2192(\u2200x(Ox\u2192Jx)\u2192Qcc))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 10569,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery monkey ate and Lewis ate.\n\nAbbreviations:\n\nO: [1] is a monkey\nI: [1] ate\nb: Lewis",
+      "model_response": "\u2200x(Ox\u2192Ix) \u2227 Ib",
+      "extracted_answer": {
+        "formula": "(\u2200x(Ox\u2192Ix) \u2227 Ib)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888915",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2200x(Ox\u2192Ix)\u2227Ib)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 2251,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nOnly humans are hungry and Lewis doesn't see Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]\nb: Lewis\nc: Hazel",
+      "model_response": "\u2200x(Nx\u2192(Lx\u2227\u00acPxb))",
+      "extracted_answer": {
+        "formula": "\u2200x(Nx\u2192(Lx\u2227\u00acPxb))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888928",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2200x(Lx\u2192Nx)\u2227\u00acPbc)",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 3779,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey is happy unless every donkey kicked Lewis.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nQ: [1] kicked [2]\nb: Lewis",
+      "model_response": "\u2200x(Mx\u2192(\u00ac\u2200y(My\u2192Qyb)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Mx\u2192\u00ac\u2200y(My\u2192Qyb))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888932",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00ac\u2200x(Mx\u2192Qxb)\u2192\u2200x(Mx\u2192Kx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 5211,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis chased Lewis, then not all humans kicked Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nN: [1] is a human\nQ: [1] kicked [2]\nc: Hazel",
+      "model_response": "\u2200x\u2200y(Rxy\u2192\u00ac\u2200z(Nz\u2192Qzc))",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y(Rxy\u2192\u00ac\u2200z(Nz\u2192Qzc))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888935",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(Rbb\u2192\u2203x(Nx\u2227\u00acQxc))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 6247,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf not all humans are asleep, then Lewis didn't chase Lewis only if not all donkeys saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2200x(Nx\u2192\u00acJx) \u2192 \u00ac(Rb b \u2194 \u2200y(My\u2192\u00acPy c))",
+      "extracted_answer": {
+        "formula": "(\u2200x(Nx\u2192\u00acJx)\u2192\u00ac(Rbb\u2194\u2200y(My\u2192\u00acPyc)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888938",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227\u00acJx)\u2192(\u00acRbb\u2192\u2203x(Mx\u2227\u00acPxc)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 3805,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nA human kicked Lewis unless every human saw Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nQ: [1] kicked [2]\nb: Lewis\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2203x(Nx \u2227 (\u00ac\u2200y(Ny \u2192 Qyx) \u2192 Qxb))",
+      "extracted_answer": {
+        "formula": "\u2203x(Nx\u2227(\u00ac\u2200y(Ny\u2192Qyx)\u2192Qxb))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888941",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00ac\u2200x(Nx\u2192Pxc)\u2192\u2203x(Nx\u2227Qxb))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 1577,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey saw every monkey that saw every monkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nP: [1] saw [2]",
+      "model_response": "\u2200x\u2200y\u2200z((Mx\u2227Oy\u2227Oz\u2192(Pxy\u2192Pxz))",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y\u2200z((Mx\u2227Oy\u2227Oz)\u2192(Pxy\u2192Pxz))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888945",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u2200x(Mx\u2192\u2200y((Oy\u2227\u2200z(Oz\u2192Pyz))\u2192Pxy))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x\u2200y\u2200z((Mx\u2227Oy\u2227Oz)\u2192(Pxy\u2192Pxz))"
+      }
+    },
+    {
+      "question_id": 9603,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf not all donkeys kicked Alfred, then Hazel kicked Alfred only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nQ: [1] kicked [2]\na: Alfred\nc: Hazel",
+      "model_response": "\u2200x(\u00ac\u2200y(My\u2192Qya) \u2192 (Qca \u2192 \u00ac\u2200y(My\u2192Qyc)))",
+      "extracted_answer": {
+        "formula": "\u2200x(\u00ac\u2200y(My\u2192Qya)\u2192(Qca\u2192\u00ac\u2200y(My\u2192Qyc)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888948",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Mx\u2227\u00acQxa)\u2192(Qca\u2192\u2203x(Mx\u2227\u00acQxc)))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 2285,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNot all humans are hungry and Hazel doesn't see Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nL: [1] is hungry\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2203x(Nx \u2227 (Nx \u2192 \u00acLx) \u2227 \u00acPxcc)",
+      "extracted_answer": {
+        "formula": "\u2203x(Nx\u2227(Nx\u2192\u00acLx)\u2227\u00acPxcc)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888952",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227\u00acLx)\u2227\u00acPcc)",
+        "assessment": "Failed to parse the model's symbolization: \u2203x(Nx\u2227(Nx\u2192\u00acLx)\u2227\u00acPxcc)"
+      }
+    },
+    {
+      "question_id": 3783,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey is happy unless not all monkeys saw Hazel.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nO: [1] is a monkey\nP: [1] saw [2]\nc: Hazel",
+      "model_response": "\u2200x(Mx\u2192(Kx\u2228\u00ac\u2200y(Oy\u2192Pyx)))",
+      "extracted_answer": {
+        "formula": "\u2200x(Mx\u2192(Kx\u2228\u00ac\u2200y(Oy\u2192Pyx)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888955",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(\u00ac\u2203x(Ox\u2227\u00acPxc)\u2192\u2200x(Mx\u2192Kx))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 6151,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf not all humans are asleep, then a human chased Lewis only if Hazel kicked Alfred.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nQ: [1] kicked [2]\nc: Hazel\na: Alfred",
+      "model_response": "\u2203x(Nx \u2227 \u00acJx) \u2192 (\u2203y(Ny \u2227 Ryb) \u2192 Qca)",
+      "extracted_answer": {
+        "formula": "(\u2203x(Nx\u2227\u00acJx)\u2192(\u2203y(Ny\u2227Ryb)\u2192Qca))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888958",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227\u00acJx)\u2192(\u2203x(Nx\u2227Rxb)\u2192Qca))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 8175,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Lewis didn't chase Lewis, then not all donkeys saw Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nP: [1] saw [2]\nc: Hazel\nN: [1] is a human",
+      "model_response": "\u2200x\u2200y((Rxby\u2192\u00ac(\u2203z(Mz\u2227Pzc)\u2192\u2200u(Nu\u2192Pcu)))",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y((Rxby\u2192\u00ac(\u2203z(Mz\u2227Pzc)\u2192\u2200u(Nu\u2192Pcu))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888962",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00acRbb\u2192(\u2203x(Mx\u2227\u00acPxc)\u2192\u2200x(Nx\u2192Pxc)))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x\u2200y((Rxby\u2192\u00ac(\u2203z(Mz\u2227Pzc)\u2192\u2200u(Nu\u2192Pcu))))"
+      }
+    },
+    {
+      "question_id": 6695,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf Alfred ate, then every monkey chased Hazel only if every human saw Hazel.\n\nAbbreviations:\n\nI: [1] ate\na: Alfred\nO: [1] is a monkey\nR: [1] chased [2]\nc: Hazel\nN: [1] is a human\nP: [1] saw [2]",
+      "model_response": "\u2200x((Ix\u2192\u2200y((Oy\u2192(Ryc\u2192\u2200z(Nz\u2192Pzc))))))",
+      "extracted_answer": {
+        "formula": "\u2200x(Ix\u2192\u2200y(Oy\u2192(Ryc\u2192\u2200z(Nz\u2192Pzc))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888965",
+        "success": true
+      },
+      "is_correct": false,
+      "comments": {
+        "correct_answer": "(Ia\u2192(\u2200x(Ox\u2192Rxc)\u2192\u2200x(Nx\u2192Pxc)))",
+        "assessment": "Not logically equivalent"
+      }
+    },
+    {
+      "question_id": 1127,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nEvery donkey chased a donkey.\n\nAbbreviations:\n\nM: [1] is a donkey\nR: [1] chased [2]",
+      "model_response": "\u2200x\u2200y(Mx \u2227 My \u2192 Rx y)",
+      "extracted_answer": {
+        "formula": "\u2200x\u2200y((Mx\u2227My)\u2192Rxy)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888969",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "\u2200x(Mx\u2192\u2203y(My\u2227Rxy))",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 6269,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf not all humans are asleep, then Lewis didn't chase Lewis only if every monkey kicked Lewis.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nO: [1] is a monkey\nQ: [1] kicked [2]",
+      "model_response": "\u2203x(Nx \u2227 \u00acJx) \u2192 \u00ac(Rb \u2192 (\u2200y(Oy \u2192 Qyb))",
+      "extracted_answer": "ERROR",
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888973",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227\u00acJx)\u2192(\u00acRbb\u2192\u2200x(Ox\u2192Qxb)))",
+        "assessment": "Evaluation failed: b'(error \"line 10 column 80: unknown constant R (Object) \\ndeclared: (declare-fun R (Object Object) Bool) \")\\n'"
+      }
+    },
+    {
+      "question_id": 83,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nAlfred and Hazel drank.\n\nAbbreviations:\n\nH: [1] drank\na: Alfred\nc: Hazel",
+      "model_response": "Ha \u2227 Hc",
+      "extracted_answer": {
+        "formula": "(Ha \u2227 Hc)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888976",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(Ha\u2227Hc)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 871,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nThere is not a donkey that every monkey saw.\n\nAbbreviations:\n\nM: [1] is a donkey\nO: [1] is a monkey\nP: [1] saw [2]",
+      "model_response": "\u2203x\u2200y((Oy\u2192\u00ac\u2203z(Mz\u2227Pyz))",
+      "extracted_answer": {
+        "formula": "\u2203x\u2200y((Oy\u2192\u00ac\u2203z(Mz\u2227Pyz)))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888980",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "\u00ac\u2203x(Mx\u2227\u2200y(Oy\u2192Pyx))",
+        "assessment": "Failed to parse the model's symbolization: \u2203x\u2200y((Oy\u2192\u00ac\u2203z(Mz\u2227Pyz)))"
+      }
+    },
+    {
+      "question_id": 6263,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nIf not all humans are asleep, then Lewis didn't chase Lewis only if not all donkeys kicked Hazel.\n\nAbbreviations:\n\nN: [1] is a human\nJ: [1] is asleep\nR: [1] chased [2]\nb: Lewis\nM: [1] is a donkey\nQ: [1] kicked [2]\nc: Hazel",
+      "model_response": "\u2200x(Nx\u2192\u00acJx) \u2192 \u00ac(Rb(b\u2192\u00acQc))",
+      "extracted_answer": "ERROR",
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888983",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u2203x(Nx\u2227\u00acJx)\u2192(\u00acRbb\u2192\u2203x(Mx\u2227\u00acQxc)))",
+        "assessment": "Evaluation failed: b'(error \"line 10 column 92: unknown constant Q (Object) \\ndeclared: (declare-fun Q (Object Object) Bool) \")\\n'"
+      }
+    },
+    {
+      "question_id": 10943,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nAlfred drank but it is not the case that Alfred isn't asleep.\n\nAbbreviations:\n\nH: [1] drank\na: Alfred\nJ: [1] is asleep",
+      "model_response": "Ha \u2227 \u00ac\u00acJa",
+      "extracted_answer": {
+        "formula": "(Ha \u2227 \u00ac\u00acJa)"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888987",
+        "success": true
+      },
+      "is_correct": true,
+      "comments": {
+        "correct_answer": "(Ha\u2227\u00ac\u00acJa)",
+        "assessment": "Logically equivalent: LLM symbolization is logically equivalent to DB symbolization"
+      }
+    },
+    {
+      "question_id": 4239,
+      "question_type": "symbolization",
+      "question": "Sentence:\n\nNo donkeys are happy or every donkey chased Alfred.\n\nAbbreviations:\n\nM: [1] is a donkey\nK: [1] is happy\nR: [1] chased [2]\na: Alfred",
+      "model_response": "\u2200x(Mx \u2192 \u00acKx \u2228 \u2203y(My \u2227 Ryx))",
+      "extracted_answer": {
+        "formula": "\u2200x((Mx\u2192(\u00acKx\u2228\u2203y(My\u2227Ryx))))"
+      },
+      "model_metadata": {
+        "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+        "system_prompt": "\nYour task is to translate the provided sentence into formal predicate logic, using the abbreviations provided.\n\n# Instructions\n- Use only the abbreviations given.\n- Return a single well-formed formula in standard predicate logic syntax.\n- Use standard logical symbols:\n  - Quantifiers: \u2200, \u2203\n  - Connectives: \u00ac, \u2227, \u2228, \u2192, \u2194\n- Do **not** include any explanation or extra text\u2014just the formula.\n\n# Example\nSentence: Every linguist admires Charlie.\n\nAbbreviations:\n- L: \"[1] is a linguist\"\n- R: \"[1] admires [2]\"\n- c: \"Charlie\"\n\nFormalization:\n\u2200x(Lx\u2192Rxc)\n",
+        "model_parameters": {
+          "max_new_tokens": 2500,
+          "do_sample": false
+        },
+        "start_time": "2025-07-04T11:07:35.018401",
+        "end_time": "2025-07-04T11:07:42.888990",
+        "success": true
+      },
+      "is_correct": "UNKNOWN",
+      "comments": {
+        "correct_answer": "(\u00ac\u2203x(Mx\u2227Kx)\u2228\u2200x(Mx\u2192Rxa))",
+        "assessment": "Failed to parse the model's symbolization: \u2200x((Mx\u2192(\u00acKx\u2228\u2203y(My\u2227Ryx))))"
+      }
+    }
+  ],
+  "summary": {
+    "total_questions": 100,
+    "correct_answers": 20,
+    "accuracy": 0.2,
+    "errors": 0,
+    "unknown": 44,
+    "question_type": "symbolization",
+    "language": "english",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+  }
+}

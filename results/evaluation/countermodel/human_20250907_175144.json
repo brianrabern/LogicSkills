@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "question_id": "965ec829b43bfb5c",
+      "question_type": "countermodel",
+      "question": "Argument:\n\n((\u2200x(Mx\u2228(Nx\u2228Ox))\u2227(\u00ac\u2203x(Mx\u2227Nx)\u2227(\u00ac\u2203x(Mx\u2227Ox)\u2227\u00ac\u2203x(Nx\u2227Ox))))\u2227(\u2203xMx\u2227(\u2203xNx\u2227\u2203xOx))), (Ha\u2227Hc), \u2203x(Mx\u2227\u00acIx), (\u2203x(Mx\u2227\u00acFx)\u2192(Qca\u2192\u00ac\u2203x(Ox\u2227Qxc))), (\u2200x(Fx\u2192Nx)\u2227\u2203x(Ox\u2227Qxa)) |= Fa",
+      "model_response": "Constants: \"a\": 2, \"c\": 3. Monadic predicates: \"I\":[2],\"F\": [3], \"H\": [1,3], \"M\":[1], \"N\"[3], \"O\":[2].  Binary predicates: \"Q\": [[2, 2]]",
+      "extracted_answer": {
+        "Domain": [
+          1,
+          2,
+          3
+        ],
+        "a": 2,
+        "c": 3,
+        "I": [
+          2
+        ],
+        "F": [
+          3
+        ],
+        "H": [
+          1,
+          3
+        ],
+        "M": [
+          1
+        ],
+        "N": [
+          3
+        ],
+        "O": [
+          2
+        ],
+        "Q": [
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "is_correct": false,
+      "comments": [
+        "Not a countermodel"
+      ]
+    }
+  ],
+  "summary": {
+    "total_questions": 1,
+    "correct_answers": 0,
+    "accuracy": 0.0,
+    "errors": 0,
+    "question_type": "countermodel",
+    "language": "default"
+  }
+}

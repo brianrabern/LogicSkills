@@ -1,0 +1,14 @@
+beautifulsoup4==4.13.4
+cachetools==5.5.2
+lark==1.2.2
+openai==1.84.0
+Requests==2.32.3
+selenium==4.33.0
+SQLAlchemy==2.0.41
+webdriver_manager==4.0.2
+z3_solver==4.14.1.0
+transformers>=4.53.0
+torch>=2.2.2
+torchvision
+torchaudio
+numpy<2
