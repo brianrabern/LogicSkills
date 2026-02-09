@@ -155,15 +155,17 @@ If you have the database set up and loaded:
 If you use LogicSkills in your work, please cite the paper:
 
 ```bibtex
-@article{logicskills2025,
-  title={LogicSkills: A Structured Benchmark for Formal Reasoning in Large Language Models},
-  author={Rabern, Brian and Mondorf, Philipp and Plank, Barbara},
-  year={2026},
-  note={arXiv preprint}
+@misc{rabern2026logicskillsstructuredbenchmarkformal,
+      title={LogicSkills: A Structured Benchmark for Formal Reasoning in Large Language Models}, 
+      author={Brian Rabern and Philipp Mondorf and Barbara Plank},
+      year={2026},
+      eprint={2602.06533},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2602.06533}, 
 }
 ```
 
-(Replace with the final arXiv citation once published.)
 
 ---
 
