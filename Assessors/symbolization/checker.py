@@ -18,17 +18,14 @@ def parse_ast(form):
         except Exception as e:
             print(f"Trying to fix syntax: {e}")
             try:
-                # give to LLM syntax fixer
                 model = EvaluationEngine(EXTRACTOR_MODEL)
                 response = model.fix_syntax(form)
-                # write to file a rcord of attempted syntax fixes
                 with open("syntax_fixes.txt", "a") as f:
                     f.write(f"{form} -> {response}\n")
                 tree = parser.parse(response)
             except Exception as e:
                 print(f"Failed to fix syntax: {e}")
                 return None
-            return None
     try:
         ast = transformer.transform(tree)
     except Exception as e:

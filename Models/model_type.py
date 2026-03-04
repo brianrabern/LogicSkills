@@ -23,4 +23,6 @@ LOCAL_MODEL = {
     "google/gemini-2.5-flash": False,
     "openai/gpt-5-mini": False,
     "deepseek/deepseek-chat": False,
+    "openai/o3": False,
+    "deepseek/deepseek-r1": False,
 }

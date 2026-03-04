@@ -389,6 +389,21 @@ llama3_2_3B_sft_cross_eval = {
 }
 
 
+openai_o3 = {
+    "validity": [
+        {"language": "english", "file": "english_openai_o3_20260219_181540.json", "run": True},
+        {"language": "carroll", "file": "carroll_openai_o3_20260219_182123.json", "run": True},
+    ],
+    "symbolization": [
+        {"language": "english", "file": "english_openai_o3_20260219_180631.json", "run": True},
+        {"language": "carroll", "file": "carroll_openai_o3_20260219_185242.json", "run": True},
+    ],
+    "countermodel": [
+        {"language": "default", "file": "openai_o3_20260219_211955.json", "run": True},
+    ],
+}
+
+
 class EvaluationPipeline:
 
     def __init__(self, question_type: str, results_file: str, model_name: str):
